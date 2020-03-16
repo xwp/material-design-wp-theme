@@ -6,6 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "@material/button": "^5.1.0",
+    "@material/icon-button": "^5.1.0",
     "@material/top-app-bar": "^5.1.0",
     "autoprefixer": "^9.7.4",
     "css-loader": "^3.4.2",
