@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "@material/button": "^5.1.0",
     "@material/top-app-bar": "^5.1.0",
     "css-loader": "^3.4.2",
     "extract-loader": "^5.0.1",
