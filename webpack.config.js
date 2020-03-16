@@ -14,7 +14,7 @@ module.exports = [{
 					{
 						loader: 'file-loader',
 						options: {
-							name: 'material-theme-style.css',
+							name: 'material-theme.css',
 							outputPath: 'css',
 						},
 					},
