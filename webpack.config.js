@@ -1,10 +1,13 @@
 const autoprefixer = require( 'autoprefixer' );
 
 module.exports = [{
-	entry: './assets/src/css/index.scss',
+	entry: [
+		'./assets/src/css/index.scss',
+		'./assets/src/js/index.js'
+	],
 	output: {
 		path: `${__dirname}/assets/dist`,
-		filename: 'style-bundle.js'
+		filename: 'bundle.js'
 	},
 	module: {
 		rules: [
@@ -40,6 +43,13 @@ module.exports = [{
 						},
 					},
 				]
+			},
+			{
+				test: /\.js$/,
+				loader: 'babel-loader',
+				query: {
+					presets: ['@babel/preset-env']
+				},
 			}
 		]
 	},
