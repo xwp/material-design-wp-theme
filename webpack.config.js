@@ -1,3 +1,5 @@
+const autoprefixer = require( 'autoprefixer' );
+
 module.exports = [{
 	entry: './assets/src/css/index.scss',
 	output: {
@@ -21,6 +23,12 @@ module.exports = [{
 					},
 					{
 						loader: 'css-loader'
+					},
+					{
+						loader: 'postcss-loader',
+						options: {
+							plugins: () => [autoprefixer()]
+						}
 					},
 					{
 						loader: 'sass-loader',
