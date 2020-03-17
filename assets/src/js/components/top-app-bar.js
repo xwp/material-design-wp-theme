@@ -7,5 +7,7 @@ export const topAppBarInit = () => {
 		return;
 	}
 
-	topAppBarElements.forEach( topAppBarElement => new MDCTopAppBar( topAppBarElement ) );
+	for ( topAppBar of topAppBarElements ) {
+		new MDCTopAppBar( topAppBar );
+	}
 };
