@@ -1,7 +1,13 @@
 import { topAppBarInit } from './components/top-app-bar';
-import { listInit } from './components/list'
+import { drawerInit } from './components/drawer'
 
 document.addEventListener( 'DOMContentLoaded', () => {
-	topAppBarInit();
-	listInit();
+	const topBarApp = topAppBarInit();
+	const drawer = drawerInit();
+
+	if ( topBarApp && drawer ) {
+		topBarApp.listen( 'MDCTopAppBar:nav', () => {
+			drawer.open = !drawer.open;
+		} );
+	}
 } );

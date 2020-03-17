@@ -1,13 +1,11 @@
 import { MDCDrawer } from '@material/drawer';
 
 export const drawerInit = () => {
-	const drawerElements = document.querySelectorAll( '.mdc-drawer' );
+	const drawerElement = document.querySelector( '.mdc-drawer' );
 
-	if ( ! drawerElements ) {
+	if ( ! drawerElement ) {
 		return;
 	}
 
-	for ( drawer of drawerElements ) {
-		new MDCDrawer( drawer );
-	}
+	return new MDCDrawer( drawerElement );
 };

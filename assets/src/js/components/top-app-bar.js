@@ -1,13 +1,11 @@
 import { MDCTopAppBar } from '@material/top-app-bar';
 
 export const topAppBarInit = () => {
-	const topAppBarElements = document.querySelectorAll( '.mdc-top-app-bar' );
+	const topAppBarElement = document.querySelector( '.mdc-top-app-bar' );
 
-	if ( ! topAppBarElements ) {
+	if ( ! topAppBarElement ) {
 		return;
 	}
 
-	for ( topAppBar of topAppBarElements ) {
-		new MDCTopAppBar( topAppBar );
-	}
+	return new MDCTopAppBar( topAppBarElement );
 };
