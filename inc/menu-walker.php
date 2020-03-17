@@ -19,7 +19,7 @@ class Material_Theme_Menu extends Walker {
 		$output .= sprintf(
 			'<a href="%1$s" %2$s>%3$s</a>',
 			esc_url( $item->url ),
-			( $item->object_id === get_the_ID() ) ? esc_attr( ' class="current mdc-button"' ) : esc_attr( ' class=mdc-button' ),
+			( $item->object_id === get_the_ID() ) ? ' class="current mdc-button"' : ' class="mdc-button mdc-top-app-bar__action-item"',
 			'<div class="mdc-button__ripple"></div><span class="mdc-button__label">' . esc_html( $item->title ) .'</span>'
 		);
 	}
