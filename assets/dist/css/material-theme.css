@@ -2025,3 +2025,6 @@ a.mdc-list-item {
 .top-app-bar .site-title a {
   text-decoration: none;
 }
+.-with-drawer .top-app-bar__menu {
+  display: none;
+}
