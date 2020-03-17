@@ -1,13 +1,13 @@
-import { MDCList } from '@material/list';
+import { MDCDrawer } from '@material/drawer';
 
-export const listInit = () => {
-	const listElements = document.querySelectorAll( '.mdc-list' );
+export const drawerInit = () => {
+	const drawerElements = document.querySelectorAll( '.mdc-drawer' );
 
-	if ( ! listElements ) {
+	if ( ! drawerElements ) {
 		return;
 	}
 
-	for ( list of listElements ) {
-		new MDCList( list );
+	for ( drawer of drawerElements ) {
+		new MDCDrawer( drawer );
 	}
 };
