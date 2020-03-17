@@ -9,7 +9,7 @@
 
 ?>
 
-<header class="mdc-top-app-bar">
+<header class="mdc-top-app-bar top-app-bar">
 	<div class="mdc-top-app-bar__row">
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
 		<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"><?php esc_html_e( 'menu', 'material-theme-wp' ); ?></button>
