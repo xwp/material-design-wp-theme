@@ -9,10 +9,10 @@
 	
 	& .top-app-bar__menu-trigger {
 		display: none;
+	}
 
-		@nest .-with-drawer & {
-			display: block;
-		}
+	&.-with-drawer .top-app-bar__menu-trigger {
+		display: block;
 	}
 
 	& .top-app-bar__button {

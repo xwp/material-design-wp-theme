@@ -2064,10 +2064,9 @@ a.mdc-list-item {
 	}
 .top-app-bar .top-app-bar__menu-trigger {
 		display: none;
-
-		@nest .-with-drawer & {
-			display: block;
-		}
+	}
+.top-app-bar.-with-drawer .top-app-bar__menu-trigger {
+		display: block;
 	}
 .top-app-bar .top-app-bar__button {
 		padding-right: 1rem;
@@ -2076,6 +2075,7 @@ a.mdc-list-item {
 .logo {
 	padding: 0.75rem;
 }
-.search .search__button:not(:disabled) {
-		color: var( --mdc-theme-on-primary );
-	}
+.search__button:not(:disabled) {
+	color: var( --mdc-theme-on-primary );
+}
+
