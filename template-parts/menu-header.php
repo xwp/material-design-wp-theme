@@ -39,9 +39,15 @@
 				'menu_id'        => 'primary-menu',
 				'walker'         => new Material_Theme_Menu(),
 				'container'      => '',
-				'items_wrap'     => '%3$s',
+				'items_wrap'     => '<nav id="%1$s" class="%2$s">%3$s</nav>',
 			) );
 			?>
+
+			<button class="mdc-button mdc-button--outlined search__button"> 
+				<span class="mdc-button__ripple"></span>
+				<i class="material-icons mdc-button__icon">search</i>
+				<?php esc_html_e( 'Search', 'material-theme-wp' ); ?>
+			</button>
 		</section>
 	</div>
 </header>

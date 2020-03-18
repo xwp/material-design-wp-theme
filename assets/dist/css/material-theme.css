@@ -2025,10 +2025,14 @@ a.mdc-list-item {
 .top-app-bar .site-title a {
   text-decoration: none;
 }
-.-with-drawer .top-app-bar__menu {
+.-with-drawer .top-app-bar__menu .menu {
   display: none;
 }
 
 .logo {
   padding: 0.75rem;
+}
+
+.search__button:not(:disabled) {
+  color: var(--mdc-theme-on-primary);
 }
