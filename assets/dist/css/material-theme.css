@@ -2028,6 +2028,16 @@ a.mdc-list-item {
 .-with-drawer .top-app-bar__menu .menu {
   display: none;
 }
+.top-app-bar__menu-trigger {
+  display: none;
+}
+.-with-drawer .top-app-bar__menu-trigger {
+  display: block;
+}
+.top-app-bar__button {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 
 .logo {
   padding: 0.75rem;

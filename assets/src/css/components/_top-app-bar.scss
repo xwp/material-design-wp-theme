@@ -6,4 +6,17 @@
 	.-with-drawer &__menu .menu {
 		display: none;
 	}
+	
+	&__menu-trigger {
+		display: none;
+
+		.-with-drawer & {
+			display: block;
+		}
+	}
+
+	&__button {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 }
