@@ -1,0 +1,22 @@
+.top-app-bar {
+	& .site-title a {
+		text-decoration: none;
+	}
+
+	&.-with-drawer .top-app-bar__menu .menu {
+		display: none;
+	}
+	
+	& .top-app-bar__menu-trigger {
+		display: none;
+
+		@nest .-with-drawer & {
+			display: block;
+		}
+	}
+
+	& .top-app-bar__button {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}

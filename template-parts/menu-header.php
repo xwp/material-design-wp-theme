@@ -12,7 +12,7 @@
 <header class="mdc-top-app-bar top-app-bar -with-drawer">
 	<div class="mdc-top-app-bar__row">
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-			<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"><?php esc_html_e( 'menu', 'material-theme-wp' ); ?></button>
+			<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger"><?php esc_html_e( 'menu', 'material-theme-wp' ); ?></button>
 			<?php if ( has_custom_logo() ) : ?>
 				<div class="logo">
 					<?php the_custom_logo(); ?>
@@ -39,9 +39,15 @@
 				'menu_id'        => 'primary-menu',
 				'walker'         => new Material_Theme_Menu(),
 				'container'      => '',
-				'items_wrap'     => '%3$s',
+				'items_wrap'     => '<nav id="%1$s" class="%2$s">%3$s</nav>',
 			) );
 			?>
+
+			<button class="mdc-button mdc-button--outlined search__button"> 
+				<span class="mdc-button__ripple"></span>
+				<i class="material-icons mdc-button__icon">search</i>
+				<?php esc_html_e( 'Search', 'material-theme-wp' ); ?>
+			</button>
 		</section>
 	</div>
 </header>

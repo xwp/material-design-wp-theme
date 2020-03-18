@@ -1,56 +1,119 @@
-const autoprefixer = require( 'autoprefixer' );
+/**
+ * External dependencies
+ */
+const path = require( 'path' );
+const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
+const OptimizeCSSAssetsPlugin = require( 'optimize-css-assets-webpack-plugin' );
+const RtlCssPlugin = require( 'rtlcss-webpack-plugin' );
+const TerserPlugin = require( 'terser-webpack-plugin' );
+const WebpackBar = require( 'webpackbar' );
 
-module.exports = [{
-	entry: [
-		'./assets/src/css/index.scss',
-		'./assets/src/js/index.js'
-	],
+/**
+ * WordPress dependencies
+ */
+const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
+
+// Exclude `node_modules` folder from `source-map-loader` to prevent webpack warnings.
+if ( defaultConfig.module && Array.isArray( defaultConfig.module.rules ) ) {
+	defaultConfig.module.rules.some( function( rule ) {
+		if ( rule.use && rule.use.includes( 'source-map-loader' ) ) {
+			rule.exclude = /node_modules/;
+			return true;
+		}
+
+		return false;
+	} );
+}
+
+const sharedConfig = {
 	output: {
-		path: `${__dirname}/assets/dist`,
-		filename: 'bundle.js'
+		path: path.resolve( process.cwd(), 'assets', 'js' ),
+		filename: '[name].js',
+		chunkFilename: '[name].js',
+	},
+	optimization: {
+		minimizer: [
+			new TerserPlugin( {
+				parallel: true,
+				sourceMap: false,
+				cache: true,
+				terserOptions: {
+					output: {
+						comments: /translators:/i,
+					},
+				},
+				extractComments: false,
+			} ),
+			new OptimizeCSSAssetsPlugin( {} ),
+		],
 	},
 	module: {
+		...defaultConfig.module,
 		rules: [
+			...defaultConfig.module.rules,
 			{
-				test: /\.scss$/,
+				test: /\.css$/,
 				use: [
-					{
-						loader: 'file-loader',
-						options: {
-							name: 'material-theme.css',
-							outputPath: 'css',
-						},
-					},
-					{
-						loader: 'extract-loader'
-					},
-					{
-						loader: 'css-loader'
-					},
-					{
-						loader: 'postcss-loader',
-						options: {
-							plugins: () => [autoprefixer()]
-						}
-					},
-					{
-						loader: 'sass-loader',
-						options: {
-							implementation: require( 'sass' ),
-							sassOptions: {
-								includePaths: ['./node_modules']
-							},
-						},
-					},
-				]
+					// prettier-ignore
+					MiniCssExtractPlugin.loader,
+					'css-loader',
+					'postcss-loader',
+				],
 			},
-			{
-				test: /\.js$/,
-				loader: 'babel-loader',
-				query: {
-					presets: ['@babel/preset-env']
-				},
-			}
-		]
+		],
 	},
-}];
+	plugins: [
+		...defaultConfig.plugins,
+		new MiniCssExtractPlugin( {
+			filename: '../css/[name]-compiled.css',
+		} ),
+		new RtlCssPlugin( {
+			filename: '../css/[name]-compiled-rtl.css',
+		} ),
+	],
+};
+const customizer = {
+	...defaultConfig,
+	...sharedConfig,
+	entry: {
+		'customize-controls': [
+			'./assets/src/customizer/customize-controls.js',
+			'./assets/css/src/customize-controls.css',
+		],
+		'customize-preview': [
+			'./assets/src/customizer/customize-preview.js',
+			'./assets/css/src/customize-preview.css',
+		],
+	},
+	plugins: [
+		...sharedConfig.plugins,
+		new WebpackBar( {
+			name: 'Customizer',
+			color: '#f27136',
+		} ),
+	],
+};
+
+const frontEnd = {
+	...defaultConfig,
+	...sharedConfig,
+	entry: {
+		'front-end': [
+			'./assets/src/front-end/index.js',
+			'./assets/css/src/front-end.css',
+		],
+	},
+	plugins: [
+		...sharedConfig.plugins,
+		new WebpackBar( {
+			name: 'Front End',
+			color: '#36f271',
+		} ),
+	],
+};
+
+module.exports = [
+	// prettier-ignore
+	customizer,
+	frontEnd,
+];
