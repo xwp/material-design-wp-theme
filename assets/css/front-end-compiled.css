@@ -2056,6 +2056,18 @@ a.mdc-list-item {
   opacity: 0.12;
 }
 /* Custom */
+.site-content {
+	padding-top: 3.5rem ;
+	padding-top: var( --admin-bar-offset, 3.5rem );
+}
+@media ( --medium-viewport ) {
+.site-content {
+		padding-top: 0
+}
+	}
+.admin-bar {
+	--admin-bar-offset: 3.5rem;
+}
 .top-app-bar .site-title a {
 		text-decoration: none;
 	}

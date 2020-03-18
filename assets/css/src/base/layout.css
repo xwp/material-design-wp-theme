@@ -1,0 +1,11 @@
+.site-content {
+	padding-top: var( --admin-bar-offset, 3.5rem );
+
+	@media ( --medium-viewport ) {
+		padding-top: 0;
+	}
+}
+
+.admin-bar {
+	--admin-bar-offset: 3.5rem;
+}
