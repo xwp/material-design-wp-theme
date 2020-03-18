@@ -2072,9 +2072,21 @@ a.mdc-list-item {
 		padding-right: 1rem;
 		padding-left: 1rem;
 	}
+.top-app-bar .top-app-bar__title {
+		padding-right: 0;
+	}
+.top-app-bar .top-app-bar__title .site-title {
+			font-size: 0.875rem;
+		}
 .logo {
+	align-items: center;
+	display: flex;
 	padding: 0.75rem;
+	max-width: 3.75em;
 }
+.logo img {
+		display: block;
+	}
 .search__button:not(:disabled) {
 	color: var( --mdc-theme-on-primary );
 }

@@ -1,0 +1,3 @@
+/* Include variables and media queries */
+
+@custom-media --medium-viewport  (min-width: 48em); /* 768px */

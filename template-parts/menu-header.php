@@ -18,7 +18,7 @@
 					<?php the_custom_logo(); ?>
 				</div>
 			<?php endif; ?>
-			<span class="mdc-top-app-bar__title">
+			<span class="mdc-top-app-bar__title top-app-bar__title">
 				<?php
 				if ( is_front_page() && is_home() ) :
 					?>

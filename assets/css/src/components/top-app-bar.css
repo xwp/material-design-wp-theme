@@ -19,4 +19,12 @@
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
+
+	& .top-app-bar__title {
+		padding-left: 0;
+
+		& .site-title {
+			font-size: 0.875rem;
+		}
+	}
 }
