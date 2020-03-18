@@ -122,11 +122,11 @@ add_action( 'widgets_init', 'material_theme_wp_widgets_init' );
 function material_theme_wp_scripts() {
 	wp_enqueue_style( 'material-theme-wp-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'material-theme-style', get_template_directory_uri() . '/assets/dist/css/material-theme.css', array( 'material-theme-wp-style' ), '20151215' );
+	wp_enqueue_style( 'material-theme-style', get_template_directory_uri() . '/assets/css/front-end-compiled.css', array( 'material-theme-wp-style' ), '20151215' );
 
 	wp_enqueue_script( 'material-theme-wp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'material-theme-js', get_template_directory_uri() . '/assets/dist/bundle.js', array(), '20151215', true );
+	wp_enqueue_script( 'material-theme-js', get_template_directory_uri() . '/assets/js/front-end.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'material-theme-wp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
