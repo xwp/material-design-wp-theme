@@ -21,6 +21,7 @@
 	}
 
 	& .top-app-bar__title {
+		color: var( --mdc-theme-on-primary );
 		padding-left: 0;
 
 		& .site-title {

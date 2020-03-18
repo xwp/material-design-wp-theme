@@ -2081,6 +2081,7 @@ a.mdc-list-item {
 		padding-right: 1rem;
 	}
 .top-app-bar .top-app-bar__title {
+		color: var( --mdc-theme-on-primary );
 		padding-left: 0;
 	}
 .top-app-bar .top-app-bar__title .site-title {
