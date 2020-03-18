@@ -9,7 +9,6 @@
 
 ?>
 
-
 <aside class="mdc-drawer material-drawer mdc-drawer--modal">
 	<div class="mdc-drawer__header">
 		<h1 class="shrine-title"><?php bloginfo( 'name' ); ?></h1>
@@ -28,3 +27,5 @@
 		</nav>
 	</div>
 </aside>
+
+<div class="mdc-drawer-scrim"></div>

@@ -28,6 +28,4 @@
 
 	<?php get_template_part( 'template-parts/menu', 'header' ); ?>
 
-	<div class="mdc-drawer-scrim"></div>
-
 	<div id="content" class="site-content">
