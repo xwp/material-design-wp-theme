@@ -6,5 +6,6 @@
 @import "@material/list/dist/mdc.list.css";
 
 /* Custom */
+@import "./conf/media.css";
 @import "./base/index.css";
 @import "./components/index.css";

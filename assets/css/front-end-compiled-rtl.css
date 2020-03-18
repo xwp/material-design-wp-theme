@@ -2056,15 +2056,11 @@ a.mdc-list-item {
   opacity: 0.12;
 }
 /* Custom */
+/* 768px */
 .site-content {
 	padding-top: 3.5rem ;
 	padding-top: var( --admin-bar-offset, 3.5rem );
 }
-@media ( --medium-viewport ) {
-.site-content {
-		padding-top: 0
-}
-	}
 .admin-bar {
 	--admin-bar-offset: 3.5rem;
 }
@@ -2090,6 +2086,11 @@ a.mdc-list-item {
 .top-app-bar .top-app-bar__title .site-title {
 			font-size: 0.875rem;
 		}
+@media (min-width: 48em) {
+.top-app-bar .top-app-bar__title .site-title {
+				font-size: 2rem
+		}
+			}
 .logo {
 	align-items: center;
 	display: flex;
@@ -2102,4 +2103,3 @@ a.mdc-list-item {
 .search__button:not(:disabled) {
 	color: var( --mdc-theme-on-primary );
 }
-

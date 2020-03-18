@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9hc3NldHMvY3NzL3NyYy9mcm9udC1lbmQuY3NzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vYXNzZXRzL2Nzcy9zcmMvZnJvbnQtZW5kLmNzcz8xY2EwIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpbiJdLCJtYXBwaW5ncyI6IkFBQUEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./assets/css/src/front-end.css\n");
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -105,7 +105,32 @@ eval("// extracted by mini-css-extract-plugin//# sourceURL=[module]\n//# sourceM
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"drawerInit\", function() { return drawerInit; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"drawerHandler\", function() { return drawerHandler; });\n/* harmony import */ var _material_drawer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @material/drawer */ \"./node_modules/@material/drawer/index.js\");\n\nvar drawerElement = document.querySelector('.mdc-drawer');\nvar drawerInit = function drawerInit() {\n  if (!drawerElement) {\n    return;\n  }\n\n  return new _material_drawer__WEBPACK_IMPORTED_MODULE_0__[\"MDCDrawer\"](drawerElement);\n};\nvar drawerHandler = function drawerHandler(topAppBar, drawer) {\n  topAppBar.listen('MDCTopAppBar:nav', function () {\n    drawer.open = !drawer.open;\n  });\n  var listElement = drawerElement.querySelector('.mdc-list');\n  var mainContentElement = document.querySelector('.site-content');\n  listElement.addEventListener('click', function (event) {\n    drawer.open = false;\n  });\n  document.body.addEventListener('MDCDrawer:closed', function () {\n    mainContentElement.querySelector('input, button').focus();\n  });\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9hc3NldHMvc3JjL2Zyb250LWVuZC9jb21wb25lbnRzL2RyYXdlci5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL2Fzc2V0cy9zcmMvZnJvbnQtZW5kL2NvbXBvbmVudHMvZHJhd2VyLmpzP2NhMDYiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgTURDRHJhd2VyIH0gZnJvbSAnQG1hdGVyaWFsL2RyYXdlcic7XG5cbmNvbnN0IGRyYXdlckVsZW1lbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCAnLm1kYy1kcmF3ZXInICk7XG5cbmV4cG9ydCBjb25zdCBkcmF3ZXJJbml0ID0gKCkgPT4ge1xuXHRpZiAoICEgZHJhd2VyRWxlbWVudCApIHtcblx0XHRyZXR1cm47XG5cdH1cblxuXHRyZXR1cm4gbmV3IE1EQ0RyYXdlciggZHJhd2VyRWxlbWVudCApO1xufTtcblxuZXhwb3J0IGNvbnN0IGRyYXdlckhhbmRsZXIgPSAoIHRvcEFwcEJhciwgZHJhd2VyICkgPT4ge1xuXHR0b3BBcHBCYXIubGlzdGVuKCAnTURDVG9wQXBwQmFyOm5hdicsICgpID0+IHtcblx0XHRkcmF3ZXIub3BlbiA9ICFkcmF3ZXIub3Blbjtcblx0fSApO1xuXG5cdGNvbnN0IGxpc3RFbGVtZW50ID0gZHJhd2VyRWxlbWVudC5xdWVyeVNlbGVjdG9yKCAnLm1kYy1saXN0JyApO1xuXHRjb25zdCBtYWluQ29udGVudEVsZW1lbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCAnLnNpdGUtY29udGVudCcgKTtcblxuXHRsaXN0RWxlbWVudC5hZGRFdmVudExpc3RlbmVyKCAnY2xpY2snLCBldmVudCA9PiB7XG5cdFx0ZHJhd2VyLm9wZW4gPSBmYWxzZTtcblx0fSApO1xuXG5cdGRvY3VtZW50LmJvZHkuYWRkRXZlbnRMaXN0ZW5lciggJ01EQ0RyYXdlcjpjbG9zZWQnLCAoKSA9PiB7XG5cdFx0bWFpbkNvbnRlbnRFbGVtZW50LnF1ZXJ5U2VsZWN0b3IoICdpbnB1dCwgYnV0dG9uJyApLmZvY3VzKCk7XG5cdH0gKTtcbn07XG4iXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFFQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./assets/src/front-end/components/drawer.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "drawerInit", function() { return drawerInit; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "drawerHandler", function() { return drawerHandler; });
+/* harmony import */ var _material_drawer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @material/drawer */ "./node_modules/@material/drawer/index.js");
+
+var drawerElement = document.querySelector('.mdc-drawer');
+var drawerInit = function drawerInit() {
+  if (!drawerElement) {
+    return;
+  }
+
+  return new _material_drawer__WEBPACK_IMPORTED_MODULE_0__["MDCDrawer"](drawerElement);
+};
+var drawerHandler = function drawerHandler(topAppBar, drawer) {
+  topAppBar.listen('MDCTopAppBar:nav', function () {
+    drawer.open = !drawer.open;
+  });
+  var listElement = drawerElement.querySelector('.mdc-list');
+  var mainContentElement = document.querySelector('.site-content');
+  listElement.addEventListener('click', function (event) {
+    drawer.open = false;
+  });
+  document.body.addEventListener('MDCDrawer:closed', function () {
+    mainContentElement.querySelector('input, button').focus();
+  });
+};
 
 /***/ }),
 
@@ -117,7 +142,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"topAppBarInit\", function() { return topAppBarInit; });\n/* harmony import */ var _material_top_app_bar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @material/top-app-bar */ \"./node_modules/@material/top-app-bar/index.js\");\n\nvar topAppBarInit = function topAppBarInit() {\n  var topAppBarElement = document.querySelector('.mdc-top-app-bar');\n\n  if (!topAppBarElement) {\n    return;\n  }\n\n  return new _material_top_app_bar__WEBPACK_IMPORTED_MODULE_0__[\"MDCTopAppBar\"](topAppBarElement);\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9hc3NldHMvc3JjL2Zyb250LWVuZC9jb21wb25lbnRzL3RvcC1hcHAtYmFyLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vYXNzZXRzL3NyYy9mcm9udC1lbmQvY29tcG9uZW50cy90b3AtYXBwLWJhci5qcz80NmYzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE1EQ1RvcEFwcEJhciB9IGZyb20gJ0BtYXRlcmlhbC90b3AtYXBwLWJhcic7XG5cbmV4cG9ydCBjb25zdCB0b3BBcHBCYXJJbml0ID0gKCkgPT4ge1xuXHRjb25zdCB0b3BBcHBCYXJFbGVtZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvciggJy5tZGMtdG9wLWFwcC1iYXInICk7XG5cblx0aWYgKCAhIHRvcEFwcEJhckVsZW1lbnQgKSB7XG5cdFx0cmV0dXJuO1xuXHR9XG5cblx0cmV0dXJuIG5ldyBNRENUb3BBcHBCYXIoIHRvcEFwcEJhckVsZW1lbnQgKTtcbn07XG4iXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./assets/src/front-end/components/top-app-bar.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "topAppBarInit", function() { return topAppBarInit; });
+/* harmony import */ var _material_top_app_bar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @material/top-app-bar */ "./node_modules/@material/top-app-bar/index.js");
+
+var topAppBarInit = function topAppBarInit() {
+  var topAppBarElement = document.querySelector('.mdc-top-app-bar');
+
+  if (!topAppBarElement) {
+    return;
+  }
+
+  return new _material_top_app_bar__WEBPACK_IMPORTED_MODULE_0__["MDCTopAppBar"](topAppBarElement);
+};
 
 /***/ }),
 
@@ -129,7 +166,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_top_app_bar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/top-app-bar */ \"./assets/src/front-end/components/top-app-bar.js\");\n/* harmony import */ var _components_drawer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/drawer */ \"./assets/src/front-end/components/drawer.js\");\n\n\ndocument.addEventListener('DOMContentLoaded', function () {\n  var topAppBar = Object(_components_top_app_bar__WEBPACK_IMPORTED_MODULE_0__[\"topAppBarInit\"])();\n  var drawer = Object(_components_drawer__WEBPACK_IMPORTED_MODULE_1__[\"drawerInit\"])();\n\n  if (topAppBar && drawer) {\n    Object(_components_drawer__WEBPACK_IMPORTED_MODULE_1__[\"drawerHandler\"])(topAppBar, drawer);\n  }\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9hc3NldHMvc3JjL2Zyb250LWVuZC9pbmRleC5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL2Fzc2V0cy9zcmMvZnJvbnQtZW5kL2luZGV4LmpzP2QzNWQiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgdG9wQXBwQmFySW5pdCB9IGZyb20gJy4vY29tcG9uZW50cy90b3AtYXBwLWJhcic7XG5pbXBvcnQgeyBkcmF3ZXJJbml0LCBkcmF3ZXJIYW5kbGVyIH0gZnJvbSAnLi9jb21wb25lbnRzL2RyYXdlcidcblxuZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lciggJ0RPTUNvbnRlbnRMb2FkZWQnLCAoKSA9PiB7XG5cdGNvbnN0IHRvcEFwcEJhciA9IHRvcEFwcEJhckluaXQoKTtcblx0Y29uc3QgZHJhd2VyID0gZHJhd2VySW5pdCgpO1xuXG5cdGlmICggdG9wQXBwQmFyICYmIGRyYXdlciApIHtcblx0XHRkcmF3ZXJIYW5kbGVyKCB0b3BBcHBCYXIsIGRyYXdlciApO1xuXHR9XG59ICk7XG4iXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./assets/src/front-end/index.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_top_app_bar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/top-app-bar */ "./assets/src/front-end/components/top-app-bar.js");
+/* harmony import */ var _components_drawer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/drawer */ "./assets/src/front-end/components/drawer.js");
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var topAppBar = Object(_components_top_app_bar__WEBPACK_IMPORTED_MODULE_0__["topAppBarInit"])();
+  var drawer = Object(_components_drawer__WEBPACK_IMPORTED_MODULE_1__["drawerInit"])();
+
+  if (topAppBar && drawer) {
+    Object(_components_drawer__WEBPACK_IMPORTED_MODULE_1__["drawerHandler"])(topAppBar, drawer);
+  }
+});
 
 /***/ }),
 
@@ -141,7 +190,112 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _com
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"MDCComponent\", function() { return MDCComponent; });\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _foundation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./foundation */ \"./node_modules/@material/base/foundation.js\");\n/**\n * @license\n * Copyright 2016 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\n\n\nvar MDCComponent = /** @class */ (function () {\n    function MDCComponent(root, foundation) {\n        var args = [];\n        for (var _i = 2; _i < arguments.length; _i++) {\n            args[_i - 2] = arguments[_i];\n        }\n        this.root_ = root;\n        this.initialize.apply(this, tslib__WEBPACK_IMPORTED_MODULE_0__[\"__spread\"](args));\n        // Note that we initialize foundation here and not within the constructor's default param so that\n        // this.root_ is defined and can be used within the foundation class.\n        this.foundation_ = foundation === undefined ? this.getDefaultFoundation() : foundation;\n        this.foundation_.init();\n        this.initialSyncWithDOM();\n    }\n    MDCComponent.attachTo = function (root) {\n        // Subclasses which extend MDCBase should provide an attachTo() method that takes a root element and\n        // returns an instantiated component with its root set to that element. Also note that in the cases of\n        // subclasses, an explicit foundation class will not have to be passed in; it will simply be initialized\n        // from getDefaultFoundation().\n        return new MDCComponent(root, new _foundation__WEBPACK_IMPORTED_MODULE_1__[\"MDCFoundation\"]({}));\n    };\n    /* istanbul ignore next: method param only exists for typing purposes; it does not need to be unit tested */\n    MDCComponent.prototype.initialize = function () {\n        var _args = [];\n        for (var _i = 0; _i < arguments.length; _i++) {\n            _args[_i] = arguments[_i];\n        }\n        // Subclasses can override this to do any additional setup work that would be considered part of a\n        // \"constructor\". Essentially, it is a hook into the parent constructor before the foundation is\n        // initialized. Any additional arguments besides root and foundation will be passed in here.\n    };\n    MDCComponent.prototype.getDefaultFoundation = function () {\n        // Subclasses must override this method to return a properly configured foundation class for the\n        // component.\n        throw new Error('Subclasses must override getDefaultFoundation to return a properly configured ' +\n            'foundation class');\n    };\n    MDCComponent.prototype.initialSyncWithDOM = function () {\n        // Subclasses should override this method if they need to perform work to synchronize with a host DOM\n        // object. An example of this would be a form control wrapper that needs to synchronize its internal state\n        // to some property or attribute of the host DOM. Please note: this is *not* the place to perform DOM\n        // reads/writes that would cause layout / paint, as this is called synchronously from within the constructor.\n    };\n    MDCComponent.prototype.destroy = function () {\n        // Subclasses may implement this method to release any resources / deregister any listeners they have\n        // attached. An example of this might be deregistering a resize event from the window object.\n        this.foundation_.destroy();\n    };\n    MDCComponent.prototype.listen = function (evtType, handler, options) {\n        this.root_.addEventListener(evtType, handler, options);\n    };\n    MDCComponent.prototype.unlisten = function (evtType, handler, options) {\n        this.root_.removeEventListener(evtType, handler, options);\n    };\n    /**\n     * Fires a cross-browser-compatible custom event from the component root of the given type, with the given data.\n     */\n    MDCComponent.prototype.emit = function (evtType, evtData, shouldBubble) {\n        if (shouldBubble === void 0) { shouldBubble = false; }\n        var evt;\n        if (typeof CustomEvent === 'function') {\n            evt = new CustomEvent(evtType, {\n                bubbles: shouldBubble,\n                detail: evtData,\n            });\n        }\n        else {\n            evt = document.createEvent('CustomEvent');\n            evt.initCustomEvent(evtType, shouldBubble, false, evtData);\n        }\n        this.root_.dispatchEvent(evt);\n    };\n    return MDCComponent;\n}());\n\n// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.\n/* harmony default export */ __webpack_exports__[\"default\"] = (MDCComponent);\n//# sourceMappingURL=component.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL2Jhc2UvY29tcG9uZW50LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vbm9kZV9tb2R1bGVzL0BtYXRlcmlhbC9iYXNlL2NvbXBvbmVudC5qcz84MTM2Il0sInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQGxpY2Vuc2VcbiAqIENvcHlyaWdodCAyMDE2IEdvb2dsZSBJbmMuXG4gKlxuICogUGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weVxuICogb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgXCJTb2Z0d2FyZVwiKSwgdG8gZGVhbFxuICogaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0c1xuICogdG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3Igc2VsbFxuICogY29waWVzIG9mIHRoZSBTb2Z0d2FyZSwgYW5kIHRvIHBlcm1pdCBwZXJzb25zIHRvIHdob20gdGhlIFNvZnR3YXJlIGlzXG4gKiBmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOlxuICpcbiAqIFRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlIGluY2x1ZGVkIGluXG4gKiBhbGwgY29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS5cbiAqXG4gKiBUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgXCJBUyBJU1wiLCBXSVRIT1VUIFdBUlJBTlRZIE9GIEFOWSBLSU5ELCBFWFBSRVNTIE9SXG4gKiBJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSxcbiAqIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRVxuICogQVVUSE9SUyBPUiBDT1BZUklHSFQgSE9MREVSUyBCRSBMSUFCTEUgRk9SIEFOWSBDTEFJTSwgREFNQUdFUyBPUiBPVEhFUlxuICogTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSxcbiAqIE9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU5cbiAqIFRIRSBTT0ZUV0FSRS5cbiAqL1xuaW1wb3J0ICogYXMgdHNsaWJfMSBmcm9tIFwidHNsaWJcIjtcbmltcG9ydCB7IE1EQ0ZvdW5kYXRpb24gfSBmcm9tICcuL2ZvdW5kYXRpb24nO1xudmFyIE1EQ0NvbXBvbmVudCA9IC8qKiBAY2xhc3MgKi8gKGZ1bmN0aW9uICgpIHtcbiAgICBmdW5jdGlvbiBNRENDb21wb25lbnQocm9vdCwgZm91bmRhdGlvbikge1xuICAgICAgICB2YXIgYXJncyA9IFtdO1xuICAgICAgICBmb3IgKHZhciBfaSA9IDI7IF9pIDwgYXJndW1lbnRzLmxlbmd0aDsgX2krKykge1xuICAgICAgICAgICAgYXJnc1tfaSAtIDJdID0gYXJndW1lbnRzW19pXTtcbiAgICAgICAgfVxuICAgICAgICB0aGlzLnJvb3RfID0gcm9vdDtcbiAgICAgICAgdGhpcy5pbml0aWFsaXplLmFwcGx5KHRoaXMsIHRzbGliXzEuX19zcHJlYWQoYXJncykpO1xuICAgICAgICAvLyBOb3RlIHRoYXQgd2UgaW5pdGlhbGl6ZSBmb3VuZGF0aW9uIGhlcmUgYW5kIG5vdCB3aXRoaW4gdGhlIGNvbnN0cnVjdG9yJ3MgZGVmYXVsdCBwYXJhbSBzbyB0aGF0XG4gICAgICAgIC8vIHRoaXMucm9vdF8gaXMgZGVmaW5lZCBhbmQgY2FuIGJlIHVzZWQgd2l0aGluIHRoZSBmb3VuZGF0aW9uIGNsYXNzLlxuICAgICAgICB0aGlzLmZvdW5kYXRpb25fID0gZm91bmRhdGlvbiA9PT0gdW5kZWZpbmVkID8gdGhpcy5nZXREZWZhdWx0Rm91bmRhdGlvbigpIDogZm91bmRhdGlvbjtcbiAgICAgICAgdGhpcy5mb3VuZGF0aW9uXy5pbml0KCk7XG4gICAgICAgIHRoaXMuaW5pdGlhbFN5bmNXaXRoRE9NKCk7XG4gICAgfVxuICAgIE1EQ0NvbXBvbmVudC5hdHRhY2hUbyA9IGZ1bmN0aW9uIChyb290KSB7XG4gICAgICAgIC8vIFN1YmNsYXNzZXMgd2hpY2ggZXh0ZW5kIE1EQ0Jhc2Ugc2hvdWxkIHByb3ZpZGUgYW4gYXR0YWNoVG8oKSBtZXRob2QgdGhhdCB0YWtlcyBhIHJvb3QgZWxlbWVudCBhbmRcbiAgICAgICAgLy8gcmV0dXJucyBhbiBpbnN0YW50aWF0ZWQgY29tcG9uZW50IHdpdGggaXRzIHJvb3Qgc2V0IHRvIHRoYXQgZWxlbWVudC4gQWxzbyBub3RlIHRoYXQgaW4gdGhlIGNhc2VzIG9mXG4gICAgICAgIC8vIHN1YmNsYXNzZXMsIGFuIGV4cGxpY2l0IGZvdW5kYXRpb24gY2xhc3Mgd2lsbCBub3QgaGF2ZSB0byBiZSBwYXNzZWQgaW47IGl0IHdpbGwgc2ltcGx5IGJlIGluaXRpYWxpemVkXG4gICAgICAgIC8vIGZyb20gZ2V0RGVmYXVsdEZvdW5kYXRpb24oKS5cbiAgICAgICAgcmV0dXJuIG5ldyBNRENDb21wb25lbnQocm9vdCwgbmV3IE1EQ0ZvdW5kYXRpb24oe30pKTtcbiAgICB9O1xuICAgIC8qIGlzdGFuYnVsIGlnbm9yZSBuZXh0OiBtZXRob2QgcGFyYW0gb25seSBleGlzdHMgZm9yIHR5cGluZyBwdXJwb3NlczsgaXQgZG9lcyBub3QgbmVlZCB0byBiZSB1bml0IHRlc3RlZCAqL1xuICAgIE1EQ0NvbXBvbmVudC5wcm90b3R5cGUuaW5pdGlhbGl6ZSA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdmFyIF9hcmdzID0gW107XG4gICAgICAgIGZvciAodmFyIF9pID0gMDsgX2kgPCBhcmd1bWVudHMubGVuZ3RoOyBfaSsrKSB7XG4gICAgICAgICAgICBfYXJnc1tfaV0gPSBhcmd1bWVudHNbX2ldO1xuICAgICAgICB9XG4gICAgICAgIC8vIFN1YmNsYXNzZXMgY2FuIG92ZXJyaWRlIHRoaXMgdG8gZG8gYW55IGFkZGl0aW9uYWwgc2V0dXAgd29yayB0aGF0IHdvdWxkIGJlIGNvbnNpZGVyZWQgcGFydCBvZiBhXG4gICAgICAgIC8vIFwiY29uc3RydWN0b3JcIi4gRXNzZW50aWFsbHksIGl0IGlzIGEgaG9vayBpbnRvIHRoZSBwYXJlbnQgY29uc3RydWN0b3IgYmVmb3JlIHRoZSBmb3VuZGF0aW9uIGlzXG4gICAgICAgIC8vIGluaXRpYWxpemVkLiBBbnkgYWRkaXRpb25hbCBhcmd1bWVudHMgYmVzaWRlcyByb290IGFuZCBmb3VuZGF0aW9uIHdpbGwgYmUgcGFzc2VkIGluIGhlcmUuXG4gICAgfTtcbiAgICBNRENDb21wb25lbnQucHJvdG90eXBlLmdldERlZmF1bHRGb3VuZGF0aW9uID0gZnVuY3Rpb24gKCkge1xuICAgICAgICAvLyBTdWJjbGFzc2VzIG11c3Qgb3ZlcnJpZGUgdGhpcyBtZXRob2QgdG8gcmV0dXJuIGEgcHJvcGVybHkgY29uZmlndXJlZCBmb3VuZGF0aW9uIGNsYXNzIGZvciB0aGVcbiAgICAgICAgLy8gY29tcG9uZW50LlxuICAgICAgICB0aHJvdyBuZXcgRXJyb3IoJ1N1YmNsYXNzZXMgbXVzdCBvdmVycmlkZSBnZXREZWZhdWx0Rm91bmRhdGlvbiB0byByZXR1cm4gYSBwcm9wZXJseSBjb25maWd1cmVkICcgK1xuICAgICAgICAgICAgJ2ZvdW5kYXRpb24gY2xhc3MnKTtcbiAgICB9O1xuICAgIE1EQ0NvbXBvbmVudC5wcm90b3R5cGUuaW5pdGlhbFN5bmNXaXRoRE9NID0gZnVuY3Rpb24gKCkge1xuICAgICAgICAvLyBTdWJjbGFzc2VzIHNob3VsZCBvdmVycmlkZSB0aGlzIG1ldGhvZCBpZiB0aGV5IG5lZWQgdG8gcGVyZm9ybSB3b3JrIHRvIHN5bmNocm9uaXplIHdpdGggYSBob3N0IERPTVxuICAgICAgICAvLyBvYmplY3QuIEFuIGV4YW1wbGUgb2YgdGhpcyB3b3VsZCBiZSBhIGZvcm0gY29udHJvbCB3cmFwcGVyIHRoYXQgbmVlZHMgdG8gc3luY2hyb25pemUgaXRzIGludGVybmFsIHN0YXRlXG4gICAgICAgIC8vIHRvIHNvbWUgcHJvcGVydHkgb3IgYXR0cmlidXRlIG9mIHRoZSBob3N0IERPTS4gUGxlYXNlIG5vdGU6IHRoaXMgaXMgKm5vdCogdGhlIHBsYWNlIHRvIHBlcmZvcm0gRE9NXG4gICAgICAgIC8vIHJlYWRzL3dyaXRlcyB0aGF0IHdvdWxkIGNhdXNlIGxheW91dCAvIHBhaW50LCBhcyB0aGlzIGlzIGNhbGxlZCBzeW5jaHJvbm91c2x5IGZyb20gd2l0aGluIHRoZSBjb25zdHJ1Y3Rvci5cbiAgICB9O1xuICAgIE1EQ0NvbXBvbmVudC5wcm90b3R5cGUuZGVzdHJveSA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgLy8gU3ViY2xhc3NlcyBtYXkgaW1wbGVtZW50IHRoaXMgbWV0aG9kIHRvIHJlbGVhc2UgYW55IHJlc291cmNlcyAvIGRlcmVnaXN0ZXIgYW55IGxpc3RlbmVycyB0aGV5IGhhdmVcbiAgICAgICAgLy8gYXR0YWNoZWQuIEFuIGV4YW1wbGUgb2YgdGhpcyBtaWdodCBiZSBkZXJlZ2lzdGVyaW5nIGEgcmVzaXplIGV2ZW50IGZyb20gdGhlIHdpbmRvdyBvYmplY3QuXG4gICAgICAgIHRoaXMuZm91bmRhdGlvbl8uZGVzdHJveSgpO1xuICAgIH07XG4gICAgTURDQ29tcG9uZW50LnByb3RvdHlwZS5saXN0ZW4gPSBmdW5jdGlvbiAoZXZ0VHlwZSwgaGFuZGxlciwgb3B0aW9ucykge1xuICAgICAgICB0aGlzLnJvb3RfLmFkZEV2ZW50TGlzdGVuZXIoZXZ0VHlwZSwgaGFuZGxlciwgb3B0aW9ucyk7XG4gICAgfTtcbiAgICBNRENDb21wb25lbnQucHJvdG90eXBlLnVubGlzdGVuID0gZnVuY3Rpb24gKGV2dFR5cGUsIGhhbmRsZXIsIG9wdGlvbnMpIHtcbiAgICAgICAgdGhpcy5yb290Xy5yZW1vdmVFdmVudExpc3RlbmVyKGV2dFR5cGUsIGhhbmRsZXIsIG9wdGlvbnMpO1xuICAgIH07XG4gICAgLyoqXG4gICAgICogRmlyZXMgYSBjcm9zcy1icm93c2VyLWNvbXBhdGlibGUgY3VzdG9tIGV2ZW50IGZyb20gdGhlIGNvbXBvbmVudCByb290IG9mIHRoZSBnaXZlbiB0eXBlLCB3aXRoIHRoZSBnaXZlbiBkYXRhLlxuICAgICAqL1xuICAgIE1EQ0NvbXBvbmVudC5wcm90b3R5cGUuZW1pdCA9IGZ1bmN0aW9uIChldnRUeXBlLCBldnREYXRhLCBzaG91bGRCdWJibGUpIHtcbiAgICAgICAgaWYgKHNob3VsZEJ1YmJsZSA9PT0gdm9pZCAwKSB7IHNob3VsZEJ1YmJsZSA9IGZhbHNlOyB9XG4gICAgICAgIHZhciBldnQ7XG4gICAgICAgIGlmICh0eXBlb2YgQ3VzdG9tRXZlbnQgPT09ICdmdW5jdGlvbicpIHtcbiAgICAgICAgICAgIGV2dCA9IG5ldyBDdXN0b21FdmVudChldnRUeXBlLCB7XG4gICAgICAgICAgICAgICAgYnViYmxlczogc2hvdWxkQnViYmxlLFxuICAgICAgICAgICAgICAgIGRldGFpbDogZXZ0RGF0YSxcbiAgICAgICAgICAgIH0pO1xuICAgICAgICB9XG4gICAgICAgIGVsc2Uge1xuICAgICAgICAgICAgZXZ0ID0gZG9jdW1lbnQuY3JlYXRlRXZlbnQoJ0N1c3RvbUV2ZW50Jyk7XG4gICAgICAgICAgICBldnQuaW5pdEN1c3RvbUV2ZW50KGV2dFR5cGUsIHNob3VsZEJ1YmJsZSwgZmFsc2UsIGV2dERhdGEpO1xuICAgICAgICB9XG4gICAgICAgIHRoaXMucm9vdF8uZGlzcGF0Y2hFdmVudChldnQpO1xuICAgIH07XG4gICAgcmV0dXJuIE1EQ0NvbXBvbmVudDtcbn0oKSk7XG5leHBvcnQgeyBNRENDb21wb25lbnQgfTtcbi8vIHRzbGludDpkaXNhYmxlLW5leHQtbGluZTpuby1kZWZhdWx0LWV4cG9ydCBOZWVkZWQgZm9yIGJhY2t3YXJkIGNvbXBhdGliaWxpdHkgd2l0aCBNREMgV2ViIHYwLjQ0LjAgYW5kIGVhcmxpZXIuXG5leHBvcnQgZGVmYXVsdCBNRENDb21wb25lbnQ7XG4vLyMgc291cmNlTWFwcGluZ1VSTD1jb21wb25lbnQuanMubWFwIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./node_modules/@material/base/component.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MDCComponent", function() { return MDCComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _foundation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./foundation */ "./node_modules/@material/base/foundation.js");
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+var MDCComponent = /** @class */ (function () {
+    function MDCComponent(root, foundation) {
+        var args = [];
+        for (var _i = 2; _i < arguments.length; _i++) {
+            args[_i - 2] = arguments[_i];
+        }
+        this.root_ = root;
+        this.initialize.apply(this, tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](args));
+        // Note that we initialize foundation here and not within the constructor's default param so that
+        // this.root_ is defined and can be used within the foundation class.
+        this.foundation_ = foundation === undefined ? this.getDefaultFoundation() : foundation;
+        this.foundation_.init();
+        this.initialSyncWithDOM();
+    }
+    MDCComponent.attachTo = function (root) {
+        // Subclasses which extend MDCBase should provide an attachTo() method that takes a root element and
+        // returns an instantiated component with its root set to that element. Also note that in the cases of
+        // subclasses, an explicit foundation class will not have to be passed in; it will simply be initialized
+        // from getDefaultFoundation().
+        return new MDCComponent(root, new _foundation__WEBPACK_IMPORTED_MODULE_1__["MDCFoundation"]({}));
+    };
+    /* istanbul ignore next: method param only exists for typing purposes; it does not need to be unit tested */
+    MDCComponent.prototype.initialize = function () {
+        var _args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            _args[_i] = arguments[_i];
+        }
+        // Subclasses can override this to do any additional setup work that would be considered part of a
+        // "constructor". Essentially, it is a hook into the parent constructor before the foundation is
+        // initialized. Any additional arguments besides root and foundation will be passed in here.
+    };
+    MDCComponent.prototype.getDefaultFoundation = function () {
+        // Subclasses must override this method to return a properly configured foundation class for the
+        // component.
+        throw new Error('Subclasses must override getDefaultFoundation to return a properly configured ' +
+            'foundation class');
+    };
+    MDCComponent.prototype.initialSyncWithDOM = function () {
+        // Subclasses should override this method if they need to perform work to synchronize with a host DOM
+        // object. An example of this would be a form control wrapper that needs to synchronize its internal state
+        // to some property or attribute of the host DOM. Please note: this is *not* the place to perform DOM
+        // reads/writes that would cause layout / paint, as this is called synchronously from within the constructor.
+    };
+    MDCComponent.prototype.destroy = function () {
+        // Subclasses may implement this method to release any resources / deregister any listeners they have
+        // attached. An example of this might be deregistering a resize event from the window object.
+        this.foundation_.destroy();
+    };
+    MDCComponent.prototype.listen = function (evtType, handler, options) {
+        this.root_.addEventListener(evtType, handler, options);
+    };
+    MDCComponent.prototype.unlisten = function (evtType, handler, options) {
+        this.root_.removeEventListener(evtType, handler, options);
+    };
+    /**
+     * Fires a cross-browser-compatible custom event from the component root of the given type, with the given data.
+     */
+    MDCComponent.prototype.emit = function (evtType, evtData, shouldBubble) {
+        if (shouldBubble === void 0) { shouldBubble = false; }
+        var evt;
+        if (typeof CustomEvent === 'function') {
+            evt = new CustomEvent(evtType, {
+                bubbles: shouldBubble,
+                detail: evtData,
+            });
+        }
+        else {
+            evt = document.createEvent('CustomEvent');
+            evt.initCustomEvent(evtType, shouldBubble, false, evtData);
+        }
+        this.root_.dispatchEvent(evt);
+    };
+    return MDCComponent;
+}());
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* harmony default export */ __webpack_exports__["default"] = (MDCComponent);
+//# sourceMappingURL=component.js.map
 
 /***/ }),
 
@@ -153,7 +307,84 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"MDCFoundation\", function() { return MDCFoundation; });\n/**\n * @license\n * Copyright 2016 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\nvar MDCFoundation = /** @class */ (function () {\n    function MDCFoundation(adapter) {\n        if (adapter === void 0) { adapter = {}; }\n        this.adapter_ = adapter;\n    }\n    Object.defineProperty(MDCFoundation, \"cssClasses\", {\n        get: function () {\n            // Classes extending MDCFoundation should implement this method to return an object which exports every\n            // CSS class the foundation class needs as a property. e.g. {ACTIVE: 'mdc-component--active'}\n            return {};\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(MDCFoundation, \"strings\", {\n        get: function () {\n            // Classes extending MDCFoundation should implement this method to return an object which exports all\n            // semantic strings as constants. e.g. {ARIA_ROLE: 'tablist'}\n            return {};\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(MDCFoundation, \"numbers\", {\n        get: function () {\n            // Classes extending MDCFoundation should implement this method to return an object which exports all\n            // of its semantic numbers as constants. e.g. {ANIMATION_DELAY_MS: 350}\n            return {};\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(MDCFoundation, \"defaultAdapter\", {\n        get: function () {\n            // Classes extending MDCFoundation may choose to implement this getter in order to provide a convenient\n            // way of viewing the necessary methods of an adapter. In the future, this could also be used for adapter\n            // validation.\n            return {};\n        },\n        enumerable: true,\n        configurable: true\n    });\n    MDCFoundation.prototype.init = function () {\n        // Subclasses should override this method to perform initialization routines (registering events, etc.)\n    };\n    MDCFoundation.prototype.destroy = function () {\n        // Subclasses should override this method to perform de-initialization routines (de-registering events, etc.)\n    };\n    return MDCFoundation;\n}());\n\n// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.\n/* harmony default export */ __webpack_exports__[\"default\"] = (MDCFoundation);\n//# sourceMappingURL=foundation.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL2Jhc2UvZm91bmRhdGlvbi5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL25vZGVfbW9kdWxlcy9AbWF0ZXJpYWwvYmFzZS9mb3VuZGF0aW9uLmpzPzY2ODkiXSwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBAbGljZW5zZVxuICogQ29weXJpZ2h0IDIwMTYgR29vZ2xlIEluYy5cbiAqXG4gKiBQZXJtaXNzaW9uIGlzIGhlcmVieSBncmFudGVkLCBmcmVlIG9mIGNoYXJnZSwgdG8gYW55IHBlcnNvbiBvYnRhaW5pbmcgYSBjb3B5XG4gKiBvZiB0aGlzIHNvZnR3YXJlIGFuZCBhc3NvY2lhdGVkIGRvY3VtZW50YXRpb24gZmlsZXMgKHRoZSBcIlNvZnR3YXJlXCIpLCB0byBkZWFsXG4gKiBpbiB0aGUgU29mdHdhcmUgd2l0aG91dCByZXN0cmljdGlvbiwgaW5jbHVkaW5nIHdpdGhvdXQgbGltaXRhdGlvbiB0aGUgcmlnaHRzXG4gKiB0byB1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsXG4gKiBjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXNcbiAqIGZ1cm5pc2hlZCB0byBkbyBzbywgc3ViamVjdCB0byB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6XG4gKlxuICogVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW5cbiAqIGFsbCBjb3BpZXMgb3Igc3Vic3RhbnRpYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLlxuICpcbiAqIFRIRSBTT0ZUV0FSRSBJUyBQUk9WSURFRCBcIkFTIElTXCIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIEVYUFJFU1MgT1JcbiAqIElNUExJRUQsIElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gVEhFIFdBUlJBTlRJRVMgT0YgTUVSQ0hBTlRBQklMSVRZLFxuICogRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFXG4gKiBBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZIENMQUlNLCBEQU1BR0VTIE9SIE9USEVSXG4gKiBMSUFCSUxJVFksIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULCBUT1JUIE9SIE9USEVSV0lTRSwgQVJJU0lORyBGUk9NLFxuICogT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTlxuICogVEhFIFNPRlRXQVJFLlxuICovXG52YXIgTURDRm91bmRhdGlvbiA9IC8qKiBAY2xhc3MgKi8gKGZ1bmN0aW9uICgpIHtcbiAgICBmdW5jdGlvbiBNRENGb3VuZGF0aW9uKGFkYXB0ZXIpIHtcbiAgICAgICAgaWYgKGFkYXB0ZXIgPT09IHZvaWQgMCkgeyBhZGFwdGVyID0ge307IH1cbiAgICAgICAgdGhpcy5hZGFwdGVyXyA9IGFkYXB0ZXI7XG4gICAgfVxuICAgIE9iamVjdC5kZWZpbmVQcm9wZXJ0eShNRENGb3VuZGF0aW9uLCBcImNzc0NsYXNzZXNcIiwge1xuICAgICAgICBnZXQ6IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIC8vIENsYXNzZXMgZXh0ZW5kaW5nIE1EQ0ZvdW5kYXRpb24gc2hvdWxkIGltcGxlbWVudCB0aGlzIG1ldGhvZCB0byByZXR1cm4gYW4gb2JqZWN0IHdoaWNoIGV4cG9ydHMgZXZlcnlcbiAgICAgICAgICAgIC8vIENTUyBjbGFzcyB0aGUgZm91bmRhdGlvbiBjbGFzcyBuZWVkcyBhcyBhIHByb3BlcnR5LiBlLmcuIHtBQ1RJVkU6ICdtZGMtY29tcG9uZW50LS1hY3RpdmUnfVxuICAgICAgICAgICAgcmV0dXJuIHt9O1xuICAgICAgICB9LFxuICAgICAgICBlbnVtZXJhYmxlOiB0cnVlLFxuICAgICAgICBjb25maWd1cmFibGU6IHRydWVcbiAgICB9KTtcbiAgICBPYmplY3QuZGVmaW5lUHJvcGVydHkoTURDRm91bmRhdGlvbiwgXCJzdHJpbmdzXCIsIHtcbiAgICAgICAgZ2V0OiBmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICAvLyBDbGFzc2VzIGV4dGVuZGluZyBNRENGb3VuZGF0aW9uIHNob3VsZCBpbXBsZW1lbnQgdGhpcyBtZXRob2QgdG8gcmV0dXJuIGFuIG9iamVjdCB3aGljaCBleHBvcnRzIGFsbFxuICAgICAgICAgICAgLy8gc2VtYW50aWMgc3RyaW5ncyBhcyBjb25zdGFudHMuIGUuZy4ge0FSSUFfUk9MRTogJ3RhYmxpc3QnfVxuICAgICAgICAgICAgcmV0dXJuIHt9O1xuICAgICAgICB9LFxuICAgICAgICBlbnVtZXJhYmxlOiB0cnVlLFxuICAgICAgICBjb25maWd1cmFibGU6IHRydWVcbiAgICB9KTtcbiAgICBPYmplY3QuZGVmaW5lUHJvcGVydHkoTURDRm91bmRhdGlvbiwgXCJudW1iZXJzXCIsIHtcbiAgICAgICAgZ2V0OiBmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICAvLyBDbGFzc2VzIGV4dGVuZGluZyBNRENGb3VuZGF0aW9uIHNob3VsZCBpbXBsZW1lbnQgdGhpcyBtZXRob2QgdG8gcmV0dXJuIGFuIG9iamVjdCB3aGljaCBleHBvcnRzIGFsbFxuICAgICAgICAgICAgLy8gb2YgaXRzIHNlbWFudGljIG51bWJlcnMgYXMgY29uc3RhbnRzLiBlLmcuIHtBTklNQVRJT05fREVMQVlfTVM6IDM1MH1cbiAgICAgICAgICAgIHJldHVybiB7fTtcbiAgICAgICAgfSxcbiAgICAgICAgZW51bWVyYWJsZTogdHJ1ZSxcbiAgICAgICAgY29uZmlndXJhYmxlOiB0cnVlXG4gICAgfSk7XG4gICAgT2JqZWN0LmRlZmluZVByb3BlcnR5KE1EQ0ZvdW5kYXRpb24sIFwiZGVmYXVsdEFkYXB0ZXJcIiwge1xuICAgICAgICBnZXQ6IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIC8vIENsYXNzZXMgZXh0ZW5kaW5nIE1EQ0ZvdW5kYXRpb24gbWF5IGNob29zZSB0byBpbXBsZW1lbnQgdGhpcyBnZXR0ZXIgaW4gb3JkZXIgdG8gcHJvdmlkZSBhIGNvbnZlbmllbnRcbiAgICAgICAgICAgIC8vIHdheSBvZiB2aWV3aW5nIHRoZSBuZWNlc3NhcnkgbWV0aG9kcyBvZiBhbiBhZGFwdGVyLiBJbiB0aGUgZnV0dXJlLCB0aGlzIGNvdWxkIGFsc28gYmUgdXNlZCBmb3IgYWRhcHRlclxuICAgICAgICAgICAgLy8gdmFsaWRhdGlvbi5cbiAgICAgICAgICAgIHJldHVybiB7fTtcbiAgICAgICAgfSxcbiAgICAgICAgZW51bWVyYWJsZTogdHJ1ZSxcbiAgICAgICAgY29uZmlndXJhYmxlOiB0cnVlXG4gICAgfSk7XG4gICAgTURDRm91bmRhdGlvbi5wcm90b3R5cGUuaW5pdCA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgLy8gU3ViY2xhc3NlcyBzaG91bGQgb3ZlcnJpZGUgdGhpcyBtZXRob2QgdG8gcGVyZm9ybSBpbml0aWFsaXphdGlvbiByb3V0aW5lcyAocmVnaXN0ZXJpbmcgZXZlbnRzLCBldGMuKVxuICAgIH07XG4gICAgTURDRm91bmRhdGlvbi5wcm90b3R5cGUuZGVzdHJveSA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgLy8gU3ViY2xhc3NlcyBzaG91bGQgb3ZlcnJpZGUgdGhpcyBtZXRob2QgdG8gcGVyZm9ybSBkZS1pbml0aWFsaXphdGlvbiByb3V0aW5lcyAoZGUtcmVnaXN0ZXJpbmcgZXZlbnRzLCBldGMuKVxuICAgIH07XG4gICAgcmV0dXJuIE1EQ0ZvdW5kYXRpb247XG59KCkpO1xuZXhwb3J0IHsgTURDRm91bmRhdGlvbiB9O1xuLy8gdHNsaW50OmRpc2FibGUtbmV4dC1saW5lOm5vLWRlZmF1bHQtZXhwb3J0IE5lZWRlZCBmb3IgYmFja3dhcmQgY29tcGF0aWJpbGl0eSB3aXRoIE1EQyBXZWIgdjAuNDQuMCBhbmQgZWFybGllci5cbmV4cG9ydCBkZWZhdWx0IE1EQ0ZvdW5kYXRpb247XG4vLyMgc291cmNlTWFwcGluZ1VSTD1mb3VuZGF0aW9uLmpzLm1hcCJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./node_modules/@material/base/foundation.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MDCFoundation", function() { return MDCFoundation; });
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+var MDCFoundation = /** @class */ (function () {
+    function MDCFoundation(adapter) {
+        if (adapter === void 0) { adapter = {}; }
+        this.adapter_ = adapter;
+    }
+    Object.defineProperty(MDCFoundation, "cssClasses", {
+        get: function () {
+            // Classes extending MDCFoundation should implement this method to return an object which exports every
+            // CSS class the foundation class needs as a property. e.g. {ACTIVE: 'mdc-component--active'}
+            return {};
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCFoundation, "strings", {
+        get: function () {
+            // Classes extending MDCFoundation should implement this method to return an object which exports all
+            // semantic strings as constants. e.g. {ARIA_ROLE: 'tablist'}
+            return {};
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCFoundation, "numbers", {
+        get: function () {
+            // Classes extending MDCFoundation should implement this method to return an object which exports all
+            // of its semantic numbers as constants. e.g. {ANIMATION_DELAY_MS: 350}
+            return {};
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCFoundation, "defaultAdapter", {
+        get: function () {
+            // Classes extending MDCFoundation may choose to implement this getter in order to provide a convenient
+            // way of viewing the necessary methods of an adapter. In the future, this could also be used for adapter
+            // validation.
+            return {};
+        },
+        enumerable: true,
+        configurable: true
+    });
+    MDCFoundation.prototype.init = function () {
+        // Subclasses should override this method to perform initialization routines (registering events, etc.)
+    };
+    MDCFoundation.prototype.destroy = function () {
+        // Subclasses should override this method to perform de-initialization routines (de-registering events, etc.)
+    };
+    return MDCFoundation;
+}());
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* harmony default export */ __webpack_exports__["default"] = (MDCFoundation);
+//# sourceMappingURL=foundation.js.map
 
 /***/ }),
 
@@ -165,7 +396,64 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"applyPassive\", function() { return applyPassive; });\n/**\n * @license\n * Copyright 2019 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\n/**\n * Determine whether the current browser supports passive event listeners, and\n * if so, use them.\n */\nfunction applyPassive(globalObj) {\n    if (globalObj === void 0) { globalObj = window; }\n    return supportsPassiveOption(globalObj) ?\n        { passive: true } :\n        false;\n}\nfunction supportsPassiveOption(globalObj) {\n    if (globalObj === void 0) { globalObj = window; }\n    // See\n    // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener\n    var passiveSupported = false;\n    try {\n        var options = {\n            // This function will be called when the browser\n            // attempts to access the passive property.\n            get passive() {\n                passiveSupported = true;\n                return false;\n            }\n        };\n        var handler = function () { };\n        globalObj.document.addEventListener('test', handler, options);\n        globalObj.document.removeEventListener('test', handler, options);\n    }\n    catch (err) {\n        passiveSupported = false;\n    }\n    return passiveSupported;\n}\n//# sourceMappingURL=events.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL2RvbS9ldmVudHMuanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL2RvbS9ldmVudHMuanM/OTM3MyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEBsaWNlbnNlXG4gKiBDb3B5cmlnaHQgMjAxOSBHb29nbGUgSW5jLlxuICpcbiAqIFBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHlcbiAqIG9mIHRoaXMgc29mdHdhcmUgYW5kIGFzc29jaWF0ZWQgZG9jdW1lbnRhdGlvbiBmaWxlcyAodGhlIFwiU29mdHdhcmVcIiksIHRvIGRlYWxcbiAqIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgd2l0aG91dCBsaW1pdGF0aW9uIHRoZSByaWdodHNcbiAqIHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwgZGlzdHJpYnV0ZSwgc3VibGljZW5zZSwgYW5kL29yIHNlbGxcbiAqIGNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpc1xuICogZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvIHRoZSBmb2xsb3dpbmcgY29uZGl0aW9uczpcbiAqXG4gKiBUaGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBwZXJtaXNzaW9uIG5vdGljZSBzaGFsbCBiZSBpbmNsdWRlZCBpblxuICogYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuXG4gKlxuICogVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEIFwiQVMgSVNcIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUlxuICogSU1QTElFRCwgSU5DTFVESU5HIEJVVCBOT1QgTElNSVRFRCBUTyBUSEUgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFksXG4gKiBGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRSBBTkQgTk9OSU5GUklOR0VNRU5ULiBJTiBOTyBFVkVOVCBTSEFMTCBUSEVcbiAqIEFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVJcbiAqIExJQUJJTElUWSwgV0hFVEhFUiBJTiBBTiBBQ1RJT04gT0YgQ09OVFJBQ1QsIFRPUlQgT1IgT1RIRVJXSVNFLCBBUklTSU5HIEZST00sXG4gKiBPVVQgT0YgT1IgSU4gQ09OTkVDVElPTiBXSVRIIFRIRSBTT0ZUV0FSRSBPUiBUSEUgVVNFIE9SIE9USEVSIERFQUxJTkdTIElOXG4gKiBUSEUgU09GVFdBUkUuXG4gKi9cbi8qKlxuICogRGV0ZXJtaW5lIHdoZXRoZXIgdGhlIGN1cnJlbnQgYnJvd3NlciBzdXBwb3J0cyBwYXNzaXZlIGV2ZW50IGxpc3RlbmVycywgYW5kXG4gKiBpZiBzbywgdXNlIHRoZW0uXG4gKi9cbmV4cG9ydCBmdW5jdGlvbiBhcHBseVBhc3NpdmUoZ2xvYmFsT2JqKSB7XG4gICAgaWYgKGdsb2JhbE9iaiA9PT0gdm9pZCAwKSB7IGdsb2JhbE9iaiA9IHdpbmRvdzsgfVxuICAgIHJldHVybiBzdXBwb3J0c1Bhc3NpdmVPcHRpb24oZ2xvYmFsT2JqKSA/XG4gICAgICAgIHsgcGFzc2l2ZTogdHJ1ZSB9IDpcbiAgICAgICAgZmFsc2U7XG59XG5mdW5jdGlvbiBzdXBwb3J0c1Bhc3NpdmVPcHRpb24oZ2xvYmFsT2JqKSB7XG4gICAgaWYgKGdsb2JhbE9iaiA9PT0gdm9pZCAwKSB7IGdsb2JhbE9iaiA9IHdpbmRvdzsgfVxuICAgIC8vIFNlZVxuICAgIC8vIGh0dHBzOi8vZGV2ZWxvcGVyLm1vemlsbGEub3JnL2VuLVVTL2RvY3MvV2ViL0FQSS9FdmVudFRhcmdldC9hZGRFdmVudExpc3RlbmVyXG4gICAgdmFyIHBhc3NpdmVTdXBwb3J0ZWQgPSBmYWxzZTtcbiAgICB0cnkge1xuICAgICAgICB2YXIgb3B0aW9ucyA9IHtcbiAgICAgICAgICAgIC8vIFRoaXMgZnVuY3Rpb24gd2lsbCBiZSBjYWxsZWQgd2hlbiB0aGUgYnJvd3NlclxuICAgICAgICAgICAgLy8gYXR0ZW1wdHMgdG8gYWNjZXNzIHRoZSBwYXNzaXZlIHByb3BlcnR5LlxuICAgICAgICAgICAgZ2V0IHBhc3NpdmUoKSB7XG4gICAgICAgICAgICAgICAgcGFzc2l2ZVN1cHBvcnRlZCA9IHRydWU7XG4gICAgICAgICAgICAgICAgcmV0dXJuIGZhbHNlO1xuICAgICAgICAgICAgfVxuICAgICAgICB9O1xuICAgICAgICB2YXIgaGFuZGxlciA9IGZ1bmN0aW9uICgpIHsgfTtcbiAgICAgICAgZ2xvYmFsT2JqLmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoJ3Rlc3QnLCBoYW5kbGVyLCBvcHRpb25zKTtcbiAgICAgICAgZ2xvYmFsT2JqLmRvY3VtZW50LnJlbW92ZUV2ZW50TGlzdGVuZXIoJ3Rlc3QnLCBoYW5kbGVyLCBvcHRpb25zKTtcbiAgICB9XG4gICAgY2F0Y2ggKGVycikge1xuICAgICAgICBwYXNzaXZlU3VwcG9ydGVkID0gZmFsc2U7XG4gICAgfVxuICAgIHJldHVybiBwYXNzaXZlU3VwcG9ydGVkO1xufVxuLy8jIHNvdXJjZU1hcHBpbmdVUkw9ZXZlbnRzLmpzLm1hcCJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./node_modules/@material/dom/events.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyPassive", function() { return applyPassive; });
+/**
+ * @license
+ * Copyright 2019 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+/**
+ * Determine whether the current browser supports passive event listeners, and
+ * if so, use them.
+ */
+function applyPassive(globalObj) {
+    if (globalObj === void 0) { globalObj = window; }
+    return supportsPassiveOption(globalObj) ?
+        { passive: true } :
+        false;
+}
+function supportsPassiveOption(globalObj) {
+    if (globalObj === void 0) { globalObj = window; }
+    // See
+    // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+    var passiveSupported = false;
+    try {
+        var options = {
+            // This function will be called when the browser
+            // attempts to access the passive property.
+            get passive() {
+                passiveSupported = true;
+                return false;
+            }
+        };
+        var handler = function () { };
+        globalObj.document.addEventListener('test', handler, options);
+        globalObj.document.removeEventListener('test', handler, options);
+    }
+    catch (err) {
+        passiveSupported = false;
+    }
+    return passiveSupported;
+}
+//# sourceMappingURL=events.js.map
 
 /***/ }),
 
@@ -177,7 +465,141 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"FocusTrap\", function() { return FocusTrap; });\n/**\n * @license\n * Copyright 2020 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\nvar FOCUS_SENTINEL_CLASS = 'mdc-dom-focus-sentinel';\n/**\n * Utility to trap focus in a given root element, e.g. for modal components such\n * as dialogs. The root should have at least one focusable child element,\n * for setting initial focus when trapping focus.\n * Also tracks the previously focused element, and restores focus to that\n * element when releasing focus.\n */\nvar FocusTrap = /** @class */ (function () {\n    function FocusTrap(root, options) {\n        if (options === void 0) { options = {}; }\n        this.root = root;\n        this.options = options;\n        // Previously focused element before trapping focus.\n        this.elFocusedBeforeTrapFocus = null;\n    }\n    /**\n     * Traps focus in `root`. Also focuses on either `initialFocusEl` if set;\n     * otherwises sets initial focus to the first focusable child element.\n     */\n    FocusTrap.prototype.trapFocus = function () {\n        var focusableEls = this.getFocusableElements(this.root);\n        if (focusableEls.length === 0) {\n            throw new Error('FocusTrap: Element must have at least one focusable child.');\n        }\n        this.elFocusedBeforeTrapFocus =\n            document.activeElement instanceof HTMLElement ? document.activeElement :\n                null;\n        this.wrapTabFocus(this.root, focusableEls);\n        if (!this.options.skipInitialFocus) {\n            this.focusInitialElement(focusableEls, this.options.initialFocusEl);\n        }\n    };\n    /**\n     * Releases focus from `root`. Also restores focus to the previously focused\n     * element.\n     */\n    FocusTrap.prototype.releaseFocus = function () {\n        [].slice.call(this.root.querySelectorAll(\".\" + FOCUS_SENTINEL_CLASS))\n            .forEach(function (sentinelEl) {\n            sentinelEl.parentElement.removeChild(sentinelEl);\n        });\n        if (this.elFocusedBeforeTrapFocus) {\n            this.elFocusedBeforeTrapFocus.focus();\n        }\n    };\n    /**\n     * Wraps tab focus within `el` by adding two hidden sentinel divs which are\n     * used to mark the beginning and the end of the tabbable region. When\n     * focused, these sentinel elements redirect focus to the first/last\n     * children elements of the tabbable region, ensuring that focus is trapped\n     * within that region.\n     */\n    FocusTrap.prototype.wrapTabFocus = function (el, focusableEls) {\n        var sentinelStart = this.createSentinel();\n        var sentinelEnd = this.createSentinel();\n        sentinelStart.addEventListener('focus', function () {\n            if (focusableEls.length > 0) {\n                focusableEls[focusableEls.length - 1].focus();\n            }\n        });\n        sentinelEnd.addEventListener('focus', function () {\n            if (focusableEls.length > 0) {\n                focusableEls[0].focus();\n            }\n        });\n        el.insertBefore(sentinelStart, el.children[0]);\n        el.appendChild(sentinelEnd);\n    };\n    /**\n     * Focuses on `initialFocusEl` if defined and a child of the root element.\n     * Otherwise, focuses on the first focusable child element of the root.\n     */\n    FocusTrap.prototype.focusInitialElement = function (focusableEls, initialFocusEl) {\n        var focusIndex = 0;\n        if (initialFocusEl) {\n            focusIndex = Math.max(focusableEls.indexOf(initialFocusEl), 0);\n        }\n        focusableEls[focusIndex].focus();\n    };\n    FocusTrap.prototype.getFocusableElements = function (root) {\n        var focusableEls = [].slice.call(root.querySelectorAll('[autofocus], [tabindex], a, input, textarea, select, button'));\n        return focusableEls.filter(function (el) {\n            var isDisabledOrHidden = el.getAttribute('aria-disabled') === 'true' ||\n                el.getAttribute('disabled') != null ||\n                el.getAttribute('hidden') != null ||\n                el.getAttribute('aria-hidden') === 'true';\n            var isTabbableAndVisible = el.tabIndex >= 0 &&\n                el.getBoundingClientRect().width > 0 &&\n                !el.classList.contains(FOCUS_SENTINEL_CLASS) && !isDisabledOrHidden;\n            var isProgrammaticallyHidden = false;\n            if (isTabbableAndVisible) {\n                var style = getComputedStyle(el);\n                isProgrammaticallyHidden =\n                    style.display === 'none' || style.visibility === 'hidden';\n            }\n            return isTabbableAndVisible && !isProgrammaticallyHidden;\n        });\n    };\n    FocusTrap.prototype.createSentinel = function () {\n        var sentinel = document.createElement('div');\n        sentinel.setAttribute('tabindex', '0');\n        // Don't announce in screen readers.\n        sentinel.setAttribute('aria-hidden', 'true');\n        sentinel.classList.add(FOCUS_SENTINEL_CLASS);\n        return sentinel;\n    };\n    return FocusTrap;\n}());\n\n//# sourceMappingURL=focus-trap.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL2RvbS9mb2N1cy10cmFwLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vbm9kZV9tb2R1bGVzL0BtYXRlcmlhbC9kb20vZm9jdXMtdHJhcC5qcz82YmQ2Il0sInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQGxpY2Vuc2VcbiAqIENvcHlyaWdodCAyMDIwIEdvb2dsZSBJbmMuXG4gKlxuICogUGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weVxuICogb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgXCJTb2Z0d2FyZVwiKSwgdG8gZGVhbFxuICogaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0c1xuICogdG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3Igc2VsbFxuICogY29waWVzIG9mIHRoZSBTb2Z0d2FyZSwgYW5kIHRvIHBlcm1pdCBwZXJzb25zIHRvIHdob20gdGhlIFNvZnR3YXJlIGlzXG4gKiBmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOlxuICpcbiAqIFRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlIGluY2x1ZGVkIGluXG4gKiBhbGwgY29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS5cbiAqXG4gKiBUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgXCJBUyBJU1wiLCBXSVRIT1VUIFdBUlJBTlRZIE9GIEFOWSBLSU5ELCBFWFBSRVNTIE9SXG4gKiBJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSxcbiAqIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRVxuICogQVVUSE9SUyBPUiBDT1BZUklHSFQgSE9MREVSUyBCRSBMSUFCTEUgRk9SIEFOWSBDTEFJTSwgREFNQUdFUyBPUiBPVEhFUlxuICogTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSxcbiAqIE9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU5cbiAqIFRIRSBTT0ZUV0FSRS5cbiAqL1xudmFyIEZPQ1VTX1NFTlRJTkVMX0NMQVNTID0gJ21kYy1kb20tZm9jdXMtc2VudGluZWwnO1xuLyoqXG4gKiBVdGlsaXR5IHRvIHRyYXAgZm9jdXMgaW4gYSBnaXZlbiByb290IGVsZW1lbnQsIGUuZy4gZm9yIG1vZGFsIGNvbXBvbmVudHMgc3VjaFxuICogYXMgZGlhbG9ncy4gVGhlIHJvb3Qgc2hvdWxkIGhhdmUgYXQgbGVhc3Qgb25lIGZvY3VzYWJsZSBjaGlsZCBlbGVtZW50LFxuICogZm9yIHNldHRpbmcgaW5pdGlhbCBmb2N1cyB3aGVuIHRyYXBwaW5nIGZvY3VzLlxuICogQWxzbyB0cmFja3MgdGhlIHByZXZpb3VzbHkgZm9jdXNlZCBlbGVtZW50LCBhbmQgcmVzdG9yZXMgZm9jdXMgdG8gdGhhdFxuICogZWxlbWVudCB3aGVuIHJlbGVhc2luZyBmb2N1cy5cbiAqL1xudmFyIEZvY3VzVHJhcCA9IC8qKiBAY2xhc3MgKi8gKGZ1bmN0aW9uICgpIHtcbiAgICBmdW5jdGlvbiBGb2N1c1RyYXAocm9vdCwgb3B0aW9ucykge1xuICAgICAgICBpZiAob3B0aW9ucyA9PT0gdm9pZCAwKSB7IG9wdGlvbnMgPSB7fTsgfVxuICAgICAgICB0aGlzLnJvb3QgPSByb290O1xuICAgICAgICB0aGlzLm9wdGlvbnMgPSBvcHRpb25zO1xuICAgICAgICAvLyBQcmV2aW91c2x5IGZvY3VzZWQgZWxlbWVudCBiZWZvcmUgdHJhcHBpbmcgZm9jdXMuXG4gICAgICAgIHRoaXMuZWxGb2N1c2VkQmVmb3JlVHJhcEZvY3VzID0gbnVsbDtcbiAgICB9XG4gICAgLyoqXG4gICAgICogVHJhcHMgZm9jdXMgaW4gYHJvb3RgLiBBbHNvIGZvY3VzZXMgb24gZWl0aGVyIGBpbml0aWFsRm9jdXNFbGAgaWYgc2V0O1xuICAgICAqIG90aGVyd2lzZXMgc2V0cyBpbml0aWFsIGZvY3VzIHRvIHRoZSBmaXJzdCBmb2N1c2FibGUgY2hpbGQgZWxlbWVudC5cbiAgICAgKi9cbiAgICBGb2N1c1RyYXAucHJvdG90eXBlLnRyYXBGb2N1cyA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdmFyIGZvY3VzYWJsZUVscyA9IHRoaXMuZ2V0Rm9jdXNhYmxlRWxlbWVudHModGhpcy5yb290KTtcbiAgICAgICAgaWYgKGZvY3VzYWJsZUVscy5sZW5ndGggPT09IDApIHtcbiAgICAgICAgICAgIHRocm93IG5ldyBFcnJvcignRm9jdXNUcmFwOiBFbGVtZW50IG11c3QgaGF2ZSBhdCBsZWFzdCBvbmUgZm9jdXNhYmxlIGNoaWxkLicpO1xuICAgICAgICB9XG4gICAgICAgIHRoaXMuZWxGb2N1c2VkQmVmb3JlVHJhcEZvY3VzID1cbiAgICAgICAgICAgIGRvY3VtZW50LmFjdGl2ZUVsZW1lbnQgaW5zdGFuY2VvZiBIVE1MRWxlbWVudCA/IGRvY3VtZW50LmFjdGl2ZUVsZW1lbnQgOlxuICAgICAgICAgICAgICAgIG51bGw7XG4gICAgICAgIHRoaXMud3JhcFRhYkZvY3VzKHRoaXMucm9vdCwgZm9jdXNhYmxlRWxzKTtcbiAgICAgICAgaWYgKCF0aGlzLm9wdGlvbnMuc2tpcEluaXRpYWxGb2N1cykge1xuICAgICAgICAgICAgdGhpcy5mb2N1c0luaXRpYWxFbGVtZW50KGZvY3VzYWJsZUVscywgdGhpcy5vcHRpb25zLmluaXRpYWxGb2N1c0VsKTtcbiAgICAgICAgfVxuICAgIH07XG4gICAgLyoqXG4gICAgICogUmVsZWFzZXMgZm9jdXMgZnJvbSBgcm9vdGAuIEFsc28gcmVzdG9yZXMgZm9jdXMgdG8gdGhlIHByZXZpb3VzbHkgZm9jdXNlZFxuICAgICAqIGVsZW1lbnQuXG4gICAgICovXG4gICAgRm9jdXNUcmFwLnByb3RvdHlwZS5yZWxlYXNlRm9jdXMgPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIFtdLnNsaWNlLmNhbGwodGhpcy5yb290LnF1ZXJ5U2VsZWN0b3JBbGwoXCIuXCIgKyBGT0NVU19TRU5USU5FTF9DTEFTUykpXG4gICAgICAgICAgICAuZm9yRWFjaChmdW5jdGlvbiAoc2VudGluZWxFbCkge1xuICAgICAgICAgICAgc2VudGluZWxFbC5wYXJlbnRFbGVtZW50LnJlbW92ZUNoaWxkKHNlbnRpbmVsRWwpO1xuICAgICAgICB9KTtcbiAgICAgICAgaWYgKHRoaXMuZWxGb2N1c2VkQmVmb3JlVHJhcEZvY3VzKSB7XG4gICAgICAgICAgICB0aGlzLmVsRm9jdXNlZEJlZm9yZVRyYXBGb2N1cy5mb2N1cygpO1xuICAgICAgICB9XG4gICAgfTtcbiAgICAvKipcbiAgICAgKiBXcmFwcyB0YWIgZm9jdXMgd2l0aGluIGBlbGAgYnkgYWRkaW5nIHR3byBoaWRkZW4gc2VudGluZWwgZGl2cyB3aGljaCBhcmVcbiAgICAgKiB1c2VkIHRvIG1hcmsgdGhlIGJlZ2lubmluZyBhbmQgdGhlIGVuZCBvZiB0aGUgdGFiYmFibGUgcmVnaW9uLiBXaGVuXG4gICAgICogZm9jdXNlZCwgdGhlc2Ugc2VudGluZWwgZWxlbWVudHMgcmVkaXJlY3QgZm9jdXMgdG8gdGhlIGZpcnN0L2xhc3RcbiAgICAgKiBjaGlsZHJlbiBlbGVtZW50cyBvZiB0aGUgdGFiYmFibGUgcmVnaW9uLCBlbnN1cmluZyB0aGF0IGZvY3VzIGlzIHRyYXBwZWRcbiAgICAgKiB3aXRoaW4gdGhhdCByZWdpb24uXG4gICAgICovXG4gICAgRm9jdXNUcmFwLnByb3RvdHlwZS53cmFwVGFiRm9jdXMgPSBmdW5jdGlvbiAoZWwsIGZvY3VzYWJsZUVscykge1xuICAgICAgICB2YXIgc2VudGluZWxTdGFydCA9IHRoaXMuY3JlYXRlU2VudGluZWwoKTtcbiAgICAgICAgdmFyIHNlbnRpbmVsRW5kID0gdGhpcy5jcmVhdGVTZW50aW5lbCgpO1xuICAgICAgICBzZW50aW5lbFN0YXJ0LmFkZEV2ZW50TGlzdGVuZXIoJ2ZvY3VzJywgZnVuY3Rpb24gKCkge1xuICAgICAgICAgICAgaWYgKGZvY3VzYWJsZUVscy5sZW5ndGggPiAwKSB7XG4gICAgICAgICAgICAgICAgZm9jdXNhYmxlRWxzW2ZvY3VzYWJsZUVscy5sZW5ndGggLSAxXS5mb2N1cygpO1xuICAgICAgICAgICAgfVxuICAgICAgICB9KTtcbiAgICAgICAgc2VudGluZWxFbmQuYWRkRXZlbnRMaXN0ZW5lcignZm9jdXMnLCBmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICBpZiAoZm9jdXNhYmxlRWxzLmxlbmd0aCA+IDApIHtcbiAgICAgICAgICAgICAgICBmb2N1c2FibGVFbHNbMF0uZm9jdXMoKTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfSk7XG4gICAgICAgIGVsLmluc2VydEJlZm9yZShzZW50aW5lbFN0YXJ0LCBlbC5jaGlsZHJlblswXSk7XG4gICAgICAgIGVsLmFwcGVuZENoaWxkKHNlbnRpbmVsRW5kKTtcbiAgICB9O1xuICAgIC8qKlxuICAgICAqIEZvY3VzZXMgb24gYGluaXRpYWxGb2N1c0VsYCBpZiBkZWZpbmVkIGFuZCBhIGNoaWxkIG9mIHRoZSByb290IGVsZW1lbnQuXG4gICAgICogT3RoZXJ3aXNlLCBmb2N1c2VzIG9uIHRoZSBmaXJzdCBmb2N1c2FibGUgY2hpbGQgZWxlbWVudCBvZiB0aGUgcm9vdC5cbiAgICAgKi9cbiAgICBGb2N1c1RyYXAucHJvdG90eXBlLmZvY3VzSW5pdGlhbEVsZW1lbnQgPSBmdW5jdGlvbiAoZm9jdXNhYmxlRWxzLCBpbml0aWFsRm9jdXNFbCkge1xuICAgICAgICB2YXIgZm9jdXNJbmRleCA9IDA7XG4gICAgICAgIGlmIChpbml0aWFsRm9jdXNFbCkge1xuICAgICAgICAgICAgZm9jdXNJbmRleCA9IE1hdGgubWF4KGZvY3VzYWJsZUVscy5pbmRleE9mKGluaXRpYWxGb2N1c0VsKSwgMCk7XG4gICAgICAgIH1cbiAgICAgICAgZm9jdXNhYmxlRWxzW2ZvY3VzSW5kZXhdLmZvY3VzKCk7XG4gICAgfTtcbiAgICBGb2N1c1RyYXAucHJvdG90eXBlLmdldEZvY3VzYWJsZUVsZW1lbnRzID0gZnVuY3Rpb24gKHJvb3QpIHtcbiAgICAgICAgdmFyIGZvY3VzYWJsZUVscyA9IFtdLnNsaWNlLmNhbGwocm9vdC5xdWVyeVNlbGVjdG9yQWxsKCdbYXV0b2ZvY3VzXSwgW3RhYmluZGV4XSwgYSwgaW5wdXQsIHRleHRhcmVhLCBzZWxlY3QsIGJ1dHRvbicpKTtcbiAgICAgICAgcmV0dXJuIGZvY3VzYWJsZUVscy5maWx0ZXIoZnVuY3Rpb24gKGVsKSB7XG4gICAgICAgICAgICB2YXIgaXNEaXNhYmxlZE9ySGlkZGVuID0gZWwuZ2V0QXR0cmlidXRlKCdhcmlhLWRpc2FibGVkJykgPT09ICd0cnVlJyB8fFxuICAgICAgICAgICAgICAgIGVsLmdldEF0dHJpYnV0ZSgnZGlzYWJsZWQnKSAhPSBudWxsIHx8XG4gICAgICAgICAgICAgICAgZWwuZ2V0QXR0cmlidXRlKCdoaWRkZW4nKSAhPSBudWxsIHx8XG4gICAgICAgICAgICAgICAgZWwuZ2V0QXR0cmlidXRlKCdhcmlhLWhpZGRlbicpID09PSAndHJ1ZSc7XG4gICAgICAgICAgICB2YXIgaXNUYWJiYWJsZUFuZFZpc2libGUgPSBlbC50YWJJbmRleCA+PSAwICYmXG4gICAgICAgICAgICAgICAgZWwuZ2V0Qm91bmRpbmdDbGllbnRSZWN0KCkud2lkdGggPiAwICYmXG4gICAgICAgICAgICAgICAgIWVsLmNsYXNzTGlzdC5jb250YWlucyhGT0NVU19TRU5USU5FTF9DTEFTUykgJiYgIWlzRGlzYWJsZWRPckhpZGRlbjtcbiAgICAgICAgICAgIHZhciBpc1Byb2dyYW1tYXRpY2FsbHlIaWRkZW4gPSBmYWxzZTtcbiAgICAgICAgICAgIGlmIChpc1RhYmJhYmxlQW5kVmlzaWJsZSkge1xuICAgICAgICAgICAgICAgIHZhciBzdHlsZSA9IGdldENvbXB1dGVkU3R5bGUoZWwpO1xuICAgICAgICAgICAgICAgIGlzUHJvZ3JhbW1hdGljYWxseUhpZGRlbiA9XG4gICAgICAgICAgICAgICAgICAgIHN0eWxlLmRpc3BsYXkgPT09ICdub25lJyB8fCBzdHlsZS52aXNpYmlsaXR5ID09PSAnaGlkZGVuJztcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIHJldHVybiBpc1RhYmJhYmxlQW5kVmlzaWJsZSAmJiAhaXNQcm9ncmFtbWF0aWNhbGx5SGlkZGVuO1xuICAgICAgICB9KTtcbiAgICB9O1xuICAgIEZvY3VzVHJhcC5wcm90b3R5cGUuY3JlYXRlU2VudGluZWwgPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIHZhciBzZW50aW5lbCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpO1xuICAgICAgICBzZW50aW5lbC5zZXRBdHRyaWJ1dGUoJ3RhYmluZGV4JywgJzAnKTtcbiAgICAgICAgLy8gRG9uJ3QgYW5ub3VuY2UgaW4gc2NyZWVuIHJlYWRlcnMuXG4gICAgICAgIHNlbnRpbmVsLnNldEF0dHJpYnV0ZSgnYXJpYS1oaWRkZW4nLCAndHJ1ZScpO1xuICAgICAgICBzZW50aW5lbC5jbGFzc0xpc3QuYWRkKEZPQ1VTX1NFTlRJTkVMX0NMQVNTKTtcbiAgICAgICAgcmV0dXJuIHNlbnRpbmVsO1xuICAgIH07XG4gICAgcmV0dXJuIEZvY3VzVHJhcDtcbn0oKSk7XG5leHBvcnQgeyBGb2N1c1RyYXAgfTtcbi8vIyBzb3VyY2VNYXBwaW5nVVJMPWZvY3VzLXRyYXAuanMubWFwIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./node_modules/@material/dom/focus-trap.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FocusTrap", function() { return FocusTrap; });
+/**
+ * @license
+ * Copyright 2020 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+var FOCUS_SENTINEL_CLASS = 'mdc-dom-focus-sentinel';
+/**
+ * Utility to trap focus in a given root element, e.g. for modal components such
+ * as dialogs. The root should have at least one focusable child element,
+ * for setting initial focus when trapping focus.
+ * Also tracks the previously focused element, and restores focus to that
+ * element when releasing focus.
+ */
+var FocusTrap = /** @class */ (function () {
+    function FocusTrap(root, options) {
+        if (options === void 0) { options = {}; }
+        this.root = root;
+        this.options = options;
+        // Previously focused element before trapping focus.
+        this.elFocusedBeforeTrapFocus = null;
+    }
+    /**
+     * Traps focus in `root`. Also focuses on either `initialFocusEl` if set;
+     * otherwises sets initial focus to the first focusable child element.
+     */
+    FocusTrap.prototype.trapFocus = function () {
+        var focusableEls = this.getFocusableElements(this.root);
+        if (focusableEls.length === 0) {
+            throw new Error('FocusTrap: Element must have at least one focusable child.');
+        }
+        this.elFocusedBeforeTrapFocus =
+            document.activeElement instanceof HTMLElement ? document.activeElement :
+                null;
+        this.wrapTabFocus(this.root, focusableEls);
+        if (!this.options.skipInitialFocus) {
+            this.focusInitialElement(focusableEls, this.options.initialFocusEl);
+        }
+    };
+    /**
+     * Releases focus from `root`. Also restores focus to the previously focused
+     * element.
+     */
+    FocusTrap.prototype.releaseFocus = function () {
+        [].slice.call(this.root.querySelectorAll("." + FOCUS_SENTINEL_CLASS))
+            .forEach(function (sentinelEl) {
+            sentinelEl.parentElement.removeChild(sentinelEl);
+        });
+        if (this.elFocusedBeforeTrapFocus) {
+            this.elFocusedBeforeTrapFocus.focus();
+        }
+    };
+    /**
+     * Wraps tab focus within `el` by adding two hidden sentinel divs which are
+     * used to mark the beginning and the end of the tabbable region. When
+     * focused, these sentinel elements redirect focus to the first/last
+     * children elements of the tabbable region, ensuring that focus is trapped
+     * within that region.
+     */
+    FocusTrap.prototype.wrapTabFocus = function (el, focusableEls) {
+        var sentinelStart = this.createSentinel();
+        var sentinelEnd = this.createSentinel();
+        sentinelStart.addEventListener('focus', function () {
+            if (focusableEls.length > 0) {
+                focusableEls[focusableEls.length - 1].focus();
+            }
+        });
+        sentinelEnd.addEventListener('focus', function () {
+            if (focusableEls.length > 0) {
+                focusableEls[0].focus();
+            }
+        });
+        el.insertBefore(sentinelStart, el.children[0]);
+        el.appendChild(sentinelEnd);
+    };
+    /**
+     * Focuses on `initialFocusEl` if defined and a child of the root element.
+     * Otherwise, focuses on the first focusable child element of the root.
+     */
+    FocusTrap.prototype.focusInitialElement = function (focusableEls, initialFocusEl) {
+        var focusIndex = 0;
+        if (initialFocusEl) {
+            focusIndex = Math.max(focusableEls.indexOf(initialFocusEl), 0);
+        }
+        focusableEls[focusIndex].focus();
+    };
+    FocusTrap.prototype.getFocusableElements = function (root) {
+        var focusableEls = [].slice.call(root.querySelectorAll('[autofocus], [tabindex], a, input, textarea, select, button'));
+        return focusableEls.filter(function (el) {
+            var isDisabledOrHidden = el.getAttribute('aria-disabled') === 'true' ||
+                el.getAttribute('disabled') != null ||
+                el.getAttribute('hidden') != null ||
+                el.getAttribute('aria-hidden') === 'true';
+            var isTabbableAndVisible = el.tabIndex >= 0 &&
+                el.getBoundingClientRect().width > 0 &&
+                !el.classList.contains(FOCUS_SENTINEL_CLASS) && !isDisabledOrHidden;
+            var isProgrammaticallyHidden = false;
+            if (isTabbableAndVisible) {
+                var style = getComputedStyle(el);
+                isProgrammaticallyHidden =
+                    style.display === 'none' || style.visibility === 'hidden';
+            }
+            return isTabbableAndVisible && !isProgrammaticallyHidden;
+        });
+    };
+    FocusTrap.prototype.createSentinel = function () {
+        var sentinel = document.createElement('div');
+        sentinel.setAttribute('tabindex', '0');
+        // Don't announce in screen readers.
+        sentinel.setAttribute('aria-hidden', 'true');
+        sentinel.classList.add(FOCUS_SENTINEL_CLASS);
+        return sentinel;
+    };
+    return FocusTrap;
+}());
+
+//# sourceMappingURL=focus-trap.js.map
 
 /***/ }),
 
@@ -189,7 +611,81 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"closest\", function() { return closest; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"matches\", function() { return matches; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"estimateScrollWidth\", function() { return estimateScrollWidth; });\n/**\n * @license\n * Copyright 2018 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\n/**\n * @fileoverview A \"ponyfill\" is a polyfill that doesn't modify the global prototype chain.\n * This makes ponyfills safer than traditional polyfills, especially for libraries like MDC.\n */\nfunction closest(element, selector) {\n    if (element.closest) {\n        return element.closest(selector);\n    }\n    var el = element;\n    while (el) {\n        if (matches(el, selector)) {\n            return el;\n        }\n        el = el.parentElement;\n    }\n    return null;\n}\nfunction matches(element, selector) {\n    var nativeMatches = element.matches\n        || element.webkitMatchesSelector\n        || element.msMatchesSelector;\n    return nativeMatches.call(element, selector);\n}\n/**\n * Used to compute the estimated scroll width of elements. When an element is\n * hidden due to display: none; being applied to a parent element, the width is\n * returned as 0. However, the element will have a true width once no longer\n * inside a display: none context. This method computes an estimated width when\n * the element is hidden or returns the true width when the element is visble.\n * @param {Element} element the element whose width to estimate\n */\nfunction estimateScrollWidth(element) {\n    // Check the offsetParent. If the element inherits display: none from any\n    // parent, the offsetParent property will be null (see\n    // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent).\n    // This check ensures we only clone the node when necessary.\n    var htmlEl = element;\n    if (htmlEl.offsetParent !== null) {\n        return htmlEl.scrollWidth;\n    }\n    var clone = htmlEl.cloneNode(true);\n    clone.style.setProperty('position', 'absolute');\n    clone.style.setProperty('transform', 'translate(-9999px, -9999px)');\n    document.documentElement.appendChild(clone);\n    var scrollWidth = clone.scrollWidth;\n    document.documentElement.removeChild(clone);\n    return scrollWidth;\n}\n//# sourceMappingURL=ponyfill.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL2RvbS9wb255ZmlsbC5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL25vZGVfbW9kdWxlcy9AbWF0ZXJpYWwvZG9tL3BvbnlmaWxsLmpzP2Q4N2YiXSwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBAbGljZW5zZVxuICogQ29weXJpZ2h0IDIwMTggR29vZ2xlIEluYy5cbiAqXG4gKiBQZXJtaXNzaW9uIGlzIGhlcmVieSBncmFudGVkLCBmcmVlIG9mIGNoYXJnZSwgdG8gYW55IHBlcnNvbiBvYnRhaW5pbmcgYSBjb3B5XG4gKiBvZiB0aGlzIHNvZnR3YXJlIGFuZCBhc3NvY2lhdGVkIGRvY3VtZW50YXRpb24gZmlsZXMgKHRoZSBcIlNvZnR3YXJlXCIpLCB0byBkZWFsXG4gKiBpbiB0aGUgU29mdHdhcmUgd2l0aG91dCByZXN0cmljdGlvbiwgaW5jbHVkaW5nIHdpdGhvdXQgbGltaXRhdGlvbiB0aGUgcmlnaHRzXG4gKiB0byB1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsXG4gKiBjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXNcbiAqIGZ1cm5pc2hlZCB0byBkbyBzbywgc3ViamVjdCB0byB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6XG4gKlxuICogVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW5cbiAqIGFsbCBjb3BpZXMgb3Igc3Vic3RhbnRpYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLlxuICpcbiAqIFRIRSBTT0ZUV0FSRSBJUyBQUk9WSURFRCBcIkFTIElTXCIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIEVYUFJFU1MgT1JcbiAqIElNUExJRUQsIElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gVEhFIFdBUlJBTlRJRVMgT0YgTUVSQ0hBTlRBQklMSVRZLFxuICogRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFXG4gKiBBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZIENMQUlNLCBEQU1BR0VTIE9SIE9USEVSXG4gKiBMSUFCSUxJVFksIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULCBUT1JUIE9SIE9USEVSV0lTRSwgQVJJU0lORyBGUk9NLFxuICogT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTlxuICogVEhFIFNPRlRXQVJFLlxuICovXG4vKipcbiAqIEBmaWxlb3ZlcnZpZXcgQSBcInBvbnlmaWxsXCIgaXMgYSBwb2x5ZmlsbCB0aGF0IGRvZXNuJ3QgbW9kaWZ5IHRoZSBnbG9iYWwgcHJvdG90eXBlIGNoYWluLlxuICogVGhpcyBtYWtlcyBwb255ZmlsbHMgc2FmZXIgdGhhbiB0cmFkaXRpb25hbCBwb2x5ZmlsbHMsIGVzcGVjaWFsbHkgZm9yIGxpYnJhcmllcyBsaWtlIE1EQy5cbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIGNsb3Nlc3QoZWxlbWVudCwgc2VsZWN0b3IpIHtcbiAgICBpZiAoZWxlbWVudC5jbG9zZXN0KSB7XG4gICAgICAgIHJldHVybiBlbGVtZW50LmNsb3Nlc3Qoc2VsZWN0b3IpO1xuICAgIH1cbiAgICB2YXIgZWwgPSBlbGVtZW50O1xuICAgIHdoaWxlIChlbCkge1xuICAgICAgICBpZiAobWF0Y2hlcyhlbCwgc2VsZWN0b3IpKSB7XG4gICAgICAgICAgICByZXR1cm4gZWw7XG4gICAgICAgIH1cbiAgICAgICAgZWwgPSBlbC5wYXJlbnRFbGVtZW50O1xuICAgIH1cbiAgICByZXR1cm4gbnVsbDtcbn1cbmV4cG9ydCBmdW5jdGlvbiBtYXRjaGVzKGVsZW1lbnQsIHNlbGVjdG9yKSB7XG4gICAgdmFyIG5hdGl2ZU1hdGNoZXMgPSBlbGVtZW50Lm1hdGNoZXNcbiAgICAgICAgfHwgZWxlbWVudC53ZWJraXRNYXRjaGVzU2VsZWN0b3JcbiAgICAgICAgfHwgZWxlbWVudC5tc01hdGNoZXNTZWxlY3RvcjtcbiAgICByZXR1cm4gbmF0aXZlTWF0Y2hlcy5jYWxsKGVsZW1lbnQsIHNlbGVjdG9yKTtcbn1cbi8qKlxuICogVXNlZCB0byBjb21wdXRlIHRoZSBlc3RpbWF0ZWQgc2Nyb2xsIHdpZHRoIG9mIGVsZW1lbnRzLiBXaGVuIGFuIGVsZW1lbnQgaXNcbiAqIGhpZGRlbiBkdWUgdG8gZGlzcGxheTogbm9uZTsgYmVpbmcgYXBwbGllZCB0byBhIHBhcmVudCBlbGVtZW50LCB0aGUgd2lkdGggaXNcbiAqIHJldHVybmVkIGFzIDAuIEhvd2V2ZXIsIHRoZSBlbGVtZW50IHdpbGwgaGF2ZSBhIHRydWUgd2lkdGggb25jZSBubyBsb25nZXJcbiAqIGluc2lkZSBhIGRpc3BsYXk6IG5vbmUgY29udGV4dC4gVGhpcyBtZXRob2QgY29tcHV0ZXMgYW4gZXN0aW1hdGVkIHdpZHRoIHdoZW5cbiAqIHRoZSBlbGVtZW50IGlzIGhpZGRlbiBvciByZXR1cm5zIHRoZSB0cnVlIHdpZHRoIHdoZW4gdGhlIGVsZW1lbnQgaXMgdmlzYmxlLlxuICogQHBhcmFtIHtFbGVtZW50fSBlbGVtZW50IHRoZSBlbGVtZW50IHdob3NlIHdpZHRoIHRvIGVzdGltYXRlXG4gKi9cbmV4cG9ydCBmdW5jdGlvbiBlc3RpbWF0ZVNjcm9sbFdpZHRoKGVsZW1lbnQpIHtcbiAgICAvLyBDaGVjayB0aGUgb2Zmc2V0UGFyZW50LiBJZiB0aGUgZWxlbWVudCBpbmhlcml0cyBkaXNwbGF5OiBub25lIGZyb20gYW55XG4gICAgLy8gcGFyZW50LCB0aGUgb2Zmc2V0UGFyZW50IHByb3BlcnR5IHdpbGwgYmUgbnVsbCAoc2VlXG4gICAgLy8gaHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvZW4tVVMvZG9jcy9XZWIvQVBJL0hUTUxFbGVtZW50L29mZnNldFBhcmVudCkuXG4gICAgLy8gVGhpcyBjaGVjayBlbnN1cmVzIHdlIG9ubHkgY2xvbmUgdGhlIG5vZGUgd2hlbiBuZWNlc3NhcnkuXG4gICAgdmFyIGh0bWxFbCA9IGVsZW1lbnQ7XG4gICAgaWYgKGh0bWxFbC5vZmZzZXRQYXJlbnQgIT09IG51bGwpIHtcbiAgICAgICAgcmV0dXJuIGh0bWxFbC5zY3JvbGxXaWR0aDtcbiAgICB9XG4gICAgdmFyIGNsb25lID0gaHRtbEVsLmNsb25lTm9kZSh0cnVlKTtcbiAgICBjbG9uZS5zdHlsZS5zZXRQcm9wZXJ0eSgncG9zaXRpb24nLCAnYWJzb2x1dGUnKTtcbiAgICBjbG9uZS5zdHlsZS5zZXRQcm9wZXJ0eSgndHJhbnNmb3JtJywgJ3RyYW5zbGF0ZSgtOTk5OXB4LCAtOTk5OXB4KScpO1xuICAgIGRvY3VtZW50LmRvY3VtZW50RWxlbWVudC5hcHBlbmRDaGlsZChjbG9uZSk7XG4gICAgdmFyIHNjcm9sbFdpZHRoID0gY2xvbmUuc2Nyb2xsV2lkdGg7XG4gICAgZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50LnJlbW92ZUNoaWxkKGNsb25lKTtcbiAgICByZXR1cm4gc2Nyb2xsV2lkdGg7XG59XG4vLyMgc291cmNlTWFwcGluZ1VSTD1wb255ZmlsbC5qcy5tYXAiXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./node_modules/@material/dom/ponyfill.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closest", function() { return closest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "matches", function() { return matches; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "estimateScrollWidth", function() { return estimateScrollWidth; });
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+/**
+ * @fileoverview A "ponyfill" is a polyfill that doesn't modify the global prototype chain.
+ * This makes ponyfills safer than traditional polyfills, especially for libraries like MDC.
+ */
+function closest(element, selector) {
+    if (element.closest) {
+        return element.closest(selector);
+    }
+    var el = element;
+    while (el) {
+        if (matches(el, selector)) {
+            return el;
+        }
+        el = el.parentElement;
+    }
+    return null;
+}
+function matches(element, selector) {
+    var nativeMatches = element.matches
+        || element.webkitMatchesSelector
+        || element.msMatchesSelector;
+    return nativeMatches.call(element, selector);
+}
+/**
+ * Used to compute the estimated scroll width of elements. When an element is
+ * hidden due to display: none; being applied to a parent element, the width is
+ * returned as 0. However, the element will have a true width once no longer
+ * inside a display: none context. This method computes an estimated width when
+ * the element is hidden or returns the true width when the element is visble.
+ * @param {Element} element the element whose width to estimate
+ */
+function estimateScrollWidth(element) {
+    // Check the offsetParent. If the element inherits display: none from any
+    // parent, the offsetParent property will be null (see
+    // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent).
+    // This check ensures we only clone the node when necessary.
+    var htmlEl = element;
+    if (htmlEl.offsetParent !== null) {
+        return htmlEl.scrollWidth;
+    }
+    var clone = htmlEl.cloneNode(true);
+    clone.style.setProperty('position', 'absolute');
+    clone.style.setProperty('transform', 'translate(-9999px, -9999px)');
+    document.documentElement.appendChild(clone);
+    var scrollWidth = clone.scrollWidth;
+    document.documentElement.removeChild(clone);
+    return scrollWidth;
+}
+//# sourceMappingURL=ponyfill.js.map
 
 /***/ }),
 
@@ -201,7 +697,170 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"MDCDrawer\", function() { return MDCDrawer; });\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _material_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/base/component */ \"./node_modules/@material/base/component.js\");\n/* harmony import */ var _material_dom_focus_trap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/dom/focus-trap */ \"./node_modules/@material/dom/focus-trap.js\");\n/* harmony import */ var _material_list_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material/list/component */ \"./node_modules/@material/list/component.js\");\n/* harmony import */ var _material_list_foundation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material/list/foundation */ \"./node_modules/@material/list/foundation.js\");\n/* harmony import */ var _dismissible_foundation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./dismissible/foundation */ \"./node_modules/@material/drawer/dismissible/foundation.js\");\n/* harmony import */ var _modal_foundation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modal/foundation */ \"./node_modules/@material/drawer/modal/foundation.js\");\n/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./util */ \"./node_modules/@material/drawer/util.js\");\n/**\n * @license\n * Copyright 2016 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\n\n\n\n\n\n\n\n\nvar cssClasses = _dismissible_foundation__WEBPACK_IMPORTED_MODULE_5__[\"MDCDismissibleDrawerFoundation\"].cssClasses, strings = _dismissible_foundation__WEBPACK_IMPORTED_MODULE_5__[\"MDCDismissibleDrawerFoundation\"].strings;\n/**\n * @events `MDCDrawer:closed {}` Emits when the navigation drawer has closed.\n * @events `MDCDrawer:opened {}` Emits when the navigation drawer has opened.\n */\nvar MDCDrawer = /** @class */ (function (_super) {\n    tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"](MDCDrawer, _super);\n    function MDCDrawer() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    MDCDrawer.attachTo = function (root) {\n        return new MDCDrawer(root);\n    };\n    Object.defineProperty(MDCDrawer.prototype, \"open\", {\n        /**\n         * @return boolean Proxies to the foundation's `open`/`close` methods.\n         * Also returns true if drawer is in the open position.\n         */\n        get: function () {\n            return this.foundation_.isOpen();\n        },\n        /**\n         * Toggles the drawer open and closed.\n         */\n        set: function (isOpen) {\n            if (isOpen) {\n                this.foundation_.open();\n            }\n            else {\n                this.foundation_.close();\n            }\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(MDCDrawer.prototype, \"list\", {\n        get: function () {\n            return this.list_;\n        },\n        enumerable: true,\n        configurable: true\n    });\n    MDCDrawer.prototype.initialize = function (focusTrapFactory, listFactory) {\n        if (focusTrapFactory === void 0) { focusTrapFactory = function (el) { return new _material_dom_focus_trap__WEBPACK_IMPORTED_MODULE_2__[\"FocusTrap\"](el); }; }\n        if (listFactory === void 0) { listFactory = function (el) { return new _material_list_component__WEBPACK_IMPORTED_MODULE_3__[\"MDCList\"](el); }; }\n        var listEl = this.root_.querySelector(\".\" + _material_list_foundation__WEBPACK_IMPORTED_MODULE_4__[\"MDCListFoundation\"].cssClasses.ROOT);\n        if (listEl) {\n            this.list_ = listFactory(listEl);\n            this.list_.wrapFocus = true;\n        }\n        this.focusTrapFactory_ = focusTrapFactory;\n    };\n    MDCDrawer.prototype.initialSyncWithDOM = function () {\n        var _this = this;\n        var MODAL = cssClasses.MODAL;\n        var SCRIM_SELECTOR = strings.SCRIM_SELECTOR;\n        this.scrim_ = this.root_.parentNode.querySelector(SCRIM_SELECTOR);\n        if (this.scrim_ && this.root_.classList.contains(MODAL)) {\n            this.handleScrimClick_ = function () { return _this.foundation_.handleScrimClick(); };\n            this.scrim_.addEventListener('click', this.handleScrimClick_);\n            this.focusTrap_ = _util__WEBPACK_IMPORTED_MODULE_7__[\"createFocusTrapInstance\"](this.root_, this.focusTrapFactory_);\n        }\n        this.handleKeydown_ = function (evt) { return _this.foundation_.handleKeydown(evt); };\n        this.handleTransitionEnd_ = function (evt) { return _this.foundation_.handleTransitionEnd(evt); };\n        this.listen('keydown', this.handleKeydown_);\n        this.listen('transitionend', this.handleTransitionEnd_);\n    };\n    MDCDrawer.prototype.destroy = function () {\n        this.unlisten('keydown', this.handleKeydown_);\n        this.unlisten('transitionend', this.handleTransitionEnd_);\n        if (this.list_) {\n            this.list_.destroy();\n        }\n        var MODAL = cssClasses.MODAL;\n        if (this.scrim_ && this.handleScrimClick_ && this.root_.classList.contains(MODAL)) {\n            this.scrim_.removeEventListener('click', this.handleScrimClick_);\n            // Ensure drawer is closed to hide scrim and release focus\n            this.open = false;\n        }\n    };\n    MDCDrawer.prototype.getDefaultFoundation = function () {\n        var _this = this;\n        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.\n        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.\n        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.\n        var adapter = {\n            addClass: function (className) { return _this.root_.classList.add(className); },\n            removeClass: function (className) { return _this.root_.classList.remove(className); },\n            hasClass: function (className) { return _this.root_.classList.contains(className); },\n            elementHasClass: function (element, className) { return element.classList.contains(className); },\n            saveFocus: function () { return _this.previousFocus_ = document.activeElement; },\n            restoreFocus: function () {\n                var previousFocus = _this.previousFocus_;\n                if (previousFocus && previousFocus.focus && _this.root_.contains(document.activeElement)) {\n                    previousFocus.focus();\n                }\n            },\n            focusActiveNavigationItem: function () {\n                var activeNavItemEl = _this.root_.querySelector(\".\" + _material_list_foundation__WEBPACK_IMPORTED_MODULE_4__[\"MDCListFoundation\"].cssClasses.LIST_ITEM_ACTIVATED_CLASS);\n                if (activeNavItemEl) {\n                    activeNavItemEl.focus();\n                }\n            },\n            notifyClose: function () { return _this.emit(strings.CLOSE_EVENT, {}, true /* shouldBubble */); },\n            notifyOpen: function () { return _this.emit(strings.OPEN_EVENT, {}, true /* shouldBubble */); },\n            trapFocus: function () { return _this.focusTrap_.trapFocus(); },\n            releaseFocus: function () { return _this.focusTrap_.releaseFocus(); },\n        };\n        // tslint:enable:object-literal-sort-keys\n        var DISMISSIBLE = cssClasses.DISMISSIBLE, MODAL = cssClasses.MODAL;\n        if (this.root_.classList.contains(DISMISSIBLE)) {\n            return new _dismissible_foundation__WEBPACK_IMPORTED_MODULE_5__[\"MDCDismissibleDrawerFoundation\"](adapter);\n        }\n        else if (this.root_.classList.contains(MODAL)) {\n            return new _modal_foundation__WEBPACK_IMPORTED_MODULE_6__[\"MDCModalDrawerFoundation\"](adapter);\n        }\n        else {\n            throw new Error(\"MDCDrawer: Failed to instantiate component. Supported variants are \" + DISMISSIBLE + \" and \" + MODAL + \".\");\n        }\n    };\n    return MDCDrawer;\n}(_material_base_component__WEBPACK_IMPORTED_MODULE_1__[\"MDCComponent\"]));\n\n//# sourceMappingURL=component.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL2RyYXdlci9jb21wb25lbnQuanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL2RyYXdlci9jb21wb25lbnQuanM/NjZhYiJdLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEBsaWNlbnNlXG4gKiBDb3B5cmlnaHQgMjAxNiBHb29nbGUgSW5jLlxuICpcbiAqIFBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHlcbiAqIG9mIHRoaXMgc29mdHdhcmUgYW5kIGFzc29jaWF0ZWQgZG9jdW1lbnRhdGlvbiBmaWxlcyAodGhlIFwiU29mdHdhcmVcIiksIHRvIGRlYWxcbiAqIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgd2l0aG91dCBsaW1pdGF0aW9uIHRoZSByaWdodHNcbiAqIHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwgZGlzdHJpYnV0ZSwgc3VibGljZW5zZSwgYW5kL29yIHNlbGxcbiAqIGNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpc1xuICogZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvIHRoZSBmb2xsb3dpbmcgY29uZGl0aW9uczpcbiAqXG4gKiBUaGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBwZXJtaXNzaW9uIG5vdGljZSBzaGFsbCBiZSBpbmNsdWRlZCBpblxuICogYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuXG4gKlxuICogVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEIFwiQVMgSVNcIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUlxuICogSU1QTElFRCwgSU5DTFVESU5HIEJVVCBOT1QgTElNSVRFRCBUTyBUSEUgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFksXG4gKiBGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRSBBTkQgTk9OSU5GUklOR0VNRU5ULiBJTiBOTyBFVkVOVCBTSEFMTCBUSEVcbiAqIEFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVJcbiAqIExJQUJJTElUWSwgV0hFVEhFUiBJTiBBTiBBQ1RJT04gT0YgQ09OVFJBQ1QsIFRPUlQgT1IgT1RIRVJXSVNFLCBBUklTSU5HIEZST00sXG4gKiBPVVQgT0YgT1IgSU4gQ09OTkVDVElPTiBXSVRIIFRIRSBTT0ZUV0FSRSBPUiBUSEUgVVNFIE9SIE9USEVSIERFQUxJTkdTIElOXG4gKiBUSEUgU09GVFdBUkUuXG4gKi9cbmltcG9ydCAqIGFzIHRzbGliXzEgZnJvbSBcInRzbGliXCI7XG5pbXBvcnQgeyBNRENDb21wb25lbnQgfSBmcm9tICdAbWF0ZXJpYWwvYmFzZS9jb21wb25lbnQnO1xuaW1wb3J0IHsgRm9jdXNUcmFwIH0gZnJvbSAnQG1hdGVyaWFsL2RvbS9mb2N1cy10cmFwJztcbmltcG9ydCB7IE1EQ0xpc3QgfSBmcm9tICdAbWF0ZXJpYWwvbGlzdC9jb21wb25lbnQnO1xuaW1wb3J0IHsgTURDTGlzdEZvdW5kYXRpb24gfSBmcm9tICdAbWF0ZXJpYWwvbGlzdC9mb3VuZGF0aW9uJztcbmltcG9ydCB7IE1EQ0Rpc21pc3NpYmxlRHJhd2VyRm91bmRhdGlvbiB9IGZyb20gJy4vZGlzbWlzc2libGUvZm91bmRhdGlvbic7XG5pbXBvcnQgeyBNRENNb2RhbERyYXdlckZvdW5kYXRpb24gfSBmcm9tICcuL21vZGFsL2ZvdW5kYXRpb24nO1xuaW1wb3J0ICogYXMgdXRpbCBmcm9tICcuL3V0aWwnO1xudmFyIGNzc0NsYXNzZXMgPSBNRENEaXNtaXNzaWJsZURyYXdlckZvdW5kYXRpb24uY3NzQ2xhc3Nlcywgc3RyaW5ncyA9IE1EQ0Rpc21pc3NpYmxlRHJhd2VyRm91bmRhdGlvbi5zdHJpbmdzO1xuLyoqXG4gKiBAZXZlbnRzIGBNRENEcmF3ZXI6Y2xvc2VkIHt9YCBFbWl0cyB3aGVuIHRoZSBuYXZpZ2F0aW9uIGRyYXdlciBoYXMgY2xvc2VkLlxuICogQGV2ZW50cyBgTURDRHJhd2VyOm9wZW5lZCB7fWAgRW1pdHMgd2hlbiB0aGUgbmF2aWdhdGlvbiBkcmF3ZXIgaGFzIG9wZW5lZC5cbiAqL1xudmFyIE1EQ0RyYXdlciA9IC8qKiBAY2xhc3MgKi8gKGZ1bmN0aW9uIChfc3VwZXIpIHtcbiAgICB0c2xpYl8xLl9fZXh0ZW5kcyhNRENEcmF3ZXIsIF9zdXBlcik7XG4gICAgZnVuY3Rpb24gTURDRHJhd2VyKCkge1xuICAgICAgICByZXR1cm4gX3N1cGVyICE9PSBudWxsICYmIF9zdXBlci5hcHBseSh0aGlzLCBhcmd1bWVudHMpIHx8IHRoaXM7XG4gICAgfVxuICAgIE1EQ0RyYXdlci5hdHRhY2hUbyA9IGZ1bmN0aW9uIChyb290KSB7XG4gICAgICAgIHJldHVybiBuZXcgTURDRHJhd2VyKHJvb3QpO1xuICAgIH07XG4gICAgT2JqZWN0LmRlZmluZVByb3BlcnR5KE1EQ0RyYXdlci5wcm90b3R5cGUsIFwib3BlblwiLCB7XG4gICAgICAgIC8qKlxuICAgICAgICAgKiBAcmV0dXJuIGJvb2xlYW4gUHJveGllcyB0byB0aGUgZm91bmRhdGlvbidzIGBvcGVuYC9gY2xvc2VgIG1ldGhvZHMuXG4gICAgICAgICAqIEFsc28gcmV0dXJucyB0cnVlIGlmIGRyYXdlciBpcyBpbiB0aGUgb3BlbiBwb3NpdGlvbi5cbiAgICAgICAgICovXG4gICAgICAgIGdldDogZnVuY3Rpb24gKCkge1xuICAgICAgICAgICAgcmV0dXJuIHRoaXMuZm91bmRhdGlvbl8uaXNPcGVuKCk7XG4gICAgICAgIH0sXG4gICAgICAgIC8qKlxuICAgICAgICAgKiBUb2dnbGVzIHRoZSBkcmF3ZXIgb3BlbiBhbmQgY2xvc2VkLlxuICAgICAgICAgKi9cbiAgICAgICAgc2V0OiBmdW5jdGlvbiAoaXNPcGVuKSB7XG4gICAgICAgICAgICBpZiAoaXNPcGVuKSB7XG4gICAgICAgICAgICAgICAgdGhpcy5mb3VuZGF0aW9uXy5vcGVuKCk7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBlbHNlIHtcbiAgICAgICAgICAgICAgICB0aGlzLmZvdW5kYXRpb25fLmNsb3NlKCk7XG4gICAgICAgICAgICB9XG4gICAgICAgIH0sXG4gICAgICAgIGVudW1lcmFibGU6IHRydWUsXG4gICAgICAgIGNvbmZpZ3VyYWJsZTogdHJ1ZVxuICAgIH0pO1xuICAgIE9iamVjdC5kZWZpbmVQcm9wZXJ0eShNRENEcmF3ZXIucHJvdG90eXBlLCBcImxpc3RcIiwge1xuICAgICAgICBnZXQ6IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIHJldHVybiB0aGlzLmxpc3RfO1xuICAgICAgICB9LFxuICAgICAgICBlbnVtZXJhYmxlOiB0cnVlLFxuICAgICAgICBjb25maWd1cmFibGU6IHRydWVcbiAgICB9KTtcbiAgICBNRENEcmF3ZXIucHJvdG90eXBlLmluaXRpYWxpemUgPSBmdW5jdGlvbiAoZm9jdXNUcmFwRmFjdG9yeSwgbGlzdEZhY3RvcnkpIHtcbiAgICAgICAgaWYgKGZvY3VzVHJhcEZhY3RvcnkgPT09IHZvaWQgMCkgeyBmb2N1c1RyYXBGYWN0b3J5ID0gZnVuY3Rpb24gKGVsKSB7IHJldHVybiBuZXcgRm9jdXNUcmFwKGVsKTsgfTsgfVxuICAgICAgICBpZiAobGlzdEZhY3RvcnkgPT09IHZvaWQgMCkgeyBsaXN0RmFjdG9yeSA9IGZ1bmN0aW9uIChlbCkgeyByZXR1cm4gbmV3IE1EQ0xpc3QoZWwpOyB9OyB9XG4gICAgICAgIHZhciBsaXN0RWwgPSB0aGlzLnJvb3RfLnF1ZXJ5U2VsZWN0b3IoXCIuXCIgKyBNRENMaXN0Rm91bmRhdGlvbi5jc3NDbGFzc2VzLlJPT1QpO1xuICAgICAgICBpZiAobGlzdEVsKSB7XG4gICAgICAgICAgICB0aGlzLmxpc3RfID0gbGlzdEZhY3RvcnkobGlzdEVsKTtcbiAgICAgICAgICAgIHRoaXMubGlzdF8ud3JhcEZvY3VzID0gdHJ1ZTtcbiAgICAgICAgfVxuICAgICAgICB0aGlzLmZvY3VzVHJhcEZhY3RvcnlfID0gZm9jdXNUcmFwRmFjdG9yeTtcbiAgICB9O1xuICAgIE1EQ0RyYXdlci5wcm90b3R5cGUuaW5pdGlhbFN5bmNXaXRoRE9NID0gZnVuY3Rpb24gKCkge1xuICAgICAgICB2YXIgX3RoaXMgPSB0aGlzO1xuICAgICAgICB2YXIgTU9EQUwgPSBjc3NDbGFzc2VzLk1PREFMO1xuICAgICAgICB2YXIgU0NSSU1fU0VMRUNUT1IgPSBzdHJpbmdzLlNDUklNX1NFTEVDVE9SO1xuICAgICAgICB0aGlzLnNjcmltXyA9IHRoaXMucm9vdF8ucGFyZW50Tm9kZS5xdWVyeVNlbGVjdG9yKFNDUklNX1NFTEVDVE9SKTtcbiAgICAgICAgaWYgKHRoaXMuc2NyaW1fICYmIHRoaXMucm9vdF8uY2xhc3NMaXN0LmNvbnRhaW5zKE1PREFMKSkge1xuICAgICAgICAgICAgdGhpcy5oYW5kbGVTY3JpbUNsaWNrXyA9IGZ1bmN0aW9uICgpIHsgcmV0dXJuIF90aGlzLmZvdW5kYXRpb25fLmhhbmRsZVNjcmltQ2xpY2soKTsgfTtcbiAgICAgICAgICAgIHRoaXMuc2NyaW1fLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgdGhpcy5oYW5kbGVTY3JpbUNsaWNrXyk7XG4gICAgICAgICAgICB0aGlzLmZvY3VzVHJhcF8gPSB1dGlsLmNyZWF0ZUZvY3VzVHJhcEluc3RhbmNlKHRoaXMucm9vdF8sIHRoaXMuZm9jdXNUcmFwRmFjdG9yeV8pO1xuICAgICAgICB9XG4gICAgICAgIHRoaXMuaGFuZGxlS2V5ZG93bl8gPSBmdW5jdGlvbiAoZXZ0KSB7IHJldHVybiBfdGhpcy5mb3VuZGF0aW9uXy5oYW5kbGVLZXlkb3duKGV2dCk7IH07XG4gICAgICAgIHRoaXMuaGFuZGxlVHJhbnNpdGlvbkVuZF8gPSBmdW5jdGlvbiAoZXZ0KSB7IHJldHVybiBfdGhpcy5mb3VuZGF0aW9uXy5oYW5kbGVUcmFuc2l0aW9uRW5kKGV2dCk7IH07XG4gICAgICAgIHRoaXMubGlzdGVuKCdrZXlkb3duJywgdGhpcy5oYW5kbGVLZXlkb3duXyk7XG4gICAgICAgIHRoaXMubGlzdGVuKCd0cmFuc2l0aW9uZW5kJywgdGhpcy5oYW5kbGVUcmFuc2l0aW9uRW5kXyk7XG4gICAgfTtcbiAgICBNRENEcmF3ZXIucHJvdG90eXBlLmRlc3Ryb3kgPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIHRoaXMudW5saXN0ZW4oJ2tleWRvd24nLCB0aGlzLmhhbmRsZUtleWRvd25fKTtcbiAgICAgICAgdGhpcy51bmxpc3RlbigndHJhbnNpdGlvbmVuZCcsIHRoaXMuaGFuZGxlVHJhbnNpdGlvbkVuZF8pO1xuICAgICAgICBpZiAodGhpcy5saXN0Xykge1xuICAgICAgICAgICAgdGhpcy5saXN0Xy5kZXN0cm95KCk7XG4gICAgICAgIH1cbiAgICAgICAgdmFyIE1PREFMID0gY3NzQ2xhc3Nlcy5NT0RBTDtcbiAgICAgICAgaWYgKHRoaXMuc2NyaW1fICYmIHRoaXMuaGFuZGxlU2NyaW1DbGlja18gJiYgdGhpcy5yb290Xy5jbGFzc0xpc3QuY29udGFpbnMoTU9EQUwpKSB7XG4gICAgICAgICAgICB0aGlzLnNjcmltXy5yZW1vdmVFdmVudExpc3RlbmVyKCdjbGljaycsIHRoaXMuaGFuZGxlU2NyaW1DbGlja18pO1xuICAgICAgICAgICAgLy8gRW5zdXJlIGRyYXdlciBpcyBjbG9zZWQgdG8gaGlkZSBzY3JpbSBhbmQgcmVsZWFzZSBmb2N1c1xuICAgICAgICAgICAgdGhpcy5vcGVuID0gZmFsc2U7XG4gICAgICAgIH1cbiAgICB9O1xuICAgIE1EQ0RyYXdlci5wcm90b3R5cGUuZ2V0RGVmYXVsdEZvdW5kYXRpb24gPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIHZhciBfdGhpcyA9IHRoaXM7XG4gICAgICAgIC8vIERPIE5PVCBJTkxJTkUgdGhpcyB2YXJpYWJsZS4gRm9yIGJhY2t3YXJkIGNvbXBhdGliaWxpdHksIGZvdW5kYXRpb25zIHRha2UgYSBQYXJ0aWFsPE1EQ0Zvb0FkYXB0ZXI+LlxuICAgICAgICAvLyBUbyBlbnN1cmUgd2UgZG9uJ3QgYWNjaWRlbnRhbGx5IG9taXQgYW55IG1ldGhvZHMsIHdlIG5lZWQgYSBzZXBhcmF0ZSwgc3Ryb25nbHkgdHlwZWQgYWRhcHRlciB2YXJpYWJsZS5cbiAgICAgICAgLy8gdHNsaW50OmRpc2FibGU6b2JqZWN0LWxpdGVyYWwtc29ydC1rZXlzIE1ldGhvZHMgc2hvdWxkIGJlIGluIHRoZSBzYW1lIG9yZGVyIGFzIHRoZSBhZGFwdGVyIGludGVyZmFjZS5cbiAgICAgICAgdmFyIGFkYXB0ZXIgPSB7XG4gICAgICAgICAgICBhZGRDbGFzczogZnVuY3Rpb24gKGNsYXNzTmFtZSkgeyByZXR1cm4gX3RoaXMucm9vdF8uY2xhc3NMaXN0LmFkZChjbGFzc05hbWUpOyB9LFxuICAgICAgICAgICAgcmVtb3ZlQ2xhc3M6IGZ1bmN0aW9uIChjbGFzc05hbWUpIHsgcmV0dXJuIF90aGlzLnJvb3RfLmNsYXNzTGlzdC5yZW1vdmUoY2xhc3NOYW1lKTsgfSxcbiAgICAgICAgICAgIGhhc0NsYXNzOiBmdW5jdGlvbiAoY2xhc3NOYW1lKSB7IHJldHVybiBfdGhpcy5yb290Xy5jbGFzc0xpc3QuY29udGFpbnMoY2xhc3NOYW1lKTsgfSxcbiAgICAgICAgICAgIGVsZW1lbnRIYXNDbGFzczogZnVuY3Rpb24gKGVsZW1lbnQsIGNsYXNzTmFtZSkgeyByZXR1cm4gZWxlbWVudC5jbGFzc0xpc3QuY29udGFpbnMoY2xhc3NOYW1lKTsgfSxcbiAgICAgICAgICAgIHNhdmVGb2N1czogZnVuY3Rpb24gKCkgeyByZXR1cm4gX3RoaXMucHJldmlvdXNGb2N1c18gPSBkb2N1bWVudC5hY3RpdmVFbGVtZW50OyB9LFxuICAgICAgICAgICAgcmVzdG9yZUZvY3VzOiBmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICAgICAgdmFyIHByZXZpb3VzRm9jdXMgPSBfdGhpcy5wcmV2aW91c0ZvY3VzXztcbiAgICAgICAgICAgICAgICBpZiAocHJldmlvdXNGb2N1cyAmJiBwcmV2aW91c0ZvY3VzLmZvY3VzICYmIF90aGlzLnJvb3RfLmNvbnRhaW5zKGRvY3VtZW50LmFjdGl2ZUVsZW1lbnQpKSB7XG4gICAgICAgICAgICAgICAgICAgIHByZXZpb3VzRm9jdXMuZm9jdXMoKTtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9LFxuICAgICAgICAgICAgZm9jdXNBY3RpdmVOYXZpZ2F0aW9uSXRlbTogZnVuY3Rpb24gKCkge1xuICAgICAgICAgICAgICAgIHZhciBhY3RpdmVOYXZJdGVtRWwgPSBfdGhpcy5yb290Xy5xdWVyeVNlbGVjdG9yKFwiLlwiICsgTURDTGlzdEZvdW5kYXRpb24uY3NzQ2xhc3Nlcy5MSVNUX0lURU1fQUNUSVZBVEVEX0NMQVNTKTtcbiAgICAgICAgICAgICAgICBpZiAoYWN0aXZlTmF2SXRlbUVsKSB7XG4gICAgICAgICAgICAgICAgICAgIGFjdGl2ZU5hdkl0ZW1FbC5mb2N1cygpO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgICBub3RpZnlDbG9zZTogZnVuY3Rpb24gKCkgeyByZXR1cm4gX3RoaXMuZW1pdChzdHJpbmdzLkNMT1NFX0VWRU5ULCB7fSwgdHJ1ZSAvKiBzaG91bGRCdWJibGUgKi8pOyB9LFxuICAgICAgICAgICAgbm90aWZ5T3BlbjogZnVuY3Rpb24gKCkgeyByZXR1cm4gX3RoaXMuZW1pdChzdHJpbmdzLk9QRU5fRVZFTlQsIHt9LCB0cnVlIC8qIHNob3VsZEJ1YmJsZSAqLyk7IH0sXG4gICAgICAgICAgICB0cmFwRm9jdXM6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIF90aGlzLmZvY3VzVHJhcF8udHJhcEZvY3VzKCk7IH0sXG4gICAgICAgICAgICByZWxlYXNlRm9jdXM6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIF90aGlzLmZvY3VzVHJhcF8ucmVsZWFzZUZvY3VzKCk7IH0sXG4gICAgICAgIH07XG4gICAgICAgIC8vIHRzbGludDplbmFibGU6b2JqZWN0LWxpdGVyYWwtc29ydC1rZXlzXG4gICAgICAgIHZhciBESVNNSVNTSUJMRSA9IGNzc0NsYXNzZXMuRElTTUlTU0lCTEUsIE1PREFMID0gY3NzQ2xhc3Nlcy5NT0RBTDtcbiAgICAgICAgaWYgKHRoaXMucm9vdF8uY2xhc3NMaXN0LmNvbnRhaW5zKERJU01JU1NJQkxFKSkge1xuICAgICAgICAgICAgcmV0dXJuIG5ldyBNRENEaXNtaXNzaWJsZURyYXdlckZvdW5kYXRpb24oYWRhcHRlcik7XG4gICAgICAgIH1cbiAgICAgICAgZWxzZSBpZiAodGhpcy5yb290Xy5jbGFzc0xpc3QuY29udGFpbnMoTU9EQUwpKSB7XG4gICAgICAgICAgICByZXR1cm4gbmV3IE1EQ01vZGFsRHJhd2VyRm91bmRhdGlvbihhZGFwdGVyKTtcbiAgICAgICAgfVxuICAgICAgICBlbHNlIHtcbiAgICAgICAgICAgIHRocm93IG5ldyBFcnJvcihcIk1EQ0RyYXdlcjogRmFpbGVkIHRvIGluc3RhbnRpYXRlIGNvbXBvbmVudC4gU3VwcG9ydGVkIHZhcmlhbnRzIGFyZSBcIiArIERJU01JU1NJQkxFICsgXCIgYW5kIFwiICsgTU9EQUwgKyBcIi5cIik7XG4gICAgICAgIH1cbiAgICB9O1xuICAgIHJldHVybiBNRENEcmF3ZXI7XG59KE1EQ0NvbXBvbmVudCkpO1xuZXhwb3J0IHsgTURDRHJhd2VyIH07XG4vLyMgc291cmNlTWFwcGluZ1VSTD1jb21wb25lbnQuanMubWFwIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./node_modules/@material/drawer/component.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MDCDrawer", function() { return MDCDrawer; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/base/component */ "./node_modules/@material/base/component.js");
+/* harmony import */ var _material_dom_focus_trap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/dom/focus-trap */ "./node_modules/@material/dom/focus-trap.js");
+/* harmony import */ var _material_list_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material/list/component */ "./node_modules/@material/list/component.js");
+/* harmony import */ var _material_list_foundation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material/list/foundation */ "./node_modules/@material/list/foundation.js");
+/* harmony import */ var _dismissible_foundation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./dismissible/foundation */ "./node_modules/@material/drawer/dismissible/foundation.js");
+/* harmony import */ var _modal_foundation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modal/foundation */ "./node_modules/@material/drawer/modal/foundation.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./util */ "./node_modules/@material/drawer/util.js");
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+
+
+
+
+var cssClasses = _dismissible_foundation__WEBPACK_IMPORTED_MODULE_5__["MDCDismissibleDrawerFoundation"].cssClasses, strings = _dismissible_foundation__WEBPACK_IMPORTED_MODULE_5__["MDCDismissibleDrawerFoundation"].strings;
+/**
+ * @events `MDCDrawer:closed {}` Emits when the navigation drawer has closed.
+ * @events `MDCDrawer:opened {}` Emits when the navigation drawer has opened.
+ */
+var MDCDrawer = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](MDCDrawer, _super);
+    function MDCDrawer() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCDrawer.attachTo = function (root) {
+        return new MDCDrawer(root);
+    };
+    Object.defineProperty(MDCDrawer.prototype, "open", {
+        /**
+         * @return boolean Proxies to the foundation's `open`/`close` methods.
+         * Also returns true if drawer is in the open position.
+         */
+        get: function () {
+            return this.foundation_.isOpen();
+        },
+        /**
+         * Toggles the drawer open and closed.
+         */
+        set: function (isOpen) {
+            if (isOpen) {
+                this.foundation_.open();
+            }
+            else {
+                this.foundation_.close();
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCDrawer.prototype, "list", {
+        get: function () {
+            return this.list_;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    MDCDrawer.prototype.initialize = function (focusTrapFactory, listFactory) {
+        if (focusTrapFactory === void 0) { focusTrapFactory = function (el) { return new _material_dom_focus_trap__WEBPACK_IMPORTED_MODULE_2__["FocusTrap"](el); }; }
+        if (listFactory === void 0) { listFactory = function (el) { return new _material_list_component__WEBPACK_IMPORTED_MODULE_3__["MDCList"](el); }; }
+        var listEl = this.root_.querySelector("." + _material_list_foundation__WEBPACK_IMPORTED_MODULE_4__["MDCListFoundation"].cssClasses.ROOT);
+        if (listEl) {
+            this.list_ = listFactory(listEl);
+            this.list_.wrapFocus = true;
+        }
+        this.focusTrapFactory_ = focusTrapFactory;
+    };
+    MDCDrawer.prototype.initialSyncWithDOM = function () {
+        var _this = this;
+        var MODAL = cssClasses.MODAL;
+        var SCRIM_SELECTOR = strings.SCRIM_SELECTOR;
+        this.scrim_ = this.root_.parentNode.querySelector(SCRIM_SELECTOR);
+        if (this.scrim_ && this.root_.classList.contains(MODAL)) {
+            this.handleScrimClick_ = function () { return _this.foundation_.handleScrimClick(); };
+            this.scrim_.addEventListener('click', this.handleScrimClick_);
+            this.focusTrap_ = _util__WEBPACK_IMPORTED_MODULE_7__["createFocusTrapInstance"](this.root_, this.focusTrapFactory_);
+        }
+        this.handleKeydown_ = function (evt) { return _this.foundation_.handleKeydown(evt); };
+        this.handleTransitionEnd_ = function (evt) { return _this.foundation_.handleTransitionEnd(evt); };
+        this.listen('keydown', this.handleKeydown_);
+        this.listen('transitionend', this.handleTransitionEnd_);
+    };
+    MDCDrawer.prototype.destroy = function () {
+        this.unlisten('keydown', this.handleKeydown_);
+        this.unlisten('transitionend', this.handleTransitionEnd_);
+        if (this.list_) {
+            this.list_.destroy();
+        }
+        var MODAL = cssClasses.MODAL;
+        if (this.scrim_ && this.handleScrimClick_ && this.root_.classList.contains(MODAL)) {
+            this.scrim_.removeEventListener('click', this.handleScrimClick_);
+            // Ensure drawer is closed to hide scrim and release focus
+            this.open = false;
+        }
+    };
+    MDCDrawer.prototype.getDefaultFoundation = function () {
+        var _this = this;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        var adapter = {
+            addClass: function (className) { return _this.root_.classList.add(className); },
+            removeClass: function (className) { return _this.root_.classList.remove(className); },
+            hasClass: function (className) { return _this.root_.classList.contains(className); },
+            elementHasClass: function (element, className) { return element.classList.contains(className); },
+            saveFocus: function () { return _this.previousFocus_ = document.activeElement; },
+            restoreFocus: function () {
+                var previousFocus = _this.previousFocus_;
+                if (previousFocus && previousFocus.focus && _this.root_.contains(document.activeElement)) {
+                    previousFocus.focus();
+                }
+            },
+            focusActiveNavigationItem: function () {
+                var activeNavItemEl = _this.root_.querySelector("." + _material_list_foundation__WEBPACK_IMPORTED_MODULE_4__["MDCListFoundation"].cssClasses.LIST_ITEM_ACTIVATED_CLASS);
+                if (activeNavItemEl) {
+                    activeNavItemEl.focus();
+                }
+            },
+            notifyClose: function () { return _this.emit(strings.CLOSE_EVENT, {}, true /* shouldBubble */); },
+            notifyOpen: function () { return _this.emit(strings.OPEN_EVENT, {}, true /* shouldBubble */); },
+            trapFocus: function () { return _this.focusTrap_.trapFocus(); },
+            releaseFocus: function () { return _this.focusTrap_.releaseFocus(); },
+        };
+        // tslint:enable:object-literal-sort-keys
+        var DISMISSIBLE = cssClasses.DISMISSIBLE, MODAL = cssClasses.MODAL;
+        if (this.root_.classList.contains(DISMISSIBLE)) {
+            return new _dismissible_foundation__WEBPACK_IMPORTED_MODULE_5__["MDCDismissibleDrawerFoundation"](adapter);
+        }
+        else if (this.root_.classList.contains(MODAL)) {
+            return new _modal_foundation__WEBPACK_IMPORTED_MODULE_6__["MDCModalDrawerFoundation"](adapter);
+        }
+        else {
+            throw new Error("MDCDrawer: Failed to instantiate component. Supported variants are " + DISMISSIBLE + " and " + MODAL + ".");
+        }
+    };
+    return MDCDrawer;
+}(_material_base_component__WEBPACK_IMPORTED_MODULE_1__["MDCComponent"]));
+
+//# sourceMappingURL=component.js.map
 
 /***/ }),
 
@@ -213,7 +872,48 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"cssClasses\", function() { return cssClasses; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"strings\", function() { return strings; });\n/**\n * @license\n * Copyright 2016 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\nvar cssClasses = {\n    ANIMATE: 'mdc-drawer--animate',\n    CLOSING: 'mdc-drawer--closing',\n    DISMISSIBLE: 'mdc-drawer--dismissible',\n    MODAL: 'mdc-drawer--modal',\n    OPEN: 'mdc-drawer--open',\n    OPENING: 'mdc-drawer--opening',\n    ROOT: 'mdc-drawer',\n};\nvar strings = {\n    APP_CONTENT_SELECTOR: '.mdc-drawer-app-content',\n    CLOSE_EVENT: 'MDCDrawer:closed',\n    OPEN_EVENT: 'MDCDrawer:opened',\n    SCRIM_SELECTOR: '.mdc-drawer-scrim',\n};\n\n//# sourceMappingURL=constants.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL2RyYXdlci9jb25zdGFudHMuanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL2RyYXdlci9jb25zdGFudHMuanM/OGUwOSJdLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEBsaWNlbnNlXG4gKiBDb3B5cmlnaHQgMjAxNiBHb29nbGUgSW5jLlxuICpcbiAqIFBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHlcbiAqIG9mIHRoaXMgc29mdHdhcmUgYW5kIGFzc29jaWF0ZWQgZG9jdW1lbnRhdGlvbiBmaWxlcyAodGhlIFwiU29mdHdhcmVcIiksIHRvIGRlYWxcbiAqIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgd2l0aG91dCBsaW1pdGF0aW9uIHRoZSByaWdodHNcbiAqIHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwgZGlzdHJpYnV0ZSwgc3VibGljZW5zZSwgYW5kL29yIHNlbGxcbiAqIGNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpc1xuICogZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvIHRoZSBmb2xsb3dpbmcgY29uZGl0aW9uczpcbiAqXG4gKiBUaGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBwZXJtaXNzaW9uIG5vdGljZSBzaGFsbCBiZSBpbmNsdWRlZCBpblxuICogYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuXG4gKlxuICogVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEIFwiQVMgSVNcIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUlxuICogSU1QTElFRCwgSU5DTFVESU5HIEJVVCBOT1QgTElNSVRFRCBUTyBUSEUgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFksXG4gKiBGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRSBBTkQgTk9OSU5GUklOR0VNRU5ULiBJTiBOTyBFVkVOVCBTSEFMTCBUSEVcbiAqIEFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVJcbiAqIExJQUJJTElUWSwgV0hFVEhFUiBJTiBBTiBBQ1RJT04gT0YgQ09OVFJBQ1QsIFRPUlQgT1IgT1RIRVJXSVNFLCBBUklTSU5HIEZST00sXG4gKiBPVVQgT0YgT1IgSU4gQ09OTkVDVElPTiBXSVRIIFRIRSBTT0ZUV0FSRSBPUiBUSEUgVVNFIE9SIE9USEVSIERFQUxJTkdTIElOXG4gKiBUSEUgU09GVFdBUkUuXG4gKi9cbnZhciBjc3NDbGFzc2VzID0ge1xuICAgIEFOSU1BVEU6ICdtZGMtZHJhd2VyLS1hbmltYXRlJyxcbiAgICBDTE9TSU5HOiAnbWRjLWRyYXdlci0tY2xvc2luZycsXG4gICAgRElTTUlTU0lCTEU6ICdtZGMtZHJhd2VyLS1kaXNtaXNzaWJsZScsXG4gICAgTU9EQUw6ICdtZGMtZHJhd2VyLS1tb2RhbCcsXG4gICAgT1BFTjogJ21kYy1kcmF3ZXItLW9wZW4nLFxuICAgIE9QRU5JTkc6ICdtZGMtZHJhd2VyLS1vcGVuaW5nJyxcbiAgICBST09UOiAnbWRjLWRyYXdlcicsXG59O1xudmFyIHN0cmluZ3MgPSB7XG4gICAgQVBQX0NPTlRFTlRfU0VMRUNUT1I6ICcubWRjLWRyYXdlci1hcHAtY29udGVudCcsXG4gICAgQ0xPU0VfRVZFTlQ6ICdNRENEcmF3ZXI6Y2xvc2VkJyxcbiAgICBPUEVOX0VWRU5UOiAnTURDRHJhd2VyOm9wZW5lZCcsXG4gICAgU0NSSU1fU0VMRUNUT1I6ICcubWRjLWRyYXdlci1zY3JpbScsXG59O1xuZXhwb3J0IHsgY3NzQ2xhc3Nlcywgc3RyaW5ncyB9O1xuLy8jIHNvdXJjZU1hcHBpbmdVUkw9Y29uc3RhbnRzLmpzLm1hcCJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./node_modules/@material/drawer/constants.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cssClasses", function() { return cssClasses; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "strings", function() { return strings; });
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+var cssClasses = {
+    ANIMATE: 'mdc-drawer--animate',
+    CLOSING: 'mdc-drawer--closing',
+    DISMISSIBLE: 'mdc-drawer--dismissible',
+    MODAL: 'mdc-drawer--modal',
+    OPEN: 'mdc-drawer--open',
+    OPENING: 'mdc-drawer--opening',
+    ROOT: 'mdc-drawer',
+};
+var strings = {
+    APP_CONTENT_SELECTOR: '.mdc-drawer-app-content',
+    CLOSE_EVENT: 'MDCDrawer:closed',
+    OPEN_EVENT: 'MDCDrawer:opened',
+    SCRIM_SELECTOR: '.mdc-drawer-scrim',
+};
+
+//# sourceMappingURL=constants.js.map
 
 /***/ }),
 
@@ -225,7 +925,198 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"MDCDismissibleDrawerFoundation\", function() { return MDCDismissibleDrawerFoundation; });\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _material_base_foundation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/base/foundation */ \"./node_modules/@material/base/foundation.js\");\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../constants */ \"./node_modules/@material/drawer/constants.js\");\n/**\n * @license\n * Copyright 2018 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\n\n\n\nvar MDCDismissibleDrawerFoundation = /** @class */ (function (_super) {\n    tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"](MDCDismissibleDrawerFoundation, _super);\n    function MDCDismissibleDrawerFoundation(adapter) {\n        var _this = _super.call(this, tslib__WEBPACK_IMPORTED_MODULE_0__[\"__assign\"]({}, MDCDismissibleDrawerFoundation.defaultAdapter, adapter)) || this;\n        _this.animationFrame_ = 0;\n        _this.animationTimer_ = 0;\n        return _this;\n    }\n    Object.defineProperty(MDCDismissibleDrawerFoundation, \"strings\", {\n        get: function () {\n            return _constants__WEBPACK_IMPORTED_MODULE_2__[\"strings\"];\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(MDCDismissibleDrawerFoundation, \"cssClasses\", {\n        get: function () {\n            return _constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"];\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(MDCDismissibleDrawerFoundation, \"defaultAdapter\", {\n        get: function () {\n            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.\n            return {\n                addClass: function () { return undefined; },\n                removeClass: function () { return undefined; },\n                hasClass: function () { return false; },\n                elementHasClass: function () { return false; },\n                notifyClose: function () { return undefined; },\n                notifyOpen: function () { return undefined; },\n                saveFocus: function () { return undefined; },\n                restoreFocus: function () { return undefined; },\n                focusActiveNavigationItem: function () { return undefined; },\n                trapFocus: function () { return undefined; },\n                releaseFocus: function () { return undefined; },\n            };\n            // tslint:enable:object-literal-sort-keys\n        },\n        enumerable: true,\n        configurable: true\n    });\n    MDCDismissibleDrawerFoundation.prototype.destroy = function () {\n        if (this.animationFrame_) {\n            cancelAnimationFrame(this.animationFrame_);\n        }\n        if (this.animationTimer_) {\n            clearTimeout(this.animationTimer_);\n        }\n    };\n    /**\n     * Opens the drawer from the closed state.\n     */\n    MDCDismissibleDrawerFoundation.prototype.open = function () {\n        var _this = this;\n        if (this.isOpen() || this.isOpening() || this.isClosing()) {\n            return;\n        }\n        this.adapter_.addClass(_constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"].OPEN);\n        this.adapter_.addClass(_constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"].ANIMATE);\n        // Wait a frame once display is no longer \"none\", to establish basis for animation\n        this.runNextAnimationFrame_(function () {\n            _this.adapter_.addClass(_constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"].OPENING);\n        });\n        this.adapter_.saveFocus();\n    };\n    /**\n     * Closes the drawer from the open state.\n     */\n    MDCDismissibleDrawerFoundation.prototype.close = function () {\n        if (!this.isOpen() || this.isOpening() || this.isClosing()) {\n            return;\n        }\n        this.adapter_.addClass(_constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"].CLOSING);\n    };\n    /**\n     * Returns true if the drawer is in the open position.\n     * @return true if drawer is in open state.\n     */\n    MDCDismissibleDrawerFoundation.prototype.isOpen = function () {\n        return this.adapter_.hasClass(_constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"].OPEN);\n    };\n    /**\n     * Returns true if the drawer is animating open.\n     * @return true if drawer is animating open.\n     */\n    MDCDismissibleDrawerFoundation.prototype.isOpening = function () {\n        return this.adapter_.hasClass(_constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"].OPENING) || this.adapter_.hasClass(_constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"].ANIMATE);\n    };\n    /**\n     * Returns true if the drawer is animating closed.\n     * @return true if drawer is animating closed.\n     */\n    MDCDismissibleDrawerFoundation.prototype.isClosing = function () {\n        return this.adapter_.hasClass(_constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"].CLOSING);\n    };\n    /**\n     * Keydown handler to close drawer when key is escape.\n     */\n    MDCDismissibleDrawerFoundation.prototype.handleKeydown = function (evt) {\n        var keyCode = evt.keyCode, key = evt.key;\n        var isEscape = key === 'Escape' || keyCode === 27;\n        if (isEscape) {\n            this.close();\n        }\n    };\n    /**\n     * Handles the `transitionend` event when the drawer finishes opening/closing.\n     */\n    MDCDismissibleDrawerFoundation.prototype.handleTransitionEnd = function (evt) {\n        var OPENING = _constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"].OPENING, CLOSING = _constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"].CLOSING, OPEN = _constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"].OPEN, ANIMATE = _constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"].ANIMATE, ROOT = _constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"].ROOT;\n        // In Edge, transitionend on ripple pseudo-elements yields a target without classList, so check for Element first.\n        var isRootElement = this.isElement_(evt.target) && this.adapter_.elementHasClass(evt.target, ROOT);\n        if (!isRootElement) {\n            return;\n        }\n        if (this.isClosing()) {\n            this.adapter_.removeClass(OPEN);\n            this.closed_();\n            this.adapter_.restoreFocus();\n            this.adapter_.notifyClose();\n        }\n        else {\n            this.adapter_.focusActiveNavigationItem();\n            this.opened_();\n            this.adapter_.notifyOpen();\n        }\n        this.adapter_.removeClass(ANIMATE);\n        this.adapter_.removeClass(OPENING);\n        this.adapter_.removeClass(CLOSING);\n    };\n    /**\n     * Extension point for when drawer finishes open animation.\n     */\n    MDCDismissibleDrawerFoundation.prototype.opened_ = function () { }; // tslint:disable-line:no-empty\n    /**\n     * Extension point for when drawer finishes close animation.\n     */\n    MDCDismissibleDrawerFoundation.prototype.closed_ = function () { }; // tslint:disable-line:no-empty\n    /**\n     * Runs the given logic on the next animation frame, using setTimeout to factor in Firefox reflow behavior.\n     */\n    MDCDismissibleDrawerFoundation.prototype.runNextAnimationFrame_ = function (callback) {\n        var _this = this;\n        cancelAnimationFrame(this.animationFrame_);\n        this.animationFrame_ = requestAnimationFrame(function () {\n            _this.animationFrame_ = 0;\n            clearTimeout(_this.animationTimer_);\n            _this.animationTimer_ = setTimeout(callback, 0);\n        });\n    };\n    MDCDismissibleDrawerFoundation.prototype.isElement_ = function (element) {\n        // In Edge, transitionend on ripple pseudo-elements yields a target without classList.\n        return Boolean(element.classList);\n    };\n    return MDCDismissibleDrawerFoundation;\n}(_material_base_foundation__WEBPACK_IMPORTED_MODULE_1__[\"MDCFoundation\"]));\n\n// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.\n/* harmony default export */ __webpack_exports__[\"default\"] = (MDCDismissibleDrawerFoundation);\n//# sourceMappingURL=foundation.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL2RyYXdlci9kaXNtaXNzaWJsZS9mb3VuZGF0aW9uLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vbm9kZV9tb2R1bGVzL0BtYXRlcmlhbC9kcmF3ZXIvZGlzbWlzc2libGUvZm91bmRhdGlvbi5qcz9mMmIyIl0sInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQGxpY2Vuc2VcbiAqIENvcHlyaWdodCAyMDE4IEdvb2dsZSBJbmMuXG4gKlxuICogUGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weVxuICogb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgXCJTb2Z0d2FyZVwiKSwgdG8gZGVhbFxuICogaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0c1xuICogdG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3Igc2VsbFxuICogY29waWVzIG9mIHRoZSBTb2Z0d2FyZSwgYW5kIHRvIHBlcm1pdCBwZXJzb25zIHRvIHdob20gdGhlIFNvZnR3YXJlIGlzXG4gKiBmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOlxuICpcbiAqIFRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlIGluY2x1ZGVkIGluXG4gKiBhbGwgY29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS5cbiAqXG4gKiBUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgXCJBUyBJU1wiLCBXSVRIT1VUIFdBUlJBTlRZIE9GIEFOWSBLSU5ELCBFWFBSRVNTIE9SXG4gKiBJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSxcbiAqIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRVxuICogQVVUSE9SUyBPUiBDT1BZUklHSFQgSE9MREVSUyBCRSBMSUFCTEUgRk9SIEFOWSBDTEFJTSwgREFNQUdFUyBPUiBPVEhFUlxuICogTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSxcbiAqIE9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU5cbiAqIFRIRSBTT0ZUV0FSRS5cbiAqL1xuaW1wb3J0ICogYXMgdHNsaWJfMSBmcm9tIFwidHNsaWJcIjtcbmltcG9ydCB7IE1EQ0ZvdW5kYXRpb24gfSBmcm9tICdAbWF0ZXJpYWwvYmFzZS9mb3VuZGF0aW9uJztcbmltcG9ydCB7IGNzc0NsYXNzZXMsIHN0cmluZ3MgfSBmcm9tICcuLi9jb25zdGFudHMnO1xudmFyIE1EQ0Rpc21pc3NpYmxlRHJhd2VyRm91bmRhdGlvbiA9IC8qKiBAY2xhc3MgKi8gKGZ1bmN0aW9uIChfc3VwZXIpIHtcbiAgICB0c2xpYl8xLl9fZXh0ZW5kcyhNRENEaXNtaXNzaWJsZURyYXdlckZvdW5kYXRpb24sIF9zdXBlcik7XG4gICAgZnVuY3Rpb24gTURDRGlzbWlzc2libGVEcmF3ZXJGb3VuZGF0aW9uKGFkYXB0ZXIpIHtcbiAgICAgICAgdmFyIF90aGlzID0gX3N1cGVyLmNhbGwodGhpcywgdHNsaWJfMS5fX2Fzc2lnbih7fSwgTURDRGlzbWlzc2libGVEcmF3ZXJGb3VuZGF0aW9uLmRlZmF1bHRBZGFwdGVyLCBhZGFwdGVyKSkgfHwgdGhpcztcbiAgICAgICAgX3RoaXMuYW5pbWF0aW9uRnJhbWVfID0gMDtcbiAgICAgICAgX3RoaXMuYW5pbWF0aW9uVGltZXJfID0gMDtcbiAgICAgICAgcmV0dXJuIF90aGlzO1xuICAgIH1cbiAgICBPYmplY3QuZGVmaW5lUHJvcGVydHkoTURDRGlzbWlzc2libGVEcmF3ZXJGb3VuZGF0aW9uLCBcInN0cmluZ3NcIiwge1xuICAgICAgICBnZXQ6IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIHJldHVybiBzdHJpbmdzO1xuICAgICAgICB9LFxuICAgICAgICBlbnVtZXJhYmxlOiB0cnVlLFxuICAgICAgICBjb25maWd1cmFibGU6IHRydWVcbiAgICB9KTtcbiAgICBPYmplY3QuZGVmaW5lUHJvcGVydHkoTURDRGlzbWlzc2libGVEcmF3ZXJGb3VuZGF0aW9uLCBcImNzc0NsYXNzZXNcIiwge1xuICAgICAgICBnZXQ6IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIHJldHVybiBjc3NDbGFzc2VzO1xuICAgICAgICB9LFxuICAgICAgICBlbnVtZXJhYmxlOiB0cnVlLFxuICAgICAgICBjb25maWd1cmFibGU6IHRydWVcbiAgICB9KTtcbiAgICBPYmplY3QuZGVmaW5lUHJvcGVydHkoTURDRGlzbWlzc2libGVEcmF3ZXJGb3VuZGF0aW9uLCBcImRlZmF1bHRBZGFwdGVyXCIsIHtcbiAgICAgICAgZ2V0OiBmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICAvLyB0c2xpbnQ6ZGlzYWJsZTpvYmplY3QtbGl0ZXJhbC1zb3J0LWtleXMgTWV0aG9kcyBzaG91bGQgYmUgaW4gdGhlIHNhbWUgb3JkZXIgYXMgdGhlIGFkYXB0ZXIgaW50ZXJmYWNlLlxuICAgICAgICAgICAgcmV0dXJuIHtcbiAgICAgICAgICAgICAgICBhZGRDbGFzczogZnVuY3Rpb24gKCkgeyByZXR1cm4gdW5kZWZpbmVkOyB9LFxuICAgICAgICAgICAgICAgIHJlbW92ZUNsYXNzOiBmdW5jdGlvbiAoKSB7IHJldHVybiB1bmRlZmluZWQ7IH0sXG4gICAgICAgICAgICAgICAgaGFzQ2xhc3M6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIGZhbHNlOyB9LFxuICAgICAgICAgICAgICAgIGVsZW1lbnRIYXNDbGFzczogZnVuY3Rpb24gKCkgeyByZXR1cm4gZmFsc2U7IH0sXG4gICAgICAgICAgICAgICAgbm90aWZ5Q2xvc2U6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIHVuZGVmaW5lZDsgfSxcbiAgICAgICAgICAgICAgICBub3RpZnlPcGVuOiBmdW5jdGlvbiAoKSB7IHJldHVybiB1bmRlZmluZWQ7IH0sXG4gICAgICAgICAgICAgICAgc2F2ZUZvY3VzOiBmdW5jdGlvbiAoKSB7IHJldHVybiB1bmRlZmluZWQ7IH0sXG4gICAgICAgICAgICAgICAgcmVzdG9yZUZvY3VzOiBmdW5jdGlvbiAoKSB7IHJldHVybiB1bmRlZmluZWQ7IH0sXG4gICAgICAgICAgICAgICAgZm9jdXNBY3RpdmVOYXZpZ2F0aW9uSXRlbTogZnVuY3Rpb24gKCkgeyByZXR1cm4gdW5kZWZpbmVkOyB9LFxuICAgICAgICAgICAgICAgIHRyYXBGb2N1czogZnVuY3Rpb24gKCkgeyByZXR1cm4gdW5kZWZpbmVkOyB9LFxuICAgICAgICAgICAgICAgIHJlbGVhc2VGb2N1czogZnVuY3Rpb24gKCkgeyByZXR1cm4gdW5kZWZpbmVkOyB9LFxuICAgICAgICAgICAgfTtcbiAgICAgICAgICAgIC8vIHRzbGludDplbmFibGU6b2JqZWN0LWxpdGVyYWwtc29ydC1rZXlzXG4gICAgICAgIH0sXG4gICAgICAgIGVudW1lcmFibGU6IHRydWUsXG4gICAgICAgIGNvbmZpZ3VyYWJsZTogdHJ1ZVxuICAgIH0pO1xuICAgIE1EQ0Rpc21pc3NpYmxlRHJhd2VyRm91bmRhdGlvbi5wcm90b3R5cGUuZGVzdHJveSA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgaWYgKHRoaXMuYW5pbWF0aW9uRnJhbWVfKSB7XG4gICAgICAgICAgICBjYW5jZWxBbmltYXRpb25GcmFtZSh0aGlzLmFuaW1hdGlvbkZyYW1lXyk7XG4gICAgICAgIH1cbiAgICAgICAgaWYgKHRoaXMuYW5pbWF0aW9uVGltZXJfKSB7XG4gICAgICAgICAgICBjbGVhclRpbWVvdXQodGhpcy5hbmltYXRpb25UaW1lcl8pO1xuICAgICAgICB9XG4gICAgfTtcbiAgICAvKipcbiAgICAgKiBPcGVucyB0aGUgZHJhd2VyIGZyb20gdGhlIGNsb3NlZCBzdGF0ZS5cbiAgICAgKi9cbiAgICBNRENEaXNtaXNzaWJsZURyYXdlckZvdW5kYXRpb24ucHJvdG90eXBlLm9wZW4gPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIHZhciBfdGhpcyA9IHRoaXM7XG4gICAgICAgIGlmICh0aGlzLmlzT3BlbigpIHx8IHRoaXMuaXNPcGVuaW5nKCkgfHwgdGhpcy5pc0Nsb3NpbmcoKSkge1xuICAgICAgICAgICAgcmV0dXJuO1xuICAgICAgICB9XG4gICAgICAgIHRoaXMuYWRhcHRlcl8uYWRkQ2xhc3MoY3NzQ2xhc3Nlcy5PUEVOKTtcbiAgICAgICAgdGhpcy5hZGFwdGVyXy5hZGRDbGFzcyhjc3NDbGFzc2VzLkFOSU1BVEUpO1xuICAgICAgICAvLyBXYWl0IGEgZnJhbWUgb25jZSBkaXNwbGF5IGlzIG5vIGxvbmdlciBcIm5vbmVcIiwgdG8gZXN0YWJsaXNoIGJhc2lzIGZvciBhbmltYXRpb25cbiAgICAgICAgdGhpcy5ydW5OZXh0QW5pbWF0aW9uRnJhbWVfKGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIF90aGlzLmFkYXB0ZXJfLmFkZENsYXNzKGNzc0NsYXNzZXMuT1BFTklORyk7XG4gICAgICAgIH0pO1xuICAgICAgICB0aGlzLmFkYXB0ZXJfLnNhdmVGb2N1cygpO1xuICAgIH07XG4gICAgLyoqXG4gICAgICogQ2xvc2VzIHRoZSBkcmF3ZXIgZnJvbSB0aGUgb3BlbiBzdGF0ZS5cbiAgICAgKi9cbiAgICBNRENEaXNtaXNzaWJsZURyYXdlckZvdW5kYXRpb24ucHJvdG90eXBlLmNsb3NlID0gZnVuY3Rpb24gKCkge1xuICAgICAgICBpZiAoIXRoaXMuaXNPcGVuKCkgfHwgdGhpcy5pc09wZW5pbmcoKSB8fCB0aGlzLmlzQ2xvc2luZygpKSB7XG4gICAgICAgICAgICByZXR1cm47XG4gICAgICAgIH1cbiAgICAgICAgdGhpcy5hZGFwdGVyXy5hZGRDbGFzcyhjc3NDbGFzc2VzLkNMT1NJTkcpO1xuICAgIH07XG4gICAgLyoqXG4gICAgICogUmV0dXJucyB0cnVlIGlmIHRoZSBkcmF3ZXIgaXMgaW4gdGhlIG9wZW4gcG9zaXRpb24uXG4gICAgICogQHJldHVybiB0cnVlIGlmIGRyYXdlciBpcyBpbiBvcGVuIHN0YXRlLlxuICAgICAqL1xuICAgIE1EQ0Rpc21pc3NpYmxlRHJhd2VyRm91bmRhdGlvbi5wcm90b3R5cGUuaXNPcGVuID0gZnVuY3Rpb24gKCkge1xuICAgICAgICByZXR1cm4gdGhpcy5hZGFwdGVyXy5oYXNDbGFzcyhjc3NDbGFzc2VzLk9QRU4pO1xuICAgIH07XG4gICAgLyoqXG4gICAgICogUmV0dXJucyB0cnVlIGlmIHRoZSBkcmF3ZXIgaXMgYW5pbWF0aW5nIG9wZW4uXG4gICAgICogQHJldHVybiB0cnVlIGlmIGRyYXdlciBpcyBhbmltYXRpbmcgb3Blbi5cbiAgICAgKi9cbiAgICBNRENEaXNtaXNzaWJsZURyYXdlckZvdW5kYXRpb24ucHJvdG90eXBlLmlzT3BlbmluZyA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgcmV0dXJuIHRoaXMuYWRhcHRlcl8uaGFzQ2xhc3MoY3NzQ2xhc3Nlcy5PUEVOSU5HKSB8fCB0aGlzLmFkYXB0ZXJfLmhhc0NsYXNzKGNzc0NsYXNzZXMuQU5JTUFURSk7XG4gICAgfTtcbiAgICAvKipcbiAgICAgKiBSZXR1cm5zIHRydWUgaWYgdGhlIGRyYXdlciBpcyBhbmltYXRpbmcgY2xvc2VkLlxuICAgICAqIEByZXR1cm4gdHJ1ZSBpZiBkcmF3ZXIgaXMgYW5pbWF0aW5nIGNsb3NlZC5cbiAgICAgKi9cbiAgICBNRENEaXNtaXNzaWJsZURyYXdlckZvdW5kYXRpb24ucHJvdG90eXBlLmlzQ2xvc2luZyA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgcmV0dXJuIHRoaXMuYWRhcHRlcl8uaGFzQ2xhc3MoY3NzQ2xhc3Nlcy5DTE9TSU5HKTtcbiAgICB9O1xuICAgIC8qKlxuICAgICAqIEtleWRvd24gaGFuZGxlciB0byBjbG9zZSBkcmF3ZXIgd2hlbiBrZXkgaXMgZXNjYXBlLlxuICAgICAqL1xuICAgIE1EQ0Rpc21pc3NpYmxlRHJhd2VyRm91bmRhdGlvbi5wcm90b3R5cGUuaGFuZGxlS2V5ZG93biA9IGZ1bmN0aW9uIChldnQpIHtcbiAgICAgICAgdmFyIGtleUNvZGUgPSBldnQua2V5Q29kZSwga2V5ID0gZXZ0LmtleTtcbiAgICAgICAgdmFyIGlzRXNjYXBlID0ga2V5ID09PSAnRXNjYXBlJyB8fCBrZXlDb2RlID09PSAyNztcbiAgICAgICAgaWYgKGlzRXNjYXBlKSB7XG4gICAgICAgICAgICB0aGlzLmNsb3NlKCk7XG4gICAgICAgIH1cbiAgICB9O1xuICAgIC8qKlxuICAgICAqIEhhbmRsZXMgdGhlIGB0cmFuc2l0aW9uZW5kYCBldmVudCB3aGVuIHRoZSBkcmF3ZXIgZmluaXNoZXMgb3BlbmluZy9jbG9zaW5nLlxuICAgICAqL1xuICAgIE1EQ0Rpc21pc3NpYmxlRHJhd2VyRm91bmRhdGlvbi5wcm90b3R5cGUuaGFuZGxlVHJhbnNpdGlvbkVuZCA9IGZ1bmN0aW9uIChldnQpIHtcbiAgICAgICAgdmFyIE9QRU5JTkcgPSBjc3NDbGFzc2VzLk9QRU5JTkcsIENMT1NJTkcgPSBjc3NDbGFzc2VzLkNMT1NJTkcsIE9QRU4gPSBjc3NDbGFzc2VzLk9QRU4sIEFOSU1BVEUgPSBjc3NDbGFzc2VzLkFOSU1BVEUsIFJPT1QgPSBjc3NDbGFzc2VzLlJPT1Q7XG4gICAgICAgIC8vIEluIEVkZ2UsIHRyYW5zaXRpb25lbmQgb24gcmlwcGxlIHBzZXVkby1lbGVtZW50cyB5aWVsZHMgYSB0YXJnZXQgd2l0aG91dCBjbGFzc0xpc3QsIHNvIGNoZWNrIGZvciBFbGVtZW50IGZpcnN0LlxuICAgICAgICB2YXIgaXNSb290RWxlbWVudCA9IHRoaXMuaXNFbGVtZW50XyhldnQudGFyZ2V0KSAmJiB0aGlzLmFkYXB0ZXJfLmVsZW1lbnRIYXNDbGFzcyhldnQudGFyZ2V0LCBST09UKTtcbiAgICAgICAgaWYgKCFpc1Jvb3RFbGVtZW50KSB7XG4gICAgICAgICAgICByZXR1cm47XG4gICAgICAgIH1cbiAgICAgICAgaWYgKHRoaXMuaXNDbG9zaW5nKCkpIHtcbiAgICAgICAgICAgIHRoaXMuYWRhcHRlcl8ucmVtb3ZlQ2xhc3MoT1BFTik7XG4gICAgICAgICAgICB0aGlzLmNsb3NlZF8oKTtcbiAgICAgICAgICAgIHRoaXMuYWRhcHRlcl8ucmVzdG9yZUZvY3VzKCk7XG4gICAgICAgICAgICB0aGlzLmFkYXB0ZXJfLm5vdGlmeUNsb3NlKCk7XG4gICAgICAgIH1cbiAgICAgICAgZWxzZSB7XG4gICAgICAgICAgICB0aGlzLmFkYXB0ZXJfLmZvY3VzQWN0aXZlTmF2aWdhdGlvbkl0ZW0oKTtcbiAgICAgICAgICAgIHRoaXMub3BlbmVkXygpO1xuICAgICAgICAgICAgdGhpcy5hZGFwdGVyXy5ub3RpZnlPcGVuKCk7XG4gICAgICAgIH1cbiAgICAgICAgdGhpcy5hZGFwdGVyXy5yZW1vdmVDbGFzcyhBTklNQVRFKTtcbiAgICAgICAgdGhpcy5hZGFwdGVyXy5yZW1vdmVDbGFzcyhPUEVOSU5HKTtcbiAgICAgICAgdGhpcy5hZGFwdGVyXy5yZW1vdmVDbGFzcyhDTE9TSU5HKTtcbiAgICB9O1xuICAgIC8qKlxuICAgICAqIEV4dGVuc2lvbiBwb2ludCBmb3Igd2hlbiBkcmF3ZXIgZmluaXNoZXMgb3BlbiBhbmltYXRpb24uXG4gICAgICovXG4gICAgTURDRGlzbWlzc2libGVEcmF3ZXJGb3VuZGF0aW9uLnByb3RvdHlwZS5vcGVuZWRfID0gZnVuY3Rpb24gKCkgeyB9OyAvLyB0c2xpbnQ6ZGlzYWJsZS1saW5lOm5vLWVtcHR5XG4gICAgLyoqXG4gICAgICogRXh0ZW5zaW9uIHBvaW50IGZvciB3aGVuIGRyYXdlciBmaW5pc2hlcyBjbG9zZSBhbmltYXRpb24uXG4gICAgICovXG4gICAgTURDRGlzbWlzc2libGVEcmF3ZXJGb3VuZGF0aW9uLnByb3RvdHlwZS5jbG9zZWRfID0gZnVuY3Rpb24gKCkgeyB9OyAvLyB0c2xpbnQ6ZGlzYWJsZS1saW5lOm5vLWVtcHR5XG4gICAgLyoqXG4gICAgICogUnVucyB0aGUgZ2l2ZW4gbG9naWMgb24gdGhlIG5leHQgYW5pbWF0aW9uIGZyYW1lLCB1c2luZyBzZXRUaW1lb3V0IHRvIGZhY3RvciBpbiBGaXJlZm94IHJlZmxvdyBiZWhhdmlvci5cbiAgICAgKi9cbiAgICBNRENEaXNtaXNzaWJsZURyYXdlckZvdW5kYXRpb24ucHJvdG90eXBlLnJ1bk5leHRBbmltYXRpb25GcmFtZV8gPSBmdW5jdGlvbiAoY2FsbGJhY2spIHtcbiAgICAgICAgdmFyIF90aGlzID0gdGhpcztcbiAgICAgICAgY2FuY2VsQW5pbWF0aW9uRnJhbWUodGhpcy5hbmltYXRpb25GcmFtZV8pO1xuICAgICAgICB0aGlzLmFuaW1hdGlvbkZyYW1lXyA9IHJlcXVlc3RBbmltYXRpb25GcmFtZShmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICBfdGhpcy5hbmltYXRpb25GcmFtZV8gPSAwO1xuICAgICAgICAgICAgY2xlYXJUaW1lb3V0KF90aGlzLmFuaW1hdGlvblRpbWVyXyk7XG4gICAgICAgICAgICBfdGhpcy5hbmltYXRpb25UaW1lcl8gPSBzZXRUaW1lb3V0KGNhbGxiYWNrLCAwKTtcbiAgICAgICAgfSk7XG4gICAgfTtcbiAgICBNRENEaXNtaXNzaWJsZURyYXdlckZvdW5kYXRpb24ucHJvdG90eXBlLmlzRWxlbWVudF8gPSBmdW5jdGlvbiAoZWxlbWVudCkge1xuICAgICAgICAvLyBJbiBFZGdlLCB0cmFuc2l0aW9uZW5kIG9uIHJpcHBsZSBwc2V1ZG8tZWxlbWVudHMgeWllbGRzIGEgdGFyZ2V0IHdpdGhvdXQgY2xhc3NMaXN0LlxuICAgICAgICByZXR1cm4gQm9vbGVhbihlbGVtZW50LmNsYXNzTGlzdCk7XG4gICAgfTtcbiAgICByZXR1cm4gTURDRGlzbWlzc2libGVEcmF3ZXJGb3VuZGF0aW9uO1xufShNRENGb3VuZGF0aW9uKSk7XG5leHBvcnQgeyBNRENEaXNtaXNzaWJsZURyYXdlckZvdW5kYXRpb24gfTtcbi8vIHRzbGludDpkaXNhYmxlLW5leHQtbGluZTpuby1kZWZhdWx0LWV4cG9ydCBOZWVkZWQgZm9yIGJhY2t3YXJkIGNvbXBhdGliaWxpdHkgd2l0aCBNREMgV2ViIHYwLjQ0LjAgYW5kIGVhcmxpZXIuXG5leHBvcnQgZGVmYXVsdCBNRENEaXNtaXNzaWJsZURyYXdlckZvdW5kYXRpb247XG4vLyMgc291cmNlTWFwcGluZ1VSTD1mb3VuZGF0aW9uLmpzLm1hcCJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./node_modules/@material/drawer/dismissible/foundation.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MDCDismissibleDrawerFoundation", function() { return MDCDismissibleDrawerFoundation; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_foundation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/base/foundation */ "./node_modules/@material/base/foundation.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../constants */ "./node_modules/@material/drawer/constants.js");
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+var MDCDismissibleDrawerFoundation = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](MDCDismissibleDrawerFoundation, _super);
+    function MDCDismissibleDrawerFoundation(adapter) {
+        var _this = _super.call(this, tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, MDCDismissibleDrawerFoundation.defaultAdapter, adapter)) || this;
+        _this.animationFrame_ = 0;
+        _this.animationTimer_ = 0;
+        return _this;
+    }
+    Object.defineProperty(MDCDismissibleDrawerFoundation, "strings", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_2__["strings"];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCDismissibleDrawerFoundation, "cssClasses", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCDismissibleDrawerFoundation, "defaultAdapter", {
+        get: function () {
+            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+            return {
+                addClass: function () { return undefined; },
+                removeClass: function () { return undefined; },
+                hasClass: function () { return false; },
+                elementHasClass: function () { return false; },
+                notifyClose: function () { return undefined; },
+                notifyOpen: function () { return undefined; },
+                saveFocus: function () { return undefined; },
+                restoreFocus: function () { return undefined; },
+                focusActiveNavigationItem: function () { return undefined; },
+                trapFocus: function () { return undefined; },
+                releaseFocus: function () { return undefined; },
+            };
+            // tslint:enable:object-literal-sort-keys
+        },
+        enumerable: true,
+        configurable: true
+    });
+    MDCDismissibleDrawerFoundation.prototype.destroy = function () {
+        if (this.animationFrame_) {
+            cancelAnimationFrame(this.animationFrame_);
+        }
+        if (this.animationTimer_) {
+            clearTimeout(this.animationTimer_);
+        }
+    };
+    /**
+     * Opens the drawer from the closed state.
+     */
+    MDCDismissibleDrawerFoundation.prototype.open = function () {
+        var _this = this;
+        if (this.isOpen() || this.isOpening() || this.isClosing()) {
+            return;
+        }
+        this.adapter_.addClass(_constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"].OPEN);
+        this.adapter_.addClass(_constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"].ANIMATE);
+        // Wait a frame once display is no longer "none", to establish basis for animation
+        this.runNextAnimationFrame_(function () {
+            _this.adapter_.addClass(_constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"].OPENING);
+        });
+        this.adapter_.saveFocus();
+    };
+    /**
+     * Closes the drawer from the open state.
+     */
+    MDCDismissibleDrawerFoundation.prototype.close = function () {
+        if (!this.isOpen() || this.isOpening() || this.isClosing()) {
+            return;
+        }
+        this.adapter_.addClass(_constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"].CLOSING);
+    };
+    /**
+     * Returns true if the drawer is in the open position.
+     * @return true if drawer is in open state.
+     */
+    MDCDismissibleDrawerFoundation.prototype.isOpen = function () {
+        return this.adapter_.hasClass(_constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"].OPEN);
+    };
+    /**
+     * Returns true if the drawer is animating open.
+     * @return true if drawer is animating open.
+     */
+    MDCDismissibleDrawerFoundation.prototype.isOpening = function () {
+        return this.adapter_.hasClass(_constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"].OPENING) || this.adapter_.hasClass(_constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"].ANIMATE);
+    };
+    /**
+     * Returns true if the drawer is animating closed.
+     * @return true if drawer is animating closed.
+     */
+    MDCDismissibleDrawerFoundation.prototype.isClosing = function () {
+        return this.adapter_.hasClass(_constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"].CLOSING);
+    };
+    /**
+     * Keydown handler to close drawer when key is escape.
+     */
+    MDCDismissibleDrawerFoundation.prototype.handleKeydown = function (evt) {
+        var keyCode = evt.keyCode, key = evt.key;
+        var isEscape = key === 'Escape' || keyCode === 27;
+        if (isEscape) {
+            this.close();
+        }
+    };
+    /**
+     * Handles the `transitionend` event when the drawer finishes opening/closing.
+     */
+    MDCDismissibleDrawerFoundation.prototype.handleTransitionEnd = function (evt) {
+        var OPENING = _constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"].OPENING, CLOSING = _constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"].CLOSING, OPEN = _constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"].OPEN, ANIMATE = _constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"].ANIMATE, ROOT = _constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"].ROOT;
+        // In Edge, transitionend on ripple pseudo-elements yields a target without classList, so check for Element first.
+        var isRootElement = this.isElement_(evt.target) && this.adapter_.elementHasClass(evt.target, ROOT);
+        if (!isRootElement) {
+            return;
+        }
+        if (this.isClosing()) {
+            this.adapter_.removeClass(OPEN);
+            this.closed_();
+            this.adapter_.restoreFocus();
+            this.adapter_.notifyClose();
+        }
+        else {
+            this.adapter_.focusActiveNavigationItem();
+            this.opened_();
+            this.adapter_.notifyOpen();
+        }
+        this.adapter_.removeClass(ANIMATE);
+        this.adapter_.removeClass(OPENING);
+        this.adapter_.removeClass(CLOSING);
+    };
+    /**
+     * Extension point for when drawer finishes open animation.
+     */
+    MDCDismissibleDrawerFoundation.prototype.opened_ = function () { }; // tslint:disable-line:no-empty
+    /**
+     * Extension point for when drawer finishes close animation.
+     */
+    MDCDismissibleDrawerFoundation.prototype.closed_ = function () { }; // tslint:disable-line:no-empty
+    /**
+     * Runs the given logic on the next animation frame, using setTimeout to factor in Firefox reflow behavior.
+     */
+    MDCDismissibleDrawerFoundation.prototype.runNextAnimationFrame_ = function (callback) {
+        var _this = this;
+        cancelAnimationFrame(this.animationFrame_);
+        this.animationFrame_ = requestAnimationFrame(function () {
+            _this.animationFrame_ = 0;
+            clearTimeout(_this.animationTimer_);
+            _this.animationTimer_ = setTimeout(callback, 0);
+        });
+    };
+    MDCDismissibleDrawerFoundation.prototype.isElement_ = function (element) {
+        // In Edge, transitionend on ripple pseudo-elements yields a target without classList.
+        return Boolean(element.classList);
+    };
+    return MDCDismissibleDrawerFoundation;
+}(_material_base_foundation__WEBPACK_IMPORTED_MODULE_1__["MDCFoundation"]));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* harmony default export */ __webpack_exports__["default"] = (MDCDismissibleDrawerFoundation);
+//# sourceMappingURL=foundation.js.map
 
 /***/ }),
 
@@ -237,7 +1128,52 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util */ \"./node_modules/@material/drawer/util.js\");\n/* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, \"util\", function() { return _util__WEBPACK_IMPORTED_MODULE_0__; });\n/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./component */ \"./node_modules/@material/drawer/component.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"MDCDrawer\", function() { return _component__WEBPACK_IMPORTED_MODULE_1__[\"MDCDrawer\"]; });\n\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./constants */ \"./node_modules/@material/drawer/constants.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"cssClasses\", function() { return _constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"strings\", function() { return _constants__WEBPACK_IMPORTED_MODULE_2__[\"strings\"]; });\n\n/* harmony import */ var _dismissible_foundation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dismissible/foundation */ \"./node_modules/@material/drawer/dismissible/foundation.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"MDCDismissibleDrawerFoundation\", function() { return _dismissible_foundation__WEBPACK_IMPORTED_MODULE_3__[\"MDCDismissibleDrawerFoundation\"]; });\n\n/* harmony import */ var _modal_foundation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modal/foundation */ \"./node_modules/@material/drawer/modal/foundation.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"MDCModalDrawerFoundation\", function() { return _modal_foundation__WEBPACK_IMPORTED_MODULE_4__[\"MDCModalDrawerFoundation\"]; });\n\n/**\n * @license\n * Copyright 2019 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\n\n\n\n\n\n\n//# sourceMappingURL=index.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL2RyYXdlci9pbmRleC5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL25vZGVfbW9kdWxlcy9AbWF0ZXJpYWwvZHJhd2VyL2luZGV4LmpzPzE3NzAiXSwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBAbGljZW5zZVxuICogQ29weXJpZ2h0IDIwMTkgR29vZ2xlIEluYy5cbiAqXG4gKiBQZXJtaXNzaW9uIGlzIGhlcmVieSBncmFudGVkLCBmcmVlIG9mIGNoYXJnZSwgdG8gYW55IHBlcnNvbiBvYnRhaW5pbmcgYSBjb3B5XG4gKiBvZiB0aGlzIHNvZnR3YXJlIGFuZCBhc3NvY2lhdGVkIGRvY3VtZW50YXRpb24gZmlsZXMgKHRoZSBcIlNvZnR3YXJlXCIpLCB0byBkZWFsXG4gKiBpbiB0aGUgU29mdHdhcmUgd2l0aG91dCByZXN0cmljdGlvbiwgaW5jbHVkaW5nIHdpdGhvdXQgbGltaXRhdGlvbiB0aGUgcmlnaHRzXG4gKiB0byB1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsXG4gKiBjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXNcbiAqIGZ1cm5pc2hlZCB0byBkbyBzbywgc3ViamVjdCB0byB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6XG4gKlxuICogVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW5cbiAqIGFsbCBjb3BpZXMgb3Igc3Vic3RhbnRpYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLlxuICpcbiAqIFRIRSBTT0ZUV0FSRSBJUyBQUk9WSURFRCBcIkFTIElTXCIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIEVYUFJFU1MgT1JcbiAqIElNUExJRUQsIElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gVEhFIFdBUlJBTlRJRVMgT0YgTUVSQ0hBTlRBQklMSVRZLFxuICogRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFXG4gKiBBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZIENMQUlNLCBEQU1BR0VTIE9SIE9USEVSXG4gKiBMSUFCSUxJVFksIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULCBUT1JUIE9SIE9USEVSV0lTRSwgQVJJU0lORyBGUk9NLFxuICogT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTlxuICogVEhFIFNPRlRXQVJFLlxuICovXG5pbXBvcnQgKiBhcyB1dGlsIGZyb20gJy4vdXRpbCc7XG5leHBvcnQgeyB1dGlsIH07XG5leHBvcnQgKiBmcm9tICcuL2NvbXBvbmVudCc7XG5leHBvcnQgKiBmcm9tICcuL2NvbnN0YW50cyc7XG5leHBvcnQgKiBmcm9tICcuL2Rpc21pc3NpYmxlL2ZvdW5kYXRpb24nO1xuZXhwb3J0ICogZnJvbSAnLi9tb2RhbC9mb3VuZGF0aW9uJztcbi8vIyBzb3VyY2VNYXBwaW5nVVJMPWluZGV4LmpzLm1hcCJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./node_modules/@material/drawer/index.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util */ "./node_modules/@material/drawer/util.js");
+/* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "util", function() { return _util__WEBPACK_IMPORTED_MODULE_0__; });
+/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./component */ "./node_modules/@material/drawer/component.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MDCDrawer", function() { return _component__WEBPACK_IMPORTED_MODULE_1__["MDCDrawer"]; });
+
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/drawer/constants.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cssClasses", function() { return _constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "strings", function() { return _constants__WEBPACK_IMPORTED_MODULE_2__["strings"]; });
+
+/* harmony import */ var _dismissible_foundation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dismissible/foundation */ "./node_modules/@material/drawer/dismissible/foundation.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MDCDismissibleDrawerFoundation", function() { return _dismissible_foundation__WEBPACK_IMPORTED_MODULE_3__["MDCDismissibleDrawerFoundation"]; });
+
+/* harmony import */ var _modal_foundation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modal/foundation */ "./node_modules/@material/drawer/modal/foundation.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MDCModalDrawerFoundation", function() { return _modal_foundation__WEBPACK_IMPORTED_MODULE_4__["MDCModalDrawerFoundation"]; });
+
+/**
+ * @license
+ * Copyright 2019 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+
+
+//# sourceMappingURL=index.js.map
 
 /***/ }),
 
@@ -249,7 +1185,64 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _uti
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"MDCModalDrawerFoundation\", function() { return MDCModalDrawerFoundation; });\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _dismissible_foundation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../dismissible/foundation */ \"./node_modules/@material/drawer/dismissible/foundation.js\");\n/**\n * @license\n * Copyright 2018 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\n\n\n/* istanbul ignore next: subclass is not a branch statement */\nvar MDCModalDrawerFoundation = /** @class */ (function (_super) {\n    tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"](MDCModalDrawerFoundation, _super);\n    function MDCModalDrawerFoundation() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    /**\n     * Handles click event on scrim.\n     */\n    MDCModalDrawerFoundation.prototype.handleScrimClick = function () {\n        this.close();\n    };\n    /**\n     * Called when drawer finishes open animation.\n     */\n    MDCModalDrawerFoundation.prototype.opened_ = function () {\n        this.adapter_.trapFocus();\n    };\n    /**\n     * Called when drawer finishes close animation.\n     */\n    MDCModalDrawerFoundation.prototype.closed_ = function () {\n        this.adapter_.releaseFocus();\n    };\n    return MDCModalDrawerFoundation;\n}(_dismissible_foundation__WEBPACK_IMPORTED_MODULE_1__[\"MDCDismissibleDrawerFoundation\"]));\n\n// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.\n/* harmony default export */ __webpack_exports__[\"default\"] = (MDCModalDrawerFoundation);\n//# sourceMappingURL=foundation.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL2RyYXdlci9tb2RhbC9mb3VuZGF0aW9uLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vbm9kZV9tb2R1bGVzL0BtYXRlcmlhbC9kcmF3ZXIvbW9kYWwvZm91bmRhdGlvbi5qcz9iYzQ5Il0sInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQGxpY2Vuc2VcbiAqIENvcHlyaWdodCAyMDE4IEdvb2dsZSBJbmMuXG4gKlxuICogUGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weVxuICogb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgXCJTb2Z0d2FyZVwiKSwgdG8gZGVhbFxuICogaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0c1xuICogdG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3Igc2VsbFxuICogY29waWVzIG9mIHRoZSBTb2Z0d2FyZSwgYW5kIHRvIHBlcm1pdCBwZXJzb25zIHRvIHdob20gdGhlIFNvZnR3YXJlIGlzXG4gKiBmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOlxuICpcbiAqIFRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlIGluY2x1ZGVkIGluXG4gKiBhbGwgY29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS5cbiAqXG4gKiBUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgXCJBUyBJU1wiLCBXSVRIT1VUIFdBUlJBTlRZIE9GIEFOWSBLSU5ELCBFWFBSRVNTIE9SXG4gKiBJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSxcbiAqIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRVxuICogQVVUSE9SUyBPUiBDT1BZUklHSFQgSE9MREVSUyBCRSBMSUFCTEUgRk9SIEFOWSBDTEFJTSwgREFNQUdFUyBPUiBPVEhFUlxuICogTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSxcbiAqIE9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU5cbiAqIFRIRSBTT0ZUV0FSRS5cbiAqL1xuaW1wb3J0ICogYXMgdHNsaWJfMSBmcm9tIFwidHNsaWJcIjtcbmltcG9ydCB7IE1EQ0Rpc21pc3NpYmxlRHJhd2VyRm91bmRhdGlvbiB9IGZyb20gJy4uL2Rpc21pc3NpYmxlL2ZvdW5kYXRpb24nO1xuLyogaXN0YW5idWwgaWdub3JlIG5leHQ6IHN1YmNsYXNzIGlzIG5vdCBhIGJyYW5jaCBzdGF0ZW1lbnQgKi9cbnZhciBNRENNb2RhbERyYXdlckZvdW5kYXRpb24gPSAvKiogQGNsYXNzICovIChmdW5jdGlvbiAoX3N1cGVyKSB7XG4gICAgdHNsaWJfMS5fX2V4dGVuZHMoTURDTW9kYWxEcmF3ZXJGb3VuZGF0aW9uLCBfc3VwZXIpO1xuICAgIGZ1bmN0aW9uIE1EQ01vZGFsRHJhd2VyRm91bmRhdGlvbigpIHtcbiAgICAgICAgcmV0dXJuIF9zdXBlciAhPT0gbnVsbCAmJiBfc3VwZXIuYXBwbHkodGhpcywgYXJndW1lbnRzKSB8fCB0aGlzO1xuICAgIH1cbiAgICAvKipcbiAgICAgKiBIYW5kbGVzIGNsaWNrIGV2ZW50IG9uIHNjcmltLlxuICAgICAqL1xuICAgIE1EQ01vZGFsRHJhd2VyRm91bmRhdGlvbi5wcm90b3R5cGUuaGFuZGxlU2NyaW1DbGljayA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdGhpcy5jbG9zZSgpO1xuICAgIH07XG4gICAgLyoqXG4gICAgICogQ2FsbGVkIHdoZW4gZHJhd2VyIGZpbmlzaGVzIG9wZW4gYW5pbWF0aW9uLlxuICAgICAqL1xuICAgIE1EQ01vZGFsRHJhd2VyRm91bmRhdGlvbi5wcm90b3R5cGUub3BlbmVkXyA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdGhpcy5hZGFwdGVyXy50cmFwRm9jdXMoKTtcbiAgICB9O1xuICAgIC8qKlxuICAgICAqIENhbGxlZCB3aGVuIGRyYXdlciBmaW5pc2hlcyBjbG9zZSBhbmltYXRpb24uXG4gICAgICovXG4gICAgTURDTW9kYWxEcmF3ZXJGb3VuZGF0aW9uLnByb3RvdHlwZS5jbG9zZWRfID0gZnVuY3Rpb24gKCkge1xuICAgICAgICB0aGlzLmFkYXB0ZXJfLnJlbGVhc2VGb2N1cygpO1xuICAgIH07XG4gICAgcmV0dXJuIE1EQ01vZGFsRHJhd2VyRm91bmRhdGlvbjtcbn0oTURDRGlzbWlzc2libGVEcmF3ZXJGb3VuZGF0aW9uKSk7XG5leHBvcnQgeyBNRENNb2RhbERyYXdlckZvdW5kYXRpb24gfTtcbi8vIHRzbGludDpkaXNhYmxlLW5leHQtbGluZTpuby1kZWZhdWx0LWV4cG9ydCBOZWVkZWQgZm9yIGJhY2t3YXJkIGNvbXBhdGliaWxpdHkgd2l0aCBNREMgV2ViIHYwLjQ0LjAgYW5kIGVhcmxpZXIuXG5leHBvcnQgZGVmYXVsdCBNRENNb2RhbERyYXdlckZvdW5kYXRpb247XG4vLyMgc291cmNlTWFwcGluZ1VSTD1mb3VuZGF0aW9uLmpzLm1hcCJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./node_modules/@material/drawer/modal/foundation.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MDCModalDrawerFoundation", function() { return MDCModalDrawerFoundation; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _dismissible_foundation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../dismissible/foundation */ "./node_modules/@material/drawer/dismissible/foundation.js");
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+/* istanbul ignore next: subclass is not a branch statement */
+var MDCModalDrawerFoundation = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](MDCModalDrawerFoundation, _super);
+    function MDCModalDrawerFoundation() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * Handles click event on scrim.
+     */
+    MDCModalDrawerFoundation.prototype.handleScrimClick = function () {
+        this.close();
+    };
+    /**
+     * Called when drawer finishes open animation.
+     */
+    MDCModalDrawerFoundation.prototype.opened_ = function () {
+        this.adapter_.trapFocus();
+    };
+    /**
+     * Called when drawer finishes close animation.
+     */
+    MDCModalDrawerFoundation.prototype.closed_ = function () {
+        this.adapter_.releaseFocus();
+    };
+    return MDCModalDrawerFoundation;
+}(_dismissible_foundation__WEBPACK_IMPORTED_MODULE_1__["MDCDismissibleDrawerFoundation"]));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* harmony default export */ __webpack_exports__["default"] = (MDCModalDrawerFoundation);
+//# sourceMappingURL=foundation.js.map
 
 /***/ }),
 
@@ -261,7 +1254,37 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createFocusTrapInstance\", function() { return createFocusTrapInstance; });\n/**\n * @license\n * Copyright 2016 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\nfunction createFocusTrapInstance(surfaceEl, focusTrapFactory) {\n    return focusTrapFactory(surfaceEl, {\n        // Component handles focusing on active nav item.\n        skipInitialFocus: true,\n    });\n}\n//# sourceMappingURL=util.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL2RyYXdlci91dGlsLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vbm9kZV9tb2R1bGVzL0BtYXRlcmlhbC9kcmF3ZXIvdXRpbC5qcz82NjY5Il0sInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQGxpY2Vuc2VcbiAqIENvcHlyaWdodCAyMDE2IEdvb2dsZSBJbmMuXG4gKlxuICogUGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weVxuICogb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgXCJTb2Z0d2FyZVwiKSwgdG8gZGVhbFxuICogaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0c1xuICogdG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3Igc2VsbFxuICogY29waWVzIG9mIHRoZSBTb2Z0d2FyZSwgYW5kIHRvIHBlcm1pdCBwZXJzb25zIHRvIHdob20gdGhlIFNvZnR3YXJlIGlzXG4gKiBmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOlxuICpcbiAqIFRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlIGluY2x1ZGVkIGluXG4gKiBhbGwgY29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS5cbiAqXG4gKiBUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgXCJBUyBJU1wiLCBXSVRIT1VUIFdBUlJBTlRZIE9GIEFOWSBLSU5ELCBFWFBSRVNTIE9SXG4gKiBJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSxcbiAqIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRVxuICogQVVUSE9SUyBPUiBDT1BZUklHSFQgSE9MREVSUyBCRSBMSUFCTEUgRk9SIEFOWSBDTEFJTSwgREFNQUdFUyBPUiBPVEhFUlxuICogTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSxcbiAqIE9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU5cbiAqIFRIRSBTT0ZUV0FSRS5cbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIGNyZWF0ZUZvY3VzVHJhcEluc3RhbmNlKHN1cmZhY2VFbCwgZm9jdXNUcmFwRmFjdG9yeSkge1xuICAgIHJldHVybiBmb2N1c1RyYXBGYWN0b3J5KHN1cmZhY2VFbCwge1xuICAgICAgICAvLyBDb21wb25lbnQgaGFuZGxlcyBmb2N1c2luZyBvbiBhY3RpdmUgbmF2IGl0ZW0uXG4gICAgICAgIHNraXBJbml0aWFsRm9jdXM6IHRydWUsXG4gICAgfSk7XG59XG4vLyMgc291cmNlTWFwcGluZ1VSTD11dGlsLmpzLm1hcCJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./node_modules/@material/drawer/util.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createFocusTrapInstance", function() { return createFocusTrapInstance; });
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+function createFocusTrapInstance(surfaceEl, focusTrapFactory) {
+    return focusTrapFactory(surfaceEl, {
+        // Component handles focusing on active nav item.
+        skipInitialFocus: true,
+    });
+}
+//# sourceMappingURL=util.js.map
 
 /***/ }),
 
@@ -273,7 +1296,268 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"MDCList\", function() { return MDCList; });\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _material_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/base/component */ \"./node_modules/@material/base/component.js\");\n/* harmony import */ var _material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/dom/ponyfill */ \"./node_modules/@material/dom/ponyfill.js\");\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./constants */ \"./node_modules/@material/list/constants.js\");\n/* harmony import */ var _foundation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./foundation */ \"./node_modules/@material/list/foundation.js\");\n/**\n * @license\n * Copyright 2018 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\n\n\n\n\n\nvar MDCList = /** @class */ (function (_super) {\n    tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"](MDCList, _super);\n    function MDCList() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    Object.defineProperty(MDCList.prototype, \"vertical\", {\n        set: function (value) {\n            this.foundation_.setVerticalOrientation(value);\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(MDCList.prototype, \"listElements\", {\n        get: function () {\n            return [].slice.call(this.root_.querySelectorAll(\".\" + _constants__WEBPACK_IMPORTED_MODULE_3__[\"cssClasses\"].LIST_ITEM_CLASS));\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(MDCList.prototype, \"wrapFocus\", {\n        set: function (value) {\n            this.foundation_.setWrapFocus(value);\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(MDCList.prototype, \"singleSelection\", {\n        set: function (isSingleSelectionList) {\n            this.foundation_.setSingleSelection(isSingleSelectionList);\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(MDCList.prototype, \"selectedIndex\", {\n        get: function () {\n            return this.foundation_.getSelectedIndex();\n        },\n        set: function (index) {\n            this.foundation_.setSelectedIndex(index);\n        },\n        enumerable: true,\n        configurable: true\n    });\n    MDCList.attachTo = function (root) {\n        return new MDCList(root);\n    };\n    MDCList.prototype.initialSyncWithDOM = function () {\n        this.handleClick_ = this.handleClickEvent_.bind(this);\n        this.handleKeydown_ = this.handleKeydownEvent_.bind(this);\n        this.focusInEventListener_ = this.handleFocusInEvent_.bind(this);\n        this.focusOutEventListener_ = this.handleFocusOutEvent_.bind(this);\n        this.listen('keydown', this.handleKeydown_);\n        this.listen('click', this.handleClick_);\n        this.listen('focusin', this.focusInEventListener_);\n        this.listen('focusout', this.focusOutEventListener_);\n        this.layout();\n        this.initializeListType();\n    };\n    MDCList.prototype.destroy = function () {\n        this.unlisten('keydown', this.handleKeydown_);\n        this.unlisten('click', this.handleClick_);\n        this.unlisten('focusin', this.focusInEventListener_);\n        this.unlisten('focusout', this.focusOutEventListener_);\n    };\n    MDCList.prototype.layout = function () {\n        var direction = this.root_.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_3__[\"strings\"].ARIA_ORIENTATION);\n        this.vertical = direction !== _constants__WEBPACK_IMPORTED_MODULE_3__[\"strings\"].ARIA_ORIENTATION_HORIZONTAL;\n        // List items need to have at least tabindex=-1 to be focusable.\n        [].slice.call(this.root_.querySelectorAll('.mdc-list-item:not([tabindex])'))\n            .forEach(function (el) {\n            el.setAttribute('tabindex', '-1');\n        });\n        // Child button/a elements are not tabbable until the list item is focused.\n        [].slice.call(this.root_.querySelectorAll(_constants__WEBPACK_IMPORTED_MODULE_3__[\"strings\"].FOCUSABLE_CHILD_ELEMENTS))\n            .forEach(function (el) { return el.setAttribute('tabindex', '-1'); });\n        this.foundation_.layout();\n    };\n    /**\n     * Initialize selectedIndex value based on pre-selected checkbox list items, single selection or radio.\n     */\n    MDCList.prototype.initializeListType = function () {\n        var _this = this;\n        var checkboxListItems = this.root_.querySelectorAll(_constants__WEBPACK_IMPORTED_MODULE_3__[\"strings\"].ARIA_ROLE_CHECKBOX_SELECTOR);\n        var singleSelectedListItem = this.root_.querySelector(\"\\n      .\" + _constants__WEBPACK_IMPORTED_MODULE_3__[\"cssClasses\"].LIST_ITEM_ACTIVATED_CLASS + \",\\n      .\" + _constants__WEBPACK_IMPORTED_MODULE_3__[\"cssClasses\"].LIST_ITEM_SELECTED_CLASS + \"\\n    \");\n        var radioSelectedListItem = this.root_.querySelector(_constants__WEBPACK_IMPORTED_MODULE_3__[\"strings\"].ARIA_CHECKED_RADIO_SELECTOR);\n        if (checkboxListItems.length) {\n            var preselectedItems = this.root_.querySelectorAll(_constants__WEBPACK_IMPORTED_MODULE_3__[\"strings\"].ARIA_CHECKED_CHECKBOX_SELECTOR);\n            this.selectedIndex =\n                [].map.call(preselectedItems, function (listItem) { return _this.listElements.indexOf(listItem); });\n        }\n        else if (singleSelectedListItem) {\n            if (singleSelectedListItem.classList.contains(_constants__WEBPACK_IMPORTED_MODULE_3__[\"cssClasses\"].LIST_ITEM_ACTIVATED_CLASS)) {\n                this.foundation_.setUseActivatedClass(true);\n            }\n            this.singleSelection = true;\n            this.selectedIndex = this.listElements.indexOf(singleSelectedListItem);\n        }\n        else if (radioSelectedListItem) {\n            this.selectedIndex = this.listElements.indexOf(radioSelectedListItem);\n        }\n    };\n    /**\n     * Updates the list item at itemIndex to the desired isEnabled state.\n     * @param itemIndex Index of the list item\n     * @param isEnabled Sets the list item to enabled or disabled.\n     */\n    MDCList.prototype.setEnabled = function (itemIndex, isEnabled) {\n        this.foundation_.setEnabled(itemIndex, isEnabled);\n    };\n    MDCList.prototype.getDefaultFoundation = function () {\n        var _this = this;\n        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.\n        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.\n        var adapter = {\n            addClassForElementIndex: function (index, className) {\n                var element = _this.listElements[index];\n                if (element) {\n                    element.classList.add(className);\n                }\n            },\n            focusItemAtIndex: function (index) {\n                var element = _this.listElements[index];\n                if (element) {\n                    element.focus();\n                }\n            },\n            getAttributeForElementIndex: function (index, attr) { return _this.listElements[index].getAttribute(attr); },\n            getFocusedElementIndex: function () { return _this.listElements.indexOf(document.activeElement); },\n            getListItemCount: function () { return _this.listElements.length; },\n            hasCheckboxAtIndex: function (index) {\n                var listItem = _this.listElements[index];\n                return !!listItem.querySelector(_constants__WEBPACK_IMPORTED_MODULE_3__[\"strings\"].CHECKBOX_SELECTOR);\n            },\n            hasRadioAtIndex: function (index) {\n                var listItem = _this.listElements[index];\n                return !!listItem.querySelector(_constants__WEBPACK_IMPORTED_MODULE_3__[\"strings\"].RADIO_SELECTOR);\n            },\n            isCheckboxCheckedAtIndex: function (index) {\n                var listItem = _this.listElements[index];\n                var toggleEl = listItem.querySelector(_constants__WEBPACK_IMPORTED_MODULE_3__[\"strings\"].CHECKBOX_SELECTOR);\n                return toggleEl.checked;\n            },\n            isFocusInsideList: function () {\n                return _this.root_.contains(document.activeElement);\n            },\n            isRootFocused: function () { return document.activeElement === _this.root_; },\n            listItemAtIndexHasClass: function (index, className) { return _this.listElements[index].classList.contains(className); },\n            notifyAction: function (index) {\n                _this.emit(_constants__WEBPACK_IMPORTED_MODULE_3__[\"strings\"].ACTION_EVENT, { index: index }, /** shouldBubble */ true);\n            },\n            removeClassForElementIndex: function (index, className) {\n                var element = _this.listElements[index];\n                if (element) {\n                    element.classList.remove(className);\n                }\n            },\n            setAttributeForElementIndex: function (index, attr, value) {\n                var element = _this.listElements[index];\n                if (element) {\n                    element.setAttribute(attr, value);\n                }\n            },\n            setCheckedCheckboxOrRadioAtIndex: function (index, isChecked) {\n                var listItem = _this.listElements[index];\n                var toggleEl = listItem.querySelector(_constants__WEBPACK_IMPORTED_MODULE_3__[\"strings\"].CHECKBOX_RADIO_SELECTOR);\n                toggleEl.checked = isChecked;\n                var event = document.createEvent('Event');\n                event.initEvent('change', true, true);\n                toggleEl.dispatchEvent(event);\n            },\n            setTabIndexForListItemChildren: function (listItemIndex, tabIndexValue) {\n                var element = _this.listElements[listItemIndex];\n                var listItemChildren = [].slice.call(element.querySelectorAll(_constants__WEBPACK_IMPORTED_MODULE_3__[\"strings\"].CHILD_ELEMENTS_TO_TOGGLE_TABINDEX));\n                listItemChildren.forEach(function (el) { return el.setAttribute('tabindex', tabIndexValue); });\n            },\n        };\n        return new _foundation__WEBPACK_IMPORTED_MODULE_4__[\"MDCListFoundation\"](adapter);\n    };\n    /**\n     * Used to figure out which list item this event is targetting. Or returns -1 if\n     * there is no list item\n     */\n    MDCList.prototype.getListItemIndex_ = function (evt) {\n        var eventTarget = evt.target;\n        var nearestParent = Object(_material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_2__[\"closest\"])(eventTarget, \".\" + _constants__WEBPACK_IMPORTED_MODULE_3__[\"cssClasses\"].LIST_ITEM_CLASS + \", .\" + _constants__WEBPACK_IMPORTED_MODULE_3__[\"cssClasses\"].ROOT);\n        // Get the index of the element if it is a list item.\n        if (nearestParent && Object(_material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_2__[\"matches\"])(nearestParent, \".\" + _constants__WEBPACK_IMPORTED_MODULE_3__[\"cssClasses\"].LIST_ITEM_CLASS)) {\n            return this.listElements.indexOf(nearestParent);\n        }\n        return -1;\n    };\n    /**\n     * Used to figure out which element was clicked before sending the event to the foundation.\n     */\n    MDCList.prototype.handleFocusInEvent_ = function (evt) {\n        var index = this.getListItemIndex_(evt);\n        this.foundation_.handleFocusIn(evt, index);\n    };\n    /**\n     * Used to figure out which element was clicked before sending the event to the foundation.\n     */\n    MDCList.prototype.handleFocusOutEvent_ = function (evt) {\n        var index = this.getListItemIndex_(evt);\n        this.foundation_.handleFocusOut(evt, index);\n    };\n    /**\n     * Used to figure out which element was focused when keydown event occurred before sending the event to the\n     * foundation.\n     */\n    MDCList.prototype.handleKeydownEvent_ = function (evt) {\n        var index = this.getListItemIndex_(evt);\n        var target = evt.target;\n        this.foundation_.handleKeydown(evt, target.classList.contains(_constants__WEBPACK_IMPORTED_MODULE_3__[\"cssClasses\"].LIST_ITEM_CLASS), index);\n    };\n    /**\n     * Used to figure out which element was clicked before sending the event to the foundation.\n     */\n    MDCList.prototype.handleClickEvent_ = function (evt) {\n        var index = this.getListItemIndex_(evt);\n        var target = evt.target;\n        // Toggle the checkbox only if it's not the target of the event, or the checkbox will have 2 change events.\n        var toggleCheckbox = !Object(_material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_2__[\"matches\"])(target, _constants__WEBPACK_IMPORTED_MODULE_3__[\"strings\"].CHECKBOX_RADIO_SELECTOR);\n        this.foundation_.handleClick(index, toggleCheckbox);\n    };\n    return MDCList;\n}(_material_base_component__WEBPACK_IMPORTED_MODULE_1__[\"MDCComponent\"]));\n\n//# sourceMappingURL=component.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL2xpc3QvY29tcG9uZW50LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vbm9kZV9tb2R1bGVzL0BtYXRlcmlhbC9saXN0L2NvbXBvbmVudC5qcz81YWRmIl0sInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQGxpY2Vuc2VcbiAqIENvcHlyaWdodCAyMDE4IEdvb2dsZSBJbmMuXG4gKlxuICogUGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weVxuICogb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgXCJTb2Z0d2FyZVwiKSwgdG8gZGVhbFxuICogaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0c1xuICogdG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3Igc2VsbFxuICogY29waWVzIG9mIHRoZSBTb2Z0d2FyZSwgYW5kIHRvIHBlcm1pdCBwZXJzb25zIHRvIHdob20gdGhlIFNvZnR3YXJlIGlzXG4gKiBmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOlxuICpcbiAqIFRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlIGluY2x1ZGVkIGluXG4gKiBhbGwgY29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS5cbiAqXG4gKiBUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgXCJBUyBJU1wiLCBXSVRIT1VUIFdBUlJBTlRZIE9GIEFOWSBLSU5ELCBFWFBSRVNTIE9SXG4gKiBJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSxcbiAqIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRVxuICogQVVUSE9SUyBPUiBDT1BZUklHSFQgSE9MREVSUyBCRSBMSUFCTEUgRk9SIEFOWSBDTEFJTSwgREFNQUdFUyBPUiBPVEhFUlxuICogTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSxcbiAqIE9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU5cbiAqIFRIRSBTT0ZUV0FSRS5cbiAqL1xuaW1wb3J0ICogYXMgdHNsaWJfMSBmcm9tIFwidHNsaWJcIjtcbmltcG9ydCB7IE1EQ0NvbXBvbmVudCB9IGZyb20gJ0BtYXRlcmlhbC9iYXNlL2NvbXBvbmVudCc7XG5pbXBvcnQgeyBjbG9zZXN0LCBtYXRjaGVzIH0gZnJvbSAnQG1hdGVyaWFsL2RvbS9wb255ZmlsbCc7XG5pbXBvcnQgeyBjc3NDbGFzc2VzLCBzdHJpbmdzIH0gZnJvbSAnLi9jb25zdGFudHMnO1xuaW1wb3J0IHsgTURDTGlzdEZvdW5kYXRpb24gfSBmcm9tICcuL2ZvdW5kYXRpb24nO1xudmFyIE1EQ0xpc3QgPSAvKiogQGNsYXNzICovIChmdW5jdGlvbiAoX3N1cGVyKSB7XG4gICAgdHNsaWJfMS5fX2V4dGVuZHMoTURDTGlzdCwgX3N1cGVyKTtcbiAgICBmdW5jdGlvbiBNRENMaXN0KCkge1xuICAgICAgICByZXR1cm4gX3N1cGVyICE9PSBudWxsICYmIF9zdXBlci5hcHBseSh0aGlzLCBhcmd1bWVudHMpIHx8IHRoaXM7XG4gICAgfVxuICAgIE9iamVjdC5kZWZpbmVQcm9wZXJ0eShNRENMaXN0LnByb3RvdHlwZSwgXCJ2ZXJ0aWNhbFwiLCB7XG4gICAgICAgIHNldDogZnVuY3Rpb24gKHZhbHVlKSB7XG4gICAgICAgICAgICB0aGlzLmZvdW5kYXRpb25fLnNldFZlcnRpY2FsT3JpZW50YXRpb24odmFsdWUpO1xuICAgICAgICB9LFxuICAgICAgICBlbnVtZXJhYmxlOiB0cnVlLFxuICAgICAgICBjb25maWd1cmFibGU6IHRydWVcbiAgICB9KTtcbiAgICBPYmplY3QuZGVmaW5lUHJvcGVydHkoTURDTGlzdC5wcm90b3R5cGUsIFwibGlzdEVsZW1lbnRzXCIsIHtcbiAgICAgICAgZ2V0OiBmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICByZXR1cm4gW10uc2xpY2UuY2FsbCh0aGlzLnJvb3RfLnF1ZXJ5U2VsZWN0b3JBbGwoXCIuXCIgKyBjc3NDbGFzc2VzLkxJU1RfSVRFTV9DTEFTUykpO1xuICAgICAgICB9LFxuICAgICAgICBlbnVtZXJhYmxlOiB0cnVlLFxuICAgICAgICBjb25maWd1cmFibGU6IHRydWVcbiAgICB9KTtcbiAgICBPYmplY3QuZGVmaW5lUHJvcGVydHkoTURDTGlzdC5wcm90b3R5cGUsIFwid3JhcEZvY3VzXCIsIHtcbiAgICAgICAgc2V0OiBmdW5jdGlvbiAodmFsdWUpIHtcbiAgICAgICAgICAgIHRoaXMuZm91bmRhdGlvbl8uc2V0V3JhcEZvY3VzKHZhbHVlKTtcbiAgICAgICAgfSxcbiAgICAgICAgZW51bWVyYWJsZTogdHJ1ZSxcbiAgICAgICAgY29uZmlndXJhYmxlOiB0cnVlXG4gICAgfSk7XG4gICAgT2JqZWN0LmRlZmluZVByb3BlcnR5KE1EQ0xpc3QucHJvdG90eXBlLCBcInNpbmdsZVNlbGVjdGlvblwiLCB7XG4gICAgICAgIHNldDogZnVuY3Rpb24gKGlzU2luZ2xlU2VsZWN0aW9uTGlzdCkge1xuICAgICAgICAgICAgdGhpcy5mb3VuZGF0aW9uXy5zZXRTaW5nbGVTZWxlY3Rpb24oaXNTaW5nbGVTZWxlY3Rpb25MaXN0KTtcbiAgICAgICAgfSxcbiAgICAgICAgZW51bWVyYWJsZTogdHJ1ZSxcbiAgICAgICAgY29uZmlndXJhYmxlOiB0cnVlXG4gICAgfSk7XG4gICAgT2JqZWN0LmRlZmluZVByb3BlcnR5KE1EQ0xpc3QucHJvdG90eXBlLCBcInNlbGVjdGVkSW5kZXhcIiwge1xuICAgICAgICBnZXQ6IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIHJldHVybiB0aGlzLmZvdW5kYXRpb25fLmdldFNlbGVjdGVkSW5kZXgoKTtcbiAgICAgICAgfSxcbiAgICAgICAgc2V0OiBmdW5jdGlvbiAoaW5kZXgpIHtcbiAgICAgICAgICAgIHRoaXMuZm91bmRhdGlvbl8uc2V0U2VsZWN0ZWRJbmRleChpbmRleCk7XG4gICAgICAgIH0sXG4gICAgICAgIGVudW1lcmFibGU6IHRydWUsXG4gICAgICAgIGNvbmZpZ3VyYWJsZTogdHJ1ZVxuICAgIH0pO1xuICAgIE1EQ0xpc3QuYXR0YWNoVG8gPSBmdW5jdGlvbiAocm9vdCkge1xuICAgICAgICByZXR1cm4gbmV3IE1EQ0xpc3Qocm9vdCk7XG4gICAgfTtcbiAgICBNRENMaXN0LnByb3RvdHlwZS5pbml0aWFsU3luY1dpdGhET00gPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIHRoaXMuaGFuZGxlQ2xpY2tfID0gdGhpcy5oYW5kbGVDbGlja0V2ZW50Xy5iaW5kKHRoaXMpO1xuICAgICAgICB0aGlzLmhhbmRsZUtleWRvd25fID0gdGhpcy5oYW5kbGVLZXlkb3duRXZlbnRfLmJpbmQodGhpcyk7XG4gICAgICAgIHRoaXMuZm9jdXNJbkV2ZW50TGlzdGVuZXJfID0gdGhpcy5oYW5kbGVGb2N1c0luRXZlbnRfLmJpbmQodGhpcyk7XG4gICAgICAgIHRoaXMuZm9jdXNPdXRFdmVudExpc3RlbmVyXyA9IHRoaXMuaGFuZGxlRm9jdXNPdXRFdmVudF8uYmluZCh0aGlzKTtcbiAgICAgICAgdGhpcy5saXN0ZW4oJ2tleWRvd24nLCB0aGlzLmhhbmRsZUtleWRvd25fKTtcbiAgICAgICAgdGhpcy5saXN0ZW4oJ2NsaWNrJywgdGhpcy5oYW5kbGVDbGlja18pO1xuICAgICAgICB0aGlzLmxpc3RlbignZm9jdXNpbicsIHRoaXMuZm9jdXNJbkV2ZW50TGlzdGVuZXJfKTtcbiAgICAgICAgdGhpcy5saXN0ZW4oJ2ZvY3Vzb3V0JywgdGhpcy5mb2N1c091dEV2ZW50TGlzdGVuZXJfKTtcbiAgICAgICAgdGhpcy5sYXlvdXQoKTtcbiAgICAgICAgdGhpcy5pbml0aWFsaXplTGlzdFR5cGUoKTtcbiAgICB9O1xuICAgIE1EQ0xpc3QucHJvdG90eXBlLmRlc3Ryb3kgPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIHRoaXMudW5saXN0ZW4oJ2tleWRvd24nLCB0aGlzLmhhbmRsZUtleWRvd25fKTtcbiAgICAgICAgdGhpcy51bmxpc3RlbignY2xpY2snLCB0aGlzLmhhbmRsZUNsaWNrXyk7XG4gICAgICAgIHRoaXMudW5saXN0ZW4oJ2ZvY3VzaW4nLCB0aGlzLmZvY3VzSW5FdmVudExpc3RlbmVyXyk7XG4gICAgICAgIHRoaXMudW5saXN0ZW4oJ2ZvY3Vzb3V0JywgdGhpcy5mb2N1c091dEV2ZW50TGlzdGVuZXJfKTtcbiAgICB9O1xuICAgIE1EQ0xpc3QucHJvdG90eXBlLmxheW91dCA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdmFyIGRpcmVjdGlvbiA9IHRoaXMucm9vdF8uZ2V0QXR0cmlidXRlKHN0cmluZ3MuQVJJQV9PUklFTlRBVElPTik7XG4gICAgICAgIHRoaXMudmVydGljYWwgPSBkaXJlY3Rpb24gIT09IHN0cmluZ3MuQVJJQV9PUklFTlRBVElPTl9IT1JJWk9OVEFMO1xuICAgICAgICAvLyBMaXN0IGl0ZW1zIG5lZWQgdG8gaGF2ZSBhdCBsZWFzdCB0YWJpbmRleD0tMSB0byBiZSBmb2N1c2FibGUuXG4gICAgICAgIFtdLnNsaWNlLmNhbGwodGhpcy5yb290Xy5xdWVyeVNlbGVjdG9yQWxsKCcubWRjLWxpc3QtaXRlbTpub3QoW3RhYmluZGV4XSknKSlcbiAgICAgICAgICAgIC5mb3JFYWNoKGZ1bmN0aW9uIChlbCkge1xuICAgICAgICAgICAgZWwuc2V0QXR0cmlidXRlKCd0YWJpbmRleCcsICctMScpO1xuICAgICAgICB9KTtcbiAgICAgICAgLy8gQ2hpbGQgYnV0dG9uL2EgZWxlbWVudHMgYXJlIG5vdCB0YWJiYWJsZSB1bnRpbCB0aGUgbGlzdCBpdGVtIGlzIGZvY3VzZWQuXG4gICAgICAgIFtdLnNsaWNlLmNhbGwodGhpcy5yb290Xy5xdWVyeVNlbGVjdG9yQWxsKHN0cmluZ3MuRk9DVVNBQkxFX0NISUxEX0VMRU1FTlRTKSlcbiAgICAgICAgICAgIC5mb3JFYWNoKGZ1bmN0aW9uIChlbCkgeyByZXR1cm4gZWwuc2V0QXR0cmlidXRlKCd0YWJpbmRleCcsICctMScpOyB9KTtcbiAgICAgICAgdGhpcy5mb3VuZGF0aW9uXy5sYXlvdXQoKTtcbiAgICB9O1xuICAgIC8qKlxuICAgICAqIEluaXRpYWxpemUgc2VsZWN0ZWRJbmRleCB2YWx1ZSBiYXNlZCBvbiBwcmUtc2VsZWN0ZWQgY2hlY2tib3ggbGlzdCBpdGVtcywgc2luZ2xlIHNlbGVjdGlvbiBvciByYWRpby5cbiAgICAgKi9cbiAgICBNRENMaXN0LnByb3RvdHlwZS5pbml0aWFsaXplTGlzdFR5cGUgPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIHZhciBfdGhpcyA9IHRoaXM7XG4gICAgICAgIHZhciBjaGVja2JveExpc3RJdGVtcyA9IHRoaXMucm9vdF8ucXVlcnlTZWxlY3RvckFsbChzdHJpbmdzLkFSSUFfUk9MRV9DSEVDS0JPWF9TRUxFQ1RPUik7XG4gICAgICAgIHZhciBzaW5nbGVTZWxlY3RlZExpc3RJdGVtID0gdGhpcy5yb290Xy5xdWVyeVNlbGVjdG9yKFwiXFxuICAgICAgLlwiICsgY3NzQ2xhc3Nlcy5MSVNUX0lURU1fQUNUSVZBVEVEX0NMQVNTICsgXCIsXFxuICAgICAgLlwiICsgY3NzQ2xhc3Nlcy5MSVNUX0lURU1fU0VMRUNURURfQ0xBU1MgKyBcIlxcbiAgICBcIik7XG4gICAgICAgIHZhciByYWRpb1NlbGVjdGVkTGlzdEl0ZW0gPSB0aGlzLnJvb3RfLnF1ZXJ5U2VsZWN0b3Ioc3RyaW5ncy5BUklBX0NIRUNLRURfUkFESU9fU0VMRUNUT1IpO1xuICAgICAgICBpZiAoY2hlY2tib3hMaXN0SXRlbXMubGVuZ3RoKSB7XG4gICAgICAgICAgICB2YXIgcHJlc2VsZWN0ZWRJdGVtcyA9IHRoaXMucm9vdF8ucXVlcnlTZWxlY3RvckFsbChzdHJpbmdzLkFSSUFfQ0hFQ0tFRF9DSEVDS0JPWF9TRUxFQ1RPUik7XG4gICAgICAgICAgICB0aGlzLnNlbGVjdGVkSW5kZXggPVxuICAgICAgICAgICAgICAgIFtdLm1hcC5jYWxsKHByZXNlbGVjdGVkSXRlbXMsIGZ1bmN0aW9uIChsaXN0SXRlbSkgeyByZXR1cm4gX3RoaXMubGlzdEVsZW1lbnRzLmluZGV4T2YobGlzdEl0ZW0pOyB9KTtcbiAgICAgICAgfVxuICAgICAgICBlbHNlIGlmIChzaW5nbGVTZWxlY3RlZExpc3RJdGVtKSB7XG4gICAgICAgICAgICBpZiAoc2luZ2xlU2VsZWN0ZWRMaXN0SXRlbS5jbGFzc0xpc3QuY29udGFpbnMoY3NzQ2xhc3Nlcy5MSVNUX0lURU1fQUNUSVZBVEVEX0NMQVNTKSkge1xuICAgICAgICAgICAgICAgIHRoaXMuZm91bmRhdGlvbl8uc2V0VXNlQWN0aXZhdGVkQ2xhc3ModHJ1ZSk7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICB0aGlzLnNpbmdsZVNlbGVjdGlvbiA9IHRydWU7XG4gICAgICAgICAgICB0aGlzLnNlbGVjdGVkSW5kZXggPSB0aGlzLmxpc3RFbGVtZW50cy5pbmRleE9mKHNpbmdsZVNlbGVjdGVkTGlzdEl0ZW0pO1xuICAgICAgICB9XG4gICAgICAgIGVsc2UgaWYgKHJhZGlvU2VsZWN0ZWRMaXN0SXRlbSkge1xuICAgICAgICAgICAgdGhpcy5zZWxlY3RlZEluZGV4ID0gdGhpcy5saXN0RWxlbWVudHMuaW5kZXhPZihyYWRpb1NlbGVjdGVkTGlzdEl0ZW0pO1xuICAgICAgICB9XG4gICAgfTtcbiAgICAvKipcbiAgICAgKiBVcGRhdGVzIHRoZSBsaXN0IGl0ZW0gYXQgaXRlbUluZGV4IHRvIHRoZSBkZXNpcmVkIGlzRW5hYmxlZCBzdGF0ZS5cbiAgICAgKiBAcGFyYW0gaXRlbUluZGV4IEluZGV4IG9mIHRoZSBsaXN0IGl0ZW1cbiAgICAgKiBAcGFyYW0gaXNFbmFibGVkIFNldHMgdGhlIGxpc3QgaXRlbSB0byBlbmFibGVkIG9yIGRpc2FibGVkLlxuICAgICAqL1xuICAgIE1EQ0xpc3QucHJvdG90eXBlLnNldEVuYWJsZWQgPSBmdW5jdGlvbiAoaXRlbUluZGV4LCBpc0VuYWJsZWQpIHtcbiAgICAgICAgdGhpcy5mb3VuZGF0aW9uXy5zZXRFbmFibGVkKGl0ZW1JbmRleCwgaXNFbmFibGVkKTtcbiAgICB9O1xuICAgIE1EQ0xpc3QucHJvdG90eXBlLmdldERlZmF1bHRGb3VuZGF0aW9uID0gZnVuY3Rpb24gKCkge1xuICAgICAgICB2YXIgX3RoaXMgPSB0aGlzO1xuICAgICAgICAvLyBETyBOT1QgSU5MSU5FIHRoaXMgdmFyaWFibGUuIEZvciBiYWNrd2FyZCBjb21wYXRpYmlsaXR5LCBmb3VuZGF0aW9ucyB0YWtlIGEgUGFydGlhbDxNRENGb29BZGFwdGVyPi5cbiAgICAgICAgLy8gVG8gZW5zdXJlIHdlIGRvbid0IGFjY2lkZW50YWxseSBvbWl0IGFueSBtZXRob2RzLCB3ZSBuZWVkIGEgc2VwYXJhdGUsIHN0cm9uZ2x5IHR5cGVkIGFkYXB0ZXIgdmFyaWFibGUuXG4gICAgICAgIHZhciBhZGFwdGVyID0ge1xuICAgICAgICAgICAgYWRkQ2xhc3NGb3JFbGVtZW50SW5kZXg6IGZ1bmN0aW9uIChpbmRleCwgY2xhc3NOYW1lKSB7XG4gICAgICAgICAgICAgICAgdmFyIGVsZW1lbnQgPSBfdGhpcy5saXN0RWxlbWVudHNbaW5kZXhdO1xuICAgICAgICAgICAgICAgIGlmIChlbGVtZW50KSB7XG4gICAgICAgICAgICAgICAgICAgIGVsZW1lbnQuY2xhc3NMaXN0LmFkZChjbGFzc05hbWUpO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgICBmb2N1c0l0ZW1BdEluZGV4OiBmdW5jdGlvbiAoaW5kZXgpIHtcbiAgICAgICAgICAgICAgICB2YXIgZWxlbWVudCA9IF90aGlzLmxpc3RFbGVtZW50c1tpbmRleF07XG4gICAgICAgICAgICAgICAgaWYgKGVsZW1lbnQpIHtcbiAgICAgICAgICAgICAgICAgICAgZWxlbWVudC5mb2N1cygpO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgICBnZXRBdHRyaWJ1dGVGb3JFbGVtZW50SW5kZXg6IGZ1bmN0aW9uIChpbmRleCwgYXR0cikgeyByZXR1cm4gX3RoaXMubGlzdEVsZW1lbnRzW2luZGV4XS5nZXRBdHRyaWJ1dGUoYXR0cik7IH0sXG4gICAgICAgICAgICBnZXRGb2N1c2VkRWxlbWVudEluZGV4OiBmdW5jdGlvbiAoKSB7IHJldHVybiBfdGhpcy5saXN0RWxlbWVudHMuaW5kZXhPZihkb2N1bWVudC5hY3RpdmVFbGVtZW50KTsgfSxcbiAgICAgICAgICAgIGdldExpc3RJdGVtQ291bnQ6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIF90aGlzLmxpc3RFbGVtZW50cy5sZW5ndGg7IH0sXG4gICAgICAgICAgICBoYXNDaGVja2JveEF0SW5kZXg6IGZ1bmN0aW9uIChpbmRleCkge1xuICAgICAgICAgICAgICAgIHZhciBsaXN0SXRlbSA9IF90aGlzLmxpc3RFbGVtZW50c1tpbmRleF07XG4gICAgICAgICAgICAgICAgcmV0dXJuICEhbGlzdEl0ZW0ucXVlcnlTZWxlY3RvcihzdHJpbmdzLkNIRUNLQk9YX1NFTEVDVE9SKTtcbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgICBoYXNSYWRpb0F0SW5kZXg6IGZ1bmN0aW9uIChpbmRleCkge1xuICAgICAgICAgICAgICAgIHZhciBsaXN0SXRlbSA9IF90aGlzLmxpc3RFbGVtZW50c1tpbmRleF07XG4gICAgICAgICAgICAgICAgcmV0dXJuICEhbGlzdEl0ZW0ucXVlcnlTZWxlY3RvcihzdHJpbmdzLlJBRElPX1NFTEVDVE9SKTtcbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgICBpc0NoZWNrYm94Q2hlY2tlZEF0SW5kZXg6IGZ1bmN0aW9uIChpbmRleCkge1xuICAgICAgICAgICAgICAgIHZhciBsaXN0SXRlbSA9IF90aGlzLmxpc3RFbGVtZW50c1tpbmRleF07XG4gICAgICAgICAgICAgICAgdmFyIHRvZ2dsZUVsID0gbGlzdEl0ZW0ucXVlcnlTZWxlY3RvcihzdHJpbmdzLkNIRUNLQk9YX1NFTEVDVE9SKTtcbiAgICAgICAgICAgICAgICByZXR1cm4gdG9nZ2xlRWwuY2hlY2tlZDtcbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgICBpc0ZvY3VzSW5zaWRlTGlzdDogZnVuY3Rpb24gKCkge1xuICAgICAgICAgICAgICAgIHJldHVybiBfdGhpcy5yb290Xy5jb250YWlucyhkb2N1bWVudC5hY3RpdmVFbGVtZW50KTtcbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgICBpc1Jvb3RGb2N1c2VkOiBmdW5jdGlvbiAoKSB7IHJldHVybiBkb2N1bWVudC5hY3RpdmVFbGVtZW50ID09PSBfdGhpcy5yb290XzsgfSxcbiAgICAgICAgICAgIGxpc3RJdGVtQXRJbmRleEhhc0NsYXNzOiBmdW5jdGlvbiAoaW5kZXgsIGNsYXNzTmFtZSkgeyByZXR1cm4gX3RoaXMubGlzdEVsZW1lbnRzW2luZGV4XS5jbGFzc0xpc3QuY29udGFpbnMoY2xhc3NOYW1lKTsgfSxcbiAgICAgICAgICAgIG5vdGlmeUFjdGlvbjogZnVuY3Rpb24gKGluZGV4KSB7XG4gICAgICAgICAgICAgICAgX3RoaXMuZW1pdChzdHJpbmdzLkFDVElPTl9FVkVOVCwgeyBpbmRleDogaW5kZXggfSwgLyoqIHNob3VsZEJ1YmJsZSAqLyB0cnVlKTtcbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgICByZW1vdmVDbGFzc0ZvckVsZW1lbnRJbmRleDogZnVuY3Rpb24gKGluZGV4LCBjbGFzc05hbWUpIHtcbiAgICAgICAgICAgICAgICB2YXIgZWxlbWVudCA9IF90aGlzLmxpc3RFbGVtZW50c1tpbmRleF07XG4gICAgICAgICAgICAgICAgaWYgKGVsZW1lbnQpIHtcbiAgICAgICAgICAgICAgICAgICAgZWxlbWVudC5jbGFzc0xpc3QucmVtb3ZlKGNsYXNzTmFtZSk7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfSxcbiAgICAgICAgICAgIHNldEF0dHJpYnV0ZUZvckVsZW1lbnRJbmRleDogZnVuY3Rpb24gKGluZGV4LCBhdHRyLCB2YWx1ZSkge1xuICAgICAgICAgICAgICAgIHZhciBlbGVtZW50ID0gX3RoaXMubGlzdEVsZW1lbnRzW2luZGV4XTtcbiAgICAgICAgICAgICAgICBpZiAoZWxlbWVudCkge1xuICAgICAgICAgICAgICAgICAgICBlbGVtZW50LnNldEF0dHJpYnV0ZShhdHRyLCB2YWx1ZSk7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfSxcbiAgICAgICAgICAgIHNldENoZWNrZWRDaGVja2JveE9yUmFkaW9BdEluZGV4OiBmdW5jdGlvbiAoaW5kZXgsIGlzQ2hlY2tlZCkge1xuICAgICAgICAgICAgICAgIHZhciBsaXN0SXRlbSA9IF90aGlzLmxpc3RFbGVtZW50c1tpbmRleF07XG4gICAgICAgICAgICAgICAgdmFyIHRvZ2dsZUVsID0gbGlzdEl0ZW0ucXVlcnlTZWxlY3RvcihzdHJpbmdzLkNIRUNLQk9YX1JBRElPX1NFTEVDVE9SKTtcbiAgICAgICAgICAgICAgICB0b2dnbGVFbC5jaGVja2VkID0gaXNDaGVja2VkO1xuICAgICAgICAgICAgICAgIHZhciBldmVudCA9IGRvY3VtZW50LmNyZWF0ZUV2ZW50KCdFdmVudCcpO1xuICAgICAgICAgICAgICAgIGV2ZW50LmluaXRFdmVudCgnY2hhbmdlJywgdHJ1ZSwgdHJ1ZSk7XG4gICAgICAgICAgICAgICAgdG9nZ2xlRWwuZGlzcGF0Y2hFdmVudChldmVudCk7XG4gICAgICAgICAgICB9LFxuICAgICAgICAgICAgc2V0VGFiSW5kZXhGb3JMaXN0SXRlbUNoaWxkcmVuOiBmdW5jdGlvbiAobGlzdEl0ZW1JbmRleCwgdGFiSW5kZXhWYWx1ZSkge1xuICAgICAgICAgICAgICAgIHZhciBlbGVtZW50ID0gX3RoaXMubGlzdEVsZW1lbnRzW2xpc3RJdGVtSW5kZXhdO1xuICAgICAgICAgICAgICAgIHZhciBsaXN0SXRlbUNoaWxkcmVuID0gW10uc2xpY2UuY2FsbChlbGVtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoc3RyaW5ncy5DSElMRF9FTEVNRU5UU19UT19UT0dHTEVfVEFCSU5ERVgpKTtcbiAgICAgICAgICAgICAgICBsaXN0SXRlbUNoaWxkcmVuLmZvckVhY2goZnVuY3Rpb24gKGVsKSB7IHJldHVybiBlbC5zZXRBdHRyaWJ1dGUoJ3RhYmluZGV4JywgdGFiSW5kZXhWYWx1ZSk7IH0pO1xuICAgICAgICAgICAgfSxcbiAgICAgICAgfTtcbiAgICAgICAgcmV0dXJuIG5ldyBNRENMaXN0Rm91bmRhdGlvbihhZGFwdGVyKTtcbiAgICB9O1xuICAgIC8qKlxuICAgICAqIFVzZWQgdG8gZmlndXJlIG91dCB3aGljaCBsaXN0IGl0ZW0gdGhpcyBldmVudCBpcyB0YXJnZXR0aW5nLiBPciByZXR1cm5zIC0xIGlmXG4gICAgICogdGhlcmUgaXMgbm8gbGlzdCBpdGVtXG4gICAgICovXG4gICAgTURDTGlzdC5wcm90b3R5cGUuZ2V0TGlzdEl0ZW1JbmRleF8gPSBmdW5jdGlvbiAoZXZ0KSB7XG4gICAgICAgIHZhciBldmVudFRhcmdldCA9IGV2dC50YXJnZXQ7XG4gICAgICAgIHZhciBuZWFyZXN0UGFyZW50ID0gY2xvc2VzdChldmVudFRhcmdldCwgXCIuXCIgKyBjc3NDbGFzc2VzLkxJU1RfSVRFTV9DTEFTUyArIFwiLCAuXCIgKyBjc3NDbGFzc2VzLlJPT1QpO1xuICAgICAgICAvLyBHZXQgdGhlIGluZGV4IG9mIHRoZSBlbGVtZW50IGlmIGl0IGlzIGEgbGlzdCBpdGVtLlxuICAgICAgICBpZiAobmVhcmVzdFBhcmVudCAmJiBtYXRjaGVzKG5lYXJlc3RQYXJlbnQsIFwiLlwiICsgY3NzQ2xhc3Nlcy5MSVNUX0lURU1fQ0xBU1MpKSB7XG4gICAgICAgICAgICByZXR1cm4gdGhpcy5saXN0RWxlbWVudHMuaW5kZXhPZihuZWFyZXN0UGFyZW50KTtcbiAgICAgICAgfVxuICAgICAgICByZXR1cm4gLTE7XG4gICAgfTtcbiAgICAvKipcbiAgICAgKiBVc2VkIHRvIGZpZ3VyZSBvdXQgd2hpY2ggZWxlbWVudCB3YXMgY2xpY2tlZCBiZWZvcmUgc2VuZGluZyB0aGUgZXZlbnQgdG8gdGhlIGZvdW5kYXRpb24uXG4gICAgICovXG4gICAgTURDTGlzdC5wcm90b3R5cGUuaGFuZGxlRm9jdXNJbkV2ZW50XyA9IGZ1bmN0aW9uIChldnQpIHtcbiAgICAgICAgdmFyIGluZGV4ID0gdGhpcy5nZXRMaXN0SXRlbUluZGV4XyhldnQpO1xuICAgICAgICB0aGlzLmZvdW5kYXRpb25fLmhhbmRsZUZvY3VzSW4oZXZ0LCBpbmRleCk7XG4gICAgfTtcbiAgICAvKipcbiAgICAgKiBVc2VkIHRvIGZpZ3VyZSBvdXQgd2hpY2ggZWxlbWVudCB3YXMgY2xpY2tlZCBiZWZvcmUgc2VuZGluZyB0aGUgZXZlbnQgdG8gdGhlIGZvdW5kYXRpb24uXG4gICAgICovXG4gICAgTURDTGlzdC5wcm90b3R5cGUuaGFuZGxlRm9jdXNPdXRFdmVudF8gPSBmdW5jdGlvbiAoZXZ0KSB7XG4gICAgICAgIHZhciBpbmRleCA9IHRoaXMuZ2V0TGlzdEl0ZW1JbmRleF8oZXZ0KTtcbiAgICAgICAgdGhpcy5mb3VuZGF0aW9uXy5oYW5kbGVGb2N1c091dChldnQsIGluZGV4KTtcbiAgICB9O1xuICAgIC8qKlxuICAgICAqIFVzZWQgdG8gZmlndXJlIG91dCB3aGljaCBlbGVtZW50IHdhcyBmb2N1c2VkIHdoZW4ga2V5ZG93biBldmVudCBvY2N1cnJlZCBiZWZvcmUgc2VuZGluZyB0aGUgZXZlbnQgdG8gdGhlXG4gICAgICogZm91bmRhdGlvbi5cbiAgICAgKi9cbiAgICBNRENMaXN0LnByb3RvdHlwZS5oYW5kbGVLZXlkb3duRXZlbnRfID0gZnVuY3Rpb24gKGV2dCkge1xuICAgICAgICB2YXIgaW5kZXggPSB0aGlzLmdldExpc3RJdGVtSW5kZXhfKGV2dCk7XG4gICAgICAgIHZhciB0YXJnZXQgPSBldnQudGFyZ2V0O1xuICAgICAgICB0aGlzLmZvdW5kYXRpb25fLmhhbmRsZUtleWRvd24oZXZ0LCB0YXJnZXQuY2xhc3NMaXN0LmNvbnRhaW5zKGNzc0NsYXNzZXMuTElTVF9JVEVNX0NMQVNTKSwgaW5kZXgpO1xuICAgIH07XG4gICAgLyoqXG4gICAgICogVXNlZCB0byBmaWd1cmUgb3V0IHdoaWNoIGVsZW1lbnQgd2FzIGNsaWNrZWQgYmVmb3JlIHNlbmRpbmcgdGhlIGV2ZW50IHRvIHRoZSBmb3VuZGF0aW9uLlxuICAgICAqL1xuICAgIE1EQ0xpc3QucHJvdG90eXBlLmhhbmRsZUNsaWNrRXZlbnRfID0gZnVuY3Rpb24gKGV2dCkge1xuICAgICAgICB2YXIgaW5kZXggPSB0aGlzLmdldExpc3RJdGVtSW5kZXhfKGV2dCk7XG4gICAgICAgIHZhciB0YXJnZXQgPSBldnQudGFyZ2V0O1xuICAgICAgICAvLyBUb2dnbGUgdGhlIGNoZWNrYm94IG9ubHkgaWYgaXQncyBub3QgdGhlIHRhcmdldCBvZiB0aGUgZXZlbnQsIG9yIHRoZSBjaGVja2JveCB3aWxsIGhhdmUgMiBjaGFuZ2UgZXZlbnRzLlxuICAgICAgICB2YXIgdG9nZ2xlQ2hlY2tib3ggPSAhbWF0Y2hlcyh0YXJnZXQsIHN0cmluZ3MuQ0hFQ0tCT1hfUkFESU9fU0VMRUNUT1IpO1xuICAgICAgICB0aGlzLmZvdW5kYXRpb25fLmhhbmRsZUNsaWNrKGluZGV4LCB0b2dnbGVDaGVja2JveCk7XG4gICAgfTtcbiAgICByZXR1cm4gTURDTGlzdDtcbn0oTURDQ29tcG9uZW50KSk7XG5leHBvcnQgeyBNRENMaXN0IH07XG4vLyMgc291cmNlTWFwcGluZ1VSTD1jb21wb25lbnQuanMubWFwIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./node_modules/@material/list/component.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MDCList", function() { return MDCList; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/base/component */ "./node_modules/@material/base/component.js");
+/* harmony import */ var _material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/dom/ponyfill */ "./node_modules/@material/dom/ponyfill.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/list/constants.js");
+/* harmony import */ var _foundation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./foundation */ "./node_modules/@material/list/foundation.js");
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+
+var MDCList = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](MDCList, _super);
+    function MDCList() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(MDCList.prototype, "vertical", {
+        set: function (value) {
+            this.foundation_.setVerticalOrientation(value);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCList.prototype, "listElements", {
+        get: function () {
+            return [].slice.call(this.root_.querySelectorAll("." + _constants__WEBPACK_IMPORTED_MODULE_3__["cssClasses"].LIST_ITEM_CLASS));
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCList.prototype, "wrapFocus", {
+        set: function (value) {
+            this.foundation_.setWrapFocus(value);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCList.prototype, "singleSelection", {
+        set: function (isSingleSelectionList) {
+            this.foundation_.setSingleSelection(isSingleSelectionList);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCList.prototype, "selectedIndex", {
+        get: function () {
+            return this.foundation_.getSelectedIndex();
+        },
+        set: function (index) {
+            this.foundation_.setSelectedIndex(index);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    MDCList.attachTo = function (root) {
+        return new MDCList(root);
+    };
+    MDCList.prototype.initialSyncWithDOM = function () {
+        this.handleClick_ = this.handleClickEvent_.bind(this);
+        this.handleKeydown_ = this.handleKeydownEvent_.bind(this);
+        this.focusInEventListener_ = this.handleFocusInEvent_.bind(this);
+        this.focusOutEventListener_ = this.handleFocusOutEvent_.bind(this);
+        this.listen('keydown', this.handleKeydown_);
+        this.listen('click', this.handleClick_);
+        this.listen('focusin', this.focusInEventListener_);
+        this.listen('focusout', this.focusOutEventListener_);
+        this.layout();
+        this.initializeListType();
+    };
+    MDCList.prototype.destroy = function () {
+        this.unlisten('keydown', this.handleKeydown_);
+        this.unlisten('click', this.handleClick_);
+        this.unlisten('focusin', this.focusInEventListener_);
+        this.unlisten('focusout', this.focusOutEventListener_);
+    };
+    MDCList.prototype.layout = function () {
+        var direction = this.root_.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_3__["strings"].ARIA_ORIENTATION);
+        this.vertical = direction !== _constants__WEBPACK_IMPORTED_MODULE_3__["strings"].ARIA_ORIENTATION_HORIZONTAL;
+        // List items need to have at least tabindex=-1 to be focusable.
+        [].slice.call(this.root_.querySelectorAll('.mdc-list-item:not([tabindex])'))
+            .forEach(function (el) {
+            el.setAttribute('tabindex', '-1');
+        });
+        // Child button/a elements are not tabbable until the list item is focused.
+        [].slice.call(this.root_.querySelectorAll(_constants__WEBPACK_IMPORTED_MODULE_3__["strings"].FOCUSABLE_CHILD_ELEMENTS))
+            .forEach(function (el) { return el.setAttribute('tabindex', '-1'); });
+        this.foundation_.layout();
+    };
+    /**
+     * Initialize selectedIndex value based on pre-selected checkbox list items, single selection or radio.
+     */
+    MDCList.prototype.initializeListType = function () {
+        var _this = this;
+        var checkboxListItems = this.root_.querySelectorAll(_constants__WEBPACK_IMPORTED_MODULE_3__["strings"].ARIA_ROLE_CHECKBOX_SELECTOR);
+        var singleSelectedListItem = this.root_.querySelector("\n      ." + _constants__WEBPACK_IMPORTED_MODULE_3__["cssClasses"].LIST_ITEM_ACTIVATED_CLASS + ",\n      ." + _constants__WEBPACK_IMPORTED_MODULE_3__["cssClasses"].LIST_ITEM_SELECTED_CLASS + "\n    ");
+        var radioSelectedListItem = this.root_.querySelector(_constants__WEBPACK_IMPORTED_MODULE_3__["strings"].ARIA_CHECKED_RADIO_SELECTOR);
+        if (checkboxListItems.length) {
+            var preselectedItems = this.root_.querySelectorAll(_constants__WEBPACK_IMPORTED_MODULE_3__["strings"].ARIA_CHECKED_CHECKBOX_SELECTOR);
+            this.selectedIndex =
+                [].map.call(preselectedItems, function (listItem) { return _this.listElements.indexOf(listItem); });
+        }
+        else if (singleSelectedListItem) {
+            if (singleSelectedListItem.classList.contains(_constants__WEBPACK_IMPORTED_MODULE_3__["cssClasses"].LIST_ITEM_ACTIVATED_CLASS)) {
+                this.foundation_.setUseActivatedClass(true);
+            }
+            this.singleSelection = true;
+            this.selectedIndex = this.listElements.indexOf(singleSelectedListItem);
+        }
+        else if (radioSelectedListItem) {
+            this.selectedIndex = this.listElements.indexOf(radioSelectedListItem);
+        }
+    };
+    /**
+     * Updates the list item at itemIndex to the desired isEnabled state.
+     * @param itemIndex Index of the list item
+     * @param isEnabled Sets the list item to enabled or disabled.
+     */
+    MDCList.prototype.setEnabled = function (itemIndex, isEnabled) {
+        this.foundation_.setEnabled(itemIndex, isEnabled);
+    };
+    MDCList.prototype.getDefaultFoundation = function () {
+        var _this = this;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        var adapter = {
+            addClassForElementIndex: function (index, className) {
+                var element = _this.listElements[index];
+                if (element) {
+                    element.classList.add(className);
+                }
+            },
+            focusItemAtIndex: function (index) {
+                var element = _this.listElements[index];
+                if (element) {
+                    element.focus();
+                }
+            },
+            getAttributeForElementIndex: function (index, attr) { return _this.listElements[index].getAttribute(attr); },
+            getFocusedElementIndex: function () { return _this.listElements.indexOf(document.activeElement); },
+            getListItemCount: function () { return _this.listElements.length; },
+            hasCheckboxAtIndex: function (index) {
+                var listItem = _this.listElements[index];
+                return !!listItem.querySelector(_constants__WEBPACK_IMPORTED_MODULE_3__["strings"].CHECKBOX_SELECTOR);
+            },
+            hasRadioAtIndex: function (index) {
+                var listItem = _this.listElements[index];
+                return !!listItem.querySelector(_constants__WEBPACK_IMPORTED_MODULE_3__["strings"].RADIO_SELECTOR);
+            },
+            isCheckboxCheckedAtIndex: function (index) {
+                var listItem = _this.listElements[index];
+                var toggleEl = listItem.querySelector(_constants__WEBPACK_IMPORTED_MODULE_3__["strings"].CHECKBOX_SELECTOR);
+                return toggleEl.checked;
+            },
+            isFocusInsideList: function () {
+                return _this.root_.contains(document.activeElement);
+            },
+            isRootFocused: function () { return document.activeElement === _this.root_; },
+            listItemAtIndexHasClass: function (index, className) { return _this.listElements[index].classList.contains(className); },
+            notifyAction: function (index) {
+                _this.emit(_constants__WEBPACK_IMPORTED_MODULE_3__["strings"].ACTION_EVENT, { index: index }, /** shouldBubble */ true);
+            },
+            removeClassForElementIndex: function (index, className) {
+                var element = _this.listElements[index];
+                if (element) {
+                    element.classList.remove(className);
+                }
+            },
+            setAttributeForElementIndex: function (index, attr, value) {
+                var element = _this.listElements[index];
+                if (element) {
+                    element.setAttribute(attr, value);
+                }
+            },
+            setCheckedCheckboxOrRadioAtIndex: function (index, isChecked) {
+                var listItem = _this.listElements[index];
+                var toggleEl = listItem.querySelector(_constants__WEBPACK_IMPORTED_MODULE_3__["strings"].CHECKBOX_RADIO_SELECTOR);
+                toggleEl.checked = isChecked;
+                var event = document.createEvent('Event');
+                event.initEvent('change', true, true);
+                toggleEl.dispatchEvent(event);
+            },
+            setTabIndexForListItemChildren: function (listItemIndex, tabIndexValue) {
+                var element = _this.listElements[listItemIndex];
+                var listItemChildren = [].slice.call(element.querySelectorAll(_constants__WEBPACK_IMPORTED_MODULE_3__["strings"].CHILD_ELEMENTS_TO_TOGGLE_TABINDEX));
+                listItemChildren.forEach(function (el) { return el.setAttribute('tabindex', tabIndexValue); });
+            },
+        };
+        return new _foundation__WEBPACK_IMPORTED_MODULE_4__["MDCListFoundation"](adapter);
+    };
+    /**
+     * Used to figure out which list item this event is targetting. Or returns -1 if
+     * there is no list item
+     */
+    MDCList.prototype.getListItemIndex_ = function (evt) {
+        var eventTarget = evt.target;
+        var nearestParent = Object(_material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_2__["closest"])(eventTarget, "." + _constants__WEBPACK_IMPORTED_MODULE_3__["cssClasses"].LIST_ITEM_CLASS + ", ." + _constants__WEBPACK_IMPORTED_MODULE_3__["cssClasses"].ROOT);
+        // Get the index of the element if it is a list item.
+        if (nearestParent && Object(_material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_2__["matches"])(nearestParent, "." + _constants__WEBPACK_IMPORTED_MODULE_3__["cssClasses"].LIST_ITEM_CLASS)) {
+            return this.listElements.indexOf(nearestParent);
+        }
+        return -1;
+    };
+    /**
+     * Used to figure out which element was clicked before sending the event to the foundation.
+     */
+    MDCList.prototype.handleFocusInEvent_ = function (evt) {
+        var index = this.getListItemIndex_(evt);
+        this.foundation_.handleFocusIn(evt, index);
+    };
+    /**
+     * Used to figure out which element was clicked before sending the event to the foundation.
+     */
+    MDCList.prototype.handleFocusOutEvent_ = function (evt) {
+        var index = this.getListItemIndex_(evt);
+        this.foundation_.handleFocusOut(evt, index);
+    };
+    /**
+     * Used to figure out which element was focused when keydown event occurred before sending the event to the
+     * foundation.
+     */
+    MDCList.prototype.handleKeydownEvent_ = function (evt) {
+        var index = this.getListItemIndex_(evt);
+        var target = evt.target;
+        this.foundation_.handleKeydown(evt, target.classList.contains(_constants__WEBPACK_IMPORTED_MODULE_3__["cssClasses"].LIST_ITEM_CLASS), index);
+    };
+    /**
+     * Used to figure out which element was clicked before sending the event to the foundation.
+     */
+    MDCList.prototype.handleClickEvent_ = function (evt) {
+        var index = this.getListItemIndex_(evt);
+        var target = evt.target;
+        // Toggle the checkbox only if it's not the target of the event, or the checkbox will have 2 change events.
+        var toggleCheckbox = !Object(_material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_2__["matches"])(target, _constants__WEBPACK_IMPORTED_MODULE_3__["strings"].CHECKBOX_RADIO_SELECTOR);
+        this.foundation_.handleClick(index, toggleCheckbox);
+    };
+    return MDCList;
+}(_material_base_component__WEBPACK_IMPORTED_MODULE_1__["MDCComponent"]));
+
+//# sourceMappingURL=component.js.map
 
 /***/ }),
 
@@ -285,7 +1569,61 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"strings\", function() { return strings; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"cssClasses\", function() { return cssClasses; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"numbers\", function() { return numbers; });\n/**\n * @license\n * Copyright 2018 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\nvar cssClasses = {\n    LIST_ITEM_ACTIVATED_CLASS: 'mdc-list-item--activated',\n    LIST_ITEM_CLASS: 'mdc-list-item',\n    LIST_ITEM_DISABLED_CLASS: 'mdc-list-item--disabled',\n    LIST_ITEM_SELECTED_CLASS: 'mdc-list-item--selected',\n    ROOT: 'mdc-list',\n};\nvar strings = {\n    ACTION_EVENT: 'MDCList:action',\n    ARIA_CHECKED: 'aria-checked',\n    ARIA_CHECKED_CHECKBOX_SELECTOR: '[role=\"checkbox\"][aria-checked=\"true\"]',\n    ARIA_CHECKED_RADIO_SELECTOR: '[role=\"radio\"][aria-checked=\"true\"]',\n    ARIA_CURRENT: 'aria-current',\n    ARIA_DISABLED: 'aria-disabled',\n    ARIA_ORIENTATION: 'aria-orientation',\n    ARIA_ORIENTATION_HORIZONTAL: 'horizontal',\n    ARIA_ROLE_CHECKBOX_SELECTOR: '[role=\"checkbox\"]',\n    ARIA_SELECTED: 'aria-selected',\n    CHECKBOX_RADIO_SELECTOR: 'input[type=\"checkbox\"], input[type=\"radio\"]',\n    CHECKBOX_SELECTOR: 'input[type=\"checkbox\"]',\n    CHILD_ELEMENTS_TO_TOGGLE_TABINDEX: \"\\n    .\" + cssClasses.LIST_ITEM_CLASS + \" button:not(:disabled),\\n    .\" + cssClasses.LIST_ITEM_CLASS + \" a\\n  \",\n    FOCUSABLE_CHILD_ELEMENTS: \"\\n    .\" + cssClasses.LIST_ITEM_CLASS + \" button:not(:disabled),\\n    .\" + cssClasses.LIST_ITEM_CLASS + \" a,\\n    .\" + cssClasses.LIST_ITEM_CLASS + \" input[type=\\\"radio\\\"]:not(:disabled),\\n    .\" + cssClasses.LIST_ITEM_CLASS + \" input[type=\\\"checkbox\\\"]:not(:disabled)\\n  \",\n    RADIO_SELECTOR: 'input[type=\"radio\"]',\n};\nvar numbers = {\n    UNSET_INDEX: -1,\n};\n\n//# sourceMappingURL=constants.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL2xpc3QvY29uc3RhbnRzLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vbm9kZV9tb2R1bGVzL0BtYXRlcmlhbC9saXN0L2NvbnN0YW50cy5qcz80YmYzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQGxpY2Vuc2VcbiAqIENvcHlyaWdodCAyMDE4IEdvb2dsZSBJbmMuXG4gKlxuICogUGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weVxuICogb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgXCJTb2Z0d2FyZVwiKSwgdG8gZGVhbFxuICogaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0c1xuICogdG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3Igc2VsbFxuICogY29waWVzIG9mIHRoZSBTb2Z0d2FyZSwgYW5kIHRvIHBlcm1pdCBwZXJzb25zIHRvIHdob20gdGhlIFNvZnR3YXJlIGlzXG4gKiBmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOlxuICpcbiAqIFRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlIGluY2x1ZGVkIGluXG4gKiBhbGwgY29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS5cbiAqXG4gKiBUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgXCJBUyBJU1wiLCBXSVRIT1VUIFdBUlJBTlRZIE9GIEFOWSBLSU5ELCBFWFBSRVNTIE9SXG4gKiBJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSxcbiAqIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRVxuICogQVVUSE9SUyBPUiBDT1BZUklHSFQgSE9MREVSUyBCRSBMSUFCTEUgRk9SIEFOWSBDTEFJTSwgREFNQUdFUyBPUiBPVEhFUlxuICogTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSxcbiAqIE9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU5cbiAqIFRIRSBTT0ZUV0FSRS5cbiAqL1xudmFyIGNzc0NsYXNzZXMgPSB7XG4gICAgTElTVF9JVEVNX0FDVElWQVRFRF9DTEFTUzogJ21kYy1saXN0LWl0ZW0tLWFjdGl2YXRlZCcsXG4gICAgTElTVF9JVEVNX0NMQVNTOiAnbWRjLWxpc3QtaXRlbScsXG4gICAgTElTVF9JVEVNX0RJU0FCTEVEX0NMQVNTOiAnbWRjLWxpc3QtaXRlbS0tZGlzYWJsZWQnLFxuICAgIExJU1RfSVRFTV9TRUxFQ1RFRF9DTEFTUzogJ21kYy1saXN0LWl0ZW0tLXNlbGVjdGVkJyxcbiAgICBST09UOiAnbWRjLWxpc3QnLFxufTtcbnZhciBzdHJpbmdzID0ge1xuICAgIEFDVElPTl9FVkVOVDogJ01EQ0xpc3Q6YWN0aW9uJyxcbiAgICBBUklBX0NIRUNLRUQ6ICdhcmlhLWNoZWNrZWQnLFxuICAgIEFSSUFfQ0hFQ0tFRF9DSEVDS0JPWF9TRUxFQ1RPUjogJ1tyb2xlPVwiY2hlY2tib3hcIl1bYXJpYS1jaGVja2VkPVwidHJ1ZVwiXScsXG4gICAgQVJJQV9DSEVDS0VEX1JBRElPX1NFTEVDVE9SOiAnW3JvbGU9XCJyYWRpb1wiXVthcmlhLWNoZWNrZWQ9XCJ0cnVlXCJdJyxcbiAgICBBUklBX0NVUlJFTlQ6ICdhcmlhLWN1cnJlbnQnLFxuICAgIEFSSUFfRElTQUJMRUQ6ICdhcmlhLWRpc2FibGVkJyxcbiAgICBBUklBX09SSUVOVEFUSU9OOiAnYXJpYS1vcmllbnRhdGlvbicsXG4gICAgQVJJQV9PUklFTlRBVElPTl9IT1JJWk9OVEFMOiAnaG9yaXpvbnRhbCcsXG4gICAgQVJJQV9ST0xFX0NIRUNLQk9YX1NFTEVDVE9SOiAnW3JvbGU9XCJjaGVja2JveFwiXScsXG4gICAgQVJJQV9TRUxFQ1RFRDogJ2FyaWEtc2VsZWN0ZWQnLFxuICAgIENIRUNLQk9YX1JBRElPX1NFTEVDVE9SOiAnaW5wdXRbdHlwZT1cImNoZWNrYm94XCJdLCBpbnB1dFt0eXBlPVwicmFkaW9cIl0nLFxuICAgIENIRUNLQk9YX1NFTEVDVE9SOiAnaW5wdXRbdHlwZT1cImNoZWNrYm94XCJdJyxcbiAgICBDSElMRF9FTEVNRU5UU19UT19UT0dHTEVfVEFCSU5ERVg6IFwiXFxuICAgIC5cIiArIGNzc0NsYXNzZXMuTElTVF9JVEVNX0NMQVNTICsgXCIgYnV0dG9uOm5vdCg6ZGlzYWJsZWQpLFxcbiAgICAuXCIgKyBjc3NDbGFzc2VzLkxJU1RfSVRFTV9DTEFTUyArIFwiIGFcXG4gIFwiLFxuICAgIEZPQ1VTQUJMRV9DSElMRF9FTEVNRU5UUzogXCJcXG4gICAgLlwiICsgY3NzQ2xhc3Nlcy5MSVNUX0lURU1fQ0xBU1MgKyBcIiBidXR0b246bm90KDpkaXNhYmxlZCksXFxuICAgIC5cIiArIGNzc0NsYXNzZXMuTElTVF9JVEVNX0NMQVNTICsgXCIgYSxcXG4gICAgLlwiICsgY3NzQ2xhc3Nlcy5MSVNUX0lURU1fQ0xBU1MgKyBcIiBpbnB1dFt0eXBlPVxcXCJyYWRpb1xcXCJdOm5vdCg6ZGlzYWJsZWQpLFxcbiAgICAuXCIgKyBjc3NDbGFzc2VzLkxJU1RfSVRFTV9DTEFTUyArIFwiIGlucHV0W3R5cGU9XFxcImNoZWNrYm94XFxcIl06bm90KDpkaXNhYmxlZClcXG4gIFwiLFxuICAgIFJBRElPX1NFTEVDVE9SOiAnaW5wdXRbdHlwZT1cInJhZGlvXCJdJyxcbn07XG52YXIgbnVtYmVycyA9IHtcbiAgICBVTlNFVF9JTkRFWDogLTEsXG59O1xuZXhwb3J0IHsgc3RyaW5ncywgY3NzQ2xhc3NlcywgbnVtYmVycyB9O1xuLy8jIHNvdXJjZU1hcHBpbmdVUkw9Y29uc3RhbnRzLmpzLm1hcCJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./node_modules/@material/list/constants.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "strings", function() { return strings; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cssClasses", function() { return cssClasses; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "numbers", function() { return numbers; });
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+var cssClasses = {
+    LIST_ITEM_ACTIVATED_CLASS: 'mdc-list-item--activated',
+    LIST_ITEM_CLASS: 'mdc-list-item',
+    LIST_ITEM_DISABLED_CLASS: 'mdc-list-item--disabled',
+    LIST_ITEM_SELECTED_CLASS: 'mdc-list-item--selected',
+    ROOT: 'mdc-list',
+};
+var strings = {
+    ACTION_EVENT: 'MDCList:action',
+    ARIA_CHECKED: 'aria-checked',
+    ARIA_CHECKED_CHECKBOX_SELECTOR: '[role="checkbox"][aria-checked="true"]',
+    ARIA_CHECKED_RADIO_SELECTOR: '[role="radio"][aria-checked="true"]',
+    ARIA_CURRENT: 'aria-current',
+    ARIA_DISABLED: 'aria-disabled',
+    ARIA_ORIENTATION: 'aria-orientation',
+    ARIA_ORIENTATION_HORIZONTAL: 'horizontal',
+    ARIA_ROLE_CHECKBOX_SELECTOR: '[role="checkbox"]',
+    ARIA_SELECTED: 'aria-selected',
+    CHECKBOX_RADIO_SELECTOR: 'input[type="checkbox"], input[type="radio"]',
+    CHECKBOX_SELECTOR: 'input[type="checkbox"]',
+    CHILD_ELEMENTS_TO_TOGGLE_TABINDEX: "\n    ." + cssClasses.LIST_ITEM_CLASS + " button:not(:disabled),\n    ." + cssClasses.LIST_ITEM_CLASS + " a\n  ",
+    FOCUSABLE_CHILD_ELEMENTS: "\n    ." + cssClasses.LIST_ITEM_CLASS + " button:not(:disabled),\n    ." + cssClasses.LIST_ITEM_CLASS + " a,\n    ." + cssClasses.LIST_ITEM_CLASS + " input[type=\"radio\"]:not(:disabled),\n    ." + cssClasses.LIST_ITEM_CLASS + " input[type=\"checkbox\"]:not(:disabled)\n  ",
+    RADIO_SELECTOR: 'input[type="radio"]',
+};
+var numbers = {
+    UNSET_INDEX: -1,
+};
+
+//# sourceMappingURL=constants.js.map
 
 /***/ }),
 
@@ -297,7 +1635,482 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"MDCListFoundation\", function() { return MDCListFoundation; });\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _material_base_foundation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/base/foundation */ \"./node_modules/@material/base/foundation.js\");\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./constants */ \"./node_modules/@material/list/constants.js\");\n/**\n * @license\n * Copyright 2018 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\n\n\n\nvar ELEMENTS_KEY_ALLOWED_IN = ['input', 'button', 'textarea', 'select'];\nfunction isNumberArray(selectedIndex) {\n    return selectedIndex instanceof Array;\n}\nvar MDCListFoundation = /** @class */ (function (_super) {\n    tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"](MDCListFoundation, _super);\n    function MDCListFoundation(adapter) {\n        var _this = _super.call(this, tslib__WEBPACK_IMPORTED_MODULE_0__[\"__assign\"]({}, MDCListFoundation.defaultAdapter, adapter)) || this;\n        _this.wrapFocus_ = false;\n        _this.isVertical_ = true;\n        _this.isSingleSelectionList_ = false;\n        _this.selectedIndex_ = _constants__WEBPACK_IMPORTED_MODULE_2__[\"numbers\"].UNSET_INDEX;\n        _this.focusedItemIndex_ = _constants__WEBPACK_IMPORTED_MODULE_2__[\"numbers\"].UNSET_INDEX;\n        _this.useActivatedClass_ = false;\n        _this.ariaCurrentAttrValue_ = null;\n        _this.isCheckboxList_ = false;\n        _this.isRadioList_ = false;\n        return _this;\n    }\n    Object.defineProperty(MDCListFoundation, \"strings\", {\n        get: function () {\n            return _constants__WEBPACK_IMPORTED_MODULE_2__[\"strings\"];\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(MDCListFoundation, \"cssClasses\", {\n        get: function () {\n            return _constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"];\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(MDCListFoundation, \"numbers\", {\n        get: function () {\n            return _constants__WEBPACK_IMPORTED_MODULE_2__[\"numbers\"];\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(MDCListFoundation, \"defaultAdapter\", {\n        get: function () {\n            return {\n                addClassForElementIndex: function () { return undefined; },\n                focusItemAtIndex: function () { return undefined; },\n                getAttributeForElementIndex: function () { return null; },\n                getFocusedElementIndex: function () { return 0; },\n                getListItemCount: function () { return 0; },\n                hasCheckboxAtIndex: function () { return false; },\n                hasRadioAtIndex: function () { return false; },\n                isCheckboxCheckedAtIndex: function () { return false; },\n                isFocusInsideList: function () { return false; },\n                isRootFocused: function () { return false; },\n                listItemAtIndexHasClass: function () { return false; },\n                notifyAction: function () { return undefined; },\n                removeClassForElementIndex: function () { return undefined; },\n                setAttributeForElementIndex: function () { return undefined; },\n                setCheckedCheckboxOrRadioAtIndex: function () { return undefined; },\n                setTabIndexForListItemChildren: function () { return undefined; },\n            };\n        },\n        enumerable: true,\n        configurable: true\n    });\n    MDCListFoundation.prototype.layout = function () {\n        if (this.adapter_.getListItemCount() === 0) {\n            return;\n        }\n        if (this.adapter_.hasCheckboxAtIndex(0)) {\n            this.isCheckboxList_ = true;\n        }\n        else if (this.adapter_.hasRadioAtIndex(0)) {\n            this.isRadioList_ = true;\n        }\n    };\n    /**\n     * Sets the private wrapFocus_ variable.\n     */\n    MDCListFoundation.prototype.setWrapFocus = function (value) {\n        this.wrapFocus_ = value;\n    };\n    /**\n     * Sets the isVertical_ private variable.\n     */\n    MDCListFoundation.prototype.setVerticalOrientation = function (value) {\n        this.isVertical_ = value;\n    };\n    /**\n     * Sets the isSingleSelectionList_ private variable.\n     */\n    MDCListFoundation.prototype.setSingleSelection = function (value) {\n        this.isSingleSelectionList_ = value;\n    };\n    /**\n     * Sets the useActivatedClass_ private variable.\n     */\n    MDCListFoundation.prototype.setUseActivatedClass = function (useActivated) {\n        this.useActivatedClass_ = useActivated;\n    };\n    MDCListFoundation.prototype.getSelectedIndex = function () {\n        return this.selectedIndex_;\n    };\n    MDCListFoundation.prototype.setSelectedIndex = function (index) {\n        if (!this.isIndexValid_(index)) {\n            return;\n        }\n        if (this.isCheckboxList_) {\n            this.setCheckboxAtIndex_(index);\n        }\n        else if (this.isRadioList_) {\n            this.setRadioAtIndex_(index);\n        }\n        else {\n            this.setSingleSelectionAtIndex_(index);\n        }\n    };\n    /**\n     * Focus in handler for the list items.\n     */\n    MDCListFoundation.prototype.handleFocusIn = function (_, listItemIndex) {\n        if (listItemIndex >= 0) {\n            this.adapter_.setTabIndexForListItemChildren(listItemIndex, '0');\n        }\n    };\n    /**\n     * Focus out handler for the list items.\n     */\n    MDCListFoundation.prototype.handleFocusOut = function (_, listItemIndex) {\n        var _this = this;\n        if (listItemIndex >= 0) {\n            this.adapter_.setTabIndexForListItemChildren(listItemIndex, '-1');\n        }\n        /**\n         * Between Focusout & Focusin some browsers do not have focus on any element. Setting a delay to wait till the focus\n         * is moved to next element.\n         */\n        setTimeout(function () {\n            if (!_this.adapter_.isFocusInsideList()) {\n                _this.setTabindexToFirstSelectedItem_();\n            }\n        }, 0);\n    };\n    /**\n     * Key handler for the list.\n     */\n    MDCListFoundation.prototype.handleKeydown = function (evt, isRootListItem, listItemIndex) {\n        var isArrowLeft = evt.key === 'ArrowLeft' || evt.keyCode === 37;\n        var isArrowUp = evt.key === 'ArrowUp' || evt.keyCode === 38;\n        var isArrowRight = evt.key === 'ArrowRight' || evt.keyCode === 39;\n        var isArrowDown = evt.key === 'ArrowDown' || evt.keyCode === 40;\n        var isHome = evt.key === 'Home' || evt.keyCode === 36;\n        var isEnd = evt.key === 'End' || evt.keyCode === 35;\n        var isEnter = evt.key === 'Enter' || evt.keyCode === 13;\n        var isSpace = evt.key === 'Space' || evt.keyCode === 32;\n        if (this.adapter_.isRootFocused()) {\n            if (isArrowUp || isEnd) {\n                evt.preventDefault();\n                this.focusLastElement();\n            }\n            else if (isArrowDown || isHome) {\n                evt.preventDefault();\n                this.focusFirstElement();\n            }\n            return;\n        }\n        var currentIndex = this.adapter_.getFocusedElementIndex();\n        if (currentIndex === -1) {\n            currentIndex = listItemIndex;\n            if (currentIndex < 0) {\n                // If this event doesn't have a mdc-list-item ancestor from the\n                // current list (not from a sublist), return early.\n                return;\n            }\n        }\n        var nextIndex;\n        if ((this.isVertical_ && isArrowDown) || (!this.isVertical_ && isArrowRight)) {\n            this.preventDefaultEvent_(evt);\n            nextIndex = this.focusNextElement(currentIndex);\n        }\n        else if ((this.isVertical_ && isArrowUp) || (!this.isVertical_ && isArrowLeft)) {\n            this.preventDefaultEvent_(evt);\n            nextIndex = this.focusPrevElement(currentIndex);\n        }\n        else if (isHome) {\n            this.preventDefaultEvent_(evt);\n            nextIndex = this.focusFirstElement();\n        }\n        else if (isEnd) {\n            this.preventDefaultEvent_(evt);\n            nextIndex = this.focusLastElement();\n        }\n        else if (isEnter || isSpace) {\n            if (isRootListItem) {\n                // Return early if enter key is pressed on anchor element which triggers synthetic MouseEvent event.\n                var target = evt.target;\n                if (target && target.tagName === 'A' && isEnter) {\n                    return;\n                }\n                this.preventDefaultEvent_(evt);\n                if (this.isSelectableList_()) {\n                    this.setSelectedIndexOnAction_(currentIndex);\n                }\n                this.adapter_.notifyAction(currentIndex);\n            }\n        }\n        this.focusedItemIndex_ = currentIndex;\n        if (nextIndex !== undefined) {\n            this.setTabindexAtIndex_(nextIndex);\n            this.focusedItemIndex_ = nextIndex;\n        }\n    };\n    /**\n     * Click handler for the list.\n     */\n    MDCListFoundation.prototype.handleClick = function (index, toggleCheckbox) {\n        if (index === _constants__WEBPACK_IMPORTED_MODULE_2__[\"numbers\"].UNSET_INDEX) {\n            return;\n        }\n        if (this.isSelectableList_()) {\n            this.setSelectedIndexOnAction_(index, toggleCheckbox);\n        }\n        this.adapter_.notifyAction(index);\n        this.setTabindexAtIndex_(index);\n        this.focusedItemIndex_ = index;\n    };\n    /**\n     * Focuses the next element on the list.\n     */\n    MDCListFoundation.prototype.focusNextElement = function (index) {\n        var count = this.adapter_.getListItemCount();\n        var nextIndex = index + 1;\n        if (nextIndex >= count) {\n            if (this.wrapFocus_) {\n                nextIndex = 0;\n            }\n            else {\n                // Return early because last item is already focused.\n                return index;\n            }\n        }\n        this.adapter_.focusItemAtIndex(nextIndex);\n        return nextIndex;\n    };\n    /**\n     * Focuses the previous element on the list.\n     */\n    MDCListFoundation.prototype.focusPrevElement = function (index) {\n        var prevIndex = index - 1;\n        if (prevIndex < 0) {\n            if (this.wrapFocus_) {\n                prevIndex = this.adapter_.getListItemCount() - 1;\n            }\n            else {\n                // Return early because first item is already focused.\n                return index;\n            }\n        }\n        this.adapter_.focusItemAtIndex(prevIndex);\n        return prevIndex;\n    };\n    MDCListFoundation.prototype.focusFirstElement = function () {\n        this.adapter_.focusItemAtIndex(0);\n        return 0;\n    };\n    MDCListFoundation.prototype.focusLastElement = function () {\n        var lastIndex = this.adapter_.getListItemCount() - 1;\n        this.adapter_.focusItemAtIndex(lastIndex);\n        return lastIndex;\n    };\n    /**\n     * @param itemIndex Index of the list item\n     * @param isEnabled Sets the list item to enabled or disabled.\n     */\n    MDCListFoundation.prototype.setEnabled = function (itemIndex, isEnabled) {\n        if (!this.isIndexValid_(itemIndex)) {\n            return;\n        }\n        if (isEnabled) {\n            this.adapter_.removeClassForElementIndex(itemIndex, _constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"].LIST_ITEM_DISABLED_CLASS);\n            this.adapter_.setAttributeForElementIndex(itemIndex, _constants__WEBPACK_IMPORTED_MODULE_2__[\"strings\"].ARIA_DISABLED, 'false');\n        }\n        else {\n            this.adapter_.addClassForElementIndex(itemIndex, _constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"].LIST_ITEM_DISABLED_CLASS);\n            this.adapter_.setAttributeForElementIndex(itemIndex, _constants__WEBPACK_IMPORTED_MODULE_2__[\"strings\"].ARIA_DISABLED, 'true');\n        }\n    };\n    /**\n     * Ensures that preventDefault is only called if the containing element doesn't\n     * consume the event, and it will cause an unintended scroll.\n     */\n    MDCListFoundation.prototype.preventDefaultEvent_ = function (evt) {\n        var target = evt.target;\n        var tagName = (\"\" + target.tagName).toLowerCase();\n        if (ELEMENTS_KEY_ALLOWED_IN.indexOf(tagName) === -1) {\n            evt.preventDefault();\n        }\n    };\n    MDCListFoundation.prototype.setSingleSelectionAtIndex_ = function (index) {\n        if (this.selectedIndex_ === index) {\n            return;\n        }\n        var selectedClassName = _constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"].LIST_ITEM_SELECTED_CLASS;\n        if (this.useActivatedClass_) {\n            selectedClassName = _constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"].LIST_ITEM_ACTIVATED_CLASS;\n        }\n        if (this.selectedIndex_ !== _constants__WEBPACK_IMPORTED_MODULE_2__[\"numbers\"].UNSET_INDEX) {\n            this.adapter_.removeClassForElementIndex(this.selectedIndex_, selectedClassName);\n        }\n        this.adapter_.addClassForElementIndex(index, selectedClassName);\n        this.setAriaForSingleSelectionAtIndex_(index);\n        this.selectedIndex_ = index;\n    };\n    /**\n     * Sets aria attribute for single selection at given index.\n     */\n    MDCListFoundation.prototype.setAriaForSingleSelectionAtIndex_ = function (index) {\n        // Detect the presence of aria-current and get the value only during list initialization when it is in unset state.\n        if (this.selectedIndex_ === _constants__WEBPACK_IMPORTED_MODULE_2__[\"numbers\"].UNSET_INDEX) {\n            this.ariaCurrentAttrValue_ =\n                this.adapter_.getAttributeForElementIndex(index, _constants__WEBPACK_IMPORTED_MODULE_2__[\"strings\"].ARIA_CURRENT);\n        }\n        var isAriaCurrent = this.ariaCurrentAttrValue_ !== null;\n        var ariaAttribute = isAriaCurrent ? _constants__WEBPACK_IMPORTED_MODULE_2__[\"strings\"].ARIA_CURRENT : _constants__WEBPACK_IMPORTED_MODULE_2__[\"strings\"].ARIA_SELECTED;\n        if (this.selectedIndex_ !== _constants__WEBPACK_IMPORTED_MODULE_2__[\"numbers\"].UNSET_INDEX) {\n            this.adapter_.setAttributeForElementIndex(this.selectedIndex_, ariaAttribute, 'false');\n        }\n        var ariaAttributeValue = isAriaCurrent ? this.ariaCurrentAttrValue_ : 'true';\n        this.adapter_.setAttributeForElementIndex(index, ariaAttribute, ariaAttributeValue);\n    };\n    /**\n     * Toggles radio at give index. Radio doesn't change the checked state if it is already checked.\n     */\n    MDCListFoundation.prototype.setRadioAtIndex_ = function (index) {\n        this.adapter_.setCheckedCheckboxOrRadioAtIndex(index, true);\n        if (this.selectedIndex_ !== _constants__WEBPACK_IMPORTED_MODULE_2__[\"numbers\"].UNSET_INDEX) {\n            this.adapter_.setAttributeForElementIndex(this.selectedIndex_, _constants__WEBPACK_IMPORTED_MODULE_2__[\"strings\"].ARIA_CHECKED, 'false');\n        }\n        this.adapter_.setAttributeForElementIndex(index, _constants__WEBPACK_IMPORTED_MODULE_2__[\"strings\"].ARIA_CHECKED, 'true');\n        this.selectedIndex_ = index;\n    };\n    MDCListFoundation.prototype.setCheckboxAtIndex_ = function (index) {\n        for (var i = 0; i < this.adapter_.getListItemCount(); i++) {\n            var isChecked = false;\n            if (index.indexOf(i) >= 0) {\n                isChecked = true;\n            }\n            this.adapter_.setCheckedCheckboxOrRadioAtIndex(i, isChecked);\n            this.adapter_.setAttributeForElementIndex(i, _constants__WEBPACK_IMPORTED_MODULE_2__[\"strings\"].ARIA_CHECKED, isChecked ? 'true' : 'false');\n        }\n        this.selectedIndex_ = index;\n    };\n    MDCListFoundation.prototype.setTabindexAtIndex_ = function (index) {\n        if (this.focusedItemIndex_ === _constants__WEBPACK_IMPORTED_MODULE_2__[\"numbers\"].UNSET_INDEX && index !== 0) {\n            // If no list item was selected set first list item's tabindex to -1.\n            // Generally, tabindex is set to 0 on first list item of list that has no preselected items.\n            this.adapter_.setAttributeForElementIndex(0, 'tabindex', '-1');\n        }\n        else if (this.focusedItemIndex_ >= 0 && this.focusedItemIndex_ !== index) {\n            this.adapter_.setAttributeForElementIndex(this.focusedItemIndex_, 'tabindex', '-1');\n        }\n        this.adapter_.setAttributeForElementIndex(index, 'tabindex', '0');\n    };\n    /**\n     * @return Return true if it is single selectin list, checkbox list or radio list.\n     */\n    MDCListFoundation.prototype.isSelectableList_ = function () {\n        return this.isSingleSelectionList_ || this.isCheckboxList_ || this.isRadioList_;\n    };\n    MDCListFoundation.prototype.setTabindexToFirstSelectedItem_ = function () {\n        var targetIndex = 0;\n        if (this.isSelectableList_()) {\n            if (typeof this.selectedIndex_ === 'number' && this.selectedIndex_ !== _constants__WEBPACK_IMPORTED_MODULE_2__[\"numbers\"].UNSET_INDEX) {\n                targetIndex = this.selectedIndex_;\n            }\n            else if (isNumberArray(this.selectedIndex_) && this.selectedIndex_.length > 0) {\n                targetIndex = this.selectedIndex_.reduce(function (currentIndex, minIndex) { return Math.min(currentIndex, minIndex); });\n            }\n        }\n        this.setTabindexAtIndex_(targetIndex);\n    };\n    MDCListFoundation.prototype.isIndexValid_ = function (index) {\n        var _this = this;\n        if (index instanceof Array) {\n            if (!this.isCheckboxList_) {\n                throw new Error('MDCListFoundation: Array of index is only supported for checkbox based list');\n            }\n            if (index.length === 0) {\n                return true;\n            }\n            else {\n                return index.some(function (i) { return _this.isIndexInRange_(i); });\n            }\n        }\n        else if (typeof index === 'number') {\n            if (this.isCheckboxList_) {\n                throw new Error('MDCListFoundation: Expected array of index for checkbox based list but got number: ' + index);\n            }\n            return this.isIndexInRange_(index);\n        }\n        else {\n            return false;\n        }\n    };\n    MDCListFoundation.prototype.isIndexInRange_ = function (index) {\n        var listSize = this.adapter_.getListItemCount();\n        return index >= 0 && index < listSize;\n    };\n    /**\n     * Sets selected index on user action, toggles checkbox / radio based on toggleCheckbox value.\n     * User interaction should not toggle list item(s) when disabled.\n     */\n    MDCListFoundation.prototype.setSelectedIndexOnAction_ = function (index, toggleCheckbox) {\n        if (toggleCheckbox === void 0) { toggleCheckbox = true; }\n        if (this.adapter_.listItemAtIndexHasClass(index, _constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"].LIST_ITEM_DISABLED_CLASS)) {\n            return;\n        }\n        if (this.isCheckboxList_) {\n            this.toggleCheckboxAtIndex_(index, toggleCheckbox);\n        }\n        else {\n            this.setSelectedIndex(index);\n        }\n    };\n    MDCListFoundation.prototype.toggleCheckboxAtIndex_ = function (index, toggleCheckbox) {\n        var isChecked = this.adapter_.isCheckboxCheckedAtIndex(index);\n        if (toggleCheckbox) {\n            isChecked = !isChecked;\n            this.adapter_.setCheckedCheckboxOrRadioAtIndex(index, isChecked);\n        }\n        this.adapter_.setAttributeForElementIndex(index, _constants__WEBPACK_IMPORTED_MODULE_2__[\"strings\"].ARIA_CHECKED, isChecked ? 'true' : 'false');\n        // If none of the checkbox items are selected and selectedIndex is not initialized then provide a default value.\n        var selectedIndexes = this.selectedIndex_ === _constants__WEBPACK_IMPORTED_MODULE_2__[\"numbers\"].UNSET_INDEX ? [] : this.selectedIndex_.slice();\n        if (isChecked) {\n            selectedIndexes.push(index);\n        }\n        else {\n            selectedIndexes = selectedIndexes.filter(function (i) { return i !== index; });\n        }\n        this.selectedIndex_ = selectedIndexes;\n    };\n    return MDCListFoundation;\n}(_material_base_foundation__WEBPACK_IMPORTED_MODULE_1__[\"MDCFoundation\"]));\n\n// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.\n/* harmony default export */ __webpack_exports__[\"default\"] = (MDCListFoundation);\n//# sourceMappingURL=foundation.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL2xpc3QvZm91bmRhdGlvbi5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL25vZGVfbW9kdWxlcy9AbWF0ZXJpYWwvbGlzdC9mb3VuZGF0aW9uLmpzP2Y5ODEiXSwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBAbGljZW5zZVxuICogQ29weXJpZ2h0IDIwMTggR29vZ2xlIEluYy5cbiAqXG4gKiBQZXJtaXNzaW9uIGlzIGhlcmVieSBncmFudGVkLCBmcmVlIG9mIGNoYXJnZSwgdG8gYW55IHBlcnNvbiBvYnRhaW5pbmcgYSBjb3B5XG4gKiBvZiB0aGlzIHNvZnR3YXJlIGFuZCBhc3NvY2lhdGVkIGRvY3VtZW50YXRpb24gZmlsZXMgKHRoZSBcIlNvZnR3YXJlXCIpLCB0byBkZWFsXG4gKiBpbiB0aGUgU29mdHdhcmUgd2l0aG91dCByZXN0cmljdGlvbiwgaW5jbHVkaW5nIHdpdGhvdXQgbGltaXRhdGlvbiB0aGUgcmlnaHRzXG4gKiB0byB1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsXG4gKiBjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXNcbiAqIGZ1cm5pc2hlZCB0byBkbyBzbywgc3ViamVjdCB0byB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6XG4gKlxuICogVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW5cbiAqIGFsbCBjb3BpZXMgb3Igc3Vic3RhbnRpYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLlxuICpcbiAqIFRIRSBTT0ZUV0FSRSBJUyBQUk9WSURFRCBcIkFTIElTXCIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIEVYUFJFU1MgT1JcbiAqIElNUExJRUQsIElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gVEhFIFdBUlJBTlRJRVMgT0YgTUVSQ0hBTlRBQklMSVRZLFxuICogRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFXG4gKiBBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZIENMQUlNLCBEQU1BR0VTIE9SIE9USEVSXG4gKiBMSUFCSUxJVFksIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULCBUT1JUIE9SIE9USEVSV0lTRSwgQVJJU0lORyBGUk9NLFxuICogT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTlxuICogVEhFIFNPRlRXQVJFLlxuICovXG5pbXBvcnQgKiBhcyB0c2xpYl8xIGZyb20gXCJ0c2xpYlwiO1xuaW1wb3J0IHsgTURDRm91bmRhdGlvbiB9IGZyb20gJ0BtYXRlcmlhbC9iYXNlL2ZvdW5kYXRpb24nO1xuaW1wb3J0IHsgY3NzQ2xhc3NlcywgbnVtYmVycywgc3RyaW5ncyB9IGZyb20gJy4vY29uc3RhbnRzJztcbnZhciBFTEVNRU5UU19LRVlfQUxMT1dFRF9JTiA9IFsnaW5wdXQnLCAnYnV0dG9uJywgJ3RleHRhcmVhJywgJ3NlbGVjdCddO1xuZnVuY3Rpb24gaXNOdW1iZXJBcnJheShzZWxlY3RlZEluZGV4KSB7XG4gICAgcmV0dXJuIHNlbGVjdGVkSW5kZXggaW5zdGFuY2VvZiBBcnJheTtcbn1cbnZhciBNRENMaXN0Rm91bmRhdGlvbiA9IC8qKiBAY2xhc3MgKi8gKGZ1bmN0aW9uIChfc3VwZXIpIHtcbiAgICB0c2xpYl8xLl9fZXh0ZW5kcyhNRENMaXN0Rm91bmRhdGlvbiwgX3N1cGVyKTtcbiAgICBmdW5jdGlvbiBNRENMaXN0Rm91bmRhdGlvbihhZGFwdGVyKSB7XG4gICAgICAgIHZhciBfdGhpcyA9IF9zdXBlci5jYWxsKHRoaXMsIHRzbGliXzEuX19hc3NpZ24oe30sIE1EQ0xpc3RGb3VuZGF0aW9uLmRlZmF1bHRBZGFwdGVyLCBhZGFwdGVyKSkgfHwgdGhpcztcbiAgICAgICAgX3RoaXMud3JhcEZvY3VzXyA9IGZhbHNlO1xuICAgICAgICBfdGhpcy5pc1ZlcnRpY2FsXyA9IHRydWU7XG4gICAgICAgIF90aGlzLmlzU2luZ2xlU2VsZWN0aW9uTGlzdF8gPSBmYWxzZTtcbiAgICAgICAgX3RoaXMuc2VsZWN0ZWRJbmRleF8gPSBudW1iZXJzLlVOU0VUX0lOREVYO1xuICAgICAgICBfdGhpcy5mb2N1c2VkSXRlbUluZGV4XyA9IG51bWJlcnMuVU5TRVRfSU5ERVg7XG4gICAgICAgIF90aGlzLnVzZUFjdGl2YXRlZENsYXNzXyA9IGZhbHNlO1xuICAgICAgICBfdGhpcy5hcmlhQ3VycmVudEF0dHJWYWx1ZV8gPSBudWxsO1xuICAgICAgICBfdGhpcy5pc0NoZWNrYm94TGlzdF8gPSBmYWxzZTtcbiAgICAgICAgX3RoaXMuaXNSYWRpb0xpc3RfID0gZmFsc2U7XG4gICAgICAgIHJldHVybiBfdGhpcztcbiAgICB9XG4gICAgT2JqZWN0LmRlZmluZVByb3BlcnR5KE1EQ0xpc3RGb3VuZGF0aW9uLCBcInN0cmluZ3NcIiwge1xuICAgICAgICBnZXQ6IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIHJldHVybiBzdHJpbmdzO1xuICAgICAgICB9LFxuICAgICAgICBlbnVtZXJhYmxlOiB0cnVlLFxuICAgICAgICBjb25maWd1cmFibGU6IHRydWVcbiAgICB9KTtcbiAgICBPYmplY3QuZGVmaW5lUHJvcGVydHkoTURDTGlzdEZvdW5kYXRpb24sIFwiY3NzQ2xhc3Nlc1wiLCB7XG4gICAgICAgIGdldDogZnVuY3Rpb24gKCkge1xuICAgICAgICAgICAgcmV0dXJuIGNzc0NsYXNzZXM7XG4gICAgICAgIH0sXG4gICAgICAgIGVudW1lcmFibGU6IHRydWUsXG4gICAgICAgIGNvbmZpZ3VyYWJsZTogdHJ1ZVxuICAgIH0pO1xuICAgIE9iamVjdC5kZWZpbmVQcm9wZXJ0eShNRENMaXN0Rm91bmRhdGlvbiwgXCJudW1iZXJzXCIsIHtcbiAgICAgICAgZ2V0OiBmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICByZXR1cm4gbnVtYmVycztcbiAgICAgICAgfSxcbiAgICAgICAgZW51bWVyYWJsZTogdHJ1ZSxcbiAgICAgICAgY29uZmlndXJhYmxlOiB0cnVlXG4gICAgfSk7XG4gICAgT2JqZWN0LmRlZmluZVByb3BlcnR5KE1EQ0xpc3RGb3VuZGF0aW9uLCBcImRlZmF1bHRBZGFwdGVyXCIsIHtcbiAgICAgICAgZ2V0OiBmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICByZXR1cm4ge1xuICAgICAgICAgICAgICAgIGFkZENsYXNzRm9yRWxlbWVudEluZGV4OiBmdW5jdGlvbiAoKSB7IHJldHVybiB1bmRlZmluZWQ7IH0sXG4gICAgICAgICAgICAgICAgZm9jdXNJdGVtQXRJbmRleDogZnVuY3Rpb24gKCkgeyByZXR1cm4gdW5kZWZpbmVkOyB9LFxuICAgICAgICAgICAgICAgIGdldEF0dHJpYnV0ZUZvckVsZW1lbnRJbmRleDogZnVuY3Rpb24gKCkgeyByZXR1cm4gbnVsbDsgfSxcbiAgICAgICAgICAgICAgICBnZXRGb2N1c2VkRWxlbWVudEluZGV4OiBmdW5jdGlvbiAoKSB7IHJldHVybiAwOyB9LFxuICAgICAgICAgICAgICAgIGdldExpc3RJdGVtQ291bnQ6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIDA7IH0sXG4gICAgICAgICAgICAgICAgaGFzQ2hlY2tib3hBdEluZGV4OiBmdW5jdGlvbiAoKSB7IHJldHVybiBmYWxzZTsgfSxcbiAgICAgICAgICAgICAgICBoYXNSYWRpb0F0SW5kZXg6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIGZhbHNlOyB9LFxuICAgICAgICAgICAgICAgIGlzQ2hlY2tib3hDaGVja2VkQXRJbmRleDogZnVuY3Rpb24gKCkgeyByZXR1cm4gZmFsc2U7IH0sXG4gICAgICAgICAgICAgICAgaXNGb2N1c0luc2lkZUxpc3Q6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIGZhbHNlOyB9LFxuICAgICAgICAgICAgICAgIGlzUm9vdEZvY3VzZWQ6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIGZhbHNlOyB9LFxuICAgICAgICAgICAgICAgIGxpc3RJdGVtQXRJbmRleEhhc0NsYXNzOiBmdW5jdGlvbiAoKSB7IHJldHVybiBmYWxzZTsgfSxcbiAgICAgICAgICAgICAgICBub3RpZnlBY3Rpb246IGZ1bmN0aW9uICgpIHsgcmV0dXJuIHVuZGVmaW5lZDsgfSxcbiAgICAgICAgICAgICAgICByZW1vdmVDbGFzc0ZvckVsZW1lbnRJbmRleDogZnVuY3Rpb24gKCkgeyByZXR1cm4gdW5kZWZpbmVkOyB9LFxuICAgICAgICAgICAgICAgIHNldEF0dHJpYnV0ZUZvckVsZW1lbnRJbmRleDogZnVuY3Rpb24gKCkgeyByZXR1cm4gdW5kZWZpbmVkOyB9LFxuICAgICAgICAgICAgICAgIHNldENoZWNrZWRDaGVja2JveE9yUmFkaW9BdEluZGV4OiBmdW5jdGlvbiAoKSB7IHJldHVybiB1bmRlZmluZWQ7IH0sXG4gICAgICAgICAgICAgICAgc2V0VGFiSW5kZXhGb3JMaXN0SXRlbUNoaWxkcmVuOiBmdW5jdGlvbiAoKSB7IHJldHVybiB1bmRlZmluZWQ7IH0sXG4gICAgICAgICAgICB9O1xuICAgICAgICB9LFxuICAgICAgICBlbnVtZXJhYmxlOiB0cnVlLFxuICAgICAgICBjb25maWd1cmFibGU6IHRydWVcbiAgICB9KTtcbiAgICBNRENMaXN0Rm91bmRhdGlvbi5wcm90b3R5cGUubGF5b3V0ID0gZnVuY3Rpb24gKCkge1xuICAgICAgICBpZiAodGhpcy5hZGFwdGVyXy5nZXRMaXN0SXRlbUNvdW50KCkgPT09IDApIHtcbiAgICAgICAgICAgIHJldHVybjtcbiAgICAgICAgfVxuICAgICAgICBpZiAodGhpcy5hZGFwdGVyXy5oYXNDaGVja2JveEF0SW5kZXgoMCkpIHtcbiAgICAgICAgICAgIHRoaXMuaXNDaGVja2JveExpc3RfID0gdHJ1ZTtcbiAgICAgICAgfVxuICAgICAgICBlbHNlIGlmICh0aGlzLmFkYXB0ZXJfLmhhc1JhZGlvQXRJbmRleCgwKSkge1xuICAgICAgICAgICAgdGhpcy5pc1JhZGlvTGlzdF8gPSB0cnVlO1xuICAgICAgICB9XG4gICAgfTtcbiAgICAvKipcbiAgICAgKiBTZXRzIHRoZSBwcml2YXRlIHdyYXBGb2N1c18gdmFyaWFibGUuXG4gICAgICovXG4gICAgTURDTGlzdEZvdW5kYXRpb24ucHJvdG90eXBlLnNldFdyYXBGb2N1cyA9IGZ1bmN0aW9uICh2YWx1ZSkge1xuICAgICAgICB0aGlzLndyYXBGb2N1c18gPSB2YWx1ZTtcbiAgICB9O1xuICAgIC8qKlxuICAgICAqIFNldHMgdGhlIGlzVmVydGljYWxfIHByaXZhdGUgdmFyaWFibGUuXG4gICAgICovXG4gICAgTURDTGlzdEZvdW5kYXRpb24ucHJvdG90eXBlLnNldFZlcnRpY2FsT3JpZW50YXRpb24gPSBmdW5jdGlvbiAodmFsdWUpIHtcbiAgICAgICAgdGhpcy5pc1ZlcnRpY2FsXyA9IHZhbHVlO1xuICAgIH07XG4gICAgLyoqXG4gICAgICogU2V0cyB0aGUgaXNTaW5nbGVTZWxlY3Rpb25MaXN0XyBwcml2YXRlIHZhcmlhYmxlLlxuICAgICAqL1xuICAgIE1EQ0xpc3RGb3VuZGF0aW9uLnByb3RvdHlwZS5zZXRTaW5nbGVTZWxlY3Rpb24gPSBmdW5jdGlvbiAodmFsdWUpIHtcbiAgICAgICAgdGhpcy5pc1NpbmdsZVNlbGVjdGlvbkxpc3RfID0gdmFsdWU7XG4gICAgfTtcbiAgICAvKipcbiAgICAgKiBTZXRzIHRoZSB1c2VBY3RpdmF0ZWRDbGFzc18gcHJpdmF0ZSB2YXJpYWJsZS5cbiAgICAgKi9cbiAgICBNRENMaXN0Rm91bmRhdGlvbi5wcm90b3R5cGUuc2V0VXNlQWN0aXZhdGVkQ2xhc3MgPSBmdW5jdGlvbiAodXNlQWN0aXZhdGVkKSB7XG4gICAgICAgIHRoaXMudXNlQWN0aXZhdGVkQ2xhc3NfID0gdXNlQWN0aXZhdGVkO1xuICAgIH07XG4gICAgTURDTGlzdEZvdW5kYXRpb24ucHJvdG90eXBlLmdldFNlbGVjdGVkSW5kZXggPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIHJldHVybiB0aGlzLnNlbGVjdGVkSW5kZXhfO1xuICAgIH07XG4gICAgTURDTGlzdEZvdW5kYXRpb24ucHJvdG90eXBlLnNldFNlbGVjdGVkSW5kZXggPSBmdW5jdGlvbiAoaW5kZXgpIHtcbiAgICAgICAgaWYgKCF0aGlzLmlzSW5kZXhWYWxpZF8oaW5kZXgpKSB7XG4gICAgICAgICAgICByZXR1cm47XG4gICAgICAgIH1cbiAgICAgICAgaWYgKHRoaXMuaXNDaGVja2JveExpc3RfKSB7XG4gICAgICAgICAgICB0aGlzLnNldENoZWNrYm94QXRJbmRleF8oaW5kZXgpO1xuICAgICAgICB9XG4gICAgICAgIGVsc2UgaWYgKHRoaXMuaXNSYWRpb0xpc3RfKSB7XG4gICAgICAgICAgICB0aGlzLnNldFJhZGlvQXRJbmRleF8oaW5kZXgpO1xuICAgICAgICB9XG4gICAgICAgIGVsc2Uge1xuICAgICAgICAgICAgdGhpcy5zZXRTaW5nbGVTZWxlY3Rpb25BdEluZGV4XyhpbmRleCk7XG4gICAgICAgIH1cbiAgICB9O1xuICAgIC8qKlxuICAgICAqIEZvY3VzIGluIGhhbmRsZXIgZm9yIHRoZSBsaXN0IGl0ZW1zLlxuICAgICAqL1xuICAgIE1EQ0xpc3RGb3VuZGF0aW9uLnByb3RvdHlwZS5oYW5kbGVGb2N1c0luID0gZnVuY3Rpb24gKF8sIGxpc3RJdGVtSW5kZXgpIHtcbiAgICAgICAgaWYgKGxpc3RJdGVtSW5kZXggPj0gMCkge1xuICAgICAgICAgICAgdGhpcy5hZGFwdGVyXy5zZXRUYWJJbmRleEZvckxpc3RJdGVtQ2hpbGRyZW4obGlzdEl0ZW1JbmRleCwgJzAnKTtcbiAgICAgICAgfVxuICAgIH07XG4gICAgLyoqXG4gICAgICogRm9jdXMgb3V0IGhhbmRsZXIgZm9yIHRoZSBsaXN0IGl0ZW1zLlxuICAgICAqL1xuICAgIE1EQ0xpc3RGb3VuZGF0aW9uLnByb3RvdHlwZS5oYW5kbGVGb2N1c091dCA9IGZ1bmN0aW9uIChfLCBsaXN0SXRlbUluZGV4KSB7XG4gICAgICAgIHZhciBfdGhpcyA9IHRoaXM7XG4gICAgICAgIGlmIChsaXN0SXRlbUluZGV4ID49IDApIHtcbiAgICAgICAgICAgIHRoaXMuYWRhcHRlcl8uc2V0VGFiSW5kZXhGb3JMaXN0SXRlbUNoaWxkcmVuKGxpc3RJdGVtSW5kZXgsICctMScpO1xuICAgICAgICB9XG4gICAgICAgIC8qKlxuICAgICAgICAgKiBCZXR3ZWVuIEZvY3Vzb3V0ICYgRm9jdXNpbiBzb21lIGJyb3dzZXJzIGRvIG5vdCBoYXZlIGZvY3VzIG9uIGFueSBlbGVtZW50LiBTZXR0aW5nIGEgZGVsYXkgdG8gd2FpdCB0aWxsIHRoZSBmb2N1c1xuICAgICAgICAgKiBpcyBtb3ZlZCB0byBuZXh0IGVsZW1lbnQuXG4gICAgICAgICAqL1xuICAgICAgICBzZXRUaW1lb3V0KGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIGlmICghX3RoaXMuYWRhcHRlcl8uaXNGb2N1c0luc2lkZUxpc3QoKSkge1xuICAgICAgICAgICAgICAgIF90aGlzLnNldFRhYmluZGV4VG9GaXJzdFNlbGVjdGVkSXRlbV8oKTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfSwgMCk7XG4gICAgfTtcbiAgICAvKipcbiAgICAgKiBLZXkgaGFuZGxlciBmb3IgdGhlIGxpc3QuXG4gICAgICovXG4gICAgTURDTGlzdEZvdW5kYXRpb24ucHJvdG90eXBlLmhhbmRsZUtleWRvd24gPSBmdW5jdGlvbiAoZXZ0LCBpc1Jvb3RMaXN0SXRlbSwgbGlzdEl0ZW1JbmRleCkge1xuICAgICAgICB2YXIgaXNBcnJvd0xlZnQgPSBldnQua2V5ID09PSAnQXJyb3dMZWZ0JyB8fCBldnQua2V5Q29kZSA9PT0gMzc7XG4gICAgICAgIHZhciBpc0Fycm93VXAgPSBldnQua2V5ID09PSAnQXJyb3dVcCcgfHwgZXZ0LmtleUNvZGUgPT09IDM4O1xuICAgICAgICB2YXIgaXNBcnJvd1JpZ2h0ID0gZXZ0LmtleSA9PT0gJ0Fycm93UmlnaHQnIHx8IGV2dC5rZXlDb2RlID09PSAzOTtcbiAgICAgICAgdmFyIGlzQXJyb3dEb3duID0gZXZ0LmtleSA9PT0gJ0Fycm93RG93bicgfHwgZXZ0LmtleUNvZGUgPT09IDQwO1xuICAgICAgICB2YXIgaXNIb21lID0gZXZ0LmtleSA9PT0gJ0hvbWUnIHx8IGV2dC5rZXlDb2RlID09PSAzNjtcbiAgICAgICAgdmFyIGlzRW5kID0gZXZ0LmtleSA9PT0gJ0VuZCcgfHwgZXZ0LmtleUNvZGUgPT09IDM1O1xuICAgICAgICB2YXIgaXNFbnRlciA9IGV2dC5rZXkgPT09ICdFbnRlcicgfHwgZXZ0LmtleUNvZGUgPT09IDEzO1xuICAgICAgICB2YXIgaXNTcGFjZSA9IGV2dC5rZXkgPT09ICdTcGFjZScgfHwgZXZ0LmtleUNvZGUgPT09IDMyO1xuICAgICAgICBpZiAodGhpcy5hZGFwdGVyXy5pc1Jvb3RGb2N1c2VkKCkpIHtcbiAgICAgICAgICAgIGlmIChpc0Fycm93VXAgfHwgaXNFbmQpIHtcbiAgICAgICAgICAgICAgICBldnQucHJldmVudERlZmF1bHQoKTtcbiAgICAgICAgICAgICAgICB0aGlzLmZvY3VzTGFzdEVsZW1lbnQoKTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIGVsc2UgaWYgKGlzQXJyb3dEb3duIHx8IGlzSG9tZSkge1xuICAgICAgICAgICAgICAgIGV2dC5wcmV2ZW50RGVmYXVsdCgpO1xuICAgICAgICAgICAgICAgIHRoaXMuZm9jdXNGaXJzdEVsZW1lbnQoKTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIHJldHVybjtcbiAgICAgICAgfVxuICAgICAgICB2YXIgY3VycmVudEluZGV4ID0gdGhpcy5hZGFwdGVyXy5nZXRGb2N1c2VkRWxlbWVudEluZGV4KCk7XG4gICAgICAgIGlmIChjdXJyZW50SW5kZXggPT09IC0xKSB7XG4gICAgICAgICAgICBjdXJyZW50SW5kZXggPSBsaXN0SXRlbUluZGV4O1xuICAgICAgICAgICAgaWYgKGN1cnJlbnRJbmRleCA8IDApIHtcbiAgICAgICAgICAgICAgICAvLyBJZiB0aGlzIGV2ZW50IGRvZXNuJ3QgaGF2ZSBhIG1kYy1saXN0LWl0ZW0gYW5jZXN0b3IgZnJvbSB0aGVcbiAgICAgICAgICAgICAgICAvLyBjdXJyZW50IGxpc3QgKG5vdCBmcm9tIGEgc3VibGlzdCksIHJldHVybiBlYXJseS5cbiAgICAgICAgICAgICAgICByZXR1cm47XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgICAgdmFyIG5leHRJbmRleDtcbiAgICAgICAgaWYgKCh0aGlzLmlzVmVydGljYWxfICYmIGlzQXJyb3dEb3duKSB8fCAoIXRoaXMuaXNWZXJ0aWNhbF8gJiYgaXNBcnJvd1JpZ2h0KSkge1xuICAgICAgICAgICAgdGhpcy5wcmV2ZW50RGVmYXVsdEV2ZW50XyhldnQpO1xuICAgICAgICAgICAgbmV4dEluZGV4ID0gdGhpcy5mb2N1c05leHRFbGVtZW50KGN1cnJlbnRJbmRleCk7XG4gICAgICAgIH1cbiAgICAgICAgZWxzZSBpZiAoKHRoaXMuaXNWZXJ0aWNhbF8gJiYgaXNBcnJvd1VwKSB8fCAoIXRoaXMuaXNWZXJ0aWNhbF8gJiYgaXNBcnJvd0xlZnQpKSB7XG4gICAgICAgICAgICB0aGlzLnByZXZlbnREZWZhdWx0RXZlbnRfKGV2dCk7XG4gICAgICAgICAgICBuZXh0SW5kZXggPSB0aGlzLmZvY3VzUHJldkVsZW1lbnQoY3VycmVudEluZGV4KTtcbiAgICAgICAgfVxuICAgICAgICBlbHNlIGlmIChpc0hvbWUpIHtcbiAgICAgICAgICAgIHRoaXMucHJldmVudERlZmF1bHRFdmVudF8oZXZ0KTtcbiAgICAgICAgICAgIG5leHRJbmRleCA9IHRoaXMuZm9jdXNGaXJzdEVsZW1lbnQoKTtcbiAgICAgICAgfVxuICAgICAgICBlbHNlIGlmIChpc0VuZCkge1xuICAgICAgICAgICAgdGhpcy5wcmV2ZW50RGVmYXVsdEV2ZW50XyhldnQpO1xuICAgICAgICAgICAgbmV4dEluZGV4ID0gdGhpcy5mb2N1c0xhc3RFbGVtZW50KCk7XG4gICAgICAgIH1cbiAgICAgICAgZWxzZSBpZiAoaXNFbnRlciB8fCBpc1NwYWNlKSB7XG4gICAgICAgICAgICBpZiAoaXNSb290TGlzdEl0ZW0pIHtcbiAgICAgICAgICAgICAgICAvLyBSZXR1cm4gZWFybHkgaWYgZW50ZXIga2V5IGlzIHByZXNzZWQgb24gYW5jaG9yIGVsZW1lbnQgd2hpY2ggdHJpZ2dlcnMgc3ludGhldGljIE1vdXNlRXZlbnQgZXZlbnQuXG4gICAgICAgICAgICAgICAgdmFyIHRhcmdldCA9IGV2dC50YXJnZXQ7XG4gICAgICAgICAgICAgICAgaWYgKHRhcmdldCAmJiB0YXJnZXQudGFnTmFtZSA9PT0gJ0EnICYmIGlzRW50ZXIpIHtcbiAgICAgICAgICAgICAgICAgICAgcmV0dXJuO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICB0aGlzLnByZXZlbnREZWZhdWx0RXZlbnRfKGV2dCk7XG4gICAgICAgICAgICAgICAgaWYgKHRoaXMuaXNTZWxlY3RhYmxlTGlzdF8oKSkge1xuICAgICAgICAgICAgICAgICAgICB0aGlzLnNldFNlbGVjdGVkSW5kZXhPbkFjdGlvbl8oY3VycmVudEluZGV4KTtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgdGhpcy5hZGFwdGVyXy5ub3RpZnlBY3Rpb24oY3VycmVudEluZGV4KTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgICB0aGlzLmZvY3VzZWRJdGVtSW5kZXhfID0gY3VycmVudEluZGV4O1xuICAgICAgICBpZiAobmV4dEluZGV4ICE9PSB1bmRlZmluZWQpIHtcbiAgICAgICAgICAgIHRoaXMuc2V0VGFiaW5kZXhBdEluZGV4XyhuZXh0SW5kZXgpO1xuICAgICAgICAgICAgdGhpcy5mb2N1c2VkSXRlbUluZGV4XyA9IG5leHRJbmRleDtcbiAgICAgICAgfVxuICAgIH07XG4gICAgLyoqXG4gICAgICogQ2xpY2sgaGFuZGxlciBmb3IgdGhlIGxpc3QuXG4gICAgICovXG4gICAgTURDTGlzdEZvdW5kYXRpb24ucHJvdG90eXBlLmhhbmRsZUNsaWNrID0gZnVuY3Rpb24gKGluZGV4LCB0b2dnbGVDaGVja2JveCkge1xuICAgICAgICBpZiAoaW5kZXggPT09IG51bWJlcnMuVU5TRVRfSU5ERVgpIHtcbiAgICAgICAgICAgIHJldHVybjtcbiAgICAgICAgfVxuICAgICAgICBpZiAodGhpcy5pc1NlbGVjdGFibGVMaXN0XygpKSB7XG4gICAgICAgICAgICB0aGlzLnNldFNlbGVjdGVkSW5kZXhPbkFjdGlvbl8oaW5kZXgsIHRvZ2dsZUNoZWNrYm94KTtcbiAgICAgICAgfVxuICAgICAgICB0aGlzLmFkYXB0ZXJfLm5vdGlmeUFjdGlvbihpbmRleCk7XG4gICAgICAgIHRoaXMuc2V0VGFiaW5kZXhBdEluZGV4XyhpbmRleCk7XG4gICAgICAgIHRoaXMuZm9jdXNlZEl0ZW1JbmRleF8gPSBpbmRleDtcbiAgICB9O1xuICAgIC8qKlxuICAgICAqIEZvY3VzZXMgdGhlIG5leHQgZWxlbWVudCBvbiB0aGUgbGlzdC5cbiAgICAgKi9cbiAgICBNRENMaXN0Rm91bmRhdGlvbi5wcm90b3R5cGUuZm9jdXNOZXh0RWxlbWVudCA9IGZ1bmN0aW9uIChpbmRleCkge1xuICAgICAgICB2YXIgY291bnQgPSB0aGlzLmFkYXB0ZXJfLmdldExpc3RJdGVtQ291bnQoKTtcbiAgICAgICAgdmFyIG5leHRJbmRleCA9IGluZGV4ICsgMTtcbiAgICAgICAgaWYgKG5leHRJbmRleCA+PSBjb3VudCkge1xuICAgICAgICAgICAgaWYgKHRoaXMud3JhcEZvY3VzXykge1xuICAgICAgICAgICAgICAgIG5leHRJbmRleCA9IDA7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBlbHNlIHtcbiAgICAgICAgICAgICAgICAvLyBSZXR1cm4gZWFybHkgYmVjYXVzZSBsYXN0IGl0ZW0gaXMgYWxyZWFkeSBmb2N1c2VkLlxuICAgICAgICAgICAgICAgIHJldHVybiBpbmRleDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgICB0aGlzLmFkYXB0ZXJfLmZvY3VzSXRlbUF0SW5kZXgobmV4dEluZGV4KTtcbiAgICAgICAgcmV0dXJuIG5leHRJbmRleDtcbiAgICB9O1xuICAgIC8qKlxuICAgICAqIEZvY3VzZXMgdGhlIHByZXZpb3VzIGVsZW1lbnQgb24gdGhlIGxpc3QuXG4gICAgICovXG4gICAgTURDTGlzdEZvdW5kYXRpb24ucHJvdG90eXBlLmZvY3VzUHJldkVsZW1lbnQgPSBmdW5jdGlvbiAoaW5kZXgpIHtcbiAgICAgICAgdmFyIHByZXZJbmRleCA9IGluZGV4IC0gMTtcbiAgICAgICAgaWYgKHByZXZJbmRleCA8IDApIHtcbiAgICAgICAgICAgIGlmICh0aGlzLndyYXBGb2N1c18pIHtcbiAgICAgICAgICAgICAgICBwcmV2SW5kZXggPSB0aGlzLmFkYXB0ZXJfLmdldExpc3RJdGVtQ291bnQoKSAtIDE7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBlbHNlIHtcbiAgICAgICAgICAgICAgICAvLyBSZXR1cm4gZWFybHkgYmVjYXVzZSBmaXJzdCBpdGVtIGlzIGFscmVhZHkgZm9jdXNlZC5cbiAgICAgICAgICAgICAgICByZXR1cm4gaW5kZXg7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgICAgdGhpcy5hZGFwdGVyXy5mb2N1c0l0ZW1BdEluZGV4KHByZXZJbmRleCk7XG4gICAgICAgIHJldHVybiBwcmV2SW5kZXg7XG4gICAgfTtcbiAgICBNRENMaXN0Rm91bmRhdGlvbi5wcm90b3R5cGUuZm9jdXNGaXJzdEVsZW1lbnQgPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIHRoaXMuYWRhcHRlcl8uZm9jdXNJdGVtQXRJbmRleCgwKTtcbiAgICAgICAgcmV0dXJuIDA7XG4gICAgfTtcbiAgICBNRENMaXN0Rm91bmRhdGlvbi5wcm90b3R5cGUuZm9jdXNMYXN0RWxlbWVudCA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdmFyIGxhc3RJbmRleCA9IHRoaXMuYWRhcHRlcl8uZ2V0TGlzdEl0ZW1Db3VudCgpIC0gMTtcbiAgICAgICAgdGhpcy5hZGFwdGVyXy5mb2N1c0l0ZW1BdEluZGV4KGxhc3RJbmRleCk7XG4gICAgICAgIHJldHVybiBsYXN0SW5kZXg7XG4gICAgfTtcbiAgICAvKipcbiAgICAgKiBAcGFyYW0gaXRlbUluZGV4IEluZGV4IG9mIHRoZSBsaXN0IGl0ZW1cbiAgICAgKiBAcGFyYW0gaXNFbmFibGVkIFNldHMgdGhlIGxpc3QgaXRlbSB0byBlbmFibGVkIG9yIGRpc2FibGVkLlxuICAgICAqL1xuICAgIE1EQ0xpc3RGb3VuZGF0aW9uLnByb3RvdHlwZS5zZXRFbmFibGVkID0gZnVuY3Rpb24gKGl0ZW1JbmRleCwgaXNFbmFibGVkKSB7XG4gICAgICAgIGlmICghdGhpcy5pc0luZGV4VmFsaWRfKGl0ZW1JbmRleCkpIHtcbiAgICAgICAgICAgIHJldHVybjtcbiAgICAgICAgfVxuICAgICAgICBpZiAoaXNFbmFibGVkKSB7XG4gICAgICAgICAgICB0aGlzLmFkYXB0ZXJfLnJlbW92ZUNsYXNzRm9yRWxlbWVudEluZGV4KGl0ZW1JbmRleCwgY3NzQ2xhc3Nlcy5MSVNUX0lURU1fRElTQUJMRURfQ0xBU1MpO1xuICAgICAgICAgICAgdGhpcy5hZGFwdGVyXy5zZXRBdHRyaWJ1dGVGb3JFbGVtZW50SW5kZXgoaXRlbUluZGV4LCBzdHJpbmdzLkFSSUFfRElTQUJMRUQsICdmYWxzZScpO1xuICAgICAgICB9XG4gICAgICAgIGVsc2Uge1xuICAgICAgICAgICAgdGhpcy5hZGFwdGVyXy5hZGRDbGFzc0ZvckVsZW1lbnRJbmRleChpdGVtSW5kZXgsIGNzc0NsYXNzZXMuTElTVF9JVEVNX0RJU0FCTEVEX0NMQVNTKTtcbiAgICAgICAgICAgIHRoaXMuYWRhcHRlcl8uc2V0QXR0cmlidXRlRm9yRWxlbWVudEluZGV4KGl0ZW1JbmRleCwgc3RyaW5ncy5BUklBX0RJU0FCTEVELCAndHJ1ZScpO1xuICAgICAgICB9XG4gICAgfTtcbiAgICAvKipcbiAgICAgKiBFbnN1cmVzIHRoYXQgcHJldmVudERlZmF1bHQgaXMgb25seSBjYWxsZWQgaWYgdGhlIGNvbnRhaW5pbmcgZWxlbWVudCBkb2Vzbid0XG4gICAgICogY29uc3VtZSB0aGUgZXZlbnQsIGFuZCBpdCB3aWxsIGNhdXNlIGFuIHVuaW50ZW5kZWQgc2Nyb2xsLlxuICAgICAqL1xuICAgIE1EQ0xpc3RGb3VuZGF0aW9uLnByb3RvdHlwZS5wcmV2ZW50RGVmYXVsdEV2ZW50XyA9IGZ1bmN0aW9uIChldnQpIHtcbiAgICAgICAgdmFyIHRhcmdldCA9IGV2dC50YXJnZXQ7XG4gICAgICAgIHZhciB0YWdOYW1lID0gKFwiXCIgKyB0YXJnZXQudGFnTmFtZSkudG9Mb3dlckNhc2UoKTtcbiAgICAgICAgaWYgKEVMRU1FTlRTX0tFWV9BTExPV0VEX0lOLmluZGV4T2YodGFnTmFtZSkgPT09IC0xKSB7XG4gICAgICAgICAgICBldnQucHJldmVudERlZmF1bHQoKTtcbiAgICAgICAgfVxuICAgIH07XG4gICAgTURDTGlzdEZvdW5kYXRpb24ucHJvdG90eXBlLnNldFNpbmdsZVNlbGVjdGlvbkF0SW5kZXhfID0gZnVuY3Rpb24gKGluZGV4KSB7XG4gICAgICAgIGlmICh0aGlzLnNlbGVjdGVkSW5kZXhfID09PSBpbmRleCkge1xuICAgICAgICAgICAgcmV0dXJuO1xuICAgICAgICB9XG4gICAgICAgIHZhciBzZWxlY3RlZENsYXNzTmFtZSA9IGNzc0NsYXNzZXMuTElTVF9JVEVNX1NFTEVDVEVEX0NMQVNTO1xuICAgICAgICBpZiAodGhpcy51c2VBY3RpdmF0ZWRDbGFzc18pIHtcbiAgICAgICAgICAgIHNlbGVjdGVkQ2xhc3NOYW1lID0gY3NzQ2xhc3Nlcy5MSVNUX0lURU1fQUNUSVZBVEVEX0NMQVNTO1xuICAgICAgICB9XG4gICAgICAgIGlmICh0aGlzLnNlbGVjdGVkSW5kZXhfICE9PSBudW1iZXJzLlVOU0VUX0lOREVYKSB7XG4gICAgICAgICAgICB0aGlzLmFkYXB0ZXJfLnJlbW92ZUNsYXNzRm9yRWxlbWVudEluZGV4KHRoaXMuc2VsZWN0ZWRJbmRleF8sIHNlbGVjdGVkQ2xhc3NOYW1lKTtcbiAgICAgICAgfVxuICAgICAgICB0aGlzLmFkYXB0ZXJfLmFkZENsYXNzRm9yRWxlbWVudEluZGV4KGluZGV4LCBzZWxlY3RlZENsYXNzTmFtZSk7XG4gICAgICAgIHRoaXMuc2V0QXJpYUZvclNpbmdsZVNlbGVjdGlvbkF0SW5kZXhfKGluZGV4KTtcbiAgICAgICAgdGhpcy5zZWxlY3RlZEluZGV4XyA9IGluZGV4O1xuICAgIH07XG4gICAgLyoqXG4gICAgICogU2V0cyBhcmlhIGF0dHJpYnV0ZSBmb3Igc2luZ2xlIHNlbGVjdGlvbiBhdCBnaXZlbiBpbmRleC5cbiAgICAgKi9cbiAgICBNRENMaXN0Rm91bmRhdGlvbi5wcm90b3R5cGUuc2V0QXJpYUZvclNpbmdsZVNlbGVjdGlvbkF0SW5kZXhfID0gZnVuY3Rpb24gKGluZGV4KSB7XG4gICAgICAgIC8vIERldGVjdCB0aGUgcHJlc2VuY2Ugb2YgYXJpYS1jdXJyZW50IGFuZCBnZXQgdGhlIHZhbHVlIG9ubHkgZHVyaW5nIGxpc3QgaW5pdGlhbGl6YXRpb24gd2hlbiBpdCBpcyBpbiB1bnNldCBzdGF0ZS5cbiAgICAgICAgaWYgKHRoaXMuc2VsZWN0ZWRJbmRleF8gPT09IG51bWJlcnMuVU5TRVRfSU5ERVgpIHtcbiAgICAgICAgICAgIHRoaXMuYXJpYUN1cnJlbnRBdHRyVmFsdWVfID1cbiAgICAgICAgICAgICAgICB0aGlzLmFkYXB0ZXJfLmdldEF0dHJpYnV0ZUZvckVsZW1lbnRJbmRleChpbmRleCwgc3RyaW5ncy5BUklBX0NVUlJFTlQpO1xuICAgICAgICB9XG4gICAgICAgIHZhciBpc0FyaWFDdXJyZW50ID0gdGhpcy5hcmlhQ3VycmVudEF0dHJWYWx1ZV8gIT09IG51bGw7XG4gICAgICAgIHZhciBhcmlhQXR0cmlidXRlID0gaXNBcmlhQ3VycmVudCA/IHN0cmluZ3MuQVJJQV9DVVJSRU5UIDogc3RyaW5ncy5BUklBX1NFTEVDVEVEO1xuICAgICAgICBpZiAodGhpcy5zZWxlY3RlZEluZGV4XyAhPT0gbnVtYmVycy5VTlNFVF9JTkRFWCkge1xuICAgICAgICAgICAgdGhpcy5hZGFwdGVyXy5zZXRBdHRyaWJ1dGVGb3JFbGVtZW50SW5kZXgodGhpcy5zZWxlY3RlZEluZGV4XywgYXJpYUF0dHJpYnV0ZSwgJ2ZhbHNlJyk7XG4gICAgICAgIH1cbiAgICAgICAgdmFyIGFyaWFBdHRyaWJ1dGVWYWx1ZSA9IGlzQXJpYUN1cnJlbnQgPyB0aGlzLmFyaWFDdXJyZW50QXR0clZhbHVlXyA6ICd0cnVlJztcbiAgICAgICAgdGhpcy5hZGFwdGVyXy5zZXRBdHRyaWJ1dGVGb3JFbGVtZW50SW5kZXgoaW5kZXgsIGFyaWFBdHRyaWJ1dGUsIGFyaWFBdHRyaWJ1dGVWYWx1ZSk7XG4gICAgfTtcbiAgICAvKipcbiAgICAgKiBUb2dnbGVzIHJhZGlvIGF0IGdpdmUgaW5kZXguIFJhZGlvIGRvZXNuJ3QgY2hhbmdlIHRoZSBjaGVja2VkIHN0YXRlIGlmIGl0IGlzIGFscmVhZHkgY2hlY2tlZC5cbiAgICAgKi9cbiAgICBNRENMaXN0Rm91bmRhdGlvbi5wcm90b3R5cGUuc2V0UmFkaW9BdEluZGV4XyA9IGZ1bmN0aW9uIChpbmRleCkge1xuICAgICAgICB0aGlzLmFkYXB0ZXJfLnNldENoZWNrZWRDaGVja2JveE9yUmFkaW9BdEluZGV4KGluZGV4LCB0cnVlKTtcbiAgICAgICAgaWYgKHRoaXMuc2VsZWN0ZWRJbmRleF8gIT09IG51bWJlcnMuVU5TRVRfSU5ERVgpIHtcbiAgICAgICAgICAgIHRoaXMuYWRhcHRlcl8uc2V0QXR0cmlidXRlRm9yRWxlbWVudEluZGV4KHRoaXMuc2VsZWN0ZWRJbmRleF8sIHN0cmluZ3MuQVJJQV9DSEVDS0VELCAnZmFsc2UnKTtcbiAgICAgICAgfVxuICAgICAgICB0aGlzLmFkYXB0ZXJfLnNldEF0dHJpYnV0ZUZvckVsZW1lbnRJbmRleChpbmRleCwgc3RyaW5ncy5BUklBX0NIRUNLRUQsICd0cnVlJyk7XG4gICAgICAgIHRoaXMuc2VsZWN0ZWRJbmRleF8gPSBpbmRleDtcbiAgICB9O1xuICAgIE1EQ0xpc3RGb3VuZGF0aW9uLnByb3RvdHlwZS5zZXRDaGVja2JveEF0SW5kZXhfID0gZnVuY3Rpb24gKGluZGV4KSB7XG4gICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwgdGhpcy5hZGFwdGVyXy5nZXRMaXN0SXRlbUNvdW50KCk7IGkrKykge1xuICAgICAgICAgICAgdmFyIGlzQ2hlY2tlZCA9IGZhbHNlO1xuICAgICAgICAgICAgaWYgKGluZGV4LmluZGV4T2YoaSkgPj0gMCkge1xuICAgICAgICAgICAgICAgIGlzQ2hlY2tlZCA9IHRydWU7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICB0aGlzLmFkYXB0ZXJfLnNldENoZWNrZWRDaGVja2JveE9yUmFkaW9BdEluZGV4KGksIGlzQ2hlY2tlZCk7XG4gICAgICAgICAgICB0aGlzLmFkYXB0ZXJfLnNldEF0dHJpYnV0ZUZvckVsZW1lbnRJbmRleChpLCBzdHJpbmdzLkFSSUFfQ0hFQ0tFRCwgaXNDaGVja2VkID8gJ3RydWUnIDogJ2ZhbHNlJyk7XG4gICAgICAgIH1cbiAgICAgICAgdGhpcy5zZWxlY3RlZEluZGV4XyA9IGluZGV4O1xuICAgIH07XG4gICAgTURDTGlzdEZvdW5kYXRpb24ucHJvdG90eXBlLnNldFRhYmluZGV4QXRJbmRleF8gPSBmdW5jdGlvbiAoaW5kZXgpIHtcbiAgICAgICAgaWYgKHRoaXMuZm9jdXNlZEl0ZW1JbmRleF8gPT09IG51bWJlcnMuVU5TRVRfSU5ERVggJiYgaW5kZXggIT09IDApIHtcbiAgICAgICAgICAgIC8vIElmIG5vIGxpc3QgaXRlbSB3YXMgc2VsZWN0ZWQgc2V0IGZpcnN0IGxpc3QgaXRlbSdzIHRhYmluZGV4IHRvIC0xLlxuICAgICAgICAgICAgLy8gR2VuZXJhbGx5LCB0YWJpbmRleCBpcyBzZXQgdG8gMCBvbiBmaXJzdCBsaXN0IGl0ZW0gb2YgbGlzdCB0aGF0IGhhcyBubyBwcmVzZWxlY3RlZCBpdGVtcy5cbiAgICAgICAgICAgIHRoaXMuYWRhcHRlcl8uc2V0QXR0cmlidXRlRm9yRWxlbWVudEluZGV4KDAsICd0YWJpbmRleCcsICctMScpO1xuICAgICAgICB9XG4gICAgICAgIGVsc2UgaWYgKHRoaXMuZm9jdXNlZEl0ZW1JbmRleF8gPj0gMCAmJiB0aGlzLmZvY3VzZWRJdGVtSW5kZXhfICE9PSBpbmRleCkge1xuICAgICAgICAgICAgdGhpcy5hZGFwdGVyXy5zZXRBdHRyaWJ1dGVGb3JFbGVtZW50SW5kZXgodGhpcy5mb2N1c2VkSXRlbUluZGV4XywgJ3RhYmluZGV4JywgJy0xJyk7XG4gICAgICAgIH1cbiAgICAgICAgdGhpcy5hZGFwdGVyXy5zZXRBdHRyaWJ1dGVGb3JFbGVtZW50SW5kZXgoaW5kZXgsICd0YWJpbmRleCcsICcwJyk7XG4gICAgfTtcbiAgICAvKipcbiAgICAgKiBAcmV0dXJuIFJldHVybiB0cnVlIGlmIGl0IGlzIHNpbmdsZSBzZWxlY3RpbiBsaXN0LCBjaGVja2JveCBsaXN0IG9yIHJhZGlvIGxpc3QuXG4gICAgICovXG4gICAgTURDTGlzdEZvdW5kYXRpb24ucHJvdG90eXBlLmlzU2VsZWN0YWJsZUxpc3RfID0gZnVuY3Rpb24gKCkge1xuICAgICAgICByZXR1cm4gdGhpcy5pc1NpbmdsZVNlbGVjdGlvbkxpc3RfIHx8IHRoaXMuaXNDaGVja2JveExpc3RfIHx8IHRoaXMuaXNSYWRpb0xpc3RfO1xuICAgIH07XG4gICAgTURDTGlzdEZvdW5kYXRpb24ucHJvdG90eXBlLnNldFRhYmluZGV4VG9GaXJzdFNlbGVjdGVkSXRlbV8gPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIHZhciB0YXJnZXRJbmRleCA9IDA7XG4gICAgICAgIGlmICh0aGlzLmlzU2VsZWN0YWJsZUxpc3RfKCkpIHtcbiAgICAgICAgICAgIGlmICh0eXBlb2YgdGhpcy5zZWxlY3RlZEluZGV4XyA9PT0gJ251bWJlcicgJiYgdGhpcy5zZWxlY3RlZEluZGV4XyAhPT0gbnVtYmVycy5VTlNFVF9JTkRFWCkge1xuICAgICAgICAgICAgICAgIHRhcmdldEluZGV4ID0gdGhpcy5zZWxlY3RlZEluZGV4XztcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIGVsc2UgaWYgKGlzTnVtYmVyQXJyYXkodGhpcy5zZWxlY3RlZEluZGV4XykgJiYgdGhpcy5zZWxlY3RlZEluZGV4Xy5sZW5ndGggPiAwKSB7XG4gICAgICAgICAgICAgICAgdGFyZ2V0SW5kZXggPSB0aGlzLnNlbGVjdGVkSW5kZXhfLnJlZHVjZShmdW5jdGlvbiAoY3VycmVudEluZGV4LCBtaW5JbmRleCkgeyByZXR1cm4gTWF0aC5taW4oY3VycmVudEluZGV4LCBtaW5JbmRleCk7IH0pO1xuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICAgIHRoaXMuc2V0VGFiaW5kZXhBdEluZGV4Xyh0YXJnZXRJbmRleCk7XG4gICAgfTtcbiAgICBNRENMaXN0Rm91bmRhdGlvbi5wcm90b3R5cGUuaXNJbmRleFZhbGlkXyA9IGZ1bmN0aW9uIChpbmRleCkge1xuICAgICAgICB2YXIgX3RoaXMgPSB0aGlzO1xuICAgICAgICBpZiAoaW5kZXggaW5zdGFuY2VvZiBBcnJheSkge1xuICAgICAgICAgICAgaWYgKCF0aGlzLmlzQ2hlY2tib3hMaXN0Xykge1xuICAgICAgICAgICAgICAgIHRocm93IG5ldyBFcnJvcignTURDTGlzdEZvdW5kYXRpb246IEFycmF5IG9mIGluZGV4IGlzIG9ubHkgc3VwcG9ydGVkIGZvciBjaGVja2JveCBiYXNlZCBsaXN0Jyk7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBpZiAoaW5kZXgubGVuZ3RoID09PSAwKSB7XG4gICAgICAgICAgICAgICAgcmV0dXJuIHRydWU7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBlbHNlIHtcbiAgICAgICAgICAgICAgICByZXR1cm4gaW5kZXguc29tZShmdW5jdGlvbiAoaSkgeyByZXR1cm4gX3RoaXMuaXNJbmRleEluUmFuZ2VfKGkpOyB9KTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgICBlbHNlIGlmICh0eXBlb2YgaW5kZXggPT09ICdudW1iZXInKSB7XG4gICAgICAgICAgICBpZiAodGhpcy5pc0NoZWNrYm94TGlzdF8pIHtcbiAgICAgICAgICAgICAgICB0aHJvdyBuZXcgRXJyb3IoJ01EQ0xpc3RGb3VuZGF0aW9uOiBFeHBlY3RlZCBhcnJheSBvZiBpbmRleCBmb3IgY2hlY2tib3ggYmFzZWQgbGlzdCBidXQgZ290IG51bWJlcjogJyArIGluZGV4KTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIHJldHVybiB0aGlzLmlzSW5kZXhJblJhbmdlXyhpbmRleCk7XG4gICAgICAgIH1cbiAgICAgICAgZWxzZSB7XG4gICAgICAgICAgICByZXR1cm4gZmFsc2U7XG4gICAgICAgIH1cbiAgICB9O1xuICAgIE1EQ0xpc3RGb3VuZGF0aW9uLnByb3RvdHlwZS5pc0luZGV4SW5SYW5nZV8gPSBmdW5jdGlvbiAoaW5kZXgpIHtcbiAgICAgICAgdmFyIGxpc3RTaXplID0gdGhpcy5hZGFwdGVyXy5nZXRMaXN0SXRlbUNvdW50KCk7XG4gICAgICAgIHJldHVybiBpbmRleCA+PSAwICYmIGluZGV4IDwgbGlzdFNpemU7XG4gICAgfTtcbiAgICAvKipcbiAgICAgKiBTZXRzIHNlbGVjdGVkIGluZGV4IG9uIHVzZXIgYWN0aW9uLCB0b2dnbGVzIGNoZWNrYm94IC8gcmFkaW8gYmFzZWQgb24gdG9nZ2xlQ2hlY2tib3ggdmFsdWUuXG4gICAgICogVXNlciBpbnRlcmFjdGlvbiBzaG91bGQgbm90IHRvZ2dsZSBsaXN0IGl0ZW0ocykgd2hlbiBkaXNhYmxlZC5cbiAgICAgKi9cbiAgICBNRENMaXN0Rm91bmRhdGlvbi5wcm90b3R5cGUuc2V0U2VsZWN0ZWRJbmRleE9uQWN0aW9uXyA9IGZ1bmN0aW9uIChpbmRleCwgdG9nZ2xlQ2hlY2tib3gpIHtcbiAgICAgICAgaWYgKHRvZ2dsZUNoZWNrYm94ID09PSB2b2lkIDApIHsgdG9nZ2xlQ2hlY2tib3ggPSB0cnVlOyB9XG4gICAgICAgIGlmICh0aGlzLmFkYXB0ZXJfLmxpc3RJdGVtQXRJbmRleEhhc0NsYXNzKGluZGV4LCBjc3NDbGFzc2VzLkxJU1RfSVRFTV9ESVNBQkxFRF9DTEFTUykpIHtcbiAgICAgICAgICAgIHJldHVybjtcbiAgICAgICAgfVxuICAgICAgICBpZiAodGhpcy5pc0NoZWNrYm94TGlzdF8pIHtcbiAgICAgICAgICAgIHRoaXMudG9nZ2xlQ2hlY2tib3hBdEluZGV4XyhpbmRleCwgdG9nZ2xlQ2hlY2tib3gpO1xuICAgICAgICB9XG4gICAgICAgIGVsc2Uge1xuICAgICAgICAgICAgdGhpcy5zZXRTZWxlY3RlZEluZGV4KGluZGV4KTtcbiAgICAgICAgfVxuICAgIH07XG4gICAgTURDTGlzdEZvdW5kYXRpb24ucHJvdG90eXBlLnRvZ2dsZUNoZWNrYm94QXRJbmRleF8gPSBmdW5jdGlvbiAoaW5kZXgsIHRvZ2dsZUNoZWNrYm94KSB7XG4gICAgICAgIHZhciBpc0NoZWNrZWQgPSB0aGlzLmFkYXB0ZXJfLmlzQ2hlY2tib3hDaGVja2VkQXRJbmRleChpbmRleCk7XG4gICAgICAgIGlmICh0b2dnbGVDaGVja2JveCkge1xuICAgICAgICAgICAgaXNDaGVja2VkID0gIWlzQ2hlY2tlZDtcbiAgICAgICAgICAgIHRoaXMuYWRhcHRlcl8uc2V0Q2hlY2tlZENoZWNrYm94T3JSYWRpb0F0SW5kZXgoaW5kZXgsIGlzQ2hlY2tlZCk7XG4gICAgICAgIH1cbiAgICAgICAgdGhpcy5hZGFwdGVyXy5zZXRBdHRyaWJ1dGVGb3JFbGVtZW50SW5kZXgoaW5kZXgsIHN0cmluZ3MuQVJJQV9DSEVDS0VELCBpc0NoZWNrZWQgPyAndHJ1ZScgOiAnZmFsc2UnKTtcbiAgICAgICAgLy8gSWYgbm9uZSBvZiB0aGUgY2hlY2tib3ggaXRlbXMgYXJlIHNlbGVjdGVkIGFuZCBzZWxlY3RlZEluZGV4IGlzIG5vdCBpbml0aWFsaXplZCB0aGVuIHByb3ZpZGUgYSBkZWZhdWx0IHZhbHVlLlxuICAgICAgICB2YXIgc2VsZWN0ZWRJbmRleGVzID0gdGhpcy5zZWxlY3RlZEluZGV4XyA9PT0gbnVtYmVycy5VTlNFVF9JTkRFWCA/IFtdIDogdGhpcy5zZWxlY3RlZEluZGV4Xy5zbGljZSgpO1xuICAgICAgICBpZiAoaXNDaGVja2VkKSB7XG4gICAgICAgICAgICBzZWxlY3RlZEluZGV4ZXMucHVzaChpbmRleCk7XG4gICAgICAgIH1cbiAgICAgICAgZWxzZSB7XG4gICAgICAgICAgICBzZWxlY3RlZEluZGV4ZXMgPSBzZWxlY3RlZEluZGV4ZXMuZmlsdGVyKGZ1bmN0aW9uIChpKSB7IHJldHVybiBpICE9PSBpbmRleDsgfSk7XG4gICAgICAgIH1cbiAgICAgICAgdGhpcy5zZWxlY3RlZEluZGV4XyA9IHNlbGVjdGVkSW5kZXhlcztcbiAgICB9O1xuICAgIHJldHVybiBNRENMaXN0Rm91bmRhdGlvbjtcbn0oTURDRm91bmRhdGlvbikpO1xuZXhwb3J0IHsgTURDTGlzdEZvdW5kYXRpb24gfTtcbi8vIHRzbGludDpkaXNhYmxlLW5leHQtbGluZTpuby1kZWZhdWx0LWV4cG9ydCBOZWVkZWQgZm9yIGJhY2t3YXJkIGNvbXBhdGliaWxpdHkgd2l0aCBNREMgV2ViIHYwLjQ0LjAgYW5kIGVhcmxpZXIuXG5leHBvcnQgZGVmYXVsdCBNRENMaXN0Rm91bmRhdGlvbjtcbi8vIyBzb3VyY2VNYXBwaW5nVVJMPWZvdW5kYXRpb24uanMubWFwIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./node_modules/@material/list/foundation.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MDCListFoundation", function() { return MDCListFoundation; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_foundation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/base/foundation */ "./node_modules/@material/base/foundation.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/list/constants.js");
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+var ELEMENTS_KEY_ALLOWED_IN = ['input', 'button', 'textarea', 'select'];
+function isNumberArray(selectedIndex) {
+    return selectedIndex instanceof Array;
+}
+var MDCListFoundation = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](MDCListFoundation, _super);
+    function MDCListFoundation(adapter) {
+        var _this = _super.call(this, tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, MDCListFoundation.defaultAdapter, adapter)) || this;
+        _this.wrapFocus_ = false;
+        _this.isVertical_ = true;
+        _this.isSingleSelectionList_ = false;
+        _this.selectedIndex_ = _constants__WEBPACK_IMPORTED_MODULE_2__["numbers"].UNSET_INDEX;
+        _this.focusedItemIndex_ = _constants__WEBPACK_IMPORTED_MODULE_2__["numbers"].UNSET_INDEX;
+        _this.useActivatedClass_ = false;
+        _this.ariaCurrentAttrValue_ = null;
+        _this.isCheckboxList_ = false;
+        _this.isRadioList_ = false;
+        return _this;
+    }
+    Object.defineProperty(MDCListFoundation, "strings", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_2__["strings"];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCListFoundation, "cssClasses", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCListFoundation, "numbers", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_2__["numbers"];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCListFoundation, "defaultAdapter", {
+        get: function () {
+            return {
+                addClassForElementIndex: function () { return undefined; },
+                focusItemAtIndex: function () { return undefined; },
+                getAttributeForElementIndex: function () { return null; },
+                getFocusedElementIndex: function () { return 0; },
+                getListItemCount: function () { return 0; },
+                hasCheckboxAtIndex: function () { return false; },
+                hasRadioAtIndex: function () { return false; },
+                isCheckboxCheckedAtIndex: function () { return false; },
+                isFocusInsideList: function () { return false; },
+                isRootFocused: function () { return false; },
+                listItemAtIndexHasClass: function () { return false; },
+                notifyAction: function () { return undefined; },
+                removeClassForElementIndex: function () { return undefined; },
+                setAttributeForElementIndex: function () { return undefined; },
+                setCheckedCheckboxOrRadioAtIndex: function () { return undefined; },
+                setTabIndexForListItemChildren: function () { return undefined; },
+            };
+        },
+        enumerable: true,
+        configurable: true
+    });
+    MDCListFoundation.prototype.layout = function () {
+        if (this.adapter_.getListItemCount() === 0) {
+            return;
+        }
+        if (this.adapter_.hasCheckboxAtIndex(0)) {
+            this.isCheckboxList_ = true;
+        }
+        else if (this.adapter_.hasRadioAtIndex(0)) {
+            this.isRadioList_ = true;
+        }
+    };
+    /**
+     * Sets the private wrapFocus_ variable.
+     */
+    MDCListFoundation.prototype.setWrapFocus = function (value) {
+        this.wrapFocus_ = value;
+    };
+    /**
+     * Sets the isVertical_ private variable.
+     */
+    MDCListFoundation.prototype.setVerticalOrientation = function (value) {
+        this.isVertical_ = value;
+    };
+    /**
+     * Sets the isSingleSelectionList_ private variable.
+     */
+    MDCListFoundation.prototype.setSingleSelection = function (value) {
+        this.isSingleSelectionList_ = value;
+    };
+    /**
+     * Sets the useActivatedClass_ private variable.
+     */
+    MDCListFoundation.prototype.setUseActivatedClass = function (useActivated) {
+        this.useActivatedClass_ = useActivated;
+    };
+    MDCListFoundation.prototype.getSelectedIndex = function () {
+        return this.selectedIndex_;
+    };
+    MDCListFoundation.prototype.setSelectedIndex = function (index) {
+        if (!this.isIndexValid_(index)) {
+            return;
+        }
+        if (this.isCheckboxList_) {
+            this.setCheckboxAtIndex_(index);
+        }
+        else if (this.isRadioList_) {
+            this.setRadioAtIndex_(index);
+        }
+        else {
+            this.setSingleSelectionAtIndex_(index);
+        }
+    };
+    /**
+     * Focus in handler for the list items.
+     */
+    MDCListFoundation.prototype.handleFocusIn = function (_, listItemIndex) {
+        if (listItemIndex >= 0) {
+            this.adapter_.setTabIndexForListItemChildren(listItemIndex, '0');
+        }
+    };
+    /**
+     * Focus out handler for the list items.
+     */
+    MDCListFoundation.prototype.handleFocusOut = function (_, listItemIndex) {
+        var _this = this;
+        if (listItemIndex >= 0) {
+            this.adapter_.setTabIndexForListItemChildren(listItemIndex, '-1');
+        }
+        /**
+         * Between Focusout & Focusin some browsers do not have focus on any element. Setting a delay to wait till the focus
+         * is moved to next element.
+         */
+        setTimeout(function () {
+            if (!_this.adapter_.isFocusInsideList()) {
+                _this.setTabindexToFirstSelectedItem_();
+            }
+        }, 0);
+    };
+    /**
+     * Key handler for the list.
+     */
+    MDCListFoundation.prototype.handleKeydown = function (evt, isRootListItem, listItemIndex) {
+        var isArrowLeft = evt.key === 'ArrowLeft' || evt.keyCode === 37;
+        var isArrowUp = evt.key === 'ArrowUp' || evt.keyCode === 38;
+        var isArrowRight = evt.key === 'ArrowRight' || evt.keyCode === 39;
+        var isArrowDown = evt.key === 'ArrowDown' || evt.keyCode === 40;
+        var isHome = evt.key === 'Home' || evt.keyCode === 36;
+        var isEnd = evt.key === 'End' || evt.keyCode === 35;
+        var isEnter = evt.key === 'Enter' || evt.keyCode === 13;
+        var isSpace = evt.key === 'Space' || evt.keyCode === 32;
+        if (this.adapter_.isRootFocused()) {
+            if (isArrowUp || isEnd) {
+                evt.preventDefault();
+                this.focusLastElement();
+            }
+            else if (isArrowDown || isHome) {
+                evt.preventDefault();
+                this.focusFirstElement();
+            }
+            return;
+        }
+        var currentIndex = this.adapter_.getFocusedElementIndex();
+        if (currentIndex === -1) {
+            currentIndex = listItemIndex;
+            if (currentIndex < 0) {
+                // If this event doesn't have a mdc-list-item ancestor from the
+                // current list (not from a sublist), return early.
+                return;
+            }
+        }
+        var nextIndex;
+        if ((this.isVertical_ && isArrowDown) || (!this.isVertical_ && isArrowRight)) {
+            this.preventDefaultEvent_(evt);
+            nextIndex = this.focusNextElement(currentIndex);
+        }
+        else if ((this.isVertical_ && isArrowUp) || (!this.isVertical_ && isArrowLeft)) {
+            this.preventDefaultEvent_(evt);
+            nextIndex = this.focusPrevElement(currentIndex);
+        }
+        else if (isHome) {
+            this.preventDefaultEvent_(evt);
+            nextIndex = this.focusFirstElement();
+        }
+        else if (isEnd) {
+            this.preventDefaultEvent_(evt);
+            nextIndex = this.focusLastElement();
+        }
+        else if (isEnter || isSpace) {
+            if (isRootListItem) {
+                // Return early if enter key is pressed on anchor element which triggers synthetic MouseEvent event.
+                var target = evt.target;
+                if (target && target.tagName === 'A' && isEnter) {
+                    return;
+                }
+                this.preventDefaultEvent_(evt);
+                if (this.isSelectableList_()) {
+                    this.setSelectedIndexOnAction_(currentIndex);
+                }
+                this.adapter_.notifyAction(currentIndex);
+            }
+        }
+        this.focusedItemIndex_ = currentIndex;
+        if (nextIndex !== undefined) {
+            this.setTabindexAtIndex_(nextIndex);
+            this.focusedItemIndex_ = nextIndex;
+        }
+    };
+    /**
+     * Click handler for the list.
+     */
+    MDCListFoundation.prototype.handleClick = function (index, toggleCheckbox) {
+        if (index === _constants__WEBPACK_IMPORTED_MODULE_2__["numbers"].UNSET_INDEX) {
+            return;
+        }
+        if (this.isSelectableList_()) {
+            this.setSelectedIndexOnAction_(index, toggleCheckbox);
+        }
+        this.adapter_.notifyAction(index);
+        this.setTabindexAtIndex_(index);
+        this.focusedItemIndex_ = index;
+    };
+    /**
+     * Focuses the next element on the list.
+     */
+    MDCListFoundation.prototype.focusNextElement = function (index) {
+        var count = this.adapter_.getListItemCount();
+        var nextIndex = index + 1;
+        if (nextIndex >= count) {
+            if (this.wrapFocus_) {
+                nextIndex = 0;
+            }
+            else {
+                // Return early because last item is already focused.
+                return index;
+            }
+        }
+        this.adapter_.focusItemAtIndex(nextIndex);
+        return nextIndex;
+    };
+    /**
+     * Focuses the previous element on the list.
+     */
+    MDCListFoundation.prototype.focusPrevElement = function (index) {
+        var prevIndex = index - 1;
+        if (prevIndex < 0) {
+            if (this.wrapFocus_) {
+                prevIndex = this.adapter_.getListItemCount() - 1;
+            }
+            else {
+                // Return early because first item is already focused.
+                return index;
+            }
+        }
+        this.adapter_.focusItemAtIndex(prevIndex);
+        return prevIndex;
+    };
+    MDCListFoundation.prototype.focusFirstElement = function () {
+        this.adapter_.focusItemAtIndex(0);
+        return 0;
+    };
+    MDCListFoundation.prototype.focusLastElement = function () {
+        var lastIndex = this.adapter_.getListItemCount() - 1;
+        this.adapter_.focusItemAtIndex(lastIndex);
+        return lastIndex;
+    };
+    /**
+     * @param itemIndex Index of the list item
+     * @param isEnabled Sets the list item to enabled or disabled.
+     */
+    MDCListFoundation.prototype.setEnabled = function (itemIndex, isEnabled) {
+        if (!this.isIndexValid_(itemIndex)) {
+            return;
+        }
+        if (isEnabled) {
+            this.adapter_.removeClassForElementIndex(itemIndex, _constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"].LIST_ITEM_DISABLED_CLASS);
+            this.adapter_.setAttributeForElementIndex(itemIndex, _constants__WEBPACK_IMPORTED_MODULE_2__["strings"].ARIA_DISABLED, 'false');
+        }
+        else {
+            this.adapter_.addClassForElementIndex(itemIndex, _constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"].LIST_ITEM_DISABLED_CLASS);
+            this.adapter_.setAttributeForElementIndex(itemIndex, _constants__WEBPACK_IMPORTED_MODULE_2__["strings"].ARIA_DISABLED, 'true');
+        }
+    };
+    /**
+     * Ensures that preventDefault is only called if the containing element doesn't
+     * consume the event, and it will cause an unintended scroll.
+     */
+    MDCListFoundation.prototype.preventDefaultEvent_ = function (evt) {
+        var target = evt.target;
+        var tagName = ("" + target.tagName).toLowerCase();
+        if (ELEMENTS_KEY_ALLOWED_IN.indexOf(tagName) === -1) {
+            evt.preventDefault();
+        }
+    };
+    MDCListFoundation.prototype.setSingleSelectionAtIndex_ = function (index) {
+        if (this.selectedIndex_ === index) {
+            return;
+        }
+        var selectedClassName = _constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"].LIST_ITEM_SELECTED_CLASS;
+        if (this.useActivatedClass_) {
+            selectedClassName = _constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"].LIST_ITEM_ACTIVATED_CLASS;
+        }
+        if (this.selectedIndex_ !== _constants__WEBPACK_IMPORTED_MODULE_2__["numbers"].UNSET_INDEX) {
+            this.adapter_.removeClassForElementIndex(this.selectedIndex_, selectedClassName);
+        }
+        this.adapter_.addClassForElementIndex(index, selectedClassName);
+        this.setAriaForSingleSelectionAtIndex_(index);
+        this.selectedIndex_ = index;
+    };
+    /**
+     * Sets aria attribute for single selection at given index.
+     */
+    MDCListFoundation.prototype.setAriaForSingleSelectionAtIndex_ = function (index) {
+        // Detect the presence of aria-current and get the value only during list initialization when it is in unset state.
+        if (this.selectedIndex_ === _constants__WEBPACK_IMPORTED_MODULE_2__["numbers"].UNSET_INDEX) {
+            this.ariaCurrentAttrValue_ =
+                this.adapter_.getAttributeForElementIndex(index, _constants__WEBPACK_IMPORTED_MODULE_2__["strings"].ARIA_CURRENT);
+        }
+        var isAriaCurrent = this.ariaCurrentAttrValue_ !== null;
+        var ariaAttribute = isAriaCurrent ? _constants__WEBPACK_IMPORTED_MODULE_2__["strings"].ARIA_CURRENT : _constants__WEBPACK_IMPORTED_MODULE_2__["strings"].ARIA_SELECTED;
+        if (this.selectedIndex_ !== _constants__WEBPACK_IMPORTED_MODULE_2__["numbers"].UNSET_INDEX) {
+            this.adapter_.setAttributeForElementIndex(this.selectedIndex_, ariaAttribute, 'false');
+        }
+        var ariaAttributeValue = isAriaCurrent ? this.ariaCurrentAttrValue_ : 'true';
+        this.adapter_.setAttributeForElementIndex(index, ariaAttribute, ariaAttributeValue);
+    };
+    /**
+     * Toggles radio at give index. Radio doesn't change the checked state if it is already checked.
+     */
+    MDCListFoundation.prototype.setRadioAtIndex_ = function (index) {
+        this.adapter_.setCheckedCheckboxOrRadioAtIndex(index, true);
+        if (this.selectedIndex_ !== _constants__WEBPACK_IMPORTED_MODULE_2__["numbers"].UNSET_INDEX) {
+            this.adapter_.setAttributeForElementIndex(this.selectedIndex_, _constants__WEBPACK_IMPORTED_MODULE_2__["strings"].ARIA_CHECKED, 'false');
+        }
+        this.adapter_.setAttributeForElementIndex(index, _constants__WEBPACK_IMPORTED_MODULE_2__["strings"].ARIA_CHECKED, 'true');
+        this.selectedIndex_ = index;
+    };
+    MDCListFoundation.prototype.setCheckboxAtIndex_ = function (index) {
+        for (var i = 0; i < this.adapter_.getListItemCount(); i++) {
+            var isChecked = false;
+            if (index.indexOf(i) >= 0) {
+                isChecked = true;
+            }
+            this.adapter_.setCheckedCheckboxOrRadioAtIndex(i, isChecked);
+            this.adapter_.setAttributeForElementIndex(i, _constants__WEBPACK_IMPORTED_MODULE_2__["strings"].ARIA_CHECKED, isChecked ? 'true' : 'false');
+        }
+        this.selectedIndex_ = index;
+    };
+    MDCListFoundation.prototype.setTabindexAtIndex_ = function (index) {
+        if (this.focusedItemIndex_ === _constants__WEBPACK_IMPORTED_MODULE_2__["numbers"].UNSET_INDEX && index !== 0) {
+            // If no list item was selected set first list item's tabindex to -1.
+            // Generally, tabindex is set to 0 on first list item of list that has no preselected items.
+            this.adapter_.setAttributeForElementIndex(0, 'tabindex', '-1');
+        }
+        else if (this.focusedItemIndex_ >= 0 && this.focusedItemIndex_ !== index) {
+            this.adapter_.setAttributeForElementIndex(this.focusedItemIndex_, 'tabindex', '-1');
+        }
+        this.adapter_.setAttributeForElementIndex(index, 'tabindex', '0');
+    };
+    /**
+     * @return Return true if it is single selectin list, checkbox list or radio list.
+     */
+    MDCListFoundation.prototype.isSelectableList_ = function () {
+        return this.isSingleSelectionList_ || this.isCheckboxList_ || this.isRadioList_;
+    };
+    MDCListFoundation.prototype.setTabindexToFirstSelectedItem_ = function () {
+        var targetIndex = 0;
+        if (this.isSelectableList_()) {
+            if (typeof this.selectedIndex_ === 'number' && this.selectedIndex_ !== _constants__WEBPACK_IMPORTED_MODULE_2__["numbers"].UNSET_INDEX) {
+                targetIndex = this.selectedIndex_;
+            }
+            else if (isNumberArray(this.selectedIndex_) && this.selectedIndex_.length > 0) {
+                targetIndex = this.selectedIndex_.reduce(function (currentIndex, minIndex) { return Math.min(currentIndex, minIndex); });
+            }
+        }
+        this.setTabindexAtIndex_(targetIndex);
+    };
+    MDCListFoundation.prototype.isIndexValid_ = function (index) {
+        var _this = this;
+        if (index instanceof Array) {
+            if (!this.isCheckboxList_) {
+                throw new Error('MDCListFoundation: Array of index is only supported for checkbox based list');
+            }
+            if (index.length === 0) {
+                return true;
+            }
+            else {
+                return index.some(function (i) { return _this.isIndexInRange_(i); });
+            }
+        }
+        else if (typeof index === 'number') {
+            if (this.isCheckboxList_) {
+                throw new Error('MDCListFoundation: Expected array of index for checkbox based list but got number: ' + index);
+            }
+            return this.isIndexInRange_(index);
+        }
+        else {
+            return false;
+        }
+    };
+    MDCListFoundation.prototype.isIndexInRange_ = function (index) {
+        var listSize = this.adapter_.getListItemCount();
+        return index >= 0 && index < listSize;
+    };
+    /**
+     * Sets selected index on user action, toggles checkbox / radio based on toggleCheckbox value.
+     * User interaction should not toggle list item(s) when disabled.
+     */
+    MDCListFoundation.prototype.setSelectedIndexOnAction_ = function (index, toggleCheckbox) {
+        if (toggleCheckbox === void 0) { toggleCheckbox = true; }
+        if (this.adapter_.listItemAtIndexHasClass(index, _constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"].LIST_ITEM_DISABLED_CLASS)) {
+            return;
+        }
+        if (this.isCheckboxList_) {
+            this.toggleCheckboxAtIndex_(index, toggleCheckbox);
+        }
+        else {
+            this.setSelectedIndex(index);
+        }
+    };
+    MDCListFoundation.prototype.toggleCheckboxAtIndex_ = function (index, toggleCheckbox) {
+        var isChecked = this.adapter_.isCheckboxCheckedAtIndex(index);
+        if (toggleCheckbox) {
+            isChecked = !isChecked;
+            this.adapter_.setCheckedCheckboxOrRadioAtIndex(index, isChecked);
+        }
+        this.adapter_.setAttributeForElementIndex(index, _constants__WEBPACK_IMPORTED_MODULE_2__["strings"].ARIA_CHECKED, isChecked ? 'true' : 'false');
+        // If none of the checkbox items are selected and selectedIndex is not initialized then provide a default value.
+        var selectedIndexes = this.selectedIndex_ === _constants__WEBPACK_IMPORTED_MODULE_2__["numbers"].UNSET_INDEX ? [] : this.selectedIndex_.slice();
+        if (isChecked) {
+            selectedIndexes.push(index);
+        }
+        else {
+            selectedIndexes = selectedIndexes.filter(function (i) { return i !== index; });
+        }
+        this.selectedIndex_ = selectedIndexes;
+    };
+    return MDCListFoundation;
+}(_material_base_foundation__WEBPACK_IMPORTED_MODULE_1__["MDCFoundation"]));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* harmony default export */ __webpack_exports__["default"] = (MDCListFoundation);
+//# sourceMappingURL=foundation.js.map
 
 /***/ }),
 
@@ -309,7 +2122,126 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"MDCRipple\", function() { return MDCRipple; });\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _material_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/base/component */ \"./node_modules/@material/base/component.js\");\n/* harmony import */ var _material_dom_events__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/dom/events */ \"./node_modules/@material/dom/events.js\");\n/* harmony import */ var _material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material/dom/ponyfill */ \"./node_modules/@material/dom/ponyfill.js\");\n/* harmony import */ var _foundation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./foundation */ \"./node_modules/@material/ripple/foundation.js\");\n/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./util */ \"./node_modules/@material/ripple/util.js\");\n/**\n * @license\n * Copyright 2016 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\n\n\n\n\n\n\nvar MDCRipple = /** @class */ (function (_super) {\n    tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"](MDCRipple, _super);\n    function MDCRipple() {\n        var _this = _super !== null && _super.apply(this, arguments) || this;\n        _this.disabled = false;\n        return _this;\n    }\n    MDCRipple.attachTo = function (root, opts) {\n        if (opts === void 0) { opts = { isUnbounded: undefined }; }\n        var ripple = new MDCRipple(root);\n        // Only override unbounded behavior if option is explicitly specified\n        if (opts.isUnbounded !== undefined) {\n            ripple.unbounded = opts.isUnbounded;\n        }\n        return ripple;\n    };\n    MDCRipple.createAdapter = function (instance) {\n        return {\n            addClass: function (className) { return instance.root_.classList.add(className); },\n            browserSupportsCssVars: function () { return _util__WEBPACK_IMPORTED_MODULE_5__[\"supportsCssVariables\"](window); },\n            computeBoundingRect: function () { return instance.root_.getBoundingClientRect(); },\n            containsEventTarget: function (target) { return instance.root_.contains(target); },\n            deregisterDocumentInteractionHandler: function (evtType, handler) {\n                return document.documentElement.removeEventListener(evtType, handler, Object(_material_dom_events__WEBPACK_IMPORTED_MODULE_2__[\"applyPassive\"])());\n            },\n            deregisterInteractionHandler: function (evtType, handler) {\n                return instance.root_.removeEventListener(evtType, handler, Object(_material_dom_events__WEBPACK_IMPORTED_MODULE_2__[\"applyPassive\"])());\n            },\n            deregisterResizeHandler: function (handler) { return window.removeEventListener('resize', handler); },\n            getWindowPageOffset: function () { return ({ x: window.pageXOffset, y: window.pageYOffset }); },\n            isSurfaceActive: function () { return Object(_material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_3__[\"matches\"])(instance.root_, ':active'); },\n            isSurfaceDisabled: function () { return Boolean(instance.disabled); },\n            isUnbounded: function () { return Boolean(instance.unbounded); },\n            registerDocumentInteractionHandler: function (evtType, handler) {\n                return document.documentElement.addEventListener(evtType, handler, Object(_material_dom_events__WEBPACK_IMPORTED_MODULE_2__[\"applyPassive\"])());\n            },\n            registerInteractionHandler: function (evtType, handler) {\n                return instance.root_.addEventListener(evtType, handler, Object(_material_dom_events__WEBPACK_IMPORTED_MODULE_2__[\"applyPassive\"])());\n            },\n            registerResizeHandler: function (handler) { return window.addEventListener('resize', handler); },\n            removeClass: function (className) { return instance.root_.classList.remove(className); },\n            updateCssVariable: function (varName, value) { return instance.root_.style.setProperty(varName, value); },\n        };\n    };\n    Object.defineProperty(MDCRipple.prototype, \"unbounded\", {\n        get: function () {\n            return Boolean(this.unbounded_);\n        },\n        set: function (unbounded) {\n            this.unbounded_ = Boolean(unbounded);\n            this.setUnbounded_();\n        },\n        enumerable: true,\n        configurable: true\n    });\n    MDCRipple.prototype.activate = function () {\n        this.foundation_.activate();\n    };\n    MDCRipple.prototype.deactivate = function () {\n        this.foundation_.deactivate();\n    };\n    MDCRipple.prototype.layout = function () {\n        this.foundation_.layout();\n    };\n    MDCRipple.prototype.getDefaultFoundation = function () {\n        return new _foundation__WEBPACK_IMPORTED_MODULE_4__[\"MDCRippleFoundation\"](MDCRipple.createAdapter(this));\n    };\n    MDCRipple.prototype.initialSyncWithDOM = function () {\n        var root = this.root_;\n        this.unbounded = 'mdcRippleIsUnbounded' in root.dataset;\n    };\n    /**\n     * Closure Compiler throws an access control error when directly accessing a\n     * protected or private property inside a getter/setter, like unbounded above.\n     * By accessing the protected property inside a method, we solve that problem.\n     * That's why this function exists.\n     */\n    MDCRipple.prototype.setUnbounded_ = function () {\n        this.foundation_.setUnbounded(Boolean(this.unbounded_));\n    };\n    return MDCRipple;\n}(_material_base_component__WEBPACK_IMPORTED_MODULE_1__[\"MDCComponent\"]));\n\n//# sourceMappingURL=component.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL3JpcHBsZS9jb21wb25lbnQuanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL3JpcHBsZS9jb21wb25lbnQuanM/NDBmZiJdLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEBsaWNlbnNlXG4gKiBDb3B5cmlnaHQgMjAxNiBHb29nbGUgSW5jLlxuICpcbiAqIFBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHlcbiAqIG9mIHRoaXMgc29mdHdhcmUgYW5kIGFzc29jaWF0ZWQgZG9jdW1lbnRhdGlvbiBmaWxlcyAodGhlIFwiU29mdHdhcmVcIiksIHRvIGRlYWxcbiAqIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgd2l0aG91dCBsaW1pdGF0aW9uIHRoZSByaWdodHNcbiAqIHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwgZGlzdHJpYnV0ZSwgc3VibGljZW5zZSwgYW5kL29yIHNlbGxcbiAqIGNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpc1xuICogZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvIHRoZSBmb2xsb3dpbmcgY29uZGl0aW9uczpcbiAqXG4gKiBUaGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBwZXJtaXNzaW9uIG5vdGljZSBzaGFsbCBiZSBpbmNsdWRlZCBpblxuICogYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuXG4gKlxuICogVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEIFwiQVMgSVNcIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUlxuICogSU1QTElFRCwgSU5DTFVESU5HIEJVVCBOT1QgTElNSVRFRCBUTyBUSEUgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFksXG4gKiBGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRSBBTkQgTk9OSU5GUklOR0VNRU5ULiBJTiBOTyBFVkVOVCBTSEFMTCBUSEVcbiAqIEFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVJcbiAqIExJQUJJTElUWSwgV0hFVEhFUiBJTiBBTiBBQ1RJT04gT0YgQ09OVFJBQ1QsIFRPUlQgT1IgT1RIRVJXSVNFLCBBUklTSU5HIEZST00sXG4gKiBPVVQgT0YgT1IgSU4gQ09OTkVDVElPTiBXSVRIIFRIRSBTT0ZUV0FSRSBPUiBUSEUgVVNFIE9SIE9USEVSIERFQUxJTkdTIElOXG4gKiBUSEUgU09GVFdBUkUuXG4gKi9cbmltcG9ydCAqIGFzIHRzbGliXzEgZnJvbSBcInRzbGliXCI7XG5pbXBvcnQgeyBNRENDb21wb25lbnQgfSBmcm9tICdAbWF0ZXJpYWwvYmFzZS9jb21wb25lbnQnO1xuaW1wb3J0IHsgYXBwbHlQYXNzaXZlIH0gZnJvbSAnQG1hdGVyaWFsL2RvbS9ldmVudHMnO1xuaW1wb3J0IHsgbWF0Y2hlcyB9IGZyb20gJ0BtYXRlcmlhbC9kb20vcG9ueWZpbGwnO1xuaW1wb3J0IHsgTURDUmlwcGxlRm91bmRhdGlvbiB9IGZyb20gJy4vZm91bmRhdGlvbic7XG5pbXBvcnQgKiBhcyB1dGlsIGZyb20gJy4vdXRpbCc7XG52YXIgTURDUmlwcGxlID0gLyoqIEBjbGFzcyAqLyAoZnVuY3Rpb24gKF9zdXBlcikge1xuICAgIHRzbGliXzEuX19leHRlbmRzKE1EQ1JpcHBsZSwgX3N1cGVyKTtcbiAgICBmdW5jdGlvbiBNRENSaXBwbGUoKSB7XG4gICAgICAgIHZhciBfdGhpcyA9IF9zdXBlciAhPT0gbnVsbCAmJiBfc3VwZXIuYXBwbHkodGhpcywgYXJndW1lbnRzKSB8fCB0aGlzO1xuICAgICAgICBfdGhpcy5kaXNhYmxlZCA9IGZhbHNlO1xuICAgICAgICByZXR1cm4gX3RoaXM7XG4gICAgfVxuICAgIE1EQ1JpcHBsZS5hdHRhY2hUbyA9IGZ1bmN0aW9uIChyb290LCBvcHRzKSB7XG4gICAgICAgIGlmIChvcHRzID09PSB2b2lkIDApIHsgb3B0cyA9IHsgaXNVbmJvdW5kZWQ6IHVuZGVmaW5lZCB9OyB9XG4gICAgICAgIHZhciByaXBwbGUgPSBuZXcgTURDUmlwcGxlKHJvb3QpO1xuICAgICAgICAvLyBPbmx5IG92ZXJyaWRlIHVuYm91bmRlZCBiZWhhdmlvciBpZiBvcHRpb24gaXMgZXhwbGljaXRseSBzcGVjaWZpZWRcbiAgICAgICAgaWYgKG9wdHMuaXNVbmJvdW5kZWQgIT09IHVuZGVmaW5lZCkge1xuICAgICAgICAgICAgcmlwcGxlLnVuYm91bmRlZCA9IG9wdHMuaXNVbmJvdW5kZWQ7XG4gICAgICAgIH1cbiAgICAgICAgcmV0dXJuIHJpcHBsZTtcbiAgICB9O1xuICAgIE1EQ1JpcHBsZS5jcmVhdGVBZGFwdGVyID0gZnVuY3Rpb24gKGluc3RhbmNlKSB7XG4gICAgICAgIHJldHVybiB7XG4gICAgICAgICAgICBhZGRDbGFzczogZnVuY3Rpb24gKGNsYXNzTmFtZSkgeyByZXR1cm4gaW5zdGFuY2Uucm9vdF8uY2xhc3NMaXN0LmFkZChjbGFzc05hbWUpOyB9LFxuICAgICAgICAgICAgYnJvd3NlclN1cHBvcnRzQ3NzVmFyczogZnVuY3Rpb24gKCkgeyByZXR1cm4gdXRpbC5zdXBwb3J0c0Nzc1ZhcmlhYmxlcyh3aW5kb3cpOyB9LFxuICAgICAgICAgICAgY29tcHV0ZUJvdW5kaW5nUmVjdDogZnVuY3Rpb24gKCkgeyByZXR1cm4gaW5zdGFuY2Uucm9vdF8uZ2V0Qm91bmRpbmdDbGllbnRSZWN0KCk7IH0sXG4gICAgICAgICAgICBjb250YWluc0V2ZW50VGFyZ2V0OiBmdW5jdGlvbiAodGFyZ2V0KSB7IHJldHVybiBpbnN0YW5jZS5yb290Xy5jb250YWlucyh0YXJnZXQpOyB9LFxuICAgICAgICAgICAgZGVyZWdpc3RlckRvY3VtZW50SW50ZXJhY3Rpb25IYW5kbGVyOiBmdW5jdGlvbiAoZXZ0VHlwZSwgaGFuZGxlcikge1xuICAgICAgICAgICAgICAgIHJldHVybiBkb2N1bWVudC5kb2N1bWVudEVsZW1lbnQucmVtb3ZlRXZlbnRMaXN0ZW5lcihldnRUeXBlLCBoYW5kbGVyLCBhcHBseVBhc3NpdmUoKSk7XG4gICAgICAgICAgICB9LFxuICAgICAgICAgICAgZGVyZWdpc3RlckludGVyYWN0aW9uSGFuZGxlcjogZnVuY3Rpb24gKGV2dFR5cGUsIGhhbmRsZXIpIHtcbiAgICAgICAgICAgICAgICByZXR1cm4gaW5zdGFuY2Uucm9vdF8ucmVtb3ZlRXZlbnRMaXN0ZW5lcihldnRUeXBlLCBoYW5kbGVyLCBhcHBseVBhc3NpdmUoKSk7XG4gICAgICAgICAgICB9LFxuICAgICAgICAgICAgZGVyZWdpc3RlclJlc2l6ZUhhbmRsZXI6IGZ1bmN0aW9uIChoYW5kbGVyKSB7IHJldHVybiB3aW5kb3cucmVtb3ZlRXZlbnRMaXN0ZW5lcigncmVzaXplJywgaGFuZGxlcik7IH0sXG4gICAgICAgICAgICBnZXRXaW5kb3dQYWdlT2Zmc2V0OiBmdW5jdGlvbiAoKSB7IHJldHVybiAoeyB4OiB3aW5kb3cucGFnZVhPZmZzZXQsIHk6IHdpbmRvdy5wYWdlWU9mZnNldCB9KTsgfSxcbiAgICAgICAgICAgIGlzU3VyZmFjZUFjdGl2ZTogZnVuY3Rpb24gKCkgeyByZXR1cm4gbWF0Y2hlcyhpbnN0YW5jZS5yb290XywgJzphY3RpdmUnKTsgfSxcbiAgICAgICAgICAgIGlzU3VyZmFjZURpc2FibGVkOiBmdW5jdGlvbiAoKSB7IHJldHVybiBCb29sZWFuKGluc3RhbmNlLmRpc2FibGVkKTsgfSxcbiAgICAgICAgICAgIGlzVW5ib3VuZGVkOiBmdW5jdGlvbiAoKSB7IHJldHVybiBCb29sZWFuKGluc3RhbmNlLnVuYm91bmRlZCk7IH0sXG4gICAgICAgICAgICByZWdpc3RlckRvY3VtZW50SW50ZXJhY3Rpb25IYW5kbGVyOiBmdW5jdGlvbiAoZXZ0VHlwZSwgaGFuZGxlcikge1xuICAgICAgICAgICAgICAgIHJldHVybiBkb2N1bWVudC5kb2N1bWVudEVsZW1lbnQuYWRkRXZlbnRMaXN0ZW5lcihldnRUeXBlLCBoYW5kbGVyLCBhcHBseVBhc3NpdmUoKSk7XG4gICAgICAgICAgICB9LFxuICAgICAgICAgICAgcmVnaXN0ZXJJbnRlcmFjdGlvbkhhbmRsZXI6IGZ1bmN0aW9uIChldnRUeXBlLCBoYW5kbGVyKSB7XG4gICAgICAgICAgICAgICAgcmV0dXJuIGluc3RhbmNlLnJvb3RfLmFkZEV2ZW50TGlzdGVuZXIoZXZ0VHlwZSwgaGFuZGxlciwgYXBwbHlQYXNzaXZlKCkpO1xuICAgICAgICAgICAgfSxcbiAgICAgICAgICAgIHJlZ2lzdGVyUmVzaXplSGFuZGxlcjogZnVuY3Rpb24gKGhhbmRsZXIpIHsgcmV0dXJuIHdpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdyZXNpemUnLCBoYW5kbGVyKTsgfSxcbiAgICAgICAgICAgIHJlbW92ZUNsYXNzOiBmdW5jdGlvbiAoY2xhc3NOYW1lKSB7IHJldHVybiBpbnN0YW5jZS5yb290Xy5jbGFzc0xpc3QucmVtb3ZlKGNsYXNzTmFtZSk7IH0sXG4gICAgICAgICAgICB1cGRhdGVDc3NWYXJpYWJsZTogZnVuY3Rpb24gKHZhck5hbWUsIHZhbHVlKSB7IHJldHVybiBpbnN0YW5jZS5yb290Xy5zdHlsZS5zZXRQcm9wZXJ0eSh2YXJOYW1lLCB2YWx1ZSk7IH0sXG4gICAgICAgIH07XG4gICAgfTtcbiAgICBPYmplY3QuZGVmaW5lUHJvcGVydHkoTURDUmlwcGxlLnByb3RvdHlwZSwgXCJ1bmJvdW5kZWRcIiwge1xuICAgICAgICBnZXQ6IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIHJldHVybiBCb29sZWFuKHRoaXMudW5ib3VuZGVkXyk7XG4gICAgICAgIH0sXG4gICAgICAgIHNldDogZnVuY3Rpb24gKHVuYm91bmRlZCkge1xuICAgICAgICAgICAgdGhpcy51bmJvdW5kZWRfID0gQm9vbGVhbih1bmJvdW5kZWQpO1xuICAgICAgICAgICAgdGhpcy5zZXRVbmJvdW5kZWRfKCk7XG4gICAgICAgIH0sXG4gICAgICAgIGVudW1lcmFibGU6IHRydWUsXG4gICAgICAgIGNvbmZpZ3VyYWJsZTogdHJ1ZVxuICAgIH0pO1xuICAgIE1EQ1JpcHBsZS5wcm90b3R5cGUuYWN0aXZhdGUgPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIHRoaXMuZm91bmRhdGlvbl8uYWN0aXZhdGUoKTtcbiAgICB9O1xuICAgIE1EQ1JpcHBsZS5wcm90b3R5cGUuZGVhY3RpdmF0ZSA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdGhpcy5mb3VuZGF0aW9uXy5kZWFjdGl2YXRlKCk7XG4gICAgfTtcbiAgICBNRENSaXBwbGUucHJvdG90eXBlLmxheW91dCA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdGhpcy5mb3VuZGF0aW9uXy5sYXlvdXQoKTtcbiAgICB9O1xuICAgIE1EQ1JpcHBsZS5wcm90b3R5cGUuZ2V0RGVmYXVsdEZvdW5kYXRpb24gPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIHJldHVybiBuZXcgTURDUmlwcGxlRm91bmRhdGlvbihNRENSaXBwbGUuY3JlYXRlQWRhcHRlcih0aGlzKSk7XG4gICAgfTtcbiAgICBNRENSaXBwbGUucHJvdG90eXBlLmluaXRpYWxTeW5jV2l0aERPTSA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdmFyIHJvb3QgPSB0aGlzLnJvb3RfO1xuICAgICAgICB0aGlzLnVuYm91bmRlZCA9ICdtZGNSaXBwbGVJc1VuYm91bmRlZCcgaW4gcm9vdC5kYXRhc2V0O1xuICAgIH07XG4gICAgLyoqXG4gICAgICogQ2xvc3VyZSBDb21waWxlciB0aHJvd3MgYW4gYWNjZXNzIGNvbnRyb2wgZXJyb3Igd2hlbiBkaXJlY3RseSBhY2Nlc3NpbmcgYVxuICAgICAqIHByb3RlY3RlZCBvciBwcml2YXRlIHByb3BlcnR5IGluc2lkZSBhIGdldHRlci9zZXR0ZXIsIGxpa2UgdW5ib3VuZGVkIGFib3ZlLlxuICAgICAqIEJ5IGFjY2Vzc2luZyB0aGUgcHJvdGVjdGVkIHByb3BlcnR5IGluc2lkZSBhIG1ldGhvZCwgd2Ugc29sdmUgdGhhdCBwcm9ibGVtLlxuICAgICAqIFRoYXQncyB3aHkgdGhpcyBmdW5jdGlvbiBleGlzdHMuXG4gICAgICovXG4gICAgTURDUmlwcGxlLnByb3RvdHlwZS5zZXRVbmJvdW5kZWRfID0gZnVuY3Rpb24gKCkge1xuICAgICAgICB0aGlzLmZvdW5kYXRpb25fLnNldFVuYm91bmRlZChCb29sZWFuKHRoaXMudW5ib3VuZGVkXykpO1xuICAgIH07XG4gICAgcmV0dXJuIE1EQ1JpcHBsZTtcbn0oTURDQ29tcG9uZW50KSk7XG5leHBvcnQgeyBNRENSaXBwbGUgfTtcbi8vIyBzb3VyY2VNYXBwaW5nVVJMPWNvbXBvbmVudC5qcy5tYXAiXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./node_modules/@material/ripple/component.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MDCRipple", function() { return MDCRipple; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/base/component */ "./node_modules/@material/base/component.js");
+/* harmony import */ var _material_dom_events__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/dom/events */ "./node_modules/@material/dom/events.js");
+/* harmony import */ var _material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material/dom/ponyfill */ "./node_modules/@material/dom/ponyfill.js");
+/* harmony import */ var _foundation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./foundation */ "./node_modules/@material/ripple/foundation.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./util */ "./node_modules/@material/ripple/util.js");
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+
+
+var MDCRipple = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](MDCRipple, _super);
+    function MDCRipple() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.disabled = false;
+        return _this;
+    }
+    MDCRipple.attachTo = function (root, opts) {
+        if (opts === void 0) { opts = { isUnbounded: undefined }; }
+        var ripple = new MDCRipple(root);
+        // Only override unbounded behavior if option is explicitly specified
+        if (opts.isUnbounded !== undefined) {
+            ripple.unbounded = opts.isUnbounded;
+        }
+        return ripple;
+    };
+    MDCRipple.createAdapter = function (instance) {
+        return {
+            addClass: function (className) { return instance.root_.classList.add(className); },
+            browserSupportsCssVars: function () { return _util__WEBPACK_IMPORTED_MODULE_5__["supportsCssVariables"](window); },
+            computeBoundingRect: function () { return instance.root_.getBoundingClientRect(); },
+            containsEventTarget: function (target) { return instance.root_.contains(target); },
+            deregisterDocumentInteractionHandler: function (evtType, handler) {
+                return document.documentElement.removeEventListener(evtType, handler, Object(_material_dom_events__WEBPACK_IMPORTED_MODULE_2__["applyPassive"])());
+            },
+            deregisterInteractionHandler: function (evtType, handler) {
+                return instance.root_.removeEventListener(evtType, handler, Object(_material_dom_events__WEBPACK_IMPORTED_MODULE_2__["applyPassive"])());
+            },
+            deregisterResizeHandler: function (handler) { return window.removeEventListener('resize', handler); },
+            getWindowPageOffset: function () { return ({ x: window.pageXOffset, y: window.pageYOffset }); },
+            isSurfaceActive: function () { return Object(_material_dom_ponyfill__WEBPACK_IMPORTED_MODULE_3__["matches"])(instance.root_, ':active'); },
+            isSurfaceDisabled: function () { return Boolean(instance.disabled); },
+            isUnbounded: function () { return Boolean(instance.unbounded); },
+            registerDocumentInteractionHandler: function (evtType, handler) {
+                return document.documentElement.addEventListener(evtType, handler, Object(_material_dom_events__WEBPACK_IMPORTED_MODULE_2__["applyPassive"])());
+            },
+            registerInteractionHandler: function (evtType, handler) {
+                return instance.root_.addEventListener(evtType, handler, Object(_material_dom_events__WEBPACK_IMPORTED_MODULE_2__["applyPassive"])());
+            },
+            registerResizeHandler: function (handler) { return window.addEventListener('resize', handler); },
+            removeClass: function (className) { return instance.root_.classList.remove(className); },
+            updateCssVariable: function (varName, value) { return instance.root_.style.setProperty(varName, value); },
+        };
+    };
+    Object.defineProperty(MDCRipple.prototype, "unbounded", {
+        get: function () {
+            return Boolean(this.unbounded_);
+        },
+        set: function (unbounded) {
+            this.unbounded_ = Boolean(unbounded);
+            this.setUnbounded_();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    MDCRipple.prototype.activate = function () {
+        this.foundation_.activate();
+    };
+    MDCRipple.prototype.deactivate = function () {
+        this.foundation_.deactivate();
+    };
+    MDCRipple.prototype.layout = function () {
+        this.foundation_.layout();
+    };
+    MDCRipple.prototype.getDefaultFoundation = function () {
+        return new _foundation__WEBPACK_IMPORTED_MODULE_4__["MDCRippleFoundation"](MDCRipple.createAdapter(this));
+    };
+    MDCRipple.prototype.initialSyncWithDOM = function () {
+        var root = this.root_;
+        this.unbounded = 'mdcRippleIsUnbounded' in root.dataset;
+    };
+    /**
+     * Closure Compiler throws an access control error when directly accessing a
+     * protected or private property inside a getter/setter, like unbounded above.
+     * By accessing the protected property inside a method, we solve that problem.
+     * That's why this function exists.
+     */
+    MDCRipple.prototype.setUnbounded_ = function () {
+        this.foundation_.setUnbounded(Boolean(this.unbounded_));
+    };
+    return MDCRipple;
+}(_material_base_component__WEBPACK_IMPORTED_MODULE_1__["MDCComponent"]));
+
+//# sourceMappingURL=component.js.map
 
 /***/ }),
 
@@ -321,7 +2253,58 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"cssClasses\", function() { return cssClasses; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"strings\", function() { return strings; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"numbers\", function() { return numbers; });\n/**\n * @license\n * Copyright 2016 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\nvar cssClasses = {\n    // Ripple is a special case where the \"root\" component is really a \"mixin\" of sorts,\n    // given that it's an 'upgrade' to an existing component. That being said it is the root\n    // CSS class that all other CSS classes derive from.\n    BG_FOCUSED: 'mdc-ripple-upgraded--background-focused',\n    FG_ACTIVATION: 'mdc-ripple-upgraded--foreground-activation',\n    FG_DEACTIVATION: 'mdc-ripple-upgraded--foreground-deactivation',\n    ROOT: 'mdc-ripple-upgraded',\n    UNBOUNDED: 'mdc-ripple-upgraded--unbounded',\n};\nvar strings = {\n    VAR_FG_SCALE: '--mdc-ripple-fg-scale',\n    VAR_FG_SIZE: '--mdc-ripple-fg-size',\n    VAR_FG_TRANSLATE_END: '--mdc-ripple-fg-translate-end',\n    VAR_FG_TRANSLATE_START: '--mdc-ripple-fg-translate-start',\n    VAR_LEFT: '--mdc-ripple-left',\n    VAR_TOP: '--mdc-ripple-top',\n};\nvar numbers = {\n    DEACTIVATION_TIMEOUT_MS: 225,\n    FG_DEACTIVATION_MS: 150,\n    INITIAL_ORIGIN_SCALE: 0.6,\n    PADDING: 10,\n    TAP_DELAY_MS: 300,\n};\n//# sourceMappingURL=constants.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL3JpcHBsZS9jb25zdGFudHMuanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL3JpcHBsZS9jb25zdGFudHMuanM/NjQ1ZSJdLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEBsaWNlbnNlXG4gKiBDb3B5cmlnaHQgMjAxNiBHb29nbGUgSW5jLlxuICpcbiAqIFBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHlcbiAqIG9mIHRoaXMgc29mdHdhcmUgYW5kIGFzc29jaWF0ZWQgZG9jdW1lbnRhdGlvbiBmaWxlcyAodGhlIFwiU29mdHdhcmVcIiksIHRvIGRlYWxcbiAqIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgd2l0aG91dCBsaW1pdGF0aW9uIHRoZSByaWdodHNcbiAqIHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwgZGlzdHJpYnV0ZSwgc3VibGljZW5zZSwgYW5kL29yIHNlbGxcbiAqIGNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpc1xuICogZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvIHRoZSBmb2xsb3dpbmcgY29uZGl0aW9uczpcbiAqXG4gKiBUaGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBwZXJtaXNzaW9uIG5vdGljZSBzaGFsbCBiZSBpbmNsdWRlZCBpblxuICogYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuXG4gKlxuICogVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEIFwiQVMgSVNcIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUlxuICogSU1QTElFRCwgSU5DTFVESU5HIEJVVCBOT1QgTElNSVRFRCBUTyBUSEUgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFksXG4gKiBGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRSBBTkQgTk9OSU5GUklOR0VNRU5ULiBJTiBOTyBFVkVOVCBTSEFMTCBUSEVcbiAqIEFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVJcbiAqIExJQUJJTElUWSwgV0hFVEhFUiBJTiBBTiBBQ1RJT04gT0YgQ09OVFJBQ1QsIFRPUlQgT1IgT1RIRVJXSVNFLCBBUklTSU5HIEZST00sXG4gKiBPVVQgT0YgT1IgSU4gQ09OTkVDVElPTiBXSVRIIFRIRSBTT0ZUV0FSRSBPUiBUSEUgVVNFIE9SIE9USEVSIERFQUxJTkdTIElOXG4gKiBUSEUgU09GVFdBUkUuXG4gKi9cbmV4cG9ydCB2YXIgY3NzQ2xhc3NlcyA9IHtcbiAgICAvLyBSaXBwbGUgaXMgYSBzcGVjaWFsIGNhc2Ugd2hlcmUgdGhlIFwicm9vdFwiIGNvbXBvbmVudCBpcyByZWFsbHkgYSBcIm1peGluXCIgb2Ygc29ydHMsXG4gICAgLy8gZ2l2ZW4gdGhhdCBpdCdzIGFuICd1cGdyYWRlJyB0byBhbiBleGlzdGluZyBjb21wb25lbnQuIFRoYXQgYmVpbmcgc2FpZCBpdCBpcyB0aGUgcm9vdFxuICAgIC8vIENTUyBjbGFzcyB0aGF0IGFsbCBvdGhlciBDU1MgY2xhc3NlcyBkZXJpdmUgZnJvbS5cbiAgICBCR19GT0NVU0VEOiAnbWRjLXJpcHBsZS11cGdyYWRlZC0tYmFja2dyb3VuZC1mb2N1c2VkJyxcbiAgICBGR19BQ1RJVkFUSU9OOiAnbWRjLXJpcHBsZS11cGdyYWRlZC0tZm9yZWdyb3VuZC1hY3RpdmF0aW9uJyxcbiAgICBGR19ERUFDVElWQVRJT046ICdtZGMtcmlwcGxlLXVwZ3JhZGVkLS1mb3JlZ3JvdW5kLWRlYWN0aXZhdGlvbicsXG4gICAgUk9PVDogJ21kYy1yaXBwbGUtdXBncmFkZWQnLFxuICAgIFVOQk9VTkRFRDogJ21kYy1yaXBwbGUtdXBncmFkZWQtLXVuYm91bmRlZCcsXG59O1xuZXhwb3J0IHZhciBzdHJpbmdzID0ge1xuICAgIFZBUl9GR19TQ0FMRTogJy0tbWRjLXJpcHBsZS1mZy1zY2FsZScsXG4gICAgVkFSX0ZHX1NJWkU6ICctLW1kYy1yaXBwbGUtZmctc2l6ZScsXG4gICAgVkFSX0ZHX1RSQU5TTEFURV9FTkQ6ICctLW1kYy1yaXBwbGUtZmctdHJhbnNsYXRlLWVuZCcsXG4gICAgVkFSX0ZHX1RSQU5TTEFURV9TVEFSVDogJy0tbWRjLXJpcHBsZS1mZy10cmFuc2xhdGUtc3RhcnQnLFxuICAgIFZBUl9MRUZUOiAnLS1tZGMtcmlwcGxlLWxlZnQnLFxuICAgIFZBUl9UT1A6ICctLW1kYy1yaXBwbGUtdG9wJyxcbn07XG5leHBvcnQgdmFyIG51bWJlcnMgPSB7XG4gICAgREVBQ1RJVkFUSU9OX1RJTUVPVVRfTVM6IDIyNSxcbiAgICBGR19ERUFDVElWQVRJT05fTVM6IDE1MCxcbiAgICBJTklUSUFMX09SSUdJTl9TQ0FMRTogMC42LFxuICAgIFBBRERJTkc6IDEwLFxuICAgIFRBUF9ERUxBWV9NUzogMzAwLFxufTtcbi8vIyBzb3VyY2VNYXBwaW5nVVJMPWNvbnN0YW50cy5qcy5tYXAiXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./node_modules/@material/ripple/constants.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cssClasses", function() { return cssClasses; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "strings", function() { return strings; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "numbers", function() { return numbers; });
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+var cssClasses = {
+    // Ripple is a special case where the "root" component is really a "mixin" of sorts,
+    // given that it's an 'upgrade' to an existing component. That being said it is the root
+    // CSS class that all other CSS classes derive from.
+    BG_FOCUSED: 'mdc-ripple-upgraded--background-focused',
+    FG_ACTIVATION: 'mdc-ripple-upgraded--foreground-activation',
+    FG_DEACTIVATION: 'mdc-ripple-upgraded--foreground-deactivation',
+    ROOT: 'mdc-ripple-upgraded',
+    UNBOUNDED: 'mdc-ripple-upgraded--unbounded',
+};
+var strings = {
+    VAR_FG_SCALE: '--mdc-ripple-fg-scale',
+    VAR_FG_SIZE: '--mdc-ripple-fg-size',
+    VAR_FG_TRANSLATE_END: '--mdc-ripple-fg-translate-end',
+    VAR_FG_TRANSLATE_START: '--mdc-ripple-fg-translate-start',
+    VAR_LEFT: '--mdc-ripple-left',
+    VAR_TOP: '--mdc-ripple-top',
+};
+var numbers = {
+    DEACTIVATION_TIMEOUT_MS: 225,
+    FG_DEACTIVATION_MS: 150,
+    INITIAL_ORIGIN_SCALE: 0.6,
+    PADDING: 10,
+    TAP_DELAY_MS: 300,
+};
+//# sourceMappingURL=constants.js.map
 
 /***/ }),
 
@@ -333,7 +2316,480 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"MDCRippleFoundation\", function() { return MDCRippleFoundation; });\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _material_base_foundation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/base/foundation */ \"./node_modules/@material/base/foundation.js\");\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./constants */ \"./node_modules/@material/ripple/constants.js\");\n/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./util */ \"./node_modules/@material/ripple/util.js\");\n/**\n * @license\n * Copyright 2016 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\n\n\n\n\n// Activation events registered on the root element of each instance for activation\nvar ACTIVATION_EVENT_TYPES = [\n    'touchstart', 'pointerdown', 'mousedown', 'keydown',\n];\n// Deactivation events registered on documentElement when a pointer-related down event occurs\nvar POINTER_DEACTIVATION_EVENT_TYPES = [\n    'touchend', 'pointerup', 'mouseup', 'contextmenu',\n];\n// simultaneous nested activations\nvar activatedTargets = [];\nvar MDCRippleFoundation = /** @class */ (function (_super) {\n    tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"](MDCRippleFoundation, _super);\n    function MDCRippleFoundation(adapter) {\n        var _this = _super.call(this, tslib__WEBPACK_IMPORTED_MODULE_0__[\"__assign\"]({}, MDCRippleFoundation.defaultAdapter, adapter)) || this;\n        _this.activationAnimationHasEnded_ = false;\n        _this.activationTimer_ = 0;\n        _this.fgDeactivationRemovalTimer_ = 0;\n        _this.fgScale_ = '0';\n        _this.frame_ = { width: 0, height: 0 };\n        _this.initialSize_ = 0;\n        _this.layoutFrame_ = 0;\n        _this.maxRadius_ = 0;\n        _this.unboundedCoords_ = { left: 0, top: 0 };\n        _this.activationState_ = _this.defaultActivationState_();\n        _this.activationTimerCallback_ = function () {\n            _this.activationAnimationHasEnded_ = true;\n            _this.runDeactivationUXLogicIfReady_();\n        };\n        _this.activateHandler_ = function (e) { return _this.activate_(e); };\n        _this.deactivateHandler_ = function () { return _this.deactivate_(); };\n        _this.focusHandler_ = function () { return _this.handleFocus(); };\n        _this.blurHandler_ = function () { return _this.handleBlur(); };\n        _this.resizeHandler_ = function () { return _this.layout(); };\n        return _this;\n    }\n    Object.defineProperty(MDCRippleFoundation, \"cssClasses\", {\n        get: function () {\n            return _constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"];\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(MDCRippleFoundation, \"strings\", {\n        get: function () {\n            return _constants__WEBPACK_IMPORTED_MODULE_2__[\"strings\"];\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(MDCRippleFoundation, \"numbers\", {\n        get: function () {\n            return _constants__WEBPACK_IMPORTED_MODULE_2__[\"numbers\"];\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(MDCRippleFoundation, \"defaultAdapter\", {\n        get: function () {\n            return {\n                addClass: function () { return undefined; },\n                browserSupportsCssVars: function () { return true; },\n                computeBoundingRect: function () { return ({ top: 0, right: 0, bottom: 0, left: 0, width: 0, height: 0 }); },\n                containsEventTarget: function () { return true; },\n                deregisterDocumentInteractionHandler: function () { return undefined; },\n                deregisterInteractionHandler: function () { return undefined; },\n                deregisterResizeHandler: function () { return undefined; },\n                getWindowPageOffset: function () { return ({ x: 0, y: 0 }); },\n                isSurfaceActive: function () { return true; },\n                isSurfaceDisabled: function () { return true; },\n                isUnbounded: function () { return true; },\n                registerDocumentInteractionHandler: function () { return undefined; },\n                registerInteractionHandler: function () { return undefined; },\n                registerResizeHandler: function () { return undefined; },\n                removeClass: function () { return undefined; },\n                updateCssVariable: function () { return undefined; },\n            };\n        },\n        enumerable: true,\n        configurable: true\n    });\n    MDCRippleFoundation.prototype.init = function () {\n        var _this = this;\n        var supportsPressRipple = this.supportsPressRipple_();\n        this.registerRootHandlers_(supportsPressRipple);\n        if (supportsPressRipple) {\n            var _a = MDCRippleFoundation.cssClasses, ROOT_1 = _a.ROOT, UNBOUNDED_1 = _a.UNBOUNDED;\n            requestAnimationFrame(function () {\n                _this.adapter_.addClass(ROOT_1);\n                if (_this.adapter_.isUnbounded()) {\n                    _this.adapter_.addClass(UNBOUNDED_1);\n                    // Unbounded ripples need layout logic applied immediately to set coordinates for both shade and ripple\n                    _this.layoutInternal_();\n                }\n            });\n        }\n    };\n    MDCRippleFoundation.prototype.destroy = function () {\n        var _this = this;\n        if (this.supportsPressRipple_()) {\n            if (this.activationTimer_) {\n                clearTimeout(this.activationTimer_);\n                this.activationTimer_ = 0;\n                this.adapter_.removeClass(MDCRippleFoundation.cssClasses.FG_ACTIVATION);\n            }\n            if (this.fgDeactivationRemovalTimer_) {\n                clearTimeout(this.fgDeactivationRemovalTimer_);\n                this.fgDeactivationRemovalTimer_ = 0;\n                this.adapter_.removeClass(MDCRippleFoundation.cssClasses.FG_DEACTIVATION);\n            }\n            var _a = MDCRippleFoundation.cssClasses, ROOT_2 = _a.ROOT, UNBOUNDED_2 = _a.UNBOUNDED;\n            requestAnimationFrame(function () {\n                _this.adapter_.removeClass(ROOT_2);\n                _this.adapter_.removeClass(UNBOUNDED_2);\n                _this.removeCssVars_();\n            });\n        }\n        this.deregisterRootHandlers_();\n        this.deregisterDeactivationHandlers_();\n    };\n    /**\n     * @param evt Optional event containing position information.\n     */\n    MDCRippleFoundation.prototype.activate = function (evt) {\n        this.activate_(evt);\n    };\n    MDCRippleFoundation.prototype.deactivate = function () {\n        this.deactivate_();\n    };\n    MDCRippleFoundation.prototype.layout = function () {\n        var _this = this;\n        if (this.layoutFrame_) {\n            cancelAnimationFrame(this.layoutFrame_);\n        }\n        this.layoutFrame_ = requestAnimationFrame(function () {\n            _this.layoutInternal_();\n            _this.layoutFrame_ = 0;\n        });\n    };\n    MDCRippleFoundation.prototype.setUnbounded = function (unbounded) {\n        var UNBOUNDED = MDCRippleFoundation.cssClasses.UNBOUNDED;\n        if (unbounded) {\n            this.adapter_.addClass(UNBOUNDED);\n        }\n        else {\n            this.adapter_.removeClass(UNBOUNDED);\n        }\n    };\n    MDCRippleFoundation.prototype.handleFocus = function () {\n        var _this = this;\n        requestAnimationFrame(function () {\n            return _this.adapter_.addClass(MDCRippleFoundation.cssClasses.BG_FOCUSED);\n        });\n    };\n    MDCRippleFoundation.prototype.handleBlur = function () {\n        var _this = this;\n        requestAnimationFrame(function () {\n            return _this.adapter_.removeClass(MDCRippleFoundation.cssClasses.BG_FOCUSED);\n        });\n    };\n    /**\n     * We compute this property so that we are not querying information about the client\n     * until the point in time where the foundation requests it. This prevents scenarios where\n     * client-side feature-detection may happen too early, such as when components are rendered on the server\n     * and then initialized at mount time on the client.\n     */\n    MDCRippleFoundation.prototype.supportsPressRipple_ = function () {\n        return this.adapter_.browserSupportsCssVars();\n    };\n    MDCRippleFoundation.prototype.defaultActivationState_ = function () {\n        return {\n            activationEvent: undefined,\n            hasDeactivationUXRun: false,\n            isActivated: false,\n            isProgrammatic: false,\n            wasActivatedByPointer: false,\n            wasElementMadeActive: false,\n        };\n    };\n    /**\n     * supportsPressRipple Passed from init to save a redundant function call\n     */\n    MDCRippleFoundation.prototype.registerRootHandlers_ = function (supportsPressRipple) {\n        var _this = this;\n        if (supportsPressRipple) {\n            ACTIVATION_EVENT_TYPES.forEach(function (evtType) {\n                _this.adapter_.registerInteractionHandler(evtType, _this.activateHandler_);\n            });\n            if (this.adapter_.isUnbounded()) {\n                this.adapter_.registerResizeHandler(this.resizeHandler_);\n            }\n        }\n        this.adapter_.registerInteractionHandler('focus', this.focusHandler_);\n        this.adapter_.registerInteractionHandler('blur', this.blurHandler_);\n    };\n    MDCRippleFoundation.prototype.registerDeactivationHandlers_ = function (evt) {\n        var _this = this;\n        if (evt.type === 'keydown') {\n            this.adapter_.registerInteractionHandler('keyup', this.deactivateHandler_);\n        }\n        else {\n            POINTER_DEACTIVATION_EVENT_TYPES.forEach(function (evtType) {\n                _this.adapter_.registerDocumentInteractionHandler(evtType, _this.deactivateHandler_);\n            });\n        }\n    };\n    MDCRippleFoundation.prototype.deregisterRootHandlers_ = function () {\n        var _this = this;\n        ACTIVATION_EVENT_TYPES.forEach(function (evtType) {\n            _this.adapter_.deregisterInteractionHandler(evtType, _this.activateHandler_);\n        });\n        this.adapter_.deregisterInteractionHandler('focus', this.focusHandler_);\n        this.adapter_.deregisterInteractionHandler('blur', this.blurHandler_);\n        if (this.adapter_.isUnbounded()) {\n            this.adapter_.deregisterResizeHandler(this.resizeHandler_);\n        }\n    };\n    MDCRippleFoundation.prototype.deregisterDeactivationHandlers_ = function () {\n        var _this = this;\n        this.adapter_.deregisterInteractionHandler('keyup', this.deactivateHandler_);\n        POINTER_DEACTIVATION_EVENT_TYPES.forEach(function (evtType) {\n            _this.adapter_.deregisterDocumentInteractionHandler(evtType, _this.deactivateHandler_);\n        });\n    };\n    MDCRippleFoundation.prototype.removeCssVars_ = function () {\n        var _this = this;\n        var rippleStrings = MDCRippleFoundation.strings;\n        var keys = Object.keys(rippleStrings);\n        keys.forEach(function (key) {\n            if (key.indexOf('VAR_') === 0) {\n                _this.adapter_.updateCssVariable(rippleStrings[key], null);\n            }\n        });\n    };\n    MDCRippleFoundation.prototype.activate_ = function (evt) {\n        var _this = this;\n        if (this.adapter_.isSurfaceDisabled()) {\n            return;\n        }\n        var activationState = this.activationState_;\n        if (activationState.isActivated) {\n            return;\n        }\n        // Avoid reacting to follow-on events fired by touch device after an already-processed user interaction\n        var previousActivationEvent = this.previousActivationEvent_;\n        var isSameInteraction = previousActivationEvent && evt !== undefined && previousActivationEvent.type !== evt.type;\n        if (isSameInteraction) {\n            return;\n        }\n        activationState.isActivated = true;\n        activationState.isProgrammatic = evt === undefined;\n        activationState.activationEvent = evt;\n        activationState.wasActivatedByPointer = activationState.isProgrammatic ? false : evt !== undefined && (evt.type === 'mousedown' || evt.type === 'touchstart' || evt.type === 'pointerdown');\n        var hasActivatedChild = evt !== undefined && activatedTargets.length > 0 && activatedTargets.some(function (target) { return _this.adapter_.containsEventTarget(target); });\n        if (hasActivatedChild) {\n            // Immediately reset activation state, while preserving logic that prevents touch follow-on events\n            this.resetActivationState_();\n            return;\n        }\n        if (evt !== undefined) {\n            activatedTargets.push(evt.target);\n            this.registerDeactivationHandlers_(evt);\n        }\n        activationState.wasElementMadeActive = this.checkElementMadeActive_(evt);\n        if (activationState.wasElementMadeActive) {\n            this.animateActivation_();\n        }\n        requestAnimationFrame(function () {\n            // Reset array on next frame after the current event has had a chance to bubble to prevent ancestor ripples\n            activatedTargets = [];\n            if (!activationState.wasElementMadeActive\n                && evt !== undefined\n                && (evt.key === ' ' || evt.keyCode === 32)) {\n                // If space was pressed, try again within an rAF call to detect :active, because different UAs report\n                // active states inconsistently when they're called within event handling code:\n                // - https://bugs.chromium.org/p/chromium/issues/detail?id=635971\n                // - https://bugzilla.mozilla.org/show_bug.cgi?id=1293741\n                // We try first outside rAF to support Edge, which does not exhibit this problem, but will crash if a CSS\n                // variable is set within a rAF callback for a submit button interaction (#2241).\n                activationState.wasElementMadeActive = _this.checkElementMadeActive_(evt);\n                if (activationState.wasElementMadeActive) {\n                    _this.animateActivation_();\n                }\n            }\n            if (!activationState.wasElementMadeActive) {\n                // Reset activation state immediately if element was not made active.\n                _this.activationState_ = _this.defaultActivationState_();\n            }\n        });\n    };\n    MDCRippleFoundation.prototype.checkElementMadeActive_ = function (evt) {\n        return (evt !== undefined && evt.type === 'keydown') ? this.adapter_.isSurfaceActive() : true;\n    };\n    MDCRippleFoundation.prototype.animateActivation_ = function () {\n        var _this = this;\n        var _a = MDCRippleFoundation.strings, VAR_FG_TRANSLATE_START = _a.VAR_FG_TRANSLATE_START, VAR_FG_TRANSLATE_END = _a.VAR_FG_TRANSLATE_END;\n        var _b = MDCRippleFoundation.cssClasses, FG_DEACTIVATION = _b.FG_DEACTIVATION, FG_ACTIVATION = _b.FG_ACTIVATION;\n        var DEACTIVATION_TIMEOUT_MS = MDCRippleFoundation.numbers.DEACTIVATION_TIMEOUT_MS;\n        this.layoutInternal_();\n        var translateStart = '';\n        var translateEnd = '';\n        if (!this.adapter_.isUnbounded()) {\n            var _c = this.getFgTranslationCoordinates_(), startPoint = _c.startPoint, endPoint = _c.endPoint;\n            translateStart = startPoint.x + \"px, \" + startPoint.y + \"px\";\n            translateEnd = endPoint.x + \"px, \" + endPoint.y + \"px\";\n        }\n        this.adapter_.updateCssVariable(VAR_FG_TRANSLATE_START, translateStart);\n        this.adapter_.updateCssVariable(VAR_FG_TRANSLATE_END, translateEnd);\n        // Cancel any ongoing activation/deactivation animations\n        clearTimeout(this.activationTimer_);\n        clearTimeout(this.fgDeactivationRemovalTimer_);\n        this.rmBoundedActivationClasses_();\n        this.adapter_.removeClass(FG_DEACTIVATION);\n        // Force layout in order to re-trigger the animation.\n        this.adapter_.computeBoundingRect();\n        this.adapter_.addClass(FG_ACTIVATION);\n        this.activationTimer_ = setTimeout(function () { return _this.activationTimerCallback_(); }, DEACTIVATION_TIMEOUT_MS);\n    };\n    MDCRippleFoundation.prototype.getFgTranslationCoordinates_ = function () {\n        var _a = this.activationState_, activationEvent = _a.activationEvent, wasActivatedByPointer = _a.wasActivatedByPointer;\n        var startPoint;\n        if (wasActivatedByPointer) {\n            startPoint = Object(_util__WEBPACK_IMPORTED_MODULE_3__[\"getNormalizedEventCoords\"])(activationEvent, this.adapter_.getWindowPageOffset(), this.adapter_.computeBoundingRect());\n        }\n        else {\n            startPoint = {\n                x: this.frame_.width / 2,\n                y: this.frame_.height / 2,\n            };\n        }\n        // Center the element around the start point.\n        startPoint = {\n            x: startPoint.x - (this.initialSize_ / 2),\n            y: startPoint.y - (this.initialSize_ / 2),\n        };\n        var endPoint = {\n            x: (this.frame_.width / 2) - (this.initialSize_ / 2),\n            y: (this.frame_.height / 2) - (this.initialSize_ / 2),\n        };\n        return { startPoint: startPoint, endPoint: endPoint };\n    };\n    MDCRippleFoundation.prototype.runDeactivationUXLogicIfReady_ = function () {\n        var _this = this;\n        // This method is called both when a pointing device is released, and when the activation animation ends.\n        // The deactivation animation should only run after both of those occur.\n        var FG_DEACTIVATION = MDCRippleFoundation.cssClasses.FG_DEACTIVATION;\n        var _a = this.activationState_, hasDeactivationUXRun = _a.hasDeactivationUXRun, isActivated = _a.isActivated;\n        var activationHasEnded = hasDeactivationUXRun || !isActivated;\n        if (activationHasEnded && this.activationAnimationHasEnded_) {\n            this.rmBoundedActivationClasses_();\n            this.adapter_.addClass(FG_DEACTIVATION);\n            this.fgDeactivationRemovalTimer_ = setTimeout(function () {\n                _this.adapter_.removeClass(FG_DEACTIVATION);\n            }, _constants__WEBPACK_IMPORTED_MODULE_2__[\"numbers\"].FG_DEACTIVATION_MS);\n        }\n    };\n    MDCRippleFoundation.prototype.rmBoundedActivationClasses_ = function () {\n        var FG_ACTIVATION = MDCRippleFoundation.cssClasses.FG_ACTIVATION;\n        this.adapter_.removeClass(FG_ACTIVATION);\n        this.activationAnimationHasEnded_ = false;\n        this.adapter_.computeBoundingRect();\n    };\n    MDCRippleFoundation.prototype.resetActivationState_ = function () {\n        var _this = this;\n        this.previousActivationEvent_ = this.activationState_.activationEvent;\n        this.activationState_ = this.defaultActivationState_();\n        // Touch devices may fire additional events for the same interaction within a short time.\n        // Store the previous event until it's safe to assume that subsequent events are for new interactions.\n        setTimeout(function () { return _this.previousActivationEvent_ = undefined; }, MDCRippleFoundation.numbers.TAP_DELAY_MS);\n    };\n    MDCRippleFoundation.prototype.deactivate_ = function () {\n        var _this = this;\n        var activationState = this.activationState_;\n        // This can happen in scenarios such as when you have a keyup event that blurs the element.\n        if (!activationState.isActivated) {\n            return;\n        }\n        var state = tslib__WEBPACK_IMPORTED_MODULE_0__[\"__assign\"]({}, activationState);\n        if (activationState.isProgrammatic) {\n            requestAnimationFrame(function () { return _this.animateDeactivation_(state); });\n            this.resetActivationState_();\n        }\n        else {\n            this.deregisterDeactivationHandlers_();\n            requestAnimationFrame(function () {\n                _this.activationState_.hasDeactivationUXRun = true;\n                _this.animateDeactivation_(state);\n                _this.resetActivationState_();\n            });\n        }\n    };\n    MDCRippleFoundation.prototype.animateDeactivation_ = function (_a) {\n        var wasActivatedByPointer = _a.wasActivatedByPointer, wasElementMadeActive = _a.wasElementMadeActive;\n        if (wasActivatedByPointer || wasElementMadeActive) {\n            this.runDeactivationUXLogicIfReady_();\n        }\n    };\n    MDCRippleFoundation.prototype.layoutInternal_ = function () {\n        var _this = this;\n        this.frame_ = this.adapter_.computeBoundingRect();\n        var maxDim = Math.max(this.frame_.height, this.frame_.width);\n        // Surface diameter is treated differently for unbounded vs. bounded ripples.\n        // Unbounded ripple diameter is calculated smaller since the surface is expected to already be padded appropriately\n        // to extend the hitbox, and the ripple is expected to meet the edges of the padded hitbox (which is typically\n        // square). Bounded ripples, on the other hand, are fully expected to expand beyond the surface's longest diameter\n        // (calculated based on the diagonal plus a constant padding), and are clipped at the surface's border via\n        // `overflow: hidden`.\n        var getBoundedRadius = function () {\n            var hypotenuse = Math.sqrt(Math.pow(_this.frame_.width, 2) + Math.pow(_this.frame_.height, 2));\n            return hypotenuse + MDCRippleFoundation.numbers.PADDING;\n        };\n        this.maxRadius_ = this.adapter_.isUnbounded() ? maxDim : getBoundedRadius();\n        // Ripple is sized as a fraction of the largest dimension of the surface, then scales up using a CSS scale transform\n        var initialSize = Math.floor(maxDim * MDCRippleFoundation.numbers.INITIAL_ORIGIN_SCALE);\n        // Unbounded ripple size should always be even number to equally center align.\n        if (this.adapter_.isUnbounded() && initialSize % 2 !== 0) {\n            this.initialSize_ = initialSize - 1;\n        }\n        else {\n            this.initialSize_ = initialSize;\n        }\n        this.fgScale_ = \"\" + this.maxRadius_ / this.initialSize_;\n        this.updateLayoutCssVars_();\n    };\n    MDCRippleFoundation.prototype.updateLayoutCssVars_ = function () {\n        var _a = MDCRippleFoundation.strings, VAR_FG_SIZE = _a.VAR_FG_SIZE, VAR_LEFT = _a.VAR_LEFT, VAR_TOP = _a.VAR_TOP, VAR_FG_SCALE = _a.VAR_FG_SCALE;\n        this.adapter_.updateCssVariable(VAR_FG_SIZE, this.initialSize_ + \"px\");\n        this.adapter_.updateCssVariable(VAR_FG_SCALE, this.fgScale_);\n        if (this.adapter_.isUnbounded()) {\n            this.unboundedCoords_ = {\n                left: Math.round((this.frame_.width / 2) - (this.initialSize_ / 2)),\n                top: Math.round((this.frame_.height / 2) - (this.initialSize_ / 2)),\n            };\n            this.adapter_.updateCssVariable(VAR_LEFT, this.unboundedCoords_.left + \"px\");\n            this.adapter_.updateCssVariable(VAR_TOP, this.unboundedCoords_.top + \"px\");\n        }\n    };\n    return MDCRippleFoundation;\n}(_material_base_foundation__WEBPACK_IMPORTED_MODULE_1__[\"MDCFoundation\"]));\n\n// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.\n/* harmony default export */ __webpack_exports__[\"default\"] = (MDCRippleFoundation);\n//# sourceMappingURL=foundation.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL3JpcHBsZS9mb3VuZGF0aW9uLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vbm9kZV9tb2R1bGVzL0BtYXRlcmlhbC9yaXBwbGUvZm91bmRhdGlvbi5qcz80MzAzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQGxpY2Vuc2VcbiAqIENvcHlyaWdodCAyMDE2IEdvb2dsZSBJbmMuXG4gKlxuICogUGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weVxuICogb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgXCJTb2Z0d2FyZVwiKSwgdG8gZGVhbFxuICogaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0c1xuICogdG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3Igc2VsbFxuICogY29waWVzIG9mIHRoZSBTb2Z0d2FyZSwgYW5kIHRvIHBlcm1pdCBwZXJzb25zIHRvIHdob20gdGhlIFNvZnR3YXJlIGlzXG4gKiBmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOlxuICpcbiAqIFRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlIGluY2x1ZGVkIGluXG4gKiBhbGwgY29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS5cbiAqXG4gKiBUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgXCJBUyBJU1wiLCBXSVRIT1VUIFdBUlJBTlRZIE9GIEFOWSBLSU5ELCBFWFBSRVNTIE9SXG4gKiBJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSxcbiAqIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRVxuICogQVVUSE9SUyBPUiBDT1BZUklHSFQgSE9MREVSUyBCRSBMSUFCTEUgRk9SIEFOWSBDTEFJTSwgREFNQUdFUyBPUiBPVEhFUlxuICogTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSxcbiAqIE9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU5cbiAqIFRIRSBTT0ZUV0FSRS5cbiAqL1xuaW1wb3J0ICogYXMgdHNsaWJfMSBmcm9tIFwidHNsaWJcIjtcbmltcG9ydCB7IE1EQ0ZvdW5kYXRpb24gfSBmcm9tICdAbWF0ZXJpYWwvYmFzZS9mb3VuZGF0aW9uJztcbmltcG9ydCB7IGNzc0NsYXNzZXMsIG51bWJlcnMsIHN0cmluZ3MgfSBmcm9tICcuL2NvbnN0YW50cyc7XG5pbXBvcnQgeyBnZXROb3JtYWxpemVkRXZlbnRDb29yZHMgfSBmcm9tICcuL3V0aWwnO1xuLy8gQWN0aXZhdGlvbiBldmVudHMgcmVnaXN0ZXJlZCBvbiB0aGUgcm9vdCBlbGVtZW50IG9mIGVhY2ggaW5zdGFuY2UgZm9yIGFjdGl2YXRpb25cbnZhciBBQ1RJVkFUSU9OX0VWRU5UX1RZUEVTID0gW1xuICAgICd0b3VjaHN0YXJ0JywgJ3BvaW50ZXJkb3duJywgJ21vdXNlZG93bicsICdrZXlkb3duJyxcbl07XG4vLyBEZWFjdGl2YXRpb24gZXZlbnRzIHJlZ2lzdGVyZWQgb24gZG9jdW1lbnRFbGVtZW50IHdoZW4gYSBwb2ludGVyLXJlbGF0ZWQgZG93biBldmVudCBvY2N1cnNcbnZhciBQT0lOVEVSX0RFQUNUSVZBVElPTl9FVkVOVF9UWVBFUyA9IFtcbiAgICAndG91Y2hlbmQnLCAncG9pbnRlcnVwJywgJ21vdXNldXAnLCAnY29udGV4dG1lbnUnLFxuXTtcbi8vIHNpbXVsdGFuZW91cyBuZXN0ZWQgYWN0aXZhdGlvbnNcbnZhciBhY3RpdmF0ZWRUYXJnZXRzID0gW107XG52YXIgTURDUmlwcGxlRm91bmRhdGlvbiA9IC8qKiBAY2xhc3MgKi8gKGZ1bmN0aW9uIChfc3VwZXIpIHtcbiAgICB0c2xpYl8xLl9fZXh0ZW5kcyhNRENSaXBwbGVGb3VuZGF0aW9uLCBfc3VwZXIpO1xuICAgIGZ1bmN0aW9uIE1EQ1JpcHBsZUZvdW5kYXRpb24oYWRhcHRlcikge1xuICAgICAgICB2YXIgX3RoaXMgPSBfc3VwZXIuY2FsbCh0aGlzLCB0c2xpYl8xLl9fYXNzaWduKHt9LCBNRENSaXBwbGVGb3VuZGF0aW9uLmRlZmF1bHRBZGFwdGVyLCBhZGFwdGVyKSkgfHwgdGhpcztcbiAgICAgICAgX3RoaXMuYWN0aXZhdGlvbkFuaW1hdGlvbkhhc0VuZGVkXyA9IGZhbHNlO1xuICAgICAgICBfdGhpcy5hY3RpdmF0aW9uVGltZXJfID0gMDtcbiAgICAgICAgX3RoaXMuZmdEZWFjdGl2YXRpb25SZW1vdmFsVGltZXJfID0gMDtcbiAgICAgICAgX3RoaXMuZmdTY2FsZV8gPSAnMCc7XG4gICAgICAgIF90aGlzLmZyYW1lXyA9IHsgd2lkdGg6IDAsIGhlaWdodDogMCB9O1xuICAgICAgICBfdGhpcy5pbml0aWFsU2l6ZV8gPSAwO1xuICAgICAgICBfdGhpcy5sYXlvdXRGcmFtZV8gPSAwO1xuICAgICAgICBfdGhpcy5tYXhSYWRpdXNfID0gMDtcbiAgICAgICAgX3RoaXMudW5ib3VuZGVkQ29vcmRzXyA9IHsgbGVmdDogMCwgdG9wOiAwIH07XG4gICAgICAgIF90aGlzLmFjdGl2YXRpb25TdGF0ZV8gPSBfdGhpcy5kZWZhdWx0QWN0aXZhdGlvblN0YXRlXygpO1xuICAgICAgICBfdGhpcy5hY3RpdmF0aW9uVGltZXJDYWxsYmFja18gPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICBfdGhpcy5hY3RpdmF0aW9uQW5pbWF0aW9uSGFzRW5kZWRfID0gdHJ1ZTtcbiAgICAgICAgICAgIF90aGlzLnJ1bkRlYWN0aXZhdGlvblVYTG9naWNJZlJlYWR5XygpO1xuICAgICAgICB9O1xuICAgICAgICBfdGhpcy5hY3RpdmF0ZUhhbmRsZXJfID0gZnVuY3Rpb24gKGUpIHsgcmV0dXJuIF90aGlzLmFjdGl2YXRlXyhlKTsgfTtcbiAgICAgICAgX3RoaXMuZGVhY3RpdmF0ZUhhbmRsZXJfID0gZnVuY3Rpb24gKCkgeyByZXR1cm4gX3RoaXMuZGVhY3RpdmF0ZV8oKTsgfTtcbiAgICAgICAgX3RoaXMuZm9jdXNIYW5kbGVyXyA9IGZ1bmN0aW9uICgpIHsgcmV0dXJuIF90aGlzLmhhbmRsZUZvY3VzKCk7IH07XG4gICAgICAgIF90aGlzLmJsdXJIYW5kbGVyXyA9IGZ1bmN0aW9uICgpIHsgcmV0dXJuIF90aGlzLmhhbmRsZUJsdXIoKTsgfTtcbiAgICAgICAgX3RoaXMucmVzaXplSGFuZGxlcl8gPSBmdW5jdGlvbiAoKSB7IHJldHVybiBfdGhpcy5sYXlvdXQoKTsgfTtcbiAgICAgICAgcmV0dXJuIF90aGlzO1xuICAgIH1cbiAgICBPYmplY3QuZGVmaW5lUHJvcGVydHkoTURDUmlwcGxlRm91bmRhdGlvbiwgXCJjc3NDbGFzc2VzXCIsIHtcbiAgICAgICAgZ2V0OiBmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICByZXR1cm4gY3NzQ2xhc3NlcztcbiAgICAgICAgfSxcbiAgICAgICAgZW51bWVyYWJsZTogdHJ1ZSxcbiAgICAgICAgY29uZmlndXJhYmxlOiB0cnVlXG4gICAgfSk7XG4gICAgT2JqZWN0LmRlZmluZVByb3BlcnR5KE1EQ1JpcHBsZUZvdW5kYXRpb24sIFwic3RyaW5nc1wiLCB7XG4gICAgICAgIGdldDogZnVuY3Rpb24gKCkge1xuICAgICAgICAgICAgcmV0dXJuIHN0cmluZ3M7XG4gICAgICAgIH0sXG4gICAgICAgIGVudW1lcmFibGU6IHRydWUsXG4gICAgICAgIGNvbmZpZ3VyYWJsZTogdHJ1ZVxuICAgIH0pO1xuICAgIE9iamVjdC5kZWZpbmVQcm9wZXJ0eShNRENSaXBwbGVGb3VuZGF0aW9uLCBcIm51bWJlcnNcIiwge1xuICAgICAgICBnZXQ6IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIHJldHVybiBudW1iZXJzO1xuICAgICAgICB9LFxuICAgICAgICBlbnVtZXJhYmxlOiB0cnVlLFxuICAgICAgICBjb25maWd1cmFibGU6IHRydWVcbiAgICB9KTtcbiAgICBPYmplY3QuZGVmaW5lUHJvcGVydHkoTURDUmlwcGxlRm91bmRhdGlvbiwgXCJkZWZhdWx0QWRhcHRlclwiLCB7XG4gICAgICAgIGdldDogZnVuY3Rpb24gKCkge1xuICAgICAgICAgICAgcmV0dXJuIHtcbiAgICAgICAgICAgICAgICBhZGRDbGFzczogZnVuY3Rpb24gKCkgeyByZXR1cm4gdW5kZWZpbmVkOyB9LFxuICAgICAgICAgICAgICAgIGJyb3dzZXJTdXBwb3J0c0Nzc1ZhcnM6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIHRydWU7IH0sXG4gICAgICAgICAgICAgICAgY29tcHV0ZUJvdW5kaW5nUmVjdDogZnVuY3Rpb24gKCkgeyByZXR1cm4gKHsgdG9wOiAwLCByaWdodDogMCwgYm90dG9tOiAwLCBsZWZ0OiAwLCB3aWR0aDogMCwgaGVpZ2h0OiAwIH0pOyB9LFxuICAgICAgICAgICAgICAgIGNvbnRhaW5zRXZlbnRUYXJnZXQ6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIHRydWU7IH0sXG4gICAgICAgICAgICAgICAgZGVyZWdpc3RlckRvY3VtZW50SW50ZXJhY3Rpb25IYW5kbGVyOiBmdW5jdGlvbiAoKSB7IHJldHVybiB1bmRlZmluZWQ7IH0sXG4gICAgICAgICAgICAgICAgZGVyZWdpc3RlckludGVyYWN0aW9uSGFuZGxlcjogZnVuY3Rpb24gKCkgeyByZXR1cm4gdW5kZWZpbmVkOyB9LFxuICAgICAgICAgICAgICAgIGRlcmVnaXN0ZXJSZXNpemVIYW5kbGVyOiBmdW5jdGlvbiAoKSB7IHJldHVybiB1bmRlZmluZWQ7IH0sXG4gICAgICAgICAgICAgICAgZ2V0V2luZG93UGFnZU9mZnNldDogZnVuY3Rpb24gKCkgeyByZXR1cm4gKHsgeDogMCwgeTogMCB9KTsgfSxcbiAgICAgICAgICAgICAgICBpc1N1cmZhY2VBY3RpdmU6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIHRydWU7IH0sXG4gICAgICAgICAgICAgICAgaXNTdXJmYWNlRGlzYWJsZWQ6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIHRydWU7IH0sXG4gICAgICAgICAgICAgICAgaXNVbmJvdW5kZWQ6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIHRydWU7IH0sXG4gICAgICAgICAgICAgICAgcmVnaXN0ZXJEb2N1bWVudEludGVyYWN0aW9uSGFuZGxlcjogZnVuY3Rpb24gKCkgeyByZXR1cm4gdW5kZWZpbmVkOyB9LFxuICAgICAgICAgICAgICAgIHJlZ2lzdGVySW50ZXJhY3Rpb25IYW5kbGVyOiBmdW5jdGlvbiAoKSB7IHJldHVybiB1bmRlZmluZWQ7IH0sXG4gICAgICAgICAgICAgICAgcmVnaXN0ZXJSZXNpemVIYW5kbGVyOiBmdW5jdGlvbiAoKSB7IHJldHVybiB1bmRlZmluZWQ7IH0sXG4gICAgICAgICAgICAgICAgcmVtb3ZlQ2xhc3M6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIHVuZGVmaW5lZDsgfSxcbiAgICAgICAgICAgICAgICB1cGRhdGVDc3NWYXJpYWJsZTogZnVuY3Rpb24gKCkgeyByZXR1cm4gdW5kZWZpbmVkOyB9LFxuICAgICAgICAgICAgfTtcbiAgICAgICAgfSxcbiAgICAgICAgZW51bWVyYWJsZTogdHJ1ZSxcbiAgICAgICAgY29uZmlndXJhYmxlOiB0cnVlXG4gICAgfSk7XG4gICAgTURDUmlwcGxlRm91bmRhdGlvbi5wcm90b3R5cGUuaW5pdCA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdmFyIF90aGlzID0gdGhpcztcbiAgICAgICAgdmFyIHN1cHBvcnRzUHJlc3NSaXBwbGUgPSB0aGlzLnN1cHBvcnRzUHJlc3NSaXBwbGVfKCk7XG4gICAgICAgIHRoaXMucmVnaXN0ZXJSb290SGFuZGxlcnNfKHN1cHBvcnRzUHJlc3NSaXBwbGUpO1xuICAgICAgICBpZiAoc3VwcG9ydHNQcmVzc1JpcHBsZSkge1xuICAgICAgICAgICAgdmFyIF9hID0gTURDUmlwcGxlRm91bmRhdGlvbi5jc3NDbGFzc2VzLCBST09UXzEgPSBfYS5ST09ULCBVTkJPVU5ERURfMSA9IF9hLlVOQk9VTkRFRDtcbiAgICAgICAgICAgIHJlcXVlc3RBbmltYXRpb25GcmFtZShmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICAgICAgX3RoaXMuYWRhcHRlcl8uYWRkQ2xhc3MoUk9PVF8xKTtcbiAgICAgICAgICAgICAgICBpZiAoX3RoaXMuYWRhcHRlcl8uaXNVbmJvdW5kZWQoKSkge1xuICAgICAgICAgICAgICAgICAgICBfdGhpcy5hZGFwdGVyXy5hZGRDbGFzcyhVTkJPVU5ERURfMSk7XG4gICAgICAgICAgICAgICAgICAgIC8vIFVuYm91bmRlZCByaXBwbGVzIG5lZWQgbGF5b3V0IGxvZ2ljIGFwcGxpZWQgaW1tZWRpYXRlbHkgdG8gc2V0IGNvb3JkaW5hdGVzIGZvciBib3RoIHNoYWRlIGFuZCByaXBwbGVcbiAgICAgICAgICAgICAgICAgICAgX3RoaXMubGF5b3V0SW50ZXJuYWxfKCk7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfSk7XG4gICAgICAgIH1cbiAgICB9O1xuICAgIE1EQ1JpcHBsZUZvdW5kYXRpb24ucHJvdG90eXBlLmRlc3Ryb3kgPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIHZhciBfdGhpcyA9IHRoaXM7XG4gICAgICAgIGlmICh0aGlzLnN1cHBvcnRzUHJlc3NSaXBwbGVfKCkpIHtcbiAgICAgICAgICAgIGlmICh0aGlzLmFjdGl2YXRpb25UaW1lcl8pIHtcbiAgICAgICAgICAgICAgICBjbGVhclRpbWVvdXQodGhpcy5hY3RpdmF0aW9uVGltZXJfKTtcbiAgICAgICAgICAgICAgICB0aGlzLmFjdGl2YXRpb25UaW1lcl8gPSAwO1xuICAgICAgICAgICAgICAgIHRoaXMuYWRhcHRlcl8ucmVtb3ZlQ2xhc3MoTURDUmlwcGxlRm91bmRhdGlvbi5jc3NDbGFzc2VzLkZHX0FDVElWQVRJT04pO1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgaWYgKHRoaXMuZmdEZWFjdGl2YXRpb25SZW1vdmFsVGltZXJfKSB7XG4gICAgICAgICAgICAgICAgY2xlYXJUaW1lb3V0KHRoaXMuZmdEZWFjdGl2YXRpb25SZW1vdmFsVGltZXJfKTtcbiAgICAgICAgICAgICAgICB0aGlzLmZnRGVhY3RpdmF0aW9uUmVtb3ZhbFRpbWVyXyA9IDA7XG4gICAgICAgICAgICAgICAgdGhpcy5hZGFwdGVyXy5yZW1vdmVDbGFzcyhNRENSaXBwbGVGb3VuZGF0aW9uLmNzc0NsYXNzZXMuRkdfREVBQ1RJVkFUSU9OKTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIHZhciBfYSA9IE1EQ1JpcHBsZUZvdW5kYXRpb24uY3NzQ2xhc3NlcywgUk9PVF8yID0gX2EuUk9PVCwgVU5CT1VOREVEXzIgPSBfYS5VTkJPVU5ERUQ7XG4gICAgICAgICAgICByZXF1ZXN0QW5pbWF0aW9uRnJhbWUoZnVuY3Rpb24gKCkge1xuICAgICAgICAgICAgICAgIF90aGlzLmFkYXB0ZXJfLnJlbW92ZUNsYXNzKFJPT1RfMik7XG4gICAgICAgICAgICAgICAgX3RoaXMuYWRhcHRlcl8ucmVtb3ZlQ2xhc3MoVU5CT1VOREVEXzIpO1xuICAgICAgICAgICAgICAgIF90aGlzLnJlbW92ZUNzc1ZhcnNfKCk7XG4gICAgICAgICAgICB9KTtcbiAgICAgICAgfVxuICAgICAgICB0aGlzLmRlcmVnaXN0ZXJSb290SGFuZGxlcnNfKCk7XG4gICAgICAgIHRoaXMuZGVyZWdpc3RlckRlYWN0aXZhdGlvbkhhbmRsZXJzXygpO1xuICAgIH07XG4gICAgLyoqXG4gICAgICogQHBhcmFtIGV2dCBPcHRpb25hbCBldmVudCBjb250YWluaW5nIHBvc2l0aW9uIGluZm9ybWF0aW9uLlxuICAgICAqL1xuICAgIE1EQ1JpcHBsZUZvdW5kYXRpb24ucHJvdG90eXBlLmFjdGl2YXRlID0gZnVuY3Rpb24gKGV2dCkge1xuICAgICAgICB0aGlzLmFjdGl2YXRlXyhldnQpO1xuICAgIH07XG4gICAgTURDUmlwcGxlRm91bmRhdGlvbi5wcm90b3R5cGUuZGVhY3RpdmF0ZSA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdGhpcy5kZWFjdGl2YXRlXygpO1xuICAgIH07XG4gICAgTURDUmlwcGxlRm91bmRhdGlvbi5wcm90b3R5cGUubGF5b3V0ID0gZnVuY3Rpb24gKCkge1xuICAgICAgICB2YXIgX3RoaXMgPSB0aGlzO1xuICAgICAgICBpZiAodGhpcy5sYXlvdXRGcmFtZV8pIHtcbiAgICAgICAgICAgIGNhbmNlbEFuaW1hdGlvbkZyYW1lKHRoaXMubGF5b3V0RnJhbWVfKTtcbiAgICAgICAgfVxuICAgICAgICB0aGlzLmxheW91dEZyYW1lXyA9IHJlcXVlc3RBbmltYXRpb25GcmFtZShmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICBfdGhpcy5sYXlvdXRJbnRlcm5hbF8oKTtcbiAgICAgICAgICAgIF90aGlzLmxheW91dEZyYW1lXyA9IDA7XG4gICAgICAgIH0pO1xuICAgIH07XG4gICAgTURDUmlwcGxlRm91bmRhdGlvbi5wcm90b3R5cGUuc2V0VW5ib3VuZGVkID0gZnVuY3Rpb24gKHVuYm91bmRlZCkge1xuICAgICAgICB2YXIgVU5CT1VOREVEID0gTURDUmlwcGxlRm91bmRhdGlvbi5jc3NDbGFzc2VzLlVOQk9VTkRFRDtcbiAgICAgICAgaWYgKHVuYm91bmRlZCkge1xuICAgICAgICAgICAgdGhpcy5hZGFwdGVyXy5hZGRDbGFzcyhVTkJPVU5ERUQpO1xuICAgICAgICB9XG4gICAgICAgIGVsc2Uge1xuICAgICAgICAgICAgdGhpcy5hZGFwdGVyXy5yZW1vdmVDbGFzcyhVTkJPVU5ERUQpO1xuICAgICAgICB9XG4gICAgfTtcbiAgICBNRENSaXBwbGVGb3VuZGF0aW9uLnByb3RvdHlwZS5oYW5kbGVGb2N1cyA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdmFyIF90aGlzID0gdGhpcztcbiAgICAgICAgcmVxdWVzdEFuaW1hdGlvbkZyYW1lKGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIHJldHVybiBfdGhpcy5hZGFwdGVyXy5hZGRDbGFzcyhNRENSaXBwbGVGb3VuZGF0aW9uLmNzc0NsYXNzZXMuQkdfRk9DVVNFRCk7XG4gICAgICAgIH0pO1xuICAgIH07XG4gICAgTURDUmlwcGxlRm91bmRhdGlvbi5wcm90b3R5cGUuaGFuZGxlQmx1ciA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdmFyIF90aGlzID0gdGhpcztcbiAgICAgICAgcmVxdWVzdEFuaW1hdGlvbkZyYW1lKGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIHJldHVybiBfdGhpcy5hZGFwdGVyXy5yZW1vdmVDbGFzcyhNRENSaXBwbGVGb3VuZGF0aW9uLmNzc0NsYXNzZXMuQkdfRk9DVVNFRCk7XG4gICAgICAgIH0pO1xuICAgIH07XG4gICAgLyoqXG4gICAgICogV2UgY29tcHV0ZSB0aGlzIHByb3BlcnR5IHNvIHRoYXQgd2UgYXJlIG5vdCBxdWVyeWluZyBpbmZvcm1hdGlvbiBhYm91dCB0aGUgY2xpZW50XG4gICAgICogdW50aWwgdGhlIHBvaW50IGluIHRpbWUgd2hlcmUgdGhlIGZvdW5kYXRpb24gcmVxdWVzdHMgaXQuIFRoaXMgcHJldmVudHMgc2NlbmFyaW9zIHdoZXJlXG4gICAgICogY2xpZW50LXNpZGUgZmVhdHVyZS1kZXRlY3Rpb24gbWF5IGhhcHBlbiB0b28gZWFybHksIHN1Y2ggYXMgd2hlbiBjb21wb25lbnRzIGFyZSByZW5kZXJlZCBvbiB0aGUgc2VydmVyXG4gICAgICogYW5kIHRoZW4gaW5pdGlhbGl6ZWQgYXQgbW91bnQgdGltZSBvbiB0aGUgY2xpZW50LlxuICAgICAqL1xuICAgIE1EQ1JpcHBsZUZvdW5kYXRpb24ucHJvdG90eXBlLnN1cHBvcnRzUHJlc3NSaXBwbGVfID0gZnVuY3Rpb24gKCkge1xuICAgICAgICByZXR1cm4gdGhpcy5hZGFwdGVyXy5icm93c2VyU3VwcG9ydHNDc3NWYXJzKCk7XG4gICAgfTtcbiAgICBNRENSaXBwbGVGb3VuZGF0aW9uLnByb3RvdHlwZS5kZWZhdWx0QWN0aXZhdGlvblN0YXRlXyA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgcmV0dXJuIHtcbiAgICAgICAgICAgIGFjdGl2YXRpb25FdmVudDogdW5kZWZpbmVkLFxuICAgICAgICAgICAgaGFzRGVhY3RpdmF0aW9uVVhSdW46IGZhbHNlLFxuICAgICAgICAgICAgaXNBY3RpdmF0ZWQ6IGZhbHNlLFxuICAgICAgICAgICAgaXNQcm9ncmFtbWF0aWM6IGZhbHNlLFxuICAgICAgICAgICAgd2FzQWN0aXZhdGVkQnlQb2ludGVyOiBmYWxzZSxcbiAgICAgICAgICAgIHdhc0VsZW1lbnRNYWRlQWN0aXZlOiBmYWxzZSxcbiAgICAgICAgfTtcbiAgICB9O1xuICAgIC8qKlxuICAgICAqIHN1cHBvcnRzUHJlc3NSaXBwbGUgUGFzc2VkIGZyb20gaW5pdCB0byBzYXZlIGEgcmVkdW5kYW50IGZ1bmN0aW9uIGNhbGxcbiAgICAgKi9cbiAgICBNRENSaXBwbGVGb3VuZGF0aW9uLnByb3RvdHlwZS5yZWdpc3RlclJvb3RIYW5kbGVyc18gPSBmdW5jdGlvbiAoc3VwcG9ydHNQcmVzc1JpcHBsZSkge1xuICAgICAgICB2YXIgX3RoaXMgPSB0aGlzO1xuICAgICAgICBpZiAoc3VwcG9ydHNQcmVzc1JpcHBsZSkge1xuICAgICAgICAgICAgQUNUSVZBVElPTl9FVkVOVF9UWVBFUy5mb3JFYWNoKGZ1bmN0aW9uIChldnRUeXBlKSB7XG4gICAgICAgICAgICAgICAgX3RoaXMuYWRhcHRlcl8ucmVnaXN0ZXJJbnRlcmFjdGlvbkhhbmRsZXIoZXZ0VHlwZSwgX3RoaXMuYWN0aXZhdGVIYW5kbGVyXyk7XG4gICAgICAgICAgICB9KTtcbiAgICAgICAgICAgIGlmICh0aGlzLmFkYXB0ZXJfLmlzVW5ib3VuZGVkKCkpIHtcbiAgICAgICAgICAgICAgICB0aGlzLmFkYXB0ZXJfLnJlZ2lzdGVyUmVzaXplSGFuZGxlcih0aGlzLnJlc2l6ZUhhbmRsZXJfKTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgICB0aGlzLmFkYXB0ZXJfLnJlZ2lzdGVySW50ZXJhY3Rpb25IYW5kbGVyKCdmb2N1cycsIHRoaXMuZm9jdXNIYW5kbGVyXyk7XG4gICAgICAgIHRoaXMuYWRhcHRlcl8ucmVnaXN0ZXJJbnRlcmFjdGlvbkhhbmRsZXIoJ2JsdXInLCB0aGlzLmJsdXJIYW5kbGVyXyk7XG4gICAgfTtcbiAgICBNRENSaXBwbGVGb3VuZGF0aW9uLnByb3RvdHlwZS5yZWdpc3RlckRlYWN0aXZhdGlvbkhhbmRsZXJzXyA9IGZ1bmN0aW9uIChldnQpIHtcbiAgICAgICAgdmFyIF90aGlzID0gdGhpcztcbiAgICAgICAgaWYgKGV2dC50eXBlID09PSAna2V5ZG93bicpIHtcbiAgICAgICAgICAgIHRoaXMuYWRhcHRlcl8ucmVnaXN0ZXJJbnRlcmFjdGlvbkhhbmRsZXIoJ2tleXVwJywgdGhpcy5kZWFjdGl2YXRlSGFuZGxlcl8pO1xuICAgICAgICB9XG4gICAgICAgIGVsc2Uge1xuICAgICAgICAgICAgUE9JTlRFUl9ERUFDVElWQVRJT05fRVZFTlRfVFlQRVMuZm9yRWFjaChmdW5jdGlvbiAoZXZ0VHlwZSkge1xuICAgICAgICAgICAgICAgIF90aGlzLmFkYXB0ZXJfLnJlZ2lzdGVyRG9jdW1lbnRJbnRlcmFjdGlvbkhhbmRsZXIoZXZ0VHlwZSwgX3RoaXMuZGVhY3RpdmF0ZUhhbmRsZXJfKTtcbiAgICAgICAgICAgIH0pO1xuICAgICAgICB9XG4gICAgfTtcbiAgICBNRENSaXBwbGVGb3VuZGF0aW9uLnByb3RvdHlwZS5kZXJlZ2lzdGVyUm9vdEhhbmRsZXJzXyA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdmFyIF90aGlzID0gdGhpcztcbiAgICAgICAgQUNUSVZBVElPTl9FVkVOVF9UWVBFUy5mb3JFYWNoKGZ1bmN0aW9uIChldnRUeXBlKSB7XG4gICAgICAgICAgICBfdGhpcy5hZGFwdGVyXy5kZXJlZ2lzdGVySW50ZXJhY3Rpb25IYW5kbGVyKGV2dFR5cGUsIF90aGlzLmFjdGl2YXRlSGFuZGxlcl8pO1xuICAgICAgICB9KTtcbiAgICAgICAgdGhpcy5hZGFwdGVyXy5kZXJlZ2lzdGVySW50ZXJhY3Rpb25IYW5kbGVyKCdmb2N1cycsIHRoaXMuZm9jdXNIYW5kbGVyXyk7XG4gICAgICAgIHRoaXMuYWRhcHRlcl8uZGVyZWdpc3RlckludGVyYWN0aW9uSGFuZGxlcignYmx1cicsIHRoaXMuYmx1ckhhbmRsZXJfKTtcbiAgICAgICAgaWYgKHRoaXMuYWRhcHRlcl8uaXNVbmJvdW5kZWQoKSkge1xuICAgICAgICAgICAgdGhpcy5hZGFwdGVyXy5kZXJlZ2lzdGVyUmVzaXplSGFuZGxlcih0aGlzLnJlc2l6ZUhhbmRsZXJfKTtcbiAgICAgICAgfVxuICAgIH07XG4gICAgTURDUmlwcGxlRm91bmRhdGlvbi5wcm90b3R5cGUuZGVyZWdpc3RlckRlYWN0aXZhdGlvbkhhbmRsZXJzXyA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdmFyIF90aGlzID0gdGhpcztcbiAgICAgICAgdGhpcy5hZGFwdGVyXy5kZXJlZ2lzdGVySW50ZXJhY3Rpb25IYW5kbGVyKCdrZXl1cCcsIHRoaXMuZGVhY3RpdmF0ZUhhbmRsZXJfKTtcbiAgICAgICAgUE9JTlRFUl9ERUFDVElWQVRJT05fRVZFTlRfVFlQRVMuZm9yRWFjaChmdW5jdGlvbiAoZXZ0VHlwZSkge1xuICAgICAgICAgICAgX3RoaXMuYWRhcHRlcl8uZGVyZWdpc3RlckRvY3VtZW50SW50ZXJhY3Rpb25IYW5kbGVyKGV2dFR5cGUsIF90aGlzLmRlYWN0aXZhdGVIYW5kbGVyXyk7XG4gICAgICAgIH0pO1xuICAgIH07XG4gICAgTURDUmlwcGxlRm91bmRhdGlvbi5wcm90b3R5cGUucmVtb3ZlQ3NzVmFyc18gPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIHZhciBfdGhpcyA9IHRoaXM7XG4gICAgICAgIHZhciByaXBwbGVTdHJpbmdzID0gTURDUmlwcGxlRm91bmRhdGlvbi5zdHJpbmdzO1xuICAgICAgICB2YXIga2V5cyA9IE9iamVjdC5rZXlzKHJpcHBsZVN0cmluZ3MpO1xuICAgICAgICBrZXlzLmZvckVhY2goZnVuY3Rpb24gKGtleSkge1xuICAgICAgICAgICAgaWYgKGtleS5pbmRleE9mKCdWQVJfJykgPT09IDApIHtcbiAgICAgICAgICAgICAgICBfdGhpcy5hZGFwdGVyXy51cGRhdGVDc3NWYXJpYWJsZShyaXBwbGVTdHJpbmdzW2tleV0sIG51bGwpO1xuICAgICAgICAgICAgfVxuICAgICAgICB9KTtcbiAgICB9O1xuICAgIE1EQ1JpcHBsZUZvdW5kYXRpb24ucHJvdG90eXBlLmFjdGl2YXRlXyA9IGZ1bmN0aW9uIChldnQpIHtcbiAgICAgICAgdmFyIF90aGlzID0gdGhpcztcbiAgICAgICAgaWYgKHRoaXMuYWRhcHRlcl8uaXNTdXJmYWNlRGlzYWJsZWQoKSkge1xuICAgICAgICAgICAgcmV0dXJuO1xuICAgICAgICB9XG4gICAgICAgIHZhciBhY3RpdmF0aW9uU3RhdGUgPSB0aGlzLmFjdGl2YXRpb25TdGF0ZV87XG4gICAgICAgIGlmIChhY3RpdmF0aW9uU3RhdGUuaXNBY3RpdmF0ZWQpIHtcbiAgICAgICAgICAgIHJldHVybjtcbiAgICAgICAgfVxuICAgICAgICAvLyBBdm9pZCByZWFjdGluZyB0byBmb2xsb3ctb24gZXZlbnRzIGZpcmVkIGJ5IHRvdWNoIGRldmljZSBhZnRlciBhbiBhbHJlYWR5LXByb2Nlc3NlZCB1c2VyIGludGVyYWN0aW9uXG4gICAgICAgIHZhciBwcmV2aW91c0FjdGl2YXRpb25FdmVudCA9IHRoaXMucHJldmlvdXNBY3RpdmF0aW9uRXZlbnRfO1xuICAgICAgICB2YXIgaXNTYW1lSW50ZXJhY3Rpb24gPSBwcmV2aW91c0FjdGl2YXRpb25FdmVudCAmJiBldnQgIT09IHVuZGVmaW5lZCAmJiBwcmV2aW91c0FjdGl2YXRpb25FdmVudC50eXBlICE9PSBldnQudHlwZTtcbiAgICAgICAgaWYgKGlzU2FtZUludGVyYWN0aW9uKSB7XG4gICAgICAgICAgICByZXR1cm47XG4gICAgICAgIH1cbiAgICAgICAgYWN0aXZhdGlvblN0YXRlLmlzQWN0aXZhdGVkID0gdHJ1ZTtcbiAgICAgICAgYWN0aXZhdGlvblN0YXRlLmlzUHJvZ3JhbW1hdGljID0gZXZ0ID09PSB1bmRlZmluZWQ7XG4gICAgICAgIGFjdGl2YXRpb25TdGF0ZS5hY3RpdmF0aW9uRXZlbnQgPSBldnQ7XG4gICAgICAgIGFjdGl2YXRpb25TdGF0ZS53YXNBY3RpdmF0ZWRCeVBvaW50ZXIgPSBhY3RpdmF0aW9uU3RhdGUuaXNQcm9ncmFtbWF0aWMgPyBmYWxzZSA6IGV2dCAhPT0gdW5kZWZpbmVkICYmIChldnQudHlwZSA9PT0gJ21vdXNlZG93bicgfHwgZXZ0LnR5cGUgPT09ICd0b3VjaHN0YXJ0JyB8fCBldnQudHlwZSA9PT0gJ3BvaW50ZXJkb3duJyk7XG4gICAgICAgIHZhciBoYXNBY3RpdmF0ZWRDaGlsZCA9IGV2dCAhPT0gdW5kZWZpbmVkICYmIGFjdGl2YXRlZFRhcmdldHMubGVuZ3RoID4gMCAmJiBhY3RpdmF0ZWRUYXJnZXRzLnNvbWUoZnVuY3Rpb24gKHRhcmdldCkgeyByZXR1cm4gX3RoaXMuYWRhcHRlcl8uY29udGFpbnNFdmVudFRhcmdldCh0YXJnZXQpOyB9KTtcbiAgICAgICAgaWYgKGhhc0FjdGl2YXRlZENoaWxkKSB7XG4gICAgICAgICAgICAvLyBJbW1lZGlhdGVseSByZXNldCBhY3RpdmF0aW9uIHN0YXRlLCB3aGlsZSBwcmVzZXJ2aW5nIGxvZ2ljIHRoYXQgcHJldmVudHMgdG91Y2ggZm9sbG93LW9uIGV2ZW50c1xuICAgICAgICAgICAgdGhpcy5yZXNldEFjdGl2YXRpb25TdGF0ZV8oKTtcbiAgICAgICAgICAgIHJldHVybjtcbiAgICAgICAgfVxuICAgICAgICBpZiAoZXZ0ICE9PSB1bmRlZmluZWQpIHtcbiAgICAgICAgICAgIGFjdGl2YXRlZFRhcmdldHMucHVzaChldnQudGFyZ2V0KTtcbiAgICAgICAgICAgIHRoaXMucmVnaXN0ZXJEZWFjdGl2YXRpb25IYW5kbGVyc18oZXZ0KTtcbiAgICAgICAgfVxuICAgICAgICBhY3RpdmF0aW9uU3RhdGUud2FzRWxlbWVudE1hZGVBY3RpdmUgPSB0aGlzLmNoZWNrRWxlbWVudE1hZGVBY3RpdmVfKGV2dCk7XG4gICAgICAgIGlmIChhY3RpdmF0aW9uU3RhdGUud2FzRWxlbWVudE1hZGVBY3RpdmUpIHtcbiAgICAgICAgICAgIHRoaXMuYW5pbWF0ZUFjdGl2YXRpb25fKCk7XG4gICAgICAgIH1cbiAgICAgICAgcmVxdWVzdEFuaW1hdGlvbkZyYW1lKGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIC8vIFJlc2V0IGFycmF5IG9uIG5leHQgZnJhbWUgYWZ0ZXIgdGhlIGN1cnJlbnQgZXZlbnQgaGFzIGhhZCBhIGNoYW5jZSB0byBidWJibGUgdG8gcHJldmVudCBhbmNlc3RvciByaXBwbGVzXG4gICAgICAgICAgICBhY3RpdmF0ZWRUYXJnZXRzID0gW107XG4gICAgICAgICAgICBpZiAoIWFjdGl2YXRpb25TdGF0ZS53YXNFbGVtZW50TWFkZUFjdGl2ZVxuICAgICAgICAgICAgICAgICYmIGV2dCAhPT0gdW5kZWZpbmVkXG4gICAgICAgICAgICAgICAgJiYgKGV2dC5rZXkgPT09ICcgJyB8fCBldnQua2V5Q29kZSA9PT0gMzIpKSB7XG4gICAgICAgICAgICAgICAgLy8gSWYgc3BhY2Ugd2FzIHByZXNzZWQsIHRyeSBhZ2FpbiB3aXRoaW4gYW4gckFGIGNhbGwgdG8gZGV0ZWN0IDphY3RpdmUsIGJlY2F1c2UgZGlmZmVyZW50IFVBcyByZXBvcnRcbiAgICAgICAgICAgICAgICAvLyBhY3RpdmUgc3RhdGVzIGluY29uc2lzdGVudGx5IHdoZW4gdGhleSdyZSBjYWxsZWQgd2l0aGluIGV2ZW50IGhhbmRsaW5nIGNvZGU6XG4gICAgICAgICAgICAgICAgLy8gLSBodHRwczovL2J1Z3MuY2hyb21pdW0ub3JnL3AvY2hyb21pdW0vaXNzdWVzL2RldGFpbD9pZD02MzU5NzFcbiAgICAgICAgICAgICAgICAvLyAtIGh0dHBzOi8vYnVnemlsbGEubW96aWxsYS5vcmcvc2hvd19idWcuY2dpP2lkPTEyOTM3NDFcbiAgICAgICAgICAgICAgICAvLyBXZSB0cnkgZmlyc3Qgb3V0c2lkZSByQUYgdG8gc3VwcG9ydCBFZGdlLCB3aGljaCBkb2VzIG5vdCBleGhpYml0IHRoaXMgcHJvYmxlbSwgYnV0IHdpbGwgY3Jhc2ggaWYgYSBDU1NcbiAgICAgICAgICAgICAgICAvLyB2YXJpYWJsZSBpcyBzZXQgd2l0aGluIGEgckFGIGNhbGxiYWNrIGZvciBhIHN1Ym1pdCBidXR0b24gaW50ZXJhY3Rpb24gKCMyMjQxKS5cbiAgICAgICAgICAgICAgICBhY3RpdmF0aW9uU3RhdGUud2FzRWxlbWVudE1hZGVBY3RpdmUgPSBfdGhpcy5jaGVja0VsZW1lbnRNYWRlQWN0aXZlXyhldnQpO1xuICAgICAgICAgICAgICAgIGlmIChhY3RpdmF0aW9uU3RhdGUud2FzRWxlbWVudE1hZGVBY3RpdmUpIHtcbiAgICAgICAgICAgICAgICAgICAgX3RoaXMuYW5pbWF0ZUFjdGl2YXRpb25fKCk7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfVxuICAgICAgICAgICAgaWYgKCFhY3RpdmF0aW9uU3RhdGUud2FzRWxlbWVudE1hZGVBY3RpdmUpIHtcbiAgICAgICAgICAgICAgICAvLyBSZXNldCBhY3RpdmF0aW9uIHN0YXRlIGltbWVkaWF0ZWx5IGlmIGVsZW1lbnQgd2FzIG5vdCBtYWRlIGFjdGl2ZS5cbiAgICAgICAgICAgICAgICBfdGhpcy5hY3RpdmF0aW9uU3RhdGVfID0gX3RoaXMuZGVmYXVsdEFjdGl2YXRpb25TdGF0ZV8oKTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfSk7XG4gICAgfTtcbiAgICBNRENSaXBwbGVGb3VuZGF0aW9uLnByb3RvdHlwZS5jaGVja0VsZW1lbnRNYWRlQWN0aXZlXyA9IGZ1bmN0aW9uIChldnQpIHtcbiAgICAgICAgcmV0dXJuIChldnQgIT09IHVuZGVmaW5lZCAmJiBldnQudHlwZSA9PT0gJ2tleWRvd24nKSA/IHRoaXMuYWRhcHRlcl8uaXNTdXJmYWNlQWN0aXZlKCkgOiB0cnVlO1xuICAgIH07XG4gICAgTURDUmlwcGxlRm91bmRhdGlvbi5wcm90b3R5cGUuYW5pbWF0ZUFjdGl2YXRpb25fID0gZnVuY3Rpb24gKCkge1xuICAgICAgICB2YXIgX3RoaXMgPSB0aGlzO1xuICAgICAgICB2YXIgX2EgPSBNRENSaXBwbGVGb3VuZGF0aW9uLnN0cmluZ3MsIFZBUl9GR19UUkFOU0xBVEVfU1RBUlQgPSBfYS5WQVJfRkdfVFJBTlNMQVRFX1NUQVJULCBWQVJfRkdfVFJBTlNMQVRFX0VORCA9IF9hLlZBUl9GR19UUkFOU0xBVEVfRU5EO1xuICAgICAgICB2YXIgX2IgPSBNRENSaXBwbGVGb3VuZGF0aW9uLmNzc0NsYXNzZXMsIEZHX0RFQUNUSVZBVElPTiA9IF9iLkZHX0RFQUNUSVZBVElPTiwgRkdfQUNUSVZBVElPTiA9IF9iLkZHX0FDVElWQVRJT047XG4gICAgICAgIHZhciBERUFDVElWQVRJT05fVElNRU9VVF9NUyA9IE1EQ1JpcHBsZUZvdW5kYXRpb24ubnVtYmVycy5ERUFDVElWQVRJT05fVElNRU9VVF9NUztcbiAgICAgICAgdGhpcy5sYXlvdXRJbnRlcm5hbF8oKTtcbiAgICAgICAgdmFyIHRyYW5zbGF0ZVN0YXJ0ID0gJyc7XG4gICAgICAgIHZhciB0cmFuc2xhdGVFbmQgPSAnJztcbiAgICAgICAgaWYgKCF0aGlzLmFkYXB0ZXJfLmlzVW5ib3VuZGVkKCkpIHtcbiAgICAgICAgICAgIHZhciBfYyA9IHRoaXMuZ2V0RmdUcmFuc2xhdGlvbkNvb3JkaW5hdGVzXygpLCBzdGFydFBvaW50ID0gX2Muc3RhcnRQb2ludCwgZW5kUG9pbnQgPSBfYy5lbmRQb2ludDtcbiAgICAgICAgICAgIHRyYW5zbGF0ZVN0YXJ0ID0gc3RhcnRQb2ludC54ICsgXCJweCwgXCIgKyBzdGFydFBvaW50LnkgKyBcInB4XCI7XG4gICAgICAgICAgICB0cmFuc2xhdGVFbmQgPSBlbmRQb2ludC54ICsgXCJweCwgXCIgKyBlbmRQb2ludC55ICsgXCJweFwiO1xuICAgICAgICB9XG4gICAgICAgIHRoaXMuYWRhcHRlcl8udXBkYXRlQ3NzVmFyaWFibGUoVkFSX0ZHX1RSQU5TTEFURV9TVEFSVCwgdHJhbnNsYXRlU3RhcnQpO1xuICAgICAgICB0aGlzLmFkYXB0ZXJfLnVwZGF0ZUNzc1ZhcmlhYmxlKFZBUl9GR19UUkFOU0xBVEVfRU5ELCB0cmFuc2xhdGVFbmQpO1xuICAgICAgICAvLyBDYW5jZWwgYW55IG9uZ29pbmcgYWN0aXZhdGlvbi9kZWFjdGl2YXRpb24gYW5pbWF0aW9uc1xuICAgICAgICBjbGVhclRpbWVvdXQodGhpcy5hY3RpdmF0aW9uVGltZXJfKTtcbiAgICAgICAgY2xlYXJUaW1lb3V0KHRoaXMuZmdEZWFjdGl2YXRpb25SZW1vdmFsVGltZXJfKTtcbiAgICAgICAgdGhpcy5ybUJvdW5kZWRBY3RpdmF0aW9uQ2xhc3Nlc18oKTtcbiAgICAgICAgdGhpcy5hZGFwdGVyXy5yZW1vdmVDbGFzcyhGR19ERUFDVElWQVRJT04pO1xuICAgICAgICAvLyBGb3JjZSBsYXlvdXQgaW4gb3JkZXIgdG8gcmUtdHJpZ2dlciB0aGUgYW5pbWF0aW9uLlxuICAgICAgICB0aGlzLmFkYXB0ZXJfLmNvbXB1dGVCb3VuZGluZ1JlY3QoKTtcbiAgICAgICAgdGhpcy5hZGFwdGVyXy5hZGRDbGFzcyhGR19BQ1RJVkFUSU9OKTtcbiAgICAgICAgdGhpcy5hY3RpdmF0aW9uVGltZXJfID0gc2V0VGltZW91dChmdW5jdGlvbiAoKSB7IHJldHVybiBfdGhpcy5hY3RpdmF0aW9uVGltZXJDYWxsYmFja18oKTsgfSwgREVBQ1RJVkFUSU9OX1RJTUVPVVRfTVMpO1xuICAgIH07XG4gICAgTURDUmlwcGxlRm91bmRhdGlvbi5wcm90b3R5cGUuZ2V0RmdUcmFuc2xhdGlvbkNvb3JkaW5hdGVzXyA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdmFyIF9hID0gdGhpcy5hY3RpdmF0aW9uU3RhdGVfLCBhY3RpdmF0aW9uRXZlbnQgPSBfYS5hY3RpdmF0aW9uRXZlbnQsIHdhc0FjdGl2YXRlZEJ5UG9pbnRlciA9IF9hLndhc0FjdGl2YXRlZEJ5UG9pbnRlcjtcbiAgICAgICAgdmFyIHN0YXJ0UG9pbnQ7XG4gICAgICAgIGlmICh3YXNBY3RpdmF0ZWRCeVBvaW50ZXIpIHtcbiAgICAgICAgICAgIHN0YXJ0UG9pbnQgPSBnZXROb3JtYWxpemVkRXZlbnRDb29yZHMoYWN0aXZhdGlvbkV2ZW50LCB0aGlzLmFkYXB0ZXJfLmdldFdpbmRvd1BhZ2VPZmZzZXQoKSwgdGhpcy5hZGFwdGVyXy5jb21wdXRlQm91bmRpbmdSZWN0KCkpO1xuICAgICAgICB9XG4gICAgICAgIGVsc2Uge1xuICAgICAgICAgICAgc3RhcnRQb2ludCA9IHtcbiAgICAgICAgICAgICAgICB4OiB0aGlzLmZyYW1lXy53aWR0aCAvIDIsXG4gICAgICAgICAgICAgICAgeTogdGhpcy5mcmFtZV8uaGVpZ2h0IC8gMixcbiAgICAgICAgICAgIH07XG4gICAgICAgIH1cbiAgICAgICAgLy8gQ2VudGVyIHRoZSBlbGVtZW50IGFyb3VuZCB0aGUgc3RhcnQgcG9pbnQuXG4gICAgICAgIHN0YXJ0UG9pbnQgPSB7XG4gICAgICAgICAgICB4OiBzdGFydFBvaW50LnggLSAodGhpcy5pbml0aWFsU2l6ZV8gLyAyKSxcbiAgICAgICAgICAgIHk6IHN0YXJ0UG9pbnQueSAtICh0aGlzLmluaXRpYWxTaXplXyAvIDIpLFxuICAgICAgICB9O1xuICAgICAgICB2YXIgZW5kUG9pbnQgPSB7XG4gICAgICAgICAgICB4OiAodGhpcy5mcmFtZV8ud2lkdGggLyAyKSAtICh0aGlzLmluaXRpYWxTaXplXyAvIDIpLFxuICAgICAgICAgICAgeTogKHRoaXMuZnJhbWVfLmhlaWdodCAvIDIpIC0gKHRoaXMuaW5pdGlhbFNpemVfIC8gMiksXG4gICAgICAgIH07XG4gICAgICAgIHJldHVybiB7IHN0YXJ0UG9pbnQ6IHN0YXJ0UG9pbnQsIGVuZFBvaW50OiBlbmRQb2ludCB9O1xuICAgIH07XG4gICAgTURDUmlwcGxlRm91bmRhdGlvbi5wcm90b3R5cGUucnVuRGVhY3RpdmF0aW9uVVhMb2dpY0lmUmVhZHlfID0gZnVuY3Rpb24gKCkge1xuICAgICAgICB2YXIgX3RoaXMgPSB0aGlzO1xuICAgICAgICAvLyBUaGlzIG1ldGhvZCBpcyBjYWxsZWQgYm90aCB3aGVuIGEgcG9pbnRpbmcgZGV2aWNlIGlzIHJlbGVhc2VkLCBhbmQgd2hlbiB0aGUgYWN0aXZhdGlvbiBhbmltYXRpb24gZW5kcy5cbiAgICAgICAgLy8gVGhlIGRlYWN0aXZhdGlvbiBhbmltYXRpb24gc2hvdWxkIG9ubHkgcnVuIGFmdGVyIGJvdGggb2YgdGhvc2Ugb2NjdXIuXG4gICAgICAgIHZhciBGR19ERUFDVElWQVRJT04gPSBNRENSaXBwbGVGb3VuZGF0aW9uLmNzc0NsYXNzZXMuRkdfREVBQ1RJVkFUSU9OO1xuICAgICAgICB2YXIgX2EgPSB0aGlzLmFjdGl2YXRpb25TdGF0ZV8sIGhhc0RlYWN0aXZhdGlvblVYUnVuID0gX2EuaGFzRGVhY3RpdmF0aW9uVVhSdW4sIGlzQWN0aXZhdGVkID0gX2EuaXNBY3RpdmF0ZWQ7XG4gICAgICAgIHZhciBhY3RpdmF0aW9uSGFzRW5kZWQgPSBoYXNEZWFjdGl2YXRpb25VWFJ1biB8fCAhaXNBY3RpdmF0ZWQ7XG4gICAgICAgIGlmIChhY3RpdmF0aW9uSGFzRW5kZWQgJiYgdGhpcy5hY3RpdmF0aW9uQW5pbWF0aW9uSGFzRW5kZWRfKSB7XG4gICAgICAgICAgICB0aGlzLnJtQm91bmRlZEFjdGl2YXRpb25DbGFzc2VzXygpO1xuICAgICAgICAgICAgdGhpcy5hZGFwdGVyXy5hZGRDbGFzcyhGR19ERUFDVElWQVRJT04pO1xuICAgICAgICAgICAgdGhpcy5mZ0RlYWN0aXZhdGlvblJlbW92YWxUaW1lcl8gPSBzZXRUaW1lb3V0KGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgICAgICBfdGhpcy5hZGFwdGVyXy5yZW1vdmVDbGFzcyhGR19ERUFDVElWQVRJT04pO1xuICAgICAgICAgICAgfSwgbnVtYmVycy5GR19ERUFDVElWQVRJT05fTVMpO1xuICAgICAgICB9XG4gICAgfTtcbiAgICBNRENSaXBwbGVGb3VuZGF0aW9uLnByb3RvdHlwZS5ybUJvdW5kZWRBY3RpdmF0aW9uQ2xhc3Nlc18gPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIHZhciBGR19BQ1RJVkFUSU9OID0gTURDUmlwcGxlRm91bmRhdGlvbi5jc3NDbGFzc2VzLkZHX0FDVElWQVRJT047XG4gICAgICAgIHRoaXMuYWRhcHRlcl8ucmVtb3ZlQ2xhc3MoRkdfQUNUSVZBVElPTik7XG4gICAgICAgIHRoaXMuYWN0aXZhdGlvbkFuaW1hdGlvbkhhc0VuZGVkXyA9IGZhbHNlO1xuICAgICAgICB0aGlzLmFkYXB0ZXJfLmNvbXB1dGVCb3VuZGluZ1JlY3QoKTtcbiAgICB9O1xuICAgIE1EQ1JpcHBsZUZvdW5kYXRpb24ucHJvdG90eXBlLnJlc2V0QWN0aXZhdGlvblN0YXRlXyA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdmFyIF90aGlzID0gdGhpcztcbiAgICAgICAgdGhpcy5wcmV2aW91c0FjdGl2YXRpb25FdmVudF8gPSB0aGlzLmFjdGl2YXRpb25TdGF0ZV8uYWN0aXZhdGlvbkV2ZW50O1xuICAgICAgICB0aGlzLmFjdGl2YXRpb25TdGF0ZV8gPSB0aGlzLmRlZmF1bHRBY3RpdmF0aW9uU3RhdGVfKCk7XG4gICAgICAgIC8vIFRvdWNoIGRldmljZXMgbWF5IGZpcmUgYWRkaXRpb25hbCBldmVudHMgZm9yIHRoZSBzYW1lIGludGVyYWN0aW9uIHdpdGhpbiBhIHNob3J0IHRpbWUuXG4gICAgICAgIC8vIFN0b3JlIHRoZSBwcmV2aW91cyBldmVudCB1bnRpbCBpdCdzIHNhZmUgdG8gYXNzdW1lIHRoYXQgc3Vic2VxdWVudCBldmVudHMgYXJlIGZvciBuZXcgaW50ZXJhY3Rpb25zLlxuICAgICAgICBzZXRUaW1lb3V0KGZ1bmN0aW9uICgpIHsgcmV0dXJuIF90aGlzLnByZXZpb3VzQWN0aXZhdGlvbkV2ZW50XyA9IHVuZGVmaW5lZDsgfSwgTURDUmlwcGxlRm91bmRhdGlvbi5udW1iZXJzLlRBUF9ERUxBWV9NUyk7XG4gICAgfTtcbiAgICBNRENSaXBwbGVGb3VuZGF0aW9uLnByb3RvdHlwZS5kZWFjdGl2YXRlXyA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdmFyIF90aGlzID0gdGhpcztcbiAgICAgICAgdmFyIGFjdGl2YXRpb25TdGF0ZSA9IHRoaXMuYWN0aXZhdGlvblN0YXRlXztcbiAgICAgICAgLy8gVGhpcyBjYW4gaGFwcGVuIGluIHNjZW5hcmlvcyBzdWNoIGFzIHdoZW4geW91IGhhdmUgYSBrZXl1cCBldmVudCB0aGF0IGJsdXJzIHRoZSBlbGVtZW50LlxuICAgICAgICBpZiAoIWFjdGl2YXRpb25TdGF0ZS5pc0FjdGl2YXRlZCkge1xuICAgICAgICAgICAgcmV0dXJuO1xuICAgICAgICB9XG4gICAgICAgIHZhciBzdGF0ZSA9IHRzbGliXzEuX19hc3NpZ24oe30sIGFjdGl2YXRpb25TdGF0ZSk7XG4gICAgICAgIGlmIChhY3RpdmF0aW9uU3RhdGUuaXNQcm9ncmFtbWF0aWMpIHtcbiAgICAgICAgICAgIHJlcXVlc3RBbmltYXRpb25GcmFtZShmdW5jdGlvbiAoKSB7IHJldHVybiBfdGhpcy5hbmltYXRlRGVhY3RpdmF0aW9uXyhzdGF0ZSk7IH0pO1xuICAgICAgICAgICAgdGhpcy5yZXNldEFjdGl2YXRpb25TdGF0ZV8oKTtcbiAgICAgICAgfVxuICAgICAgICBlbHNlIHtcbiAgICAgICAgICAgIHRoaXMuZGVyZWdpc3RlckRlYWN0aXZhdGlvbkhhbmRsZXJzXygpO1xuICAgICAgICAgICAgcmVxdWVzdEFuaW1hdGlvbkZyYW1lKGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgICAgICBfdGhpcy5hY3RpdmF0aW9uU3RhdGVfLmhhc0RlYWN0aXZhdGlvblVYUnVuID0gdHJ1ZTtcbiAgICAgICAgICAgICAgICBfdGhpcy5hbmltYXRlRGVhY3RpdmF0aW9uXyhzdGF0ZSk7XG4gICAgICAgICAgICAgICAgX3RoaXMucmVzZXRBY3RpdmF0aW9uU3RhdGVfKCk7XG4gICAgICAgICAgICB9KTtcbiAgICAgICAgfVxuICAgIH07XG4gICAgTURDUmlwcGxlRm91bmRhdGlvbi5wcm90b3R5cGUuYW5pbWF0ZURlYWN0aXZhdGlvbl8gPSBmdW5jdGlvbiAoX2EpIHtcbiAgICAgICAgdmFyIHdhc0FjdGl2YXRlZEJ5UG9pbnRlciA9IF9hLndhc0FjdGl2YXRlZEJ5UG9pbnRlciwgd2FzRWxlbWVudE1hZGVBY3RpdmUgPSBfYS53YXNFbGVtZW50TWFkZUFjdGl2ZTtcbiAgICAgICAgaWYgKHdhc0FjdGl2YXRlZEJ5UG9pbnRlciB8fCB3YXNFbGVtZW50TWFkZUFjdGl2ZSkge1xuICAgICAgICAgICAgdGhpcy5ydW5EZWFjdGl2YXRpb25VWExvZ2ljSWZSZWFkeV8oKTtcbiAgICAgICAgfVxuICAgIH07XG4gICAgTURDUmlwcGxlRm91bmRhdGlvbi5wcm90b3R5cGUubGF5b3V0SW50ZXJuYWxfID0gZnVuY3Rpb24gKCkge1xuICAgICAgICB2YXIgX3RoaXMgPSB0aGlzO1xuICAgICAgICB0aGlzLmZyYW1lXyA9IHRoaXMuYWRhcHRlcl8uY29tcHV0ZUJvdW5kaW5nUmVjdCgpO1xuICAgICAgICB2YXIgbWF4RGltID0gTWF0aC5tYXgodGhpcy5mcmFtZV8uaGVpZ2h0LCB0aGlzLmZyYW1lXy53aWR0aCk7XG4gICAgICAgIC8vIFN1cmZhY2UgZGlhbWV0ZXIgaXMgdHJlYXRlZCBkaWZmZXJlbnRseSBmb3IgdW5ib3VuZGVkIHZzLiBib3VuZGVkIHJpcHBsZXMuXG4gICAgICAgIC8vIFVuYm91bmRlZCByaXBwbGUgZGlhbWV0ZXIgaXMgY2FsY3VsYXRlZCBzbWFsbGVyIHNpbmNlIHRoZSBzdXJmYWNlIGlzIGV4cGVjdGVkIHRvIGFscmVhZHkgYmUgcGFkZGVkIGFwcHJvcHJpYXRlbHlcbiAgICAgICAgLy8gdG8gZXh0ZW5kIHRoZSBoaXRib3gsIGFuZCB0aGUgcmlwcGxlIGlzIGV4cGVjdGVkIHRvIG1lZXQgdGhlIGVkZ2VzIG9mIHRoZSBwYWRkZWQgaGl0Ym94ICh3aGljaCBpcyB0eXBpY2FsbHlcbiAgICAgICAgLy8gc3F1YXJlKS4gQm91bmRlZCByaXBwbGVzLCBvbiB0aGUgb3RoZXIgaGFuZCwgYXJlIGZ1bGx5IGV4cGVjdGVkIHRvIGV4cGFuZCBiZXlvbmQgdGhlIHN1cmZhY2UncyBsb25nZXN0IGRpYW1ldGVyXG4gICAgICAgIC8vIChjYWxjdWxhdGVkIGJhc2VkIG9uIHRoZSBkaWFnb25hbCBwbHVzIGEgY29uc3RhbnQgcGFkZGluZyksIGFuZCBhcmUgY2xpcHBlZCBhdCB0aGUgc3VyZmFjZSdzIGJvcmRlciB2aWFcbiAgICAgICAgLy8gYG92ZXJmbG93OiBoaWRkZW5gLlxuICAgICAgICB2YXIgZ2V0Qm91bmRlZFJhZGl1cyA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIHZhciBoeXBvdGVudXNlID0gTWF0aC5zcXJ0KE1hdGgucG93KF90aGlzLmZyYW1lXy53aWR0aCwgMikgKyBNYXRoLnBvdyhfdGhpcy5mcmFtZV8uaGVpZ2h0LCAyKSk7XG4gICAgICAgICAgICByZXR1cm4gaHlwb3RlbnVzZSArIE1EQ1JpcHBsZUZvdW5kYXRpb24ubnVtYmVycy5QQURESU5HO1xuICAgICAgICB9O1xuICAgICAgICB0aGlzLm1heFJhZGl1c18gPSB0aGlzLmFkYXB0ZXJfLmlzVW5ib3VuZGVkKCkgPyBtYXhEaW0gOiBnZXRCb3VuZGVkUmFkaXVzKCk7XG4gICAgICAgIC8vIFJpcHBsZSBpcyBzaXplZCBhcyBhIGZyYWN0aW9uIG9mIHRoZSBsYXJnZXN0IGRpbWVuc2lvbiBvZiB0aGUgc3VyZmFjZSwgdGhlbiBzY2FsZXMgdXAgdXNpbmcgYSBDU1Mgc2NhbGUgdHJhbnNmb3JtXG4gICAgICAgIHZhciBpbml0aWFsU2l6ZSA9IE1hdGguZmxvb3IobWF4RGltICogTURDUmlwcGxlRm91bmRhdGlvbi5udW1iZXJzLklOSVRJQUxfT1JJR0lOX1NDQUxFKTtcbiAgICAgICAgLy8gVW5ib3VuZGVkIHJpcHBsZSBzaXplIHNob3VsZCBhbHdheXMgYmUgZXZlbiBudW1iZXIgdG8gZXF1YWxseSBjZW50ZXIgYWxpZ24uXG4gICAgICAgIGlmICh0aGlzLmFkYXB0ZXJfLmlzVW5ib3VuZGVkKCkgJiYgaW5pdGlhbFNpemUgJSAyICE9PSAwKSB7XG4gICAgICAgICAgICB0aGlzLmluaXRpYWxTaXplXyA9IGluaXRpYWxTaXplIC0gMTtcbiAgICAgICAgfVxuICAgICAgICBlbHNlIHtcbiAgICAgICAgICAgIHRoaXMuaW5pdGlhbFNpemVfID0gaW5pdGlhbFNpemU7XG4gICAgICAgIH1cbiAgICAgICAgdGhpcy5mZ1NjYWxlXyA9IFwiXCIgKyB0aGlzLm1heFJhZGl1c18gLyB0aGlzLmluaXRpYWxTaXplXztcbiAgICAgICAgdGhpcy51cGRhdGVMYXlvdXRDc3NWYXJzXygpO1xuICAgIH07XG4gICAgTURDUmlwcGxlRm91bmRhdGlvbi5wcm90b3R5cGUudXBkYXRlTGF5b3V0Q3NzVmFyc18gPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIHZhciBfYSA9IE1EQ1JpcHBsZUZvdW5kYXRpb24uc3RyaW5ncywgVkFSX0ZHX1NJWkUgPSBfYS5WQVJfRkdfU0laRSwgVkFSX0xFRlQgPSBfYS5WQVJfTEVGVCwgVkFSX1RPUCA9IF9hLlZBUl9UT1AsIFZBUl9GR19TQ0FMRSA9IF9hLlZBUl9GR19TQ0FMRTtcbiAgICAgICAgdGhpcy5hZGFwdGVyXy51cGRhdGVDc3NWYXJpYWJsZShWQVJfRkdfU0laRSwgdGhpcy5pbml0aWFsU2l6ZV8gKyBcInB4XCIpO1xuICAgICAgICB0aGlzLmFkYXB0ZXJfLnVwZGF0ZUNzc1ZhcmlhYmxlKFZBUl9GR19TQ0FMRSwgdGhpcy5mZ1NjYWxlXyk7XG4gICAgICAgIGlmICh0aGlzLmFkYXB0ZXJfLmlzVW5ib3VuZGVkKCkpIHtcbiAgICAgICAgICAgIHRoaXMudW5ib3VuZGVkQ29vcmRzXyA9IHtcbiAgICAgICAgICAgICAgICBsZWZ0OiBNYXRoLnJvdW5kKCh0aGlzLmZyYW1lXy53aWR0aCAvIDIpIC0gKHRoaXMuaW5pdGlhbFNpemVfIC8gMikpLFxuICAgICAgICAgICAgICAgIHRvcDogTWF0aC5yb3VuZCgodGhpcy5mcmFtZV8uaGVpZ2h0IC8gMikgLSAodGhpcy5pbml0aWFsU2l6ZV8gLyAyKSksXG4gICAgICAgICAgICB9O1xuICAgICAgICAgICAgdGhpcy5hZGFwdGVyXy51cGRhdGVDc3NWYXJpYWJsZShWQVJfTEVGVCwgdGhpcy51bmJvdW5kZWRDb29yZHNfLmxlZnQgKyBcInB4XCIpO1xuICAgICAgICAgICAgdGhpcy5hZGFwdGVyXy51cGRhdGVDc3NWYXJpYWJsZShWQVJfVE9QLCB0aGlzLnVuYm91bmRlZENvb3Jkc18udG9wICsgXCJweFwiKTtcbiAgICAgICAgfVxuICAgIH07XG4gICAgcmV0dXJuIE1EQ1JpcHBsZUZvdW5kYXRpb247XG59KE1EQ0ZvdW5kYXRpb24pKTtcbmV4cG9ydCB7IE1EQ1JpcHBsZUZvdW5kYXRpb24gfTtcbi8vIHRzbGludDpkaXNhYmxlLW5leHQtbGluZTpuby1kZWZhdWx0LWV4cG9ydCBOZWVkZWQgZm9yIGJhY2t3YXJkIGNvbXBhdGliaWxpdHkgd2l0aCBNREMgV2ViIHYwLjQ0LjAgYW5kIGVhcmxpZXIuXG5leHBvcnQgZGVmYXVsdCBNRENSaXBwbGVGb3VuZGF0aW9uO1xuLy8jIHNvdXJjZU1hcHBpbmdVUkw9Zm91bmRhdGlvbi5qcy5tYXAiXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./node_modules/@material/ripple/foundation.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MDCRippleFoundation", function() { return MDCRippleFoundation; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_foundation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/base/foundation */ "./node_modules/@material/base/foundation.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/ripple/constants.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./util */ "./node_modules/@material/ripple/util.js");
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+// Activation events registered on the root element of each instance for activation
+var ACTIVATION_EVENT_TYPES = [
+    'touchstart', 'pointerdown', 'mousedown', 'keydown',
+];
+// Deactivation events registered on documentElement when a pointer-related down event occurs
+var POINTER_DEACTIVATION_EVENT_TYPES = [
+    'touchend', 'pointerup', 'mouseup', 'contextmenu',
+];
+// simultaneous nested activations
+var activatedTargets = [];
+var MDCRippleFoundation = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](MDCRippleFoundation, _super);
+    function MDCRippleFoundation(adapter) {
+        var _this = _super.call(this, tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, MDCRippleFoundation.defaultAdapter, adapter)) || this;
+        _this.activationAnimationHasEnded_ = false;
+        _this.activationTimer_ = 0;
+        _this.fgDeactivationRemovalTimer_ = 0;
+        _this.fgScale_ = '0';
+        _this.frame_ = { width: 0, height: 0 };
+        _this.initialSize_ = 0;
+        _this.layoutFrame_ = 0;
+        _this.maxRadius_ = 0;
+        _this.unboundedCoords_ = { left: 0, top: 0 };
+        _this.activationState_ = _this.defaultActivationState_();
+        _this.activationTimerCallback_ = function () {
+            _this.activationAnimationHasEnded_ = true;
+            _this.runDeactivationUXLogicIfReady_();
+        };
+        _this.activateHandler_ = function (e) { return _this.activate_(e); };
+        _this.deactivateHandler_ = function () { return _this.deactivate_(); };
+        _this.focusHandler_ = function () { return _this.handleFocus(); };
+        _this.blurHandler_ = function () { return _this.handleBlur(); };
+        _this.resizeHandler_ = function () { return _this.layout(); };
+        return _this;
+    }
+    Object.defineProperty(MDCRippleFoundation, "cssClasses", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCRippleFoundation, "strings", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_2__["strings"];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCRippleFoundation, "numbers", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_2__["numbers"];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCRippleFoundation, "defaultAdapter", {
+        get: function () {
+            return {
+                addClass: function () { return undefined; },
+                browserSupportsCssVars: function () { return true; },
+                computeBoundingRect: function () { return ({ top: 0, right: 0, bottom: 0, left: 0, width: 0, height: 0 }); },
+                containsEventTarget: function () { return true; },
+                deregisterDocumentInteractionHandler: function () { return undefined; },
+                deregisterInteractionHandler: function () { return undefined; },
+                deregisterResizeHandler: function () { return undefined; },
+                getWindowPageOffset: function () { return ({ x: 0, y: 0 }); },
+                isSurfaceActive: function () { return true; },
+                isSurfaceDisabled: function () { return true; },
+                isUnbounded: function () { return true; },
+                registerDocumentInteractionHandler: function () { return undefined; },
+                registerInteractionHandler: function () { return undefined; },
+                registerResizeHandler: function () { return undefined; },
+                removeClass: function () { return undefined; },
+                updateCssVariable: function () { return undefined; },
+            };
+        },
+        enumerable: true,
+        configurable: true
+    });
+    MDCRippleFoundation.prototype.init = function () {
+        var _this = this;
+        var supportsPressRipple = this.supportsPressRipple_();
+        this.registerRootHandlers_(supportsPressRipple);
+        if (supportsPressRipple) {
+            var _a = MDCRippleFoundation.cssClasses, ROOT_1 = _a.ROOT, UNBOUNDED_1 = _a.UNBOUNDED;
+            requestAnimationFrame(function () {
+                _this.adapter_.addClass(ROOT_1);
+                if (_this.adapter_.isUnbounded()) {
+                    _this.adapter_.addClass(UNBOUNDED_1);
+                    // Unbounded ripples need layout logic applied immediately to set coordinates for both shade and ripple
+                    _this.layoutInternal_();
+                }
+            });
+        }
+    };
+    MDCRippleFoundation.prototype.destroy = function () {
+        var _this = this;
+        if (this.supportsPressRipple_()) {
+            if (this.activationTimer_) {
+                clearTimeout(this.activationTimer_);
+                this.activationTimer_ = 0;
+                this.adapter_.removeClass(MDCRippleFoundation.cssClasses.FG_ACTIVATION);
+            }
+            if (this.fgDeactivationRemovalTimer_) {
+                clearTimeout(this.fgDeactivationRemovalTimer_);
+                this.fgDeactivationRemovalTimer_ = 0;
+                this.adapter_.removeClass(MDCRippleFoundation.cssClasses.FG_DEACTIVATION);
+            }
+            var _a = MDCRippleFoundation.cssClasses, ROOT_2 = _a.ROOT, UNBOUNDED_2 = _a.UNBOUNDED;
+            requestAnimationFrame(function () {
+                _this.adapter_.removeClass(ROOT_2);
+                _this.adapter_.removeClass(UNBOUNDED_2);
+                _this.removeCssVars_();
+            });
+        }
+        this.deregisterRootHandlers_();
+        this.deregisterDeactivationHandlers_();
+    };
+    /**
+     * @param evt Optional event containing position information.
+     */
+    MDCRippleFoundation.prototype.activate = function (evt) {
+        this.activate_(evt);
+    };
+    MDCRippleFoundation.prototype.deactivate = function () {
+        this.deactivate_();
+    };
+    MDCRippleFoundation.prototype.layout = function () {
+        var _this = this;
+        if (this.layoutFrame_) {
+            cancelAnimationFrame(this.layoutFrame_);
+        }
+        this.layoutFrame_ = requestAnimationFrame(function () {
+            _this.layoutInternal_();
+            _this.layoutFrame_ = 0;
+        });
+    };
+    MDCRippleFoundation.prototype.setUnbounded = function (unbounded) {
+        var UNBOUNDED = MDCRippleFoundation.cssClasses.UNBOUNDED;
+        if (unbounded) {
+            this.adapter_.addClass(UNBOUNDED);
+        }
+        else {
+            this.adapter_.removeClass(UNBOUNDED);
+        }
+    };
+    MDCRippleFoundation.prototype.handleFocus = function () {
+        var _this = this;
+        requestAnimationFrame(function () {
+            return _this.adapter_.addClass(MDCRippleFoundation.cssClasses.BG_FOCUSED);
+        });
+    };
+    MDCRippleFoundation.prototype.handleBlur = function () {
+        var _this = this;
+        requestAnimationFrame(function () {
+            return _this.adapter_.removeClass(MDCRippleFoundation.cssClasses.BG_FOCUSED);
+        });
+    };
+    /**
+     * We compute this property so that we are not querying information about the client
+     * until the point in time where the foundation requests it. This prevents scenarios where
+     * client-side feature-detection may happen too early, such as when components are rendered on the server
+     * and then initialized at mount time on the client.
+     */
+    MDCRippleFoundation.prototype.supportsPressRipple_ = function () {
+        return this.adapter_.browserSupportsCssVars();
+    };
+    MDCRippleFoundation.prototype.defaultActivationState_ = function () {
+        return {
+            activationEvent: undefined,
+            hasDeactivationUXRun: false,
+            isActivated: false,
+            isProgrammatic: false,
+            wasActivatedByPointer: false,
+            wasElementMadeActive: false,
+        };
+    };
+    /**
+     * supportsPressRipple Passed from init to save a redundant function call
+     */
+    MDCRippleFoundation.prototype.registerRootHandlers_ = function (supportsPressRipple) {
+        var _this = this;
+        if (supportsPressRipple) {
+            ACTIVATION_EVENT_TYPES.forEach(function (evtType) {
+                _this.adapter_.registerInteractionHandler(evtType, _this.activateHandler_);
+            });
+            if (this.adapter_.isUnbounded()) {
+                this.adapter_.registerResizeHandler(this.resizeHandler_);
+            }
+        }
+        this.adapter_.registerInteractionHandler('focus', this.focusHandler_);
+        this.adapter_.registerInteractionHandler('blur', this.blurHandler_);
+    };
+    MDCRippleFoundation.prototype.registerDeactivationHandlers_ = function (evt) {
+        var _this = this;
+        if (evt.type === 'keydown') {
+            this.adapter_.registerInteractionHandler('keyup', this.deactivateHandler_);
+        }
+        else {
+            POINTER_DEACTIVATION_EVENT_TYPES.forEach(function (evtType) {
+                _this.adapter_.registerDocumentInteractionHandler(evtType, _this.deactivateHandler_);
+            });
+        }
+    };
+    MDCRippleFoundation.prototype.deregisterRootHandlers_ = function () {
+        var _this = this;
+        ACTIVATION_EVENT_TYPES.forEach(function (evtType) {
+            _this.adapter_.deregisterInteractionHandler(evtType, _this.activateHandler_);
+        });
+        this.adapter_.deregisterInteractionHandler('focus', this.focusHandler_);
+        this.adapter_.deregisterInteractionHandler('blur', this.blurHandler_);
+        if (this.adapter_.isUnbounded()) {
+            this.adapter_.deregisterResizeHandler(this.resizeHandler_);
+        }
+    };
+    MDCRippleFoundation.prototype.deregisterDeactivationHandlers_ = function () {
+        var _this = this;
+        this.adapter_.deregisterInteractionHandler('keyup', this.deactivateHandler_);
+        POINTER_DEACTIVATION_EVENT_TYPES.forEach(function (evtType) {
+            _this.adapter_.deregisterDocumentInteractionHandler(evtType, _this.deactivateHandler_);
+        });
+    };
+    MDCRippleFoundation.prototype.removeCssVars_ = function () {
+        var _this = this;
+        var rippleStrings = MDCRippleFoundation.strings;
+        var keys = Object.keys(rippleStrings);
+        keys.forEach(function (key) {
+            if (key.indexOf('VAR_') === 0) {
+                _this.adapter_.updateCssVariable(rippleStrings[key], null);
+            }
+        });
+    };
+    MDCRippleFoundation.prototype.activate_ = function (evt) {
+        var _this = this;
+        if (this.adapter_.isSurfaceDisabled()) {
+            return;
+        }
+        var activationState = this.activationState_;
+        if (activationState.isActivated) {
+            return;
+        }
+        // Avoid reacting to follow-on events fired by touch device after an already-processed user interaction
+        var previousActivationEvent = this.previousActivationEvent_;
+        var isSameInteraction = previousActivationEvent && evt !== undefined && previousActivationEvent.type !== evt.type;
+        if (isSameInteraction) {
+            return;
+        }
+        activationState.isActivated = true;
+        activationState.isProgrammatic = evt === undefined;
+        activationState.activationEvent = evt;
+        activationState.wasActivatedByPointer = activationState.isProgrammatic ? false : evt !== undefined && (evt.type === 'mousedown' || evt.type === 'touchstart' || evt.type === 'pointerdown');
+        var hasActivatedChild = evt !== undefined && activatedTargets.length > 0 && activatedTargets.some(function (target) { return _this.adapter_.containsEventTarget(target); });
+        if (hasActivatedChild) {
+            // Immediately reset activation state, while preserving logic that prevents touch follow-on events
+            this.resetActivationState_();
+            return;
+        }
+        if (evt !== undefined) {
+            activatedTargets.push(evt.target);
+            this.registerDeactivationHandlers_(evt);
+        }
+        activationState.wasElementMadeActive = this.checkElementMadeActive_(evt);
+        if (activationState.wasElementMadeActive) {
+            this.animateActivation_();
+        }
+        requestAnimationFrame(function () {
+            // Reset array on next frame after the current event has had a chance to bubble to prevent ancestor ripples
+            activatedTargets = [];
+            if (!activationState.wasElementMadeActive
+                && evt !== undefined
+                && (evt.key === ' ' || evt.keyCode === 32)) {
+                // If space was pressed, try again within an rAF call to detect :active, because different UAs report
+                // active states inconsistently when they're called within event handling code:
+                // - https://bugs.chromium.org/p/chromium/issues/detail?id=635971
+                // - https://bugzilla.mozilla.org/show_bug.cgi?id=1293741
+                // We try first outside rAF to support Edge, which does not exhibit this problem, but will crash if a CSS
+                // variable is set within a rAF callback for a submit button interaction (#2241).
+                activationState.wasElementMadeActive = _this.checkElementMadeActive_(evt);
+                if (activationState.wasElementMadeActive) {
+                    _this.animateActivation_();
+                }
+            }
+            if (!activationState.wasElementMadeActive) {
+                // Reset activation state immediately if element was not made active.
+                _this.activationState_ = _this.defaultActivationState_();
+            }
+        });
+    };
+    MDCRippleFoundation.prototype.checkElementMadeActive_ = function (evt) {
+        return (evt !== undefined && evt.type === 'keydown') ? this.adapter_.isSurfaceActive() : true;
+    };
+    MDCRippleFoundation.prototype.animateActivation_ = function () {
+        var _this = this;
+        var _a = MDCRippleFoundation.strings, VAR_FG_TRANSLATE_START = _a.VAR_FG_TRANSLATE_START, VAR_FG_TRANSLATE_END = _a.VAR_FG_TRANSLATE_END;
+        var _b = MDCRippleFoundation.cssClasses, FG_DEACTIVATION = _b.FG_DEACTIVATION, FG_ACTIVATION = _b.FG_ACTIVATION;
+        var DEACTIVATION_TIMEOUT_MS = MDCRippleFoundation.numbers.DEACTIVATION_TIMEOUT_MS;
+        this.layoutInternal_();
+        var translateStart = '';
+        var translateEnd = '';
+        if (!this.adapter_.isUnbounded()) {
+            var _c = this.getFgTranslationCoordinates_(), startPoint = _c.startPoint, endPoint = _c.endPoint;
+            translateStart = startPoint.x + "px, " + startPoint.y + "px";
+            translateEnd = endPoint.x + "px, " + endPoint.y + "px";
+        }
+        this.adapter_.updateCssVariable(VAR_FG_TRANSLATE_START, translateStart);
+        this.adapter_.updateCssVariable(VAR_FG_TRANSLATE_END, translateEnd);
+        // Cancel any ongoing activation/deactivation animations
+        clearTimeout(this.activationTimer_);
+        clearTimeout(this.fgDeactivationRemovalTimer_);
+        this.rmBoundedActivationClasses_();
+        this.adapter_.removeClass(FG_DEACTIVATION);
+        // Force layout in order to re-trigger the animation.
+        this.adapter_.computeBoundingRect();
+        this.adapter_.addClass(FG_ACTIVATION);
+        this.activationTimer_ = setTimeout(function () { return _this.activationTimerCallback_(); }, DEACTIVATION_TIMEOUT_MS);
+    };
+    MDCRippleFoundation.prototype.getFgTranslationCoordinates_ = function () {
+        var _a = this.activationState_, activationEvent = _a.activationEvent, wasActivatedByPointer = _a.wasActivatedByPointer;
+        var startPoint;
+        if (wasActivatedByPointer) {
+            startPoint = Object(_util__WEBPACK_IMPORTED_MODULE_3__["getNormalizedEventCoords"])(activationEvent, this.adapter_.getWindowPageOffset(), this.adapter_.computeBoundingRect());
+        }
+        else {
+            startPoint = {
+                x: this.frame_.width / 2,
+                y: this.frame_.height / 2,
+            };
+        }
+        // Center the element around the start point.
+        startPoint = {
+            x: startPoint.x - (this.initialSize_ / 2),
+            y: startPoint.y - (this.initialSize_ / 2),
+        };
+        var endPoint = {
+            x: (this.frame_.width / 2) - (this.initialSize_ / 2),
+            y: (this.frame_.height / 2) - (this.initialSize_ / 2),
+        };
+        return { startPoint: startPoint, endPoint: endPoint };
+    };
+    MDCRippleFoundation.prototype.runDeactivationUXLogicIfReady_ = function () {
+        var _this = this;
+        // This method is called both when a pointing device is released, and when the activation animation ends.
+        // The deactivation animation should only run after both of those occur.
+        var FG_DEACTIVATION = MDCRippleFoundation.cssClasses.FG_DEACTIVATION;
+        var _a = this.activationState_, hasDeactivationUXRun = _a.hasDeactivationUXRun, isActivated = _a.isActivated;
+        var activationHasEnded = hasDeactivationUXRun || !isActivated;
+        if (activationHasEnded && this.activationAnimationHasEnded_) {
+            this.rmBoundedActivationClasses_();
+            this.adapter_.addClass(FG_DEACTIVATION);
+            this.fgDeactivationRemovalTimer_ = setTimeout(function () {
+                _this.adapter_.removeClass(FG_DEACTIVATION);
+            }, _constants__WEBPACK_IMPORTED_MODULE_2__["numbers"].FG_DEACTIVATION_MS);
+        }
+    };
+    MDCRippleFoundation.prototype.rmBoundedActivationClasses_ = function () {
+        var FG_ACTIVATION = MDCRippleFoundation.cssClasses.FG_ACTIVATION;
+        this.adapter_.removeClass(FG_ACTIVATION);
+        this.activationAnimationHasEnded_ = false;
+        this.adapter_.computeBoundingRect();
+    };
+    MDCRippleFoundation.prototype.resetActivationState_ = function () {
+        var _this = this;
+        this.previousActivationEvent_ = this.activationState_.activationEvent;
+        this.activationState_ = this.defaultActivationState_();
+        // Touch devices may fire additional events for the same interaction within a short time.
+        // Store the previous event until it's safe to assume that subsequent events are for new interactions.
+        setTimeout(function () { return _this.previousActivationEvent_ = undefined; }, MDCRippleFoundation.numbers.TAP_DELAY_MS);
+    };
+    MDCRippleFoundation.prototype.deactivate_ = function () {
+        var _this = this;
+        var activationState = this.activationState_;
+        // This can happen in scenarios such as when you have a keyup event that blurs the element.
+        if (!activationState.isActivated) {
+            return;
+        }
+        var state = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, activationState);
+        if (activationState.isProgrammatic) {
+            requestAnimationFrame(function () { return _this.animateDeactivation_(state); });
+            this.resetActivationState_();
+        }
+        else {
+            this.deregisterDeactivationHandlers_();
+            requestAnimationFrame(function () {
+                _this.activationState_.hasDeactivationUXRun = true;
+                _this.animateDeactivation_(state);
+                _this.resetActivationState_();
+            });
+        }
+    };
+    MDCRippleFoundation.prototype.animateDeactivation_ = function (_a) {
+        var wasActivatedByPointer = _a.wasActivatedByPointer, wasElementMadeActive = _a.wasElementMadeActive;
+        if (wasActivatedByPointer || wasElementMadeActive) {
+            this.runDeactivationUXLogicIfReady_();
+        }
+    };
+    MDCRippleFoundation.prototype.layoutInternal_ = function () {
+        var _this = this;
+        this.frame_ = this.adapter_.computeBoundingRect();
+        var maxDim = Math.max(this.frame_.height, this.frame_.width);
+        // Surface diameter is treated differently for unbounded vs. bounded ripples.
+        // Unbounded ripple diameter is calculated smaller since the surface is expected to already be padded appropriately
+        // to extend the hitbox, and the ripple is expected to meet the edges of the padded hitbox (which is typically
+        // square). Bounded ripples, on the other hand, are fully expected to expand beyond the surface's longest diameter
+        // (calculated based on the diagonal plus a constant padding), and are clipped at the surface's border via
+        // `overflow: hidden`.
+        var getBoundedRadius = function () {
+            var hypotenuse = Math.sqrt(Math.pow(_this.frame_.width, 2) + Math.pow(_this.frame_.height, 2));
+            return hypotenuse + MDCRippleFoundation.numbers.PADDING;
+        };
+        this.maxRadius_ = this.adapter_.isUnbounded() ? maxDim : getBoundedRadius();
+        // Ripple is sized as a fraction of the largest dimension of the surface, then scales up using a CSS scale transform
+        var initialSize = Math.floor(maxDim * MDCRippleFoundation.numbers.INITIAL_ORIGIN_SCALE);
+        // Unbounded ripple size should always be even number to equally center align.
+        if (this.adapter_.isUnbounded() && initialSize % 2 !== 0) {
+            this.initialSize_ = initialSize - 1;
+        }
+        else {
+            this.initialSize_ = initialSize;
+        }
+        this.fgScale_ = "" + this.maxRadius_ / this.initialSize_;
+        this.updateLayoutCssVars_();
+    };
+    MDCRippleFoundation.prototype.updateLayoutCssVars_ = function () {
+        var _a = MDCRippleFoundation.strings, VAR_FG_SIZE = _a.VAR_FG_SIZE, VAR_LEFT = _a.VAR_LEFT, VAR_TOP = _a.VAR_TOP, VAR_FG_SCALE = _a.VAR_FG_SCALE;
+        this.adapter_.updateCssVariable(VAR_FG_SIZE, this.initialSize_ + "px");
+        this.adapter_.updateCssVariable(VAR_FG_SCALE, this.fgScale_);
+        if (this.adapter_.isUnbounded()) {
+            this.unboundedCoords_ = {
+                left: Math.round((this.frame_.width / 2) - (this.initialSize_ / 2)),
+                top: Math.round((this.frame_.height / 2) - (this.initialSize_ / 2)),
+            };
+            this.adapter_.updateCssVariable(VAR_LEFT, this.unboundedCoords_.left + "px");
+            this.adapter_.updateCssVariable(VAR_TOP, this.unboundedCoords_.top + "px");
+        }
+    };
+    return MDCRippleFoundation;
+}(_material_base_foundation__WEBPACK_IMPORTED_MODULE_1__["MDCFoundation"]));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* harmony default export */ __webpack_exports__["default"] = (MDCRippleFoundation);
+//# sourceMappingURL=foundation.js.map
 
 /***/ }),
 
@@ -345,7 +2801,60 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"supportsCssVariables\", function() { return supportsCssVariables; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getNormalizedEventCoords\", function() { return getNormalizedEventCoords; });\n/**\n * Stores result from supportsCssVariables to avoid redundant processing to\n * detect CSS custom variable support.\n */\nvar supportsCssVariables_;\nfunction supportsCssVariables(windowObj, forceRefresh) {\n    if (forceRefresh === void 0) { forceRefresh = false; }\n    var CSS = windowObj.CSS;\n    var supportsCssVars = supportsCssVariables_;\n    if (typeof supportsCssVariables_ === 'boolean' && !forceRefresh) {\n        return supportsCssVariables_;\n    }\n    var supportsFunctionPresent = CSS && typeof CSS.supports === 'function';\n    if (!supportsFunctionPresent) {\n        return false;\n    }\n    var explicitlySupportsCssVars = CSS.supports('--css-vars', 'yes');\n    // See: https://bugs.webkit.org/show_bug.cgi?id=154669\n    // See: README section on Safari\n    var weAreFeatureDetectingSafari10plus = (CSS.supports('(--css-vars: yes)') &&\n        CSS.supports('color', '#00000000'));\n    supportsCssVars =\n        explicitlySupportsCssVars || weAreFeatureDetectingSafari10plus;\n    if (!forceRefresh) {\n        supportsCssVariables_ = supportsCssVars;\n    }\n    return supportsCssVars;\n}\nfunction getNormalizedEventCoords(evt, pageOffset, clientRect) {\n    if (!evt) {\n        return { x: 0, y: 0 };\n    }\n    var x = pageOffset.x, y = pageOffset.y;\n    var documentX = x + clientRect.left;\n    var documentY = y + clientRect.top;\n    var normalizedX;\n    var normalizedY;\n    // Determine touch point relative to the ripple container.\n    if (evt.type === 'touchstart') {\n        var touchEvent = evt;\n        normalizedX = touchEvent.changedTouches[0].pageX - documentX;\n        normalizedY = touchEvent.changedTouches[0].pageY - documentY;\n    }\n    else {\n        var mouseEvent = evt;\n        normalizedX = mouseEvent.pageX - documentX;\n        normalizedY = mouseEvent.pageY - documentY;\n    }\n    return { x: normalizedX, y: normalizedY };\n}\n//# sourceMappingURL=util.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL3JpcHBsZS91dGlsLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vbm9kZV9tb2R1bGVzL0BtYXRlcmlhbC9yaXBwbGUvdXRpbC5qcz8xZGZjIl0sInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogU3RvcmVzIHJlc3VsdCBmcm9tIHN1cHBvcnRzQ3NzVmFyaWFibGVzIHRvIGF2b2lkIHJlZHVuZGFudCBwcm9jZXNzaW5nIHRvXG4gKiBkZXRlY3QgQ1NTIGN1c3RvbSB2YXJpYWJsZSBzdXBwb3J0LlxuICovXG52YXIgc3VwcG9ydHNDc3NWYXJpYWJsZXNfO1xuZXhwb3J0IGZ1bmN0aW9uIHN1cHBvcnRzQ3NzVmFyaWFibGVzKHdpbmRvd09iaiwgZm9yY2VSZWZyZXNoKSB7XG4gICAgaWYgKGZvcmNlUmVmcmVzaCA9PT0gdm9pZCAwKSB7IGZvcmNlUmVmcmVzaCA9IGZhbHNlOyB9XG4gICAgdmFyIENTUyA9IHdpbmRvd09iai5DU1M7XG4gICAgdmFyIHN1cHBvcnRzQ3NzVmFycyA9IHN1cHBvcnRzQ3NzVmFyaWFibGVzXztcbiAgICBpZiAodHlwZW9mIHN1cHBvcnRzQ3NzVmFyaWFibGVzXyA9PT0gJ2Jvb2xlYW4nICYmICFmb3JjZVJlZnJlc2gpIHtcbiAgICAgICAgcmV0dXJuIHN1cHBvcnRzQ3NzVmFyaWFibGVzXztcbiAgICB9XG4gICAgdmFyIHN1cHBvcnRzRnVuY3Rpb25QcmVzZW50ID0gQ1NTICYmIHR5cGVvZiBDU1Muc3VwcG9ydHMgPT09ICdmdW5jdGlvbic7XG4gICAgaWYgKCFzdXBwb3J0c0Z1bmN0aW9uUHJlc2VudCkge1xuICAgICAgICByZXR1cm4gZmFsc2U7XG4gICAgfVxuICAgIHZhciBleHBsaWNpdGx5U3VwcG9ydHNDc3NWYXJzID0gQ1NTLnN1cHBvcnRzKCctLWNzcy12YXJzJywgJ3llcycpO1xuICAgIC8vIFNlZTogaHR0cHM6Ly9idWdzLndlYmtpdC5vcmcvc2hvd19idWcuY2dpP2lkPTE1NDY2OVxuICAgIC8vIFNlZTogUkVBRE1FIHNlY3Rpb24gb24gU2FmYXJpXG4gICAgdmFyIHdlQXJlRmVhdHVyZURldGVjdGluZ1NhZmFyaTEwcGx1cyA9IChDU1Muc3VwcG9ydHMoJygtLWNzcy12YXJzOiB5ZXMpJykgJiZcbiAgICAgICAgQ1NTLnN1cHBvcnRzKCdjb2xvcicsICcjMDAwMDAwMDAnKSk7XG4gICAgc3VwcG9ydHNDc3NWYXJzID1cbiAgICAgICAgZXhwbGljaXRseVN1cHBvcnRzQ3NzVmFycyB8fCB3ZUFyZUZlYXR1cmVEZXRlY3RpbmdTYWZhcmkxMHBsdXM7XG4gICAgaWYgKCFmb3JjZVJlZnJlc2gpIHtcbiAgICAgICAgc3VwcG9ydHNDc3NWYXJpYWJsZXNfID0gc3VwcG9ydHNDc3NWYXJzO1xuICAgIH1cbiAgICByZXR1cm4gc3VwcG9ydHNDc3NWYXJzO1xufVxuZXhwb3J0IGZ1bmN0aW9uIGdldE5vcm1hbGl6ZWRFdmVudENvb3JkcyhldnQsIHBhZ2VPZmZzZXQsIGNsaWVudFJlY3QpIHtcbiAgICBpZiAoIWV2dCkge1xuICAgICAgICByZXR1cm4geyB4OiAwLCB5OiAwIH07XG4gICAgfVxuICAgIHZhciB4ID0gcGFnZU9mZnNldC54LCB5ID0gcGFnZU9mZnNldC55O1xuICAgIHZhciBkb2N1bWVudFggPSB4ICsgY2xpZW50UmVjdC5sZWZ0O1xuICAgIHZhciBkb2N1bWVudFkgPSB5ICsgY2xpZW50UmVjdC50b3A7XG4gICAgdmFyIG5vcm1hbGl6ZWRYO1xuICAgIHZhciBub3JtYWxpemVkWTtcbiAgICAvLyBEZXRlcm1pbmUgdG91Y2ggcG9pbnQgcmVsYXRpdmUgdG8gdGhlIHJpcHBsZSBjb250YWluZXIuXG4gICAgaWYgKGV2dC50eXBlID09PSAndG91Y2hzdGFydCcpIHtcbiAgICAgICAgdmFyIHRvdWNoRXZlbnQgPSBldnQ7XG4gICAgICAgIG5vcm1hbGl6ZWRYID0gdG91Y2hFdmVudC5jaGFuZ2VkVG91Y2hlc1swXS5wYWdlWCAtIGRvY3VtZW50WDtcbiAgICAgICAgbm9ybWFsaXplZFkgPSB0b3VjaEV2ZW50LmNoYW5nZWRUb3VjaGVzWzBdLnBhZ2VZIC0gZG9jdW1lbnRZO1xuICAgIH1cbiAgICBlbHNlIHtcbiAgICAgICAgdmFyIG1vdXNlRXZlbnQgPSBldnQ7XG4gICAgICAgIG5vcm1hbGl6ZWRYID0gbW91c2VFdmVudC5wYWdlWCAtIGRvY3VtZW50WDtcbiAgICAgICAgbm9ybWFsaXplZFkgPSBtb3VzZUV2ZW50LnBhZ2VZIC0gZG9jdW1lbnRZO1xuICAgIH1cbiAgICByZXR1cm4geyB4OiBub3JtYWxpemVkWCwgeTogbm9ybWFsaXplZFkgfTtcbn1cbi8vIyBzb3VyY2VNYXBwaW5nVVJMPXV0aWwuanMubWFwIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./node_modules/@material/ripple/util.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "supportsCssVariables", function() { return supportsCssVariables; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNormalizedEventCoords", function() { return getNormalizedEventCoords; });
+/**
+ * Stores result from supportsCssVariables to avoid redundant processing to
+ * detect CSS custom variable support.
+ */
+var supportsCssVariables_;
+function supportsCssVariables(windowObj, forceRefresh) {
+    if (forceRefresh === void 0) { forceRefresh = false; }
+    var CSS = windowObj.CSS;
+    var supportsCssVars = supportsCssVariables_;
+    if (typeof supportsCssVariables_ === 'boolean' && !forceRefresh) {
+        return supportsCssVariables_;
+    }
+    var supportsFunctionPresent = CSS && typeof CSS.supports === 'function';
+    if (!supportsFunctionPresent) {
+        return false;
+    }
+    var explicitlySupportsCssVars = CSS.supports('--css-vars', 'yes');
+    // See: https://bugs.webkit.org/show_bug.cgi?id=154669
+    // See: README section on Safari
+    var weAreFeatureDetectingSafari10plus = (CSS.supports('(--css-vars: yes)') &&
+        CSS.supports('color', '#00000000'));
+    supportsCssVars =
+        explicitlySupportsCssVars || weAreFeatureDetectingSafari10plus;
+    if (!forceRefresh) {
+        supportsCssVariables_ = supportsCssVars;
+    }
+    return supportsCssVars;
+}
+function getNormalizedEventCoords(evt, pageOffset, clientRect) {
+    if (!evt) {
+        return { x: 0, y: 0 };
+    }
+    var x = pageOffset.x, y = pageOffset.y;
+    var documentX = x + clientRect.left;
+    var documentY = y + clientRect.top;
+    var normalizedX;
+    var normalizedY;
+    // Determine touch point relative to the ripple container.
+    if (evt.type === 'touchstart') {
+        var touchEvent = evt;
+        normalizedX = touchEvent.changedTouches[0].pageX - documentX;
+        normalizedY = touchEvent.changedTouches[0].pageY - documentY;
+    }
+    else {
+        var mouseEvent = evt;
+        normalizedX = mouseEvent.pageX - documentX;
+        normalizedY = mouseEvent.pageY - documentY;
+    }
+    return { x: normalizedX, y: normalizedY };
+}
+//# sourceMappingURL=util.js.map
 
 /***/ }),
 
@@ -357,7 +2866,139 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"MDCTopAppBar\", function() { return MDCTopAppBar; });\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _material_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/base/component */ \"./node_modules/@material/base/component.js\");\n/* harmony import */ var _material_ripple_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/ripple/component */ \"./node_modules/@material/ripple/component.js\");\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./constants */ \"./node_modules/@material/top-app-bar/constants.js\");\n/* harmony import */ var _fixed_foundation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./fixed/foundation */ \"./node_modules/@material/top-app-bar/fixed/foundation.js\");\n/* harmony import */ var _short_foundation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./short/foundation */ \"./node_modules/@material/top-app-bar/short/foundation.js\");\n/* harmony import */ var _standard_foundation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./standard/foundation */ \"./node_modules/@material/top-app-bar/standard/foundation.js\");\n/**\n * @license\n * Copyright 2018 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\n\n\n\n\n\n\n\nvar MDCTopAppBar = /** @class */ (function (_super) {\n    tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"](MDCTopAppBar, _super);\n    function MDCTopAppBar() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    MDCTopAppBar.attachTo = function (root) {\n        return new MDCTopAppBar(root);\n    };\n    MDCTopAppBar.prototype.initialize = function (rippleFactory) {\n        if (rippleFactory === void 0) { rippleFactory = function (el) { return _material_ripple_component__WEBPACK_IMPORTED_MODULE_2__[\"MDCRipple\"].attachTo(el); }; }\n        this.navIcon_ = this.root_.querySelector(_constants__WEBPACK_IMPORTED_MODULE_3__[\"strings\"].NAVIGATION_ICON_SELECTOR);\n        // Get all icons in the toolbar and instantiate the ripples\n        var icons = [].slice.call(this.root_.querySelectorAll(_constants__WEBPACK_IMPORTED_MODULE_3__[\"strings\"].ACTION_ITEM_SELECTOR));\n        if (this.navIcon_) {\n            icons.push(this.navIcon_);\n        }\n        this.iconRipples_ = icons.map(function (icon) {\n            var ripple = rippleFactory(icon);\n            ripple.unbounded = true;\n            return ripple;\n        });\n        this.scrollTarget_ = window;\n    };\n    MDCTopAppBar.prototype.initialSyncWithDOM = function () {\n        this.handleNavigationClick_ = this.foundation_.handleNavigationClick.bind(this.foundation_);\n        this.handleWindowResize_ = this.foundation_.handleWindowResize.bind(this.foundation_);\n        this.handleTargetScroll_ = this.foundation_.handleTargetScroll.bind(this.foundation_);\n        this.scrollTarget_.addEventListener('scroll', this.handleTargetScroll_);\n        if (this.navIcon_) {\n            this.navIcon_.addEventListener('click', this.handleNavigationClick_);\n        }\n        var isFixed = this.root_.classList.contains(_constants__WEBPACK_IMPORTED_MODULE_3__[\"cssClasses\"].FIXED_CLASS);\n        var isShort = this.root_.classList.contains(_constants__WEBPACK_IMPORTED_MODULE_3__[\"cssClasses\"].SHORT_CLASS);\n        if (!isShort && !isFixed) {\n            window.addEventListener('resize', this.handleWindowResize_);\n        }\n    };\n    MDCTopAppBar.prototype.destroy = function () {\n        this.iconRipples_.forEach(function (iconRipple) { return iconRipple.destroy(); });\n        this.scrollTarget_.removeEventListener('scroll', this.handleTargetScroll_);\n        if (this.navIcon_) {\n            this.navIcon_.removeEventListener('click', this.handleNavigationClick_);\n        }\n        var isFixed = this.root_.classList.contains(_constants__WEBPACK_IMPORTED_MODULE_3__[\"cssClasses\"].FIXED_CLASS);\n        var isShort = this.root_.classList.contains(_constants__WEBPACK_IMPORTED_MODULE_3__[\"cssClasses\"].SHORT_CLASS);\n        if (!isShort && !isFixed) {\n            window.removeEventListener('resize', this.handleWindowResize_);\n        }\n        _super.prototype.destroy.call(this);\n    };\n    MDCTopAppBar.prototype.setScrollTarget = function (target) {\n        // Remove scroll handler from the previous scroll target\n        this.scrollTarget_.removeEventListener('scroll', this.handleTargetScroll_);\n        this.scrollTarget_ = target;\n        // Initialize scroll handler on the new scroll target\n        this.handleTargetScroll_ =\n            this.foundation_.handleTargetScroll.bind(this.foundation_);\n        this.scrollTarget_.addEventListener('scroll', this.handleTargetScroll_);\n    };\n    MDCTopAppBar.prototype.getDefaultFoundation = function () {\n        var _this = this;\n        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.\n        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.\n        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.\n        var adapter = {\n            hasClass: function (className) { return _this.root_.classList.contains(className); },\n            addClass: function (className) { return _this.root_.classList.add(className); },\n            removeClass: function (className) { return _this.root_.classList.remove(className); },\n            setStyle: function (property, value) { return _this.root_.style.setProperty(property, value); },\n            getTopAppBarHeight: function () { return _this.root_.clientHeight; },\n            notifyNavigationIconClicked: function () { return _this.emit(_constants__WEBPACK_IMPORTED_MODULE_3__[\"strings\"].NAVIGATION_EVENT, {}); },\n            getViewportScrollY: function () {\n                var win = _this.scrollTarget_;\n                var el = _this.scrollTarget_;\n                return win.pageYOffset !== undefined ? win.pageYOffset : el.scrollTop;\n            },\n            getTotalActionItems: function () { return _this.root_.querySelectorAll(_constants__WEBPACK_IMPORTED_MODULE_3__[\"strings\"].ACTION_ITEM_SELECTOR).length; },\n        };\n        // tslint:enable:object-literal-sort-keys\n        var foundation;\n        if (this.root_.classList.contains(_constants__WEBPACK_IMPORTED_MODULE_3__[\"cssClasses\"].SHORT_CLASS)) {\n            foundation = new _short_foundation__WEBPACK_IMPORTED_MODULE_5__[\"MDCShortTopAppBarFoundation\"](adapter);\n        }\n        else if (this.root_.classList.contains(_constants__WEBPACK_IMPORTED_MODULE_3__[\"cssClasses\"].FIXED_CLASS)) {\n            foundation = new _fixed_foundation__WEBPACK_IMPORTED_MODULE_4__[\"MDCFixedTopAppBarFoundation\"](adapter);\n        }\n        else {\n            foundation = new _standard_foundation__WEBPACK_IMPORTED_MODULE_6__[\"MDCTopAppBarFoundation\"](adapter);\n        }\n        return foundation;\n    };\n    return MDCTopAppBar;\n}(_material_base_component__WEBPACK_IMPORTED_MODULE_1__[\"MDCComponent\"]));\n\n//# sourceMappingURL=component.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL3RvcC1hcHAtYmFyL2NvbXBvbmVudC5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL25vZGVfbW9kdWxlcy9AbWF0ZXJpYWwvdG9wLWFwcC1iYXIvY29tcG9uZW50LmpzPzQxZjEiXSwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBAbGljZW5zZVxuICogQ29weXJpZ2h0IDIwMTggR29vZ2xlIEluYy5cbiAqXG4gKiBQZXJtaXNzaW9uIGlzIGhlcmVieSBncmFudGVkLCBmcmVlIG9mIGNoYXJnZSwgdG8gYW55IHBlcnNvbiBvYnRhaW5pbmcgYSBjb3B5XG4gKiBvZiB0aGlzIHNvZnR3YXJlIGFuZCBhc3NvY2lhdGVkIGRvY3VtZW50YXRpb24gZmlsZXMgKHRoZSBcIlNvZnR3YXJlXCIpLCB0byBkZWFsXG4gKiBpbiB0aGUgU29mdHdhcmUgd2l0aG91dCByZXN0cmljdGlvbiwgaW5jbHVkaW5nIHdpdGhvdXQgbGltaXRhdGlvbiB0aGUgcmlnaHRzXG4gKiB0byB1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsXG4gKiBjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXNcbiAqIGZ1cm5pc2hlZCB0byBkbyBzbywgc3ViamVjdCB0byB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6XG4gKlxuICogVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW5cbiAqIGFsbCBjb3BpZXMgb3Igc3Vic3RhbnRpYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLlxuICpcbiAqIFRIRSBTT0ZUV0FSRSBJUyBQUk9WSURFRCBcIkFTIElTXCIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIEVYUFJFU1MgT1JcbiAqIElNUExJRUQsIElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gVEhFIFdBUlJBTlRJRVMgT0YgTUVSQ0hBTlRBQklMSVRZLFxuICogRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFXG4gKiBBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZIENMQUlNLCBEQU1BR0VTIE9SIE9USEVSXG4gKiBMSUFCSUxJVFksIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULCBUT1JUIE9SIE9USEVSV0lTRSwgQVJJU0lORyBGUk9NLFxuICogT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTlxuICogVEhFIFNPRlRXQVJFLlxuICovXG5pbXBvcnQgKiBhcyB0c2xpYl8xIGZyb20gXCJ0c2xpYlwiO1xuaW1wb3J0IHsgTURDQ29tcG9uZW50IH0gZnJvbSAnQG1hdGVyaWFsL2Jhc2UvY29tcG9uZW50JztcbmltcG9ydCB7IE1EQ1JpcHBsZSB9IGZyb20gJ0BtYXRlcmlhbC9yaXBwbGUvY29tcG9uZW50JztcbmltcG9ydCB7IGNzc0NsYXNzZXMsIHN0cmluZ3MgfSBmcm9tICcuL2NvbnN0YW50cyc7XG5pbXBvcnQgeyBNRENGaXhlZFRvcEFwcEJhckZvdW5kYXRpb24gfSBmcm9tICcuL2ZpeGVkL2ZvdW5kYXRpb24nO1xuaW1wb3J0IHsgTURDU2hvcnRUb3BBcHBCYXJGb3VuZGF0aW9uIH0gZnJvbSAnLi9zaG9ydC9mb3VuZGF0aW9uJztcbmltcG9ydCB7IE1EQ1RvcEFwcEJhckZvdW5kYXRpb24gfSBmcm9tICcuL3N0YW5kYXJkL2ZvdW5kYXRpb24nO1xudmFyIE1EQ1RvcEFwcEJhciA9IC8qKiBAY2xhc3MgKi8gKGZ1bmN0aW9uIChfc3VwZXIpIHtcbiAgICB0c2xpYl8xLl9fZXh0ZW5kcyhNRENUb3BBcHBCYXIsIF9zdXBlcik7XG4gICAgZnVuY3Rpb24gTURDVG9wQXBwQmFyKCkge1xuICAgICAgICByZXR1cm4gX3N1cGVyICE9PSBudWxsICYmIF9zdXBlci5hcHBseSh0aGlzLCBhcmd1bWVudHMpIHx8IHRoaXM7XG4gICAgfVxuICAgIE1EQ1RvcEFwcEJhci5hdHRhY2hUbyA9IGZ1bmN0aW9uIChyb290KSB7XG4gICAgICAgIHJldHVybiBuZXcgTURDVG9wQXBwQmFyKHJvb3QpO1xuICAgIH07XG4gICAgTURDVG9wQXBwQmFyLnByb3RvdHlwZS5pbml0aWFsaXplID0gZnVuY3Rpb24gKHJpcHBsZUZhY3RvcnkpIHtcbiAgICAgICAgaWYgKHJpcHBsZUZhY3RvcnkgPT09IHZvaWQgMCkgeyByaXBwbGVGYWN0b3J5ID0gZnVuY3Rpb24gKGVsKSB7IHJldHVybiBNRENSaXBwbGUuYXR0YWNoVG8oZWwpOyB9OyB9XG4gICAgICAgIHRoaXMubmF2SWNvbl8gPSB0aGlzLnJvb3RfLnF1ZXJ5U2VsZWN0b3Ioc3RyaW5ncy5OQVZJR0FUSU9OX0lDT05fU0VMRUNUT1IpO1xuICAgICAgICAvLyBHZXQgYWxsIGljb25zIGluIHRoZSB0b29sYmFyIGFuZCBpbnN0YW50aWF0ZSB0aGUgcmlwcGxlc1xuICAgICAgICB2YXIgaWNvbnMgPSBbXS5zbGljZS5jYWxsKHRoaXMucm9vdF8ucXVlcnlTZWxlY3RvckFsbChzdHJpbmdzLkFDVElPTl9JVEVNX1NFTEVDVE9SKSk7XG4gICAgICAgIGlmICh0aGlzLm5hdkljb25fKSB7XG4gICAgICAgICAgICBpY29ucy5wdXNoKHRoaXMubmF2SWNvbl8pO1xuICAgICAgICB9XG4gICAgICAgIHRoaXMuaWNvblJpcHBsZXNfID0gaWNvbnMubWFwKGZ1bmN0aW9uIChpY29uKSB7XG4gICAgICAgICAgICB2YXIgcmlwcGxlID0gcmlwcGxlRmFjdG9yeShpY29uKTtcbiAgICAgICAgICAgIHJpcHBsZS51bmJvdW5kZWQgPSB0cnVlO1xuICAgICAgICAgICAgcmV0dXJuIHJpcHBsZTtcbiAgICAgICAgfSk7XG4gICAgICAgIHRoaXMuc2Nyb2xsVGFyZ2V0XyA9IHdpbmRvdztcbiAgICB9O1xuICAgIE1EQ1RvcEFwcEJhci5wcm90b3R5cGUuaW5pdGlhbFN5bmNXaXRoRE9NID0gZnVuY3Rpb24gKCkge1xuICAgICAgICB0aGlzLmhhbmRsZU5hdmlnYXRpb25DbGlja18gPSB0aGlzLmZvdW5kYXRpb25fLmhhbmRsZU5hdmlnYXRpb25DbGljay5iaW5kKHRoaXMuZm91bmRhdGlvbl8pO1xuICAgICAgICB0aGlzLmhhbmRsZVdpbmRvd1Jlc2l6ZV8gPSB0aGlzLmZvdW5kYXRpb25fLmhhbmRsZVdpbmRvd1Jlc2l6ZS5iaW5kKHRoaXMuZm91bmRhdGlvbl8pO1xuICAgICAgICB0aGlzLmhhbmRsZVRhcmdldFNjcm9sbF8gPSB0aGlzLmZvdW5kYXRpb25fLmhhbmRsZVRhcmdldFNjcm9sbC5iaW5kKHRoaXMuZm91bmRhdGlvbl8pO1xuICAgICAgICB0aGlzLnNjcm9sbFRhcmdldF8uYWRkRXZlbnRMaXN0ZW5lcignc2Nyb2xsJywgdGhpcy5oYW5kbGVUYXJnZXRTY3JvbGxfKTtcbiAgICAgICAgaWYgKHRoaXMubmF2SWNvbl8pIHtcbiAgICAgICAgICAgIHRoaXMubmF2SWNvbl8uYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCB0aGlzLmhhbmRsZU5hdmlnYXRpb25DbGlja18pO1xuICAgICAgICB9XG4gICAgICAgIHZhciBpc0ZpeGVkID0gdGhpcy5yb290Xy5jbGFzc0xpc3QuY29udGFpbnMoY3NzQ2xhc3Nlcy5GSVhFRF9DTEFTUyk7XG4gICAgICAgIHZhciBpc1Nob3J0ID0gdGhpcy5yb290Xy5jbGFzc0xpc3QuY29udGFpbnMoY3NzQ2xhc3Nlcy5TSE9SVF9DTEFTUyk7XG4gICAgICAgIGlmICghaXNTaG9ydCAmJiAhaXNGaXhlZCkge1xuICAgICAgICAgICAgd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ3Jlc2l6ZScsIHRoaXMuaGFuZGxlV2luZG93UmVzaXplXyk7XG4gICAgICAgIH1cbiAgICB9O1xuICAgIE1EQ1RvcEFwcEJhci5wcm90b3R5cGUuZGVzdHJveSA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdGhpcy5pY29uUmlwcGxlc18uZm9yRWFjaChmdW5jdGlvbiAoaWNvblJpcHBsZSkgeyByZXR1cm4gaWNvblJpcHBsZS5kZXN0cm95KCk7IH0pO1xuICAgICAgICB0aGlzLnNjcm9sbFRhcmdldF8ucmVtb3ZlRXZlbnRMaXN0ZW5lcignc2Nyb2xsJywgdGhpcy5oYW5kbGVUYXJnZXRTY3JvbGxfKTtcbiAgICAgICAgaWYgKHRoaXMubmF2SWNvbl8pIHtcbiAgICAgICAgICAgIHRoaXMubmF2SWNvbl8ucmVtb3ZlRXZlbnRMaXN0ZW5lcignY2xpY2snLCB0aGlzLmhhbmRsZU5hdmlnYXRpb25DbGlja18pO1xuICAgICAgICB9XG4gICAgICAgIHZhciBpc0ZpeGVkID0gdGhpcy5yb290Xy5jbGFzc0xpc3QuY29udGFpbnMoY3NzQ2xhc3Nlcy5GSVhFRF9DTEFTUyk7XG4gICAgICAgIHZhciBpc1Nob3J0ID0gdGhpcy5yb290Xy5jbGFzc0xpc3QuY29udGFpbnMoY3NzQ2xhc3Nlcy5TSE9SVF9DTEFTUyk7XG4gICAgICAgIGlmICghaXNTaG9ydCAmJiAhaXNGaXhlZCkge1xuICAgICAgICAgICAgd2luZG93LnJlbW92ZUV2ZW50TGlzdGVuZXIoJ3Jlc2l6ZScsIHRoaXMuaGFuZGxlV2luZG93UmVzaXplXyk7XG4gICAgICAgIH1cbiAgICAgICAgX3N1cGVyLnByb3RvdHlwZS5kZXN0cm95LmNhbGwodGhpcyk7XG4gICAgfTtcbiAgICBNRENUb3BBcHBCYXIucHJvdG90eXBlLnNldFNjcm9sbFRhcmdldCA9IGZ1bmN0aW9uICh0YXJnZXQpIHtcbiAgICAgICAgLy8gUmVtb3ZlIHNjcm9sbCBoYW5kbGVyIGZyb20gdGhlIHByZXZpb3VzIHNjcm9sbCB0YXJnZXRcbiAgICAgICAgdGhpcy5zY3JvbGxUYXJnZXRfLnJlbW92ZUV2ZW50TGlzdGVuZXIoJ3Njcm9sbCcsIHRoaXMuaGFuZGxlVGFyZ2V0U2Nyb2xsXyk7XG4gICAgICAgIHRoaXMuc2Nyb2xsVGFyZ2V0XyA9IHRhcmdldDtcbiAgICAgICAgLy8gSW5pdGlhbGl6ZSBzY3JvbGwgaGFuZGxlciBvbiB0aGUgbmV3IHNjcm9sbCB0YXJnZXRcbiAgICAgICAgdGhpcy5oYW5kbGVUYXJnZXRTY3JvbGxfID1cbiAgICAgICAgICAgIHRoaXMuZm91bmRhdGlvbl8uaGFuZGxlVGFyZ2V0U2Nyb2xsLmJpbmQodGhpcy5mb3VuZGF0aW9uXyk7XG4gICAgICAgIHRoaXMuc2Nyb2xsVGFyZ2V0Xy5hZGRFdmVudExpc3RlbmVyKCdzY3JvbGwnLCB0aGlzLmhhbmRsZVRhcmdldFNjcm9sbF8pO1xuICAgIH07XG4gICAgTURDVG9wQXBwQmFyLnByb3RvdHlwZS5nZXREZWZhdWx0Rm91bmRhdGlvbiA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdmFyIF90aGlzID0gdGhpcztcbiAgICAgICAgLy8gRE8gTk9UIElOTElORSB0aGlzIHZhcmlhYmxlLiBGb3IgYmFja3dhcmQgY29tcGF0aWJpbGl0eSwgZm91bmRhdGlvbnMgdGFrZSBhIFBhcnRpYWw8TURDRm9vQWRhcHRlcj4uXG4gICAgICAgIC8vIFRvIGVuc3VyZSB3ZSBkb24ndCBhY2NpZGVudGFsbHkgb21pdCBhbnkgbWV0aG9kcywgd2UgbmVlZCBhIHNlcGFyYXRlLCBzdHJvbmdseSB0eXBlZCBhZGFwdGVyIHZhcmlhYmxlLlxuICAgICAgICAvLyB0c2xpbnQ6ZGlzYWJsZTpvYmplY3QtbGl0ZXJhbC1zb3J0LWtleXMgTWV0aG9kcyBzaG91bGQgYmUgaW4gdGhlIHNhbWUgb3JkZXIgYXMgdGhlIGFkYXB0ZXIgaW50ZXJmYWNlLlxuICAgICAgICB2YXIgYWRhcHRlciA9IHtcbiAgICAgICAgICAgIGhhc0NsYXNzOiBmdW5jdGlvbiAoY2xhc3NOYW1lKSB7IHJldHVybiBfdGhpcy5yb290Xy5jbGFzc0xpc3QuY29udGFpbnMoY2xhc3NOYW1lKTsgfSxcbiAgICAgICAgICAgIGFkZENsYXNzOiBmdW5jdGlvbiAoY2xhc3NOYW1lKSB7IHJldHVybiBfdGhpcy5yb290Xy5jbGFzc0xpc3QuYWRkKGNsYXNzTmFtZSk7IH0sXG4gICAgICAgICAgICByZW1vdmVDbGFzczogZnVuY3Rpb24gKGNsYXNzTmFtZSkgeyByZXR1cm4gX3RoaXMucm9vdF8uY2xhc3NMaXN0LnJlbW92ZShjbGFzc05hbWUpOyB9LFxuICAgICAgICAgICAgc2V0U3R5bGU6IGZ1bmN0aW9uIChwcm9wZXJ0eSwgdmFsdWUpIHsgcmV0dXJuIF90aGlzLnJvb3RfLnN0eWxlLnNldFByb3BlcnR5KHByb3BlcnR5LCB2YWx1ZSk7IH0sXG4gICAgICAgICAgICBnZXRUb3BBcHBCYXJIZWlnaHQ6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIF90aGlzLnJvb3RfLmNsaWVudEhlaWdodDsgfSxcbiAgICAgICAgICAgIG5vdGlmeU5hdmlnYXRpb25JY29uQ2xpY2tlZDogZnVuY3Rpb24gKCkgeyByZXR1cm4gX3RoaXMuZW1pdChzdHJpbmdzLk5BVklHQVRJT05fRVZFTlQsIHt9KTsgfSxcbiAgICAgICAgICAgIGdldFZpZXdwb3J0U2Nyb2xsWTogZnVuY3Rpb24gKCkge1xuICAgICAgICAgICAgICAgIHZhciB3aW4gPSBfdGhpcy5zY3JvbGxUYXJnZXRfO1xuICAgICAgICAgICAgICAgIHZhciBlbCA9IF90aGlzLnNjcm9sbFRhcmdldF87XG4gICAgICAgICAgICAgICAgcmV0dXJuIHdpbi5wYWdlWU9mZnNldCAhPT0gdW5kZWZpbmVkID8gd2luLnBhZ2VZT2Zmc2V0IDogZWwuc2Nyb2xsVG9wO1xuICAgICAgICAgICAgfSxcbiAgICAgICAgICAgIGdldFRvdGFsQWN0aW9uSXRlbXM6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIF90aGlzLnJvb3RfLnF1ZXJ5U2VsZWN0b3JBbGwoc3RyaW5ncy5BQ1RJT05fSVRFTV9TRUxFQ1RPUikubGVuZ3RoOyB9LFxuICAgICAgICB9O1xuICAgICAgICAvLyB0c2xpbnQ6ZW5hYmxlOm9iamVjdC1saXRlcmFsLXNvcnQta2V5c1xuICAgICAgICB2YXIgZm91bmRhdGlvbjtcbiAgICAgICAgaWYgKHRoaXMucm9vdF8uY2xhc3NMaXN0LmNvbnRhaW5zKGNzc0NsYXNzZXMuU0hPUlRfQ0xBU1MpKSB7XG4gICAgICAgICAgICBmb3VuZGF0aW9uID0gbmV3IE1EQ1Nob3J0VG9wQXBwQmFyRm91bmRhdGlvbihhZGFwdGVyKTtcbiAgICAgICAgfVxuICAgICAgICBlbHNlIGlmICh0aGlzLnJvb3RfLmNsYXNzTGlzdC5jb250YWlucyhjc3NDbGFzc2VzLkZJWEVEX0NMQVNTKSkge1xuICAgICAgICAgICAgZm91bmRhdGlvbiA9IG5ldyBNRENGaXhlZFRvcEFwcEJhckZvdW5kYXRpb24oYWRhcHRlcik7XG4gICAgICAgIH1cbiAgICAgICAgZWxzZSB7XG4gICAgICAgICAgICBmb3VuZGF0aW9uID0gbmV3IE1EQ1RvcEFwcEJhckZvdW5kYXRpb24oYWRhcHRlcik7XG4gICAgICAgIH1cbiAgICAgICAgcmV0dXJuIGZvdW5kYXRpb247XG4gICAgfTtcbiAgICByZXR1cm4gTURDVG9wQXBwQmFyO1xufShNRENDb21wb25lbnQpKTtcbmV4cG9ydCB7IE1EQ1RvcEFwcEJhciB9O1xuLy8jIHNvdXJjZU1hcHBpbmdVUkw9Y29tcG9uZW50LmpzLm1hcCJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./node_modules/@material/top-app-bar/component.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MDCTopAppBar", function() { return MDCTopAppBar; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/base/component */ "./node_modules/@material/base/component.js");
+/* harmony import */ var _material_ripple_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material/ripple/component */ "./node_modules/@material/ripple/component.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/top-app-bar/constants.js");
+/* harmony import */ var _fixed_foundation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./fixed/foundation */ "./node_modules/@material/top-app-bar/fixed/foundation.js");
+/* harmony import */ var _short_foundation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./short/foundation */ "./node_modules/@material/top-app-bar/short/foundation.js");
+/* harmony import */ var _standard_foundation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./standard/foundation */ "./node_modules/@material/top-app-bar/standard/foundation.js");
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+
+
+
+var MDCTopAppBar = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](MDCTopAppBar, _super);
+    function MDCTopAppBar() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCTopAppBar.attachTo = function (root) {
+        return new MDCTopAppBar(root);
+    };
+    MDCTopAppBar.prototype.initialize = function (rippleFactory) {
+        if (rippleFactory === void 0) { rippleFactory = function (el) { return _material_ripple_component__WEBPACK_IMPORTED_MODULE_2__["MDCRipple"].attachTo(el); }; }
+        this.navIcon_ = this.root_.querySelector(_constants__WEBPACK_IMPORTED_MODULE_3__["strings"].NAVIGATION_ICON_SELECTOR);
+        // Get all icons in the toolbar and instantiate the ripples
+        var icons = [].slice.call(this.root_.querySelectorAll(_constants__WEBPACK_IMPORTED_MODULE_3__["strings"].ACTION_ITEM_SELECTOR));
+        if (this.navIcon_) {
+            icons.push(this.navIcon_);
+        }
+        this.iconRipples_ = icons.map(function (icon) {
+            var ripple = rippleFactory(icon);
+            ripple.unbounded = true;
+            return ripple;
+        });
+        this.scrollTarget_ = window;
+    };
+    MDCTopAppBar.prototype.initialSyncWithDOM = function () {
+        this.handleNavigationClick_ = this.foundation_.handleNavigationClick.bind(this.foundation_);
+        this.handleWindowResize_ = this.foundation_.handleWindowResize.bind(this.foundation_);
+        this.handleTargetScroll_ = this.foundation_.handleTargetScroll.bind(this.foundation_);
+        this.scrollTarget_.addEventListener('scroll', this.handleTargetScroll_);
+        if (this.navIcon_) {
+            this.navIcon_.addEventListener('click', this.handleNavigationClick_);
+        }
+        var isFixed = this.root_.classList.contains(_constants__WEBPACK_IMPORTED_MODULE_3__["cssClasses"].FIXED_CLASS);
+        var isShort = this.root_.classList.contains(_constants__WEBPACK_IMPORTED_MODULE_3__["cssClasses"].SHORT_CLASS);
+        if (!isShort && !isFixed) {
+            window.addEventListener('resize', this.handleWindowResize_);
+        }
+    };
+    MDCTopAppBar.prototype.destroy = function () {
+        this.iconRipples_.forEach(function (iconRipple) { return iconRipple.destroy(); });
+        this.scrollTarget_.removeEventListener('scroll', this.handleTargetScroll_);
+        if (this.navIcon_) {
+            this.navIcon_.removeEventListener('click', this.handleNavigationClick_);
+        }
+        var isFixed = this.root_.classList.contains(_constants__WEBPACK_IMPORTED_MODULE_3__["cssClasses"].FIXED_CLASS);
+        var isShort = this.root_.classList.contains(_constants__WEBPACK_IMPORTED_MODULE_3__["cssClasses"].SHORT_CLASS);
+        if (!isShort && !isFixed) {
+            window.removeEventListener('resize', this.handleWindowResize_);
+        }
+        _super.prototype.destroy.call(this);
+    };
+    MDCTopAppBar.prototype.setScrollTarget = function (target) {
+        // Remove scroll handler from the previous scroll target
+        this.scrollTarget_.removeEventListener('scroll', this.handleTargetScroll_);
+        this.scrollTarget_ = target;
+        // Initialize scroll handler on the new scroll target
+        this.handleTargetScroll_ =
+            this.foundation_.handleTargetScroll.bind(this.foundation_);
+        this.scrollTarget_.addEventListener('scroll', this.handleTargetScroll_);
+    };
+    MDCTopAppBar.prototype.getDefaultFoundation = function () {
+        var _this = this;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        var adapter = {
+            hasClass: function (className) { return _this.root_.classList.contains(className); },
+            addClass: function (className) { return _this.root_.classList.add(className); },
+            removeClass: function (className) { return _this.root_.classList.remove(className); },
+            setStyle: function (property, value) { return _this.root_.style.setProperty(property, value); },
+            getTopAppBarHeight: function () { return _this.root_.clientHeight; },
+            notifyNavigationIconClicked: function () { return _this.emit(_constants__WEBPACK_IMPORTED_MODULE_3__["strings"].NAVIGATION_EVENT, {}); },
+            getViewportScrollY: function () {
+                var win = _this.scrollTarget_;
+                var el = _this.scrollTarget_;
+                return win.pageYOffset !== undefined ? win.pageYOffset : el.scrollTop;
+            },
+            getTotalActionItems: function () { return _this.root_.querySelectorAll(_constants__WEBPACK_IMPORTED_MODULE_3__["strings"].ACTION_ITEM_SELECTOR).length; },
+        };
+        // tslint:enable:object-literal-sort-keys
+        var foundation;
+        if (this.root_.classList.contains(_constants__WEBPACK_IMPORTED_MODULE_3__["cssClasses"].SHORT_CLASS)) {
+            foundation = new _short_foundation__WEBPACK_IMPORTED_MODULE_5__["MDCShortTopAppBarFoundation"](adapter);
+        }
+        else if (this.root_.classList.contains(_constants__WEBPACK_IMPORTED_MODULE_3__["cssClasses"].FIXED_CLASS)) {
+            foundation = new _fixed_foundation__WEBPACK_IMPORTED_MODULE_4__["MDCFixedTopAppBarFoundation"](adapter);
+        }
+        else {
+            foundation = new _standard_foundation__WEBPACK_IMPORTED_MODULE_6__["MDCTopAppBarFoundation"](adapter);
+        }
+        return foundation;
+    };
+    return MDCTopAppBar;
+}(_material_base_component__WEBPACK_IMPORTED_MODULE_1__["MDCComponent"]));
+
+//# sourceMappingURL=component.js.map
 
 /***/ }),
 
@@ -369,7 +3010,52 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"cssClasses\", function() { return cssClasses; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"numbers\", function() { return numbers; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"strings\", function() { return strings; });\n/**\n * @license\n * Copyright 2018 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\nvar cssClasses = {\n    FIXED_CLASS: 'mdc-top-app-bar--fixed',\n    FIXED_SCROLLED_CLASS: 'mdc-top-app-bar--fixed-scrolled',\n    SHORT_CLASS: 'mdc-top-app-bar--short',\n    SHORT_COLLAPSED_CLASS: 'mdc-top-app-bar--short-collapsed',\n    SHORT_HAS_ACTION_ITEM_CLASS: 'mdc-top-app-bar--short-has-action-item',\n};\nvar numbers = {\n    DEBOUNCE_THROTTLE_RESIZE_TIME_MS: 100,\n    MAX_TOP_APP_BAR_HEIGHT: 128,\n};\nvar strings = {\n    ACTION_ITEM_SELECTOR: '.mdc-top-app-bar__action-item',\n    NAVIGATION_EVENT: 'MDCTopAppBar:nav',\n    NAVIGATION_ICON_SELECTOR: '.mdc-top-app-bar__navigation-icon',\n    ROOT_SELECTOR: '.mdc-top-app-bar',\n    TITLE_SELECTOR: '.mdc-top-app-bar__title',\n};\n\n//# sourceMappingURL=constants.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL3RvcC1hcHAtYmFyL2NvbnN0YW50cy5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL25vZGVfbW9kdWxlcy9AbWF0ZXJpYWwvdG9wLWFwcC1iYXIvY29uc3RhbnRzLmpzP2E0ODMiXSwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBAbGljZW5zZVxuICogQ29weXJpZ2h0IDIwMTggR29vZ2xlIEluYy5cbiAqXG4gKiBQZXJtaXNzaW9uIGlzIGhlcmVieSBncmFudGVkLCBmcmVlIG9mIGNoYXJnZSwgdG8gYW55IHBlcnNvbiBvYnRhaW5pbmcgYSBjb3B5XG4gKiBvZiB0aGlzIHNvZnR3YXJlIGFuZCBhc3NvY2lhdGVkIGRvY3VtZW50YXRpb24gZmlsZXMgKHRoZSBcIlNvZnR3YXJlXCIpLCB0byBkZWFsXG4gKiBpbiB0aGUgU29mdHdhcmUgd2l0aG91dCByZXN0cmljdGlvbiwgaW5jbHVkaW5nIHdpdGhvdXQgbGltaXRhdGlvbiB0aGUgcmlnaHRzXG4gKiB0byB1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsXG4gKiBjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXNcbiAqIGZ1cm5pc2hlZCB0byBkbyBzbywgc3ViamVjdCB0byB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6XG4gKlxuICogVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW5cbiAqIGFsbCBjb3BpZXMgb3Igc3Vic3RhbnRpYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLlxuICpcbiAqIFRIRSBTT0ZUV0FSRSBJUyBQUk9WSURFRCBcIkFTIElTXCIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIEVYUFJFU1MgT1JcbiAqIElNUExJRUQsIElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gVEhFIFdBUlJBTlRJRVMgT0YgTUVSQ0hBTlRBQklMSVRZLFxuICogRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFXG4gKiBBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZIENMQUlNLCBEQU1BR0VTIE9SIE9USEVSXG4gKiBMSUFCSUxJVFksIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULCBUT1JUIE9SIE9USEVSV0lTRSwgQVJJU0lORyBGUk9NLFxuICogT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTlxuICogVEhFIFNPRlRXQVJFLlxuICovXG52YXIgY3NzQ2xhc3NlcyA9IHtcbiAgICBGSVhFRF9DTEFTUzogJ21kYy10b3AtYXBwLWJhci0tZml4ZWQnLFxuICAgIEZJWEVEX1NDUk9MTEVEX0NMQVNTOiAnbWRjLXRvcC1hcHAtYmFyLS1maXhlZC1zY3JvbGxlZCcsXG4gICAgU0hPUlRfQ0xBU1M6ICdtZGMtdG9wLWFwcC1iYXItLXNob3J0JyxcbiAgICBTSE9SVF9DT0xMQVBTRURfQ0xBU1M6ICdtZGMtdG9wLWFwcC1iYXItLXNob3J0LWNvbGxhcHNlZCcsXG4gICAgU0hPUlRfSEFTX0FDVElPTl9JVEVNX0NMQVNTOiAnbWRjLXRvcC1hcHAtYmFyLS1zaG9ydC1oYXMtYWN0aW9uLWl0ZW0nLFxufTtcbnZhciBudW1iZXJzID0ge1xuICAgIERFQk9VTkNFX1RIUk9UVExFX1JFU0laRV9USU1FX01TOiAxMDAsXG4gICAgTUFYX1RPUF9BUFBfQkFSX0hFSUdIVDogMTI4LFxufTtcbnZhciBzdHJpbmdzID0ge1xuICAgIEFDVElPTl9JVEVNX1NFTEVDVE9SOiAnLm1kYy10b3AtYXBwLWJhcl9fYWN0aW9uLWl0ZW0nLFxuICAgIE5BVklHQVRJT05fRVZFTlQ6ICdNRENUb3BBcHBCYXI6bmF2JyxcbiAgICBOQVZJR0FUSU9OX0lDT05fU0VMRUNUT1I6ICcubWRjLXRvcC1hcHAtYmFyX19uYXZpZ2F0aW9uLWljb24nLFxuICAgIFJPT1RfU0VMRUNUT1I6ICcubWRjLXRvcC1hcHAtYmFyJyxcbiAgICBUSVRMRV9TRUxFQ1RPUjogJy5tZGMtdG9wLWFwcC1iYXJfX3RpdGxlJyxcbn07XG5leHBvcnQgeyBjc3NDbGFzc2VzLCBudW1iZXJzLCBzdHJpbmdzIH07XG4vLyMgc291cmNlTWFwcGluZ1VSTD1jb25zdGFudHMuanMubWFwIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./node_modules/@material/top-app-bar/constants.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cssClasses", function() { return cssClasses; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "numbers", function() { return numbers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "strings", function() { return strings; });
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+var cssClasses = {
+    FIXED_CLASS: 'mdc-top-app-bar--fixed',
+    FIXED_SCROLLED_CLASS: 'mdc-top-app-bar--fixed-scrolled',
+    SHORT_CLASS: 'mdc-top-app-bar--short',
+    SHORT_COLLAPSED_CLASS: 'mdc-top-app-bar--short-collapsed',
+    SHORT_HAS_ACTION_ITEM_CLASS: 'mdc-top-app-bar--short-has-action-item',
+};
+var numbers = {
+    DEBOUNCE_THROTTLE_RESIZE_TIME_MS: 100,
+    MAX_TOP_APP_BAR_HEIGHT: 128,
+};
+var strings = {
+    ACTION_ITEM_SELECTOR: '.mdc-top-app-bar__action-item',
+    NAVIGATION_EVENT: 'MDCTopAppBar:nav',
+    NAVIGATION_ICON_SELECTOR: '.mdc-top-app-bar__navigation-icon',
+    ROOT_SELECTOR: '.mdc-top-app-bar',
+    TITLE_SELECTOR: '.mdc-top-app-bar__title',
+};
+
+//# sourceMappingURL=constants.js.map
 
 /***/ }),
 
@@ -381,7 +3067,71 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"MDCFixedTopAppBarFoundation\", function() { return MDCFixedTopAppBarFoundation; });\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ \"./node_modules/@material/top-app-bar/constants.js\");\n/* harmony import */ var _standard_foundation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../standard/foundation */ \"./node_modules/@material/top-app-bar/standard/foundation.js\");\n/**\n * @license\n * Copyright 2018 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\n\n\n\nvar MDCFixedTopAppBarFoundation = /** @class */ (function (_super) {\n    tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"](MDCFixedTopAppBarFoundation, _super);\n    function MDCFixedTopAppBarFoundation() {\n        var _this = _super !== null && _super.apply(this, arguments) || this;\n        /**\n         * State variable for the previous scroll iteration top app bar state\n         */\n        _this.wasScrolled_ = false;\n        return _this;\n    }\n    /**\n     * Scroll handler for applying/removing the modifier class on the fixed top app bar.\n     * @override\n     */\n    MDCFixedTopAppBarFoundation.prototype.handleTargetScroll = function () {\n        var currentScroll = this.adapter_.getViewportScrollY();\n        if (currentScroll <= 0) {\n            if (this.wasScrolled_) {\n                this.adapter_.removeClass(_constants__WEBPACK_IMPORTED_MODULE_1__[\"cssClasses\"].FIXED_SCROLLED_CLASS);\n                this.wasScrolled_ = false;\n            }\n        }\n        else {\n            if (!this.wasScrolled_) {\n                this.adapter_.addClass(_constants__WEBPACK_IMPORTED_MODULE_1__[\"cssClasses\"].FIXED_SCROLLED_CLASS);\n                this.wasScrolled_ = true;\n            }\n        }\n    };\n    return MDCFixedTopAppBarFoundation;\n}(_standard_foundation__WEBPACK_IMPORTED_MODULE_2__[\"MDCTopAppBarFoundation\"]));\n\n// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.\n/* harmony default export */ __webpack_exports__[\"default\"] = (MDCFixedTopAppBarFoundation);\n//# sourceMappingURL=foundation.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL3RvcC1hcHAtYmFyL2ZpeGVkL2ZvdW5kYXRpb24uanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL3RvcC1hcHAtYmFyL2ZpeGVkL2ZvdW5kYXRpb24uanM/N2QxMSJdLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEBsaWNlbnNlXG4gKiBDb3B5cmlnaHQgMjAxOCBHb29nbGUgSW5jLlxuICpcbiAqIFBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHlcbiAqIG9mIHRoaXMgc29mdHdhcmUgYW5kIGFzc29jaWF0ZWQgZG9jdW1lbnRhdGlvbiBmaWxlcyAodGhlIFwiU29mdHdhcmVcIiksIHRvIGRlYWxcbiAqIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgd2l0aG91dCBsaW1pdGF0aW9uIHRoZSByaWdodHNcbiAqIHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwgZGlzdHJpYnV0ZSwgc3VibGljZW5zZSwgYW5kL29yIHNlbGxcbiAqIGNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpc1xuICogZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvIHRoZSBmb2xsb3dpbmcgY29uZGl0aW9uczpcbiAqXG4gKiBUaGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBwZXJtaXNzaW9uIG5vdGljZSBzaGFsbCBiZSBpbmNsdWRlZCBpblxuICogYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuXG4gKlxuICogVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEIFwiQVMgSVNcIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUlxuICogSU1QTElFRCwgSU5DTFVESU5HIEJVVCBOT1QgTElNSVRFRCBUTyBUSEUgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFksXG4gKiBGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRSBBTkQgTk9OSU5GUklOR0VNRU5ULiBJTiBOTyBFVkVOVCBTSEFMTCBUSEVcbiAqIEFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVJcbiAqIExJQUJJTElUWSwgV0hFVEhFUiBJTiBBTiBBQ1RJT04gT0YgQ09OVFJBQ1QsIFRPUlQgT1IgT1RIRVJXSVNFLCBBUklTSU5HIEZST00sXG4gKiBPVVQgT0YgT1IgSU4gQ09OTkVDVElPTiBXSVRIIFRIRSBTT0ZUV0FSRSBPUiBUSEUgVVNFIE9SIE9USEVSIERFQUxJTkdTIElOXG4gKiBUSEUgU09GVFdBUkUuXG4gKi9cbmltcG9ydCAqIGFzIHRzbGliXzEgZnJvbSBcInRzbGliXCI7XG5pbXBvcnQgeyBjc3NDbGFzc2VzIH0gZnJvbSAnLi4vY29uc3RhbnRzJztcbmltcG9ydCB7IE1EQ1RvcEFwcEJhckZvdW5kYXRpb24gfSBmcm9tICcuLi9zdGFuZGFyZC9mb3VuZGF0aW9uJztcbnZhciBNRENGaXhlZFRvcEFwcEJhckZvdW5kYXRpb24gPSAvKiogQGNsYXNzICovIChmdW5jdGlvbiAoX3N1cGVyKSB7XG4gICAgdHNsaWJfMS5fX2V4dGVuZHMoTURDRml4ZWRUb3BBcHBCYXJGb3VuZGF0aW9uLCBfc3VwZXIpO1xuICAgIGZ1bmN0aW9uIE1EQ0ZpeGVkVG9wQXBwQmFyRm91bmRhdGlvbigpIHtcbiAgICAgICAgdmFyIF90aGlzID0gX3N1cGVyICE9PSBudWxsICYmIF9zdXBlci5hcHBseSh0aGlzLCBhcmd1bWVudHMpIHx8IHRoaXM7XG4gICAgICAgIC8qKlxuICAgICAgICAgKiBTdGF0ZSB2YXJpYWJsZSBmb3IgdGhlIHByZXZpb3VzIHNjcm9sbCBpdGVyYXRpb24gdG9wIGFwcCBiYXIgc3RhdGVcbiAgICAgICAgICovXG4gICAgICAgIF90aGlzLndhc1Njcm9sbGVkXyA9IGZhbHNlO1xuICAgICAgICByZXR1cm4gX3RoaXM7XG4gICAgfVxuICAgIC8qKlxuICAgICAqIFNjcm9sbCBoYW5kbGVyIGZvciBhcHBseWluZy9yZW1vdmluZyB0aGUgbW9kaWZpZXIgY2xhc3Mgb24gdGhlIGZpeGVkIHRvcCBhcHAgYmFyLlxuICAgICAqIEBvdmVycmlkZVxuICAgICAqL1xuICAgIE1EQ0ZpeGVkVG9wQXBwQmFyRm91bmRhdGlvbi5wcm90b3R5cGUuaGFuZGxlVGFyZ2V0U2Nyb2xsID0gZnVuY3Rpb24gKCkge1xuICAgICAgICB2YXIgY3VycmVudFNjcm9sbCA9IHRoaXMuYWRhcHRlcl8uZ2V0Vmlld3BvcnRTY3JvbGxZKCk7XG4gICAgICAgIGlmIChjdXJyZW50U2Nyb2xsIDw9IDApIHtcbiAgICAgICAgICAgIGlmICh0aGlzLndhc1Njcm9sbGVkXykge1xuICAgICAgICAgICAgICAgIHRoaXMuYWRhcHRlcl8ucmVtb3ZlQ2xhc3MoY3NzQ2xhc3Nlcy5GSVhFRF9TQ1JPTExFRF9DTEFTUyk7XG4gICAgICAgICAgICAgICAgdGhpcy53YXNTY3JvbGxlZF8gPSBmYWxzZTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgICBlbHNlIHtcbiAgICAgICAgICAgIGlmICghdGhpcy53YXNTY3JvbGxlZF8pIHtcbiAgICAgICAgICAgICAgICB0aGlzLmFkYXB0ZXJfLmFkZENsYXNzKGNzc0NsYXNzZXMuRklYRURfU0NST0xMRURfQ0xBU1MpO1xuICAgICAgICAgICAgICAgIHRoaXMud2FzU2Nyb2xsZWRfID0gdHJ1ZTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgIH07XG4gICAgcmV0dXJuIE1EQ0ZpeGVkVG9wQXBwQmFyRm91bmRhdGlvbjtcbn0oTURDVG9wQXBwQmFyRm91bmRhdGlvbikpO1xuZXhwb3J0IHsgTURDRml4ZWRUb3BBcHBCYXJGb3VuZGF0aW9uIH07XG4vLyB0c2xpbnQ6ZGlzYWJsZS1uZXh0LWxpbmU6bm8tZGVmYXVsdC1leHBvcnQgTmVlZGVkIGZvciBiYWNrd2FyZCBjb21wYXRpYmlsaXR5IHdpdGggTURDIFdlYiB2MC40NC4wIGFuZCBlYXJsaWVyLlxuZXhwb3J0IGRlZmF1bHQgTURDRml4ZWRUb3BBcHBCYXJGb3VuZGF0aW9uO1xuLy8jIHNvdXJjZU1hcHBpbmdVUkw9Zm91bmRhdGlvbi5qcy5tYXAiXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./node_modules/@material/top-app-bar/fixed/foundation.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MDCFixedTopAppBarFoundation", function() { return MDCFixedTopAppBarFoundation; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./node_modules/@material/top-app-bar/constants.js");
+/* harmony import */ var _standard_foundation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../standard/foundation */ "./node_modules/@material/top-app-bar/standard/foundation.js");
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+var MDCFixedTopAppBarFoundation = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](MDCFixedTopAppBarFoundation, _super);
+    function MDCFixedTopAppBarFoundation() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        /**
+         * State variable for the previous scroll iteration top app bar state
+         */
+        _this.wasScrolled_ = false;
+        return _this;
+    }
+    /**
+     * Scroll handler for applying/removing the modifier class on the fixed top app bar.
+     * @override
+     */
+    MDCFixedTopAppBarFoundation.prototype.handleTargetScroll = function () {
+        var currentScroll = this.adapter_.getViewportScrollY();
+        if (currentScroll <= 0) {
+            if (this.wasScrolled_) {
+                this.adapter_.removeClass(_constants__WEBPACK_IMPORTED_MODULE_1__["cssClasses"].FIXED_SCROLLED_CLASS);
+                this.wasScrolled_ = false;
+            }
+        }
+        else {
+            if (!this.wasScrolled_) {
+                this.adapter_.addClass(_constants__WEBPACK_IMPORTED_MODULE_1__["cssClasses"].FIXED_SCROLLED_CLASS);
+                this.wasScrolled_ = true;
+            }
+        }
+    };
+    return MDCFixedTopAppBarFoundation;
+}(_standard_foundation__WEBPACK_IMPORTED_MODULE_2__["MDCTopAppBarFoundation"]));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* harmony default export */ __webpack_exports__["default"] = (MDCFixedTopAppBarFoundation);
+//# sourceMappingURL=foundation.js.map
 
 /***/ }),
 
@@ -393,7 +3143,97 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"MDCTopAppBarBaseFoundation\", function() { return MDCTopAppBarBaseFoundation; });\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _material_base_foundation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/base/foundation */ \"./node_modules/@material/base/foundation.js\");\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./constants */ \"./node_modules/@material/top-app-bar/constants.js\");\n/**\n * @license\n * Copyright 2018 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\n\n\n\nvar MDCTopAppBarBaseFoundation = /** @class */ (function (_super) {\n    tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"](MDCTopAppBarBaseFoundation, _super);\n    /* istanbul ignore next: optional argument is not a branch statement */\n    function MDCTopAppBarBaseFoundation(adapter) {\n        return _super.call(this, tslib__WEBPACK_IMPORTED_MODULE_0__[\"__assign\"]({}, MDCTopAppBarBaseFoundation.defaultAdapter, adapter)) || this;\n    }\n    Object.defineProperty(MDCTopAppBarBaseFoundation, \"strings\", {\n        get: function () {\n            return _constants__WEBPACK_IMPORTED_MODULE_2__[\"strings\"];\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(MDCTopAppBarBaseFoundation, \"cssClasses\", {\n        get: function () {\n            return _constants__WEBPACK_IMPORTED_MODULE_2__[\"cssClasses\"];\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(MDCTopAppBarBaseFoundation, \"numbers\", {\n        get: function () {\n            return _constants__WEBPACK_IMPORTED_MODULE_2__[\"numbers\"];\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(MDCTopAppBarBaseFoundation, \"defaultAdapter\", {\n        /**\n         * See {@link MDCTopAppBarAdapter} for typing information on parameters and return types.\n         */\n        get: function () {\n            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.\n            return {\n                addClass: function () { return undefined; },\n                removeClass: function () { return undefined; },\n                hasClass: function () { return false; },\n                setStyle: function () { return undefined; },\n                getTopAppBarHeight: function () { return 0; },\n                notifyNavigationIconClicked: function () { return undefined; },\n                getViewportScrollY: function () { return 0; },\n                getTotalActionItems: function () { return 0; },\n            };\n            // tslint:enable:object-literal-sort-keys\n        },\n        enumerable: true,\n        configurable: true\n    });\n    /** Other variants of TopAppBar foundation overrides this method */\n    MDCTopAppBarBaseFoundation.prototype.handleTargetScroll = function () { }; // tslint:disable-line:no-empty\n    /** Other variants of TopAppBar foundation overrides this method */\n    MDCTopAppBarBaseFoundation.prototype.handleWindowResize = function () { }; // tslint:disable-line:no-empty\n    MDCTopAppBarBaseFoundation.prototype.handleNavigationClick = function () {\n        this.adapter_.notifyNavigationIconClicked();\n    };\n    return MDCTopAppBarBaseFoundation;\n}(_material_base_foundation__WEBPACK_IMPORTED_MODULE_1__[\"MDCFoundation\"]));\n\n// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.\n/* harmony default export */ __webpack_exports__[\"default\"] = (MDCTopAppBarBaseFoundation);\n//# sourceMappingURL=foundation.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL3RvcC1hcHAtYmFyL2ZvdW5kYXRpb24uanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL3RvcC1hcHAtYmFyL2ZvdW5kYXRpb24uanM/OGUyOCJdLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEBsaWNlbnNlXG4gKiBDb3B5cmlnaHQgMjAxOCBHb29nbGUgSW5jLlxuICpcbiAqIFBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHlcbiAqIG9mIHRoaXMgc29mdHdhcmUgYW5kIGFzc29jaWF0ZWQgZG9jdW1lbnRhdGlvbiBmaWxlcyAodGhlIFwiU29mdHdhcmVcIiksIHRvIGRlYWxcbiAqIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgd2l0aG91dCBsaW1pdGF0aW9uIHRoZSByaWdodHNcbiAqIHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwgZGlzdHJpYnV0ZSwgc3VibGljZW5zZSwgYW5kL29yIHNlbGxcbiAqIGNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpc1xuICogZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvIHRoZSBmb2xsb3dpbmcgY29uZGl0aW9uczpcbiAqXG4gKiBUaGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBwZXJtaXNzaW9uIG5vdGljZSBzaGFsbCBiZSBpbmNsdWRlZCBpblxuICogYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuXG4gKlxuICogVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEIFwiQVMgSVNcIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUlxuICogSU1QTElFRCwgSU5DTFVESU5HIEJVVCBOT1QgTElNSVRFRCBUTyBUSEUgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFksXG4gKiBGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRSBBTkQgTk9OSU5GUklOR0VNRU5ULiBJTiBOTyBFVkVOVCBTSEFMTCBUSEVcbiAqIEFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVJcbiAqIExJQUJJTElUWSwgV0hFVEhFUiBJTiBBTiBBQ1RJT04gT0YgQ09OVFJBQ1QsIFRPUlQgT1IgT1RIRVJXSVNFLCBBUklTSU5HIEZST00sXG4gKiBPVVQgT0YgT1IgSU4gQ09OTkVDVElPTiBXSVRIIFRIRSBTT0ZUV0FSRSBPUiBUSEUgVVNFIE9SIE9USEVSIERFQUxJTkdTIElOXG4gKiBUSEUgU09GVFdBUkUuXG4gKi9cbmltcG9ydCAqIGFzIHRzbGliXzEgZnJvbSBcInRzbGliXCI7XG5pbXBvcnQgeyBNRENGb3VuZGF0aW9uIH0gZnJvbSAnQG1hdGVyaWFsL2Jhc2UvZm91bmRhdGlvbic7XG5pbXBvcnQgeyBjc3NDbGFzc2VzLCBudW1iZXJzLCBzdHJpbmdzIH0gZnJvbSAnLi9jb25zdGFudHMnO1xudmFyIE1EQ1RvcEFwcEJhckJhc2VGb3VuZGF0aW9uID0gLyoqIEBjbGFzcyAqLyAoZnVuY3Rpb24gKF9zdXBlcikge1xuICAgIHRzbGliXzEuX19leHRlbmRzKE1EQ1RvcEFwcEJhckJhc2VGb3VuZGF0aW9uLCBfc3VwZXIpO1xuICAgIC8qIGlzdGFuYnVsIGlnbm9yZSBuZXh0OiBvcHRpb25hbCBhcmd1bWVudCBpcyBub3QgYSBicmFuY2ggc3RhdGVtZW50ICovXG4gICAgZnVuY3Rpb24gTURDVG9wQXBwQmFyQmFzZUZvdW5kYXRpb24oYWRhcHRlcikge1xuICAgICAgICByZXR1cm4gX3N1cGVyLmNhbGwodGhpcywgdHNsaWJfMS5fX2Fzc2lnbih7fSwgTURDVG9wQXBwQmFyQmFzZUZvdW5kYXRpb24uZGVmYXVsdEFkYXB0ZXIsIGFkYXB0ZXIpKSB8fCB0aGlzO1xuICAgIH1cbiAgICBPYmplY3QuZGVmaW5lUHJvcGVydHkoTURDVG9wQXBwQmFyQmFzZUZvdW5kYXRpb24sIFwic3RyaW5nc1wiLCB7XG4gICAgICAgIGdldDogZnVuY3Rpb24gKCkge1xuICAgICAgICAgICAgcmV0dXJuIHN0cmluZ3M7XG4gICAgICAgIH0sXG4gICAgICAgIGVudW1lcmFibGU6IHRydWUsXG4gICAgICAgIGNvbmZpZ3VyYWJsZTogdHJ1ZVxuICAgIH0pO1xuICAgIE9iamVjdC5kZWZpbmVQcm9wZXJ0eShNRENUb3BBcHBCYXJCYXNlRm91bmRhdGlvbiwgXCJjc3NDbGFzc2VzXCIsIHtcbiAgICAgICAgZ2V0OiBmdW5jdGlvbiAoKSB7XG4gICAgICAgICAgICByZXR1cm4gY3NzQ2xhc3NlcztcbiAgICAgICAgfSxcbiAgICAgICAgZW51bWVyYWJsZTogdHJ1ZSxcbiAgICAgICAgY29uZmlndXJhYmxlOiB0cnVlXG4gICAgfSk7XG4gICAgT2JqZWN0LmRlZmluZVByb3BlcnR5KE1EQ1RvcEFwcEJhckJhc2VGb3VuZGF0aW9uLCBcIm51bWJlcnNcIiwge1xuICAgICAgICBnZXQ6IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIHJldHVybiBudW1iZXJzO1xuICAgICAgICB9LFxuICAgICAgICBlbnVtZXJhYmxlOiB0cnVlLFxuICAgICAgICBjb25maWd1cmFibGU6IHRydWVcbiAgICB9KTtcbiAgICBPYmplY3QuZGVmaW5lUHJvcGVydHkoTURDVG9wQXBwQmFyQmFzZUZvdW5kYXRpb24sIFwiZGVmYXVsdEFkYXB0ZXJcIiwge1xuICAgICAgICAvKipcbiAgICAgICAgICogU2VlIHtAbGluayBNRENUb3BBcHBCYXJBZGFwdGVyfSBmb3IgdHlwaW5nIGluZm9ybWF0aW9uIG9uIHBhcmFtZXRlcnMgYW5kIHJldHVybiB0eXBlcy5cbiAgICAgICAgICovXG4gICAgICAgIGdldDogZnVuY3Rpb24gKCkge1xuICAgICAgICAgICAgLy8gdHNsaW50OmRpc2FibGU6b2JqZWN0LWxpdGVyYWwtc29ydC1rZXlzIE1ldGhvZHMgc2hvdWxkIGJlIGluIHRoZSBzYW1lIG9yZGVyIGFzIHRoZSBhZGFwdGVyIGludGVyZmFjZS5cbiAgICAgICAgICAgIHJldHVybiB7XG4gICAgICAgICAgICAgICAgYWRkQ2xhc3M6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIHVuZGVmaW5lZDsgfSxcbiAgICAgICAgICAgICAgICByZW1vdmVDbGFzczogZnVuY3Rpb24gKCkgeyByZXR1cm4gdW5kZWZpbmVkOyB9LFxuICAgICAgICAgICAgICAgIGhhc0NsYXNzOiBmdW5jdGlvbiAoKSB7IHJldHVybiBmYWxzZTsgfSxcbiAgICAgICAgICAgICAgICBzZXRTdHlsZTogZnVuY3Rpb24gKCkgeyByZXR1cm4gdW5kZWZpbmVkOyB9LFxuICAgICAgICAgICAgICAgIGdldFRvcEFwcEJhckhlaWdodDogZnVuY3Rpb24gKCkgeyByZXR1cm4gMDsgfSxcbiAgICAgICAgICAgICAgICBub3RpZnlOYXZpZ2F0aW9uSWNvbkNsaWNrZWQ6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIHVuZGVmaW5lZDsgfSxcbiAgICAgICAgICAgICAgICBnZXRWaWV3cG9ydFNjcm9sbFk6IGZ1bmN0aW9uICgpIHsgcmV0dXJuIDA7IH0sXG4gICAgICAgICAgICAgICAgZ2V0VG90YWxBY3Rpb25JdGVtczogZnVuY3Rpb24gKCkgeyByZXR1cm4gMDsgfSxcbiAgICAgICAgICAgIH07XG4gICAgICAgICAgICAvLyB0c2xpbnQ6ZW5hYmxlOm9iamVjdC1saXRlcmFsLXNvcnQta2V5c1xuICAgICAgICB9LFxuICAgICAgICBlbnVtZXJhYmxlOiB0cnVlLFxuICAgICAgICBjb25maWd1cmFibGU6IHRydWVcbiAgICB9KTtcbiAgICAvKiogT3RoZXIgdmFyaWFudHMgb2YgVG9wQXBwQmFyIGZvdW5kYXRpb24gb3ZlcnJpZGVzIHRoaXMgbWV0aG9kICovXG4gICAgTURDVG9wQXBwQmFyQmFzZUZvdW5kYXRpb24ucHJvdG90eXBlLmhhbmRsZVRhcmdldFNjcm9sbCA9IGZ1bmN0aW9uICgpIHsgfTsgLy8gdHNsaW50OmRpc2FibGUtbGluZTpuby1lbXB0eVxuICAgIC8qKiBPdGhlciB2YXJpYW50cyBvZiBUb3BBcHBCYXIgZm91bmRhdGlvbiBvdmVycmlkZXMgdGhpcyBtZXRob2QgKi9cbiAgICBNRENUb3BBcHBCYXJCYXNlRm91bmRhdGlvbi5wcm90b3R5cGUuaGFuZGxlV2luZG93UmVzaXplID0gZnVuY3Rpb24gKCkgeyB9OyAvLyB0c2xpbnQ6ZGlzYWJsZS1saW5lOm5vLWVtcHR5XG4gICAgTURDVG9wQXBwQmFyQmFzZUZvdW5kYXRpb24ucHJvdG90eXBlLmhhbmRsZU5hdmlnYXRpb25DbGljayA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdGhpcy5hZGFwdGVyXy5ub3RpZnlOYXZpZ2F0aW9uSWNvbkNsaWNrZWQoKTtcbiAgICB9O1xuICAgIHJldHVybiBNRENUb3BBcHBCYXJCYXNlRm91bmRhdGlvbjtcbn0oTURDRm91bmRhdGlvbikpO1xuZXhwb3J0IHsgTURDVG9wQXBwQmFyQmFzZUZvdW5kYXRpb24gfTtcbi8vIHRzbGludDpkaXNhYmxlLW5leHQtbGluZTpuby1kZWZhdWx0LWV4cG9ydCBOZWVkZWQgZm9yIGJhY2t3YXJkIGNvbXBhdGliaWxpdHkgd2l0aCBNREMgV2ViIHYwLjQ0LjAgYW5kIGVhcmxpZXIuXG5leHBvcnQgZGVmYXVsdCBNRENUb3BBcHBCYXJCYXNlRm91bmRhdGlvbjtcbi8vIyBzb3VyY2VNYXBwaW5nVVJMPWZvdW5kYXRpb24uanMubWFwIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./node_modules/@material/top-app-bar/foundation.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MDCTopAppBarBaseFoundation", function() { return MDCTopAppBarBaseFoundation; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _material_base_foundation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material/base/foundation */ "./node_modules/@material/base/foundation.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/top-app-bar/constants.js");
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+var MDCTopAppBarBaseFoundation = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](MDCTopAppBarBaseFoundation, _super);
+    /* istanbul ignore next: optional argument is not a branch statement */
+    function MDCTopAppBarBaseFoundation(adapter) {
+        return _super.call(this, tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, MDCTopAppBarBaseFoundation.defaultAdapter, adapter)) || this;
+    }
+    Object.defineProperty(MDCTopAppBarBaseFoundation, "strings", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_2__["strings"];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCTopAppBarBaseFoundation, "cssClasses", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_2__["cssClasses"];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCTopAppBarBaseFoundation, "numbers", {
+        get: function () {
+            return _constants__WEBPACK_IMPORTED_MODULE_2__["numbers"];
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MDCTopAppBarBaseFoundation, "defaultAdapter", {
+        /**
+         * See {@link MDCTopAppBarAdapter} for typing information on parameters and return types.
+         */
+        get: function () {
+            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+            return {
+                addClass: function () { return undefined; },
+                removeClass: function () { return undefined; },
+                hasClass: function () { return false; },
+                setStyle: function () { return undefined; },
+                getTopAppBarHeight: function () { return 0; },
+                notifyNavigationIconClicked: function () { return undefined; },
+                getViewportScrollY: function () { return 0; },
+                getTotalActionItems: function () { return 0; },
+            };
+            // tslint:enable:object-literal-sort-keys
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /** Other variants of TopAppBar foundation overrides this method */
+    MDCTopAppBarBaseFoundation.prototype.handleTargetScroll = function () { }; // tslint:disable-line:no-empty
+    /** Other variants of TopAppBar foundation overrides this method */
+    MDCTopAppBarBaseFoundation.prototype.handleWindowResize = function () { }; // tslint:disable-line:no-empty
+    MDCTopAppBarBaseFoundation.prototype.handleNavigationClick = function () {
+        this.adapter_.notifyNavigationIconClicked();
+    };
+    return MDCTopAppBarBaseFoundation;
+}(_material_base_foundation__WEBPACK_IMPORTED_MODULE_1__["MDCFoundation"]));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* harmony default export */ __webpack_exports__["default"] = (MDCTopAppBarBaseFoundation);
+//# sourceMappingURL=foundation.js.map
 
 /***/ }),
 
@@ -405,7 +3245,58 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./component */ \"./node_modules/@material/top-app-bar/component.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"MDCTopAppBar\", function() { return _component__WEBPACK_IMPORTED_MODULE_0__[\"MDCTopAppBar\"]; });\n\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ \"./node_modules/@material/top-app-bar/constants.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"cssClasses\", function() { return _constants__WEBPACK_IMPORTED_MODULE_1__[\"cssClasses\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"numbers\", function() { return _constants__WEBPACK_IMPORTED_MODULE_1__[\"numbers\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"strings\", function() { return _constants__WEBPACK_IMPORTED_MODULE_1__[\"strings\"]; });\n\n/* harmony import */ var _foundation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./foundation */ \"./node_modules/@material/top-app-bar/foundation.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"MDCTopAppBarBaseFoundation\", function() { return _foundation__WEBPACK_IMPORTED_MODULE_2__[\"MDCTopAppBarBaseFoundation\"]; });\n\n/* harmony import */ var _fixed_foundation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./fixed/foundation */ \"./node_modules/@material/top-app-bar/fixed/foundation.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"MDCFixedTopAppBarFoundation\", function() { return _fixed_foundation__WEBPACK_IMPORTED_MODULE_3__[\"MDCFixedTopAppBarFoundation\"]; });\n\n/* harmony import */ var _short_foundation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./short/foundation */ \"./node_modules/@material/top-app-bar/short/foundation.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"MDCShortTopAppBarFoundation\", function() { return _short_foundation__WEBPACK_IMPORTED_MODULE_4__[\"MDCShortTopAppBarFoundation\"]; });\n\n/* harmony import */ var _standard_foundation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./standard/foundation */ \"./node_modules/@material/top-app-bar/standard/foundation.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"MDCTopAppBarFoundation\", function() { return _standard_foundation__WEBPACK_IMPORTED_MODULE_5__[\"MDCTopAppBarFoundation\"]; });\n\n/**\n * @license\n * Copyright 2019 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\n\n\n\n\n\n\n//# sourceMappingURL=index.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL3RvcC1hcHAtYmFyL2luZGV4LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vbm9kZV9tb2R1bGVzL0BtYXRlcmlhbC90b3AtYXBwLWJhci9pbmRleC5qcz81M2E0Il0sInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQGxpY2Vuc2VcbiAqIENvcHlyaWdodCAyMDE5IEdvb2dsZSBJbmMuXG4gKlxuICogUGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weVxuICogb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgXCJTb2Z0d2FyZVwiKSwgdG8gZGVhbFxuICogaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0c1xuICogdG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3Igc2VsbFxuICogY29waWVzIG9mIHRoZSBTb2Z0d2FyZSwgYW5kIHRvIHBlcm1pdCBwZXJzb25zIHRvIHdob20gdGhlIFNvZnR3YXJlIGlzXG4gKiBmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOlxuICpcbiAqIFRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlIGluY2x1ZGVkIGluXG4gKiBhbGwgY29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS5cbiAqXG4gKiBUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgXCJBUyBJU1wiLCBXSVRIT1VUIFdBUlJBTlRZIE9GIEFOWSBLSU5ELCBFWFBSRVNTIE9SXG4gKiBJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSxcbiAqIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRVxuICogQVVUSE9SUyBPUiBDT1BZUklHSFQgSE9MREVSUyBCRSBMSUFCTEUgRk9SIEFOWSBDTEFJTSwgREFNQUdFUyBPUiBPVEhFUlxuICogTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSxcbiAqIE9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU5cbiAqIFRIRSBTT0ZUV0FSRS5cbiAqL1xuZXhwb3J0ICogZnJvbSAnLi9jb21wb25lbnQnO1xuZXhwb3J0ICogZnJvbSAnLi9jb25zdGFudHMnO1xuZXhwb3J0ICogZnJvbSAnLi9mb3VuZGF0aW9uJztcbmV4cG9ydCAqIGZyb20gJy4vZml4ZWQvZm91bmRhdGlvbic7XG5leHBvcnQgKiBmcm9tICcuL3Nob3J0L2ZvdW5kYXRpb24nO1xuZXhwb3J0ICogZnJvbSAnLi9zdGFuZGFyZC9mb3VuZGF0aW9uJztcbi8vIyBzb3VyY2VNYXBwaW5nVVJMPWluZGV4LmpzLm1hcCJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./node_modules/@material/top-app-bar/index.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./component */ "./node_modules/@material/top-app-bar/component.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MDCTopAppBar", function() { return _component__WEBPACK_IMPORTED_MODULE_0__["MDCTopAppBar"]; });
+
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ "./node_modules/@material/top-app-bar/constants.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cssClasses", function() { return _constants__WEBPACK_IMPORTED_MODULE_1__["cssClasses"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "numbers", function() { return _constants__WEBPACK_IMPORTED_MODULE_1__["numbers"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "strings", function() { return _constants__WEBPACK_IMPORTED_MODULE_1__["strings"]; });
+
+/* harmony import */ var _foundation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./foundation */ "./node_modules/@material/top-app-bar/foundation.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MDCTopAppBarBaseFoundation", function() { return _foundation__WEBPACK_IMPORTED_MODULE_2__["MDCTopAppBarBaseFoundation"]; });
+
+/* harmony import */ var _fixed_foundation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./fixed/foundation */ "./node_modules/@material/top-app-bar/fixed/foundation.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MDCFixedTopAppBarFoundation", function() { return _fixed_foundation__WEBPACK_IMPORTED_MODULE_3__["MDCFixedTopAppBarFoundation"]; });
+
+/* harmony import */ var _short_foundation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./short/foundation */ "./node_modules/@material/top-app-bar/short/foundation.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MDCShortTopAppBarFoundation", function() { return _short_foundation__WEBPACK_IMPORTED_MODULE_4__["MDCShortTopAppBarFoundation"]; });
+
+/* harmony import */ var _standard_foundation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./standard/foundation */ "./node_modules/@material/top-app-bar/standard/foundation.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MDCTopAppBarFoundation", function() { return _standard_foundation__WEBPACK_IMPORTED_MODULE_5__["MDCTopAppBarFoundation"]; });
+
+/**
+ * @license
+ * Copyright 2019 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+
+
+
+//# sourceMappingURL=index.js.map
 
 /***/ }),
 
@@ -417,7 +3308,116 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _com
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"MDCShortTopAppBarFoundation\", function() { return MDCShortTopAppBarFoundation; });\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ \"./node_modules/@material/top-app-bar/constants.js\");\n/* harmony import */ var _foundation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../foundation */ \"./node_modules/@material/top-app-bar/foundation.js\");\n/**\n * @license\n * Copyright 2018 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\n\n\n\nvar MDCShortTopAppBarFoundation = /** @class */ (function (_super) {\n    tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"](MDCShortTopAppBarFoundation, _super);\n    /* istanbul ignore next: optional argument is not a branch statement */\n    function MDCShortTopAppBarFoundation(adapter) {\n        var _this = _super.call(this, adapter) || this;\n        _this.isCollapsed_ = false;\n        _this.isAlwaysCollapsed_ = false;\n        return _this;\n    }\n    Object.defineProperty(MDCShortTopAppBarFoundation.prototype, \"isCollapsed\", {\n        // Public visibility for backward compatibility.\n        get: function () {\n            return this.isCollapsed_;\n        },\n        enumerable: true,\n        configurable: true\n    });\n    MDCShortTopAppBarFoundation.prototype.init = function () {\n        _super.prototype.init.call(this);\n        if (this.adapter_.getTotalActionItems() > 0) {\n            this.adapter_.addClass(_constants__WEBPACK_IMPORTED_MODULE_1__[\"cssClasses\"].SHORT_HAS_ACTION_ITEM_CLASS);\n        }\n        // If initialized with SHORT_COLLAPSED_CLASS, the bar should always be collapsed\n        this.setAlwaysCollapsed(this.adapter_.hasClass(_constants__WEBPACK_IMPORTED_MODULE_1__[\"cssClasses\"].SHORT_COLLAPSED_CLASS));\n    };\n    /**\n     * Set if the short top app bar should always be collapsed.\n     *\n     * @param value When `true`, bar will always be collapsed. When `false`, bar may collapse or expand based on scroll.\n     */\n    MDCShortTopAppBarFoundation.prototype.setAlwaysCollapsed = function (value) {\n        this.isAlwaysCollapsed_ = !!value;\n        if (this.isAlwaysCollapsed_) {\n            this.collapse_();\n        }\n        else {\n            // let maybeCollapseBar_ determine if the bar should be collapsed\n            this.maybeCollapseBar_();\n        }\n    };\n    MDCShortTopAppBarFoundation.prototype.getAlwaysCollapsed = function () {\n        return this.isAlwaysCollapsed_;\n    };\n    /**\n     * Scroll handler for applying/removing the collapsed modifier class on the short top app bar.\n     * @override\n     */\n    MDCShortTopAppBarFoundation.prototype.handleTargetScroll = function () {\n        this.maybeCollapseBar_();\n    };\n    MDCShortTopAppBarFoundation.prototype.maybeCollapseBar_ = function () {\n        if (this.isAlwaysCollapsed_) {\n            return;\n        }\n        var currentScroll = this.adapter_.getViewportScrollY();\n        if (currentScroll <= 0) {\n            if (this.isCollapsed_) {\n                this.uncollapse_();\n            }\n        }\n        else {\n            if (!this.isCollapsed_) {\n                this.collapse_();\n            }\n        }\n    };\n    MDCShortTopAppBarFoundation.prototype.uncollapse_ = function () {\n        this.adapter_.removeClass(_constants__WEBPACK_IMPORTED_MODULE_1__[\"cssClasses\"].SHORT_COLLAPSED_CLASS);\n        this.isCollapsed_ = false;\n    };\n    MDCShortTopAppBarFoundation.prototype.collapse_ = function () {\n        this.adapter_.addClass(_constants__WEBPACK_IMPORTED_MODULE_1__[\"cssClasses\"].SHORT_COLLAPSED_CLASS);\n        this.isCollapsed_ = true;\n    };\n    return MDCShortTopAppBarFoundation;\n}(_foundation__WEBPACK_IMPORTED_MODULE_2__[\"MDCTopAppBarBaseFoundation\"]));\n\n// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.\n/* harmony default export */ __webpack_exports__[\"default\"] = (MDCShortTopAppBarFoundation);\n//# sourceMappingURL=foundation.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL3RvcC1hcHAtYmFyL3Nob3J0L2ZvdW5kYXRpb24uanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL3RvcC1hcHAtYmFyL3Nob3J0L2ZvdW5kYXRpb24uanM/YmUxZSJdLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEBsaWNlbnNlXG4gKiBDb3B5cmlnaHQgMjAxOCBHb29nbGUgSW5jLlxuICpcbiAqIFBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHlcbiAqIG9mIHRoaXMgc29mdHdhcmUgYW5kIGFzc29jaWF0ZWQgZG9jdW1lbnRhdGlvbiBmaWxlcyAodGhlIFwiU29mdHdhcmVcIiksIHRvIGRlYWxcbiAqIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgd2l0aG91dCBsaW1pdGF0aW9uIHRoZSByaWdodHNcbiAqIHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwgZGlzdHJpYnV0ZSwgc3VibGljZW5zZSwgYW5kL29yIHNlbGxcbiAqIGNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpc1xuICogZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvIHRoZSBmb2xsb3dpbmcgY29uZGl0aW9uczpcbiAqXG4gKiBUaGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBwZXJtaXNzaW9uIG5vdGljZSBzaGFsbCBiZSBpbmNsdWRlZCBpblxuICogYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuXG4gKlxuICogVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEIFwiQVMgSVNcIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUlxuICogSU1QTElFRCwgSU5DTFVESU5HIEJVVCBOT1QgTElNSVRFRCBUTyBUSEUgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFksXG4gKiBGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRSBBTkQgTk9OSU5GUklOR0VNRU5ULiBJTiBOTyBFVkVOVCBTSEFMTCBUSEVcbiAqIEFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVJcbiAqIExJQUJJTElUWSwgV0hFVEhFUiBJTiBBTiBBQ1RJT04gT0YgQ09OVFJBQ1QsIFRPUlQgT1IgT1RIRVJXSVNFLCBBUklTSU5HIEZST00sXG4gKiBPVVQgT0YgT1IgSU4gQ09OTkVDVElPTiBXSVRIIFRIRSBTT0ZUV0FSRSBPUiBUSEUgVVNFIE9SIE9USEVSIERFQUxJTkdTIElOXG4gKiBUSEUgU09GVFdBUkUuXG4gKi9cbmltcG9ydCAqIGFzIHRzbGliXzEgZnJvbSBcInRzbGliXCI7XG5pbXBvcnQgeyBjc3NDbGFzc2VzIH0gZnJvbSAnLi4vY29uc3RhbnRzJztcbmltcG9ydCB7IE1EQ1RvcEFwcEJhckJhc2VGb3VuZGF0aW9uIH0gZnJvbSAnLi4vZm91bmRhdGlvbic7XG52YXIgTURDU2hvcnRUb3BBcHBCYXJGb3VuZGF0aW9uID0gLyoqIEBjbGFzcyAqLyAoZnVuY3Rpb24gKF9zdXBlcikge1xuICAgIHRzbGliXzEuX19leHRlbmRzKE1EQ1Nob3J0VG9wQXBwQmFyRm91bmRhdGlvbiwgX3N1cGVyKTtcbiAgICAvKiBpc3RhbmJ1bCBpZ25vcmUgbmV4dDogb3B0aW9uYWwgYXJndW1lbnQgaXMgbm90IGEgYnJhbmNoIHN0YXRlbWVudCAqL1xuICAgIGZ1bmN0aW9uIE1EQ1Nob3J0VG9wQXBwQmFyRm91bmRhdGlvbihhZGFwdGVyKSB7XG4gICAgICAgIHZhciBfdGhpcyA9IF9zdXBlci5jYWxsKHRoaXMsIGFkYXB0ZXIpIHx8IHRoaXM7XG4gICAgICAgIF90aGlzLmlzQ29sbGFwc2VkXyA9IGZhbHNlO1xuICAgICAgICBfdGhpcy5pc0Fsd2F5c0NvbGxhcHNlZF8gPSBmYWxzZTtcbiAgICAgICAgcmV0dXJuIF90aGlzO1xuICAgIH1cbiAgICBPYmplY3QuZGVmaW5lUHJvcGVydHkoTURDU2hvcnRUb3BBcHBCYXJGb3VuZGF0aW9uLnByb3RvdHlwZSwgXCJpc0NvbGxhcHNlZFwiLCB7XG4gICAgICAgIC8vIFB1YmxpYyB2aXNpYmlsaXR5IGZvciBiYWNrd2FyZCBjb21wYXRpYmlsaXR5LlxuICAgICAgICBnZXQ6IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIHJldHVybiB0aGlzLmlzQ29sbGFwc2VkXztcbiAgICAgICAgfSxcbiAgICAgICAgZW51bWVyYWJsZTogdHJ1ZSxcbiAgICAgICAgY29uZmlndXJhYmxlOiB0cnVlXG4gICAgfSk7XG4gICAgTURDU2hvcnRUb3BBcHBCYXJGb3VuZGF0aW9uLnByb3RvdHlwZS5pbml0ID0gZnVuY3Rpb24gKCkge1xuICAgICAgICBfc3VwZXIucHJvdG90eXBlLmluaXQuY2FsbCh0aGlzKTtcbiAgICAgICAgaWYgKHRoaXMuYWRhcHRlcl8uZ2V0VG90YWxBY3Rpb25JdGVtcygpID4gMCkge1xuICAgICAgICAgICAgdGhpcy5hZGFwdGVyXy5hZGRDbGFzcyhjc3NDbGFzc2VzLlNIT1JUX0hBU19BQ1RJT05fSVRFTV9DTEFTUyk7XG4gICAgICAgIH1cbiAgICAgICAgLy8gSWYgaW5pdGlhbGl6ZWQgd2l0aCBTSE9SVF9DT0xMQVBTRURfQ0xBU1MsIHRoZSBiYXIgc2hvdWxkIGFsd2F5cyBiZSBjb2xsYXBzZWRcbiAgICAgICAgdGhpcy5zZXRBbHdheXNDb2xsYXBzZWQodGhpcy5hZGFwdGVyXy5oYXNDbGFzcyhjc3NDbGFzc2VzLlNIT1JUX0NPTExBUFNFRF9DTEFTUykpO1xuICAgIH07XG4gICAgLyoqXG4gICAgICogU2V0IGlmIHRoZSBzaG9ydCB0b3AgYXBwIGJhciBzaG91bGQgYWx3YXlzIGJlIGNvbGxhcHNlZC5cbiAgICAgKlxuICAgICAqIEBwYXJhbSB2YWx1ZSBXaGVuIGB0cnVlYCwgYmFyIHdpbGwgYWx3YXlzIGJlIGNvbGxhcHNlZC4gV2hlbiBgZmFsc2VgLCBiYXIgbWF5IGNvbGxhcHNlIG9yIGV4cGFuZCBiYXNlZCBvbiBzY3JvbGwuXG4gICAgICovXG4gICAgTURDU2hvcnRUb3BBcHBCYXJGb3VuZGF0aW9uLnByb3RvdHlwZS5zZXRBbHdheXNDb2xsYXBzZWQgPSBmdW5jdGlvbiAodmFsdWUpIHtcbiAgICAgICAgdGhpcy5pc0Fsd2F5c0NvbGxhcHNlZF8gPSAhIXZhbHVlO1xuICAgICAgICBpZiAodGhpcy5pc0Fsd2F5c0NvbGxhcHNlZF8pIHtcbiAgICAgICAgICAgIHRoaXMuY29sbGFwc2VfKCk7XG4gICAgICAgIH1cbiAgICAgICAgZWxzZSB7XG4gICAgICAgICAgICAvLyBsZXQgbWF5YmVDb2xsYXBzZUJhcl8gZGV0ZXJtaW5lIGlmIHRoZSBiYXIgc2hvdWxkIGJlIGNvbGxhcHNlZFxuICAgICAgICAgICAgdGhpcy5tYXliZUNvbGxhcHNlQmFyXygpO1xuICAgICAgICB9XG4gICAgfTtcbiAgICBNRENTaG9ydFRvcEFwcEJhckZvdW5kYXRpb24ucHJvdG90eXBlLmdldEFsd2F5c0NvbGxhcHNlZCA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgcmV0dXJuIHRoaXMuaXNBbHdheXNDb2xsYXBzZWRfO1xuICAgIH07XG4gICAgLyoqXG4gICAgICogU2Nyb2xsIGhhbmRsZXIgZm9yIGFwcGx5aW5nL3JlbW92aW5nIHRoZSBjb2xsYXBzZWQgbW9kaWZpZXIgY2xhc3Mgb24gdGhlIHNob3J0IHRvcCBhcHAgYmFyLlxuICAgICAqIEBvdmVycmlkZVxuICAgICAqL1xuICAgIE1EQ1Nob3J0VG9wQXBwQmFyRm91bmRhdGlvbi5wcm90b3R5cGUuaGFuZGxlVGFyZ2V0U2Nyb2xsID0gZnVuY3Rpb24gKCkge1xuICAgICAgICB0aGlzLm1heWJlQ29sbGFwc2VCYXJfKCk7XG4gICAgfTtcbiAgICBNRENTaG9ydFRvcEFwcEJhckZvdW5kYXRpb24ucHJvdG90eXBlLm1heWJlQ29sbGFwc2VCYXJfID0gZnVuY3Rpb24gKCkge1xuICAgICAgICBpZiAodGhpcy5pc0Fsd2F5c0NvbGxhcHNlZF8pIHtcbiAgICAgICAgICAgIHJldHVybjtcbiAgICAgICAgfVxuICAgICAgICB2YXIgY3VycmVudFNjcm9sbCA9IHRoaXMuYWRhcHRlcl8uZ2V0Vmlld3BvcnRTY3JvbGxZKCk7XG4gICAgICAgIGlmIChjdXJyZW50U2Nyb2xsIDw9IDApIHtcbiAgICAgICAgICAgIGlmICh0aGlzLmlzQ29sbGFwc2VkXykge1xuICAgICAgICAgICAgICAgIHRoaXMudW5jb2xsYXBzZV8oKTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgICBlbHNlIHtcbiAgICAgICAgICAgIGlmICghdGhpcy5pc0NvbGxhcHNlZF8pIHtcbiAgICAgICAgICAgICAgICB0aGlzLmNvbGxhcHNlXygpO1xuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgfTtcbiAgICBNRENTaG9ydFRvcEFwcEJhckZvdW5kYXRpb24ucHJvdG90eXBlLnVuY29sbGFwc2VfID0gZnVuY3Rpb24gKCkge1xuICAgICAgICB0aGlzLmFkYXB0ZXJfLnJlbW92ZUNsYXNzKGNzc0NsYXNzZXMuU0hPUlRfQ09MTEFQU0VEX0NMQVNTKTtcbiAgICAgICAgdGhpcy5pc0NvbGxhcHNlZF8gPSBmYWxzZTtcbiAgICB9O1xuICAgIE1EQ1Nob3J0VG9wQXBwQmFyRm91bmRhdGlvbi5wcm90b3R5cGUuY29sbGFwc2VfID0gZnVuY3Rpb24gKCkge1xuICAgICAgICB0aGlzLmFkYXB0ZXJfLmFkZENsYXNzKGNzc0NsYXNzZXMuU0hPUlRfQ09MTEFQU0VEX0NMQVNTKTtcbiAgICAgICAgdGhpcy5pc0NvbGxhcHNlZF8gPSB0cnVlO1xuICAgIH07XG4gICAgcmV0dXJuIE1EQ1Nob3J0VG9wQXBwQmFyRm91bmRhdGlvbjtcbn0oTURDVG9wQXBwQmFyQmFzZUZvdW5kYXRpb24pKTtcbmV4cG9ydCB7IE1EQ1Nob3J0VG9wQXBwQmFyRm91bmRhdGlvbiB9O1xuLy8gdHNsaW50OmRpc2FibGUtbmV4dC1saW5lOm5vLWRlZmF1bHQtZXhwb3J0IE5lZWRlZCBmb3IgYmFja3dhcmQgY29tcGF0aWJpbGl0eSB3aXRoIE1EQyBXZWIgdjAuNDQuMCBhbmQgZWFybGllci5cbmV4cG9ydCBkZWZhdWx0IE1EQ1Nob3J0VG9wQXBwQmFyRm91bmRhdGlvbjtcbi8vIyBzb3VyY2VNYXBwaW5nVVJMPWZvdW5kYXRpb24uanMubWFwIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./node_modules/@material/top-app-bar/short/foundation.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MDCShortTopAppBarFoundation", function() { return MDCShortTopAppBarFoundation; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./node_modules/@material/top-app-bar/constants.js");
+/* harmony import */ var _foundation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../foundation */ "./node_modules/@material/top-app-bar/foundation.js");
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+var MDCShortTopAppBarFoundation = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](MDCShortTopAppBarFoundation, _super);
+    /* istanbul ignore next: optional argument is not a branch statement */
+    function MDCShortTopAppBarFoundation(adapter) {
+        var _this = _super.call(this, adapter) || this;
+        _this.isCollapsed_ = false;
+        _this.isAlwaysCollapsed_ = false;
+        return _this;
+    }
+    Object.defineProperty(MDCShortTopAppBarFoundation.prototype, "isCollapsed", {
+        // Public visibility for backward compatibility.
+        get: function () {
+            return this.isCollapsed_;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    MDCShortTopAppBarFoundation.prototype.init = function () {
+        _super.prototype.init.call(this);
+        if (this.adapter_.getTotalActionItems() > 0) {
+            this.adapter_.addClass(_constants__WEBPACK_IMPORTED_MODULE_1__["cssClasses"].SHORT_HAS_ACTION_ITEM_CLASS);
+        }
+        // If initialized with SHORT_COLLAPSED_CLASS, the bar should always be collapsed
+        this.setAlwaysCollapsed(this.adapter_.hasClass(_constants__WEBPACK_IMPORTED_MODULE_1__["cssClasses"].SHORT_COLLAPSED_CLASS));
+    };
+    /**
+     * Set if the short top app bar should always be collapsed.
+     *
+     * @param value When `true`, bar will always be collapsed. When `false`, bar may collapse or expand based on scroll.
+     */
+    MDCShortTopAppBarFoundation.prototype.setAlwaysCollapsed = function (value) {
+        this.isAlwaysCollapsed_ = !!value;
+        if (this.isAlwaysCollapsed_) {
+            this.collapse_();
+        }
+        else {
+            // let maybeCollapseBar_ determine if the bar should be collapsed
+            this.maybeCollapseBar_();
+        }
+    };
+    MDCShortTopAppBarFoundation.prototype.getAlwaysCollapsed = function () {
+        return this.isAlwaysCollapsed_;
+    };
+    /**
+     * Scroll handler for applying/removing the collapsed modifier class on the short top app bar.
+     * @override
+     */
+    MDCShortTopAppBarFoundation.prototype.handleTargetScroll = function () {
+        this.maybeCollapseBar_();
+    };
+    MDCShortTopAppBarFoundation.prototype.maybeCollapseBar_ = function () {
+        if (this.isAlwaysCollapsed_) {
+            return;
+        }
+        var currentScroll = this.adapter_.getViewportScrollY();
+        if (currentScroll <= 0) {
+            if (this.isCollapsed_) {
+                this.uncollapse_();
+            }
+        }
+        else {
+            if (!this.isCollapsed_) {
+                this.collapse_();
+            }
+        }
+    };
+    MDCShortTopAppBarFoundation.prototype.uncollapse_ = function () {
+        this.adapter_.removeClass(_constants__WEBPACK_IMPORTED_MODULE_1__["cssClasses"].SHORT_COLLAPSED_CLASS);
+        this.isCollapsed_ = false;
+    };
+    MDCShortTopAppBarFoundation.prototype.collapse_ = function () {
+        this.adapter_.addClass(_constants__WEBPACK_IMPORTED_MODULE_1__["cssClasses"].SHORT_COLLAPSED_CLASS);
+        this.isCollapsed_ = true;
+    };
+    return MDCShortTopAppBarFoundation;
+}(_foundation__WEBPACK_IMPORTED_MODULE_2__["MDCTopAppBarBaseFoundation"]));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* harmony default export */ __webpack_exports__["default"] = (MDCShortTopAppBarFoundation);
+//# sourceMappingURL=foundation.js.map
 
 /***/ }),
 
@@ -429,7 +3429,179 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"MDCTopAppBarFoundation\", function() { return MDCTopAppBarFoundation; });\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ \"./node_modules/@material/top-app-bar/constants.js\");\n/* harmony import */ var _foundation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../foundation */ \"./node_modules/@material/top-app-bar/foundation.js\");\n/**\n * @license\n * Copyright 2018 Google Inc.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a copy\n * of this software and associated documentation files (the \"Software\"), to deal\n * in the Software without restriction, including without limitation the rights\n * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the Software is\n * furnished to do so, subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be included in\n * all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n * THE SOFTWARE.\n */\n\n\n\nvar INITIAL_VALUE = 0;\nvar MDCTopAppBarFoundation = /** @class */ (function (_super) {\n    tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"](MDCTopAppBarFoundation, _super);\n    /* istanbul ignore next: optional argument is not a branch statement */\n    function MDCTopAppBarFoundation(adapter) {\n        var _this = _super.call(this, adapter) || this;\n        /**\n         * Indicates if the top app bar was docked in the previous scroll handler iteration.\n         */\n        _this.wasDocked_ = true;\n        /**\n         * Indicates if the top app bar is docked in the fully shown position.\n         */\n        _this.isDockedShowing_ = true;\n        /**\n         * Variable for current scroll position of the top app bar\n         */\n        _this.currentAppBarOffsetTop_ = 0;\n        /**\n         * Used to prevent the top app bar from being scrolled out of view during resize events\n         */\n        _this.isCurrentlyBeingResized_ = false;\n        /**\n         * The timeout that's used to throttle the resize events\n         */\n        _this.resizeThrottleId_ = INITIAL_VALUE;\n        /**\n         * The timeout that's used to debounce toggling the isCurrentlyBeingResized_ variable after a resize\n         */\n        _this.resizeDebounceId_ = INITIAL_VALUE;\n        _this.lastScrollPosition_ = _this.adapter_.getViewportScrollY();\n        _this.topAppBarHeight_ = _this.adapter_.getTopAppBarHeight();\n        return _this;\n    }\n    MDCTopAppBarFoundation.prototype.destroy = function () {\n        _super.prototype.destroy.call(this);\n        this.adapter_.setStyle('top', '');\n    };\n    /**\n     * Scroll handler for the default scroll behavior of the top app bar.\n     * @override\n     */\n    MDCTopAppBarFoundation.prototype.handleTargetScroll = function () {\n        var currentScrollPosition = Math.max(this.adapter_.getViewportScrollY(), 0);\n        var diff = currentScrollPosition - this.lastScrollPosition_;\n        this.lastScrollPosition_ = currentScrollPosition;\n        // If the window is being resized the lastScrollPosition_ needs to be updated but the\n        // current scroll of the top app bar should stay in the same position.\n        if (!this.isCurrentlyBeingResized_) {\n            this.currentAppBarOffsetTop_ -= diff;\n            if (this.currentAppBarOffsetTop_ > 0) {\n                this.currentAppBarOffsetTop_ = 0;\n            }\n            else if (Math.abs(this.currentAppBarOffsetTop_) > this.topAppBarHeight_) {\n                this.currentAppBarOffsetTop_ = -this.topAppBarHeight_;\n            }\n            this.moveTopAppBar_();\n        }\n    };\n    /**\n     * Top app bar resize handler that throttle/debounce functions that execute updates.\n     * @override\n     */\n    MDCTopAppBarFoundation.prototype.handleWindowResize = function () {\n        var _this = this;\n        // Throttle resize events 10 p/s\n        if (!this.resizeThrottleId_) {\n            this.resizeThrottleId_ = setTimeout(function () {\n                _this.resizeThrottleId_ = INITIAL_VALUE;\n                _this.throttledResizeHandler_();\n            }, _constants__WEBPACK_IMPORTED_MODULE_1__[\"numbers\"].DEBOUNCE_THROTTLE_RESIZE_TIME_MS);\n        }\n        this.isCurrentlyBeingResized_ = true;\n        if (this.resizeDebounceId_) {\n            clearTimeout(this.resizeDebounceId_);\n        }\n        this.resizeDebounceId_ = setTimeout(function () {\n            _this.handleTargetScroll();\n            _this.isCurrentlyBeingResized_ = false;\n            _this.resizeDebounceId_ = INITIAL_VALUE;\n        }, _constants__WEBPACK_IMPORTED_MODULE_1__[\"numbers\"].DEBOUNCE_THROTTLE_RESIZE_TIME_MS);\n    };\n    /**\n     * Function to determine if the DOM needs to update.\n     */\n    MDCTopAppBarFoundation.prototype.checkForUpdate_ = function () {\n        var offscreenBoundaryTop = -this.topAppBarHeight_;\n        var hasAnyPixelsOffscreen = this.currentAppBarOffsetTop_ < 0;\n        var hasAnyPixelsOnscreen = this.currentAppBarOffsetTop_ > offscreenBoundaryTop;\n        var partiallyShowing = hasAnyPixelsOffscreen && hasAnyPixelsOnscreen;\n        // If it's partially showing, it can't be docked.\n        if (partiallyShowing) {\n            this.wasDocked_ = false;\n        }\n        else {\n            // Not previously docked and not partially showing, it's now docked.\n            if (!this.wasDocked_) {\n                this.wasDocked_ = true;\n                return true;\n            }\n            else if (this.isDockedShowing_ !== hasAnyPixelsOnscreen) {\n                this.isDockedShowing_ = hasAnyPixelsOnscreen;\n                return true;\n            }\n        }\n        return partiallyShowing;\n    };\n    /**\n     * Function to move the top app bar if needed.\n     */\n    MDCTopAppBarFoundation.prototype.moveTopAppBar_ = function () {\n        if (this.checkForUpdate_()) {\n            // Once the top app bar is fully hidden we use the max potential top app bar height as our offset\n            // so the top app bar doesn't show if the window resizes and the new height > the old height.\n            var offset = this.currentAppBarOffsetTop_;\n            if (Math.abs(offset) >= this.topAppBarHeight_) {\n                offset = -_constants__WEBPACK_IMPORTED_MODULE_1__[\"numbers\"].MAX_TOP_APP_BAR_HEIGHT;\n            }\n            this.adapter_.setStyle('top', offset + 'px');\n        }\n    };\n    /**\n     * Throttled function that updates the top app bar scrolled values if the\n     * top app bar height changes.\n     */\n    MDCTopAppBarFoundation.prototype.throttledResizeHandler_ = function () {\n        var currentHeight = this.adapter_.getTopAppBarHeight();\n        if (this.topAppBarHeight_ !== currentHeight) {\n            this.wasDocked_ = false;\n            // Since the top app bar has a different height depending on the screen width, this\n            // will ensure that the top app bar remains in the correct location if\n            // completely hidden and a resize makes the top app bar a different height.\n            this.currentAppBarOffsetTop_ -= this.topAppBarHeight_ - currentHeight;\n            this.topAppBarHeight_ = currentHeight;\n        }\n        this.handleTargetScroll();\n    };\n    return MDCTopAppBarFoundation;\n}(_foundation__WEBPACK_IMPORTED_MODULE_2__[\"MDCTopAppBarBaseFoundation\"]));\n\n// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.\n/* harmony default export */ __webpack_exports__[\"default\"] = (MDCTopAppBarFoundation);\n//# sourceMappingURL=foundation.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL3RvcC1hcHAtYmFyL3N0YW5kYXJkL2ZvdW5kYXRpb24uanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvQG1hdGVyaWFsL3RvcC1hcHAtYmFyL3N0YW5kYXJkL2ZvdW5kYXRpb24uanM/ZDkwMyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEBsaWNlbnNlXG4gKiBDb3B5cmlnaHQgMjAxOCBHb29nbGUgSW5jLlxuICpcbiAqIFBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHlcbiAqIG9mIHRoaXMgc29mdHdhcmUgYW5kIGFzc29jaWF0ZWQgZG9jdW1lbnRhdGlvbiBmaWxlcyAodGhlIFwiU29mdHdhcmVcIiksIHRvIGRlYWxcbiAqIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgd2l0aG91dCBsaW1pdGF0aW9uIHRoZSByaWdodHNcbiAqIHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwgZGlzdHJpYnV0ZSwgc3VibGljZW5zZSwgYW5kL29yIHNlbGxcbiAqIGNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpc1xuICogZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvIHRoZSBmb2xsb3dpbmcgY29uZGl0aW9uczpcbiAqXG4gKiBUaGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBwZXJtaXNzaW9uIG5vdGljZSBzaGFsbCBiZSBpbmNsdWRlZCBpblxuICogYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuXG4gKlxuICogVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEIFwiQVMgSVNcIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUlxuICogSU1QTElFRCwgSU5DTFVESU5HIEJVVCBOT1QgTElNSVRFRCBUTyBUSEUgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFksXG4gKiBGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRSBBTkQgTk9OSU5GUklOR0VNRU5ULiBJTiBOTyBFVkVOVCBTSEFMTCBUSEVcbiAqIEFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVJcbiAqIExJQUJJTElUWSwgV0hFVEhFUiBJTiBBTiBBQ1RJT04gT0YgQ09OVFJBQ1QsIFRPUlQgT1IgT1RIRVJXSVNFLCBBUklTSU5HIEZST00sXG4gKiBPVVQgT0YgT1IgSU4gQ09OTkVDVElPTiBXSVRIIFRIRSBTT0ZUV0FSRSBPUiBUSEUgVVNFIE9SIE9USEVSIERFQUxJTkdTIElOXG4gKiBUSEUgU09GVFdBUkUuXG4gKi9cbmltcG9ydCAqIGFzIHRzbGliXzEgZnJvbSBcInRzbGliXCI7XG5pbXBvcnQgeyBudW1iZXJzIH0gZnJvbSAnLi4vY29uc3RhbnRzJztcbmltcG9ydCB7IE1EQ1RvcEFwcEJhckJhc2VGb3VuZGF0aW9uIH0gZnJvbSAnLi4vZm91bmRhdGlvbic7XG52YXIgSU5JVElBTF9WQUxVRSA9IDA7XG52YXIgTURDVG9wQXBwQmFyRm91bmRhdGlvbiA9IC8qKiBAY2xhc3MgKi8gKGZ1bmN0aW9uIChfc3VwZXIpIHtcbiAgICB0c2xpYl8xLl9fZXh0ZW5kcyhNRENUb3BBcHBCYXJGb3VuZGF0aW9uLCBfc3VwZXIpO1xuICAgIC8qIGlzdGFuYnVsIGlnbm9yZSBuZXh0OiBvcHRpb25hbCBhcmd1bWVudCBpcyBub3QgYSBicmFuY2ggc3RhdGVtZW50ICovXG4gICAgZnVuY3Rpb24gTURDVG9wQXBwQmFyRm91bmRhdGlvbihhZGFwdGVyKSB7XG4gICAgICAgIHZhciBfdGhpcyA9IF9zdXBlci5jYWxsKHRoaXMsIGFkYXB0ZXIpIHx8IHRoaXM7XG4gICAgICAgIC8qKlxuICAgICAgICAgKiBJbmRpY2F0ZXMgaWYgdGhlIHRvcCBhcHAgYmFyIHdhcyBkb2NrZWQgaW4gdGhlIHByZXZpb3VzIHNjcm9sbCBoYW5kbGVyIGl0ZXJhdGlvbi5cbiAgICAgICAgICovXG4gICAgICAgIF90aGlzLndhc0RvY2tlZF8gPSB0cnVlO1xuICAgICAgICAvKipcbiAgICAgICAgICogSW5kaWNhdGVzIGlmIHRoZSB0b3AgYXBwIGJhciBpcyBkb2NrZWQgaW4gdGhlIGZ1bGx5IHNob3duIHBvc2l0aW9uLlxuICAgICAgICAgKi9cbiAgICAgICAgX3RoaXMuaXNEb2NrZWRTaG93aW5nXyA9IHRydWU7XG4gICAgICAgIC8qKlxuICAgICAgICAgKiBWYXJpYWJsZSBmb3IgY3VycmVudCBzY3JvbGwgcG9zaXRpb24gb2YgdGhlIHRvcCBhcHAgYmFyXG4gICAgICAgICAqL1xuICAgICAgICBfdGhpcy5jdXJyZW50QXBwQmFyT2Zmc2V0VG9wXyA9IDA7XG4gICAgICAgIC8qKlxuICAgICAgICAgKiBVc2VkIHRvIHByZXZlbnQgdGhlIHRvcCBhcHAgYmFyIGZyb20gYmVpbmcgc2Nyb2xsZWQgb3V0IG9mIHZpZXcgZHVyaW5nIHJlc2l6ZSBldmVudHNcbiAgICAgICAgICovXG4gICAgICAgIF90aGlzLmlzQ3VycmVudGx5QmVpbmdSZXNpemVkXyA9IGZhbHNlO1xuICAgICAgICAvKipcbiAgICAgICAgICogVGhlIHRpbWVvdXQgdGhhdCdzIHVzZWQgdG8gdGhyb3R0bGUgdGhlIHJlc2l6ZSBldmVudHNcbiAgICAgICAgICovXG4gICAgICAgIF90aGlzLnJlc2l6ZVRocm90dGxlSWRfID0gSU5JVElBTF9WQUxVRTtcbiAgICAgICAgLyoqXG4gICAgICAgICAqIFRoZSB0aW1lb3V0IHRoYXQncyB1c2VkIHRvIGRlYm91bmNlIHRvZ2dsaW5nIHRoZSBpc0N1cnJlbnRseUJlaW5nUmVzaXplZF8gdmFyaWFibGUgYWZ0ZXIgYSByZXNpemVcbiAgICAgICAgICovXG4gICAgICAgIF90aGlzLnJlc2l6ZURlYm91bmNlSWRfID0gSU5JVElBTF9WQUxVRTtcbiAgICAgICAgX3RoaXMubGFzdFNjcm9sbFBvc2l0aW9uXyA9IF90aGlzLmFkYXB0ZXJfLmdldFZpZXdwb3J0U2Nyb2xsWSgpO1xuICAgICAgICBfdGhpcy50b3BBcHBCYXJIZWlnaHRfID0gX3RoaXMuYWRhcHRlcl8uZ2V0VG9wQXBwQmFySGVpZ2h0KCk7XG4gICAgICAgIHJldHVybiBfdGhpcztcbiAgICB9XG4gICAgTURDVG9wQXBwQmFyRm91bmRhdGlvbi5wcm90b3R5cGUuZGVzdHJveSA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgX3N1cGVyLnByb3RvdHlwZS5kZXN0cm95LmNhbGwodGhpcyk7XG4gICAgICAgIHRoaXMuYWRhcHRlcl8uc2V0U3R5bGUoJ3RvcCcsICcnKTtcbiAgICB9O1xuICAgIC8qKlxuICAgICAqIFNjcm9sbCBoYW5kbGVyIGZvciB0aGUgZGVmYXVsdCBzY3JvbGwgYmVoYXZpb3Igb2YgdGhlIHRvcCBhcHAgYmFyLlxuICAgICAqIEBvdmVycmlkZVxuICAgICAqL1xuICAgIE1EQ1RvcEFwcEJhckZvdW5kYXRpb24ucHJvdG90eXBlLmhhbmRsZVRhcmdldFNjcm9sbCA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdmFyIGN1cnJlbnRTY3JvbGxQb3NpdGlvbiA9IE1hdGgubWF4KHRoaXMuYWRhcHRlcl8uZ2V0Vmlld3BvcnRTY3JvbGxZKCksIDApO1xuICAgICAgICB2YXIgZGlmZiA9IGN1cnJlbnRTY3JvbGxQb3NpdGlvbiAtIHRoaXMubGFzdFNjcm9sbFBvc2l0aW9uXztcbiAgICAgICAgdGhpcy5sYXN0U2Nyb2xsUG9zaXRpb25fID0gY3VycmVudFNjcm9sbFBvc2l0aW9uO1xuICAgICAgICAvLyBJZiB0aGUgd2luZG93IGlzIGJlaW5nIHJlc2l6ZWQgdGhlIGxhc3RTY3JvbGxQb3NpdGlvbl8gbmVlZHMgdG8gYmUgdXBkYXRlZCBidXQgdGhlXG4gICAgICAgIC8vIGN1cnJlbnQgc2Nyb2xsIG9mIHRoZSB0b3AgYXBwIGJhciBzaG91bGQgc3RheSBpbiB0aGUgc2FtZSBwb3NpdGlvbi5cbiAgICAgICAgaWYgKCF0aGlzLmlzQ3VycmVudGx5QmVpbmdSZXNpemVkXykge1xuICAgICAgICAgICAgdGhpcy5jdXJyZW50QXBwQmFyT2Zmc2V0VG9wXyAtPSBkaWZmO1xuICAgICAgICAgICAgaWYgKHRoaXMuY3VycmVudEFwcEJhck9mZnNldFRvcF8gPiAwKSB7XG4gICAgICAgICAgICAgICAgdGhpcy5jdXJyZW50QXBwQmFyT2Zmc2V0VG9wXyA9IDA7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBlbHNlIGlmIChNYXRoLmFicyh0aGlzLmN1cnJlbnRBcHBCYXJPZmZzZXRUb3BfKSA+IHRoaXMudG9wQXBwQmFySGVpZ2h0Xykge1xuICAgICAgICAgICAgICAgIHRoaXMuY3VycmVudEFwcEJhck9mZnNldFRvcF8gPSAtdGhpcy50b3BBcHBCYXJIZWlnaHRfO1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgdGhpcy5tb3ZlVG9wQXBwQmFyXygpO1xuICAgICAgICB9XG4gICAgfTtcbiAgICAvKipcbiAgICAgKiBUb3AgYXBwIGJhciByZXNpemUgaGFuZGxlciB0aGF0IHRocm90dGxlL2RlYm91bmNlIGZ1bmN0aW9ucyB0aGF0IGV4ZWN1dGUgdXBkYXRlcy5cbiAgICAgKiBAb3ZlcnJpZGVcbiAgICAgKi9cbiAgICBNRENUb3BBcHBCYXJGb3VuZGF0aW9uLnByb3RvdHlwZS5oYW5kbGVXaW5kb3dSZXNpemUgPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIHZhciBfdGhpcyA9IHRoaXM7XG4gICAgICAgIC8vIFRocm90dGxlIHJlc2l6ZSBldmVudHMgMTAgcC9zXG4gICAgICAgIGlmICghdGhpcy5yZXNpemVUaHJvdHRsZUlkXykge1xuICAgICAgICAgICAgdGhpcy5yZXNpemVUaHJvdHRsZUlkXyA9IHNldFRpbWVvdXQoZnVuY3Rpb24gKCkge1xuICAgICAgICAgICAgICAgIF90aGlzLnJlc2l6ZVRocm90dGxlSWRfID0gSU5JVElBTF9WQUxVRTtcbiAgICAgICAgICAgICAgICBfdGhpcy50aHJvdHRsZWRSZXNpemVIYW5kbGVyXygpO1xuICAgICAgICAgICAgfSwgbnVtYmVycy5ERUJPVU5DRV9USFJPVFRMRV9SRVNJWkVfVElNRV9NUyk7XG4gICAgICAgIH1cbiAgICAgICAgdGhpcy5pc0N1cnJlbnRseUJlaW5nUmVzaXplZF8gPSB0cnVlO1xuICAgICAgICBpZiAodGhpcy5yZXNpemVEZWJvdW5jZUlkXykge1xuICAgICAgICAgICAgY2xlYXJUaW1lb3V0KHRoaXMucmVzaXplRGVib3VuY2VJZF8pO1xuICAgICAgICB9XG4gICAgICAgIHRoaXMucmVzaXplRGVib3VuY2VJZF8gPSBzZXRUaW1lb3V0KGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIF90aGlzLmhhbmRsZVRhcmdldFNjcm9sbCgpO1xuICAgICAgICAgICAgX3RoaXMuaXNDdXJyZW50bHlCZWluZ1Jlc2l6ZWRfID0gZmFsc2U7XG4gICAgICAgICAgICBfdGhpcy5yZXNpemVEZWJvdW5jZUlkXyA9IElOSVRJQUxfVkFMVUU7XG4gICAgICAgIH0sIG51bWJlcnMuREVCT1VOQ0VfVEhST1RUTEVfUkVTSVpFX1RJTUVfTVMpO1xuICAgIH07XG4gICAgLyoqXG4gICAgICogRnVuY3Rpb24gdG8gZGV0ZXJtaW5lIGlmIHRoZSBET00gbmVlZHMgdG8gdXBkYXRlLlxuICAgICAqL1xuICAgIE1EQ1RvcEFwcEJhckZvdW5kYXRpb24ucHJvdG90eXBlLmNoZWNrRm9yVXBkYXRlXyA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgdmFyIG9mZnNjcmVlbkJvdW5kYXJ5VG9wID0gLXRoaXMudG9wQXBwQmFySGVpZ2h0XztcbiAgICAgICAgdmFyIGhhc0FueVBpeGVsc09mZnNjcmVlbiA9IHRoaXMuY3VycmVudEFwcEJhck9mZnNldFRvcF8gPCAwO1xuICAgICAgICB2YXIgaGFzQW55UGl4ZWxzT25zY3JlZW4gPSB0aGlzLmN1cnJlbnRBcHBCYXJPZmZzZXRUb3BfID4gb2Zmc2NyZWVuQm91bmRhcnlUb3A7XG4gICAgICAgIHZhciBwYXJ0aWFsbHlTaG93aW5nID0gaGFzQW55UGl4ZWxzT2Zmc2NyZWVuICYmIGhhc0FueVBpeGVsc09uc2NyZWVuO1xuICAgICAgICAvLyBJZiBpdCdzIHBhcnRpYWxseSBzaG93aW5nLCBpdCBjYW4ndCBiZSBkb2NrZWQuXG4gICAgICAgIGlmIChwYXJ0aWFsbHlTaG93aW5nKSB7XG4gICAgICAgICAgICB0aGlzLndhc0RvY2tlZF8gPSBmYWxzZTtcbiAgICAgICAgfVxuICAgICAgICBlbHNlIHtcbiAgICAgICAgICAgIC8vIE5vdCBwcmV2aW91c2x5IGRvY2tlZCBhbmQgbm90IHBhcnRpYWxseSBzaG93aW5nLCBpdCdzIG5vdyBkb2NrZWQuXG4gICAgICAgICAgICBpZiAoIXRoaXMud2FzRG9ja2VkXykge1xuICAgICAgICAgICAgICAgIHRoaXMud2FzRG9ja2VkXyA9IHRydWU7XG4gICAgICAgICAgICAgICAgcmV0dXJuIHRydWU7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBlbHNlIGlmICh0aGlzLmlzRG9ja2VkU2hvd2luZ18gIT09IGhhc0FueVBpeGVsc09uc2NyZWVuKSB7XG4gICAgICAgICAgICAgICAgdGhpcy5pc0RvY2tlZFNob3dpbmdfID0gaGFzQW55UGl4ZWxzT25zY3JlZW47XG4gICAgICAgICAgICAgICAgcmV0dXJuIHRydWU7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgICAgcmV0dXJuIHBhcnRpYWxseVNob3dpbmc7XG4gICAgfTtcbiAgICAvKipcbiAgICAgKiBGdW5jdGlvbiB0byBtb3ZlIHRoZSB0b3AgYXBwIGJhciBpZiBuZWVkZWQuXG4gICAgICovXG4gICAgTURDVG9wQXBwQmFyRm91bmRhdGlvbi5wcm90b3R5cGUubW92ZVRvcEFwcEJhcl8gPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIGlmICh0aGlzLmNoZWNrRm9yVXBkYXRlXygpKSB7XG4gICAgICAgICAgICAvLyBPbmNlIHRoZSB0b3AgYXBwIGJhciBpcyBmdWxseSBoaWRkZW4gd2UgdXNlIHRoZSBtYXggcG90ZW50aWFsIHRvcCBhcHAgYmFyIGhlaWdodCBhcyBvdXIgb2Zmc2V0XG4gICAgICAgICAgICAvLyBzbyB0aGUgdG9wIGFwcCBiYXIgZG9lc24ndCBzaG93IGlmIHRoZSB3aW5kb3cgcmVzaXplcyBhbmQgdGhlIG5ldyBoZWlnaHQgPiB0aGUgb2xkIGhlaWdodC5cbiAgICAgICAgICAgIHZhciBvZmZzZXQgPSB0aGlzLmN1cnJlbnRBcHBCYXJPZmZzZXRUb3BfO1xuICAgICAgICAgICAgaWYgKE1hdGguYWJzKG9mZnNldCkgPj0gdGhpcy50b3BBcHBCYXJIZWlnaHRfKSB7XG4gICAgICAgICAgICAgICAgb2Zmc2V0ID0gLW51bWJlcnMuTUFYX1RPUF9BUFBfQkFSX0hFSUdIVDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIHRoaXMuYWRhcHRlcl8uc2V0U3R5bGUoJ3RvcCcsIG9mZnNldCArICdweCcpO1xuICAgICAgICB9XG4gICAgfTtcbiAgICAvKipcbiAgICAgKiBUaHJvdHRsZWQgZnVuY3Rpb24gdGhhdCB1cGRhdGVzIHRoZSB0b3AgYXBwIGJhciBzY3JvbGxlZCB2YWx1ZXMgaWYgdGhlXG4gICAgICogdG9wIGFwcCBiYXIgaGVpZ2h0IGNoYW5nZXMuXG4gICAgICovXG4gICAgTURDVG9wQXBwQmFyRm91bmRhdGlvbi5wcm90b3R5cGUudGhyb3R0bGVkUmVzaXplSGFuZGxlcl8gPSBmdW5jdGlvbiAoKSB7XG4gICAgICAgIHZhciBjdXJyZW50SGVpZ2h0ID0gdGhpcy5hZGFwdGVyXy5nZXRUb3BBcHBCYXJIZWlnaHQoKTtcbiAgICAgICAgaWYgKHRoaXMudG9wQXBwQmFySGVpZ2h0XyAhPT0gY3VycmVudEhlaWdodCkge1xuICAgICAgICAgICAgdGhpcy53YXNEb2NrZWRfID0gZmFsc2U7XG4gICAgICAgICAgICAvLyBTaW5jZSB0aGUgdG9wIGFwcCBiYXIgaGFzIGEgZGlmZmVyZW50IGhlaWdodCBkZXBlbmRpbmcgb24gdGhlIHNjcmVlbiB3aWR0aCwgdGhpc1xuICAgICAgICAgICAgLy8gd2lsbCBlbnN1cmUgdGhhdCB0aGUgdG9wIGFwcCBiYXIgcmVtYWlucyBpbiB0aGUgY29ycmVjdCBsb2NhdGlvbiBpZlxuICAgICAgICAgICAgLy8gY29tcGxldGVseSBoaWRkZW4gYW5kIGEgcmVzaXplIG1ha2VzIHRoZSB0b3AgYXBwIGJhciBhIGRpZmZlcmVudCBoZWlnaHQuXG4gICAgICAgICAgICB0aGlzLmN1cnJlbnRBcHBCYXJPZmZzZXRUb3BfIC09IHRoaXMudG9wQXBwQmFySGVpZ2h0XyAtIGN1cnJlbnRIZWlnaHQ7XG4gICAgICAgICAgICB0aGlzLnRvcEFwcEJhckhlaWdodF8gPSBjdXJyZW50SGVpZ2h0O1xuICAgICAgICB9XG4gICAgICAgIHRoaXMuaGFuZGxlVGFyZ2V0U2Nyb2xsKCk7XG4gICAgfTtcbiAgICByZXR1cm4gTURDVG9wQXBwQmFyRm91bmRhdGlvbjtcbn0oTURDVG9wQXBwQmFyQmFzZUZvdW5kYXRpb24pKTtcbmV4cG9ydCB7IE1EQ1RvcEFwcEJhckZvdW5kYXRpb24gfTtcbi8vIHRzbGludDpkaXNhYmxlLW5leHQtbGluZTpuby1kZWZhdWx0LWV4cG9ydCBOZWVkZWQgZm9yIGJhY2t3YXJkIGNvbXBhdGliaWxpdHkgd2l0aCBNREMgV2ViIHYwLjQ0LjAgYW5kIGVhcmxpZXIuXG5leHBvcnQgZGVmYXVsdCBNRENUb3BBcHBCYXJGb3VuZGF0aW9uO1xuLy8jIHNvdXJjZU1hcHBpbmdVUkw9Zm91bmRhdGlvbi5qcy5tYXAiXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./node_modules/@material/top-app-bar/standard/foundation.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MDCTopAppBarFoundation", function() { return MDCTopAppBarFoundation; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./node_modules/@material/top-app-bar/constants.js");
+/* harmony import */ var _foundation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../foundation */ "./node_modules/@material/top-app-bar/foundation.js");
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+
+var INITIAL_VALUE = 0;
+var MDCTopAppBarFoundation = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](MDCTopAppBarFoundation, _super);
+    /* istanbul ignore next: optional argument is not a branch statement */
+    function MDCTopAppBarFoundation(adapter) {
+        var _this = _super.call(this, adapter) || this;
+        /**
+         * Indicates if the top app bar was docked in the previous scroll handler iteration.
+         */
+        _this.wasDocked_ = true;
+        /**
+         * Indicates if the top app bar is docked in the fully shown position.
+         */
+        _this.isDockedShowing_ = true;
+        /**
+         * Variable for current scroll position of the top app bar
+         */
+        _this.currentAppBarOffsetTop_ = 0;
+        /**
+         * Used to prevent the top app bar from being scrolled out of view during resize events
+         */
+        _this.isCurrentlyBeingResized_ = false;
+        /**
+         * The timeout that's used to throttle the resize events
+         */
+        _this.resizeThrottleId_ = INITIAL_VALUE;
+        /**
+         * The timeout that's used to debounce toggling the isCurrentlyBeingResized_ variable after a resize
+         */
+        _this.resizeDebounceId_ = INITIAL_VALUE;
+        _this.lastScrollPosition_ = _this.adapter_.getViewportScrollY();
+        _this.topAppBarHeight_ = _this.adapter_.getTopAppBarHeight();
+        return _this;
+    }
+    MDCTopAppBarFoundation.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        this.adapter_.setStyle('top', '');
+    };
+    /**
+     * Scroll handler for the default scroll behavior of the top app bar.
+     * @override
+     */
+    MDCTopAppBarFoundation.prototype.handleTargetScroll = function () {
+        var currentScrollPosition = Math.max(this.adapter_.getViewportScrollY(), 0);
+        var diff = currentScrollPosition - this.lastScrollPosition_;
+        this.lastScrollPosition_ = currentScrollPosition;
+        // If the window is being resized the lastScrollPosition_ needs to be updated but the
+        // current scroll of the top app bar should stay in the same position.
+        if (!this.isCurrentlyBeingResized_) {
+            this.currentAppBarOffsetTop_ -= diff;
+            if (this.currentAppBarOffsetTop_ > 0) {
+                this.currentAppBarOffsetTop_ = 0;
+            }
+            else if (Math.abs(this.currentAppBarOffsetTop_) > this.topAppBarHeight_) {
+                this.currentAppBarOffsetTop_ = -this.topAppBarHeight_;
+            }
+            this.moveTopAppBar_();
+        }
+    };
+    /**
+     * Top app bar resize handler that throttle/debounce functions that execute updates.
+     * @override
+     */
+    MDCTopAppBarFoundation.prototype.handleWindowResize = function () {
+        var _this = this;
+        // Throttle resize events 10 p/s
+        if (!this.resizeThrottleId_) {
+            this.resizeThrottleId_ = setTimeout(function () {
+                _this.resizeThrottleId_ = INITIAL_VALUE;
+                _this.throttledResizeHandler_();
+            }, _constants__WEBPACK_IMPORTED_MODULE_1__["numbers"].DEBOUNCE_THROTTLE_RESIZE_TIME_MS);
+        }
+        this.isCurrentlyBeingResized_ = true;
+        if (this.resizeDebounceId_) {
+            clearTimeout(this.resizeDebounceId_);
+        }
+        this.resizeDebounceId_ = setTimeout(function () {
+            _this.handleTargetScroll();
+            _this.isCurrentlyBeingResized_ = false;
+            _this.resizeDebounceId_ = INITIAL_VALUE;
+        }, _constants__WEBPACK_IMPORTED_MODULE_1__["numbers"].DEBOUNCE_THROTTLE_RESIZE_TIME_MS);
+    };
+    /**
+     * Function to determine if the DOM needs to update.
+     */
+    MDCTopAppBarFoundation.prototype.checkForUpdate_ = function () {
+        var offscreenBoundaryTop = -this.topAppBarHeight_;
+        var hasAnyPixelsOffscreen = this.currentAppBarOffsetTop_ < 0;
+        var hasAnyPixelsOnscreen = this.currentAppBarOffsetTop_ > offscreenBoundaryTop;
+        var partiallyShowing = hasAnyPixelsOffscreen && hasAnyPixelsOnscreen;
+        // If it's partially showing, it can't be docked.
+        if (partiallyShowing) {
+            this.wasDocked_ = false;
+        }
+        else {
+            // Not previously docked and not partially showing, it's now docked.
+            if (!this.wasDocked_) {
+                this.wasDocked_ = true;
+                return true;
+            }
+            else if (this.isDockedShowing_ !== hasAnyPixelsOnscreen) {
+                this.isDockedShowing_ = hasAnyPixelsOnscreen;
+                return true;
+            }
+        }
+        return partiallyShowing;
+    };
+    /**
+     * Function to move the top app bar if needed.
+     */
+    MDCTopAppBarFoundation.prototype.moveTopAppBar_ = function () {
+        if (this.checkForUpdate_()) {
+            // Once the top app bar is fully hidden we use the max potential top app bar height as our offset
+            // so the top app bar doesn't show if the window resizes and the new height > the old height.
+            var offset = this.currentAppBarOffsetTop_;
+            if (Math.abs(offset) >= this.topAppBarHeight_) {
+                offset = -_constants__WEBPACK_IMPORTED_MODULE_1__["numbers"].MAX_TOP_APP_BAR_HEIGHT;
+            }
+            this.adapter_.setStyle('top', offset + 'px');
+        }
+    };
+    /**
+     * Throttled function that updates the top app bar scrolled values if the
+     * top app bar height changes.
+     */
+    MDCTopAppBarFoundation.prototype.throttledResizeHandler_ = function () {
+        var currentHeight = this.adapter_.getTopAppBarHeight();
+        if (this.topAppBarHeight_ !== currentHeight) {
+            this.wasDocked_ = false;
+            // Since the top app bar has a different height depending on the screen width, this
+            // will ensure that the top app bar remains in the correct location if
+            // completely hidden and a resize makes the top app bar a different height.
+            this.currentAppBarOffsetTop_ -= this.topAppBarHeight_ - currentHeight;
+            this.topAppBarHeight_ = currentHeight;
+        }
+        this.handleTargetScroll();
+    };
+    return MDCTopAppBarFoundation;
+}(_foundation__WEBPACK_IMPORTED_MODULE_2__["MDCTopAppBarBaseFoundation"]));
+
+// tslint:disable-next-line:no-default-export Needed for backward compatibility with MDC Web v0.44.0 and earlier.
+/* harmony default export */ __webpack_exports__["default"] = (MDCTopAppBarFoundation);
+//# sourceMappingURL=foundation.js.map
 
 /***/ }),
 
@@ -441,7 +3613,243 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__extends\", function() { return __extends; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__assign\", function() { return __assign; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__rest\", function() { return __rest; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__decorate\", function() { return __decorate; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__param\", function() { return __param; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__metadata\", function() { return __metadata; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__awaiter\", function() { return __awaiter; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__generator\", function() { return __generator; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__exportStar\", function() { return __exportStar; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__values\", function() { return __values; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__read\", function() { return __read; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__spread\", function() { return __spread; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__spreadArrays\", function() { return __spreadArrays; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__await\", function() { return __await; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__asyncGenerator\", function() { return __asyncGenerator; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__asyncDelegator\", function() { return __asyncDelegator; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__asyncValues\", function() { return __asyncValues; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__makeTemplateObject\", function() { return __makeTemplateObject; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__importStar\", function() { return __importStar; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__importDefault\", function() { return __importDefault; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__classPrivateFieldGet\", function() { return __classPrivateFieldGet; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__classPrivateFieldSet\", function() { return __classPrivateFieldSet; });\n/*! *****************************************************************************\r\nCopyright (c) Microsoft Corporation. All rights reserved.\r\nLicensed under the Apache License, Version 2.0 (the \"License\"); you may not use\r\nthis file except in compliance with the License. You may obtain a copy of the\r\nLicense at http://www.apache.org/licenses/LICENSE-2.0\r\n\r\nTHIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\r\nKIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED\r\nWARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,\r\nMERCHANTABLITY OR NON-INFRINGEMENT.\r\n\r\nSee the Apache Version 2.0 License for specific language governing permissions\r\nand limitations under the License.\r\n***************************************************************************** */\r\n/* global Reflect, Promise */\r\n\r\nvar extendStatics = function(d, b) {\r\n    extendStatics = Object.setPrototypeOf ||\r\n        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\r\n        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\r\n    return extendStatics(d, b);\r\n};\r\n\r\nfunction __extends(d, b) {\r\n    extendStatics(d, b);\r\n    function __() { this.constructor = d; }\r\n    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\r\n}\r\n\r\nvar __assign = function() {\r\n    __assign = Object.assign || function __assign(t) {\r\n        for (var s, i = 1, n = arguments.length; i < n; i++) {\r\n            s = arguments[i];\r\n            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];\r\n        }\r\n        return t;\r\n    }\r\n    return __assign.apply(this, arguments);\r\n}\r\n\r\nfunction __rest(s, e) {\r\n    var t = {};\r\n    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)\r\n        t[p] = s[p];\r\n    if (s != null && typeof Object.getOwnPropertySymbols === \"function\")\r\n        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {\r\n            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))\r\n                t[p[i]] = s[p[i]];\r\n        }\r\n    return t;\r\n}\r\n\r\nfunction __decorate(decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n}\r\n\r\nfunction __param(paramIndex, decorator) {\r\n    return function (target, key) { decorator(target, key, paramIndex); }\r\n}\r\n\r\nfunction __metadata(metadataKey, metadataValue) {\r\n    if (typeof Reflect === \"object\" && typeof Reflect.metadata === \"function\") return Reflect.metadata(metadataKey, metadataValue);\r\n}\r\n\r\nfunction __awaiter(thisArg, _arguments, P, generator) {\r\n    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }\r\n    return new (P || (P = Promise))(function (resolve, reject) {\r\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\r\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\r\n        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }\r\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\r\n    });\r\n}\r\n\r\nfunction __generator(thisArg, body) {\r\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\r\n    return g = { next: verb(0), \"throw\": verb(1), \"return\": verb(2) }, typeof Symbol === \"function\" && (g[Symbol.iterator] = function() { return this; }), g;\r\n    function verb(n) { return function (v) { return step([n, v]); }; }\r\n    function step(op) {\r\n        if (f) throw new TypeError(\"Generator is already executing.\");\r\n        while (_) try {\r\n            if (f = 1, y && (t = op[0] & 2 ? y[\"return\"] : op[0] ? y[\"throw\"] || ((t = y[\"return\"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\r\n            if (y = 0, t) op = [op[0] & 2, t.value];\r\n            switch (op[0]) {\r\n                case 0: case 1: t = op; break;\r\n                case 4: _.label++; return { value: op[1], done: false };\r\n                case 5: _.label++; y = op[1]; op = [0]; continue;\r\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\r\n                default:\r\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\r\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\r\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\r\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\r\n                    if (t[2]) _.ops.pop();\r\n                    _.trys.pop(); continue;\r\n            }\r\n            op = body.call(thisArg, _);\r\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\r\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\r\n    }\r\n}\r\n\r\nfunction __exportStar(m, exports) {\r\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\r\n}\r\n\r\nfunction __values(o) {\r\n    var s = typeof Symbol === \"function\" && Symbol.iterator, m = s && o[s], i = 0;\r\n    if (m) return m.call(o);\r\n    if (o && typeof o.length === \"number\") return {\r\n        next: function () {\r\n            if (o && i >= o.length) o = void 0;\r\n            return { value: o && o[i++], done: !o };\r\n        }\r\n    };\r\n    throw new TypeError(s ? \"Object is not iterable.\" : \"Symbol.iterator is not defined.\");\r\n}\r\n\r\nfunction __read(o, n) {\r\n    var m = typeof Symbol === \"function\" && o[Symbol.iterator];\r\n    if (!m) return o;\r\n    var i = m.call(o), r, ar = [], e;\r\n    try {\r\n        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);\r\n    }\r\n    catch (error) { e = { error: error }; }\r\n    finally {\r\n        try {\r\n            if (r && !r.done && (m = i[\"return\"])) m.call(i);\r\n        }\r\n        finally { if (e) throw e.error; }\r\n    }\r\n    return ar;\r\n}\r\n\r\nfunction __spread() {\r\n    for (var ar = [], i = 0; i < arguments.length; i++)\r\n        ar = ar.concat(__read(arguments[i]));\r\n    return ar;\r\n}\r\n\r\nfunction __spreadArrays() {\r\n    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;\r\n    for (var r = Array(s), k = 0, i = 0; i < il; i++)\r\n        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)\r\n            r[k] = a[j];\r\n    return r;\r\n};\r\n\r\nfunction __await(v) {\r\n    return this instanceof __await ? (this.v = v, this) : new __await(v);\r\n}\r\n\r\nfunction __asyncGenerator(thisArg, _arguments, generator) {\r\n    if (!Symbol.asyncIterator) throw new TypeError(\"Symbol.asyncIterator is not defined.\");\r\n    var g = generator.apply(thisArg, _arguments || []), i, q = [];\r\n    return i = {}, verb(\"next\"), verb(\"throw\"), verb(\"return\"), i[Symbol.asyncIterator] = function () { return this; }, i;\r\n    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }\r\n    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }\r\n    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }\r\n    function fulfill(value) { resume(\"next\", value); }\r\n    function reject(value) { resume(\"throw\", value); }\r\n    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }\r\n}\r\n\r\nfunction __asyncDelegator(o) {\r\n    var i, p;\r\n    return i = {}, verb(\"next\"), verb(\"throw\", function (e) { throw e; }), verb(\"return\"), i[Symbol.iterator] = function () { return this; }, i;\r\n    function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === \"return\" } : f ? f(v) : v; } : f; }\r\n}\r\n\r\nfunction __asyncValues(o) {\r\n    if (!Symbol.asyncIterator) throw new TypeError(\"Symbol.asyncIterator is not defined.\");\r\n    var m = o[Symbol.asyncIterator], i;\r\n    return m ? m.call(o) : (o = typeof __values === \"function\" ? __values(o) : o[Symbol.iterator](), i = {}, verb(\"next\"), verb(\"throw\"), verb(\"return\"), i[Symbol.asyncIterator] = function () { return this; }, i);\r\n    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }\r\n    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }\r\n}\r\n\r\nfunction __makeTemplateObject(cooked, raw) {\r\n    if (Object.defineProperty) { Object.defineProperty(cooked, \"raw\", { value: raw }); } else { cooked.raw = raw; }\r\n    return cooked;\r\n};\r\n\r\nfunction __importStar(mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result.default = mod;\r\n    return result;\r\n}\r\n\r\nfunction __importDefault(mod) {\r\n    return (mod && mod.__esModule) ? mod : { default: mod };\r\n}\r\n\r\nfunction __classPrivateFieldGet(receiver, privateMap) {\r\n    if (!privateMap.has(receiver)) {\r\n        throw new TypeError(\"attempted to get private field on non-instance\");\r\n    }\r\n    return privateMap.get(receiver);\r\n}\r\n\r\nfunction __classPrivateFieldSet(receiver, privateMap, value) {\r\n    if (!privateMap.has(receiver)) {\r\n        throw new TypeError(\"attempted to set private field on non-instance\");\r\n    }\r\n    privateMap.set(receiver, value);\r\n    return value;\r\n}\r\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvdHNsaWIvdHNsaWIuZXM2LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vbm9kZV9tb2R1bGVzL3RzbGliL3RzbGliLmVzNi5qcz85YWI0Il0sInNvdXJjZXNDb250ZW50IjpbIi8qISAqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKlxyXG5Db3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cclxuTGljZW5zZWQgdW5kZXIgdGhlIEFwYWNoZSBMaWNlbnNlLCBWZXJzaW9uIDIuMCAodGhlIFwiTGljZW5zZVwiKTsgeW91IG1heSBub3QgdXNlXHJcbnRoaXMgZmlsZSBleGNlcHQgaW4gY29tcGxpYW5jZSB3aXRoIHRoZSBMaWNlbnNlLiBZb3UgbWF5IG9idGFpbiBhIGNvcHkgb2YgdGhlXHJcbkxpY2Vuc2UgYXQgaHR0cDovL3d3dy5hcGFjaGUub3JnL2xpY2Vuc2VzL0xJQ0VOU0UtMi4wXHJcblxyXG5USElTIENPREUgSVMgUFJPVklERUQgT04gQU4gKkFTIElTKiBCQVNJUywgV0lUSE9VVCBXQVJSQU5USUVTIE9SIENPTkRJVElPTlMgT0YgQU5ZXHJcbktJTkQsIEVJVEhFUiBFWFBSRVNTIE9SIElNUExJRUQsIElOQ0xVRElORyBXSVRIT1VUIExJTUlUQVRJT04gQU5ZIElNUExJRURcclxuV0FSUkFOVElFUyBPUiBDT05ESVRJT05TIE9GIFRJVExFLCBGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRSxcclxuTUVSQ0hBTlRBQkxJVFkgT1IgTk9OLUlORlJJTkdFTUVOVC5cclxuXHJcblNlZSB0aGUgQXBhY2hlIFZlcnNpb24gMi4wIExpY2Vuc2UgZm9yIHNwZWNpZmljIGxhbmd1YWdlIGdvdmVybmluZyBwZXJtaXNzaW9uc1xyXG5hbmQgbGltaXRhdGlvbnMgdW5kZXIgdGhlIExpY2Vuc2UuXHJcbioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqICovXHJcbi8qIGdsb2JhbCBSZWZsZWN0LCBQcm9taXNlICovXHJcblxyXG52YXIgZXh0ZW5kU3RhdGljcyA9IGZ1bmN0aW9uKGQsIGIpIHtcclxuICAgIGV4dGVuZFN0YXRpY3MgPSBPYmplY3Quc2V0UHJvdG90eXBlT2YgfHxcclxuICAgICAgICAoeyBfX3Byb3RvX186IFtdIH0gaW5zdGFuY2VvZiBBcnJheSAmJiBmdW5jdGlvbiAoZCwgYikgeyBkLl9fcHJvdG9fXyA9IGI7IH0pIHx8XHJcbiAgICAgICAgZnVuY3Rpb24gKGQsIGIpIHsgZm9yICh2YXIgcCBpbiBiKSBpZiAoYi5oYXNPd25Qcm9wZXJ0eShwKSkgZFtwXSA9IGJbcF07IH07XHJcbiAgICByZXR1cm4gZXh0ZW5kU3RhdGljcyhkLCBiKTtcclxufTtcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBfX2V4dGVuZHMoZCwgYikge1xyXG4gICAgZXh0ZW5kU3RhdGljcyhkLCBiKTtcclxuICAgIGZ1bmN0aW9uIF9fKCkgeyB0aGlzLmNvbnN0cnVjdG9yID0gZDsgfVxyXG4gICAgZC5wcm90b3R5cGUgPSBiID09PSBudWxsID8gT2JqZWN0LmNyZWF0ZShiKSA6IChfXy5wcm90b3R5cGUgPSBiLnByb3RvdHlwZSwgbmV3IF9fKCkpO1xyXG59XHJcblxyXG5leHBvcnQgdmFyIF9fYXNzaWduID0gZnVuY3Rpb24oKSB7XHJcbiAgICBfX2Fzc2lnbiA9IE9iamVjdC5hc3NpZ24gfHwgZnVuY3Rpb24gX19hc3NpZ24odCkge1xyXG4gICAgICAgIGZvciAodmFyIHMsIGkgPSAxLCBuID0gYXJndW1lbnRzLmxlbmd0aDsgaSA8IG47IGkrKykge1xyXG4gICAgICAgICAgICBzID0gYXJndW1lbnRzW2ldO1xyXG4gICAgICAgICAgICBmb3IgKHZhciBwIGluIHMpIGlmIChPYmplY3QucHJvdG90eXBlLmhhc093blByb3BlcnR5LmNhbGwocywgcCkpIHRbcF0gPSBzW3BdO1xyXG4gICAgICAgIH1cclxuICAgICAgICByZXR1cm4gdDtcclxuICAgIH1cclxuICAgIHJldHVybiBfX2Fzc2lnbi5hcHBseSh0aGlzLCBhcmd1bWVudHMpO1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gX19yZXN0KHMsIGUpIHtcclxuICAgIHZhciB0ID0ge307XHJcbiAgICBmb3IgKHZhciBwIGluIHMpIGlmIChPYmplY3QucHJvdG90eXBlLmhhc093blByb3BlcnR5LmNhbGwocywgcCkgJiYgZS5pbmRleE9mKHApIDwgMClcclxuICAgICAgICB0W3BdID0gc1twXTtcclxuICAgIGlmIChzICE9IG51bGwgJiYgdHlwZW9mIE9iamVjdC5nZXRPd25Qcm9wZXJ0eVN5bWJvbHMgPT09IFwiZnVuY3Rpb25cIilcclxuICAgICAgICBmb3IgKHZhciBpID0gMCwgcCA9IE9iamVjdC5nZXRPd25Qcm9wZXJ0eVN5bWJvbHMocyk7IGkgPCBwLmxlbmd0aDsgaSsrKSB7XHJcbiAgICAgICAgICAgIGlmIChlLmluZGV4T2YocFtpXSkgPCAwICYmIE9iamVjdC5wcm90b3R5cGUucHJvcGVydHlJc0VudW1lcmFibGUuY2FsbChzLCBwW2ldKSlcclxuICAgICAgICAgICAgICAgIHRbcFtpXV0gPSBzW3BbaV1dO1xyXG4gICAgICAgIH1cclxuICAgIHJldHVybiB0O1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gX19kZWNvcmF0ZShkZWNvcmF0b3JzLCB0YXJnZXQsIGtleSwgZGVzYykge1xyXG4gICAgdmFyIGMgPSBhcmd1bWVudHMubGVuZ3RoLCByID0gYyA8IDMgPyB0YXJnZXQgOiBkZXNjID09PSBudWxsID8gZGVzYyA9IE9iamVjdC5nZXRPd25Qcm9wZXJ0eURlc2NyaXB0b3IodGFyZ2V0LCBrZXkpIDogZGVzYywgZDtcclxuICAgIGlmICh0eXBlb2YgUmVmbGVjdCA9PT0gXCJvYmplY3RcIiAmJiB0eXBlb2YgUmVmbGVjdC5kZWNvcmF0ZSA9PT0gXCJmdW5jdGlvblwiKSByID0gUmVmbGVjdC5kZWNvcmF0ZShkZWNvcmF0b3JzLCB0YXJnZXQsIGtleSwgZGVzYyk7XHJcbiAgICBlbHNlIGZvciAodmFyIGkgPSBkZWNvcmF0b3JzLmxlbmd0aCAtIDE7IGkgPj0gMDsgaS0tKSBpZiAoZCA9IGRlY29yYXRvcnNbaV0pIHIgPSAoYyA8IDMgPyBkKHIpIDogYyA+IDMgPyBkKHRhcmdldCwga2V5LCByKSA6IGQodGFyZ2V0LCBrZXkpKSB8fCByO1xyXG4gICAgcmV0dXJuIGMgPiAzICYmIHIgJiYgT2JqZWN0LmRlZmluZVByb3BlcnR5KHRhcmdldCwga2V5LCByKSwgcjtcclxufVxyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIF9fcGFyYW0ocGFyYW1JbmRleCwgZGVjb3JhdG9yKSB7XHJcbiAgICByZXR1cm4gZnVuY3Rpb24gKHRhcmdldCwga2V5KSB7IGRlY29yYXRvcih0YXJnZXQsIGtleSwgcGFyYW1JbmRleCk7IH1cclxufVxyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIF9fbWV0YWRhdGEobWV0YWRhdGFLZXksIG1ldGFkYXRhVmFsdWUpIHtcclxuICAgIGlmICh0eXBlb2YgUmVmbGVjdCA9PT0gXCJvYmplY3RcIiAmJiB0eXBlb2YgUmVmbGVjdC5tZXRhZGF0YSA9PT0gXCJmdW5jdGlvblwiKSByZXR1cm4gUmVmbGVjdC5tZXRhZGF0YShtZXRhZGF0YUtleSwgbWV0YWRhdGFWYWx1ZSk7XHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBfX2F3YWl0ZXIodGhpc0FyZywgX2FyZ3VtZW50cywgUCwgZ2VuZXJhdG9yKSB7XHJcbiAgICBmdW5jdGlvbiBhZG9wdCh2YWx1ZSkgeyByZXR1cm4gdmFsdWUgaW5zdGFuY2VvZiBQID8gdmFsdWUgOiBuZXcgUChmdW5jdGlvbiAocmVzb2x2ZSkgeyByZXNvbHZlKHZhbHVlKTsgfSk7IH1cclxuICAgIHJldHVybiBuZXcgKFAgfHwgKFAgPSBQcm9taXNlKSkoZnVuY3Rpb24gKHJlc29sdmUsIHJlamVjdCkge1xyXG4gICAgICAgIGZ1bmN0aW9uIGZ1bGZpbGxlZCh2YWx1ZSkgeyB0cnkgeyBzdGVwKGdlbmVyYXRvci5uZXh0KHZhbHVlKSk7IH0gY2F0Y2ggKGUpIHsgcmVqZWN0KGUpOyB9IH1cclxuICAgICAgICBmdW5jdGlvbiByZWplY3RlZCh2YWx1ZSkgeyB0cnkgeyBzdGVwKGdlbmVyYXRvcltcInRocm93XCJdKHZhbHVlKSk7IH0gY2F0Y2ggKGUpIHsgcmVqZWN0KGUpOyB9IH1cclxuICAgICAgICBmdW5jdGlvbiBzdGVwKHJlc3VsdCkgeyByZXN1bHQuZG9uZSA/IHJlc29sdmUocmVzdWx0LnZhbHVlKSA6IGFkb3B0KHJlc3VsdC52YWx1ZSkudGhlbihmdWxmaWxsZWQsIHJlamVjdGVkKTsgfVxyXG4gICAgICAgIHN0ZXAoKGdlbmVyYXRvciA9IGdlbmVyYXRvci5hcHBseSh0aGlzQXJnLCBfYXJndW1lbnRzIHx8IFtdKSkubmV4dCgpKTtcclxuICAgIH0pO1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gX19nZW5lcmF0b3IodGhpc0FyZywgYm9keSkge1xyXG4gICAgdmFyIF8gPSB7IGxhYmVsOiAwLCBzZW50OiBmdW5jdGlvbigpIHsgaWYgKHRbMF0gJiAxKSB0aHJvdyB0WzFdOyByZXR1cm4gdFsxXTsgfSwgdHJ5czogW10sIG9wczogW10gfSwgZiwgeSwgdCwgZztcclxuICAgIHJldHVybiBnID0geyBuZXh0OiB2ZXJiKDApLCBcInRocm93XCI6IHZlcmIoMSksIFwicmV0dXJuXCI6IHZlcmIoMikgfSwgdHlwZW9mIFN5bWJvbCA9PT0gXCJmdW5jdGlvblwiICYmIChnW1N5bWJvbC5pdGVyYXRvcl0gPSBmdW5jdGlvbigpIHsgcmV0dXJuIHRoaXM7IH0pLCBnO1xyXG4gICAgZnVuY3Rpb24gdmVyYihuKSB7IHJldHVybiBmdW5jdGlvbiAodikgeyByZXR1cm4gc3RlcChbbiwgdl0pOyB9OyB9XHJcbiAgICBmdW5jdGlvbiBzdGVwKG9wKSB7XHJcbiAgICAgICAgaWYgKGYpIHRocm93IG5ldyBUeXBlRXJyb3IoXCJHZW5lcmF0b3IgaXMgYWxyZWFkeSBleGVjdXRpbmcuXCIpO1xyXG4gICAgICAgIHdoaWxlIChfKSB0cnkge1xyXG4gICAgICAgICAgICBpZiAoZiA9IDEsIHkgJiYgKHQgPSBvcFswXSAmIDIgPyB5W1wicmV0dXJuXCJdIDogb3BbMF0gPyB5W1widGhyb3dcIl0gfHwgKCh0ID0geVtcInJldHVyblwiXSkgJiYgdC5jYWxsKHkpLCAwKSA6IHkubmV4dCkgJiYgISh0ID0gdC5jYWxsKHksIG9wWzFdKSkuZG9uZSkgcmV0dXJuIHQ7XHJcbiAgICAgICAgICAgIGlmICh5ID0gMCwgdCkgb3AgPSBbb3BbMF0gJiAyLCB0LnZhbHVlXTtcclxuICAgICAgICAgICAgc3dpdGNoIChvcFswXSkge1xyXG4gICAgICAgICAgICAgICAgY2FzZSAwOiBjYXNlIDE6IHQgPSBvcDsgYnJlYWs7XHJcbiAgICAgICAgICAgICAgICBjYXNlIDQ6IF8ubGFiZWwrKzsgcmV0dXJuIHsgdmFsdWU6IG9wWzFdLCBkb25lOiBmYWxzZSB9O1xyXG4gICAgICAgICAgICAgICAgY2FzZSA1OiBfLmxhYmVsKys7IHkgPSBvcFsxXTsgb3AgPSBbMF07IGNvbnRpbnVlO1xyXG4gICAgICAgICAgICAgICAgY2FzZSA3OiBvcCA9IF8ub3BzLnBvcCgpOyBfLnRyeXMucG9wKCk7IGNvbnRpbnVlO1xyXG4gICAgICAgICAgICAgICAgZGVmYXVsdDpcclxuICAgICAgICAgICAgICAgICAgICBpZiAoISh0ID0gXy50cnlzLCB0ID0gdC5sZW5ndGggPiAwICYmIHRbdC5sZW5ndGggLSAxXSkgJiYgKG9wWzBdID09PSA2IHx8IG9wWzBdID09PSAyKSkgeyBfID0gMDsgY29udGludWU7IH1cclxuICAgICAgICAgICAgICAgICAgICBpZiAob3BbMF0gPT09IDMgJiYgKCF0IHx8IChvcFsxXSA+IHRbMF0gJiYgb3BbMV0gPCB0WzNdKSkpIHsgXy5sYWJlbCA9IG9wWzFdOyBicmVhazsgfVxyXG4gICAgICAgICAgICAgICAgICAgIGlmIChvcFswXSA9PT0gNiAmJiBfLmxhYmVsIDwgdFsxXSkgeyBfLmxhYmVsID0gdFsxXTsgdCA9IG9wOyBicmVhazsgfVxyXG4gICAgICAgICAgICAgICAgICAgIGlmICh0ICYmIF8ubGFiZWwgPCB0WzJdKSB7IF8ubGFiZWwgPSB0WzJdOyBfLm9wcy5wdXNoKG9wKTsgYnJlYWs7IH1cclxuICAgICAgICAgICAgICAgICAgICBpZiAodFsyXSkgXy5vcHMucG9wKCk7XHJcbiAgICAgICAgICAgICAgICAgICAgXy50cnlzLnBvcCgpOyBjb250aW51ZTtcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICBvcCA9IGJvZHkuY2FsbCh0aGlzQXJnLCBfKTtcclxuICAgICAgICB9IGNhdGNoIChlKSB7IG9wID0gWzYsIGVdOyB5ID0gMDsgfSBmaW5hbGx5IHsgZiA9IHQgPSAwOyB9XHJcbiAgICAgICAgaWYgKG9wWzBdICYgNSkgdGhyb3cgb3BbMV07IHJldHVybiB7IHZhbHVlOiBvcFswXSA/IG9wWzFdIDogdm9pZCAwLCBkb25lOiB0cnVlIH07XHJcbiAgICB9XHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBfX2V4cG9ydFN0YXIobSwgZXhwb3J0cykge1xyXG4gICAgZm9yICh2YXIgcCBpbiBtKSBpZiAoIWV4cG9ydHMuaGFzT3duUHJvcGVydHkocCkpIGV4cG9ydHNbcF0gPSBtW3BdO1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gX192YWx1ZXMobykge1xyXG4gICAgdmFyIHMgPSB0eXBlb2YgU3ltYm9sID09PSBcImZ1bmN0aW9uXCIgJiYgU3ltYm9sLml0ZXJhdG9yLCBtID0gcyAmJiBvW3NdLCBpID0gMDtcclxuICAgIGlmIChtKSByZXR1cm4gbS5jYWxsKG8pO1xyXG4gICAgaWYgKG8gJiYgdHlwZW9mIG8ubGVuZ3RoID09PSBcIm51bWJlclwiKSByZXR1cm4ge1xyXG4gICAgICAgIG5leHQ6IGZ1bmN0aW9uICgpIHtcclxuICAgICAgICAgICAgaWYgKG8gJiYgaSA+PSBvLmxlbmd0aCkgbyA9IHZvaWQgMDtcclxuICAgICAgICAgICAgcmV0dXJuIHsgdmFsdWU6IG8gJiYgb1tpKytdLCBkb25lOiAhbyB9O1xyXG4gICAgICAgIH1cclxuICAgIH07XHJcbiAgICB0aHJvdyBuZXcgVHlwZUVycm9yKHMgPyBcIk9iamVjdCBpcyBub3QgaXRlcmFibGUuXCIgOiBcIlN5bWJvbC5pdGVyYXRvciBpcyBub3QgZGVmaW5lZC5cIik7XHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBfX3JlYWQobywgbikge1xyXG4gICAgdmFyIG0gPSB0eXBlb2YgU3ltYm9sID09PSBcImZ1bmN0aW9uXCIgJiYgb1tTeW1ib2wuaXRlcmF0b3JdO1xyXG4gICAgaWYgKCFtKSByZXR1cm4gbztcclxuICAgIHZhciBpID0gbS5jYWxsKG8pLCByLCBhciA9IFtdLCBlO1xyXG4gICAgdHJ5IHtcclxuICAgICAgICB3aGlsZSAoKG4gPT09IHZvaWQgMCB8fCBuLS0gPiAwKSAmJiAhKHIgPSBpLm5leHQoKSkuZG9uZSkgYXIucHVzaChyLnZhbHVlKTtcclxuICAgIH1cclxuICAgIGNhdGNoIChlcnJvcikgeyBlID0geyBlcnJvcjogZXJyb3IgfTsgfVxyXG4gICAgZmluYWxseSB7XHJcbiAgICAgICAgdHJ5IHtcclxuICAgICAgICAgICAgaWYgKHIgJiYgIXIuZG9uZSAmJiAobSA9IGlbXCJyZXR1cm5cIl0pKSBtLmNhbGwoaSk7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGZpbmFsbHkgeyBpZiAoZSkgdGhyb3cgZS5lcnJvcjsgfVxyXG4gICAgfVxyXG4gICAgcmV0dXJuIGFyO1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gX19zcHJlYWQoKSB7XHJcbiAgICBmb3IgKHZhciBhciA9IFtdLCBpID0gMDsgaSA8IGFyZ3VtZW50cy5sZW5ndGg7IGkrKylcclxuICAgICAgICBhciA9IGFyLmNvbmNhdChfX3JlYWQoYXJndW1lbnRzW2ldKSk7XHJcbiAgICByZXR1cm4gYXI7XHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBfX3NwcmVhZEFycmF5cygpIHtcclxuICAgIGZvciAodmFyIHMgPSAwLCBpID0gMCwgaWwgPSBhcmd1bWVudHMubGVuZ3RoOyBpIDwgaWw7IGkrKykgcyArPSBhcmd1bWVudHNbaV0ubGVuZ3RoO1xyXG4gICAgZm9yICh2YXIgciA9IEFycmF5KHMpLCBrID0gMCwgaSA9IDA7IGkgPCBpbDsgaSsrKVxyXG4gICAgICAgIGZvciAodmFyIGEgPSBhcmd1bWVudHNbaV0sIGogPSAwLCBqbCA9IGEubGVuZ3RoOyBqIDwgamw7IGorKywgaysrKVxyXG4gICAgICAgICAgICByW2tdID0gYVtqXTtcclxuICAgIHJldHVybiByO1xyXG59O1xyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIF9fYXdhaXQodikge1xyXG4gICAgcmV0dXJuIHRoaXMgaW5zdGFuY2VvZiBfX2F3YWl0ID8gKHRoaXMudiA9IHYsIHRoaXMpIDogbmV3IF9fYXdhaXQodik7XHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBfX2FzeW5jR2VuZXJhdG9yKHRoaXNBcmcsIF9hcmd1bWVudHMsIGdlbmVyYXRvcikge1xyXG4gICAgaWYgKCFTeW1ib2wuYXN5bmNJdGVyYXRvcikgdGhyb3cgbmV3IFR5cGVFcnJvcihcIlN5bWJvbC5hc3luY0l0ZXJhdG9yIGlzIG5vdCBkZWZpbmVkLlwiKTtcclxuICAgIHZhciBnID0gZ2VuZXJhdG9yLmFwcGx5KHRoaXNBcmcsIF9hcmd1bWVudHMgfHwgW10pLCBpLCBxID0gW107XHJcbiAgICByZXR1cm4gaSA9IHt9LCB2ZXJiKFwibmV4dFwiKSwgdmVyYihcInRocm93XCIpLCB2ZXJiKFwicmV0dXJuXCIpLCBpW1N5bWJvbC5hc3luY0l0ZXJhdG9yXSA9IGZ1bmN0aW9uICgpIHsgcmV0dXJuIHRoaXM7IH0sIGk7XHJcbiAgICBmdW5jdGlvbiB2ZXJiKG4pIHsgaWYgKGdbbl0pIGlbbl0gPSBmdW5jdGlvbiAodikgeyByZXR1cm4gbmV3IFByb21pc2UoZnVuY3Rpb24gKGEsIGIpIHsgcS5wdXNoKFtuLCB2LCBhLCBiXSkgPiAxIHx8IHJlc3VtZShuLCB2KTsgfSk7IH07IH1cclxuICAgIGZ1bmN0aW9uIHJlc3VtZShuLCB2KSB7IHRyeSB7IHN0ZXAoZ1tuXSh2KSk7IH0gY2F0Y2ggKGUpIHsgc2V0dGxlKHFbMF1bM10sIGUpOyB9IH1cclxuICAgIGZ1bmN0aW9uIHN0ZXAocikgeyByLnZhbHVlIGluc3RhbmNlb2YgX19hd2FpdCA/IFByb21pc2UucmVzb2x2ZShyLnZhbHVlLnYpLnRoZW4oZnVsZmlsbCwgcmVqZWN0KSA6IHNldHRsZShxWzBdWzJdLCByKTsgfVxyXG4gICAgZnVuY3Rpb24gZnVsZmlsbCh2YWx1ZSkgeyByZXN1bWUoXCJuZXh0XCIsIHZhbHVlKTsgfVxyXG4gICAgZnVuY3Rpb24gcmVqZWN0KHZhbHVlKSB7IHJlc3VtZShcInRocm93XCIsIHZhbHVlKTsgfVxyXG4gICAgZnVuY3Rpb24gc2V0dGxlKGYsIHYpIHsgaWYgKGYodiksIHEuc2hpZnQoKSwgcS5sZW5ndGgpIHJlc3VtZShxWzBdWzBdLCBxWzBdWzFdKTsgfVxyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gX19hc3luY0RlbGVnYXRvcihvKSB7XHJcbiAgICB2YXIgaSwgcDtcclxuICAgIHJldHVybiBpID0ge30sIHZlcmIoXCJuZXh0XCIpLCB2ZXJiKFwidGhyb3dcIiwgZnVuY3Rpb24gKGUpIHsgdGhyb3cgZTsgfSksIHZlcmIoXCJyZXR1cm5cIiksIGlbU3ltYm9sLml0ZXJhdG9yXSA9IGZ1bmN0aW9uICgpIHsgcmV0dXJuIHRoaXM7IH0sIGk7XHJcbiAgICBmdW5jdGlvbiB2ZXJiKG4sIGYpIHsgaVtuXSA9IG9bbl0gPyBmdW5jdGlvbiAodikgeyByZXR1cm4gKHAgPSAhcCkgPyB7IHZhbHVlOiBfX2F3YWl0KG9bbl0odikpLCBkb25lOiBuID09PSBcInJldHVyblwiIH0gOiBmID8gZih2KSA6IHY7IH0gOiBmOyB9XHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBfX2FzeW5jVmFsdWVzKG8pIHtcclxuICAgIGlmICghU3ltYm9sLmFzeW5jSXRlcmF0b3IpIHRocm93IG5ldyBUeXBlRXJyb3IoXCJTeW1ib2wuYXN5bmNJdGVyYXRvciBpcyBub3QgZGVmaW5lZC5cIik7XHJcbiAgICB2YXIgbSA9IG9bU3ltYm9sLmFzeW5jSXRlcmF0b3JdLCBpO1xyXG4gICAgcmV0dXJuIG0gPyBtLmNhbGwobykgOiAobyA9IHR5cGVvZiBfX3ZhbHVlcyA9PT0gXCJmdW5jdGlvblwiID8gX192YWx1ZXMobykgOiBvW1N5bWJvbC5pdGVyYXRvcl0oKSwgaSA9IHt9LCB2ZXJiKFwibmV4dFwiKSwgdmVyYihcInRocm93XCIpLCB2ZXJiKFwicmV0dXJuXCIpLCBpW1N5bWJvbC5hc3luY0l0ZXJhdG9yXSA9IGZ1bmN0aW9uICgpIHsgcmV0dXJuIHRoaXM7IH0sIGkpO1xyXG4gICAgZnVuY3Rpb24gdmVyYihuKSB7IGlbbl0gPSBvW25dICYmIGZ1bmN0aW9uICh2KSB7IHJldHVybiBuZXcgUHJvbWlzZShmdW5jdGlvbiAocmVzb2x2ZSwgcmVqZWN0KSB7IHYgPSBvW25dKHYpLCBzZXR0bGUocmVzb2x2ZSwgcmVqZWN0LCB2LmRvbmUsIHYudmFsdWUpOyB9KTsgfTsgfVxyXG4gICAgZnVuY3Rpb24gc2V0dGxlKHJlc29sdmUsIHJlamVjdCwgZCwgdikgeyBQcm9taXNlLnJlc29sdmUodikudGhlbihmdW5jdGlvbih2KSB7IHJlc29sdmUoeyB2YWx1ZTogdiwgZG9uZTogZCB9KTsgfSwgcmVqZWN0KTsgfVxyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gX19tYWtlVGVtcGxhdGVPYmplY3QoY29va2VkLCByYXcpIHtcclxuICAgIGlmIChPYmplY3QuZGVmaW5lUHJvcGVydHkpIHsgT2JqZWN0LmRlZmluZVByb3BlcnR5KGNvb2tlZCwgXCJyYXdcIiwgeyB2YWx1ZTogcmF3IH0pOyB9IGVsc2UgeyBjb29rZWQucmF3ID0gcmF3OyB9XHJcbiAgICByZXR1cm4gY29va2VkO1xyXG59O1xyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIF9faW1wb3J0U3Rhcihtb2QpIHtcclxuICAgIGlmIChtb2QgJiYgbW9kLl9fZXNNb2R1bGUpIHJldHVybiBtb2Q7XHJcbiAgICB2YXIgcmVzdWx0ID0ge307XHJcbiAgICBpZiAobW9kICE9IG51bGwpIGZvciAodmFyIGsgaW4gbW9kKSBpZiAoT2JqZWN0Lmhhc093blByb3BlcnR5LmNhbGwobW9kLCBrKSkgcmVzdWx0W2tdID0gbW9kW2tdO1xyXG4gICAgcmVzdWx0LmRlZmF1bHQgPSBtb2Q7XHJcbiAgICByZXR1cm4gcmVzdWx0O1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gX19pbXBvcnREZWZhdWx0KG1vZCkge1xyXG4gICAgcmV0dXJuIChtb2QgJiYgbW9kLl9fZXNNb2R1bGUpID8gbW9kIDogeyBkZWZhdWx0OiBtb2QgfTtcclxufVxyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIF9fY2xhc3NQcml2YXRlRmllbGRHZXQocmVjZWl2ZXIsIHByaXZhdGVNYXApIHtcclxuICAgIGlmICghcHJpdmF0ZU1hcC5oYXMocmVjZWl2ZXIpKSB7XHJcbiAgICAgICAgdGhyb3cgbmV3IFR5cGVFcnJvcihcImF0dGVtcHRlZCB0byBnZXQgcHJpdmF0ZSBmaWVsZCBvbiBub24taW5zdGFuY2VcIik7XHJcbiAgICB9XHJcbiAgICByZXR1cm4gcHJpdmF0ZU1hcC5nZXQocmVjZWl2ZXIpO1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gX19jbGFzc1ByaXZhdGVGaWVsZFNldChyZWNlaXZlciwgcHJpdmF0ZU1hcCwgdmFsdWUpIHtcclxuICAgIGlmICghcHJpdmF0ZU1hcC5oYXMocmVjZWl2ZXIpKSB7XHJcbiAgICAgICAgdGhyb3cgbmV3IFR5cGVFcnJvcihcImF0dGVtcHRlZCB0byBzZXQgcHJpdmF0ZSBmaWVsZCBvbiBub24taW5zdGFuY2VcIik7XHJcbiAgICB9XHJcbiAgICBwcml2YXRlTWFwLnNldChyZWNlaXZlciwgdmFsdWUpO1xyXG4gICAgcmV0dXJuIHZhbHVlO1xyXG59XHJcbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTsiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./node_modules/tslib/tslib.es6.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__extends", function() { return __extends; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__assign", function() { return __assign; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__rest", function() { return __rest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__decorate", function() { return __decorate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__param", function() { return __param; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__metadata", function() { return __metadata; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__awaiter", function() { return __awaiter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__generator", function() { return __generator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__exportStar", function() { return __exportStar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__values", function() { return __values; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__read", function() { return __read; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spread", function() { return __spread; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spreadArrays", function() { return __spreadArrays; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__await", function() { return __await; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncGenerator", function() { return __asyncGenerator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncDelegator", function() { return __asyncDelegator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncValues", function() { return __asyncValues; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function() { return __makeTemplateObject; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importStar", function() { return __importStar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importDefault", function() { return __importDefault; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function() { return __classPrivateFieldGet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function() { return __classPrivateFieldSet; });
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    }
+    return __assign.apply(this, arguments);
+}
+
+function __rest(s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+}
+
+function __decorate(decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+}
+
+function __param(paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+}
+
+function __metadata(metadataKey, metadataValue) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+}
+
+function __awaiter(thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+}
+
+function __generator(thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+}
+
+function __exportStar(m, exports) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+
+function __values(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+}
+
+function __read(o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+}
+
+function __spread() {
+    for (var ar = [], i = 0; i < arguments.length; i++)
+        ar = ar.concat(__read(arguments[i]));
+    return ar;
+}
+
+function __spreadArrays() {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
+
+function __await(v) {
+    return this instanceof __await ? (this.v = v, this) : new __await(v);
+}
+
+function __asyncGenerator(thisArg, _arguments, generator) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var g = generator.apply(thisArg, _arguments || []), i, q = [];
+    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
+    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
+    function fulfill(value) { resume("next", value); }
+    function reject(value) { resume("throw", value); }
+    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+}
+
+function __asyncDelegator(o) {
+    var i, p;
+    return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
+    function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
+}
+
+function __asyncValues(o) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var m = o[Symbol.asyncIterator], i;
+    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
+    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
+}
+
+function __makeTemplateObject(cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+
+function __importStar(mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result.default = mod;
+    return result;
+}
+
+function __importDefault(mod) {
+    return (mod && mod.__esModule) ? mod : { default: mod };
+}
+
+function __classPrivateFieldGet(receiver, privateMap) {
+    if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to get private field on non-instance");
+    }
+    return privateMap.get(receiver);
+}
+
+function __classPrivateFieldSet(receiver, privateMap, value) {
+    if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to set private field on non-instance");
+    }
+    privateMap.set(receiver, value);
+    return value;
+}
+
 
 /***/ }),
 
@@ -459,3 +3867,4 @@ module.exports = __webpack_require__(/*! ./assets/css/src/front-end.css */"./ass
 /***/ })
 
 /******/ });
+//# sourceMappingURL=front-end.js.map

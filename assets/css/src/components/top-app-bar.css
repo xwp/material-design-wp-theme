@@ -25,6 +25,10 @@
 
 		& .site-title {
 			font-size: 0.875rem;
+
+			@media (--medium-viewport) {
+				font-size: 2rem;
+			}
 		}
 	}
 }
