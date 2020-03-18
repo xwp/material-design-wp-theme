@@ -1,5 +1,5 @@
 .search {
-	&__button:not(:disabled) {
+	& .search__button:not(:disabled) {
 		color: var( --mdc-theme-on-primary );
 	}
 }

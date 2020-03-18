@@ -1,21 +1,21 @@
 .top-app-bar {
-	.site-title a {
+	& .site-title a {
 		text-decoration: none;
 	}
 
-	.-with-drawer &__menu .menu {
+	&.-with-drawer .top-app-bar__menu .menu {
 		display: none;
 	}
 	
-	&__menu-trigger {
+	& .top-app-bar__menu-trigger {
 		display: none;
 
-		.-with-drawer & {
+		@nest .-with-drawer & {
 			display: block;
 		}
 	}
 
-	&__button {
+	& .top-app-bar__button {
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
