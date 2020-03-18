@@ -150,7 +150,6 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-require get_template_directory() . '/inc/customizer/class-image-radio-control.php';
 
 /**
  * Custom menu walker

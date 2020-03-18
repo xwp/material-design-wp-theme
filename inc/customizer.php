@@ -18,6 +18,8 @@ function setup() {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function material_theme_wp_customize_register( $wp_customize ) {
+	require get_template_directory() . '/inc/customizer/class-image-radio-control.php';
+
 	add_header_sections( $wp_customize );
 
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
@@ -83,4 +85,29 @@ function add_header_sections( $wp_customize ) {
 			'type' => 'checkbox',
 		]
 	);
+
+	$wp_customize->add_setting( 'material_header_layout',
+		[
+			'transport' => 'postMessage'
+		]
+	);
+
+	$wp_customize->add_control(	new Image_Radio_Control(
+		$wp_customize,
+		'material_header_layout',
+		[
+			'section'  => 'material_header_section',
+			'priority' => 10,
+			'choices'  => [
+				'drawer'    => [
+					'label' => esc_html__( 'Menu Drawer', 'material-theme-wp' ),
+					'url'   => get_template_directory_uri() . '/assets/svg/drawer.svg',
+				],
+				'menu'       => [
+					'label' => __( 'No Menu Drawer', 'material-theme-wp' ),
+					'url'   => get_template_directory_uri() . '/assets/svg/menu.svg',
+				],
+			],
+		]
+	) );
 }
