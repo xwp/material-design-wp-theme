@@ -15,9 +15,7 @@
 			<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"><?php esc_html_e( 'menu', 'material-theme-wp' ); ?></button>
 			<?php if ( has_custom_logo() ) : ?>
 				<div class="logo">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<?php the_custom_logo(); ?>
-					</a>
+					<?php the_custom_logo(); ?>
 				</div>
 			<?php endif; ?>
 			<span class="mdc-top-app-bar__title">
