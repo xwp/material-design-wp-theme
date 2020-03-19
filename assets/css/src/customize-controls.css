@@ -11,4 +11,9 @@
 	& .customize-control-image-radio-wrap .label {
 		display: none;
 	}
+
+	& .customize-control-image-radio-wrap input:checked + label img {
+		border: 2px solid #0685BB;
+		border-radius: 0.1875rem;
+	}
 }

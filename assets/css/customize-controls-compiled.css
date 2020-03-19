@@ -11,3 +11,8 @@
 		display: none;
 	}
 
+#customize-control-material_header_layout .customize-control-image-radio-wrap input:checked + label img {
+		border: 2px solid #0685BB;
+		border-radius: 0.1875rem;
+	}
+
