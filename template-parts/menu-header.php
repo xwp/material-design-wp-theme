@@ -50,7 +50,7 @@ $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -wi
 					<?php
 				else :
 					?>
-					<p class="site-title mdc-typography mdc-typography--headline1"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<div class="site-title mdc-typography mdc-typography--headline1"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
 					<?php
 				endif;
 				?>

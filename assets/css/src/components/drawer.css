@@ -1,4 +1,6 @@
 .material-drawer {
+	background-color: var( --mdc-theme-primary );
+
 	& .mdc-list-item--activated {
 		color: var( --mdc-theme-on-primary );
 	}

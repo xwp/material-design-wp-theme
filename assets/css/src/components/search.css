@@ -1,6 +1,6 @@
 .search-form {
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
 
 	& .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
 		color: var( --mdc-theme-on-primary );

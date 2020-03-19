@@ -4434,14 +4434,17 @@ a.mdc-list-item {
 		display: block;
 	}
 .search-form {
-	padding-right: 0.5rem;
-	padding-left: 0.5rem;
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
 }
 .search-form .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
 		color: var( --mdc-theme-on-primary );
 	}
 .search__button:not(:disabled) {
 	color: var( --mdc-theme-on-primary );
+}
+.material-drawer {
+	background-color: var( --mdc-theme-primary );
 }
 .material-drawer .mdc-list-item--activated {
 		color: var( --mdc-theme-on-primary );
