@@ -7,9 +7,19 @@
  * @package Material-theme-wp
  */
 
+$top_app_bar_background     = get_theme_mod( 'material_background_color' );
+$top_app_bar_layout_setting = get_theme_mod( 'material_header_layout', 'menu' );
+
+$top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawer' : '';
+
 ?>
 
-<header class="mdc-top-app-bar top-app-bar -with-drawer">
+<header
+	class="mdc-top-app-bar top-app-bar<?php echo esc_attr( $top_app_bar_layout ); ?>"
+	<?php if ( ! empty( $top_app_bar_background ) ) : ?>
+		style="--mdc-theme-primary: <?php echo esc_attr( $top_app_bar_background ); ?>;"
+	<?php endif; ?>
+>
 	<div class="mdc-top-app-bar__row">
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
 			<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger"><?php esc_html_e( 'menu', 'material-theme-wp' ); ?></button>
