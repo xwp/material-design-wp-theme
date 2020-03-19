@@ -8,16 +8,26 @@
  */
 
 $top_app_bar_background     = get_theme_mod( 'material_background_color' );
+$top_app_bar_text           = get_theme_mod( 'material_text_color' );
 $top_app_bar_layout_setting = get_theme_mod( 'material_header_layout', 'menu' );
 
-$top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawer' : '';
+$has_changed_color          = ! empty( $top_app_bar_background ) || ! empty( $top_app_bar_text );
 
+$top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawer' : '';
 ?>
 
 <header
 	class="mdc-top-app-bar top-app-bar<?php echo esc_attr( $top_app_bar_layout ); ?>"
-	<?php if ( ! empty( $top_app_bar_background ) ) : ?>
-		style="--mdc-theme-primary: <?php echo esc_attr( $top_app_bar_background ); ?>;"
+	<?php if ( ! empty( $has_changed_color ) ) : ?>
+		style="
+			<?php if ( ! empty( $top_app_bar_background ) ) : ?>
+				--mdc-theme-primary: <?php echo esc_attr( $top_app_bar_background ); ?>;
+			<?php endif; ?>
+
+			<?php if ( ! empty( $top_app_bar_text ) ) : ?>
+				--mdc-theme-on-primary: <?php echo esc_attr( $top_app_bar_text ); ?>;
+			<?php endif; ?>
+		"
 	<?php endif; ?>
 >
 	<div class="mdc-top-app-bar__row">
