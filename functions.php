@@ -127,7 +127,7 @@ function material_theme_wp_scripts() {
 	if ( ! wp_style_is( 'material-icons-css', 'enqueued' ) ) {
 		wp_enqueue_style(
 			'material-icons-css',
-			esc_url( '//fonts.googleapis.com/icon?family=Material+Icons' ),
+			esc_url( '//fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined' ),
 			[]
 		);
 	}
