@@ -191,7 +191,7 @@ function maybe_use_color_palette_control( $wp_customize ) {
 				prepend_slug( $control['id'] ),
 				[
 					'label'                => $control['label'],
-					'section'              => prepend_slug( '_header_section' ),
+					'section'              => prepend_slug( 'header_section' ),
 					'related_text_setting' => ! empty( $control['related_text_setting'] ) ? $control['related_text_setting'] : false,
 					'related_setting'      => ! empty( $control['related_setting'] ) ? $control['related_setting'] : false,
 					'css_var'              => $control['css_var'],
@@ -202,14 +202,13 @@ function maybe_use_color_palette_control( $wp_customize ) {
 		foreach ( get_color_controls() as $control ) {
 			$controls[ $control['id'] ] = [
 				'label'                => $control['label'],
-				'section'              => prepend_slug( '_header_section' ),
+				'section'              => prepend_slug( 'header_section' ),
+				'type'                 => 'color',
 			];
 		}
 	}
 
 	add_controls( $wp_customize, $controls );
-
-	
 }
 
 function get_color_controls() {
@@ -217,13 +216,13 @@ function get_color_controls() {
 		[
 			'id'                   => 'background_color',
 			'label'                => esc_html__( 'Bakground Color', 'material-theme-wp' ),
-			'related_text_setting' => prepend_slug( 'header_background_color' ),
+			'related_text_setting' => prepend_slug( 'background_color' ),
 			'css_var'              => '--mdc-theme-header-primary',
 		],
 		[
 			'id'                   => 'text_color',
 			'label'                => esc_html__( 'Text Color', 'material-theme-wp' ),
-			'related_text_setting' => prepend_slug( 'header_text_color' ),
+			'related_text_setting' => prepend_slug( 'text_color' ),
 			'css_var'              => '--mdc-theme-header-secondary',
 		],
 	];
@@ -255,8 +254,6 @@ function add_settings( $wp_customize, $settings = [] ) {
 		 * @param string  $id      ID of the setting.
 		 */
 		$setting = apply_filters( $slug . '_customizer_setting_args', $setting, $id );
-
-		var_dump( $setting );
 
 		if ( is_array( $setting ) ) {
 			$wp_customize->add_setting(
