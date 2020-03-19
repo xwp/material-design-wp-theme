@@ -44,7 +44,9 @@ function material_theme_wp_customize_register( $wp_customize ) {
 		$wp_customize->selective_refresh->add_partial( 'header_layout', array(
 			'selector' => '.top-app-bar',
 			'settings' => [
-				'material_header_layout'
+				'material_header_layout',
+				'material_background_color',
+				'material_text_color',
 			],
 			'render_callback' => __NAMESPACE__ . '\render_header_layout',
 		) );
