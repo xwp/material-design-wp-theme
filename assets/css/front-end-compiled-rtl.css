@@ -4801,4 +4801,9 @@ a.mdc-list-item {
 		color: #6200ee;
 		color: var(--mdc-theme-primary, #6200ee);
 	}
+.post-card .post-card__primary,
+	.post-card .post-card__secondary {
+		padding-right: 1rem;
+		padding-left: 1rem;
+	}
 

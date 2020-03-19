@@ -11,4 +11,10 @@
 	.mdc-card__action-buttons .mdc-button__icon {
 		color: var(--mdc-theme-primary, #6200ee);
 	}
+
+	.post-card__primary,
+	.post-card__secondary {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 }
