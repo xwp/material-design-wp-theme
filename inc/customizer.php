@@ -7,6 +7,9 @@
 
 namespace MaterialTheme\Customizer;
 
+/**
+ * Attach hooks
+ */
 function setup() {
 	add_action( 'customize_register', __NAMESPACE__ . '\material_theme_wp_customize_register' );
 	add_action( 'customize_preview_init', __NAMESPACE__ . '\material_theme_wp_customize_preview_js' );
@@ -65,6 +68,11 @@ function material_theme_wp_customize_preview_js() {
 	wp_enqueue_script( 'material-theme-wp-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 
+/**
+ * Enqueue control scripts
+ * 
+ * @return void
+ */
 function scripts() {
 	wp_enqueue_style(
 		'material-theme-customizer-styles',
@@ -73,6 +81,11 @@ function scripts() {
 	);
 }
 
+/**
+ * Register controls
+ * 
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ */
 function add_header_sections( $wp_customize ) {
 	$wp_customize->add_section( 'material_header_section',
 		[
@@ -123,6 +136,11 @@ function get_image_radio_args() {
 	];
 }
 
+/**
+ * Choose which image radio control to use
+ * 
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ */
 function maybe_us_image_radio_control( $wp_customize ) {
 	$args = get_image_radio_args();
 
