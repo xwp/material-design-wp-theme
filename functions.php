@@ -124,6 +124,14 @@ function material_theme_wp_scripts() {
 
 	wp_enqueue_style( 'material-theme-style', get_template_directory_uri() . '/assets/css/front-end-compiled.css', array( 'material-theme-wp-style' ), '20151215' );
 
+	if ( ! wp_style_is( 'material-icons-css', 'enqueued' ) ) {
+		wp_enqueue_style(
+			'material-icons-css',
+			esc_url( '//fonts.googleapis.com/icon?family=Material+Icons' ),
+			[]
+		);
+	}
+
 	wp_enqueue_script( 'material-theme-wp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'material-theme-js', get_template_directory_uri() . '/assets/js/front-end.js', array(), '20151215', true );
