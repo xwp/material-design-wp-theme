@@ -4790,4 +4790,15 @@ a.mdc-list-item {
 .material-drawer .mdc-list-item--activated {
 		color: var( --mdc-theme-on-primary );
 	}
+.post-card .post-card__title a {
+		text-decoration: none;
+	}
+.post-card .mdc-card__action--button {
+		color: #404040;
+		text-transform: none;
+	}
+.post-card .mdc-card__action-buttons .mdc-button__icon {
+		color: #6200ee;
+		color: var(--mdc-theme-primary, #6200ee);
+	}
 

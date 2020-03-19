@@ -1,0 +1,14 @@
+.post-card {
+	& .post-card__title a {
+		text-decoration: none;
+	}
+
+	.mdc-card__action--button {
+		color: #404040;
+		text-transform: none;
+	}
+
+	.mdc-card__action-buttons .mdc-button__icon {
+		color: var(--mdc-theme-primary, #6200ee);
+	}
+}
