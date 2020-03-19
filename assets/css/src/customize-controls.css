@@ -1,3 +1,14 @@
 /*
- * Put Customize Controls CSS here.
+ * Customizer custom controls
  */
+
+#customize-control-material_header_layout {
+	& .customize-control-image-radio-wrap {
+		flex-direction: column;
+	}
+
+	& .customize-control-image-radio-wrap input[type="radio"],
+	& .customize-control-image-radio-wrap .label {
+		display: none;
+	}
+}

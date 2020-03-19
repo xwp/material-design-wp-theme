@@ -10,6 +10,8 @@ namespace MaterialTheme\Customizer;
 function setup() {
 	add_action( 'customize_register', __NAMESPACE__ . '\material_theme_wp_customize_register' );
 	add_action( 'customize_preview_init', __NAMESPACE__ . '\material_theme_wp_customize_preview_js' );
+
+	add_action( 'customize_controls_enqueue_scripts', __NAMESPACE__ . '\scripts' );
 }
 
 /**
@@ -63,6 +65,14 @@ function material_theme_wp_customize_preview_js() {
 	wp_enqueue_script( 'material-theme-wp-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 
+function scripts() {
+	wp_enqueue_style(
+		'material-theme-customizer-styles',
+		get_template_directory_uri() . '/assets/css/customize-controls-compiled.css',
+		[]
+	);
+}
+
 function add_header_sections( $wp_customize ) {
 	$wp_customize->add_section( 'material_header_section',
 		[
@@ -92,22 +102,42 @@ function add_header_sections( $wp_customize ) {
 		]
 	);
 
-	$wp_customize->add_control(	new Image_Radio_Control(
-		$wp_customize,
-		'material_header_layout',
-		[
-			'section'  => 'material_header_section',
-			'priority' => 10,
-			'choices'  => [
-				'drawer'    => [
-					'label' => esc_html__( 'Menu Drawer', 'material-theme-wp' ),
-					'url'   => get_template_directory_uri() . '/assets/svg/drawer.svg',
-				],
-				'menu'       => [
-					'label' => __( 'No Menu Drawer', 'material-theme-wp' ),
-					'url'   => get_template_directory_uri() . '/assets/svg/menu.svg',
-				],
+	$wp_customize->add_control(	maybe_us_image_radio_control( $wp_customize ) );
+}
+
+function get_image_radio_args() {
+	return [
+		'section'  => 'material_header_section',
+		'priority' => 10,
+		'choices'  => [
+			'drawer'    => [
+				'label' => esc_html__( 'Menu Drawer', 'material-theme-wp' ),
+				'url'   => get_template_directory_uri() . '/assets/svg/drawer.svg',
 			],
-		]
-	) );
+			'menu'       => [
+				'label' => __( 'No Menu Drawer', 'material-theme-wp' ),
+				'url'   => get_template_directory_uri() . '/assets/svg/menu.svg',
+			],
+		],
+	];
+}
+
+function maybe_us_image_radio_control( $wp_customize ) {
+	$args = get_image_radio_args();
+
+	if ( class_exists( 'MaterialThemeBuilder\Customizer\Image_Radio_Control' ) ) {
+		$image_radio_control = new \MaterialThemeBuilder\Customizer\Image_Radio_Control(
+			$wp_customize,
+			'material_header_layout',
+			get_image_radio_args()
+		);
+	} else {
+		$image_radio_control = new Image_Radio_Control(
+			$wp_customize,
+			'material_header_layout',
+			get_image_radio_args()
+		);
+	}
+
+	return $image_radio_control;
 }

@@ -10,7 +10,7 @@
 
 namespace MaterialTheme\Customizer;
 
-if ( ! class_exists( 'MaterialThemeBuilder\Customizer;' ) ) {
+if ( ! class_exists( 'MaterialThemeBuilder\Customizer\Image_Radio_Control' ) ) {
 	/**
 	 * Image radio control.
 	 */
