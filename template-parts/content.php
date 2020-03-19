@@ -9,51 +9,31 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+<div id="<?php the_ID(); ?>" <?php post_class( 'mdc-card post-card' ); ?>>
+	<div class="mdc-card__primary-action post-card__primary-action" tabindex="0">
+		<div class="mdc-card__media mdc-card__media--16-9 post-card__media" style="background-image: url(&quot;https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg&quot;);"></div>
+    	<div class="post-card__primary">
+			<?php the_title( '<h2 class="post-card__title mdc-typography mdc-typography--headline6"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+      		<h3 class="post-card__subtitle mdc-typography mdc-typography--subtitle2"><?php the_time( 'F j, Y' ); ?></h3>
+    	</div>
+    	<div class="post-card__secondary mdc-typography mdc-typography--body2"><?php the_excerpt(); ?></div>
+  	</div>
+  	<div class="mdc-card__actions">
+    	<div class="mdc-card__action-buttons">
+			<a class="mdc-button mdc-card__action mdc-card__action--button">
+				<span class="mdc-button__ripple"></span>
+				<?php the_author(); ?>
+			</a>
 
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
+			<a href="<?php comments_link(); ?>" class="mdc-button mdc-card__action mdc-card__action--button">
+				<span class="mdc-button__ripple"></span>
 				<?php
-				material_theme_wp_posted_on();
-				material_theme_wp_posted_by();
+				printf(
+					_nx( 'One Comment', '%1$s Comments', get_comments_number(), 'comments title', 'material-theme-wp' ),
+					number_format_i18n( get_comments_number() )
+				);
 				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php material_theme_wp_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'material-theme-wp' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
-
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'material-theme-wp' ),
-			'after'  => '</div>',
-		) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php material_theme_wp_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+			</a>
+		</div>
+	</div>
+</div>
