@@ -107,6 +107,7 @@ function add_header_sections( $wp_customize ) {
 
 function get_image_radio_args() {
 	return [
+		'label'    => esc_html__( 'Header Style', 'material-theme-wp' ),
 		'section'  => 'material_header_section',
 		'priority' => 10,
 		'choices'  => [
