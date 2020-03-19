@@ -38,7 +38,7 @@ $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -wi
 				"
 			<?php endif; ?>
 		>
-		<?php
+			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
 				'menu_id'        => 'primary-menu',
@@ -48,6 +48,8 @@ $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -wi
 			) );
 			?>
 		</nav>
+
+		<?php get_search_form(); ?>
 	</div>
 </aside>
 
