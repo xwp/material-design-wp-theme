@@ -4433,6 +4433,13 @@ a.mdc-list-item {
 .logo img {
 		display: block;
 	}
+.search-form {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+.search-form .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+		color: var( --mdc-theme-on-primary );
+	}
 .search__button:not(:disabled) {
 	color: var( --mdc-theme-on-primary );
 }
