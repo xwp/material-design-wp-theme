@@ -296,7 +296,7 @@ function get_default( $setting ) {
 function get_default_values() {
 	return [
 		'background_color' => '#6200ee',
-		'text_color'       => '#03dac6',
+		'text_color'       => '#ffffff',
 	];
 }
 
