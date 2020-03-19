@@ -40,6 +40,14 @@ function material_theme_wp_customize_register( $wp_customize ) {
 			'selector'        => '.site-description',
 			'render_callback' => __NAMESPACE__ . '\material_theme_wp_customize_partial_blogdescription',
 		) );
+
+		$wp_customize->selective_refresh->add_partial( 'header_layout', array(
+			'selector' => '.top-app-bar',
+			'settings' => [
+				'material_header_layout'
+			],
+			'render_callback' => __NAMESPACE__ . '\render_header_layout',
+		) );
 	}
 }
 
@@ -115,6 +123,7 @@ function add_header_sections( $wp_customize ) {
 
 	$wp_customize->add_setting( 'material_header_layout',
 		[
+			'default'   => false,
 			'transport' => 'postMessage'
 		]
 	);
@@ -351,4 +360,8 @@ function add_controls( $wp_customize, $controls = [] ) {
 			$wp_customize->add_control( $control );
 		}
 	}
+}
+
+function render_header_layout() {
+	get_template_part( 'template-parts/menu', 'header' );
 }
