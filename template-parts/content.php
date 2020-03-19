@@ -20,7 +20,7 @@
   	</div>
   	<div class="mdc-card__actions">
     	<div class="mdc-card__action-buttons">
-			<a class="mdc-button mdc-card__action mdc-card__action--button">
+			<a class="mdc-button mdc-card__action mdc-card__action--button" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">
 				<span class="mdc-button__ripple"></span>
 				<?php the_author(); ?>
 			</a>
