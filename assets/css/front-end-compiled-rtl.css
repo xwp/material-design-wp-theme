@@ -4444,7 +4444,8 @@ a.mdc-list-item {
 	color: var( --mdc-theme-on-primary );
 }
 .material-drawer {
-	background-color: var( --mdc-theme-primary );
+	background-color: #ffffff ;
+	background-color: var( --mdc-theme-primary, #ffffff );
 }
 .material-drawer .mdc-list-item--activated {
 		color: var( --mdc-theme-on-primary );
