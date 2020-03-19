@@ -2561,4 +2561,7 @@ a.mdc-list-item {
 .search__button:not(:disabled) {
 	color: var( --mdc-theme-on-primary );
 }
+.material-drawer .mdc-list-item--activated {
+		color: var( --mdc-theme-on-primary );
+	}
 

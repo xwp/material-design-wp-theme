@@ -21,8 +21,4 @@ export const drawerHandler = ( topAppBar, drawer ) => {
 	listElement.addEventListener( 'click', event => {
 		drawer.open = false;
 	} );
-
-	document.body.addEventListener( 'MDCDrawer:closed', () => {
-		mainContentElement.querySelector( 'input, button' ).focus();
-	} );
 };

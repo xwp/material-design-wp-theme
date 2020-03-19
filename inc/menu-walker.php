@@ -6,7 +6,9 @@
  * @package Material-theme-wp
  */
 
-class Material_Theme_Menu extends Walker {
+namespace MaterialTheme\Menu;
+
+class Material_Theme_Menu extends \Walker {
 	var $db_fields = array(
 		'parent' => 'menu_item_parent',
 		'id'     => 'db_id',

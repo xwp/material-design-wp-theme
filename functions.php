@@ -163,6 +163,7 @@ require get_template_directory() . '/inc/customizer.php';
  * Custom menu walker
  */
 require get_template_directory() . '/inc/menu-walker.php';
+require get_template_directory() . '/inc/menu-drawer-walker.php';
 
 /**
  * Load Jetpack compatibility file.

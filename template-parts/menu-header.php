@@ -7,6 +7,8 @@
  * @package Material-theme-wp
  */
 
+use MaterialTheme\Menu;
+
 $top_app_bar_background     = get_theme_mod( 'material_background_color' );
 $top_app_bar_text           = get_theme_mod( 'material_text_color' );
 $top_app_bar_layout_setting = get_theme_mod( 'material_header_layout', 'menu' );
@@ -59,7 +61,7 @@ $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -wi
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
 				'menu_id'        => 'primary-menu',
-				'walker'         => new Material_Theme_Menu(),
+				'walker'         => new Menu\Material_Theme_Menu(),
 				'container'      => '',
 				'items_wrap'     => '<nav id="%1$s" class="%2$s">%3$s</nav>',
 			) );
