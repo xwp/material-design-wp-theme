@@ -227,14 +227,14 @@ function get_color_controls() {
 		[
 			'id'                   => 'background_color',
 			'label'                => esc_html__( 'Bakground Color', 'material-theme-wp' ),
-			'related_text_setting' => prepend_slug( 'background_color' ),
-			'css_var'              => '--mdc-theme-header-primary',
+			'related_text_setting' => prepend_slug( 'text_color' ),
+			'css_var'              => '--mdc-theme-primary',
 		],
 		[
 			'id'                   => 'text_color',
 			'label'                => esc_html__( 'Text Color', 'material-theme-wp' ),
-			'related_text_setting' => prepend_slug( 'text_color' ),
-			'css_var'              => '--mdc-theme-header-secondary',
+			'related_text_setting' => prepend_slug( 'background_color' ),
+			'css_var'              => '--mdc-theme-on-primary',
 		],
 	];
 }
