@@ -5692,4 +5692,12 @@ a.mdc-list-item {
 .load-more {
 	text-align: center;
 }
+.site-footer {
+	align-items: center;
+	background-color: var( --mdc-theme-primary );
+	display: flex;
+	height: 4rem;
+	padding-right: 0.75rem;
+	padding-left: 0.75rem;
+}
 
