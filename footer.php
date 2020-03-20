@@ -14,19 +14,15 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'material-theme-wp' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'material-theme-wp' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'material-theme-wp' ), 'material-theme-wp', '<a href="http://underscores.me/">Me</a>' );
-				?>
-		</div><!-- .site-info -->
+		<div class="site-footer__copyright">
+
+		</div>
+		<div class="back-to-top">
+			<button class="mdc-button" aria-label="<?php esc_attr_e( 'Back to Top', 'material-theme-wp' ); ?>">
+				<div class="mdc-button__ripple"></div>
+				<i class="material-icons mdc-icon-button__icon">expand_less</i>
+			</button>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
