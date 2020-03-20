@@ -28,20 +28,29 @@ get_header();
 				</header>
 				<?php
 			endif;
+		?>
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+		<ul class="mdc-image-list mdc-image-list--masonry my-masonry-image-list">
+			<li class="mdc-image-list__item">
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				<?php
+				/* Start the Loop */
+				while ( have_posts() ) :
+					the_post();
 
-			endwhile;
+					/*
+					* Include the Post-Type-specific template for the content.
+					* If you want to override this in a child theme, then include a file
+					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+					*/
+					get_template_part( 'template-parts/content', get_post_type() );
 
+				endwhile;
+				?>
+			</li>
+		</ul>
+			
+			<?php
 			the_posts_navigation();
 
 		else :
