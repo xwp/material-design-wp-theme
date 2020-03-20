@@ -132,6 +132,12 @@ function material_theme_wp_scripts() {
 		);
 	}
 
+	wp_enqueue_style(
+		'material-icons-outlined-css',
+		esc_url( '//fonts.googleapis.com/css?family=Material+Icons+Outlined' ),
+		[]
+	);
+
 	wp_enqueue_script( 'material-theme-wp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'material-theme-js', get_template_directory_uri() . '/assets/js/front-end.js', array(), '20151215', true );

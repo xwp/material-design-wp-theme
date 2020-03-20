@@ -11,14 +11,15 @@ use MaterialTheme\Menu;
 
 $top_app_bar_background     = get_theme_mod( 'material_background_color' );
 $top_app_bar_text           = get_theme_mod( 'material_text_color' );
-$top_app_bar_layout_setting = get_theme_mod( 'material_header_layout', 'menu' );
+$top_app_bar_layout_setting = get_theme_mod( 'material_header_layout' );
 
 $has_changed_color          = ! empty( $top_app_bar_background ) || ! empty( $top_app_bar_text );
+$has_search                 = get_theme_mod( 'material_header_search_display' );
 
 $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawer' : '';
 ?>
 
-<header
+<div
 	class="mdc-top-app-bar top-app-bar<?php echo esc_attr( $top_app_bar_layout ); ?>"
 	<?php if ( ! empty( $has_changed_color ) ) : ?>
 		style="
@@ -67,11 +68,13 @@ $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -wi
 			) );
 			?>
 
-			<button class="mdc-button mdc-button--outlined search__button"> 
-				<span class="mdc-button__ripple"></span>
-				<i class="material-icons mdc-button__icon">search</i>
-				<?php esc_html_e( 'Search', 'material-theme-wp' ); ?>
-			</button>
+			<?php if ( ! empty( $has_search ) ) : ?>
+				<button class="mdc-button mdc-button--outlined search__button"> 
+					<span class="mdc-button__ripple"></span>
+					<i class="material-icons mdc-button__icon">search</i>
+					<?php esc_html_e( 'Search', 'material-theme-wp' ); ?>
+				</button>
+			<?php endif; ?>
 		</section>
 	</div>
-</header>
+</div>

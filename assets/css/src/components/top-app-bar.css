@@ -41,3 +41,12 @@
 		}
 	}
 }
+
+/* Customizer fix */
+.-with-drawer .top-app-bar .top-app-bar__menu-trigger {
+	display: none;
+}
+
+.-with-drawer .top-app-bar.-with-drawer .top-app-bar__menu-trigger {
+	display: block;
+}

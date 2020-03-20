@@ -49,8 +49,9 @@ function material_theme_wp_customize_register( $wp_customize ) {
 				'material_header_layout',
 				'material_background_color',
 				'material_text_color',
+				'material_header_search_display',
 			],
-			'render_callback' => __NAMESPACE__ . '\render_header_layout',
+			'render_callback' => __NAMESPACE__ . '\render_header',
 		) );
 
 		$wp_customize->selective_refresh->add_partial( 'footer_text', array(
@@ -374,7 +375,7 @@ function add_controls( $wp_customize, $controls = [] ) {
 	}
 }
 
-function render_header_layout() {
+function render_header() {
 	get_template_part( 'template-parts/menu', 'header' );
 }
 
