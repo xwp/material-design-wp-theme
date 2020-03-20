@@ -5689,4 +5689,7 @@ a.mdc-list-item {
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
+.load-more {
+	text-align: center;
+}
 
