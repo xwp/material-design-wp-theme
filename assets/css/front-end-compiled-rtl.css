@@ -5546,6 +5546,10 @@ a.mdc-list-item {
 	max-width: 50rem ;
 	max-width: var( --max-content-width, 50rem );
 }
+.page-header {
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+}
 .masonry-grid {
 	display: flex;
 	padding: 24px;
@@ -5589,6 +5593,25 @@ a.mdc-list-item {
 	margin-bottom: 24px;
 	margin-bottom: var(--mdc-layout-grid-margin-desktop, 24px);
 }
+.archive .page-title {
+		font-size: 3rem;
+		font-weight: 400;
+		line-height: 1;
+		text-align: center;
+	}
+.archive .archive-description {
+		text-align: center;
+	}
+.archive .page-header::after {
+			background-color: #ADADAD;
+			content: "";
+			display: block;
+			height: 0.25rem;
+			margin-bottom: 0.5rem;
+			margin-right: auto;
+			margin-left: auto;
+			width: 5rem;
+		}
 .top-app-bar .site-title a {
 		text-decoration: none;
 	}

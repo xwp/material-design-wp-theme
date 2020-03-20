@@ -4,4 +4,5 @@
 /* Custom */
 @import "./conf/media.css";
 @import "./base/index.css";
+@import "./templates/index.css";
 @import "./components/index.css";

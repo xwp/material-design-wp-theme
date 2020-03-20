@@ -11,3 +11,8 @@
 	margin-right: auto;
 	max-width: var( --max-content-width, 50rem );
 }
+
+.page-header {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
