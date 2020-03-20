@@ -30,10 +30,14 @@ get_header();
 			endif;
 		?>
 
-		<ul class="mdc-image-list mdc-image-list--masonry my-masonry-image-list">
-			<li class="mdc-image-list__item">
+		<div class="masonry-grid layout-masonry-2">
+			<div class="masonry-grid_column">
 
 				<?php
+				$i = 1;
+				$posts_per_page = get_option( 'posts_per_page' );
+				$column_limit   = absint( round( $posts_per_page / 2 ) );
+
 				/* Start the Loop */
 				while ( have_posts() ) :
 					the_post();
@@ -45,10 +49,17 @@ get_header();
 					*/
 					get_template_part( 'template-parts/content', get_post_type() );
 
+					if ( $column_limit === $i ) {
+						echo '</div><div class="masonry-grid_column">';
+					}
+
+					$i++;
+
 				endwhile;
+
 				?>
-			</li>
-		</ul>
+			</div>
+		</div>
 			
 			<?php
 			the_posts_navigation();
