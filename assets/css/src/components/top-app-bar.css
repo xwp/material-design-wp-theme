@@ -3,12 +3,20 @@
 		text-decoration: none;
 	}
 
-	&.-with-drawer .top-app-bar__menu .menu {
+	& .top-app-bar__menu .menu {
 		display: none;
+	}
+
+	&:not(.-with-drawer) .top-app-bar__menu .menu {
+		@media (--medium-viewport) {
+			display: block;
+		}
 	}
 	
 	& .top-app-bar__menu-trigger {
-		display: none;
+		@media (--medium-viewport) {
+			display: none;
+		}
 	}
 
 	&.-with-drawer .top-app-bar__menu-trigger {
@@ -25,7 +33,7 @@
 		padding-left: 0;
 
 		& .site-title {
-			font-size: 0.875rem;
+			font-size: 1.25rem;
 
 			@media (--medium-viewport) {
 				font-size: 2rem;

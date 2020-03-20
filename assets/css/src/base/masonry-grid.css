@@ -6,9 +6,13 @@
 }
 
 .masonry-grid_column {
-	padding-left: 24px;
-	padding-left: var(--mdc-layout-grid-margin-desktop, 24px);
 	background-clip: padding-box;
+	padding-left: 0;
+
+	@media (--medium-viewport) {
+		padding-left: 24px;
+		padding-left: var(--mdc-layout-grid-margin-desktop, 24px);
+	}
 
 	&:first-child {
 		padding-left: 0;
@@ -17,9 +21,18 @@
 
 /* @todo adjust width based on breakpoints */
 .layout-masonry-2 {
+	flex-direction: column;
+
+	@media (--medium-viewport) {
+		flex-direction: row;
+	}
 
 	& .masonry-grid_column {
-		width: 50%;
+		width: 100%;
+
+		@media (--medium-viewport) {
+			width: 50%;
+		}
 	}
 }
 
