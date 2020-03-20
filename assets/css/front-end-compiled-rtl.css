@@ -5697,7 +5697,15 @@ a.mdc-list-item {
 	background-color: var( --mdc-theme-primary );
 	display: flex;
 	height: 4rem;
+	justify-content: space-between;
 	padding-right: 0.75rem;
 	padding-left: 0.75rem;
 }
+.site-footer .mdc-layout-grid__inner {
+		align-items: center;
+		width: 100%;
+	}
+.site-footer .back-to-top {
+		text-align: left;
+	}
 

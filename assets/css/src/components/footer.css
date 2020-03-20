@@ -3,6 +3,16 @@
 	background-color: var( --mdc-theme-primary );
 	display: flex;
 	height: 4rem;
+	justify-content: space-between;
 	padding-left: 0.75rem;
 	padding-right: 0.75rem;
+
+	& .mdc-layout-grid__inner {
+		align-items: center;
+		width: 100%;
+	}
+
+	& .back-to-top {
+		text-align: right;
+	}
 }

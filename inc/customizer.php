@@ -27,6 +27,8 @@ function material_theme_wp_customize_register( $wp_customize ) {
 
 	add_header_sections( $wp_customize );
 
+	add_footer_section( $wp_customize );
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -49,6 +51,14 @@ function material_theme_wp_customize_register( $wp_customize ) {
 				'material_text_color',
 			],
 			'render_callback' => __NAMESPACE__ . '\render_header_layout',
+		) );
+
+		$wp_customize->selective_refresh->add_partial( 'footer_text', array(
+			'selector'        => '.site-footer__text',
+			'render_callback' => __NAMESPACE__ . '\render_footer_text',
+			'settings'        => [
+				'material_footer_text',
+			],
 		) );
 	}
 }
@@ -366,4 +376,32 @@ function add_controls( $wp_customize, $controls = [] ) {
 
 function render_header_layout() {
 	get_template_part( 'template-parts/menu', 'header' );
+}
+
+function add_footer_section( $wp_customize ) {
+	$wp_customize->add_section( 'material_footer_section',
+		[
+			'title' => esc_html__( 'Footer', 'material-theme-wp' ),
+		]
+	);
+
+	$wp_customize->add_setting( 'material_footer_text',
+		[
+			'transport' => 'postMessage'
+		]
+	);
+
+	$wp_customize->add_control( 'material_footer_text',
+		[
+			'label'     => esc_html__( 'Footer text', 'material-theme-wp' ),
+			'section'   => 'material_footer_section',
+			'type'      => 'text',
+		]
+	);
+}
+
+function render_footer_text() {
+	$footer_text = get_theme_mod( 'material_footer_text', '&copy; 2020 Material.io' );
+
+	echo esc_html( $footer_text );
 }
