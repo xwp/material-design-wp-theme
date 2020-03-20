@@ -5533,6 +5533,7 @@ a.mdc-list-item {
 }
 /* Custom */
 /* 768px */
+/* 768px */
 .site-content {
 	padding-top: 3.5rem ;
 	padding-top: var( --admin-bar-offset, 3.5rem );
@@ -5705,6 +5706,7 @@ a.mdc-list-item {
 	display: flex;
 	height: 4rem;
 	justify-content: space-between;
+	margin-top: 2rem;
 	padding-right: 0.75rem;
 	padding-left: 0.75rem;
 }
@@ -5715,4 +5717,10 @@ a.mdc-list-item {
 .site-footer .back-to-top {
 		text-align: left;
 	}
+@media (max-width: 37.43rem) {
+.site-footer .mdc-layout-grid__cell {
+			-ms-grid-column-span: 2;
+			grid-column-end: span 2
+	}
+		}
 
