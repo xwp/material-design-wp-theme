@@ -21,6 +21,11 @@ $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -wi
 
 <aside class="mdc-drawer material-drawer mdc-drawer--modal">
 	<div class="mdc-drawer__header">
+		<?php if ( has_custom_logo() ) : ?>
+			<div class="logo">
+				<?php the_custom_logo(); ?>
+			</div>
+		<?php endif; ?>
 		<h1 class="shrine-title"><?php bloginfo( 'name' ); ?></h1>
 	</div>
 	<div class="mdc-drawer__content">

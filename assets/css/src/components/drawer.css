@@ -1,7 +1,5 @@
 .material-drawer {
-	background-color: var( --mdc-theme-primary, #ffffff );
-
-	& .mdc-list-item--activated {
-		color: var( --mdc-theme-on-primary );
+	& .mdc-drawer__header {
+		display: flex;
 	}
 }
