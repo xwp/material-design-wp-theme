@@ -321,6 +321,8 @@ function get_default_values() {
 	return [
 		'background_color' => '#6200ee',
 		'text_color'       => '#ffffff',
+		'footer_background_color' => '#6200ee',
+		'footer_text_color'       => '#ffffff',
 	];
 }
 
