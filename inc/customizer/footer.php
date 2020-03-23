@@ -9,6 +9,11 @@ namespace MaterialTheme\Customizer\Footer;
 
 use MaterialTheme\Customizer;
 
+/**
+ * Add and initialize footer section
+ * 
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ */
 function add_section( $wp_customize ) {
 	$wp_customize->add_section( 'material_footer_section',
 		[
@@ -31,7 +36,7 @@ function add_section( $wp_customize ) {
 
 		$wp_customize->selective_refresh->add_partial( 'back_to_top', array(
 			'selector'        => '.back-to-top',
-			'render_callback' => 'MaterialTheme\Customizer\Footer\render_footer',
+			'render_callback' => 'MaterialTheme\Customizer\Footer\render_back_to_top',
 			'settings'        => [
 				'material_hide_back_to_top',
 			],
@@ -39,12 +44,21 @@ function add_section( $wp_customize ) {
 	}
 }
 
+/**
+ * Render footer copyright text
+ */
 function render_text() {
 	$footer_text = get_theme_mod( 'material_footer_text', '&copy; 2020 Material.io' );
 
 	echo esc_html( $footer_text );
 }
 
+/**
+ * Add regular controls
+ * Call to parent function
+ * 
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ */
 function add_controls( $wp_customize ) {
 	$controls = [];
 
@@ -59,6 +73,13 @@ function add_controls( $wp_customize ) {
 	Customizer\add_controls( $wp_customize, $controls );
 }
 
+
+/**
+ * Create settings based on controls
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ * @return void
+ */
 function add_settings( $wp_customize ) {
 	$settings = [];
 
@@ -73,6 +94,11 @@ function add_settings( $wp_customize ) {
 	add_controls( $wp_customize );
 }
 
+/**
+ * Define core controls to use
+ *
+ * @return void
+ */
 function get_controls() {
 	return [
 		[
@@ -88,10 +114,21 @@ function get_controls() {
 	];
 }
 
-function render_footer() {
+/**
+ * Reload back to top
+ *
+ * @return void
+ */
+function render_back_to_top() {
 	get_template_part( 'template-parts/back-to-top' );
 }
 
+/**
+ * Add settings for color controls
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ * @return void
+ */
 function add_color_controls( $wp_customize ) {
 	/**
 	 * Generate list of all the settings in the colors section.
@@ -109,6 +146,11 @@ function add_color_controls( $wp_customize ) {
 	maybe_use_color_palette_control( $wp_customize );
 }
 
+/**
+ * Define color controls to use
+ *
+ * @return void
+ */
 function get_color_controls() {
 	return [
 		[
@@ -126,6 +168,12 @@ function get_color_controls() {
 	];
 }
 
+/**
+ * Use advanced color control if Material theme builder is available
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ * @return void
+ */
 function maybe_use_color_palette_control( $wp_customize ) {
 	/**
 	* Generate list of all the controls in the colors section.
