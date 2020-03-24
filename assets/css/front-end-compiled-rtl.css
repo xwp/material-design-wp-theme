@@ -5649,6 +5649,8 @@ a.mdc-list-item {
 	--admin-bar-offset: 3.5rem;
 }
 .content-area {
+	padding-right: 1rem;
+	padding-left: 1rem;
 	margin-right: auto;
 	margin-left: auto;
 	max-width: 50rem ;
@@ -5732,9 +5734,13 @@ a.mdc-list-item {
 .error404 .page-content {
 		margin-right: auto;
 		margin-left: auto;
-		max-width: 60%;
 		text-align: center;
 	}
+@media (min-width: 48em) {
+.error404 .page-content {
+			max-width: 60%
+	}
+		}
 .error404 .error-404 {
 		max-width: var( --max )
 	}
