@@ -70,9 +70,7 @@ function add_controls( $wp_customize ) {
 
 	foreach ( get_controls() as $control ) {
 		$controls[ $control[ 'id' ] ] = array_merge( [
-			'label' => $control['label'],
 			'section' => 'static_front_page',
-			'type'    => $control['type'],
 		], $control );
 	}
 

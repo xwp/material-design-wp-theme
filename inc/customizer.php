@@ -323,7 +323,7 @@ function get_default_values() {
 		'text_color'              => '#ffffff',
 		'footer_background_color' => '#6200ee',
 		'footer_text_color'       => '#ffffff',
-		'material_archive_layout' => 'card',
+		'archive_layout'          => 'card',
 	];
 }
 
