@@ -5730,7 +5730,13 @@ a.mdc-list-item {
 		text-align: center;
 	}
 .error404 .page-content {
+		margin-right: auto;
+		margin-left: auto;
+		max-width: 60%;
 		text-align: center;
+	}
+.error404 .error-404 {
+		max-width: var( --max )
 	}
 .top-app-bar .site-title a {
 		text-decoration: none;
@@ -5787,6 +5793,35 @@ a.mdc-list-item {
 	margin-right: 0.5rem;
 	margin-left: 0.5rem;
 }
+.error-404 .search-form {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+}
+@media (min-width: 48em) {
+.error-404 .search-form {
+			flex-direction: row;
+}
+		}
+@media (min-width: 48em) {
+.error-404 .search-form .mdc-text-field {
+				width: 70%
+		}
+			}
+.error-404 .search-form .mdc-button {
+			display: none
+		}
+@media (min-width: 48em) {
+.error-404 .search-form .mdc-button {
+				display: block
+		}
+			}
+@media (min-width: 48em) {
+.error-404 .search-form .mdc-text-field__icon {
+				display: none
+		}
+			}
 .search-form .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
 		color: var( --mdc-theme-on-primary );
 	}
