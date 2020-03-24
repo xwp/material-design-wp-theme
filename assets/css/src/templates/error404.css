@@ -1,0 +1,5 @@
+.error404 {
+	& .page-title {
+		font-weight: 700;
+	}
+}

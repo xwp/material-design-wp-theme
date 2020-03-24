@@ -5613,6 +5613,9 @@ a.mdc-list-item {
 			margin-left: auto;
 			width: 5rem;
 		}
+.error404 .page-title {
+		font-weight: 700;
+	}
 .top-app-bar .site-title a {
 		text-decoration: none;
 	}
@@ -5732,3 +5735,4 @@ a.mdc-list-item {
 			grid-column-end: span 2
 	}
 		}
+
