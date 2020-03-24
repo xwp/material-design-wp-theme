@@ -1,5 +1,16 @@
 .error404 {
+	& .page-header {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	& .page-title {
-		font-weight: 700;
+		font-size: 2rem;
+		font-weight: 400;
+		text-align: center;
+	}
+
+	& .page-content {
+		text-align: center;
 	}
 }

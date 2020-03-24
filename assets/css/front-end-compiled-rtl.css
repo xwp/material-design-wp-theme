@@ -5613,8 +5613,17 @@ a.mdc-list-item {
 			margin-left: auto;
 			width: 5rem;
 		}
+.error404 .page-header {
+		padding-right: 0;
+		padding-left: 0;
+	}
 .error404 .page-title {
-		font-weight: 700;
+		font-size: 2rem;
+		font-weight: 400;
+		text-align: center;
+	}
+.error404 .page-content {
+		text-align: center;
 	}
 .top-app-bar .site-title a {
 		text-decoration: none;
