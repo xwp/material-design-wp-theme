@@ -7,7 +7,7 @@ export const floatingLabelInit = () => {
 		return;
 	}
 
-	for ( floatingLabel of floatingLabels ) {
+	for ( let floatingLabel of floatingLabels ) {
 		new MDCFloatingLabel( floatingLabel );
 	}
 };
