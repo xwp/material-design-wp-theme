@@ -5697,20 +5697,25 @@ a.mdc-list-item {
 	text-align: center;
 }
 .site-footer {
-	align-items: center;
-	background-color: var( --mdc-theme-primary );
-	display: flex;
 	height: 4rem;
-	justify-content: space-between;
 	margin-top: 2rem;
-	padding-left: 0.75rem;
-	padding-right: 0.75rem;
 }
+.site-footer .site-footer__inner {
+		align-items: center;
+		background-color: var( --mdc-theme-primary );
+		display: flex;
+		justify-content: space-between;
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+		width: 100%;
+	}
 .site-footer .site-footer__text {
 		color: var( --mdc-theme-on-primary );
 	}
 .site-footer .mdc-layout-grid__inner {
 		align-items: center;
+		margin-left: auto;
+		margin-right: auto;
 		max-width: 60rem ;
 		max-width: var( --material-footer-max-width, 60rem );
 		width: 100%;
@@ -5728,5 +5733,3 @@ a.mdc-list-item {
 	}
 		}
 
-
-/*# sourceMappingURL=front-end-compiled.css.map*/

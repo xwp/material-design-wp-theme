@@ -41,6 +41,15 @@ function add_section( $wp_customize ) {
 				'material_hide_back_to_top',
 			],
 		) );
+
+		$wp_customize->selective_refresh->add_partial( 'footer_colors', array(
+			'selector'        => '.site-footer',
+			'render_callback' => 'MaterialTheme\Customizer\Footer\render_footer',
+			'settings'        => [
+				'material_footer_background_color',
+				'material_footer_text_color',
+			],
+		) );
 	}
 }
 
@@ -205,4 +214,13 @@ function maybe_use_color_palette_control( $wp_customize ) {
 	}
 
 	Customizer\add_controls( $wp_customize, $controls );
+}
+
+/**
+ * Reload footer
+ *
+ * @return void
+ */
+function render_footer() {
+	get_template_part( 'template-parts/footer' );
 }
