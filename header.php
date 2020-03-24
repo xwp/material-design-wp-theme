@@ -20,14 +20,12 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class( 'mdc-typography' ); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'material-theme-wp' ); ?></a>
 
 	<?php get_template_part( 'template-parts/drawer' ); ?>
 
 	<?php get_template_part( 'template-parts/menu', 'header' ); ?>
-
-	<div class="mdc-drawer-scrim"></div>
 
 	<div id="content" class="site-content">

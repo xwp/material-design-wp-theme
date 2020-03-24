@@ -1,5 +1,12 @@
-.search {
-	& .search__button:not(:disabled) {
+.search-form {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+
+	& .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
 		color: var( --mdc-theme-on-primary );
 	}
+}
+
+.search__button:not(:disabled) {
+	color: var( --mdc-theme-on-primary );
 }

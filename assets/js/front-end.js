@@ -134,6 +134,36 @@ var drawerHandler = function drawerHandler(topAppBar, drawer) {
 
 /***/ }),
 
+/***/ "./assets/src/front-end/components/scroll.js":
+/*!***************************************************!*\
+  !*** ./assets/src/front-end/components/scroll.js ***!
+  \***************************************************/
+/*! exports provided: scrollInit */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "scrollInit", function() { return scrollInit; });
+var scrollInit = function scrollInit() {
+  var topTrigger = document.getElementById('back-to-top');
+
+  if (!topTrigger) {
+    return;
+  }
+
+  topTrigger.addEventListener('click', scrollToTop);
+};
+
+var scrollToTop = function scrollToTop() {
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
+};
+
+/***/ }),
+
 /***/ "./assets/src/front-end/components/top-app-bar.js":
 /*!********************************************************!*\
   !*** ./assets/src/front-end/components/top-app-bar.js ***!
@@ -169,11 +199,14 @@ var topAppBarInit = function topAppBarInit() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_top_app_bar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/top-app-bar */ "./assets/src/front-end/components/top-app-bar.js");
 /* harmony import */ var _components_drawer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/drawer */ "./assets/src/front-end/components/drawer.js");
+/* harmony import */ var _components_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/scroll */ "./assets/src/front-end/components/scroll.js");
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
   var topAppBar = Object(_components_top_app_bar__WEBPACK_IMPORTED_MODULE_0__["topAppBarInit"])();
   var drawer = Object(_components_drawer__WEBPACK_IMPORTED_MODULE_1__["drawerInit"])();
+  Object(_components_scroll__WEBPACK_IMPORTED_MODULE_2__["scrollInit"])();
 
   if (topAppBar && drawer) {
     Object(_components_drawer__WEBPACK_IMPORTED_MODULE_1__["drawerHandler"])(topAppBar, drawer);

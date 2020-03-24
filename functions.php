@@ -124,6 +124,20 @@ function material_theme_wp_scripts() {
 
 	wp_enqueue_style( 'material-theme-style', get_template_directory_uri() . '/assets/css/front-end-compiled.css', array( 'material-theme-wp-style' ), '20151215' );
 
+	if ( ! wp_style_is( 'material-icons-css', 'enqueued' ) ) {
+		wp_enqueue_style(
+			'material-icons-css',
+			esc_url( '//fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined' ),
+			[]
+		);
+	}
+
+	wp_enqueue_style(
+		'material-icons-outlined-css',
+		esc_url( '//fonts.googleapis.com/css?family=Material+Icons+Outlined' ),
+		[]
+	);
+
 	wp_enqueue_script( 'material-theme-wp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'material-theme-js', get_template_directory_uri() . '/assets/js/front-end.js', array(), '20151215', true );
@@ -135,11 +149,6 @@ function material_theme_wp_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'material_theme_wp_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -160,6 +169,7 @@ require get_template_directory() . '/inc/customizer.php';
  * Custom menu walker
  */
 require get_template_directory() . '/inc/menu-walker.php';
+require get_template_directory() . '/inc/menu-drawer-walker.php';
 
 /**
  * Load Jetpack compatibility file.
@@ -167,4 +177,6 @@ require get_template_directory() . '/inc/menu-walker.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+MaterialTheme\Customizer\setup();
 

@@ -1,0 +1,34 @@
+.site-footer {
+	align-items: center;
+	background-color: var( --mdc-theme-primary );
+	display: flex;
+	height: 4rem;
+	justify-content: space-between;
+	margin-top: 2rem;
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+
+	& .site-footer__text {
+		color: var( --mdc-theme-on-primary );
+	}
+
+	& .mdc-layout-grid__inner {
+		align-items: center;
+		max-width: var( --material-footer-max-width, 60rem );
+		width: 100%;
+	}
+
+	& .back-to-top {
+		text-align: right;
+
+		& button {
+			color: var( --mdc-theme-on-primary );
+		}
+	}
+
+	& .mdc-layout-grid__cell {
+		@media (--small-viewport-max) {
+			grid-column-end: span 2;
+		}
+	}
+}

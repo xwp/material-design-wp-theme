@@ -9,24 +9,24 @@
  * @package Material-theme-wp
  */
 
+ $footer_text = get_theme_mod( 'material_footer_text' );
+
 ?>
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'material-theme-wp' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'material-theme-wp' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'material-theme-wp' ), 'material-theme-wp', '<a href="http://underscores.me/">Me</a>' );
-				?>
-		</div><!-- .site-info -->
+	<footer id="colophon" class="site-footer mdc-layout-grid">
+		<div class="mdc-layout-grid__inner">
+			<div class="site-footer__copyright mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+				<small class="site-footer__text mdc-typography--subtitle2"><?php echo esc_html( $footer_text ); ?></small>
+			</div>
+			<div class="back-to-top mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+				<button id="back-to-top" class="mdc-button mdc-button--outlined" aria-label="<?php esc_attr_e( 'Back to Top', 'material-theme-wp' ); ?>">
+					<div class="mdc-button__ripple"></div>
+					<i class="material-icons mdc-icon-button__icon">expand_less</i>
+				</button>
+			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
