@@ -22,7 +22,7 @@ get_header();
 					<p><?php esc_html_e( 'The page you were looking for could not be found. It might have been removed, renamed, or did not exist in the first place.', 'material-theme-wp' ); ?></p>
 
 					<?php
-					get_search_form();
+					get_template_part( 'template-parts/search', 'archive' );
 					?>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
