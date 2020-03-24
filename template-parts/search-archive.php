@@ -17,4 +17,9 @@
 			<div class="mdc-notched-outline__trailing"></div>
 		</div>
 	</div>
+
+	<button class="mdc-button mdc-button--outlined" type="submit">
+		<i class="material-icons mdc-button__icon">search</i>
+		<span class="mdc-button__ripple"></span> <?php esc_html_e( 'Search', 'material-theme-wp' ); ?>
+	</button>
 </form>
