@@ -5808,6 +5808,8 @@ a.mdc-list-item {
 @media (min-width: 48em) {
 .error-404 .search-form {
 			flex-direction: row;
+			margin-bottom: 25vh;
+			margin-top: 3rem;
 }
 		}
 @media (min-width: 48em) {
