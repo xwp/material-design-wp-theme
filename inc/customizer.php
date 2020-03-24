@@ -319,10 +319,11 @@ function get_default( $setting ) {
 
 function get_default_values() {
 	return [
-		'background_color' => '#6200ee',
-		'text_color'       => '#ffffff',
+		'background_color'        => '#6200ee',
+		'text_color'              => '#ffffff',
 		'footer_background_color' => '#6200ee',
 		'footer_text_color'       => '#ffffff',
+		'material_archive_layout' => 'card',
 	];
 }
 
@@ -366,7 +367,6 @@ function add_controls( $wp_customize, $controls = [] ) {
 		$control = apply_filters( $slug . '_customizer_control_args', $control, $id );
 
 		if ( is_array( $control ) ) {
-			$control['section'] = isset( $control['section'] ) ? prepend_slug( $control['section'] ) : '';
 			$wp_customize->add_control(
 				$id,
 				$control

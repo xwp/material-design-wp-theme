@@ -165,6 +165,7 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/customizer/footer.php';
+require get_template_directory() . '/inc/customizer/archive.php';
 
 /**
  * Custom menu walker
@@ -180,4 +181,5 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 MaterialTheme\Customizer\setup();
+MaterialTheme\Customizer\Archive\setup();
 
