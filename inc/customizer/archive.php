@@ -18,6 +18,14 @@ function setup() {
 
 function register( $wp_customize ) {
 	add_settings( $wp_customize );
+
+	$wp_customize->selective_refresh->add_partial( 'archive_layout', [
+		'selector'        => '.site-main__inner',
+		'render_callback' => __NAMESPACE__ . '\render_layout',
+		'settings'        => [
+			'material_archive_layout'
+		],
+	] );
 }
 
 /**
@@ -75,4 +83,13 @@ function add_controls( $wp_customize ) {
 	}
 
 	Customizer\add_controls( $wp_customize, $controls );
+}
+
+/**
+ * Render selected layout
+ *
+ * @return void
+ */
+function render_layout() {
+	get_template_part( 'template-parts/archive' );
 }

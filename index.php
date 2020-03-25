@@ -13,9 +13,6 @@
  */
 
 get_header();
-
-$archive_layout = get_theme_mod( 'material_archive_layout', 'card' );
-$is_card_layout = 'card' === $archive_layout;
 ?>
 
 	<div id="primary" class="content-area">
@@ -33,13 +30,9 @@ $is_card_layout = 'card' === $archive_layout;
 			endif;
 		?>
 
-		<?php
-			if ( $is_card_layout ) {
-				get_template_part( 'template-parts/archive', 'card' );
-			} else {
-				get_template_part( 'template-parts/archive', 'image-list' );
-			}
-		?>
+			<div class="site-main__inner">
+				<?php get_template_part( 'template-parts/archive' ); ?>
+			</div>
 			
 			<?php
 			the_posts_navigation();
