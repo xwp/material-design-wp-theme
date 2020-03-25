@@ -4,7 +4,7 @@
  */
 ?>
 
-<ul class="mdc-image-list mdc-image-list--masonry archive-image-list">
+<ul class="mdc-image-list mdc-image-list--masonry mdc-image-list--with-text-protection archive-image-list">
 	<?php
 	/* Start the Loop */
 	while ( have_posts() ) :

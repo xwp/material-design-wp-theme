@@ -1,0 +1,12 @@
+.archive-image-list {
+	column-count: 1;
+	column-gap: 1rem;
+
+	@media (--medium-viewport) {
+		column-count: 2;
+	}
+
+	& .mdc-image-list__item {
+		margin-bottom: 1rem;
+	}
+}
