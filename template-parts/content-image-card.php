@@ -5,8 +5,8 @@
 		</a>
 	<?php endif; ?>
 	<div class="mdc-image-list__supporting">
-		<a href="<?php the_permalink(); ?>">
-			<span class="mdc-image-list__label"><?php the_title(); ?></span>
+		<a href="<?php the_permalink(); ?>" class="mdc-image-list__label">
+			<?php the_title(); ?>
 		</a>
 	</div>
 </li>
