@@ -29,9 +29,9 @@ $is_card_layout = 'card' === $archive_layout;
 
 		<?php
 			if ( $is_card_layout ) {
-				get_template_part( 'template_parts/archive', 'card' );
+				get_template_part( 'template-parts/archive', 'card' );
 			} else {
-				get_template_part( 'template_parts/archive', 'image-list' );
+				get_template_part( 'template-parts/archive', 'image-list' );
 			}
 		?>
 		
