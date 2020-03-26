@@ -7,13 +7,16 @@
  * @package Material-theme-wp
  */
 
+if ( has_post_thumbnail() ) {
+	$thumbnail = get_the_post_thumbnail_url();
+} else {
+	$thumbnail = get_template_directory_uri() . '/assets/images/placeholder.png';
+}
 ?>
 
 <div id="<?php the_ID(); ?>" <?php post_class( 'mdc-card post-card' ); ?>>
 	<div class="mdc-card__primary-action post-card__primary-action" tabindex="0">
-		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="mdc-card__media mdc-card__media--16-9 post-card__media" style="background-image: url(&quot;<?php esc_attr( the_post_thumbnail_url() ); ?>&quot;);"></div>
-		<?php endif; ?>
+		<div class="mdc-card__media mdc-card__media--16-9 post-card__media" style="background-image: url(&quot;<?php esc_attr( $thumbnail ); ?>&quot;);"></div>
     	<div class="post-card__primary">
 			<?php the_title( '<h2 class="post-card__title mdc-typography mdc-typography--headline6"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
       		<h3 class="post-card__subtitle mdc-typography mdc-typography--subtitle2"><?php the_time( 'F j, Y' ); ?></h3>
