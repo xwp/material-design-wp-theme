@@ -27,8 +27,6 @@ function setup() {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function register( $wp_customize ) {
-	add_header_sections( $wp_customize );
-
 	Footer\add_section( $wp_customize );
 
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
@@ -43,17 +41,6 @@ function register( $wp_customize ) {
 		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
 			'selector'        => '.site-description',
 			'render_callback' => __NAMESPACE__ . '\get_description',
-		) );
-
-		$wp_customize->selective_refresh->add_partial( 'header_layout', array(
-			'selector' => '.top-app-bar',
-			'settings' => [
-				'material_header_layout',
-				'material_background_color',
-				'material_text_color',
-				'material_header_search_display',
-			],
-			'render_callback' => __NAMESPACE__ . '\render_header',
 		) );
 
 		$wp_customize->selective_refresh->add_partial( 'footer_text', array(
@@ -113,171 +100,6 @@ function scripts() {
 		get_template_directory_uri() . '/assets/css/customize-controls-compiled.css',
 		[]
 	);
-}
-
-/**
- * Register controls.
- * 
- * @param WP_Customize_Manager $wp_customize Theme Customizer object.
- */
-function add_header_sections( $wp_customize ) {
-	$wp_customize->add_section( 'material_header_section',
-		[
-			'title' => esc_html__( 'Header', 'material-theme-wp' ),
-
-		]
-	);
-
-	$wp_customize->add_setting( 'material_header_search_display',
-		[
-			'transport' => 'postMessage'
-		]
-	);
-
-	$wp_customize->add_control( 'material_header_search_display',
-		[
-			'label' => esc_html__( 'Show search in header', 'material-theme-wp' ),
-			'section' => 'material_header_section',
-			'priority' => 10,
-			'type' => 'checkbox',
-		]
-	);
-
-	$wp_customize->add_setting( 'material_header_layout',
-		[
-			'default'   => false,
-			'transport' => 'postMessage'
-		]
-	);
-
-	$wp_customize->add_control(	maybe_use_image_radio_control( $wp_customize ) );
-
-	add_color_controls( $wp_customize );
-}
-
-/**
- * Define options for drawer layout
- * 
- * @return void
- */
-function get_image_radio_args() {
-	return [
-		'label'    => esc_html__( 'Header Style', 'material-theme-wp' ),
-		'section'  => 'material_header_section',
-		'priority' => 10,
-		'choices'  => [
-			'drawer'    => [
-				'label' => esc_html__( 'Menu Drawer', 'material-theme-wp' ),
-				'url'   => get_template_directory_uri() . '/assets/svg/drawer.svg',
-			],
-			'menu'       => [
-				'label' => __( 'No Menu Drawer', 'material-theme-wp' ),
-				'url'   => get_template_directory_uri() . '/assets/svg/menu.svg',
-			],
-		],
-	];
-}
-
-/**
- * Choose which image radio control to use
- * 
- * @param WP_Customize_Manager $wp_customize Theme Customizer object.
- */
-function maybe_use_image_radio_control( $wp_customize ) {
-	$args = get_image_radio_args();
-
-	if ( class_exists( 'MaterialThemeBuilder\Customizer\Image_Radio_Control' ) ) {
-		$image_radio_control = new \MaterialThemeBuilder\Customizer\Image_Radio_Control(
-			$wp_customize,
-			'material_header_layout',
-			$args
-		);
-	} else {
-		$image_radio_control = new Image_Radio_Control(
-			$wp_customize,
-			'material_header_layout',
-			$args
-		);
-	}
-
-	return $image_radio_control;
-}
-
-/**
- * Define color palette values
- *
- * @return array 
- */
-function get_color_palette_args() {
-	return [
-		'label'                => esc_html__( 'Background Color', 'material-theme-wp' ),
-		'section'              => 'colors',
-		'priority'             => 10,
-		'related_text_setting' => 'material_header_primary_background_color',
-		'related_setting'      => ! empty( $control['related_setting'] ) ? $control['related_setting'] : false,
-		'css_var'              => $control['css_var'],
-	];
-}
-
-/**
- * Decide which color palette control to use
- *
- * @param  mixed $wp_customize Theme Customizer object.
- * @return void
- */
-function maybe_use_color_palette_control( $wp_customize ) {
-	/**
-	* Generate list of all the controls in the colors section.
-	 */
-	$controls = [];
-
-	if ( class_exists( 'MaterialThemeBuilder\Customizer\Material_Color_Palette_Control' ) ) {
-		foreach ( get_color_controls() as $control ) {
-			$controls[ $control['id'] ] = new \MaterialThemeBuilder\Customizer\Material_Color_Palette_Control(
-				$wp_customize,
-				prepend_slug( $control['id'] ),
-				[
-					'label'                => $control['label'],
-					'section'              => prepend_slug( 'header_section' ),
-					'related_text_setting' => ! empty( $control['related_text_setting'] ) ? $control['related_text_setting'] : false,
-					'related_setting'      => ! empty( $control['related_setting'] ) ? $control['related_setting'] : false,
-					'css_var'              => $control['css_var'],
-				]
-			);
-		}
-	} else {
-		foreach ( get_color_controls() as $control ) {
-			$controls[ $control['id'] ] = [
-				'label'                => $control['label'],
-				'section'              => prepend_slug( 'header_section' ),
-				'type'                 => 'color',
-			];
-		}
-	}
-
-	add_controls( $wp_customize, $controls );
-}
-
-/**
- * Define color palette controls.
- *
- * @return array Color palette values.
- */
-function get_color_controls() {
-	return [
-		[
-			'id'                   => 'background_color',
-			'label'                => esc_html__( 'Bakground Color', 'material-theme-wp' ),
-			'related_text_setting' => prepend_slug( 'text_color' ),
-			'css_var'              => '--mdc-theme-primary',
-		],
-		[
-			'id'                   => 'text_color',
-			'label'                => esc_html__( 'Text Color', 'material-theme-wp' ),
-			'related_text_setting' => prepend_slug( 'background_color' ),
-			'css_var'              => '--mdc-theme-on-primary',
-		],
-	];
 }
 
 /**
@@ -368,29 +190,6 @@ function get_default_values() {
 }
 
 /**
- * Add color palette settings and controls.
- *
- * @param  mixed $wp_customize Rheme Customizer object.
- * @return void
- */
-function add_color_controls( $wp_customize ) {
-	/**
-	 * Generate list of all the settings in the colors section.
-	 */
-	$settings = [];
-
-	foreach ( get_color_controls() as $control ) {
-		$settings[ $control['id'] ] = [
-			'sanitize_callback' => 'sanitize_hex_color',
-		];
-	}
-
-	add_settings( $wp_customize, $settings );
-
-	maybe_use_color_palette_control( $wp_customize );
-}
-
-/**
  * Add controls to customizer.
  *
  * @param  array $controls Array of controls to add to customizer.
@@ -424,13 +223,3 @@ function add_controls( $wp_customize, $controls = [] ) {
 		}
 	}
 }
-
-/**
- * Reload header
- *
- * @return void
- */
-function render_header() {
-	get_template_part( 'template-parts/menu', 'header' );
-}
-
