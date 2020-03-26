@@ -163,7 +163,6 @@ require get_template_directory() . '/inc/template-functions.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer/class-image-radio-control.php';
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/customizer/header.php';
 require get_template_directory() . '/inc/customizer/footer.php';
@@ -184,5 +183,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 MaterialTheme\Customizer\setup();
 MaterialTheme\Customizer\Header\setup();
+MaterialTheme\Customizer\Footer\setup();
 MaterialTheme\Customizer\Archive\setup();
 

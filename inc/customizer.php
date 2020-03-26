@@ -27,7 +27,7 @@ function setup() {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function register( $wp_customize ) {
-	Footer\add_section( $wp_customize );
+	require get_template_directory() . '/inc/customizer/class-image-radio-control.php';
 
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
@@ -41,14 +41,6 @@ function register( $wp_customize ) {
 		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
 			'selector'        => '.site-description',
 			'render_callback' => __NAMESPACE__ . '\get_description',
-		) );
-
-		$wp_customize->selective_refresh->add_partial( 'footer_text', array(
-			'selector'        => '.site-footer__text',
-			'render_callback' => 'MaterialTheme\Customizer\Footer\render_text',
-			'settings'        => [
-				'material_footer_text',
-			],
 		) );
 	}
 }
