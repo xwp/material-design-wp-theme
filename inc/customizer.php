@@ -10,11 +10,13 @@ namespace MaterialTheme\Customizer;
 use MaterialTheme\Customizer\Footer;
 
 /**
- * Attach hooks
+ * Attach hooks.
+ * 
+ * @return void
  */
 function setup() {
-	add_action( 'customize_register', __NAMESPACE__ . '\material_theme_wp_customize_register' );
-	add_action( 'customize_preview_init', __NAMESPACE__ . '\material_theme_wp_customize_preview_js' );
+	add_action( 'customize_register', __NAMESPACE__ . '\register' );
+	add_action( 'customize_preview_init', __NAMESPACE__ . '\preview_scripts' );
 
 	add_action( 'customize_controls_enqueue_scripts', __NAMESPACE__ . '\scripts' );
 }
@@ -24,9 +26,7 @@ function setup() {
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function material_theme_wp_customize_register( $wp_customize ) {
-	require get_template_directory() . '/inc/customizer/class-image-radio-control.php';
-
+function register( $wp_customize ) {
 	add_header_sections( $wp_customize );
 
 	Footer\add_section( $wp_customize );
@@ -38,11 +38,11 @@ function material_theme_wp_customize_register( $wp_customize ) {
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', array(
 			'selector'        => '.site-title a',
-			'render_callback' => __NAMESPACE__ . '\material_theme_wp_customize_partial_blogname',
+			'render_callback' => __NAMESPACE__ . '\get_blogname',
 		) );
 		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
 			'selector'        => '.site-description',
-			'render_callback' => __NAMESPACE__ . '\material_theme_wp_customize_partial_blogdescription',
+			'render_callback' => __NAMESPACE__ . '\get_description',
 		) );
 
 		$wp_customize->selective_refresh->add_partial( 'header_layout', array(
@@ -66,6 +66,11 @@ function material_theme_wp_customize_register( $wp_customize ) {
 	}
 }
 
+/**
+ * Define settings prefix.
+ *
+ * @return string Settings prefix.
+ */
 function get_slug() {
 	return 'material';
 }
@@ -75,7 +80,7 @@ function get_slug() {
  *
  * @return void
  */
-function material_theme_wp_customize_partial_blogname() {
+function get_blogname() {
 	bloginfo( 'name' );
 }
 
@@ -84,19 +89,21 @@ function material_theme_wp_customize_partial_blogname() {
  *
  * @return void
  */
-function material_theme_wp_customize_partial_blogdescription() {
+function get_description() {
 	bloginfo( 'description' );
 }
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ * 
+ * @return void
  */
-function material_theme_wp_customize_preview_js() {
+function preview_scripts() {
 	wp_enqueue_script( 'material-theme-wp-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 
 /**
- * Enqueue control scripts
+ * Enqueue control scripts.
  * 
  * @return void
  */
@@ -109,7 +116,7 @@ function scripts() {
 }
 
 /**
- * Register controls
+ * Register controls.
  * 
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
@@ -148,6 +155,11 @@ function add_header_sections( $wp_customize ) {
 	add_color_controls( $wp_customize );
 }
 
+/**
+ * Define options for drawer layout
+ * 
+ * @return void
+ */
 function get_image_radio_args() {
 	return [
 		'label'    => esc_html__( 'Header Style', 'material-theme-wp' ),
@@ -191,6 +203,11 @@ function maybe_use_image_radio_control( $wp_customize ) {
 	return $image_radio_control;
 }
 
+/**
+ * Define color palette values
+ *
+ * @return array 
+ */
 function get_color_palette_args() {
 	return [
 		'label'                => esc_html__( 'Background Color', 'material-theme-wp' ),
@@ -202,6 +219,12 @@ function get_color_palette_args() {
 	];
 }
 
+/**
+ * Decide which color palette control to use
+ *
+ * @param  mixed $wp_customize Theme Customizer object.
+ * @return void
+ */
 function maybe_use_color_palette_control( $wp_customize ) {
 	/**
 	* Generate list of all the controls in the colors section.
@@ -235,6 +258,11 @@ function maybe_use_color_palette_control( $wp_customize ) {
 	add_controls( $wp_customize, $controls );
 }
 
+/**
+ * Define color palette controls.
+ *
+ * @return array Color palette values.
+ */
 function get_color_controls() {
 	return [
 		[
@@ -252,6 +280,13 @@ function get_color_controls() {
 	];
 }
 
+/**
+ * Register setting in customizer.
+ *
+ * @param  mixed $wp_customize Theme Customizer object.
+ * @param  mixed $settings     Settings to register in customizer.
+ * @return void
+ */
 function add_settings( $wp_customize, $settings = [] ) {
 	$slug = get_slug();
 
@@ -317,6 +352,11 @@ function get_default( $setting ) {
 	return isset( $defaults[ $setting ] ) ? $defaults[ $setting ] : '';
 }
 
+/**
+ * Set default values.
+ *
+ * @return array
+ */
 function get_default_values() {
 	return [
 		'background_color'        => '#6200ee',
@@ -327,6 +367,12 @@ function get_default_values() {
 	];
 }
 
+/**
+ * Add color palette settings and controls.
+ *
+ * @param  mixed $wp_customize Rheme Customizer object.
+ * @return void
+ */
 function add_color_controls( $wp_customize ) {
 	/**
 	 * Generate list of all the settings in the colors section.
@@ -379,6 +425,11 @@ function add_controls( $wp_customize, $controls = [] ) {
 	}
 }
 
+/**
+ * Reload header
+ *
+ * @return void
+ */
 function render_header() {
 	get_template_part( 'template-parts/menu', 'header' );
 }
