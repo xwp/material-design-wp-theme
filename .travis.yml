@@ -26,6 +26,17 @@ branches:
     - develop
     - /^\d+\.\d+$/
 
+env:
+  global:
+    - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+
+before_install:
+  - nvm install
+  - nvm use
+
+install:
+  - npm install
+
 jobs:
   fast_finish: true
   include:
