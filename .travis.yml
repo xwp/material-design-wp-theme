@@ -1,41 +1,40 @@
 cache:
-	directories:
-	  - $HOME/.composer/cache
-	  - $HOME/.jest-cache
-	  - $HOME/.npm
-	  - $HOME/.nvm/.cache
-	  - $HOME/phpunit-bin
+  directories:
+    - $HOME/.composer/cache
+    - $HOME/.jest-cache
+    - $HOME/.npm
+    - $HOME/.nvm/.cache
+    - $HOME/phpunit-bin
 
-  notifications:
-	email:
-	  on_success: never
-	  on_failure: change
+notifications:
+  email:
+    on_success: never
+    on_failure: change
 
-  language: php
+language: php
 
-  dist: trusty
+dist: trusty
 
-  addons:
-	apt:
-	  packages:
-		- libxml2-utils
+addons:
+  apt:
+    packages:
+    - libxml2-utils
 
-  branches:
-	only:
-	  - master
-	  - develop
-	  - /^\d+\.\d+$/
+branches:
+  only:
+    - master
+    - develop
+    - /^\d+\.\d+$/
 
-  jobs:
-	fast_finish: true
-	include:
-	  - stage: deploy to staging
-		if: (NOT type IN (pull_request))
-		script: skip
-		deploy:
-		  skip_cleanup: true
-		  # deploy builds in develop to the pantheon dev environment
-		  provider: script
-		  script: bash bin/deploy.sh
-		  on:
-			branch: develop
+jobs:
+  fast_finish: true
+  include:
+    - stage: deploy to staging
+      script: skip
+      deploy:
+        skip_cleanup: true
+        # deploy builds in develop to the pantheon dev environment
+        provider: script
+        script: bash bin/deploy.sh
+        on:
+          branch: develop
