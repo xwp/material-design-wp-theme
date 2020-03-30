@@ -3,8 +3,9 @@
 # Print commands to the screen
 set -x
 
-# Build the plugin files
+# Build the theme files
 npm run build:js
+npm run build:run
 
 # Delete temp folder if it exists
 rm -rf /tmp/temprepo
