@@ -30,6 +30,7 @@ jobs:
   fast_finish: true
   include:
     - stage: deploy to staging
+      if: (NOT type IN (pull_request))
       script: skip
       deploy:
         skip_cleanup: true
