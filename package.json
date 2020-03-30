@@ -38,6 +38,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
+    "build:js": "wp-scripts build",
     "dev": "webpack -d --watch"
   },
   "repository": {

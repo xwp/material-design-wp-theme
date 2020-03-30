@@ -5,7 +5,6 @@ set -x
 
 # Build the plugin files
 npm run build:js
-npm run build:run
 
 # Delete temp folder if it exists
 rm -rf /tmp/temprepo
