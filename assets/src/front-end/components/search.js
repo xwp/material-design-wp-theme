@@ -1,4 +1,11 @@
+/**
+ * Shows / Hides search box at the top of the page
+ */
 class Search {
+	/**
+	 * Store elements
+	 * @param {*} element 
+	 */
 	constructor( element ) {
 		if ( ! element ) {
 			return;
@@ -13,6 +20,9 @@ class Search {
 		this.attachEvents();
 	}
 
+	/**
+	 * Add events to trigger and hide search
+	 */
 	attachEvents() {
 		if ( ! this.trigger ) {
 			return;
@@ -27,6 +37,9 @@ class Search {
 		this.backTrigger.addEventListener( 'click', this.hideSearch );
 	}
 
+	/**
+	 * Show search
+	 */
 	showSearch() {
 		const input = this.element.querySelector( '.mdc-text-field__input' );
 
@@ -39,7 +52,10 @@ class Search {
 		input.focus();
 	}
 
-	hideSearch( event ) {
+	/**
+	 * Hide search
+	 */
+	hideSearch() {
 		this.element.classList.remove( '-with-search' );
 	}
 }
