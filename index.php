@@ -60,9 +60,9 @@ get_header();
 				?>
 			</div>
 		</div>
-			
-			<?php
-			the_posts_navigation();
+
+		<?php
+			get_template_part( 'template-parts/page-navigation' );
 
 		else :
 
