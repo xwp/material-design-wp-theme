@@ -5860,6 +5860,9 @@ a.mdc-list-item {
 .error404 .error-404 {
 		max-width: var( --max )
 	}
+.top-app-bar {
+	box-shadow: 1px 0 2px rgba( 0, 0, 0, .5 );
+}
 .top-app-bar .site-title a {
 		text-decoration: none;
 	}
@@ -5920,19 +5923,19 @@ a.mdc-list-item {
 	}
 .search-form {
 	margin-left: 0.5rem;
-	margin-right: 0.5rem;
+	margin-right: 0.5rem
 }
 .error-404 .search-form {
 		align-items: center;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: space-between
 }
 @media (min-width: 48em) {
 .error-404 .search-form {
 			flex-direction: row;
 			margin-bottom: 25vh;
-			margin-top: 3rem;
+			margin-top: 3rem
 }
 		}
 @media (min-width: 48em) {
@@ -5956,7 +5959,7 @@ a.mdc-list-item {
 .top-app-bar__search .search-form {
 		align-items: center;
 		display: flex;
-		width: 100%;
+		width: 100%
 }
 .top-app-bar__search .search-form .mdc-text-field__input {
 			border: 0;
@@ -5974,9 +5977,6 @@ a.mdc-list-item {
 			margin-right: 1rem;
 			min-width: 2.25rem;
 		}
-.search-form .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
-		color: var( --mdc-theme-on-primary );
-	}
 .search__button:not(:disabled) {
 	color: var( --mdc-theme-on-primary );
 }

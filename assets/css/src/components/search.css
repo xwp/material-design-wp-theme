@@ -2,10 +2,6 @@
 	margin-left: 0.5rem;
 	margin-right: 0.5rem;
 
-	& .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
-		color: var( --mdc-theme-on-primary );
-	}
-
 	@nest .error-404 & {
 		align-items: center;
 		display: flex;
