@@ -6,7 +6,9 @@ class Search {
 
 		this.element = element;
 		this.trigger = element.querySelector( '.search__button' );
+		this.backTrigger = element.querySelector( '.button__back' );
 		this.showSearch = this.showSearch.bind( this );
+		this.hideSearch = this.hideSearch.bind( this );
 
 		this.attachEvents();
 	}
@@ -17,6 +19,12 @@ class Search {
 		}
 
 		this.trigger.addEventListener( 'click', this.showSearch );
+
+		if ( ! this.backTrigger ) {
+			return;
+		}
+
+		this.backTrigger.addEventListener( 'click', this.hideSearch );
 	}
 
 	showSearch() {
@@ -29,6 +37,10 @@ class Search {
 		}
 
 		input.focus();
+	}
+
+	hideSearch( event ) {
+		this.element.classList.remove( '-with-search' );
 	}
 }
 
