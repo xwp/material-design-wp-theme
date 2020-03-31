@@ -1,0 +1,25 @@
+.mdc-page-navigation {
+	list-style: none;
+	margin: 2.5em 0;
+	padding: 0;
+	text-align: center;
+
+	& li {
+		display: inline-block;
+		margin: 0 1.5em;
+	}
+
+	& .material-icons {
+		font-size: 2.5em;
+		opacity: 0.5;
+	}
+
+	& a {
+		display: inline-block;
+		height: 2.5em;
+
+		& .material-icons {
+			opacity: 1;
+		}
+	}
+}
