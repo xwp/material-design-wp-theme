@@ -40,12 +40,28 @@
 	}
 
 	@nest .top-app-bar__search & {
+		align-items: center;
+		display: flex;
+		width: 100%;
+
+		& .mdc-text-field__input {
+			border: 0;
+		}
+
 		& .mdc-button__label {
 			display: none;
 		}
 
 		& .mdc-button__icon {
 			margin-left: 0;
+			margin-right: 0;
+		}
+
+		& .button__back {
+			padding-left: 0;
+			padding-right: 0;
+			margin-right: 1rem;
+			min-width: 2.25rem;
 		}
 	}
 }

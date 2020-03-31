@@ -5953,11 +5953,26 @@ a.mdc-list-item {
 				display: none
 		}
 			}
+.top-app-bar__search .search-form {
+		align-items: center;
+		display: flex;
+		width: 100%;
+}
+.top-app-bar__search .search-form .mdc-text-field__input {
+			border: 0;
+		}
 .top-app-bar__search .search-form .mdc-button__label {
 			display: none;
 		}
 .top-app-bar__search .search-form .mdc-button__icon {
 			margin-left: 0;
+			margin-right: 0;
+		}
+.top-app-bar__search .search-form .button__back {
+			padding-left: 0;
+			padding-right: 0;
+			margin-right: 1rem;
+			min-width: 2.25rem;
 		}
 .search-form .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
 		color: var( --mdc-theme-on-primary );
