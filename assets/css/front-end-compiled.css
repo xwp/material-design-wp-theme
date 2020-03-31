@@ -5898,13 +5898,17 @@ a.mdc-list-item {
 				font-size: 2rem
 		}
 			}
-.top-app-bar .top-app-bar__header {
-		display: none;
-	}
 .top-app-bar .top-app-bar__search {
 		background-color: #ffffff;
 		background-color: var( --search-background );
+		display: none;
 	}
+.top-app-bar.-with-search .top-app-bar__header {
+			display: none;
+		}
+.top-app-bar.-with-search .top-app-bar__search {
+			display: flex;
+		}
 /* Customizer fix */
 .-with-drawer .top-app-bar .top-app-bar__menu-trigger {
 	display: none;

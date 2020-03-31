@@ -43,12 +43,20 @@
 		}
 	}
 
-	.top-app-bar__header {
+	.top-app-bar__search {
+		background-color: var( --search-background );
 		display: none;
 	}
 
-	.top-app-bar__search {
-		background-color: var( --search-background );
+	&.-with-search {
+
+		.top-app-bar__header {
+			display: none;
+		}
+
+		.top-app-bar__search {
+			display: flex;
+		}
 	}
 }
 
