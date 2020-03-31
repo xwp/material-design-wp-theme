@@ -38,6 +38,16 @@
 			}
 		}
 	}
+
+	@nest .top-app-bar__search & {
+		& .mdc-button__label {
+			display: none;
+		}
+
+		& .mdc-button__icon {
+			margin-left: 0;
+		}
+	}
 }
 
 .search__button:not(:disabled) {

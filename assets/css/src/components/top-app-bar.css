@@ -40,6 +40,14 @@
 			}
 		}
 	}
+
+	.top-app-bar__header {
+		display: none;
+	}
+
+	.top-app-bar__search {
+		background-color: var( --search-background );
+	}
 }
 
 /* Customizer fix */

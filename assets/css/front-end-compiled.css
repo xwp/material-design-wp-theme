@@ -5754,6 +5754,9 @@ a.mdc-list-item {
 /* Custom */
 /* 768px */
 /* 768px */
+:root {
+	--search-background: #ffffff;
+}
 .site-content {
 	padding-top: 3.5rem ;
 	padding-top: var( --admin-bar-offset, 3.5rem );
@@ -5892,6 +5895,13 @@ a.mdc-list-item {
 				font-size: 2rem
 		}
 			}
+.top-app-bar .top-app-bar__header {
+		display: none;
+	}
+.top-app-bar .top-app-bar__search {
+		background-color: #ffffff;
+		background-color: var( --search-background );
+	}
 /* Customizer fix */
 .-with-drawer .top-app-bar .top-app-bar__menu-trigger {
 	display: none;
@@ -5943,6 +5953,12 @@ a.mdc-list-item {
 				display: none
 		}
 			}
+.top-app-bar__search .search-form .mdc-button__label {
+			display: none;
+		}
+.top-app-bar__search .search-form .mdc-button__icon {
+			margin-left: 0;
+		}
 .search-form .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
 		color: var( --mdc-theme-on-primary );
 	}
