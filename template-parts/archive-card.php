@@ -4,9 +4,7 @@
  */
 ?>
 
-<div class="masonry-grid layout-masonry-2">
-	<div class="masonry-grid_column">
-
+<div class="archive-cards">
 	<?php
 	$i = 1;
 	$posts_per_page = get_option( 'posts_per_page' );
@@ -23,14 +21,7 @@
 		*/
 		get_template_part( 'template-parts/content', get_post_type() );
 
-		if ( $column_limit === $i ) {
-			echo '</div><div class="masonry-grid_column">';
-		}
-
-		$i++;
-
 		endwhile;
 
 		?>
-	</div>
 </div>
