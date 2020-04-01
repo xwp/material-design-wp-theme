@@ -54,15 +54,9 @@ get_header();
 				?>
 			</div>
 		</div>
-		
-		<div class="load-more">
-			<button class="mdc-button mdc-button--outlined">
-				<div class="mdc-button__ripple"></div>
-				<span class="mdc-button__label"><?php esc_html_e( 'Load More', 'material-theme-wp' ); ?></span>
-			</button>
-		</div>
 
-			<?php
+		<?php
+			get_template_part( 'template-parts/page-navigation' );
 
 		else :
 

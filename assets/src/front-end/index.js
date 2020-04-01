@@ -1,6 +1,7 @@
 import { topAppBarInit } from './components/top-app-bar';
 import { drawerInit, drawerHandler } from './components/drawer';
 import { scrollInit } from './components/scroll';
+import rippleInit from './components/ripple';
 import { floatingLabelInit } from './components/floating-label';
 
 document.addEventListener( 'DOMContentLoaded', () => {
@@ -12,4 +13,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	if ( topAppBar && drawer ) {
 		drawerHandler( topAppBar, drawer );
 	}
+
+	rippleInit();
 } );
