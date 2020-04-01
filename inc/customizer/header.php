@@ -148,7 +148,7 @@ function add_image_radio( $wp_customize ) {
 	$args = get_image_radio_args();
 	$controls = [];
 
-	if ( class_exists( 'MaterialThemeBuilder\Customizer\Image_Radio_Control' ) ) {
+	if ( class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
 		$controls[ Customizer\prepend_slug( 'header_layout' ) ] = new \MaterialThemeBuilder\Customizer\Image_Radio_Control(
 			$wp_customize,
 			Customizer\prepend_slug( 'header_layout' ),
