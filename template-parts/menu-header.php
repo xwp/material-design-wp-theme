@@ -17,11 +17,14 @@ $has_changed_color          = ! empty( $top_app_bar_background ) || ! empty( $to
 $has_search                 = get_theme_mod( 'material_header_search_display' );
 
 $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawer' : '';
+
+$is_material_plugin_active  = class_exists( 'MaterialThemeBuilder\Customizer\Material_Color_Palette_Control' );
+
 ?>
 
 <div
 	class="mdc-top-app-bar top-app-bar<?php echo esc_attr( $top_app_bar_layout ); ?>"
-	<?php if ( ! empty( $has_changed_color ) ) : ?>
+	<?php if ( ! empty( $has_changed_color ) && ! $is_material_plugin_active ) : ?>
 		style="
 			<?php if ( ! empty( $top_app_bar_background ) ) : ?>
 				--mdc-theme-primary: <?php echo esc_attr( $top_app_bar_background ); ?>;

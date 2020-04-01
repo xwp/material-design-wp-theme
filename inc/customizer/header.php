@@ -222,27 +222,15 @@ function maybe_use_color_palette_control( $wp_customize ) {
 	 */
 	$controls = [];
 
-	if ( class_exists( 'MaterialThemeBuilder\Customizer\Material_Color_Palette_Control' ) ) {
+	if ( ! class_exists( 'MaterialThemeBuilder\Customizer\Material_Color_Palette_Control' ) ) {
 		foreach ( get_color_controls() as $control ) {
-			$controls[ $control['id'] ] = new \MaterialThemeBuilder\Customizer\Material_Color_Palette_Control(
-				$wp_customize,
-				Customizer\prepend_slug( $control['id'] ),
-				[
+			foreach ( get_color_controls() as $control ) {
+				$controls[ $control['id'] ] = [
 					'label'                => $control['label'],
 					'section'              => Customizer\prepend_slug( 'header_section' ),
-					'related_text_setting' => ! empty( $control['related_text_setting'] ) ? $control['related_text_setting'] : false,
-					'related_setting'      => ! empty( $control['related_setting'] ) ? $control['related_setting'] : false,
-					'css_var'              => $control['css_var'],
-				]
-			);
-		}
-	} else {
-		foreach ( get_color_controls() as $control ) {
-			$controls[ $control['id'] ] = [
-				'label'                => $control['label'],
-				'section'              => Customizer\prepend_slug( 'header_section' ),
-				'type'                 => 'color',
-			];
+					'type'                 => 'color',
+				];
+			}
 		}
 	}
 
