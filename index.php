@@ -33,9 +33,10 @@ get_header();
 			<div class="site-main__inner">
 				<?php get_template_part( 'template-parts/archive' ); ?>
 			</div>
-			
-			<?php
-			the_posts_navigation();
+		</div>
+
+		<?php
+			get_template_part( 'template-parts/page-navigation' );
 
 		else :
 
