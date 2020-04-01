@@ -5,6 +5,39 @@
 	& .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
 		color: var( --mdc-theme-on-primary );
 	}
+
+	@nest .error-404 & {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@media (--medium-viewport) {
+			flex-direction: row;
+			margin-bottom: 25vh;
+			margin-top: 3rem;
+		}
+
+		& .mdc-text-field {
+			@media (--medium-viewport) {
+				width: 70%;
+			}
+		}
+
+		& .mdc-button {
+			display: none;
+
+			@media (--medium-viewport) {
+				display: block;
+			}
+		}
+
+		& .mdc-text-field__icon {
+			@media (--medium-viewport) {
+				display: none;
+			}
+		}
+	}
 }
 
 .search__button:not(:disabled) {
