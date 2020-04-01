@@ -1,4 +1,6 @@
 .top-app-bar {
+	box-shadow: 1px 0 2px rgba( 0, 0, 0, .5 );
+
 	& .site-title a {
 		text-decoration: none;
 	}
@@ -38,6 +40,22 @@
 			@media (--medium-viewport) {
 				font-size: 2rem;
 			}
+		}
+	}
+
+	.top-app-bar__search {
+		background-color: var( --search-background );
+		display: none;
+	}
+
+	&.-with-search {
+
+		.top-app-bar__header {
+			display: none;
+		}
+
+		.top-app-bar__search {
+			display: flex;
 		}
 	}
 }

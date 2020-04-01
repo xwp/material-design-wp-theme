@@ -33,7 +33,7 @@ $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -wi
 		"
 	<?php endif; ?>
 >
-	<div class="mdc-top-app-bar__row">
+	<div class="mdc-top-app-bar__row top-app-bar__header">
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
 			<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger"><?php esc_html_e( 'menu', 'material-theme-wp' ); ?></button>
 			<?php if ( has_custom_logo() ) : ?>
@@ -76,5 +76,11 @@ $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -wi
 				</button>
 			<?php endif; ?>
 		</section>
+	</div>
+
+	<div class="mdc-top-app-bar__row top-app-bar__search">
+		<?php
+		get_template_part( 'template-parts/search', 'header' );
+		?>
 	</div>
 </div>
