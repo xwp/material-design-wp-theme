@@ -155,7 +155,7 @@ function add_image_radio( $wp_customize ) {
 			$args
 		);
 	} else {
-		$controls[ Customizer\prepend_slug( 'header_layout' ) ] = new Image_Radio_Control(
+		$controls[ Customizer\prepend_slug( 'header_layout' ) ] = new Customizer\Image_Radio_Control(
 			$wp_customize,
 			Customizer\prepend_slug( 'header_layout' ),
 			$args
