@@ -222,7 +222,7 @@ function maybe_use_color_palette_control( $wp_customize ) {
 	 */
 	$controls = [];
 
-	if ( ! class_exists( 'MaterialThemeBuilder\Customizer\Material_Color_Palette_Control' ) ) {
+	if ( ! class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
 		foreach ( get_color_controls() as $control ) {
 			foreach ( get_color_controls() as $control ) {
 				$controls[ $control['id'] ] = [
