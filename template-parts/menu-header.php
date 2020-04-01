@@ -19,7 +19,6 @@ $has_search                 = get_theme_mod( 'material_header_search_display' );
 $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawer' : '';
 
 $is_material_plugin_active  = class_exists( 'MaterialThemeBuilder\Plugin' );
-
 ?>
 
 <div
