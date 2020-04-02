@@ -65,8 +65,26 @@
 		margin-bottom: 1.5em;
 	}
 
-	& .mdc-text-field--outlined {
+	& .mdc-text-field--outlined,
+	& .mdc-text-field {
 		width: 100%;
+	}
+
+	& .mdc-text-field--textarea.mdc-text-field--filled {
+		background-color: whitesmoke;
+
+		& textarea {
+			padding: 20px 16px 7px;
+			margin: 0;
+		}
+
+		& .mdc-floating-label {
+			left: 16px;
+
+			&--float-above {
+				top: 32px;
+			}
+		}
 	}
 
 	& .form-submit {

@@ -167,6 +167,7 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/customizer/header.php';
 require get_template_directory() . '/inc/customizer/footer.php';
 require get_template_directory() . '/inc/customizer/archive.php';
+require get_template_directory() . '/inc/customizer/comments.php';
 
 /**
  * Custom menu walker
@@ -190,4 +191,4 @@ MaterialTheme\Customizer\setup();
 MaterialTheme\Customizer\Header\setup();
 MaterialTheme\Customizer\Footer\setup();
 MaterialTheme\Customizer\Archive\setup();
-
+MaterialTheme\Customizer\Comments\setup();

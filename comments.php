@@ -19,6 +19,19 @@ if ( post_password_required() ) {
 	return;
 }
 
+$style   = get_theme_mod( 'material_comment_fields_style' );
+$classes = 'outlined' === $style ? 'mdc-text-field--outlined mdc-text-field--no-label' : 'mdc-text-field--filled';
+
+$outlined_label = '<span class="mdc-notched-outline">
+	<span class="mdc-notched-outline__leading"></span>
+	<span class="mdc-notched-outline__notch">
+	<span class="mdc-floating-label" id="%s">%s</span>
+	</span>
+	<span class="mdc-notched-outline__trailing"></span>
+</span>';
+$filled_label   = '<span class="mdc-floating-label" id="%s">%s</span>
+				<span class="mdc-line-ripple"></span>';
+
 $args      = [
 	'title_reply' => __( 'Leave a comment', 'material-theme-wp' ),
 	'title_reply_before' => '<h4 id="reply-title" class="comment-reply-title mdc-typography--headline4">',
@@ -26,63 +39,58 @@ $args      = [
 	'fields'      => [
 		'author' => sprintf(
 			'<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet">
-				<div class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label comment-field">
+				<div class="mdc-text-field %s comment-field">
 					<input id="author" name="author" class="mdc-text-field__input" aria-labelledby="author-label" required />
-					<span class="mdc-notched-outline">
-						<span class="mdc-notched-outline__leading"></span>
-						<span class="mdc-notched-outline__notch">
-						<span class="mdc-floating-label" id="author-label">%s</span>
-						</span>
-						<span class="mdc-notched-outline__trailing"></span>
-					</span>
+					%s
 				</div>
 			</div>',
-			esc_html__( 'Name', 'material-theme' )
+			esc_attr( $classes ),
+			sprintf(
+				'outlined' === $style ? $outlined_label : $filled_label,
+				esc_html( 'author-label' ),
+				esc_html__( 'Name', 'material-theme' ),
+			)
 		),
 		'email' => sprintf(
 			'<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet">
-				<div class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label comment-field">
+				<div class="mdc-text-field %s comment-field">
 					<input id="email" name="email" type="email" class="mdc-text-field__input" aria-labelledby="email-label" required />
-					<span class="mdc-notched-outline">
-						<span class="mdc-notched-outline__leading"></span>
-						<span class="mdc-notched-outline__notch">
-						<span class="mdc-floating-label" id="email-label">%s</span>
-						</span>
-						<span class="mdc-notched-outline__trailing"></span>
-					</span>
+					%s
 				</div>
 			</div>',
-			esc_html__( 'Email', 'material-theme' )
+			esc_attr( $classes ),
+			sprintf(
+				'outlined' === $style ? $outlined_label : $filled_label,
+				esc_html( 'email-label' ),
+				esc_html__( 'Email', 'material-theme' ),
+			)
 		),
 		'url' => sprintf(
 			'<div class="mdc-layout-grid__cell--span-12">
-				<div class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label comment-field">
+				<div class="mdc-text-field %s comment-field">
 					<input id="url" name="url" type="url" class="mdc-text-field__input" aria-labelledby="url-label" />
-					<span class="mdc-notched-outline">
-						<span class="mdc-notched-outline__leading"></span>
-						<span class="mdc-notched-outline__notch">
-						<span class="mdc-floating-label" id="url-label">%s</span>
-						</span>
-						<span class="mdc-notched-outline__trailing"></span>
-					</span>
+					%s
 				</div>
 			</div>',
-			esc_html__( 'Website', 'material-theme' )
+			esc_attr( $classes ),
+			sprintf(
+				'outlined' === $style ? $outlined_label : $filled_label,
+				esc_html( 'url-label' ),
+				esc_html__( 'Website', 'material-theme' ),
+			)
 		),
 	],
 	'comment_field' => sprintf(
-		'<div class="mdc-text-field mdc-text-field--fullwidth mdc-text-field--no-label mdc-text-field--textarea comment-field">
+		'<div class="mdc-text-field mdc-text-field--textarea %s comment-field">
 			<textarea id="comment" name="comment" class="mdc-text-field__input" required></textarea>
-			<div class="mdc-notched-outline mdc-notched-outline--upgraded">
-				<div class="mdc-notched-outline__leading">
-				</div>
-				<div class="mdc-notched-outline__notch">
-					<label class="mdc-floating-label" for="comment">%s</label>
-				</div>
-				<div class="mdc-notched-outline__trailing"></div>
-			</div>
+			%s
 		</div>',
-		esc_html__( 'Comment', 'material-theme' )
+		esc_attr( $classes ),
+		sprintf(
+			'outlined' === $style ? $outlined_label : $filled_label,
+			esc_html( 'comment' ),
+			esc_html__( 'Comment', 'material-theme' ),
+		)
 	),
 	'submit_button' => '<button id="%2$s" class="mdc-button mdc-button--raised mdc-ripple-upgraded %3$s" type="submit"><span class="mdc-button__ripple"></span><span class="mdc-button__label">%4$s</span></button>'
 ];
