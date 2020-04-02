@@ -173,6 +173,11 @@ require get_template_directory() . '/inc/menu-walker.php';
 require get_template_directory() . '/inc/menu-drawer-walker.php';
 
 /**
+ * Custom comments walker
+ */
+require get_template_directory() . '/inc/class-walker-comment.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {

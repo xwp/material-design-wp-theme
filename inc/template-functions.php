@@ -35,3 +35,72 @@ function material_theme_wp_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'material_theme_wp_pingback_header' );
+
+/**
+ * Filters the comment reply link.
+ *
+ * @param string  $link    The HTML markup for the comment reply link.
+ * @param array   $args    An array of arguments overriding the defaults.
+ * @param object  $comment The object of the comment being replied.
+ * @param WP_Post $post    The WP_Post object.
+ */
+function material_theme_comment_reply_link( $link, $args, $comment, $post ) {
+	$data_attributes = array(
+		'commentid'      => $comment->comment_ID,
+		'postid'         => $post->ID,
+		'belowelement'   => $args['add_below'] . '-' . $comment->comment_ID,
+		'respondelement' => $args['respond_id'],
+	);
+
+	$data_attribute_string = '';
+
+	foreach ( $data_attributes as $name => $value ) {
+		$data_attribute_string .= " data-${name}=\"" . esc_attr( $value ) . '"';
+	}
+
+	$data_attribute_string = trim( $data_attribute_string );
+
+	$link = sprintf(
+		"<a rel='nofollow' class='comment-reply-link mdc-button mdc-button--outlined' href='%s' %s aria-label='%s'> <span class='mdc-button__ripple'></span> %s</a>",
+		esc_url(
+			add_query_arg(
+				array(
+					'replytocom'      => $comment->comment_ID,
+					'unapproved'      => false,
+					'moderation-hash' => false,
+				),
+				get_permalink( $post->ID )
+			)
+		) . '#' . $args['respond_id'],
+		$data_attribute_string,
+		esc_attr( sprintf( $args['reply_to_text'], $comment->comment_author ) ),
+		$args['reply_text']
+	);
+
+	return $args['before'] . $link . $args['after'];
+}
+add_filter( 'comment_reply_link', 'material_theme_comment_reply_link', 10, 4 );
+
+/**
+ * Wrap comment fields in Material layout class.
+ *
+ * @return void
+ */
+function material_theme_comment_form_before_fields() {
+	?>
+	<div class="mdc-layout-grid__inner">
+	<?php
+}
+add_filter( 'comment_form_before_fields', 'material_theme_comment_form_before_fields' );
+
+/**
+ * Wrap comment fields in Material layout class.
+ *
+ * @return void
+ */
+function material_theme_comment_form_after_fields() {
+	?>
+	</div> <!-- .mdc-layout-grid__inner -->
+	<?php
+}
+add_filter( 'comment_form_after_fields', 'material_theme_comment_form_after_fields' );
