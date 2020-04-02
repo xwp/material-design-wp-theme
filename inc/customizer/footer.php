@@ -10,11 +10,20 @@ namespace MaterialTheme\Customizer\Footer;
 use MaterialTheme\Customizer;
 
 /**
+ * Attach hooks.
+ * 
+ * @return void
+ */
+function setup() {
+	add_action( 'customize_register', __NAMESPACE__ . '\register' );
+}
+
+/**
  * Add and initialize footer section
  * 
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function add_section( $wp_customize ) {
+function register( $wp_customize ) {
 	$wp_customize->add_section( 'material_footer_section',
 		[
 			'title' => esc_html__( 'Footer', 'material-theme-wp' ),
@@ -28,7 +37,7 @@ function add_section( $wp_customize ) {
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'footer_text', array(
 			'selector'        => '.site-footer__text',
-			'render_callback' => 'MaterialTheme\Customizer\Footer\render_text',
+			'render_callback' => __NAMESPACE__ . '\render_text',
 			'settings'        => [
 				'material_footer_text',
 			],
@@ -36,7 +45,7 @@ function add_section( $wp_customize ) {
 
 		$wp_customize->selective_refresh->add_partial( 'back_to_top', array(
 			'selector'        => '.back-to-top',
-			'render_callback' => 'MaterialTheme\Customizer\Footer\render_back_to_top',
+			'render_callback' => __NAMESPACE__ . '\render_back_to_top',
 			'settings'        => [
 				'material_hide_back_to_top',
 			],
@@ -44,7 +53,7 @@ function add_section( $wp_customize ) {
 
 		$wp_customize->selective_refresh->add_partial( 'footer_colors', array(
 			'selector'        => '.site-footer',
-			'render_callback' => 'MaterialTheme\Customizer\Footer\render_footer',
+			'render_callback' => __NAMESPACE__ . '\render_footer',
 			'settings'        => [
 				'material_footer_background_color',
 				'material_footer_text_color',

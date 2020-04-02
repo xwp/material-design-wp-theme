@@ -2,8 +2,63 @@
 	margin-left: 0.5rem;
 	margin-right: 0.5rem;
 
-	& .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
-		color: var( --mdc-theme-on-primary );
+	@nest .error-404 & {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@media (--medium-viewport) {
+			flex-direction: row;
+			margin-bottom: 25vh;
+			margin-top: 3rem;
+		}
+
+		& .mdc-text-field {
+			@media (--medium-viewport) {
+				width: 70%;
+			}
+		}
+
+		& .mdc-button {
+			display: none;
+
+			@media (--medium-viewport) {
+				display: block;
+			}
+		}
+
+		& .mdc-text-field__icon {
+			@media (--medium-viewport) {
+				display: none;
+			}
+		}
+	}
+
+	@nest .top-app-bar__search & {
+		align-items: center;
+		display: flex;
+		width: 100%;
+
+		& .mdc-text-field__input {
+			border: 0;
+		}
+
+		& .mdc-button__label {
+			display: none;
+		}
+
+		& .mdc-button__icon {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		& .button__back {
+			padding-left: 0;
+			padding-right: 0;
+			margin-right: 1rem;
+			min-width: 2.25rem;
+		}
 	}
 }
 
