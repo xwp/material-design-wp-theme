@@ -124,19 +124,13 @@ function material_theme_wp_scripts() {
 
 	wp_enqueue_style( 'material-theme-style', get_template_directory_uri() . '/assets/css/front-end-compiled.css', array( 'material-theme-wp-style' ), '20151215' );
 
-	if ( ! wp_style_is( 'material-icons-css', 'enqueued' ) ) {
+	if ( ! wp_style_is( 'material-google-fonts-cdn', 'enqueued' ) ) {
 		wp_enqueue_style(
-			'material-icons-css',
-			esc_url( '//fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined' ),
+			'material-google-fonts-cdn',
+			esc_url( '//fonts.googleapis.com/css?family=Roboto|Material+Icons|Material+Icons+Outlined' ),
 			[]
 		);
 	}
-
-	wp_enqueue_style(
-		'material-icons-outlined-css',
-		esc_url( '//fonts.googleapis.com/css?family=Material+Icons+Outlined' ),
-		[]
-	);
 
 	wp_enqueue_script( 'material-theme-wp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
