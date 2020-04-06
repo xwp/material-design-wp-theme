@@ -16,6 +16,12 @@ function setup() {
 	add_action( 'customize_register', __NAMESPACE__ . '\register' );
 }
 
+/**
+ * Register settings and controls.
+ *
+ * @param  WP_Customize $wp_customize WP_Customize instance.
+ * @return void
+ */
 function register( $wp_customize ) {
 	add_settings( $wp_customize );
 
@@ -27,14 +33,14 @@ function register( $wp_customize ) {
 			'settings'        => [
 				'material_archive_layout',
 			],
-		] 
+		]
 	);
 }
 
 /**
  * Define core controls to use
  *
- * @return void
+ * @return array
  */
 function get_controls() {
 	return [

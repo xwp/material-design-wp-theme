@@ -1,4 +1,10 @@
 <?php
+/**
+ * Page navigation partial
+ *
+ * @package MaterialTheme
+ */
+
 global $wp_query;
 
 $current = absint( max( 1, get_query_var( 'paged' ) ) );
@@ -33,7 +39,7 @@ $links = [
 ?>
 
 <ul class="mdc-page-navigation">
-<?php foreach ( $links as $link ) : ?>
+<?php foreach ( $links as $link ) : // phpcs:ignore ?>
 	<li>
 		<?php if ( false !== $link['link'] ) : ?>
 			<a href="<?php echo esc_url( $link['link'] ); ?>" title="<?php echo esc_html( $link['title'] ); ?>" class="mdc-ripple-surface">

@@ -62,7 +62,7 @@ function add_sections( $wp_customize ) {
 /**
  * Define core controls to use
  *
- * @return void
+ * @return array
  */
 function get_controls() {
 	return [
@@ -125,8 +125,8 @@ function add_controls( $wp_customize ) {
 
 /**
  * Define options for drawer layout
- * 
- * @return void
+ *
+ * @return array
  */
 function get_image_radio_args() {
 	return [

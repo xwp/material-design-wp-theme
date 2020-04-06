@@ -1,9 +1,10 @@
 <?php
 /**
  * Search form partial inside header
- * 
+ *
  * @package MaterialTheme
  */
+
 ?>
 
 <form class="search-form" action="/" method="get">

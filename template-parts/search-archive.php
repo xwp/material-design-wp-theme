@@ -1,9 +1,10 @@
 <?php
 /**
  * Search form partial for archive, 404 pages
- * 
+ *
  * @package MaterialTheme
  */
+
 ?>
 
 <form class="search-form" action="/" method="get">

@@ -125,7 +125,7 @@ function add_settings( $wp_customize ) {
 /**
  * Define core controls to use
  *
- * @return void
+ * @return array
  */
 function get_controls() {
 	return [
@@ -177,7 +177,7 @@ function add_color_controls( $wp_customize ) {
 /**
  * Define color controls to use
  *
- * @return void
+ * @return array
  */
 function get_color_controls() {
 	return [

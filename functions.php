@@ -177,8 +177,8 @@ require get_template_directory() . '/inc/customizer/archive.php';
 /**
  * Custom menu walker
  */
-require get_template_directory() . '/inc/menu-walker.php';
-require get_template_directory() . '/inc/menu-drawer-walker.php';
+require get_template_directory() . '/inc/class-menu-walker.php';
+require get_template_directory() . '/inc/class-menu-drawer-walker.php';
 
 /**
  * Load Jetpack compatibility file.

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Back to Top partial
+ *
+ * @package MaterialTheme
+ */
 
 $is_hidden = get_theme_mod( 'material_hide_back_to_top' );
 

@@ -1,6 +1,8 @@
 <?php
 /**
  * Decide which archive template to render
+ *
+ * @package MaterialTheme
  */
 
 $archive_layout = get_theme_mod( 'material_archive_layout', 'card' );

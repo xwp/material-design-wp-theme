@@ -1,7 +1,10 @@
 <?php
 /**
  * Archive card layout
+ *
+ * @package MaterialTheme
  */
+
 ?>
 
 <div class="archive-cards">

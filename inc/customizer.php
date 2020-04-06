@@ -190,7 +190,8 @@ function get_default_values() {
 /**
  * Add controls to customizer.
  *
- * @param  array $controls Array of controls to add to customizer.
+ * @param  WP_Customize $wp_customize WP_Customize instance.
+ * @param  array        $controls Array of controls to add to customizer.
  * @return void
  */
 function add_controls( $wp_customize, $controls = [] ) {

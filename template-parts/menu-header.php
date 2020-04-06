@@ -7,7 +7,7 @@
  * @package MaterialTheme
  */
 
-use MaterialTheme\Menu;
+use MaterialTheme\Menu_Walker;
 
 $top_app_bar_background     = get_theme_mod( 'material_background_color' );
 $top_app_bar_text           = get_theme_mod( 'material_text_color' );
@@ -65,10 +65,10 @@ $is_material_plugin_active = class_exists( 'MaterialThemeBuilder\Plugin' );
 				array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
-					'walker'         => new Menu\Material_Theme_Menu(),
+					'walker'         => new Menu_Walker(),
 					'container'      => '',
 					'items_wrap'     => '<nav id="%1$s" class="%2$s">%3$s</nav>',
-				) 
+				)
 			);
 			?>
 
