@@ -61,7 +61,7 @@ function material_theme_comment_reply_link( $link, $args, $comment, $post ) {
 	$data_attribute_string = trim( $data_attribute_string );
 
 	$link = sprintf(
-		"<a rel='nofollow' class='comment-reply-link mdc-button mdc-button--outlined' href='%s' %s aria-label='%s'> <span class='mdc-button__ripple'></span> %s</a>",
+		"<a rel='nofollow' class='comment-reply-link mdc-button' href='%s' %s aria-label='%s'> <span class='mdc-button__ripple'></span> %s</a>",
 		esc_url(
 			add_query_arg(
 				array(
