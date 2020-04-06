@@ -1,6 +1,11 @@
 .comments-title,
 .comment-reply-title {
 	margin-bottom: 0.5em;
+
+	& small {
+		font-size: 0.5em;
+		margin-left: 10px;
+	}
 }
 
 .comments-title-count {

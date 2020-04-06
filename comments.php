@@ -19,8 +19,12 @@ if ( post_password_required() ) {
 	return;
 }
 
+$commenter = wp_get_current_commenter();
+
 $style   = get_theme_mod( 'material_comment_fields_style' );
 $classes = 'outlined' === $style ? 'mdc-text-field--outlined mdc-text-field--no-label' : 'mdc-text-field--filled';
+$req      = get_option( 'require_name_email' );
+$html_req = ( $req ? " required='required'" : '' );
 
 $outlined_label = '<span class="mdc-notched-outline">
 	<span class="mdc-notched-outline__leading"></span>
@@ -40,11 +44,13 @@ $args      = [
 		'author' => sprintf(
 			'<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet">
 				<div class="mdc-text-field %s comment-field">
-					<input id="author" name="author" class="mdc-text-field__input" aria-labelledby="author-label" required />
+					<input id="author" name="author" class="mdc-text-field__input" aria-labelledby="author-label" value="%s" %s />
 					%s
 				</div>
 			</div>',
 			esc_attr( $classes ),
+			esc_attr( $commenter['comment_author'] ),
+			$html_req,
 			sprintf(
 				'outlined' === $style ? $outlined_label : $filled_label,
 				esc_html( 'author-label' ),
@@ -54,11 +60,13 @@ $args      = [
 		'email' => sprintf(
 			'<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet">
 				<div class="mdc-text-field %s comment-field">
-					<input id="email" name="email" type="email" class="mdc-text-field__input" aria-labelledby="email-label" required />
+					<input id="email" name="email" type="email" class="mdc-text-field__input" aria-labelledby="email-label" value="%s" %s />
 					%s
 				</div>
 			</div>',
 			esc_attr( $classes ),
+			esc_attr( $commenter['comment_author_email'] ),
+			$html_req,
 			sprintf(
 				'outlined' === $style ? $outlined_label : $filled_label,
 				esc_html( 'email-label' ),
@@ -68,11 +76,12 @@ $args      = [
 		'url' => sprintf(
 			'<div class="mdc-layout-grid__cell--span-12">
 				<div class="mdc-text-field %s comment-field">
-					<input id="url" name="url" type="url" class="mdc-text-field__input" aria-labelledby="url-label" />
+					<input id="url" name="url" type="url" class="mdc-text-field__input" aria-labelledby="url-label" value="%s" />
 					%s
 				</div>
 			</div>',
 			esc_attr( $classes ),
+			esc_attr( $commenter['comment_author_url'] ),
 			sprintf(
 				'outlined' === $style ? $outlined_label : $filled_label,
 				esc_html( 'url-label' ),
@@ -96,7 +105,6 @@ $args      = [
 ];
 
 if ( has_action( 'set_comment_cookies', 'wp_set_comment_cookies' ) && get_option( 'show_comments_cookies_opt_in' ) ) {
-	$commenter = wp_get_current_commenter();
 	$consent   = empty( $commenter['comment_author_email'] ) ? '' : 'checked="checked"';
 
 	$args['fields']['cookies'] = sprintf(
@@ -135,13 +143,14 @@ if ( has_action( 'set_comment_cookies', 'wp_set_comment_cookies' ) && get_option
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
+		$count = get_comments_number();
 		?>
 		<h4 class="comments-title mdc-typography--headline4">
 			<?php esc_html_e( 'Join the conversation', 'material-theme-wp' ); ?>
 		</h4><!-- .comments-title -->
 		<div class="comments-title-count">
 			<span class="material-icons">comment</span>
-			<span class="comment-count"><?php echo esc_html( get_comments_number() );?> <?php esc_html_e( 'comments', 'material-theme-wp' ); ?></span>
+			<span class="comment-count"><?php echo esc_html( $count );?> <?php echo esc_html( _n( 'comment', 'comments', $count, 'material-theme-wp' ) ); ?></span>
 		</div><!-- .comments-title -->
 
 		<?php the_comments_navigation(); ?>
