@@ -2,7 +2,7 @@
 /**
  * Search form partial
  * 
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 ?>
 

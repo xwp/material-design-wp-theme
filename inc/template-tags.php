@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 
 if ( ! function_exists( 'material_theme_wp_posted_on' ) ) :

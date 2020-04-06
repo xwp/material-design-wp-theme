@@ -2,7 +2,7 @@
 /**
  * Material-theme-wp Theme Customizer
  *
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 
 namespace MaterialTheme\Customizer\Footer;

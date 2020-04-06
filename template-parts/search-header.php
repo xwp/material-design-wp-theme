@@ -2,7 +2,7 @@
 /**
  * Search form partial inside header
  * 
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 ?>
 

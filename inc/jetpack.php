@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 
 /**

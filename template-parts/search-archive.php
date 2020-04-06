@@ -2,7 +2,7 @@
 /**
  * Search form partial for archive, 404 pages
  * 
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 ?>
 

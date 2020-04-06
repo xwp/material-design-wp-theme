@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 
 if ( ! function_exists( 'material_theme_wp_setup' ) ) :

@@ -3,7 +3,7 @@
  * Custom menu walker
  * Adds Material Button to menu links
  * 
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 
 namespace MaterialTheme\Menu;
