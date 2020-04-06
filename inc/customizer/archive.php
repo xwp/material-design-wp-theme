@@ -40,11 +40,11 @@ function get_controls() {
 	return [
 		[
 			'id'      => Customizer\prepend_slug( 'archive_layout' ),
-			'label'   => esc_html__( 'Choose archive layout', 'material-theme-wp' ),
+			'label'   => esc_html__( 'Choose archive layout', 'material-theme' ),
 			'type'    => 'radio',
 			'choices' => [
-				'card'  => esc_html__( 'Card', 'material-theme-wp' ),
-				'image' => esc_html__( 'Image List', 'material-theme-wp' ),
+				'card'  => esc_html__( 'Card', 'material-theme' ),
+				'image' => esc_html__( 'Image List', 'material-theme' ),
 			],
 		],
 	];

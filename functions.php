@@ -20,9 +20,9 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on Material-theme-wp, use a find and replace
-		 * to change 'material-theme-wp' to the name of your theme in all the template files.
+		 * to change 'material-theme' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'material-theme-wp', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'material-theme', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -45,7 +45,7 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'material-theme-wp' ),
+				'menu-1' => esc_html__( 'Primary', 'material-theme' ),
 			) 
 		);
 
@@ -120,14 +120,14 @@ add_action( 'after_setup_theme', 'material_theme_wp_content_width', 0 );
 function material_theme_wp_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'material-theme-wp' ),
+			'name'          => esc_html__( 'Sidebar', 'material-theme' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'material-theme-wp' ),
+			'description'   => esc_html__( 'Add widgets here.', 'material-theme' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
-		) 
+		)
 	);
 }
 add_action( 'widgets_init', 'material_theme_wp_widgets_init' );
@@ -136,9 +136,9 @@ add_action( 'widgets_init', 'material_theme_wp_widgets_init' );
  * Enqueue scripts and styles.
  */
 function material_theme_wp_scripts() {
-	wp_enqueue_style( 'material-theme-wp-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'material-theme-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'material-theme-style', get_template_directory_uri() . '/assets/css/front-end-compiled.css', array( 'material-theme-wp-style' ), '20151215' );
+	wp_enqueue_style( 'material-theme-style', get_template_directory_uri() . '/assets/css/front-end-compiled.css', array( 'material-theme-style' ), '20151215' );
 
 	if ( ! wp_style_is( 'material-google-fonts-cdn', 'enqueued' ) ) {
 		wp_enqueue_style(

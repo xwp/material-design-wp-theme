@@ -33,7 +33,7 @@
 				<i class="material-icons mdc-button__icon" aria-hidden="true">comment</i>
 				<?php
 				printf(
-					_nx( 'One Comment', '%1$s Comments', get_comments_number(), 'comments title', 'material-theme-wp' ),
+					_nx( 'One Comment', '%1$s Comments', get_comments_number(), 'comments title', 'material-theme' ),
 					number_format_i18n( get_comments_number() )
 				);
 				?>

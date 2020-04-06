@@ -37,7 +37,7 @@ $is_material_plugin_active = class_exists( 'MaterialThemeBuilder\Plugin' );
 >
 	<div class="mdc-top-app-bar__row top-app-bar__header">
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-			<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger"><?php esc_html_e( 'menu', 'material-theme-wp' ); ?></button>
+			<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger"><?php esc_html_e( 'menu', 'material-theme' ); ?></button>
 			<?php if ( has_custom_logo() ) : ?>
 				<div class="logo">
 					<?php the_custom_logo(); ?>
@@ -76,7 +76,7 @@ $is_material_plugin_active = class_exists( 'MaterialThemeBuilder\Plugin' );
 				<button class="mdc-button mdc-button--outlined search__button"> 
 					<span class="mdc-button__ripple"></span>
 					<i class="material-icons mdc-button__icon">search</i>
-					<?php esc_html_e( 'Search', 'material-theme-wp' ); ?>
+					<?php esc_html_e( 'Search', 'material-theme' ); ?>
 				</button>
 			<?php endif; ?>
 		</section>

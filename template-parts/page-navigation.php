@@ -12,22 +12,22 @@ $links = [
 	[
 		'link'  => 1 === $current ? false : get_pagenum_link( 1 ),
 		'icon'  => 'first_page',
-		'title' => __( 'First', 'material-theme-wp' ),
+		'title' => __( 'First', 'material-theme' ),
 	],
 	[
 		'link'  => $current <= 1 ? false : get_pagenum_link( $current - 1 ),
 		'icon'  => 'chevron_left',
-		'title' => __( 'Previous', 'material-theme-wp' ),
+		'title' => __( 'Previous', 'material-theme' ),
 	],
 	[
 		'link'  => $current >= $total ? false : get_pagenum_link( $current + 1 ),
 		'icon'  => 'chevron_right',
-		'title' => __( 'Next', 'material-theme-wp' ),
+		'title' => __( 'Next', 'material-theme' ),
 	],
 	[
 		'link'  => $total === $current ? false : get_pagenum_link( $total ),
 		'icon'  => 'last_page',
-		'title' => __( 'Last', 'material-theme-wp' ),
+		'title' => __( 'Last', 'material-theme' ),
 	],
 ];
 ?>

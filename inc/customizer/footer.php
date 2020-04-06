@@ -27,7 +27,7 @@ function register( $wp_customize ) {
 	$wp_customize->add_section(
 		'material_footer_section',
 		[
-			'title' => esc_html__( 'Footer', 'material-theme-wp' ),
+			'title' => esc_html__( 'Footer', 'material-theme' ),
 		]
 	);
 
@@ -131,12 +131,12 @@ function get_controls() {
 	return [
 		[
 			'id'    => 'hide_back_to_top',
-			'label' => esc_html__( 'Hide back to top button', 'material-theme-wp' ),
+			'label' => esc_html__( 'Hide back to top button', 'material-theme' ),
 			'type'  => 'checkbox',
 		],
 		[
 			'id'    => 'footer_text',
-			'label' => esc_html__( 'Footer text', 'material-theme-wp' ),
+			'label' => esc_html__( 'Footer text', 'material-theme' ),
 			'type'  => 'text',
 		],
 	];
@@ -183,13 +183,13 @@ function get_color_controls() {
 	return [
 		[
 			'id'                   => 'footer_background_color',
-			'label'                => esc_html__( 'Bakground Color', 'material-theme-wp' ),
+			'label'                => esc_html__( 'Bakground Color', 'material-theme' ),
 			'related_text_setting' => Customizer\prepend_slug( 'footer_text_color' ),
 			'css_var'              => '--mdc-theme-primary',
 		],
 		[
 			'id'                   => 'footer_text_color',
-			'label'                => esc_html__( 'Text Color', 'material-theme-wp' ),
+			'label'                => esc_html__( 'Text Color', 'material-theme' ),
 			'related_text_setting' => Customizer\prepend_slug( 'footer_background_color' ),
 			'css_var'              => '--mdc-theme-on-primary',
 		],

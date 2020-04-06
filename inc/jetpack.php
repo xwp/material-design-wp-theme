@@ -22,7 +22,7 @@ function material_theme_wp_jetpack_setup() {
 			'container' => 'main',
 			'render'    => 'material_theme_wp_infinite_scroll_render',
 			'footer'    => 'page',
-		) 
+		)
 	);
 
 	// Add theme support for Responsive Videos.
@@ -33,7 +33,7 @@ function material_theme_wp_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details'    => array(
-				'stylesheet' => 'material-theme-wp-style',
+				'stylesheet' => 'material-theme-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -45,7 +45,7 @@ function material_theme_wp_jetpack_setup() {
 				'post'    => true,
 				'page'    => true,
 			),
-		) 
+		)
 	);
 }
 add_action( 'after_setup_theme', 'material_theme_wp_jetpack_setup' );
