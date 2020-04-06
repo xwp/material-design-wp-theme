@@ -15,7 +15,7 @@ get_header();
 
 		<?php
 		if ( have_posts() ) :
-		?>
+			?>
 
 			<header class="page-header">
 				<?php
@@ -29,7 +29,7 @@ get_header();
 			</div>
 		</div>
 
-		<?php
+			<?php
 			get_template_part( 'template-parts/page-navigation' );
 
 		else :

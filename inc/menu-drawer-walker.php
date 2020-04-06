@@ -22,7 +22,7 @@ class Material_Theme_Drawer_Menu extends \Walker {
 			'<a href="%1$s" %2$s>%3$s</a>',
 			esc_url( $item->url ),
 			( absint( $item->object_id ) === get_the_ID() ) ? ' class="mdc-list-item mdc-list-item--activated"' : ' class="mdc-list-item"',
-			'<span class="mdc-list-item__text">' . esc_html( $item->title ) .'</span>'
+			'<span class="mdc-list-item__text">' . esc_html( $item->title ) . '</span>'
 		);
 	}
 }

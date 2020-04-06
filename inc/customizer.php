@@ -34,14 +34,20 @@ function register( $wp_customize ) {
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
-		$wp_customize->selective_refresh->add_partial( 'blogname', array(
-			'selector'        => '.site-title a',
-			'render_callback' => __NAMESPACE__ . '\get_blogname',
-		) );
-		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
-			'selector'        => '.site-description',
-			'render_callback' => __NAMESPACE__ . '\get_description',
-		) );
+		$wp_customize->selective_refresh->add_partial(
+			'blogname',
+			array(
+				'selector'        => '.site-title a',
+				'render_callback' => __NAMESPACE__ . '\get_blogname',
+			) 
+		);
+		$wp_customize->selective_refresh->add_partial(
+			'blogdescription',
+			array(
+				'selector'        => '.site-description',
+				'render_callback' => __NAMESPACE__ . '\get_description',
+			) 
+		);
 	}
 }
 
@@ -159,9 +165,9 @@ function prepend_slug( $name ) {
  * @return mixed
  */
 function get_default( $setting ) {
-	$slug = get_slug();
+	$slug     = get_slug();
 	$setting  = str_replace( "{$slug}_", '', $setting );
-	$defaults   = get_default_values();
+	$defaults = get_default_values();
 
 	return isset( $defaults[ $setting ] ) ? $defaults[ $setting ] : '';
 }

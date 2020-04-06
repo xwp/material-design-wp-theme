@@ -13,12 +13,12 @@ $top_app_bar_background     = get_theme_mod( 'material_background_color' );
 $top_app_bar_text           = get_theme_mod( 'material_text_color' );
 $top_app_bar_layout_setting = get_theme_mod( 'material_header_layout' );
 
-$has_changed_color          = ! empty( $top_app_bar_background ) || ! empty( $top_app_bar_text );
-$has_search                 = get_theme_mod( 'material_header_search_display' );
+$has_changed_color = ! empty( $top_app_bar_background ) || ! empty( $top_app_bar_text );
+$has_search        = get_theme_mod( 'material_header_search_display' );
 
-$top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawer' : '';
+$top_app_bar_layout = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawer' : '';
 
-$is_material_plugin_active  = class_exists( 'MaterialThemeBuilder\Plugin' );
+$is_material_plugin_active = class_exists( 'MaterialThemeBuilder\Plugin' );
 ?>
 
 <div
@@ -61,13 +61,15 @@ $is_material_plugin_active  = class_exists( 'MaterialThemeBuilder\Plugin' );
 		</section>
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end top-app-bar__menu" role="toolbar">
 			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-				'walker'         => new Menu\Material_Theme_Menu(),
-				'container'      => '',
-				'items_wrap'     => '<nav id="%1$s" class="%2$s">%3$s</nav>',
-			) );
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+					'walker'         => new Menu\Material_Theme_Menu(),
+					'container'      => '',
+					'items_wrap'     => '<nav id="%1$s" class="%2$s">%3$s</nav>',
+				) 
+			);
 			?>
 
 			<?php if ( ! empty( $has_search ) ) : ?>

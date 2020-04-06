@@ -28,14 +28,14 @@ get_header();
 				</header>
 				<?php
 			endif;
-		?>
+			?>
 
 			<div class="site-main__inner">
 				<?php get_template_part( 'template-parts/archive' ); ?>
 			</div>
 		</div>
 
-		<?php
+			<?php
 			get_template_part( 'template-parts/page-navigation' );
 
 		else :

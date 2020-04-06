@@ -24,7 +24,8 @@ function setup() {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function register( $wp_customize ) {
-	$wp_customize->add_section( 'material_footer_section',
+	$wp_customize->add_section(
+		'material_footer_section',
 		[
 			'title' => esc_html__( 'Footer', 'material-theme-wp' ),
 		]
@@ -35,30 +36,39 @@ function register( $wp_customize ) {
 	add_color_controls( $wp_customize );
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
-		$wp_customize->selective_refresh->add_partial( 'footer_text', array(
-			'selector'        => '.site-footer__text',
-			'render_callback' => __NAMESPACE__ . '\render_text',
-			'settings'        => [
-				'material_footer_text',
-			],
-		) );
+		$wp_customize->selective_refresh->add_partial(
+			'footer_text',
+			array(
+				'selector'        => '.site-footer__text',
+				'render_callback' => __NAMESPACE__ . '\render_text',
+				'settings'        => [
+					'material_footer_text',
+				],
+			) 
+		);
 
-		$wp_customize->selective_refresh->add_partial( 'back_to_top', array(
-			'selector'        => '.back-to-top',
-			'render_callback' => __NAMESPACE__ . '\render_back_to_top',
-			'settings'        => [
-				'material_hide_back_to_top',
-			],
-		) );
+		$wp_customize->selective_refresh->add_partial(
+			'back_to_top',
+			array(
+				'selector'        => '.back-to-top',
+				'render_callback' => __NAMESPACE__ . '\render_back_to_top',
+				'settings'        => [
+					'material_hide_back_to_top',
+				],
+			) 
+		);
 
-		$wp_customize->selective_refresh->add_partial( 'footer_colors', array(
-			'selector'        => '.site-footer',
-			'render_callback' => __NAMESPACE__ . '\render_footer',
-			'settings'        => [
-				'material_footer_background_color',
-				'material_footer_text_color',
-			],
-		) );
+		$wp_customize->selective_refresh->add_partial(
+			'footer_colors',
+			array(
+				'selector'        => '.site-footer',
+				'render_callback' => __NAMESPACE__ . '\render_footer',
+				'settings'        => [
+					'material_footer_background_color',
+					'material_footer_text_color',
+				],
+			) 
+		);
 	}
 }
 
@@ -81,8 +91,8 @@ function add_controls( $wp_customize ) {
 	$controls = [];
 
 	foreach ( get_controls() as $control ) {
-		$controls[ $control[ 'id' ] ] = [
-			'label' => $control['label'],
+		$controls[ $control['id'] ] = [
+			'label'   => $control['label'],
 			'section' => Customizer\prepend_slug( 'footer_section' ),
 			'type'    => $control['type'],
 		];
@@ -120,15 +130,15 @@ function add_settings( $wp_customize ) {
 function get_controls() {
 	return [
 		[
-			'id'                   => 'hide_back_to_top',
-			'label'                => esc_html__( 'Hide back to top button', 'material-theme-wp' ),
-			'type'                 => 'checkbox',
+			'id'    => 'hide_back_to_top',
+			'label' => esc_html__( 'Hide back to top button', 'material-theme-wp' ),
+			'type'  => 'checkbox',
 		],
 		[
-			'id'                   => 'footer_text',
-			'label'                => esc_html__( 'Footer text', 'material-theme-wp' ),
-			'type'                 => 'text',
-		]
+			'id'    => 'footer_text',
+			'label' => esc_html__( 'Footer text', 'material-theme-wp' ),
+			'type'  => 'text',
+		],
 	];
 }
 
@@ -215,9 +225,9 @@ function maybe_use_color_palette_control( $wp_customize ) {
 	} else {
 		foreach ( get_color_controls() as $control ) {
 			$controls[ $control['id'] ] = [
-				'label'                => $control['label'],
-				'section'              => Customizer\prepend_slug( 'footer_section' ),
-				'type'                 => 'color',
+				'label'   => $control['label'],
+				'section' => Customizer\prepend_slug( 'footer_section' ),
+				'type'    => 'color',
 			];
 		}
 	}

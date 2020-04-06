@@ -1,9 +1,9 @@
 <?php
 /**
-* Search form partial for archive, 404 pages
-* 
-* @package Material-theme-wp
-*/
+ * Search form partial for archive, 404 pages
+ * 
+ * @package Material-theme-wp
+ */
 ?>
 
 <form class="search-form" action="/" method="get">

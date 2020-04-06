@@ -7,7 +7,7 @@ $footer_text             = get_theme_mod( 'material_footer_text' );
 $footer_background_color = get_theme_mod( 'material_footer_background_color' );
 $footer_text_color       = get_theme_mod( 'material_footer_text_color' );
 
-$has_changed_color      = ! empty( $footer_background_color ) || ! empty( $footer_text_color );
+$has_changed_color = ! empty( $footer_background_color ) || ! empty( $footer_text_color );
 ?>
 
 	<div

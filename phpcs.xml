@@ -25,7 +25,7 @@
 	<rule ref="PHPCompatibilityWP" />
 
 	<!-- Disallow long array syntax -->
-	<rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+	<!-- <rule ref="Generic.Arrays.DisallowLongArraySyntax"/> -->
 
 	<config name="testVersion" value="5.6-" />
 

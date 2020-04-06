@@ -1,9 +1,9 @@
 <?php
 /**
-* Search form partial inside header
-* 
-* @package Material-theme-wp
-*/
+ * Search form partial inside header
+ * 
+ * @package Material-theme-wp
+ */
 ?>
 
 <form class="search-form" action="/" method="get">

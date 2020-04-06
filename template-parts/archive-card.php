@@ -6,7 +6,7 @@
 
 <div class="archive-cards">
 	<?php
-	$i = 1;
+	$i              = 1;
 	$posts_per_page = get_option( 'posts_per_page' );
 	$column_limit   = absint( round( $posts_per_page / 2 ) );
 
@@ -23,5 +23,5 @@
 
 		endwhile;
 
-		?>
+	?>
 </div>

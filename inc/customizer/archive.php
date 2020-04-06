@@ -19,13 +19,16 @@ function setup() {
 function register( $wp_customize ) {
 	add_settings( $wp_customize );
 
-	$wp_customize->selective_refresh->add_partial( 'archive_layout', [
-		'selector'        => '.site-main__inner',
-		'render_callback' => __NAMESPACE__ . '\render_layout',
-		'settings'        => [
-			'material_archive_layout'
-		],
-	] );
+	$wp_customize->selective_refresh->add_partial(
+		'archive_layout',
+		[
+			'selector'        => '.site-main__inner',
+			'render_callback' => __NAMESPACE__ . '\render_layout',
+			'settings'        => [
+				'material_archive_layout',
+			],
+		] 
+	);
 }
 
 /**
@@ -41,7 +44,7 @@ function get_controls() {
 			'type'    => 'radio',
 			'choices' => [
 				'card'  => esc_html__( 'Card', 'material-theme-wp' ),
-				'image' => esc_html__( 'Image List', 'material-theme-wp' )
+				'image' => esc_html__( 'Image List', 'material-theme-wp' ),
 			],
 		],
 	];
@@ -77,9 +80,12 @@ function add_controls( $wp_customize ) {
 	$controls = [];
 
 	foreach ( get_controls() as $control ) {
-		$controls[ $control[ 'id' ] ] = array_merge( [
-			'section' => 'static_front_page',
-		], $control );
+		$controls[ $control['id'] ] = array_merge(
+			[
+				'section' => 'static_front_page',
+			],
+			$control 
+		);
 	}
 
 	Customizer\add_controls( $wp_customize, $controls );
