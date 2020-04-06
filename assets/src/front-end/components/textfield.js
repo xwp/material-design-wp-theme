@@ -10,4 +10,4 @@ export const textFieldInit = () => {
 	for ( let textFieldElement of textFieldElements ) {
 		new MDCTextField( textFieldElement );
 	}
-}
+};
