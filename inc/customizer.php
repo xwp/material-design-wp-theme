@@ -11,7 +11,7 @@ use MaterialTheme\Customizer\Footer;
 
 /**
  * Attach hooks.
- * 
+ *
  * @return void
  */
 function setup() {
@@ -74,7 +74,7 @@ function get_description() {
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
- * 
+ *
  * @return void
  */
 function preview_scripts() {
@@ -83,7 +83,7 @@ function preview_scripts() {
 
 /**
  * Enqueue control scripts.
- * 
+ *
  * @return void
  */
 function scripts() {
