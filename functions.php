@@ -46,7 +46,7 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'material-theme' ),
-			) 
+			)
 		);
 
 		/*
@@ -61,7 +61,7 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 				'comment-list',
 				'gallery',
 				'caption',
-			) 
+			)
 		);
 
 		// Set up the WordPress core custom background feature.
@@ -72,8 +72,8 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 				array(
 					'default-color' => 'ffffff',
 					'default-image' => '',
-				) 
-			) 
+				)
+			)
 		);
 
 		// Add theme support for selective refresh for widgets.
@@ -91,7 +91,7 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 				'width'       => 250,
 				'flex-width'  => true,
 				'flex-height' => true,
-			) 
+			)
 		);
 	}
 endif;
@@ -136,19 +136,22 @@ add_action( 'widgets_init', 'material_theme_wp_widgets_init' );
  * Enqueue scripts and styles.
  */
 function material_theme_wp_scripts() {
-	wp_enqueue_style( 'material-theme-style', get_stylesheet_uri() );
+	$theme_version = wp_get_theme()->get( 'Version' );
 
-	wp_enqueue_style( 'material-theme-style', get_template_directory_uri() . '/assets/css/front-end-compiled.css', array( 'material-theme-style' ), '20151215' );
+	wp_enqueue_style( 'material-theme-style', get_stylesheet_uri(), array(), $theme_version );
+
+	wp_enqueue_style( 'material-theme-style', get_template_directory_uri() . '/assets/css/front-end-compiled.css', array( 'material-theme-style' ), $theme_version );
 
 	if ( ! wp_style_is( 'material-google-fonts-cdn', 'enqueued' ) ) {
 		wp_enqueue_style(
 			'material-google-fonts-cdn',
 			esc_url( '//fonts.googleapis.com/css?family=Roboto|Material+Icons|Material+Icons+Outlined' ),
-			[]
+			[],
+			$theme_version
 		);
 	}
 
-	wp_enqueue_script( 'material-theme-js', get_template_directory_uri() . '/assets/js/front-end.js', array(), '20151215', true );
+	wp_enqueue_script( 'material-theme-js', get_template_directory_uri() . '/assets/js/front-end.js', array(), $theme_version, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

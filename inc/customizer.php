@@ -84,7 +84,9 @@ function get_description() {
  * @return void
  */
 function preview_scripts() {
-	wp_enqueue_script( 'material-theme-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+	$theme_version = wp_get_theme()->get( 'Version' );
+
+	wp_enqueue_script( 'material-theme-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), $theme_version, true );
 }
 
 /**
@@ -93,10 +95,13 @@ function preview_scripts() {
  * @return void
  */
 function scripts() {
+	$theme_version = wp_get_theme()->get( 'Version' );
+
 	wp_enqueue_style(
 		'material-theme-customizer-styles',
 		get_template_directory_uri() . '/assets/css/customize-controls-compiled.css',
-		[]
+		[],
+		$theme_version
 	);
 }
 
