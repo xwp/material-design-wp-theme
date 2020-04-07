@@ -44,6 +44,10 @@
     "readme": [
       "vendor/xwp/wp-dev-lib/scripts/generate-markdown-readme"
     ],
+    "setup": [
+      "SlowProg\\CopyFile\\ScriptHandler::copy",
+      "if [ ! -f .git/hooks/pre-commit ]; then vendor/xwp/wp-dev-lib/scripts/install-pre-commit-hook.sh; fi"
+    ],
     "test": [
       "phpunit"
     ],
