@@ -18,7 +18,7 @@ export const drawerHandler = ( topAppBar, drawer ) => {
 	const listElement = drawerElement.querySelector( '.mdc-list' );
 	const mainContentElement = document.querySelector( '.site-content' );
 
-	listElement.addEventListener( 'click', event => {
+	listElement.addEventListener( 'click', () => {
 		drawer.open = false;
 	} );
 

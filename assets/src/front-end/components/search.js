@@ -4,6 +4,7 @@
 class Search {
 	/**
 	 * Store elements
+	 *
 	 * @param {*} element
 	 */
 	constructor( element ) {
