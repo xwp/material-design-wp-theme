@@ -1,4 +1,5 @@
 .material-drawer {
+
 	& .mdc-drawer__header {
 		display: flex;
 	}

@@ -11,14 +11,17 @@
 	margin: 0 -25% 0 0;
 	width: 100%;
 }
+
 .site-main {
 	margin: 0 25% 0 0;
 }
+
 .site-content .widget-area {
 	float: right;
 	overflow: hidden;
 	width: 25%;
 }
+
 .site-footer {
 	clear: both;
 	width: 100%;
@@ -29,6 +32,7 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+
 .no-sidebar .site-main {
 	margin-right: 0;
 }

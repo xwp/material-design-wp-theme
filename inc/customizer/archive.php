@@ -2,7 +2,7 @@
 /**
  * Material-theme-wp Theme Customizer
  *
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 
 namespace MaterialTheme\Customizer\Archive;
@@ -16,32 +16,41 @@ function setup() {
 	add_action( 'customize_register', __NAMESPACE__ . '\register' );
 }
 
+/**
+ * Register settings and controls.
+ *
+ * @param  WP_Customize $wp_customize WP_Customize instance.
+ * @return void
+ */
 function register( $wp_customize ) {
 	add_settings( $wp_customize );
 
-	$wp_customize->selective_refresh->add_partial( 'archive_layout', [
-		'selector'        => '.site-main__inner',
-		'render_callback' => __NAMESPACE__ . '\render_layout',
-		'settings'        => [
-			'material_archive_layout'
-		],
-	] );
+	$wp_customize->selective_refresh->add_partial(
+		'archive_layout',
+		[
+			'selector'        => '.site-main__inner',
+			'render_callback' => __NAMESPACE__ . '\render_layout',
+			'settings'        => [
+				'material_archive_layout',
+			],
+		]
+	);
 }
 
 /**
  * Define core controls to use
  *
- * @return void
+ * @return array
  */
 function get_controls() {
 	return [
 		[
 			'id'      => Customizer\prepend_slug( 'archive_layout' ),
-			'label'   => esc_html__( 'Choose archive layout', 'material-theme-wp' ),
+			'label'   => esc_html__( 'Choose archive layout', 'material-theme' ),
 			'type'    => 'radio',
 			'choices' => [
-				'card'  => esc_html__( 'Card', 'material-theme-wp' ),
-				'image' => esc_html__( 'Image List', 'material-theme-wp' )
+				'card'  => esc_html__( 'Card', 'material-theme' ),
+				'image' => esc_html__( 'Image List', 'material-theme' ),
 			],
 		],
 	];
@@ -77,9 +86,12 @@ function add_controls( $wp_customize ) {
 	$controls = [];
 
 	foreach ( get_controls() as $control ) {
-		$controls[ $control[ 'id' ] ] = array_merge( [
-			'section' => 'static_front_page',
-		], $control );
+		$controls[ $control['id'] ] = array_merge(
+			[
+				'section' => 'static_front_page',
+			],
+			$control 
+		);
 	}
 
 	Customizer\add_controls( $wp_customize, $controls );

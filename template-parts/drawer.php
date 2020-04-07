@@ -4,18 +4,18 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 
-use MaterialTheme\Menu;
+use MaterialTheme\Menu_Drawer_Walker;
 
 $top_app_bar_background     = get_theme_mod( 'material_background_color' );
 $top_app_bar_text           = get_theme_mod( 'material_text_color' );
 $top_app_bar_layout_setting = get_theme_mod( 'material_header_layout', 'menu' );
 
-$has_changed_color          = ! empty( $top_app_bar_background ) || ! empty( $top_app_bar_text );
+$has_changed_color = ! empty( $top_app_bar_background ) || ! empty( $top_app_bar_text );
 
-$top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawer' : '';
+$top_app_bar_layout = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawer' : '';
 
 ?>
 
@@ -44,13 +44,15 @@ $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -wi
 			<?php endif; ?>
 		>
 			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-				'walker'         => new Menu\Material_Theme_Drawer_Menu(),
-				'container'      => '',
-				'items_wrap'     => '%3$s',
-			) );
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+					'walker'         => new Menu_Drawer_Walker(),
+					'container'      => '',
+					'items_wrap'     => '%3$s',
+				)
+			);
 			?>
 		</nav>
 

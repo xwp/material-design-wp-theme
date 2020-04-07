@@ -1,8 +1,10 @@
 {
   "name": "material-theme-wp",
+  "private": true,
   "version": "1.0.0",
-  "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
-  "main": "index.js",
+  "title": "Material Theme",
+  "description": "Material Theme",
+  "author": "XWP",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.8.7",
@@ -19,10 +21,18 @@
     "@material/textfield": "^5.1.0",
     "@material/top-app-bar": "^5.1.0",
     "@material/typography": "^5.1.0",
+    "@wordpress/eslint-plugin": "4.0.0",
     "@wordpress/postcss-themes": "^2.3.0",
     "@wordpress/scripts": "^7.1.3",
+    "babel-eslint": "10.0.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
+    "eslint": "6.8.0",
+    "eslint-plugin-eslint-comments": "3.1.2",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-jest": "23.7.0",
+    "eslint-plugin-react": "7.18.3",
+    "eslint-utils": "2.0.0",
     "extract-loader": "^5.0.1",
     "grunt": "1.0.4",
     "grunt-contrib-clean": "2.0.0",
@@ -44,22 +54,30 @@
     "webpackbar": "^4.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm-run-all build:*",
     "build:prepare": "grunt clean",
     "build:js": "wp-scripts build",
     "build:run": "grunt build",
     "build:zip": "grunt create-build-zip",
-    "dev": "webpack -d --watch"
+    "dev": "wp-scripts start",
+    "format": "npm-run-all --parallel format:*",
+    "format:css": "npm run lint:css -- --fix",
+    "format:js": "wp-scripts format-js",
+    "format:php": "composer format",
+    "lint": "npm-run-all --parallel lint:*",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "lint:php": "composer lint",
+    "postinstall": "composer install",
+    "test": "npm-run-all --parallel test:js test:php"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/emeaguiar/material-theme-wp.git"
+    "url": "git+https://github.com/xwp/material-theme-wp.git"
   },
-  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/emeaguiar/material-theme-wp/issues"
+    "url": "https://github.com/xwp/material-theme-wp/issues"
   },
-  "homepage": "https://github.com/emeaguiar/material-theme-wp#readme"
+  "homepage": "https://github.com/xwp/material-theme-wp#readme"
 }

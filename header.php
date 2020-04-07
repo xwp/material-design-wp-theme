@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 
 ?>
@@ -22,7 +22,7 @@
 
 <body <?php body_class( 'mdc-typography' ); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'material-theme-wp' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'material-theme' ); ?></a>
 
 	<?php get_template_part( 'template-parts/drawer' ); ?>
 

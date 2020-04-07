@@ -4,7 +4,7 @@
 
 	& .site-footer__inner {
 		align-items: center;
-		background-color: var( --mdc-theme-primary );
+		background-color: var(--mdc-theme-primary);
 		display: flex;
 		justify-content: space-between;
 		padding-left: 0.75rem;
@@ -13,14 +13,14 @@
 	}
 
 	& .site-footer__text {
-		color: var( --mdc-theme-on-primary );
+		color: var(--mdc-theme-on-primary);
 	}
 
 	& .mdc-layout-grid__inner {
 		align-items: center;
 		margin-left: auto;
 		margin-right: auto;
-		max-width: var( --material-footer-max-width, 60rem );
+		max-width: var(--material-footer-max-width, 60rem);
 		width: 100%;
 	}
 
@@ -28,11 +28,12 @@
 		text-align: right;
 
 		& button {
-			color: var( --mdc-theme-on-primary );
+			color: var(--mdc-theme-on-primary);
 		}
 	}
 
 	& .mdc-layout-grid__cell {
+
 		@media (--small-viewport-max) {
 			grid-column-end: span 2;
 		}

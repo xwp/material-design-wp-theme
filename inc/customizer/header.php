@@ -2,7 +2,7 @@
 /**
  * Material-theme-wp Theme Customizer
  *
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 
 namespace MaterialTheme\Customizer\Header;
@@ -28,16 +28,19 @@ function register( $wp_customize ) {
 	add_settings( $wp_customize );
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
-		$wp_customize->selective_refresh->add_partial( 'header_layout', array(
-			'selector' => '.top-app-bar',
-			'settings' => [
-				Customizer\prepend_slug( 'header_layout' ),
-				Customizer\prepend_slug( 'background_color' ),
-				Customizer\prepend_slug( 'text_color' ),
-				Customizer\prepend_slug( 'header_search_display' ),
-			],
-			'render_callback' => __NAMESPACE__ . '\render_header',
-		) );
+		$wp_customize->selective_refresh->add_partial(
+			'header_layout',
+			array(
+				'selector'        => '.top-app-bar',
+				'settings'        => [
+					Customizer\prepend_slug( 'header_layout' ),
+					Customizer\prepend_slug( 'background_color' ),
+					Customizer\prepend_slug( 'text_color' ),
+					Customizer\prepend_slug( 'header_search_display' ),
+				],
+				'render_callback' => __NAMESPACE__ . '\render_header',
+			) 
+		);
 	}
 }
 
@@ -47,9 +50,10 @@ function register( $wp_customize ) {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function add_sections( $wp_customize ) {
-	$wp_customize->add_section( Customizer\prepend_slug( 'header_section' ),
+	$wp_customize->add_section(
+		Customizer\prepend_slug( 'header_section' ),
 		[
-			'title' => esc_html__( 'Header', 'material-theme-wp' ),
+			'title' => esc_html__( 'Header', 'material-theme' ),
 
 		]
 	);
@@ -58,14 +62,14 @@ function add_sections( $wp_customize ) {
 /**
  * Define core controls to use
  *
- * @return void
+ * @return array
  */
 function get_controls() {
 	return [
 		[
-			'id'      => Customizer\prepend_slug( 'header_search_display' ),
-			'label'   => esc_html__( 'Show search in header', 'material-theme-wp' ),
-			'type'    => 'checkbox',
+			'id'    => Customizer\prepend_slug( 'header_search_display' ),
+			'label' => esc_html__( 'Show search in header', 'material-theme' ),
+			'type'  => 'checkbox',
 		],
 	];
 }
@@ -108,9 +112,12 @@ function add_controls( $wp_customize ) {
 	$controls = [];
 
 	foreach ( get_controls() as $control ) {
-		$controls[ $control[ 'id' ] ] = array_merge( [
-			'section' => Customizer\prepend_slug( 'header_section' ),
-		], $control );
+		$controls[ $control['id'] ] = array_merge(
+			[
+				'section' => Customizer\prepend_slug( 'header_section' ),
+			],
+			$control 
+		);
 	}
 
 	Customizer\add_controls( $wp_customize, $controls );
@@ -118,21 +125,21 @@ function add_controls( $wp_customize ) {
 
 /**
  * Define options for drawer layout
- * 
- * @return void
+ *
+ * @return array
  */
 function get_image_radio_args() {
 	return [
-		'label'    => esc_html__( 'Header Style', 'material-theme-wp' ),
+		'label'    => esc_html__( 'Header Style', 'material-theme' ),
 		'section'  => Customizer\prepend_slug( 'header_section' ),
 		'priority' => 10,
 		'choices'  => [
-			'drawer'    => [
-				'label' => esc_html__( 'Menu Drawer', 'material-theme-wp' ),
+			'drawer' => [
+				'label' => esc_html__( 'Menu Drawer', 'material-theme' ),
 				'url'   => get_template_directory_uri() . '/assets/svg/drawer.svg',
 			],
-			'menu'      => [
-				'label' => esc_html__( 'No Menu Drawer', 'material-theme-wp' ),
+			'menu'   => [
+				'label' => esc_html__( 'No Menu Drawer', 'material-theme' ),
 				'url'   => get_template_directory_uri() . '/assets/svg/menu.svg',
 			],
 		],
@@ -145,7 +152,7 @@ function get_image_radio_args() {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function add_image_radio( $wp_customize ) {
-	$args = get_image_radio_args();
+	$args     = get_image_radio_args();
 	$controls = [];
 
 	if ( class_exists( 'MaterialThemeBuilder\Customizer\Image_Radio_Control' ) ) {
@@ -174,13 +181,13 @@ function get_color_controls() {
 	return [
 		[
 			'id'                   => 'background_color',
-			'label'                => esc_html__( 'Bakground Color', 'material-theme-wp' ),
+			'label'                => esc_html__( 'Bakground Color', 'material-theme' ),
 			'related_text_setting' => Customizer\prepend_slug( 'text_color' ),
 			'css_var'              => '--mdc-theme-primary',
 		],
 		[
 			'id'                   => 'text_color',
-			'label'                => esc_html__( 'Text Color', 'material-theme-wp' ),
+			'label'                => esc_html__( 'Text Color', 'material-theme' ),
 			'related_text_setting' => Customizer\prepend_slug( 'background_color' ),
 			'css_var'              => '--mdc-theme-on-primary',
 		],
@@ -226,9 +233,9 @@ function maybe_use_color_palette_control( $wp_customize ) {
 		foreach ( get_color_controls() as $control ) {
 			foreach ( get_color_controls() as $control ) {
 				$controls[ $control['id'] ] = [
-					'label'                => $control['label'],
-					'section'              => Customizer\prepend_slug( 'header_section' ),
-					'type'                 => 'color',
+					'label'   => $control['label'],
+					'section' => Customizer\prepend_slug( 'header_section' ),
+					'type'    => 'color',
 				];
 			}
 		}

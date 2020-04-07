@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 
 if ( ! function_exists( 'material_theme_wp_setup' ) ) :
@@ -20,9 +20,9 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on Material-theme-wp, use a find and replace
-		 * to change 'material-theme-wp' to the name of your theme in all the template files.
+		 * to change 'material-theme' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'material-theme-wp', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'material-theme', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -43,27 +43,38 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'material-theme-wp' ),
-		) );
+		register_nav_menus(
+			array(
+				'menu-1' => esc_html__( 'Primary', 'material-theme' ),
+			)
+		);
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'material_theme_wp_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
+		add_theme_support(
+			'custom-background',
+			apply_filters(
+				'material_theme_wp_custom_background_args',
+				array(
+					'default-color' => 'ffffff',
+					'default-image' => '',
+				)
+			)
+		);
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -73,12 +84,15 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'      => 250,
+				'width'       => 250,
+				'flex-width'  => true,
+				'flex-height' => true,
+			)
+		);
 	}
 endif;
 add_action( 'after_setup_theme', 'material_theme_wp_setup' );
@@ -104,15 +118,17 @@ add_action( 'after_setup_theme', 'material_theme_wp_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function material_theme_wp_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'material-theme-wp' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'material-theme-wp' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Sidebar', 'material-theme' ),
+			'id'            => 'sidebar-1',
+			'description'   => esc_html__( 'Add widgets here.', 'material-theme' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 }
 add_action( 'widgets_init', 'material_theme_wp_widgets_init' );
 
@@ -120,23 +136,22 @@ add_action( 'widgets_init', 'material_theme_wp_widgets_init' );
  * Enqueue scripts and styles.
  */
 function material_theme_wp_scripts() {
-	wp_enqueue_style( 'material-theme-wp-style', get_stylesheet_uri() );
+	$theme_version = wp_get_theme()->get( 'Version' );
 
-	wp_enqueue_style( 'material-theme-style', get_template_directory_uri() . '/assets/css/front-end-compiled.css', array( 'material-theme-wp-style' ), '20151215' );
+	wp_enqueue_style( 'material-theme-style', get_stylesheet_uri(), array(), $theme_version );
+
+	wp_enqueue_style( 'material-theme-front-end-css', get_template_directory_uri() . '/assets/css/front-end-compiled.css', array( 'material-theme-style' ), $theme_version );
 
 	if ( ! wp_style_is( 'material-google-fonts-cdn', 'enqueued' ) ) {
 		wp_enqueue_style(
 			'material-google-fonts-cdn',
-			esc_url( '//fonts.googleapis.com/css?family=Roboto|Material+Icons|Material+Icons+Outlined' ),
-			[]
+			esc_url( '//fonts.googleapis.com/css?family=Roboto|Material+Icons' ),
+			[],
+			$theme_version
 		);
 	}
 
-	wp_enqueue_script( 'material-theme-wp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'material-theme-js', get_template_directory_uri() . '/assets/js/front-end.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'material-theme-wp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'material-theme-js', get_template_directory_uri() . '/assets/js/front-end.js', array(), $theme_version, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -165,8 +180,8 @@ require get_template_directory() . '/inc/customizer/archive.php';
 /**
  * Custom menu walker
  */
-require get_template_directory() . '/inc/menu-walker.php';
-require get_template_directory() . '/inc/menu-drawer-walker.php';
+require get_template_directory() . '/inc/class-menu-walker.php';
+require get_template_directory() . '/inc/class-menu-drawer-walker.php';
 
 /**
  * Load Jetpack compatibility file.

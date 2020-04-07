@@ -1,9 +1,10 @@
 <?php
 /**
  * Search form partial
- * 
- * @package Material-theme-wp
+ *
+ * @package MaterialTheme
  */
+
 ?>
 
 <form class="search-form" action="" method="get">
@@ -13,7 +14,7 @@
 		<div class="mdc-notched-outline">
 			<div class="mdc-notched-outline__leading"></div>
 			<div class="mdc-notched-outline__notch">
-			<span class="mdc-floating-label" id="seach-label"><?php esc_html_e( 'Search' ); ?></span>
+			<span class="mdc-floating-label" id="seach-label"><?php esc_html_e( 'Search', 'material-theme' ); ?></span>
 			</div>
 			<div class="mdc-notched-outline__trailing"></div>
 		</div>

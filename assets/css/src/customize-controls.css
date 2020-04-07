@@ -3,6 +3,7 @@
  */
 
 #customize-control-material_header_layout {
+
 	& .customize-control-image-radio-wrap {
 		flex-direction: column;
 	}
@@ -13,7 +14,7 @@
 	}
 
 	& .customize-control-image-radio-wrap input:checked + label img {
-		border: 2px solid #0685BB;
+		border: 2px solid #0685bb;
 		border-radius: 0.1875rem;
 	}
 }

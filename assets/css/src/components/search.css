@@ -15,6 +15,7 @@
 		}
 
 		& .mdc-text-field {
+
 			@media (--medium-viewport) {
 				width: 70%;
 			}
@@ -29,6 +30,7 @@
 		}
 
 		& .mdc-text-field__icon {
+
 			@media (--medium-viewport) {
 				display: none;
 			}
@@ -63,5 +65,5 @@
 }
 
 .search__button:not(:disabled) {
-	color: var( --mdc-theme-on-primary );
+	color: var(--mdc-theme-on-primary);
 }

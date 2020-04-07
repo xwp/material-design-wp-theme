@@ -1,5 +1,5 @@
 .top-app-bar {
-	box-shadow: 1px 0 2px rgba( 0, 0, 0, .5 );
+	box-shadow: 1px 0 2px rgba(0, 0, 0, .5);
 
 	& .site-title a {
 		text-decoration: none;
@@ -10,12 +10,14 @@
 	}
 
 	&:not(.-with-drawer) .top-app-bar__menu .menu {
+
 		@media (--medium-viewport) {
 			display: block;
 		}
 	}
-	
+
 	& .top-app-bar__menu-trigger {
+
 		@media (--medium-viewport) {
 			display: none;
 		}
@@ -31,7 +33,7 @@
 	}
 
 	& .top-app-bar__title {
-		color: var( --mdc-theme-on-primary );
+		color: var(--mdc-theme-on-primary);
 		padding-left: 0;
 
 		& .site-title {
@@ -44,7 +46,7 @@
 	}
 
 	.top-app-bar__search {
-		background-color: var( --search-background );
+		background-color: var(--search-background);
 		display: none;
 	}
 

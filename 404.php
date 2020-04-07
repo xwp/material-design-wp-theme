@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 
 get_header();
@@ -15,11 +15,11 @@ get_header();
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title mdc-typography--headline2"><?php esc_html_e( 'Oops! This page can&rsquo;t be found.', 'material-theme-wp' ); ?></h1>
+					<h1 class="page-title mdc-typography--headline2"><?php esc_html_e( 'Oops! This page can&rsquo;t be found.', 'material-theme' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'The page you were looking for could not be found. It might have been removed, renamed, or did not exist in the first place.', 'material-theme-wp' ); ?></p>
+					<p><?php esc_html_e( 'The page you were looking for could not be found. It might have been removed, renamed, or did not exist in the first place.', 'material-theme' ); ?></p>
 
 					<?php
 					get_template_part( 'template-parts/search', 'archive' );
