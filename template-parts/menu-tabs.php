@@ -7,22 +7,24 @@
  * @package MaterialTheme
  */
 
+use MaterialTheme\Menu_Walker;
 ?>
 
 <div class="mdc-tab-bar tab-bar" role="tablist">
 	<div class="mdc-tab-scroller">
 		<div class="mdc-tab-scroller__scroll-area">
 			<div class="mdc-tab-scroller__scroll-content">
-				<button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-					<span class="mdc-tab__content">
-						<span class="mdc-tab__icon material-icons" aria-hidden="true">favorite</span>
-						<span class="mdc-tab__text-label">Favorites</span>
-					</span>
-					<span class="mdc-tab-indicator mdc-tab-indicator--active">
-						<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-					</span>
-					<span class="mdc-tab__ripple"></span>
-				</button>
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'walker'         => new Menu_Walker(),
+						'container'      => '',
+						'items_wrap'     => '%3$s',
+					)
+				);
+				?>
 			</div>
 		</div>
 	</div>

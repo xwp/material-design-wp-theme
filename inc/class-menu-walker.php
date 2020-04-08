@@ -35,8 +35,39 @@ class Menu_Walker extends \Walker {
 		$output .= sprintf(
 			'<a href="%1$s" %2$s>%3$s</a>',
 			esc_url( $item->url ),
-			( get_the_ID() === $item->object_id ) ? ' class="current mdc-button"' : ' class="mdc-button mdc-top-app-bar__action-item top-app-bar__button"',
-			'<div class="mdc-button__ripple"></div><span class="mdc-button__label">' . esc_html( $item->title ) . '</span>'
+			( get_the_ID() === absint( $item->object_id ) ) ? ' class="mdc-tab mdc-tab--active" aria-selected="true"' : ' class="mdc-tab"',
+			$this->build_markup( $item )
 		);
+	}
+	
+	/**
+	 * Add necessary markup to build tab
+	 *
+	 * @param  object $item The data object.
+	 * @return string Markup to display
+	 */
+	private function build_markup( $item ) {
+		$is_active = get_the_ID() === absint( $item->object_id );
+
+		ob_start();
+		?>
+		<span class="mdc-tab__content">
+			<span class="mdc-tab__text-label"><?php echo esc_html( $item->title ); ?></span>
+		</span>
+
+		<span 
+			class="mdc-tab-indicator 
+			<?php
+			if ( $is_active ) {
+				echo 'mdc-tab-indicator--active';
+			}
+			?>
+		">
+			<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+		</span>
+		<span class="mdc-tab__ripple"></span>
+		<?php
+
+		return ob_get_clean();
 	}
 }
