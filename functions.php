@@ -176,12 +176,18 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/customizer/header.php';
 require get_template_directory() . '/inc/customizer/footer.php';
 require get_template_directory() . '/inc/customizer/archive.php';
+require get_template_directory() . '/inc/customizer/comments.php';
 
 /**
  * Custom menu walker
  */
 require get_template_directory() . '/inc/class-menu-walker.php';
 require get_template_directory() . '/inc/class-menu-drawer-walker.php';
+
+/**
+ * Custom comments walker
+ */
+require get_template_directory() . '/inc/class-walker-comment.php';
 
 /**
  * Load Jetpack compatibility file.
@@ -194,4 +200,4 @@ MaterialTheme\Customizer\setup();
 MaterialTheme\Customizer\Header\setup();
 MaterialTheme\Customizer\Footer\setup();
 MaterialTheme\Customizer\Archive\setup();
-
+MaterialTheme\Customizer\Comments\setup();

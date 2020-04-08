@@ -11,8 +11,10 @@
     "@babel/preset-env": "^7.8.7",
     "@material/button": "^5.1.0",
     "@material/card": "^5.1.0",
+    "@material/checkbox": "^5.1.0",
     "@material/drawer": "^5.1.0",
     "@material/floating-label": "^5.1.0",
+    "@material/form-field": "^5.1.0",
     "@material/icon-button": "^5.1.0",
     "@material/image-list": "^5.1.0",
     "@material/layout-grid": "^5.1.0",
@@ -69,7 +71,8 @@
     "lint:js": "wp-scripts lint-js",
     "lint:php": "composer lint",
     "postinstall": "composer install",
-    "test": "npm-run-all --parallel test:js test:php"
+    "test": "npm-run-all --parallel test:js test:php",
+    "docker": "docker-compose run --rm -u 1000 --workdir=/var/www/html/wp-content/themes/material-theme-wp wordpress"
   },
   "repository": {
     "type": "git",

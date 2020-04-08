@@ -1,7 +1,7 @@
 <?php
 /**
  * Class ImageRadioControl.
- * 
+ *
  * Included for compatibility.
  * When available, use the plugin
  *
