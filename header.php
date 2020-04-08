@@ -28,4 +28,6 @@
 
 	<?php get_template_part( 'template-parts/menu', 'header' ); ?>
 
+	<?php get_template_part( 'template-parts/menu', 'tabs' ); ?>
+
 	<div id="content" class="site-content">
