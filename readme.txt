@@ -1,19 +1,17 @@
-=== Material-theme-wp ===
-
-Contributors: automattic
+=== Material Theme ===
+Contributors: xwp
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
 Requires at least: 4.5
 Tested up to: 4.8
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called Material-theme-wp.
+A starter theme called Material Theme.
 
 == Description ==
 
-Custom theme: Material-theme-wp, developed by Me
+Custom theme: Material Theme, developed by Me
 
 == Installation ==
 
@@ -25,7 +23,7 @@ Custom theme: Material-theme-wp, developed by Me
 
 = Does this theme support any plugins? =
 
-Material-theme-wp includes support for Infinite Scroll in Jetpack.
+Material Theme includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

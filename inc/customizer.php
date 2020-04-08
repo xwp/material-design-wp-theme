@@ -2,7 +2,7 @@
 /**
  * Material-theme-wp Theme Customizer
  *
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 
 namespace MaterialTheme\Customizer;
@@ -11,7 +11,7 @@ use MaterialTheme\Customizer\Footer;
 
 /**
  * Attach hooks.
- * 
+ *
  * @return void
  */
 function setup() {
@@ -34,14 +34,20 @@ function register( $wp_customize ) {
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
-		$wp_customize->selective_refresh->add_partial( 'blogname', array(
-			'selector'        => '.site-title a',
-			'render_callback' => __NAMESPACE__ . '\get_blogname',
-		) );
-		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
-			'selector'        => '.site-description',
-			'render_callback' => __NAMESPACE__ . '\get_description',
-		) );
+		$wp_customize->selective_refresh->add_partial(
+			'blogname',
+			array(
+				'selector'        => '.site-title a',
+				'render_callback' => __NAMESPACE__ . '\get_blogname',
+			) 
+		);
+		$wp_customize->selective_refresh->add_partial(
+			'blogdescription',
+			array(
+				'selector'        => '.site-description',
+				'render_callback' => __NAMESPACE__ . '\get_description',
+			) 
+		);
 	}
 }
 
@@ -74,23 +80,28 @@ function get_description() {
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
- * 
+ *
  * @return void
  */
 function preview_scripts() {
-	wp_enqueue_script( 'material-theme-wp-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+	$theme_version = wp_get_theme()->get( 'Version' );
+
+	wp_enqueue_script( 'material-theme-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), $theme_version, true );
 }
 
 /**
  * Enqueue control scripts.
- * 
+ *
  * @return void
  */
 function scripts() {
+	$theme_version = wp_get_theme()->get( 'Version' );
+
 	wp_enqueue_style(
 		'material-theme-customizer-styles',
 		get_template_directory_uri() . '/assets/css/customize-controls-compiled.css',
-		[]
+		[],
+		$theme_version
 	);
 }
 
@@ -159,9 +170,9 @@ function prepend_slug( $name ) {
  * @return mixed
  */
 function get_default( $setting ) {
-	$slug = get_slug();
+	$slug     = get_slug();
 	$setting  = str_replace( "{$slug}_", '', $setting );
-	$defaults   = get_default_values();
+	$defaults = get_default_values();
 
 	return isset( $defaults[ $setting ] ) ? $defaults[ $setting ] : '';
 }
@@ -184,7 +195,8 @@ function get_default_values() {
 /**
  * Add controls to customizer.
  *
- * @param  array $controls Array of controls to add to customizer.
+ * @param  WP_Customize $wp_customize WP_Customize instance.
+ * @param  array        $controls Array of controls to add to customizer.
  * @return void
  */
 function add_controls( $wp_customize, $controls = [] ) {

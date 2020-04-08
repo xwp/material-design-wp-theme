@@ -6,8 +6,9 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
+
 ?>
 	</div><!-- #content -->
 

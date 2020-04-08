@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 
 get_header();
@@ -28,14 +28,14 @@ get_header();
 				</header>
 				<?php
 			endif;
-		?>
+			?>
 
 			<div class="site-main__inner">
 				<?php get_template_part( 'template-parts/archive' ); ?>
 			</div>
 		</div>
 
-		<?php
+			<?php
 			get_template_part( 'template-parts/page-navigation' );
 
 		else :

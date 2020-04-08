@@ -1,7 +1,7 @@
 .archive-cards {
 	padding: 24px;
 	padding: var(--mdc-layout-grid-margin-desktop, 24px);
-	
+
 	@media (--medium-viewport) {
 		column-count: 2;
 	}

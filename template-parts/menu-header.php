@@ -4,24 +4,26 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 
-use MaterialTheme\Menu;
+use MaterialTheme\Menu_Walker;
 
 $top_app_bar_background     = get_theme_mod( 'material_background_color' );
 $top_app_bar_text           = get_theme_mod( 'material_text_color' );
 $top_app_bar_layout_setting = get_theme_mod( 'material_header_layout' );
 
-$has_changed_color          = ! empty( $top_app_bar_background ) || ! empty( $top_app_bar_text );
-$has_search                 = get_theme_mod( 'material_header_search_display' );
+$has_changed_color = ! empty( $top_app_bar_background ) || ! empty( $top_app_bar_text );
+$has_search        = get_theme_mod( 'material_header_search_display' );
 
-$top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawer' : '';
+$top_app_bar_layout = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawer' : '';
+
+$is_material_plugin_active = class_exists( 'MaterialThemeBuilder\Plugin' );
 ?>
 
 <div
 	class="mdc-top-app-bar top-app-bar<?php echo esc_attr( $top_app_bar_layout ); ?>"
-	<?php if ( ! empty( $has_changed_color ) ) : ?>
+	<?php if ( ! empty( $has_changed_color ) && ! $is_material_plugin_active ) : ?>
 		style="
 			<?php if ( ! empty( $top_app_bar_background ) ) : ?>
 				--mdc-theme-primary: <?php echo esc_attr( $top_app_bar_background ); ?>;
@@ -35,7 +37,7 @@ $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -wi
 >
 	<div class="mdc-top-app-bar__row top-app-bar__header">
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-			<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger"><?php esc_html_e( 'menu', 'material-theme-wp' ); ?></button>
+			<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger"><?php esc_html_e( 'menu', 'material-theme' ); ?></button>
 			<?php if ( has_custom_logo() ) : ?>
 				<div class="logo">
 					<?php the_custom_logo(); ?>
@@ -59,20 +61,22 @@ $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -wi
 		</section>
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end top-app-bar__menu" role="toolbar">
 			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-				'walker'         => new Menu\Material_Theme_Menu(),
-				'container'      => '',
-				'items_wrap'     => '<nav id="%1$s" class="%2$s">%3$s</nav>',
-			) );
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+					'walker'         => new Menu_Walker(),
+					'container'      => '',
+					'items_wrap'     => '<nav id="%1$s" class="%2$s">%3$s</nav>',
+				)
+			);
 			?>
 
 			<?php if ( ! empty( $has_search ) ) : ?>
 				<button class="mdc-button mdc-button--outlined search__button"> 
 					<span class="mdc-button__ripple"></span>
 					<i class="material-icons mdc-button__icon">search</i>
-					<?php esc_html_e( 'Search', 'material-theme-wp' ); ?>
+					<?php esc_html_e( 'Search', 'material-theme' ); ?>
 				</button>
 			<?php endif; ?>
 		</section>

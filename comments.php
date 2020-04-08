@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 
 /*
@@ -21,8 +21,8 @@ if ( post_password_required() ) {
 
 $commenter = wp_get_current_commenter();
 
-$style   = get_theme_mod( 'material_comment_fields_style' );
-$classes = 'outlined' === $style ? 'mdc-text-field--outlined mdc-text-field--no-label' : 'mdc-text-field--filled';
+$style    = get_theme_mod( 'material_comment_fields_style' );
+$classes  = 'outlined' === $style ? 'mdc-text-field--outlined mdc-text-field--no-label' : 'mdc-text-field--filled';
 $req      = get_option( 'require_name_email' );
 $html_req = ( $req ? " required='required'" : '' );
 
@@ -36,11 +36,11 @@ $outlined_label = '<span class="mdc-notched-outline">
 $filled_label   = '<span class="mdc-floating-label" id="%s">%s</span>
 				<span class="mdc-line-ripple"></span>';
 
-$args      = [
-	'title_reply' => __( 'Leave a comment', 'material-theme-wp' ),
+$args = [
+	'title_reply'        => __( 'Leave a comment', 'material-theme' ),
 	'title_reply_before' => '<h4 id="reply-title" class="comment-reply-title mdc-typography--headline4">',
-	'title_reply_after' => '</h4>',
-	'fields'      => [
+	'title_reply_after'  => '</h4>',
+	'fields'             => [
 		'author' => sprintf(
 			'<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet">
 				<div class="mdc-text-field %s comment-field">
@@ -54,10 +54,10 @@ $args      = [
 			sprintf(
 				'outlined' === $style ? $outlined_label : $filled_label,
 				esc_html( 'author-label' ),
-				esc_html__( 'Name', 'material-theme' ),
+				esc_html__( 'Name', 'material-theme' )
 			)
 		),
-		'email' => sprintf(
+		'email'  => sprintf(
 			'<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet">
 				<div class="mdc-text-field %s comment-field">
 					<input id="email" name="email" type="email" class="mdc-text-field__input" aria-labelledby="email-label" value="%s" %s />
@@ -70,10 +70,10 @@ $args      = [
 			sprintf(
 				'outlined' === $style ? $outlined_label : $filled_label,
 				esc_html( 'email-label' ),
-				esc_html__( 'Email', 'material-theme' ),
+				esc_html__( 'Email', 'material-theme' )
 			)
 		),
-		'url' => sprintf(
+		'url'    => sprintf(
 			'<div class="mdc-layout-grid__cell--span-12">
 				<div class="mdc-text-field %s comment-field">
 					<input id="url" name="url" type="url" class="mdc-text-field__input" aria-labelledby="url-label" value="%s" />
@@ -85,11 +85,11 @@ $args      = [
 			sprintf(
 				'outlined' === $style ? $outlined_label : $filled_label,
 				esc_html( 'url-label' ),
-				esc_html__( 'Website', 'material-theme' ),
+				esc_html__( 'Website', 'material-theme' )
 			)
 		),
 	],
-	'comment_field' => sprintf(
+	'comment_field'      => sprintf(
 		'<div class="mdc-text-field mdc-text-field--textarea %s comment-field">
 			<textarea id="comment" name="comment" class="mdc-text-field__input" required></textarea>
 			%s
@@ -98,14 +98,14 @@ $args      = [
 		sprintf(
 			'outlined' === $style ? $outlined_label : $filled_label,
 			esc_html( 'comment' ),
-			esc_html__( 'Comment', 'material-theme' ),
+			esc_html__( 'Comment', 'material-theme' )
 		)
 	),
-	'submit_button' => '<button id="%2$s" class="mdc-button mdc-button--raised mdc-ripple-upgraded %3$s" type="submit"><span class="mdc-button__ripple"></span><span class="mdc-button__label">%4$s</span></button>'
+	'submit_button'      => '<button id="%2$s" class="mdc-button mdc-button--raised mdc-ripple-upgraded %3$s" type="submit"><span class="mdc-button__ripple"></span><span class="mdc-button__label">%4$s</span></button>',
 ];
 
 if ( has_action( 'set_comment_cookies', 'wp_set_comment_cookies' ) && get_option( 'show_comments_cookies_opt_in' ) ) {
-	$consent   = empty( $commenter['comment_author_email'] ) ? '' : 'checked="checked"';
+	$consent = empty( $commenter['comment_author_email'] ) ? '' : 'checked="checked"';
 
 	$args['fields']['cookies'] = sprintf(
 		'<div class="mdc-layout-grid__cell--span-12">
@@ -146,23 +146,25 @@ if ( has_action( 'set_comment_cookies', 'wp_set_comment_cookies' ) && get_option
 		$count = get_comments_number();
 		?>
 		<h4 class="comments-title mdc-typography--headline4">
-			<?php esc_html_e( 'Join the conversation', 'material-theme-wp' ); ?>
+			<?php esc_html_e( 'Join the conversation', 'material-theme' ); ?>
 		</h4><!-- .comments-title -->
 		<div class="comments-title-count">
 			<span class="material-icons">comment</span>
-			<span class="comment-count"><?php echo esc_html( $count );?> <?php echo esc_html( _n( 'comment', 'comments', $count, 'material-theme-wp' ) ); ?></span>
+			<span class="comment-count"><?php echo esc_html( $count ); ?> <?php echo esc_html( _n( 'comment', 'comments', $count, 'material-theme' ) ); ?></span>
 		</div><!-- .comments-title -->
 
 		<?php the_comments_navigation(); ?>
 
 		<ul class="comment-list">
 			<?php
-			wp_list_comments( array(
-				'style'       => 'ul',
-				'short_ping'  => true,
-				'avatar_size' => 60,
-				'walker'      => new MaterialTheme\Walker_Comment,
-			) );
+			wp_list_comments(
+				array(
+					'style'       => 'ul',
+					'short_ping'  => true,
+					'avatar_size' => 60,
+					'walker'      => new MaterialTheme\Walker_Comment(),
+				)
+			);
 			?>
 		</ul><!-- .comment-list -->
 
@@ -172,7 +174,7 @@ if ( has_action( 'set_comment_cookies', 'wp_set_comment_cookies' ) && get_option
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'material-theme-wp' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'material-theme' ); ?></p>
 			<?php
 		endif;
 

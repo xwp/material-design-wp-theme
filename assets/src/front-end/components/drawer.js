@@ -12,13 +12,13 @@ export const drawerInit = () => {
 
 export const drawerHandler = ( topAppBar, drawer ) => {
 	topAppBar.listen( 'MDCTopAppBar:nav', () => {
-		drawer.open = !drawer.open;
+		drawer.open = ! drawer.open;
 	} );
 
 	const listElement = drawerElement.querySelector( '.mdc-list' );
 	const mainContentElement = document.querySelector( '.site-content' );
 
-	listElement.addEventListener( 'click', event => {
+	listElement.addEventListener( 'click', () => {
 		drawer.open = false;
 	} );
 

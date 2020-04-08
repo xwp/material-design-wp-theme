@@ -12,7 +12,7 @@ export const commentsInit = () => {
 		fields.push( new MDCTextField( field ) );
 	}
 
-	commentForm.addEventListener( 'submit', ( event ) => {
+	commentForm.addEventListener( 'submit', event => {
 		let isValid = true;
 		fields.forEach( field => {
 			if ( field.required && ! field.valid ) {
@@ -26,4 +26,4 @@ export const commentsInit = () => {
 			event.preventDefault();
 		}
 	} );
-}
+};

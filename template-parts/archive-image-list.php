@@ -1,7 +1,10 @@
 <?php
 /**
  * Image list layout
+ *
+ * @package MaterialTheme
  */
+
 ?>
 
 <ul class="mdc-image-list mdc-image-list--masonry mdc-image-list--with-text-protection archive-image-list">

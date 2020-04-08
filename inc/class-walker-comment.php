@@ -36,7 +36,7 @@ class Walker_Comment extends \Walker_Comment {
 		}
 
 		?>
-		<<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
+		<<?php echo esc_html( $tag ); ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
 			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 				<div class="comment-author-avatar">
 					<?php if ( 0 != $args['avatar_size'] ) : ?>
@@ -52,15 +52,21 @@ class Walker_Comment extends \Walker_Comment {
 					<div class="comment-meta mdc-typography--subtitle1">
 						<time datetime="<?php comment_time( 'c' ); ?>">
 							<?php
-								/* translators: 1: Comment date, 2: Comment time. */
-								printf( __( '%1$s at %2$s' ), get_comment_date( '', $comment ), get_comment_time() );
+								printf(
+									/* translators: 1: Comment date, 2: Comment time. */
+									esc_html__( '%1$s at %2$s', 'material-theme' ),
+									esc_html( get_comment_date( '', $comment ) ),
+									esc_html( get_comment_time() )
+								);
 							?>
 						</time>
 						<?php edit_comment_link( __( 'Edit', 'material-theme' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .comment-meta -->
 
 					<?php if ( '0' == $comment->comment_approved ) : ?>
-						<em class="comment-awaiting-moderation mdc-typography--caption"><?php echo $moderation_note; ?></em>
+						<em class="comment-awaiting-moderation mdc-typography--caption">
+							<?php echo esc_html( $moderation_note ); ?>
+						</em>
 					<?php endif; ?>
 
 					<div class="comment-content">

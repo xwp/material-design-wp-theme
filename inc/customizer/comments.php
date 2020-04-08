@@ -1,8 +1,8 @@
 <?php
 /**
- * Material-theme-wp Theme Customizer
+ * Comments option for theme customizer
  *
- * @package Material-theme-wp
+ * @package material-theme
  */
 
 namespace MaterialTheme\Customizer\Comments;
@@ -24,9 +24,10 @@ function setup() {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function register( $wp_customize ) {
-	$wp_customize->add_section( Customizer\prepend_slug( 'comments_section' ),
+	$wp_customize->add_section(
+		Customizer\prepend_slug( 'comments_section' ),
 		[
-			'title' => esc_html__( 'Comments', 'material-theme-wp' ),
+			'title' => esc_html__( 'Comments', 'material-theme' ),
 		]
 	);
 
@@ -43,7 +44,7 @@ function add_controls( $wp_customize ) {
 	$controls = [];
 
 	foreach ( get_controls() as $control ) {
-		$controls[ $control[ 'id' ] ] = $control;
+		$controls[ $control['id'] ] = $control;
 	}
 
 	Customizer\add_controls( $wp_customize, $controls );
@@ -74,19 +75,19 @@ function add_settings( $wp_customize ) {
 /**
  * Define core controls to use
  *
- * @return void
+ * @return array
  */
 function get_controls() {
 	return [
 		[
 			'id'      => 'comment_fields_style',
-			'label'   => esc_html__( 'Text field style', 'material-theme-wp' ),
+			'label'   => esc_html__( 'Text field style', 'material-theme' ),
 			'type'    => 'radio',
 			'section' => Customizer\prepend_slug( 'comments_section' ),
 			'default' => 'outlined',
 			'choices' => [
-				'outlined' => esc_html__( 'Outlined', 'material-theme-wp' ),
-				'filled'   => esc_html__( 'Filled', 'material-theme-wp' ),
+				'outlined' => esc_html__( 'Outlined', 'material-theme' ),
+				'filled'   => esc_html__( 'Filled', 'material-theme' ),
 			],
 		],
 	];

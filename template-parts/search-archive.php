@@ -1,9 +1,10 @@
 <?php
 /**
-* Search form partial for archive, 404 pages
-* 
-* @package Material-theme-wp
-*/
+ * Search form partial for archive, 404 pages
+ *
+ * @package MaterialTheme
+ */
+
 ?>
 
 <form class="search-form" action="/" method="get">
@@ -13,7 +14,7 @@
 		<div class="mdc-notched-outline">
 			<div class="mdc-notched-outline__leading"></div>
 			<div class="mdc-notched-outline__notch">
-				<label for="text-field-hero-input" class="mdc-floating-label"><?php esc_html_e( 'Search', 'material-theme-wp' ); ?></label>
+				<label for="text-field-hero-input" class="mdc-floating-label"><?php esc_html_e( 'Search', 'material-theme' ); ?></label>
 			</div>
 			<div class="mdc-notched-outline__trailing"></div>
 		</div>
@@ -21,6 +22,6 @@
 
 	<button class="mdc-button mdc-button--outlined" type="submit">
 		<i class="material-icons mdc-button__icon">search</i>
-		<span class="mdc-button__ripple"></span> <?php esc_html_e( 'Search', 'material-theme-wp' ); ?>
+		<span class="mdc-button__ripple"></span> <?php esc_html_e( 'Search', 'material-theme' ); ?>
 	</button>
 </form>

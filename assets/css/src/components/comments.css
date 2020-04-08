@@ -18,9 +18,10 @@
 
 .comments-title-count,
 .comment.depth-1:last-child {
-	&:after {
+
+	&::after {
 		border: 1px solid rgba(var(--mdc-theme-on-surface-rgb), .12);
-		content: '';
+		content: "";
 		display: block;
 		margin-top: 1.25em;
 		width: 33.33%;
@@ -32,7 +33,7 @@
 	margin: 3em 0;
 	padding: 0;
 
-	& .children{
+	& .children {
 		list-style: none;
 		margin: 0;
 		padding-left: 2em;
@@ -76,7 +77,7 @@
 	}
 
 	& .mdc-text-field--textarea.mdc-text-field--filled {
-		background-color: whitesmoke;
+		background-color: var(--material-comments-background, #f5f5f5);
 
 		& textarea {
 			padding: 20px 16px 7px;

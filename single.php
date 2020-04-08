@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 
 get_header();

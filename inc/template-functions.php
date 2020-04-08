@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package Material-theme-wp
+ * @package MaterialTheme
  */
 
 /**
@@ -91,7 +91,7 @@ function material_theme_comment_form_before_fields() {
 	<div class="mdc-layout-grid__inner">
 	<?php
 }
-add_filter( 'comment_form_before_fields', 'material_theme_comment_form_before_fields' );
+add_action( 'comment_form_before_fields', 'material_theme_comment_form_before_fields' );
 
 /**
  * Wrap comment fields in Material layout class.
@@ -103,4 +103,4 @@ function material_theme_comment_form_after_fields() {
 	</div> <!-- .mdc-layout-grid__inner -->
 	<?php
 }
-add_filter( 'comment_form_after_fields', 'material_theme_comment_form_after_fields' );
+add_action( 'comment_form_after_fields', 'material_theme_comment_form_after_fields' );
