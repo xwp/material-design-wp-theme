@@ -11,7 +11,7 @@ A starter theme called Material Theme.
 **Stable tag:** 1.0.0  
 **License:** [GNU General Public License v2 or later](LICENSE)  
 
-[![Build Status](https://travis-ci.org/emeaguiar/material-theme-wp.svg?branch=develop)](https://travis-ci.org/emeaguiar/material-theme-wp) [![Built with Grunt](https://gruntjs.com/cdn/builtwith.svg)](http://gruntjs.com) 
+[![Build Status](https://travis-ci.org/xwp/material-theme-wp.svg?branch=develop)](https://travis-ci.org/xwp/material-theme-wp) [![Built with Grunt](https://gruntjs.com/cdn/builtwith.svg)](http://gruntjs.com) 
 
 ## Description ##
 
