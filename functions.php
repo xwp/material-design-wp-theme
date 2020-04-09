@@ -179,6 +179,11 @@ require get_template_directory() . '/inc/customizer/archive.php';
 require get_template_directory() . '/inc/customizer/comments.php';
 
 /**
+ * Custom functions
+ */
+require get_template_directory() . '/inc/menu.php';
+
+/**
  * Custom menu walker
  */
 require get_template_directory() . '/inc/class-menu-walker.php';

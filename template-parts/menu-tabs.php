@@ -7,7 +7,14 @@
  * @package MaterialTheme
  */
 
+use MaterialTheme\Menu;
 use MaterialTheme\Menu_Walker;
+
+$menu_has_children = Menu\menu_has_children( 'menu-1' );
+
+if ( $menu_has_children ) {
+	return;
+}
 ?>
 
 <div class="mdc-tab-bar tab-bar" role="tablist">
