@@ -27,6 +27,7 @@
 
 /* @todo adjust width based on breakpoints */
 .layout-masonry-2 {
+
 	& .masonry-grid_column {
 		width: 100%;
 
@@ -39,6 +40,7 @@
 .layout-masonry-3 {
 
 	& .masonry-grid_column {
+
 		@media (--medium-viewport) {
 			width: 33.33%;
 		}
@@ -48,6 +50,7 @@
 .layout-masonry-4 {
 
 	& .masonry-grid_column {
+
 		@media (--medium-viewport) {
 			width: 25%;
 		}
