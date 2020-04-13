@@ -47,7 +47,7 @@ function add_admin_notice() {
 
 	printf(
 		'<div class="notice notice-info is-dismissible"><p><strong>%1$s</strong> %2$s</p></div>',
-		esc_html__( 'Drawer Menu:', 'material-theme' ),
+		esc_html__( 'Tabs Menu:', 'material-theme' ),
 		esc_html__( 'Only the top level items will display.', 'material-theme' )
 	);
 }
