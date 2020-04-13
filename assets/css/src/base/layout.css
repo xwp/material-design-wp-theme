@@ -37,8 +37,8 @@
 .entry-content .alignfull {
 
 	@media (--medium-viewport) {
-		margin-left: calc(-100vw / 2 + 100% / 2);
-		margin-right: calc(-100vw / 2 + 100% / 2);
-		max-width: 100vw;
+		margin-left: calc(-95vw / 2 + 100% / 2);
+		margin-right: calc(-950vw / 2 + 100% / 2);
+		max-width: 95vw;
 	}
 }
