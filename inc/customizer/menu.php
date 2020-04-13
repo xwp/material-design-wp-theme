@@ -29,5 +29,5 @@ function add_tabs_description( $wp_customize ) {
 		return;
 	}
 
-	$tabs_control->description = esc_html__( "Children are not supported by this menu, and won't be displayed in the frontend", 'material-theme' );
+	$tabs_control->description = esc_html__( "Children are not supported by this menu, and won't be displayed in the frontend.", 'material-theme' );
 }
