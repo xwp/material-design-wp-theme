@@ -3,4 +3,9 @@
 	& .mdc-drawer__header {
 		display: flex;
 	}
+
+	& .sub-menu {
+		margin-left: 0;
+		padding-left: 1rem;
+	}
 }
