@@ -44,15 +44,17 @@ $top_app_bar_layout = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawe
 			<?php endif; ?>
 		>
 			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-					'walker'         => new Menu_Drawer_Walker(),
-					'container'      => '',
-					'items_wrap'     => '%3$s',
-				)
-			);
+			if ( has_nav_menu( 'menu-2' ) ) {
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-2',
+						'menu_id'        => 'secondary-menu',
+						'walker'         => new Menu_Drawer_Walker(),
+						'container'      => '',
+						'items_wrap'     => '%3$s',
+					)
+				);
+			}
 			?>
 		</nav>
 
