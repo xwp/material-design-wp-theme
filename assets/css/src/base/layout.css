@@ -38,7 +38,7 @@
 
 	@media (--medium-viewport) {
 		margin-left: calc(-95vw / 2 + 100% / 2);
-		margin-right: calc(-950vw / 2 + 100% / 2);
+		margin-right: calc(-95vw / 2 + 100% / 2);
 		max-width: 95vw;
 	}
 }
