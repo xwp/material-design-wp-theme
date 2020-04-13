@@ -14,6 +14,7 @@ use MaterialTheme\Customizer;
  */
 function setup() {
 	add_action( 'customize_register', __NAMESPACE__ . '\add_tabs_description', 12 );
+	add_action( 'admin_notices', __NAMESPACE__ . '\add_admin_notice' );
 }
 
 /**
@@ -30,4 +31,23 @@ function add_tabs_description( $wp_customize ) {
 	}
 
 	$tabs_control->description = esc_html__( 'Only the top level items will display.', 'material-theme' );
+}
+
+/**
+ * Add drawer menu notice in menu admin panel
+ *
+ * @return void
+ */
+function add_admin_notice() {
+	$screen = get_current_screen();
+
+	if ( ! $screen || 'nav-menus' !== $screen->id ) {
+		return;
+	}
+
+	printf(
+		'<div class="notice notice-info is-dismissible"><p><strong>%1$s</strong> %2$s</p></div>',
+		esc_html__( 'Drawer Menu:', 'material-theme' ),
+		esc_html__( 'Only the top level items will display.', 'material-theme' )
+	);
 }
