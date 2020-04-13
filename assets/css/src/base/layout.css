@@ -18,3 +18,27 @@
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
 }
+
+.entry-content {
+
+	> * {
+		margin-bottom: 1.25em;
+	}
+}
+
+.entry-content .alignwide {
+
+	@media (--medium-viewport) {
+		margin-left: calc(25% - 25vw);
+		margin-right: calc(25% - 25vw);
+	}
+}
+
+.entry-content .alignfull {
+
+	@media (--medium-viewport) {
+		margin-left: calc(-95vw / 2 + 100% / 2);
+		margin-right: calc(-95vw / 2 + 100% / 2);
+		max-width: 95vw;
+	}
+}
