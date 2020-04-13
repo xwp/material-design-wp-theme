@@ -42,10 +42,11 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
+		// This theme uses wp_nav_menu() in two location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'material-theme' ),
+				'menu-1' => esc_html__( 'Tabs', 'material-theme' ),
+				'menu-2' => esc_html__( 'Drawer', 'material-theme' ),
 			)
 		);
 
