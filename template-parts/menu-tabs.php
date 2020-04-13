@@ -7,14 +7,8 @@
  * @package MaterialTheme
  */
 
-use MaterialTheme\Menu;
 use MaterialTheme\Menu_Walker;
 
-$menu_has_children = Menu\menu_has_children( 'menu-1' );
-
-if ( $menu_has_children ) {
-	return;
-}
 ?>
 
 <div class="mdc-tab-bar tab-bar" role="tablist">
@@ -29,6 +23,7 @@ if ( $menu_has_children ) {
 						'walker'         => new Menu_Walker(),
 						'container'      => '',
 						'items_wrap'     => '%3$s',
+						'depth'          => 1,
 					)
 				);
 				?>
