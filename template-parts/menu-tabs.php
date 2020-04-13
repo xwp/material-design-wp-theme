@@ -9,6 +9,10 @@
 
 use MaterialTheme\Menu_Walker;
 
+if ( ! has_nav_menu( 'menu-1' ) ) {
+	return;
+}
+
 ?>
 
 <div class="mdc-tab-bar tab-bar" role="tablist">
