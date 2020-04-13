@@ -15,14 +15,14 @@ get_header();
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title mdc-typography--headline2"><?php esc_html_e( 'Oops! This page can&rsquo;t be found.', 'material-theme' ); ?></h1>
+					<h1 class="page-title mdc-typography--headline2"><?php esc_html_e( 'Page not found.', 'material-theme' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'The page you were looking for could not be found. It might have been removed, renamed, or did not exist in the first place.', 'material-theme' ); ?></p>
+					<p><?php esc_html_e( "The page you were looking for could not be found. It might have been removed or renamed, try searching below to find what you're looking for.", 'material-theme' ); ?></p>
 
 					<?php
-					get_template_part( 'template-parts/search', 'archive' );
+					get_search_form();
 					?>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->

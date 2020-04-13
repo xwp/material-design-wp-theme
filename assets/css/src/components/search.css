@@ -7,33 +7,12 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		margin-left: 0;
 
 		@media (--medium-viewport) {
 			flex-direction: row;
 			margin-bottom: 25vh;
 			margin-top: 3rem;
-		}
-
-		& .mdc-text-field {
-
-			@media (--medium-viewport) {
-				width: 70%;
-			}
-		}
-
-		& .mdc-button {
-			display: none;
-
-			@media (--medium-viewport) {
-				display: block;
-			}
-		}
-
-		& .mdc-text-field__icon {
-
-			@media (--medium-viewport) {
-				display: none;
-			}
 		}
 	}
 

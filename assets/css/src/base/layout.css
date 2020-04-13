@@ -19,6 +19,13 @@
 	padding-right: 1.5rem;
 }
 
+.entry-content {
+
+	> * {
+		margin-bottom: 1.25em;
+	}
+}
+
 .entry-content .alignwide {
 
 	@media (--medium-viewport) {
