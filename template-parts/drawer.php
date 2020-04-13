@@ -29,6 +29,8 @@ $top_app_bar_layout = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawe
 		<h1 class="shrine-title"><?php bloginfo( 'name' ); ?></h1>
 	</div>
 	<div class="mdc-drawer__content">
+		<?php get_search_form(); ?>
+
 		<nav
 			class="mdc-list"
 			<?php if ( ! empty( $has_changed_color ) ) : ?>
@@ -57,8 +59,6 @@ $top_app_bar_layout = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawe
 			}
 			?>
 		</nav>
-
-		<?php get_search_form(); ?>
 	</div>
 </aside>
 
