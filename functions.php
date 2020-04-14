@@ -42,10 +42,11 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
+		// This theme uses wp_nav_menu() in two location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'material-theme' ),
+				'menu-1' => esc_html__( 'Tabs', 'material-theme' ),
+				'menu-2' => esc_html__( 'Drawer', 'material-theme' ),
 			)
 		);
 
@@ -179,6 +180,7 @@ require get_template_directory() . '/inc/customizer/header.php';
 require get_template_directory() . '/inc/customizer/footer.php';
 require get_template_directory() . '/inc/customizer/archive.php';
 require get_template_directory() . '/inc/customizer/comments.php';
+require get_template_directory() . '/inc/customizer/menu.php';
 
 /**
  * Custom menu walker
@@ -203,3 +205,4 @@ MaterialTheme\Customizer\Header\setup();
 MaterialTheme\Customizer\Footer\setup();
 MaterialTheme\Customizer\Archive\setup();
 MaterialTheme\Customizer\Comments\setup();
+MaterialTheme\Customizer\Menu\setup();

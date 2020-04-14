@@ -3,4 +3,13 @@
 	& .mdc-drawer__header {
 		display: flex;
 	}
+
+	& .sub-menu {
+		margin-left: 0;
+		padding-left: 1rem;
+	}
+
+	& .mdc-drawer__content {
+		padding-top: 0.5rem;
+	}
 }

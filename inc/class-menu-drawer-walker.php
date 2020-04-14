@@ -11,7 +11,7 @@ namespace MaterialTheme;
 /**
  * Menu_Drawer_Walker class
  */
-class Menu_Drawer_Walker extends \Walker {
+class Menu_Drawer_Walker extends \Walker_Nav_Menu {
 	/**
 	 * DB fields to use.
 	 *
