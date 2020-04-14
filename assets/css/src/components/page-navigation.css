@@ -10,13 +10,13 @@
 	}
 
 	& .material-icons {
-		font-size: 2.5em;
+		font-size: 1.75em;
 		opacity: 0.5;
 	}
 
 	& a {
 		display: inline-block;
-		height: 2.5em;
+		height: 1.75em;
 
 		& .material-icons {
 			opacity: 1;
