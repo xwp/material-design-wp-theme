@@ -60,19 +60,7 @@ $is_material_plugin_active = class_exists( 'MaterialThemeBuilder\Plugin' );
 			</span>
 		</section>
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end top-app-bar__menu" role="toolbar">
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-					'walker'         => new Menu_Walker(),
-					'container'      => '',
-					'items_wrap'     => '<nav id="%1$s" class="%2$s">%3$s</nav>',
-				)
-			);
-			?>
-
-			<?php if ( ! empty( $has_search ) ) : ?>
+				<?php if ( ! empty( $has_search ) ) : ?>
 				<button class="mdc-button mdc-button--outlined search__button"> 
 					<span class="mdc-button__ripple"></span>
 					<i class="material-icons mdc-button__icon">search</i>

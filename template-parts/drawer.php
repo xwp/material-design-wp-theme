@@ -29,6 +29,8 @@ $top_app_bar_layout = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawe
 		<h1 class="shrine-title"><?php bloginfo( 'name' ); ?></h1>
 	</div>
 	<div class="mdc-drawer__content">
+		<?php get_search_form(); ?>
+
 		<nav
 			class="mdc-list"
 			<?php if ( ! empty( $has_changed_color ) ) : ?>
@@ -44,19 +46,19 @@ $top_app_bar_layout = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawe
 			<?php endif; ?>
 		>
 			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-					'walker'         => new Menu_Drawer_Walker(),
-					'container'      => '',
-					'items_wrap'     => '%3$s',
-				)
-			);
+			if ( has_nav_menu( 'menu-2' ) ) {
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-2',
+						'menu_id'        => 'secondary-menu',
+						'walker'         => new Menu_Drawer_Walker(),
+						'container'      => '',
+						'items_wrap'     => '%3$s',
+					)
+				);
+			}
 			?>
 		</nav>
-
-		<?php get_search_form(); ?>
 	</div>
 </aside>
 
