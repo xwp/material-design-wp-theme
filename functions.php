@@ -200,9 +200,16 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Widgets
+ */
+require get_template_directory() . '/inc/widgets/class-wp-widget-archives.php';
+require get_template_directory() . '/inc/widgets.php';
+
 MaterialTheme\Customizer\setup();
 MaterialTheme\Customizer\Header\setup();
 MaterialTheme\Customizer\Footer\setup();
 MaterialTheme\Customizer\Archive\setup();
 MaterialTheme\Customizer\Comments\setup();
 MaterialTheme\Customizer\Menu\setup();
+MaterialTheme\Widgets\setup();
