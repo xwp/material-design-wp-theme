@@ -12,6 +12,8 @@ if ( ! is_active_sidebar( 'footer' ) ) {
 }
 ?>
 
-<aside id="secondary" class="widget-area">
-	<?php dynamic_sidebar( 'footer' ); ?>
+<aside id="secondary" class="widget-area mdc-layout-grid">
+	<div class="mdc-layout-grid__inner">
+		<?php dynamic_sidebar( 'footer' ); ?>
+	</div>
 </aside><!-- #secondary -->

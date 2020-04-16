@@ -1,0 +1,6 @@
+.widget {
+
+	& .widget-title {
+		margin-bottom: 0;
+	}
+}
