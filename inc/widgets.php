@@ -27,9 +27,11 @@ function setup() {
 function replace_default_widgets() {
 	unregister_widget( 'WP_Widget_Archives' );
 	unregister_widget( 'WP_Widget_Categories' );
+	unregister_widget( 'WP_Widget_Meta' );
 
 	register_widget( __NAMESPACE__ . '\WP_Widget_Archives' );
 	register_widget( __NAMESPACE__ . '\WP_Widget_Categories' );
+	register_widget( __NAMESPACE__ . '\WP_Widget_Meta' );
 }
 
 /**
