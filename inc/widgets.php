@@ -16,6 +16,7 @@ function setup() {
 	add_action( 'widgets_init', __NAMESPACE__ . '\replace_default_widgets' );
 	
 	add_filter( 'widget_archives_args', __NAMESPACE__ . '\build_archive' );
+	add_filter( 'wp_list_categories', __NAMESPACE__ . '\add_class_tax_list' );
 }
 
 /**
@@ -25,8 +26,10 @@ function setup() {
  */
 function replace_default_widgets() {
 	unregister_widget( 'WP_Widget_Archives' );
+	unregister_widget( 'WP_Widget_Categories' );
 
 	register_widget( __NAMESPACE__ . '\WP_Widget_Archives' );
+	register_widget( __NAMESPACE__ . '\WP_Widget_Categories' );
 }
 
 /**
@@ -45,4 +48,16 @@ function build_archive( $args ) {
 	$args = wp_parse_args( $new_args, $args );
 
 	return $args;
+}
+
+/**
+ * Adds material classes to a taxonomy list
+ *
+ * @param  string $output Generated list markup.
+ * @return string Updated list markup
+ */
+function add_class_tax_list( $output ) {
+	$output = str_replace( '<li class="cat-item', '<li class="mdc-list-item cat-item', $output );
+
+	return $output;
 }

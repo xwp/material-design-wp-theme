@@ -204,6 +204,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Widgets
  */
 require get_template_directory() . '/inc/widgets/class-wp-widget-archives.php';
+require get_template_directory() . '/inc/widgets/class-wp-widget-categories.php';
 require get_template_directory() . '/inc/widgets.php';
 
 MaterialTheme\Customizer\setup();
