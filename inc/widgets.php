@@ -7,6 +7,8 @@
 
 namespace MaterialTheme\Widgets;
 
+use MaterialTheme\Menu_Drawer_Walker;
+
 /**
  * Attach hooks
  *
@@ -17,6 +19,7 @@ function setup() {
 	
 	add_filter( 'widget_archives_args', __NAMESPACE__ . '\build_archive' );
 	add_filter( 'wp_list_categories', __NAMESPACE__ . '\add_class_tax_list' );
+	add_filter( 'widget_nav_menu_args', __NAMESPACE__ . '\menu_widget_args' );
 }
 
 /**
@@ -62,4 +65,20 @@ function add_class_tax_list( $output ) {
 	$output = str_replace( '<li class="cat-item', '<li class="mdc-list-item cat-item', $output );
 
 	return $output;
+}
+
+/**
+ * Give drawer treatment to nav menu widget
+ *
+ * @param  array $args Widget's arguments.
+ * @return array Widget's arguments plus drawer menu treatment
+ */
+function menu_widget_args( $args ) {
+	$menu_args = [
+		'walker'     => new Menu_Drawer_Walker(),
+		'container'  => '',
+		'items_wrap' => '%3$s',
+	];
+
+	return wp_parse_args( $menu_args, $args );
 }
