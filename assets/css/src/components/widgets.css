@@ -25,4 +25,9 @@
 			padding-left: 1rem;
 		}
 	}
+
+	& .recentcomments {
+		display: block;
+		line-height: 3;
+	}
 }
