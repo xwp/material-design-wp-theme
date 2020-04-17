@@ -126,7 +126,7 @@ function material_theme_wp_widgets_init() {
 			'name'          => esc_html__( 'Footer', 'material-theme' ),
 			'id'            => 'footer',
 			'description'   => esc_html__( 'Footer widgets area.', 'material-theme' ),
-			'before_widget' => '<section id="%1$s" class="widget mdc-layout-grid__cell %2$s">',
+			'before_widget' => '<section id="%1$s" class="widget mdc-layout-grid__cell mdc-layout-grid__cell--span-6 %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title mdc-typography--headline5">',
 			'after_title'   => '</h2>',
