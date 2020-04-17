@@ -20,6 +20,7 @@ function setup() {
 	add_filter( 'widget_archives_args', __NAMESPACE__ . '\build_archive' );
 	add_filter( 'wp_list_categories', __NAMESPACE__ . '\add_class_tax_list' );
 	add_filter( 'widget_nav_menu_args', __NAMESPACE__ . '\menu_widget_args' );
+	add_filter( 'wp_list_pages', __NAMESPACE__ . '\add_class_pages' );
 }
 
 /**
@@ -31,10 +32,12 @@ function replace_default_widgets() {
 	unregister_widget( 'WP_Widget_Archives' );
 	unregister_widget( 'WP_Widget_Categories' );
 	unregister_widget( 'WP_Widget_Meta' );
+	unregister_widget( 'WP_Widget_Pages' );
 
 	register_widget( __NAMESPACE__ . '\WP_Widget_Archives' );
 	register_widget( __NAMESPACE__ . '\WP_Widget_Categories' );
 	register_widget( __NAMESPACE__ . '\WP_Widget_Meta' );
+	register_widget( __NAMESPACE__ . '\WP_Widget_Pages' );
 }
 
 /**
@@ -81,4 +84,16 @@ function menu_widget_args( $args ) {
 	];
 
 	return wp_parse_args( $menu_args, $args );
+}
+
+/**
+ * Add MDC class to items
+ *
+ * @param  string $html Widget output.
+ * @return string Modified output
+ */
+function add_class_pages( $html ) {
+	$html = str_replace( '<li class="page_item', '<li class="mdc-list-item page_item', $html );
+
+	return $html;
 }
