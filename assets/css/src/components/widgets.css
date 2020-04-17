@@ -1,5 +1,9 @@
 .widget {
 
+	& a {
+		text-decoration: none;
+	}
+
 	& .widget-title {
 		margin-bottom: 0;
 	}
