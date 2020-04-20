@@ -131,7 +131,7 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 			return;
 		}
 
-		echo '<ul>';
+		echo '<ul class="mdc-list mdc-list--two-line>';
 		foreach ( $rss->get_items( 0, $items ) as $item ) {
 			$link = $item->get_link();
 			while ( stristr( $link, 'http' ) != $link ) {
@@ -178,11 +178,30 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 			}
 
 			if ( '' === $link ) {
-				echo wp_kses_post( "<li>$title{$date}{$summary}{$author}</li>" );
+				printf(
+					'<li class="mdc-list-item">%1$s %2$s %3$s %4$s</li>',
+					esc_html( $title ),
+					wp_kses( $date, [ 'span' => [ 'class' ] ] ),
+					wp_kses_post( $summary ),
+					esc_html( $author )
+				);
 			} elseif ( $show_summary ) {
-				echo wp_kses_post( "<li><a class='rsswidget' href='$link'>$title</a>{$date}{$summary}{$author}</li>" );
+				printf(
+					'<li><a class="rsswidget" href="%1$s">%2$s</a> %3$s %4$s %5$s</li>',
+					esc_url( $link ),
+					esc_html( $title ),
+					wp_kses( $date, [ 'span' => [ 'class' ] ] ),
+					wp_kses_post( $summary ),
+					esc_html( $author )
+				);
 			} else {
-				echo wp_kses_post( "<li><a class='rsswidget' href='$link'>$title</a>{$date}{$author}</li>" );
+				printf(
+					'<li><a class="rsswidget" href="%1$s">%2$s</a> %3$s %4$s</li>',
+					esc_url( $link ),
+					esc_html( $title ),
+					wp_kses( $date, [ 'span' => [ 'class' ] ] ),
+					esc_html( $author )
+				);
 			}
 		}
 		echo '</ul>';
