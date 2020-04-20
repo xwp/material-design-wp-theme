@@ -67,7 +67,7 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 		$url  = wp_strip_all_tags( $url );
 		$icon = includes_url( 'images/rss.png' );
 		if ( $title ) {
-			$title = '<a class="rsswidget" href="' . esc_url( $url ) . '"><img class="rss-widget-icon" style="border:0" width="14" height="14" src="' . esc_url( $icon ) . '" alt="RSS" /></a> <a class="rsswidget" href="' . esc_url( $link ) . '">' . esc_html( $title ) . '</a>';
+			$title = '<a class="rsswidget" href="' . esc_url( $link ) . '">' . esc_html( $title ) . '</a>';
 		}
 
 		echo wp_kses_post( $args['before_widget'] );
@@ -131,7 +131,7 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 			return;
 		}
 
-		echo '<ul class="mdc-list mdc-list--two-line>';
+		echo '<ul class="mdc-list mdc-list--two-line widget-rss">';
 		foreach ( $rss->get_items( 0, $items ) as $item ) {
 			$link = $item->get_link();
 			while ( stristr( $link, 'http' ) != $link ) {
@@ -164,7 +164,7 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 				$date = $item->get_date( 'U' );
 
 				if ( $date ) {
-					$date = ' <span class="rss-date">' . date_i18n( get_option( 'date_format' ), $date ) . '</span>';
+					$date = '<span class="rss-date">' . date_i18n( get_option( 'date_format' ), $date ) . '</span>';
 				}
 			}
 
@@ -187,7 +187,7 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 				);
 			} elseif ( $show_summary ) {
 				printf(
-					'<li><a class="rsswidget" href="%1$s">%2$s</a> %3$s %4$s %5$s</li>',
+					'<li class="mdc-list-item"><span class="mdc-list-item__text"><span class="mdc-list-item__primary-text"><a class="rsswidget" href="%1$s">%2$s</a></span><span class="mdc-list-item__secondary-text">%3$s %4$s %5$s</span></span></li>',
 					esc_url( $link ),
 					esc_html( $title ),
 					wp_kses( $date, [ 'span' => [ 'class' ] ] ),
@@ -196,7 +196,7 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 				);
 			} else {
 				printf(
-					'<li><a class="rsswidget" href="%1$s">%2$s</a> %3$s %4$s</li>',
+					'<li class="mdc-list-item"><span class="mdc-list-item__text"><span class="mdc-list-item__primary-text"><a class="rsswidget" href="%1$s">%2$s</a></span><span class="mdc-list-item__secondary-text">%3$s %4$s</span></span></li>',
 					esc_url( $link ),
 					esc_html( $title ),
 					wp_kses( $date, [ 'span' => [ 'class' ] ] ),

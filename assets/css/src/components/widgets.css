@@ -30,4 +30,27 @@
 		display: block;
 		line-height: 3;
 	}
+
+	& .widget-rss {
+
+		& .mdc-list-item:hover::before {
+			content: none;
+		}
+
+		& .mdc-list-item {
+			height: auto;
+			overflow: visible;
+		}
+
+		& .mdc-list-item__text {
+			overflow: visible;
+			width: 100%;
+			white-space: normal;
+		}
+
+		& .mdc-list-item__secondary-text {
+			overflow: visible;
+			white-space: normal;
+		}
+	}
 }
