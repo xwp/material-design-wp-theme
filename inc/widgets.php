@@ -35,6 +35,7 @@ function replace_default_widgets() {
 	unregister_widget( 'WP_Widget_Pages' );
 	unregister_widget( 'WP_Widget_Recent_Comments' );
 	unregister_widget( 'WP_Widget_Recent_Posts' );
+	unregister_widget( 'WP_Widget_RSS' );
 
 	register_widget( __NAMESPACE__ . '\WP_Widget_Archives' );
 	register_widget( __NAMESPACE__ . '\WP_Widget_Categories' );
@@ -42,6 +43,7 @@ function replace_default_widgets() {
 	register_widget( __NAMESPACE__ . '\WP_Widget_Pages' );
 	register_widget( __NAMESPACE__ . '\WP_Widget_Recent_Comments' );
 	register_widget( __NAMESPACE__ . '\WP_Widget_Recent_Posts' );
+	register_widget( __NAMESPACE__ . '\WP_Widget_RSS' );
 }
 
 /**
