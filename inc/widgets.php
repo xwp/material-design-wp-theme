@@ -24,26 +24,33 @@ function setup() {
 }
 
 /**
+ * Define widgets to replace
+ * 
+ * @return array Supported widgets
+ */
+function get_supported_widgets() {
+	return [
+		'WP_Widget_Archives',
+		'WP_Widget_Categories',
+		'WP_Widget_Meta',
+		'WP_Widget_Pages',
+		'WP_Widget_Recent_Comments',
+		'WP_Widget_Recent_Posts',
+		'WP_Widget_RSS',
+	];
+}
+
+/**
  * Remove default widgets and replace with our versions
  *
  * @return void
  */
 function replace_default_widgets() {
-	unregister_widget( 'WP_Widget_Archives' );
-	unregister_widget( 'WP_Widget_Categories' );
-	unregister_widget( 'WP_Widget_Meta' );
-	unregister_widget( 'WP_Widget_Pages' );
-	unregister_widget( 'WP_Widget_Recent_Comments' );
-	unregister_widget( 'WP_Widget_Recent_Posts' );
-	unregister_widget( 'WP_Widget_RSS' );
+	foreach ( get_supported_widgets() as $widget ) {
+		unregister_widget( $widget );
 
-	register_widget( __NAMESPACE__ . '\WP_Widget_Archives' );
-	register_widget( __NAMESPACE__ . '\WP_Widget_Categories' );
-	register_widget( __NAMESPACE__ . '\WP_Widget_Meta' );
-	register_widget( __NAMESPACE__ . '\WP_Widget_Pages' );
-	register_widget( __NAMESPACE__ . '\WP_Widget_Recent_Comments' );
-	register_widget( __NAMESPACE__ . '\WP_Widget_Recent_Posts' );
-	register_widget( __NAMESPACE__ . '\WP_Widget_RSS' );
+		register_widget( __NAMESPACE__ . "\\{$widget}" );
+	}
 }
 
 /**
