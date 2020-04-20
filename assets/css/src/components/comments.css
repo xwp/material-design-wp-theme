@@ -97,3 +97,7 @@
 		margin-top: 1.5em;
 	}
 }
+
+.comment-content {
+	max-width: 100%;
+}
