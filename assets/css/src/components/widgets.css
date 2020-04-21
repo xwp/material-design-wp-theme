@@ -1,3 +1,7 @@
+.widget-area {
+	max-width: 80rem;
+}
+
 .widget {
 
 	& a {
