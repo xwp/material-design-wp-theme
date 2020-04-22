@@ -34,7 +34,7 @@
 
 	& .top-app-bar__title {
 		color: var(--mdc-theme-on-primary);
-		padding-left: 0;
+		padding-left: 1rem;
 
 		& .site-title {
 			font-size: 1.25rem;
