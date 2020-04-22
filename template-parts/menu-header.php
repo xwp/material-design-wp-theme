@@ -61,10 +61,10 @@ $is_material_plugin_active = class_exists( 'MaterialThemeBuilder\Plugin' );
 		</section>
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end top-app-bar__menu" role="toolbar">
 				<?php if ( ! empty( $has_search ) ) : ?>
-				<button class="mdc-button mdc-button--outlined search__button"> 
+				<button class="mdc-button search__button"> 
 					<span class="mdc-button__ripple"></span>
 					<i class="material-icons mdc-button__icon">search</i>
-					<?php esc_html_e( 'Search', 'material-theme' ); ?>
+					<span class="screen-reader-text"><?php esc_html_e( 'Search', 'material-theme' ); ?></span>
 				</button>
 			<?php endif; ?>
 		</section>
