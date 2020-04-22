@@ -1,0 +1,60 @@
+.widget-area {
+	max-width: 80rem;
+}
+
+.widget {
+
+	& a {
+		text-decoration: none;
+	}
+
+	& .widget-title {
+		margin-bottom: 0;
+	}
+
+	& .sub-menu {
+		margin-left: 0;
+		padding-left: 1rem;
+	}
+
+	& .page_item {
+		align-items: flex-start;
+		flex-direction: column;
+		height: auto;
+		min-height: 3rem;
+
+		& .children {
+			margin-left: 0;
+			margin-top: 1rem;
+			padding-left: 1rem;
+		}
+	}
+
+	& .recentcomments {
+		display: block;
+		line-height: 3;
+	}
+
+	& .widget-rss {
+
+		& .mdc-list-item {
+			height: auto;
+			overflow: visible;
+		}
+
+		& .mdc-list-item__text {
+			overflow: visible;
+			width: 100%;
+			white-space: normal;
+		}
+
+		& .mdc-list-item__secondary-text {
+			overflow: visible;
+			white-space: normal;
+		}
+	}
+
+	& .mdc-list-item:hover::before {
+		content: none;
+	}
+}

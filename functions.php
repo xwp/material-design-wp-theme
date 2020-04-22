@@ -123,12 +123,12 @@ add_action( 'after_setup_theme', 'material_theme_wp_content_width', 0 );
 function material_theme_wp_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'material-theme' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'material-theme' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'name'          => esc_html__( 'Footer', 'material-theme' ),
+			'id'            => 'footer',
+			'description'   => esc_html__( 'Footer widgets area.', 'material-theme' ),
+			'before_widget' => '<section id="%1$s" class="widget mdc-layout-grid__cell mdc-layout-grid__cell--span-6 %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
+			'before_title'  => '<h2 class="widget-title mdc-typography--headline5">',
 			'after_title'   => '</h2>',
 		)
 	);
@@ -200,9 +200,22 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Widgets
+ */
+require get_template_directory() . '/inc/widgets/class-wp-widget-archives.php';
+require get_template_directory() . '/inc/widgets/class-wp-widget-categories.php';
+require get_template_directory() . '/inc/widgets/class-wp-widget-meta.php';
+require get_template_directory() . '/inc/widgets/class-wp-widget-pages.php';
+require get_template_directory() . '/inc/widgets/class-wp-widget-recent-comments.php';
+require get_template_directory() . '/inc/widgets/class-wp-widget-recent-posts.php';
+require get_template_directory() . '/inc/widgets/class-wp-widget-rss.php';
+require get_template_directory() . '/inc/widgets.php';
+
 MaterialTheme\Customizer\setup();
 MaterialTheme\Customizer\Header\setup();
 MaterialTheme\Customizer\Footer\setup();
 MaterialTheme\Customizer\Archive\setup();
 MaterialTheme\Customizer\Comments\setup();
 MaterialTheme\Customizer\Menu\setup();
+MaterialTheme\Widgets\setup();
