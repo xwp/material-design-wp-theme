@@ -33,7 +33,6 @@ function register( $wp_customize ) {
 			array(
 				'selector'        => '.top-app-bar',
 				'settings'        => [
-					Customizer\prepend_slug( 'header_layout' ),
 					Customizer\prepend_slug( 'background_color' ),
 					Customizer\prepend_slug( 'text_color' ),
 					Customizer\prepend_slug( 'header_search_display' ),
@@ -98,7 +97,6 @@ function add_settings( $wp_customize ) {
 	Customizer\add_settings( $wp_customize, $settings );
 
 	add_controls( $wp_customize );
-	add_image_radio( $wp_customize );
 	add_color_controls( $wp_customize );
 }
 
@@ -117,55 +115,6 @@ function add_controls( $wp_customize ) {
 				'section' => Customizer\prepend_slug( 'header_section' ),
 			],
 			$control 
-		);
-	}
-
-	Customizer\add_controls( $wp_customize, $controls );
-}
-
-/**
- * Define options for drawer layout
- *
- * @return array
- */
-function get_image_radio_args() {
-	return [
-		'label'    => esc_html__( 'Header Style', 'material-theme' ),
-		'section'  => Customizer\prepend_slug( 'header_section' ),
-		'priority' => 10,
-		'choices'  => [
-			'drawer' => [
-				'label' => esc_html__( 'Menu Drawer', 'material-theme' ),
-				'url'   => get_template_directory_uri() . '/assets/svg/drawer.svg',
-			],
-			'menu'   => [
-				'label' => esc_html__( 'No Menu Drawer', 'material-theme' ),
-				'url'   => get_template_directory_uri() . '/assets/svg/menu.svg',
-			],
-		],
-	];
-}
-
-/**
- * Choose which image radio control to use
- * 
- * @param WP_Customize_Manager $wp_customize Theme Customizer object.
- */
-function add_image_radio( $wp_customize ) {
-	$args     = get_image_radio_args();
-	$controls = [];
-
-	if ( class_exists( 'MaterialThemeBuilder\Customizer\Image_Radio_Control' ) ) {
-		$controls[ Customizer\prepend_slug( 'header_layout' ) ] = new \MaterialThemeBuilder\Customizer\Image_Radio_Control(
-			$wp_customize,
-			Customizer\prepend_slug( 'header_layout' ),
-			$args
-		);
-	} else {
-		$controls[ Customizer\prepend_slug( 'header_layout' ) ] = new Customizer\Image_Radio_Control(
-			$wp_customize,
-			Customizer\prepend_slug( 'header_layout' ),
-			$args
 		);
 	}
 
