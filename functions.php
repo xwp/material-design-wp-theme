@@ -163,6 +163,56 @@ function material_theme_wp_scripts() {
 add_action( 'wp_enqueue_scripts', 'material_theme_wp_scripts' );
 
 /**
+ * Show admin notice if plugin isn't installed.
+ *
+ * @return void
+ */
+function plugin_not_installed_notice() {
+	// Plugin already installed. Don't show the notice.
+	if ( file_exists( WP_CONTENT_DIR . '/plugins/material-theme-builder' ) ) {
+		return;
+	}
+	?>
+	<div 
+		class="notice notice-info is-dismissible" 
+		style="display: flex; background-color: #E7F5F9; align-items: center; padding: 15px;"
+	>
+		<img 
+			src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/plugin-icon.svg' ); ?>" 
+			alt="<?php _e( 'Material Theme Builder', 'material-theme' ); ?>" 
+		/>
+
+		<div style="margin-left: 20px;">
+			<h3 style="margin: 0; margin-bottom: 5px;">
+				<?php 
+				esc_html_e( 
+					'Install the Material Plugin to customize your Material Theme', 
+					'material-theme' 
+				) 
+				?>
+			</h3>
+			<p style="margin: 0;">
+				<?php 
+				echo sprintf(
+					wp_kses( 
+						/* translators: %s: url to the plugin installation page */
+						__( 
+							'To take full advantage of this theme you will need the Material Plugin. <a href="%s">Install and activate the plugin</a>', 
+							'material-theme' 
+						), 
+						[ 'a' => 'keep' ] 
+					), 
+					'#'
+				) 
+				?>
+			</p>
+		</div>
+	</div>
+	<?php
+}
+add_action( 'admin_notices', 'plugin_not_installed_notice' );
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
