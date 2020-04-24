@@ -1,12 +1,16 @@
-.mdc-tab {
-	background-color: var(--mdc-theme-primary);
+.tab-bar {
+	box-shadow: 1px 0 5px rgba(0, 0, 0, .5);
 
-	& .mdc-tab__text-label {
-		color: var(--mdc-theme-on-primary);
-	}
+	& .mdc-tab {
+		background-color: var(--mdc-theme-primary);
 
-	& .mdc-tab__ripple::before,
-	& .mdc-tab__ripple::after {
-		background-color: var(--mdc-theme-on-primary);
+		& .mdc-tab__text-label {
+			color: var(--mdc-theme-on-primary);
+		}
+
+		& .mdc-tab__ripple::before,
+		& .mdc-tab__ripple::after {
+			background-color: var(--mdc-theme-on-primary);
+		}
 	}
 }
