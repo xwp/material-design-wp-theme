@@ -1,6 +1,11 @@
 .tab-bar {
 	box-shadow: 1px 0 5px rgba(0, 0, 0, .5);
 
+	& .mdc-tab-scroller__scroll-content {
+		background-color: var(--mdc-theme-primary);
+		padding-left: 3.25rem;
+	}
+
 	& .mdc-tab {
 		background-color: var(--mdc-theme-primary);
 
