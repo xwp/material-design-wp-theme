@@ -37,7 +37,9 @@ $is_material_plugin_active = class_exists( 'MaterialThemeBuilder\Plugin' );
 >
 	<div class="mdc-top-app-bar__row top-app-bar__header">
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-			<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger"><?php esc_html_e( 'menu', 'material-theme' ); ?></button>
+			<?php if ( has_nav_menu( 'menu-2' ) ) : ?>
+				<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger"><?php esc_html_e( 'menu', 'material-theme' ); ?></button>
+			<?php endif; ?>
 			<?php if ( has_custom_logo() ) : ?>
 				<div class="logo">
 					<?php the_custom_logo(); ?>
