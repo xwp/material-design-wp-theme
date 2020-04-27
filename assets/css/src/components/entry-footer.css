@@ -15,4 +15,9 @@
 	& .cat-links {
 		display: flex;
 	}
+
+	& .tags-links {
+		display: flex;
+		margin-left: 1rem;
+	}
 }

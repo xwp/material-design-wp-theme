@@ -59,10 +59,10 @@ if ( ! function_exists( 'material_theme_wp_entry_footer' ) ) :
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'material-theme' ) );
+			$tags_list = get_the_tag_list( '', '<span class="separator">, </span>' );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'material-theme' ) . '</span>', $tags_list ); // phpcs:ignore
+				printf( '<span class="tags-links"><i class="material-icons mdc-button__icon">label</i>%1$s</span>', $tags_list ); // phpcs:ignore
 			}
 		}
 
