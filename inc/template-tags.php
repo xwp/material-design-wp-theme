@@ -52,10 +52,10 @@ if ( ! function_exists( 'material_theme_wp_entry_footer' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'material-theme' ) );
+			$categories_list = get_the_category_list( ' ' );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'material-theme' ) . '</span>', $categories_list ); // phpcs:ignore
+				printf( '<span class="cat-links"><i class="material-icons mdc-button__icon">category</i>%1$s</span>', $categories_list ); // phpcs:ignore
 			}
 
 			/* translators: used between list items, there is a space after the comma */

@@ -1,0 +1,21 @@
+.entry-footer {
+	align-content: center;
+	display: flex;
+
+	& a {
+		margin-right: 0.5rem;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	& .cat-links {
+		display: flex;
+	}
+
+	& .material-icons {
+		margin-right: 0.5em;
+	}
+}
