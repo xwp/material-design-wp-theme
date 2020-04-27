@@ -90,15 +90,18 @@ if ( ! function_exists( 'material_theme_wp_entry_footer' ) ) :
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
 					__( 'Edit <span class="screen-reader-text">%s</span>', 'material-theme' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
+					[
+						'span' => [
+							'class' => [],
+						],
+						'i'    => [
+							'class' => [],
+						],
+					]
 				),
 				get_the_title()
 			),
-			'<span class="edit-link">',
+			'<span class="edit-link"><i class="material-icons mdc-button__icon">create</i>',
 			'</span>'
 		);
 	}

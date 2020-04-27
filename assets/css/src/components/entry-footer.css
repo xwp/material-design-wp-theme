@@ -20,4 +20,8 @@
 		display: flex;
 		margin-left: 1rem;
 	}
+
+	& .edit-link {
+		margin-left: auto;
+	}
 }
