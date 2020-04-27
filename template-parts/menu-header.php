@@ -55,7 +55,7 @@ $is_material_plugin_active = class_exists( 'MaterialThemeBuilder\Plugin' );
 					<?php
 				else :
 					?>
-					<div class="site-title mdc-typography mdc-typography--headline1"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+					<div class="site-title mdc-typography mdc-typography--headline6"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
 					<?php
 				endif;
 				?>
