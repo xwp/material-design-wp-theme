@@ -45,11 +45,3 @@
 		}
 	}
 }
-
-.search__button:not(:disabled) {
-	color: var(--mdc-theme-on-primary);
-
-	& .mdc-button__icon {
-		margin-right: 0;
-	}
-}
