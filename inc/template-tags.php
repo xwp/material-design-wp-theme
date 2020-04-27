@@ -52,7 +52,7 @@ if ( ! function_exists( 'material_theme_wp_entry_footer' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( ' ' );
+			$categories_list = get_the_category_list( '<span class="separator">, </span>' );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
 				printf( '<span class="cat-links"><i class="material-icons mdc-button__icon">category</i>%1$s</span>', $categories_list ); // phpcs:ignore

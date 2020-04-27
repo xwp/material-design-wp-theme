@@ -4,7 +4,7 @@
 
 	& a {
 		font-weight: 700;
-		margin-right: 0.5rem;
+		margin-left: 0.5rem;
 		text-decoration: none;
 
 		&:hover {
@@ -14,9 +14,5 @@
 
 	& .cat-links {
 		display: flex;
-	}
-
-	& .material-icons {
-		margin-right: 0.5em;
 	}
 }
