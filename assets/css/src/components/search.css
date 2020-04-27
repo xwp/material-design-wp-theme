@@ -37,7 +37,7 @@
 
 		& .button__back {
 			background-color: transparent;
-			color: var(--mdc-theme-primary);
+			color: var(--mdc-theme-primary, #6200ee);
 			padding-left: 0;
 			padding-right: 0;
 			margin-right: 1rem;
