@@ -20,8 +20,8 @@ $next_link     = get_next_post_link( '%link' );
 
 	<?php if ( ! empty( $next_link ) ) : ?>
 		<div class="post-navigation__next">
-			<i class="material-icons mdc-button__icon">arrow_forward_ios</i>
 			<?php echo $next_link; // phpcs:ignore ?>
+			<i class="material-icons mdc-button__icon">arrow_forward_ios</i>
 		</div>
 	<?php endif; ?>
 </div>
