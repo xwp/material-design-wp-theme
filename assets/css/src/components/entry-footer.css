@@ -3,6 +3,7 @@
 	display: flex;
 
 	& a {
+		font-weight: 700;
 		margin-right: 0.5rem;
 		text-decoration: none;
 

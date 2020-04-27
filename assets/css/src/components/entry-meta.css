@@ -2,20 +2,21 @@
 	align-content: center;
 	display: flex;
 
+	& a {
+		font-weight: 700;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
 	& .author {
 		display: flex;
 		margin-right: 1rem;
 
 		& .material-icons {
 			margin-right: 0.5rem;
-		}
-
-		& .url {
-			text-decoration: none;
-		}
-
-		& .url:hover {
-			text-decoration: underline;
 		}
 	}
 
@@ -24,14 +25,6 @@
 
 		& .material-icons {
 			margin-right: 0.5rem;
-		}
-
-		& .date {
-			text-decoration: none;
-		}
-
-		& .date:hover {
-			text-decoration: underline;
 		}
 	}
 }
