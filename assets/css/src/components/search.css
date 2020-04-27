@@ -23,6 +23,7 @@
 
 		& .mdc-text-field__input {
 			border: 0;
+			margin-left: 1rem;
 		}
 
 		& .mdc-button__label {
@@ -35,14 +36,12 @@
 		}
 
 		& .button__back {
+			background-color: transparent;
+			color: var(--mdc-theme-primary, #6200ee);
 			padding-left: 0;
 			padding-right: 0;
 			margin-right: 1rem;
 			min-width: 2.25rem;
 		}
 	}
-}
-
-.search__button:not(:disabled) {
-	color: var(--mdc-theme-on-primary);
 }

@@ -1,5 +1,4 @@
 .top-app-bar {
-	box-shadow: 1px 0 2px rgba(0, 0, 0, .5);
 
 	& .site-title a {
 		text-decoration: none;
@@ -34,22 +33,24 @@
 
 	& .top-app-bar__title {
 		color: var(--mdc-theme-on-primary);
-		padding-left: 0;
+		padding-left: 1rem;
 
 		& .site-title {
 			font-size: 1.25rem;
 			margin-bottom: 0;
 			margin-top: 0;
-
-			--mdc-typography-headline1-line-height: 3rem;
-
-			@media (--medium-viewport) {
-				font-size: 2rem;
-			}
 		}
 	}
 
-	.top-app-bar__search {
+	& .search__button:not(:disabled) {
+		color: var(--mdc-theme-on-primary, #fff);
+
+		& .mdc-button__icon {
+			margin-right: 0;
+		}
+	}
+
+	& .top-app-bar__search {
 		background-color: var(--search-background);
 		display: none;
 	}
