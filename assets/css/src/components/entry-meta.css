@@ -13,5 +13,25 @@
 		& .url {
 			text-decoration: none;
 		}
+
+		& .url:hover {
+			text-decoration: underline;
+		}
+	}
+
+	& .posted-on {
+		display: flex;
+
+		& .material-icons {
+			margin-right: 0.5rem;
+		}
+
+		& .date {
+			text-decoration: none;
+		}
+
+		& .date:hover {
+			text-decoration: underline;
+		}
 	}
 }
