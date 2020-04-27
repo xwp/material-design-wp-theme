@@ -1,0 +1,17 @@
+.entry-meta {
+	align-content: center;
+	display: flex;
+
+	& .author {
+		display: flex;
+		margin-right: 1rem;
+
+		& .material-icons {
+			margin-right: 0.5rem;
+		}
+
+		& .url {
+			text-decoration: none;
+		}
+	}
+}

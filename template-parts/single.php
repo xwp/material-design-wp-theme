@@ -22,8 +22,8 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				material_theme_wp_posted_on();
 				material_theme_wp_posted_by();
+				material_theme_wp_posted_on();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
