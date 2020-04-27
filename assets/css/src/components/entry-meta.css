@@ -1,6 +1,7 @@
 .entry-meta {
 	align-content: center;
 	display: flex;
+	margin-bottom: 1.5rem;
 
 	& a {
 		font-weight: 700;
