@@ -42,7 +42,15 @@
 		}
 	}
 
-	.top-app-bar__search {
+	& .search__button:not(:disabled) {
+		color: var(--mdc-theme-on-primary, #fff);
+
+		& .mdc-button__icon {
+			margin-right: 0;
+		}
+	}
+
+	& .top-app-bar__search {
 		background-color: var(--search-background);
 		display: none;
 	}
