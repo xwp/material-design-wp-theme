@@ -54,7 +54,7 @@
 		padding: 0;
 
 		@media (--medium-viewport) {
-			flex-direction: column;
+			flex-direction: row;
 		}
 	}
 

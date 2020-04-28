@@ -1,7 +1,12 @@
 .entry-footer {
 	align-content: center;
 	display: flex;
+	flex-direction: column;
 	margin-top: 3rem;
+
+	@media (--medium-viewport) {
+		flex-direction: row;
+	}
 
 	& a {
 		font-weight: 700;
@@ -13,17 +18,30 @@
 		}
 	}
 
+	& .cat-links,
+	& .tags-links {
+		margin-bottom: 0.5rem;
+	}
+
 	& .cat-links {
 		display: flex;
 	}
 
 	& .tags-links {
 		display: flex;
-		margin-left: 1rem;
+
+		@media (--medium-viewport) {
+			margin-bottom: 0;
+			margin-left: 1rem;
+		}
 	}
 
 	& .edit-link {
 		display: flex;
-		margin-left: auto;
+
+		@media (--medium-viewport) {
+			margin-bottom: 0;
+			margin-left: auto;
+		}
 	}
 }
