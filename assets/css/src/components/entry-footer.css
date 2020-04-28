@@ -1,0 +1,47 @@
+.entry-footer {
+	align-content: center;
+	display: flex;
+	flex-direction: column;
+	margin-top: 3rem;
+
+	@media (--medium-viewport) {
+		flex-direction: row;
+	}
+
+	& a {
+		font-weight: 700;
+		margin-left: 0.25rem;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	& .cat-links,
+	& .tags-links {
+		margin-bottom: 0.5rem;
+	}
+
+	& .cat-links {
+		display: flex;
+	}
+
+	& .tags-links {
+		display: flex;
+
+		@media (--medium-viewport) {
+			margin-bottom: 0;
+			margin-left: 1rem;
+		}
+	}
+
+	& .edit-link {
+		display: flex;
+
+		@media (--medium-viewport) {
+			margin-bottom: 0;
+			margin-left: auto;
+		}
+	}
+}

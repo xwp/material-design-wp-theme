@@ -25,11 +25,7 @@ if ( ! function_exists( 'material_theme_wp_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
-		$posted_on = sprintf(
-			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'material-theme' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-		);
+		$posted_on = '<i class="material-icons mdc-button__icon">date_range</i><a class="date" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
 		echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore
 
@@ -41,11 +37,7 @@ if ( ! function_exists( 'material_theme_wp_posted_by' ) ) :
 	 * Prints HTML with meta information for the current author.
 	 */
 	function material_theme_wp_posted_by() {
-		$byline = sprintf(
-			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'material-theme' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-		);
+		$byline = '<span class="author vcard"><i class="material-icons mdc-button__icon">face</i><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
 
 		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore
 
@@ -60,17 +52,17 @@ if ( ! function_exists( 'material_theme_wp_entry_footer' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'material-theme' ) );
+			$categories_list = get_the_category_list( '<span class="separator">, </span>' );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'material-theme' ) . '</span>', $categories_list ); // phpcs:ignore
+				printf( '<span class="cat-links"><i class="material-icons mdc-button__icon">category</i>%1$s</span>', $categories_list ); // phpcs:ignore
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'material-theme' ) );
+			$tags_list = get_the_tag_list( '', '<span class="separator">, </span>' );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'material-theme' ) . '</span>', $tags_list ); // phpcs:ignore
+				printf( '<span class="tags-links"><i class="material-icons mdc-button__icon">label</i>%1$s</span>', $tags_list ); // phpcs:ignore
 			}
 		}
 
@@ -98,15 +90,18 @@ if ( ! function_exists( 'material_theme_wp_entry_footer' ) ) :
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
 					__( 'Edit <span class="screen-reader-text">%s</span>', 'material-theme' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
+					[
+						'span' => [
+							'class' => [],
+						],
+						'i'    => [
+							'class' => [],
+						],
+					]
 				),
 				get_the_title()
 			),
-			'<span class="edit-link">',
+			'<span class="edit-link"><i class="material-icons mdc-button__icon">create</i>',
 			'</span>'
 		);
 	}

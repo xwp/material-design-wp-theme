@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title mdc-typography mdc-typography--headline2">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<?php material_theme_wp_post_thumbnail(); ?>
@@ -45,7 +45,7 @@
 					),
 					get_the_title()
 				),
-				'<span class="edit-link">',
+				'<span class="edit-link"><i class="material-icons mdc-button__icon">create</i>',
 				'</span>'
 			);
 			?>

@@ -1,0 +1,31 @@
+.entry-meta {
+	align-content: center;
+	display: flex;
+	margin-bottom: 1.5rem;
+
+	& a {
+		font-weight: 700;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	& .author {
+		display: flex;
+		margin-right: 1rem;
+
+		& .material-icons {
+			margin-right: 0.5rem;
+		}
+	}
+
+	& .posted-on {
+		display: flex;
+
+		& .material-icons {
+			margin-right: 0.5rem;
+		}
+	}
+}

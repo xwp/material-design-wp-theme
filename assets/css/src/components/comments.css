@@ -41,12 +41,21 @@
 
 	& .comment-author {
 		margin: 0 0 4px 0;
+
+		& .url:hover {
+			text-decoration: none;
+		}
 	}
 
 	& .comment-body {
 		display: flex;
+		flex-direction: column;
 		margin-bottom: 2.5em;
 		padding: 0;
+
+		@media (--medium-viewport) {
+			flex-direction: row;
+		}
 	}
 
 	& .comment-author-avatar {
