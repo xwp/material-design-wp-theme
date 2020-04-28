@@ -29,7 +29,6 @@
 	}
 
 	& .top-app-bar__search {
-		background-color: var(--search-background);
 		display: none;
 	}
 

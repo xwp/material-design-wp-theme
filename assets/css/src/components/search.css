@@ -23,7 +23,12 @@
 
 		& .mdc-text-field__input {
 			border: 0;
+			color: var(--mdc-theme-on-primary, #fff);
 			margin-left: 1rem;
+
+			&::placeholder {
+				color: var(--mdc-theme-on-primary, #fff);
+			}
 		}
 
 		& .mdc-button__label {
@@ -37,9 +42,8 @@
 
 		& .button__back {
 			background-color: transparent;
-			color: var(--mdc-theme-primary, #6200ee);
-			padding-left: 0;
-			padding-right: 0;
+			color: var(--mdc-theme-on-primary, #fff);
+			padding-left: 0.25rem;
 			margin-right: 1rem;
 			min-width: 2.25rem;
 		}
