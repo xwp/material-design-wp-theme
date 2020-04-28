@@ -4,28 +4,6 @@
 		text-decoration: none;
 	}
 
-	& .top-app-bar__menu .menu {
-		display: none;
-	}
-
-	&:not(.-with-drawer) .top-app-bar__menu .menu {
-
-		@media (--medium-viewport) {
-			display: block;
-		}
-	}
-
-	& .top-app-bar__menu-trigger {
-
-		@media (--medium-viewport) {
-			display: none;
-		}
-	}
-
-	&.-with-drawer .top-app-bar__menu-trigger {
-		display: block;
-	}
-
 	& .top-app-bar__button {
 		padding-left: 1rem;
 		padding-right: 1rem;
@@ -65,13 +43,4 @@
 			display: flex;
 		}
 	}
-}
-
-/* Customizer fix */
-.-with-drawer .top-app-bar .top-app-bar__menu-trigger {
-	display: none;
-}
-
-.-with-drawer .top-app-bar.-with-drawer .top-app-bar__menu-trigger {
-	display: block;
 }
