@@ -163,6 +163,19 @@ function material_theme_wp_scripts() {
 add_action( 'wp_enqueue_scripts', 'material_theme_wp_scripts' );
 
 /**
+ * Enqueue backend styles.
+ */
+function enqueue_backend_assets() {
+	wp_enqueue_style(
+		'material-backend-css',
+		get_template_directory_uri() . '/assets/css/backend-compiled.css',
+		[],
+		wp_get_theme()->get( 'Version' )
+	);
+}
+add_action( 'admin_enqueue_scripts', 'enqueue_backend_assets' );
+
+/**
  * Show admin notice if plugin isn't installed.
  *
  * @return void
@@ -173,17 +186,14 @@ function plugin_not_installed_notice() {
 		return;
 	}
 	?>
-	<div 
-		class="notice notice-info is-dismissible" 
-		style="display: flex; background-color: #E7F5F9; align-items: center; padding: 15px;"
-	>
+	<div class="notice notice-info is-dismissible  material-notice-container">
 		<img 
 			src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/plugin-icon.svg' ); ?>" 
 			alt="<?php _e( 'Material Theme Builder', 'material-theme' ); ?>" 
 		/>
 
-		<div style="margin-left: 20px;">
-			<h3 style="margin: 0; margin-bottom: 5px;">
+		<div class="material-notice-container__content">
+			<h3 class="material-notice-container__content__title">
 				<?php 
 				esc_html_e( 
 					'Install the Material Plugin to customize your Material Theme', 
@@ -191,19 +201,19 @@ function plugin_not_installed_notice() {
 				) 
 				?>
 			</h3>
-			<p style="margin: 0;">
+			<p class="material-notice-container__content__text">
 				<?php 
-				echo sprintf(
-					wp_kses( 
+				echo wp_kses( 
+					sprintf(
 						/* translators: %s: url to the plugin installation page */
 						__( 
 							'To take full advantage of this theme you will need the Material Plugin. <a href="%s">Install and activate the plugin</a>', 
 							'material-theme' 
 						), 
-						[ 'a' => 'keep' ] 
-					), 
-					'#'
-				) 
+						'/wp-admin/plugin-install.php?s=Material+Theme+Builder&tab=search&type=term'
+					),
+					array( 'a' => array( 'href' => array() ) )
+				)
 				?>
 			</p>
 		</div>
