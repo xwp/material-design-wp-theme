@@ -10,6 +10,23 @@ export const textFieldInit = () => {
 	}
 
 	for ( const textFieldElement of textFieldElements ) {
-		new MDCTextField( textFieldElement );
+		const input = new MDCTextField( textFieldElement );
+
+		if ( input.trailingIcon_ ) {
+			input.trailingIcon_.root_.addEventListener( 'click', handleClick );
+		}
+	}
+};
+
+/**
+ * Submit form when clicking icon
+ * @param {*} event Triggered event
+ */
+const handleClick = event => {
+	const { currentTarget } = event;
+	const form = currentTarget.closest( 'form' );
+
+	if ( 'button' === currentTarget.getAttribute( 'role' ) && form ) {
+		form.submit();
 	}
 };

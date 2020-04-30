@@ -18,7 +18,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	}
 
 	scrollInit();
-	textFieldInit();
 	floatingLabelInit();
 	tabBarInit();
 	textFieldInit();
