@@ -19,23 +19,20 @@
 
 	& .cat-links,
 	& .tags-links {
+		align-items: center;
+		display: flex;
 		margin-bottom: 0.5rem;
 	}
 
-	& .cat-links {
-		display: flex;
-	}
-
 	& .tags-links {
-		display: flex;
 
 		@media (--medium-viewport) {
-			margin-bottom: 0;
 			margin-left: 1rem;
 		}
 	}
 
 	& .edit-link {
+		align-items: center;
 		display: flex;
 
 		@media (--medium-viewport) {

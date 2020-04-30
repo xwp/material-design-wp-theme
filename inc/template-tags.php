@@ -55,14 +55,14 @@ if ( ! function_exists( 'material_theme_wp_entry_footer' ) ) :
 			$categories_list = get_the_category_list( '<span class="separator">, </span>' );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links"><i class="material-icons mdc-button__icon">category</i>%1$s</span>', $categories_list ); // phpcs:ignore
+				printf( '<span class="cat-links"><i class="material-icons mdc-button__icon">category</i><span class="mdc-typography--caption">%1$s</span></span>', $categories_list ); // phpcs:ignore
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', '<span class="separator">, </span>' );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links"><i class="material-icons mdc-button__icon">label</i>%1$s</span>', $tags_list ); // phpcs:ignore
+				printf( '<span class="tags-links"><i class="material-icons mdc-button__icon">label</i><span class="mdc-typography--caption">%1$s</span></span>', $tags_list ); // phpcs:ignore
 			}
 		}
 
@@ -101,7 +101,7 @@ if ( ! function_exists( 'material_theme_wp_entry_footer' ) ) :
 				),
 				get_the_title()
 			),
-			'<span class="edit-link"><i class="material-icons mdc-button__icon">create</i>',
+			'<span class="edit-link mdc-typography--caption"><i class="material-icons mdc-button__icon">create</i>',
 			'</span>'
 		);
 	}
