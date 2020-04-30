@@ -1,5 +1,4 @@
 .entry-meta {
-	align-content: center;
 	display: flex;
 	margin-bottom: 1.5rem;
 
@@ -12,6 +11,7 @@
 	}
 
 	& .author {
+		align-items: center;
 		display: flex;
 		margin-right: 1rem;
 
@@ -21,6 +21,7 @@
 	}
 
 	& .posted-on {
+		align-items: center;
 		display: flex;
 
 		& .material-icons {

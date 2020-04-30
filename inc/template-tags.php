@@ -25,7 +25,7 @@ if ( ! function_exists( 'material_theme_wp_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
-		$posted_on = '<i class="material-icons mdc-button__icon">date_range</i><a class="date" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
+		$posted_on = '<i class="material-icons mdc-button__icon">date_range</i><a class="date mdc-typography--caption" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
 		echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore
 
@@ -37,7 +37,7 @@ if ( ! function_exists( 'material_theme_wp_posted_by' ) ) :
 	 * Prints HTML with meta information for the current author.
 	 */
 	function material_theme_wp_posted_by() {
-		$byline = '<span class="author vcard"><i class="material-icons mdc-button__icon">face</i><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
+		$byline = '<span class="author vcard"><i class="material-icons mdc-button__icon">face</i><a class="url fn n mdc-typography--caption" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
 
 		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore
 
