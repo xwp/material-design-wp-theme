@@ -210,7 +210,7 @@ function plugin_not_installed_notice() {
 							'To take full advantage of this theme you will need the Material Plugin. <a href="%s">Install and activate the plugin</a>', 
 							'material-theme' 
 						), 
-						'/wp-admin/plugin-install.php?s=Material+Theme+Builder&tab=search&type=term'
+						esc_url( admin_url( '/wp-admin/plugin-install.php?s=Material+Theme+Builder&tab=search&type=term' ) )
 					),
 					array( 'a' => array( 'href' => array() ) )
 				)
