@@ -26,10 +26,6 @@ export const textFieldInit = () => {
  * @param {*} event Triggered event
  */
 const handleClick = event => {
-	if ( 'button' !== event.currentTarget.getAttribute( 'role' ) ) {
-		return;
-	}
-
 	submitForm( event );
 };
 
@@ -67,6 +63,10 @@ const handleKeyup = event => {
  * @param {*} event Previously triggered event
  */
 const submitForm = event => {
+	if ( 'button' !== event.currentTarget.getAttribute( 'role' ) ) {
+		return;
+	}
+
 	const { currentTarget } = event;
 	const form = currentTarget.closest( 'form' );
 
