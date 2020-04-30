@@ -9,20 +9,17 @@
 
 use MaterialTheme\Menu_Walker;
 
-$top_app_bar_background     = get_theme_mod( 'material_background_color' );
-$top_app_bar_text           = get_theme_mod( 'material_text_color' );
-$top_app_bar_layout_setting = get_theme_mod( 'material_header_layout' );
+$top_app_bar_background = get_theme_mod( 'material_background_color' );
+$top_app_bar_text       = get_theme_mod( 'material_text_color' );
 
 $has_changed_color = ! empty( $top_app_bar_background ) || ! empty( $top_app_bar_text );
 $has_search        = get_theme_mod( 'material_header_search_display' );
-
-$top_app_bar_layout = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawer' : '';
 
 $is_material_plugin_active = class_exists( 'MaterialThemeBuilder\Plugin' );
 ?>
 
 <div
-	class="mdc-top-app-bar top-app-bar<?php echo esc_attr( $top_app_bar_layout ); ?>"
+	class="mdc-top-app-bar top-app-bar"
 	<?php if ( ! empty( $has_changed_color ) && ! $is_material_plugin_active ) : ?>
 		style="
 			<?php if ( ! empty( $top_app_bar_background ) ) : ?>
