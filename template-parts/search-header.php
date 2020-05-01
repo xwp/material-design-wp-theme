@@ -7,7 +7,7 @@
 
 ?>
 
-<form class="search-form" action="/" method="get">
+<form class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
 	<div class="mdc-text-field mdc-text-field--fullwidth mdc-text-field--no-label">
 		<div class="mdc-text-field__ripple"></div>
 		<input
