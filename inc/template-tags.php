@@ -25,7 +25,7 @@ if ( ! function_exists( 'material_theme_wp_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
-		$posted_on = '<i class="material-icons mdc-button__icon">date_range</i><a class="date" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
+		$posted_on = '<i class="material-icons mdc-button__icon">date_range</i><a class="date mdc-typography--caption" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
 		echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore
 
@@ -37,7 +37,7 @@ if ( ! function_exists( 'material_theme_wp_posted_by' ) ) :
 	 * Prints HTML with meta information for the current author.
 	 */
 	function material_theme_wp_posted_by() {
-		$byline = '<span class="author vcard"><i class="material-icons mdc-button__icon">face</i><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
+		$byline = '<span class="author vcard"><i class="material-icons mdc-button__icon">face</i><a class="url fn n mdc-typography--caption" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
 
 		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore
 
@@ -55,14 +55,14 @@ if ( ! function_exists( 'material_theme_wp_entry_footer' ) ) :
 			$categories_list = get_the_category_list( '<span class="separator">, </span>' );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links"><i class="material-icons mdc-button__icon">category</i>%1$s</span>', $categories_list ); // phpcs:ignore
+				printf( '<span class="cat-links"><i class="material-icons mdc-button__icon">category</i><span class="mdc-typography--caption">%1$s</span></span>', $categories_list ); // phpcs:ignore
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', '<span class="separator">, </span>' );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links"><i class="material-icons mdc-button__icon">label</i>%1$s</span>', $tags_list ); // phpcs:ignore
+				printf( '<span class="tags-links"><i class="material-icons mdc-button__icon">label</i><span class="mdc-typography--caption">%1$s</span></span>', $tags_list ); // phpcs:ignore
 			}
 		}
 
@@ -101,7 +101,7 @@ if ( ! function_exists( 'material_theme_wp_entry_footer' ) ) :
 				),
 				get_the_title()
 			),
-			'<span class="edit-link"><i class="material-icons mdc-button__icon">create</i>',
+			'<span class="edit-link mdc-typography--caption"><i class="material-icons mdc-button__icon">create</i>',
 			'</span>'
 		);
 	}

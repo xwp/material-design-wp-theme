@@ -11,6 +11,7 @@
 	}
 
 	& .post-navigation__next {
+		justify-content: flex-end;
 		padding-left: 0.5rem;
 	}
 
@@ -27,7 +28,6 @@
 	}
 
 	& a {
-		font-weight: 700;
 		text-decoration: none;
 
 		&:hover {

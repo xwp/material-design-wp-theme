@@ -1,10 +1,7 @@
 .entry-meta {
-	align-content: center;
 	display: flex;
-	margin-bottom: 1.5rem;
 
 	& a {
-		font-weight: 700;
 		text-decoration: none;
 
 		&:hover {
@@ -13,6 +10,7 @@
 	}
 
 	& .author {
+		align-items: center;
 		display: flex;
 		margin-right: 1rem;
 
@@ -22,6 +20,7 @@
 	}
 
 	& .posted-on {
+		align-items: center;
 		display: flex;
 
 		& .material-icons {
