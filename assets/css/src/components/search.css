@@ -21,13 +21,17 @@
 		display: flex;
 		width: 100%;
 
-		& .mdc-text-field__input {
-			border: 0;
-			color: var(--mdc-theme-on-primary, #fff);
+		& .mdc-text-field {
 			margin-left: 1rem;
 
-			&::placeholder {
+			& .mdc-text-field__input {
+				border: 0;
+				caret-color: var(--mdc-theme-on-primary, #fff);
 				color: var(--mdc-theme-on-primary, #fff);
+
+				&::placeholder {
+					color: var(--mdc-theme-on-primary, #fff);
+				}
 			}
 		}
 
