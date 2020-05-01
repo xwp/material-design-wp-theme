@@ -7,7 +7,7 @@
 
 ?>
 
-<form class="search-form" action="/" method="get">
+<form class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
 	<div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon">
 		<i class="material-icons mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0">search</i>
 		<input class="mdc-text-field__input" id="text-field-hero-input" name="s">
