@@ -72,6 +72,7 @@ const sharedConfig = {
 		} ),
 	],
 };
+
 const customizer = {
 	...defaultConfig,
 	...sharedConfig,
@@ -112,8 +113,24 @@ const frontEnd = {
 	],
 };
 
+const backend = {
+	...defaultConfig,
+	...sharedConfig,
+	entry: {
+		backend: [ './assets/css/src/backend.css' ],
+	},
+	plugins: [
+		...sharedConfig.plugins,
+		new WebpackBar( {
+			name: 'Backend',
+			color: '#36f271',
+		} ),
+	],
+};
+
 module.exports = [
 	// prettier-ignore
 	customizer,
 	frontEnd,
+	backend,
 ];
