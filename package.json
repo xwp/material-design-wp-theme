@@ -63,6 +63,8 @@
     "build:run": "grunt build",
     "build:zip": "grunt create-build-zip",
     "dev": "wp-scripts start",
+    "docker": "docker-compose run --rm -u 1000 --workdir=/var/www/html/wp-content/themes/material-theme-wp wordpress",
+    "env:logs": "bin/logs.sh",
     "env:start": "bin/start.sh",
     "env:stop": "bin/stop.sh",
     "format": "npm-run-all --parallel format:*",
@@ -75,7 +77,7 @@
     "lint:php": "composer lint",
     "postinstall": "composer install",
     "test": "npm-run-all --parallel test:js test:php",
-    "docker": "docker-compose run --rm -u 1000 --workdir=/var/www/html/wp-content/themes/material-theme-wp wordpress",
+    "wp": "bin/wp.sh",
     "xdebug:status": "bin/xdebug.sh status",
     "xdebug:on": "bin/xdebug.sh on",
     "xdebug:off": "bin/xdebug.sh off"

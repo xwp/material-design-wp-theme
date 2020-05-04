@@ -1,5 +1,40 @@
 #!/bin/bash
 
+shopt -s expand_aliases
+source .env
+
+if [ -z "$(grep DOCKER_COMPOSE_PATH .env)" ]; then
+	CONTAINER=''
+	DOCKER_CONTAINERS=($(docker ps --format '{{.Names}}:{{.ID}}'))
+	for container in ${DOCKER_CONTAINERS[@]}:
+	do
+		if [[ "$container" == "material-theme-builder"* ]]; then
+			CONTAINER="$(cut -d':' -f2 <<< $container)"
+			break
+		fi
+	done
+
+	if [ ! -z "$CONTAINER" ]
+	then
+		DC_PLUGIN_PATH=$(docker inspect --format '{{ json .Config.Labels }}' $CONTAINER | grep -E -o '"com.docker.compose.project.working_dir":"([^"]+)"')
+		if [ ! -z "$DC_PLUGIN_PATH" ]; then
+			DC_PLUGIN_PATH=${DC_PLUGIN_PATH//'"com.docker.compose.project.working_dir":'/}
+			DC_PLUGIN_PATH=${DC_PLUGIN_PATH//'"'/}
+			DC_PLUGIN_PATH="$DC_PLUGIN_PATH/docker-compose.yml"
+
+			echo "Found plugin docker-compose.yml file at $DC_PLUGIN_PATH"
+			echo "Adding DOCKER_COMPOSE_PATH to .env file"
+			echo "DOCKER_COMPOSE_PATH=$DC_PLUGIN_PATH" >> '.env'
+
+			source .env
+		fi
+	fi
+fi
+
+if [[ ! -z "${DOCKER_COMPOSE_PATH}" ]]; then
+	alias docker-compose="docker-compose --file=$DOCKER_COMPOSE_PATH --file docker-compose-plugin-dev.yml"
+fi
+
 ##
 # WordPress helper
 #

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source .env
+shopt -s expand_aliases
 source ./bin/includes.sh
 
 printf "Starting up containers ..."
