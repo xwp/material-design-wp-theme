@@ -32,7 +32,7 @@ if [ -z "$(grep DOCKER_COMPOSE_PATH .env)" ]; then
 fi
 
 if [[ ! -z "${DOCKER_COMPOSE_PATH}" ]]; then
-	alias docker-compose="docker-compose --file=$DOCKER_COMPOSE_PATH --file docker-compose-plugin-dev.yml"
+	alias docker-compose="docker-compose --file=$DOCKER_COMPOSE_PATH --file=docker-compose-plugin-dev.yml"
 fi
 
 ##
