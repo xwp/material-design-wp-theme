@@ -1,0 +1,10 @@
+/**
+ * Material typography styles for html elements.
+ * see https://github.com/material-components/material-components-web/blob/master/packages/mdc-typography/_variables.scss#L57
+ **/
+@mixin selector-typography h1, headline1, 6, 6, 300;
+@mixin selector-typography h2, headline2, 3.75, 3.75, 300;
+@mixin selector-typography h3, headline3, 3, 3.125, 400;
+@mixin selector-typography h4, headline4, 2.125, 2.5, 400;
+@mixin selector-typography h5, headline5, 1.5, 2, 400;
+@mixin selector-typography h6, headline6, 1.25, 2, 500;
