@@ -20,6 +20,10 @@
 	padding-right: 1.5rem;
 }
 
+.post .post-thumbnail {
+	margin-top: 1rem;
+}
+
 .entry-content {
 	margin-top: 0;
 
