@@ -400,12 +400,18 @@ p {
 	margin-bottom: 1.5em;
 }
 
-dfn, cite, em, i {
+dfn, cite, em, i, q {
 	font-style: italic;
 }
 
 blockquote {
-	margin: 0 1.5em;
+	border-left: 2px solid #6200ee;
+    margin: 2rem 0;
+    padding: 0.5rem 1rem;
+}
+
+blockquote p:last-child {
+    margin: 0;
 }
 
 address {
@@ -471,6 +477,7 @@ hr {
 }
 
 ul, ol {
+	padding: 0;
 	margin: 0 0 1.5em 3em;
 }
 
@@ -480,6 +487,10 @@ ul {
 
 ol {
 	list-style: decimal;
+}
+
+li {
+	margin-top: 0.5rem;
 }
 
 li > ul,
