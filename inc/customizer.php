@@ -193,6 +193,7 @@ function get_default_values() {
 		'footer_background_color' => '#ffffff',
 		'footer_text_color'       => '#000000',
 		'archive_layout'          => 'card',
+		'header_width_layout'     => 'boxed',
 	];
 }
 

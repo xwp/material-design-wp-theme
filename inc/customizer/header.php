@@ -53,7 +53,6 @@ function add_sections( $wp_customize ) {
 		Customizer\prepend_slug( 'header_section' ),
 		[
 			'title' => esc_html__( 'Header', 'material-theme' ),
-
 		]
 	);
 }
@@ -65,6 +64,15 @@ function add_sections( $wp_customize ) {
  */
 function get_controls() {
 	return [
+		[
+			'id'      => Customizer\prepend_slug( 'header_width_layout' ),
+			'label'   => esc_html__( 'Layout', 'material-theme' ),
+			'type'    => 'radio',
+			'choices' => [
+				'full'  => esc_html__( 'Full', 'material-theme' ),
+				'boxed' => esc_html__( 'Boxed', 'material-theme' ),
+			],
+		],
 		[
 			'id'    => Customizer\prepend_slug( 'header_search_display' ),
 			'label' => esc_html__( 'Show search in header', 'material-theme' ),
@@ -88,11 +96,6 @@ function add_settings( $wp_customize ) {
 			'transport' => 'postMessage',
 		];
 	}
-
-	$settings[ Customizer\prepend_slug( 'header_layout' ) ] = [
-		'default'   => false,
-		'transport' => 'postMessage',
-	];
 
 	Customizer\add_settings( $wp_customize, $settings );
 
