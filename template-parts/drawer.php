@@ -21,7 +21,7 @@ $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -wi
 				<?php the_custom_logo(); ?>
 			</div>
 		<?php endif; ?>
-		<h1 class="shrine-title"><?php bloginfo( 'name' ); ?></h1>
+		<h1 class="shrine-title mdc-drawer__title mdc-typography--headline6"><?php bloginfo( 'name' ); ?></h1>
 	</div>
 	<div class="mdc-drawer__content">
 		<?php get_search_form(); ?>
