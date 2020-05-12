@@ -40,6 +40,17 @@ function register( $wp_customize ) {
 				'render_callback' => __NAMESPACE__ . '\render_header',
 			) 
 		);
+
+		$wp_customize->selective_refresh->add_partial(
+			'header_width_layout',
+			array(
+				'selector'        => '.site__navigation',
+				'settings'        => [
+					Customizer\prepend_slug( 'header_width_layout' ),
+				],
+				'render_callback' => __NAMESPACE__ . '\render_header_navigation',
+			) 
+		);
 	}
 }
 
@@ -229,4 +240,13 @@ function maybe_use_color_palette_control( $wp_customize ) {
  */
 function render_header() {
 	get_template_part( 'template-parts/menu', 'header' );
+}
+
+/**
+ * Render's top app bar and tab bar
+ *
+ * @return void
+ */
+function render_header_navigation() {
+	get_template_part( 'template-parts/header', 'navigation' );
 }

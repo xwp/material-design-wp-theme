@@ -9,8 +9,6 @@
  * @package MaterialTheme
  */
 
-$header_width = get_theme_mod( 'material_header_width_layout', 'boxed' );
-
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -28,20 +26,6 @@ $header_width = get_theme_mod( 'material_header_width_layout', 'boxed' );
 
 		<?php get_template_part( 'template-parts/drawer' ); ?>
 
-		<div
-			class="
-				site__navigation
-				<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
-					-has-tab-bar
-				<?php endif; ?>
-			"
-			<?php if ( 'full' === $header_width ) : ?>
-				style="--mt-header-width: 76.5625rem;"
-			<?php endif; ?>
-		>
-			<?php get_template_part( 'template-parts/menu', 'header' ); ?>
-
-			<?php get_template_part( 'template-parts/menu', 'tabs' ); ?>
-		</div>
+		<?php get_template_part( 'template-parts/header', 'navigation' ); ?>
 
 		<div id="content" class="site-content">
