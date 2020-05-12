@@ -9,6 +9,8 @@
  * @package MaterialTheme
  */
 
+$header_width = get_theme_mod( 'material_header_width_layout', 'boxed' );
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -21,7 +23,13 @@
 </head>
 
 <body <?php body_class( 'mdc-typography' ); ?>>
-	<div id="page" class="site">
+	<div
+		id="page"
+		class="site"
+		<?php if ( 'full' === $header_width ) : ?>
+		style="--mt-header-width: 76.5625rem;"
+		<?php endif; ?>
+	>
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'material-theme' ); ?></a>
 
 		<?php get_template_part( 'template-parts/drawer' ); ?>
