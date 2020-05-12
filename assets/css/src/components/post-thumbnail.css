@@ -2,9 +2,15 @@
 	margin-top: 1rem;
 	max-width: 62.5rem;
 
-	@media (--medium-viewport) {
+	@media (--medium-large-viewport) {
 		margin-left: -8rem;
 		margin-right: -8rem;
+	}
+
+	@media (--large-viewport) {
+		max-width: 76.5625rem;
+		margin-left: -14rem;
+		margin-right: -14rem;
 	}
 
 	& .wp-post-image {
