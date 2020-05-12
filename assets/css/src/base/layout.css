@@ -2,6 +2,10 @@
 	padding-top: var(--admin-bar-offset, 3.5rem);
 }
 
+.-has-tab-bar + .site-content {
+	padding-top: 0;
+}
+
 .admin-bar {
 	--admin-bar-offset: 4rem;
 }

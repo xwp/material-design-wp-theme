@@ -23,18 +23,25 @@ $header_width = get_theme_mod( 'material_header_width_layout', 'boxed' );
 </head>
 
 <body <?php body_class( 'mdc-typography' ); ?>>
-	<div
-		id="page"
-		class="site"
-		<?php if ( 'full' === $header_width ) : ?>
-		style="--mt-header-width: 76.5625rem;"
-		<?php endif; ?>
-	>
+	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'material-theme' ); ?></a>
 
 		<?php get_template_part( 'template-parts/drawer' ); ?>
 
-		<?php get_template_part( 'template-parts/menu', 'header' ); ?>
+		<div
+			class="
+				site__navigation
+				<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
+					-has-tab-bar
+				<?php endif; ?>
+			"
+			<?php if ( 'full' === $header_width ) : ?>
+				style="--mt-header-width: 76.5625rem;"
+			<?php endif; ?>
+		>
+			<?php get_template_part( 'template-parts/menu', 'header' ); ?>
+
+			<?php get_template_part( 'template-parts/menu', 'tabs' ); ?>
+		</div>
 
 		<div id="content" class="site-content">
-			<?php get_template_part( 'template-parts/menu', 'tabs' ); ?>

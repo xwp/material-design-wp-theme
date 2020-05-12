@@ -1,6 +1,7 @@
 .tab-bar {
 	background-color: var(--mdc-theme-primary, #6200ee);
 	box-shadow: 1px 0 5px rgba(0, 0, 0, .5);
+	padding-top: var(--admin-bar-offset, 3.5rem);
 
 	& .mdc-tab-scroller {
 		margin-left: auto;
