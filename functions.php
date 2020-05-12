@@ -65,18 +65,6 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 			)
 		);
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'material_theme_wp_custom_background_args',
-				array(
-					'default-color' => 'ffffff',
-					'default-image' => '',
-				)
-			)
-		);
-
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -236,6 +224,7 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/customizer/colors.php';
 require get_template_directory() . '/inc/customizer/header.php';
 require get_template_directory() . '/inc/customizer/footer.php';
 require get_template_directory() . '/inc/customizer/archive.php';
@@ -273,6 +262,7 @@ require get_template_directory() . '/inc/widgets/class-wp-widget-rss.php';
 require get_template_directory() . '/inc/widgets.php';
 
 MaterialTheme\Customizer\setup();
+MaterialTheme\Customizer\Colors\setup();
 MaterialTheme\Customizer\Header\setup();
 MaterialTheme\Customizer\Footer\setup();
 MaterialTheme\Customizer\Archive\setup();

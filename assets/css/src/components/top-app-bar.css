@@ -1,4 +1,11 @@
 .top-app-bar {
+	background-color: var(--mdc-theme-header, var(--mdc-theme-primary, #6200ee));
+	color: var(--mdc-theme-on-header, var(--mdc-theme-on-primary, #fff));
+
+	& .mdc-top-app-bar__action-item,
+	& .mdc-top-app-bar__navigation-icon {
+		color: var(--mdc-theme-on-header, var(--mdc-theme-on-primary, #fff));
+	}
 
 	& .site-title a {
 		text-decoration: none;
@@ -10,7 +17,7 @@
 	}
 
 	& .top-app-bar__title {
-		color: var(--mdc-theme-on-primary);
+		color: var(--mdc-theme-on-header, var(--mdc-theme-on-primary, #fff));
 		padding-left: 1rem;
 
 		& .site-title {
@@ -21,7 +28,7 @@
 	}
 
 	& .search__button:not(:disabled) {
-		color: var(--mdc-theme-on-primary, #fff);
+		color: var(--mdc-theme-on-header, var(--mdc-theme-on-primary, #fff));
 
 		& .mdc-button__icon {
 			margin-right: 0;

@@ -7,6 +7,8 @@
 
 namespace MaterialTheme\Customizer;
 
+use MaterialTheme\Customizer\Colors;
+use MaterialTheme\Customizer\Header;
 use MaterialTheme\Customizer\Footer;
 
 /**
@@ -19,6 +21,9 @@ function setup() {
 	add_action( 'customize_preview_init', __NAMESPACE__ . '\preview_scripts' );
 
 	add_action( 'customize_controls_enqueue_scripts', __NAMESPACE__ . '\scripts' );
+
+	add_action( 'wp_head', __NAMESPACE__ . '\frontend_inline_css', 2 );
+	add_action( 'admin_head', __NAMESPACE__ . '\frontend_inline_css', 2 );
 }
 
 /**
@@ -91,6 +96,19 @@ function preview_scripts() {
 		$theme_version,
 		true
 	);
+
+	$controls = array_merge( Colors\get_controls(), Header\get_color_controls(), Footer\get_color_controls() );
+	$css_vars = [];
+
+	foreach ( $controls as $control ) {
+		$css_vars[ prepend_slug( $control['id'] ) ] = $control['css_var'];
+	}
+
+	wp_localize_script(
+		'material-theme-customizer-preview',
+		'materialThemeColorControls',
+		$css_vars
+	);
 }
 
 /**
@@ -104,8 +122,16 @@ function scripts() {
 	wp_enqueue_style(
 		'material-theme-customizer-styles',
 		get_template_directory_uri() . '/assets/css/customize-controls-compiled.css',
-		[],
+		[ 'wp-color-picker' ],
 		$theme_version
+	);
+
+	wp_enqueue_script(
+		'material-theme-customizer-controls',
+		get_template_directory_uri() . '/assets/js/customize-controls.js',
+		[ 'wp-color-picker', 'customize-controls' ],
+		$theme_version,
+		true
 	);
 }
 
@@ -188,8 +214,10 @@ function get_default( $setting ) {
  */
 function get_default_values() {
 	return [
-		'background_color'        => '#6200ee',
-		'text_color'              => '#ffffff',
+		'header_background_color' => '#6200ee',
+		'header_text_color'       => '#ffffff',
+		'background_color'        => '#ffffff',
+		'text_color'              => '#000000',
 		'footer_background_color' => '#ffffff',
 		'footer_text_color'       => '#000000',
 		'archive_layout'          => 'card',
@@ -230,4 +258,77 @@ function add_controls( $wp_customize, $controls = [] ) {
 			$wp_customize->add_control( $control );
 		}
 	}
+}
+
+/**
+ * Get custom frontend CSS based on the customizer theme settings.
+ */
+function get_frontend_css() {
+	$color_vars = [];
+	$controls   = array_merge( Colors\get_controls(), Footer\get_color_controls() );
+	$defaults   = get_default_values();
+
+	if ( ! class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
+		$controls = array_merge( $controls, Header\get_color_controls() );
+	}
+
+	foreach ( $controls as $control ) {
+		$default      = isset( $defaults[ $control['id'] ] ) ? $defaults[ $control['id'] ] : '';
+		$value        = get_theme_mod( prepend_slug( $control['id'] ), $default );
+		$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $value ) );
+
+		if ( '--mdc-theme-on-background' === $control['css_var'] ) {
+			$rgb = hex_to_rgb( $value );
+			if ( ! empty( $rgb ) ) {
+				$rgb = implode( ',', $rgb );
+			}
+
+			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
+		}
+	}
+
+	$color_vars = implode( "\n\t\t\t", $color_vars );
+
+	return "
+		:root {
+			{$color_vars}
+		}
+	";
+}
+
+/**
+ * Output inline styles with css variables at the top of the head.
+ */
+function frontend_inline_css() {
+	?>
+	<style id="material-theme-css-variables">
+		<?php echo get_frontend_css(); // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+	</style>
+	<?php
+}
+
+/**
+ * Convert color hex code to rgb.
+ *
+ * @param  string|array $hex Hex/RGB of the color.
+ * @return mixed
+ */
+function hex_to_rgb( $hex ) {
+	if ( is_array( $hex ) && ! empty( $hex ) ) {
+		return $hex;
+	}
+
+	$hex = strtolower( ltrim( $hex, '#' ) );
+	if ( 3 !== strlen( $hex ) && 6 !== strlen( $hex ) ) {
+		return false;
+	}
+
+	$values = str_split( $hex, ( 3 === strlen( $hex ) ) ? 1 : 2 );
+
+	return array_map(
+		function ( $hex_code ) {
+			return hexdec( str_pad( $hex_code, 2, $hex_code ) );
+		},
+		$values
+	);
 }

@@ -11,7 +11,7 @@ use MaterialTheme\Customizer;
 
 /**
  * Attach hooks.
- * 
+ *
  * @return void
  */
 function setup() {
@@ -20,7 +20,7 @@ function setup() {
 
 /**
  * Add and initialize footer section
- * 
+ *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function register( $wp_customize ) {
@@ -44,7 +44,7 @@ function register( $wp_customize ) {
 				'settings'        => [
 					'material_footer_text',
 				],
-			) 
+			)
 		);
 
 		$wp_customize->selective_refresh->add_partial(
@@ -55,7 +55,7 @@ function register( $wp_customize ) {
 				'settings'        => [
 					'material_hide_back_to_top',
 				],
-			) 
+			)
 		);
 
 		$wp_customize->selective_refresh->add_partial(
@@ -67,7 +67,7 @@ function register( $wp_customize ) {
 					'material_footer_background_color',
 					'material_footer_text_color',
 				],
-			) 
+			)
 		);
 	}
 }
@@ -84,7 +84,7 @@ function render_text() {
 /**
  * Add regular controls
  * Call to parent function
- * 
+ *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function add_controls( $wp_customize ) {
@@ -185,13 +185,13 @@ function get_color_controls() {
 			'id'                   => 'footer_background_color',
 			'label'                => esc_html__( 'Bakground Color', 'material-theme' ),
 			'related_text_setting' => Customizer\prepend_slug( 'footer_text_color' ),
-			'css_var'              => '--mdc-theme-primary',
+			'css_var'              => '--mdc-theme-footer',
 		],
 		[
 			'id'                   => 'footer_text_color',
 			'label'                => esc_html__( 'Text Color', 'material-theme' ),
 			'related_text_setting' => Customizer\prepend_slug( 'footer_background_color' ),
-			'css_var'              => '--mdc-theme-on-primary',
+			'css_var'              => '--mdc-theme-on-footer',
 		],
 	];
 }

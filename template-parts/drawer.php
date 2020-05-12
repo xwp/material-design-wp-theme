@@ -9,13 +9,8 @@
 
 use MaterialTheme\Menu_Drawer_Walker;
 
-$top_app_bar_background     = get_theme_mod( 'material_background_color' );
-$top_app_bar_text           = get_theme_mod( 'material_text_color' );
 $top_app_bar_layout_setting = get_theme_mod( 'material_header_layout', 'menu' );
-
-$has_changed_color = ! empty( $top_app_bar_background ) || ! empty( $top_app_bar_text );
-
-$top_app_bar_layout = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawer' : '';
+$top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawer' : '';
 
 ?>
 
@@ -31,20 +26,7 @@ $top_app_bar_layout = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawe
 	<div class="mdc-drawer__content">
 		<?php get_search_form(); ?>
 
-		<nav
-			class="mdc-list"
-			<?php if ( ! empty( $has_changed_color ) ) : ?>
-				style="
-					<?php if ( ! empty( $top_app_bar_background ) ) : ?>
-						--mdc-theme-primary: <?php echo esc_attr( $top_app_bar_background ); ?>;
-					<?php endif; ?>
-
-					<?php if ( ! empty( $top_app_bar_text ) ) : ?>
-						--mdc-theme-on-primary: <?php echo esc_attr( $top_app_bar_text ); ?>;
-					<?php endif; ?>
-				"
-			<?php endif; ?>
-		>
+		<nav class="mdc-list">
 			<?php
 			if ( has_nav_menu( 'menu-2' ) ) {
 				wp_nav_menu(
