@@ -48,7 +48,7 @@
 			background-color: transparent;
 			color: var(--mdc-theme-on-primary, #fff);
 			padding-left: 0.25rem;
-			margin-right: 1rem;
+			margin-right: 0;
 			min-width: 2.25rem;
 		}
 	}
