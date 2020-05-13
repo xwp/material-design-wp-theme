@@ -11,6 +11,7 @@
 
 	& .mdc-tab-scroller__scroll-content {
 		background-color: var(--mdc-theme-primary, #6200ee);
+		flex-grow: 0;
 	}
 
 	& .mdc-tab {
