@@ -7,7 +7,7 @@
 
 namespace MaterialTheme\Customizer;
 
-use MaterialTheme\Customizer\Colors;
+use MaterialTheme\Customizer\Content;
 use MaterialTheme\Customizer\Header;
 use MaterialTheme\Customizer\Footer;
 
@@ -97,7 +97,7 @@ function preview_scripts() {
 		true
 	);
 
-	$controls = array_merge( Colors\get_controls(), Footer\get_color_controls() );
+	$controls = array_merge( Content\get_color_controls(), Footer\get_color_controls() );
 	$css_vars = [];
 
 	if ( ! class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
@@ -312,7 +312,7 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
  */
 function get_frontend_css() {
 	$color_vars = [];
-	$controls   = array_merge( Colors\get_controls(), Footer\get_color_controls() );
+	$controls   = array_merge( Content\get_color_controls(), Footer\get_color_controls() );
 	$defaults   = get_default_values();
 
 	if ( ! class_exists( 'MaterialThemeBuilder\Plugin' ) ) {

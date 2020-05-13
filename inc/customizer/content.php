@@ -5,7 +5,7 @@
  * @package MaterialTheme
  */
 
-namespace MaterialTheme\Customizer\Colors;
+namespace MaterialTheme\Customizer\Content;
 
 use MaterialTheme\Customizer;
 
@@ -25,25 +25,25 @@ function setup() {
  */
 function register( $wp_customize ) {
 	$wp_customize->add_section(
-		'material_colors_section',
+		'material_content_section',
 		[
-			'title' => esc_html__( 'Colors', 'material-theme' ),
+			'title' => esc_html__( 'Content', 'material-theme' ),
 		]
 	);
 
 	/**
-	 * Generate list of all the settings in the colors section.
+	 * Generate list of all the settings in the content section.
 	 */
 	$settings = [];
 
-	foreach ( get_controls() as $control ) {
+	foreach ( get_color_controls() as $control ) {
 		$settings[ $control['id'] ] = [
 			'sanitize_callback' => 'sanitize_hex_color',
 		];
 	}
 
 	Customizer\add_settings( $wp_customize, $settings );
-	Customizer\add_color_controls( $wp_customize, get_controls(), 'colors_section' );
+	Customizer\add_color_controls( $wp_customize, get_color_controls(), 'content_section' );
 }
 
 /**
@@ -51,7 +51,7 @@ function register( $wp_customize ) {
  *
  * @return array
  */
-function get_controls() {
+function get_color_controls() {
 	return [
 		[
 			'id'                   => 'background_color',
