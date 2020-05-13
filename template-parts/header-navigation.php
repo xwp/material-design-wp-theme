@@ -8,7 +8,7 @@
  * @package MaterialTheme
  */
 
-$header_width = get_theme_mod( 'material_header_width_layout', 'boxed' );
+$header_width = get_theme_mod( 'material_header_width_layout', 'full' );
 
 ?>
 

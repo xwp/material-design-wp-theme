@@ -101,7 +101,12 @@ function add_settings( $wp_customize ) {
 
 	Customizer\add_settings( $wp_customize, $settings );
 
-	add_radio_controls( $wp_customize );
+	/**
+	 * Holding back on this setting at the moment.
+	 * 
+	 * @TODO: Uncomment after approval
+	 * add_radio_controls( $wp_customize );
+	 */
 	add_controls( $wp_customize );
 	add_color_controls( $wp_customize );
 }
