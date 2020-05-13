@@ -72,7 +72,7 @@
 				control
 			).get() };`;
 
-			if ( 'material_text_color' === control ) {
+			if ( 'material_background_text_color' === control ) {
 				const backgroundColor = parentApi( control ).get(),
 					backgroundColorRgb = hexToRgb( backgroundColor ).join( ',' );
 				styles += `${ materialThemeColorControls[ control ] }-rgb: ${ backgroundColorRgb };

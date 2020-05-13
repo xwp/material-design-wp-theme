@@ -97,8 +97,12 @@ function preview_scripts() {
 		true
 	);
 
-	$controls = array_merge( Colors\get_controls(), Header\get_color_controls(), Footer\get_color_controls() );
+	$controls = array_merge( Colors\get_controls(), Footer\get_color_controls() );
 	$css_vars = [];
+
+	if ( ! class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
+		$controls = array_merge( $controls, Header\get_color_controls() );
+	}
 
 	foreach ( $controls as $control ) {
 		$css_vars[ prepend_slug( $control['id'] ) ] = $control['css_var'];
@@ -217,7 +221,7 @@ function get_default_values() {
 		'header_background_color' => '#6200ee',
 		'header_text_color'       => '#ffffff',
 		'background_color'        => '#ffffff',
-		'text_color'              => '#000000',
+		'background_text_color'   => '#000000',
 		'footer_background_color' => '#ffffff',
 		'footer_text_color'       => '#000000',
 		'archive_layout'          => 'card',
@@ -254,10 +258,53 @@ function add_controls( $wp_customize, $controls = [] ) {
 			);
 		} elseif ( $control instanceof \WP_Customize_Control ) {
 			$control->id      = $id;
-			$control->section = isset( $control->section ) ? prepend_slug( $control->section ) : '';
+			$control->section = isset( $control->section ) ? $control->section : '';
 			$wp_customize->add_control( $control );
 		}
 	}
+}
+
+/**
+ * Add color controls to customizer.
+ * Use `Material_Color_Palette_Control` if the material plugin is active.
+ *
+ * @param  WP_Customize $wp_customize   WP_Customize instance.
+ * @param  array        $color_controls Array of controls to add to customizer.
+ * @param  string       $section Section to add the controls to.
+ * @return void
+ */
+function add_color_controls( $wp_customize, $color_controls, $section ) {
+	/**
+	 * Generate list of all the controls in the colors section.
+	 */
+	$controls = [];
+
+	$section = prepend_slug( $section );
+
+	foreach ( $color_controls as $control ) {
+		if ( class_exists( 'MaterialThemeBuilder\Customizer\Material_Color_Palette_Control' ) ) {
+			$controls[ $control['id'] ] = new \MaterialThemeBuilder\Customizer\Material_Color_Palette_Control(
+				$wp_customize,
+				prepend_slug( $control['id'] ),
+				[
+					'label'                => $control['label'],
+					'section'              => $section,
+					'related_text_setting' => ! empty( $control['related_text_setting'] ) ? $control['related_text_setting'] : false,
+					'related_setting'      => ! empty( $control['related_setting'] ) ? $control['related_setting'] : false,
+					'css_var'              => $control['css_var'],
+					'a11y_label'           => ! empty( $control['a11y_label'] ) ? $control['a11y_label'] : '',
+				]
+			);
+		} else {
+			$controls[ $control['id'] ] = [
+				'label'   => $control['label'],
+				'section' => $section,
+				'type'    => 'color',
+			];
+		}
+	}
+
+	add_controls( $wp_customize, $controls );
 }
 
 /**
@@ -332,3 +379,5 @@ function hex_to_rgb( $hex ) {
 		$values
 	);
 }
+
+

@@ -33,8 +33,6 @@ function register( $wp_customize ) {
 			array(
 				'selector'        => '.top-app-bar',
 				'settings'        => [
-					Customizer\prepend_slug( 'header_background_color' ),
-					Customizer\prepend_slug( 'header_text_color' ),
 					Customizer\prepend_slug( 'header_search_display' ),
 				],
 				'render_callback' => __NAMESPACE__ . '\render_header',
