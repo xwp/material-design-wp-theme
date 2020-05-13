@@ -16,7 +16,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 5rem;
-	max-width: var(--max-content-width, 50rem);
+	max-width: var(--max-content-width);
 }
 
 .page-header {
