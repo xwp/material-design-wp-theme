@@ -19,4 +19,10 @@
 			<div class="mdc-notched-outline__trailing"></div>
 		</div>
 	</label>
+
+	<button class="mdc-button mdc-button--unelevated screen-reader-text" type="submit" tabindex="-1">
+		<span class="mdc-button__ripple"></span>
+		<span class="mdc-button__label"><?php esc_attr_e( 'Search', 'material-theme' ); ?></span>
+		<i class="material-icons mdc-button__icon" aria-hidden="true">search</i>
+	</button>
 </form>
