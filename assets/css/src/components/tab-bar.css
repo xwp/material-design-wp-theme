@@ -17,8 +17,13 @@
 
 	& .mdc-tab {
 		background-color: var(--mdc-theme-header, var(--mdc-theme-primary, #6200ee));
+		margin-right: 0.0625rem;
 		padding-left: 2rem;
 		padding-right: 2rem;
+
+		&:first-child {
+			margin-left: 0.0625rem;
+		}
 
 		& .mdc-tab__text-label {
 			color: var(--mdc-theme-on-header, var(--mdc-theme-on-primary, #fff));
@@ -32,5 +37,14 @@
 		& .mdc-tab-indicator .mdc-tab-indicator__content--underline {
 			border-color: var(--mdc-theme-on-header, var(--mdc-theme-on-primary, #fff));
 		}
+	}
+
+	.mdc-ripple-upgraded--background-focused {
+		outline: 0.0625rem dotted var(--mdc-theme-on-primary, #fff);
+	}
+
+	.mdc-tab-scroller__scroll-area {
+		padding-bottom: 0.0625rem;
+		padding-top: 0.0625rem;
 	}
 }
