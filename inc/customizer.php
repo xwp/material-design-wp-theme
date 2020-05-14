@@ -32,8 +32,6 @@ function setup() {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function register( $wp_customize ) {
-	require get_template_directory() . '/inc/customizer/controls/class-radio-toggle-control.php';
-
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';

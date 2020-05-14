@@ -98,13 +98,6 @@ function add_settings( $wp_customize ) {
 	}
 
 	Customizer\add_settings( $wp_customize, $settings );
-
-	/**
-	 * Holding back on this setting at the moment.
-	 * 
-	 * @TODO: Uncomment after approval
-	 * add_radio_controls( $wp_customize );
-	 */
 	add_controls( $wp_customize );
 	add_color_controls( $wp_customize );
 }
@@ -126,40 +119,6 @@ function add_controls( $wp_customize ) {
 			$control
 		);
 	}
-
-	Customizer\add_controls( $wp_customize, $controls );
-}
-
-/**
- * Attach radio control
- *
- * @param  WP_Customize $wp_customize Customizer object.
- * @return void
- */
-function add_radio_controls( $wp_customize ) {
-	$settings = [
-		'header_width_layout' => [
-			'default'           => 'boxed',
-			'sanitize_callback' => 'sanitize_text_field',
-		],
-	];
-
-	Customizer\add_settings( $wp_customize, $settings );
-
-	$controls = [
-		'header_width_layout' => new Customizer\Radio_Toggle_Control(
-			$wp_customize,
-			Customizer\prepend_slug( 'header_width_layout' ),
-			[
-				'label'   => esc_html__( 'Layout', 'material-theme' ),
-				'section' => Customizer\prepend_slug( 'header_section' ),
-				'choices' => [
-					'full'  => esc_html__( 'Full', 'material-theme' ),
-					'boxed' => esc_html__( 'Boxed', 'material-theme' ),
-				],
-			]
-		),
-	];
 
 	Customizer\add_controls( $wp_customize, $controls );
 }
