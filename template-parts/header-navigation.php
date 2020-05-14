@@ -8,8 +8,6 @@
  * @package MaterialTheme
  */
 
-$header_width = get_theme_mod( 'material_header_width_layout', 'full' );
-
 ?>
 
 <div
@@ -19,9 +17,6 @@ $header_width = get_theme_mod( 'material_header_width_layout', 'full' );
 			-has-tab-bar
 		<?php endif; ?>
 		"
-		<?php if ( 'full' === $header_width ) : ?>
-			style="--mt-header-width: 76.5625rem;"
-		<?php endif; ?>
 >
 	<?php get_template_part( 'template-parts/menu', 'header' ); ?>
 
