@@ -4,7 +4,7 @@
 
 	& .site-footer__inner {
 		align-items: center;
-		background-color: var(--mdc-theme-primary);
+		background-color: var(--mdc-theme-footer);
 		display: flex;
 		justify-content: space-between;
 		padding-left: 0.75rem;
@@ -13,7 +13,7 @@
 	}
 
 	& .site-footer__text {
-		color: var(--mdc-theme-on-primary);
+		color: var(--mdc-theme-on-footer);
 	}
 
 	& .mdc-layout-grid__inner {
@@ -28,7 +28,7 @@
 		text-align: right;
 
 		& button {
-			color: var(--mdc-theme-on-primary);
+			color: var(--mdc-theme-on-footer);
 		}
 	}
 

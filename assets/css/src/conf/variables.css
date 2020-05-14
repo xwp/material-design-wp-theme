@@ -1,3 +1,9 @@
 :root {
 	--search-background: #fff;
+
+	--mdc-theme-text-primary-on-background: rgba(--mdc-theme-on-background-rgb, 0.87);
+	--mdc-theme-text-secondary-on-background: rgba(--mdc-theme-on-background-rgb, 0.54);
+	--mdc-theme-text-hint-on-background: rgba(--mdc-theme-on-background-rgb, 0.38);
+	--mdc-theme-text-disabled-on-background: rgba(--mdc-theme-on-background-rgb, 0.38);
+	--mdc-theme-text-icon-on-background: rgba(--mdc-theme-on-background-rgb, 0.38);
 }
