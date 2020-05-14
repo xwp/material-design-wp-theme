@@ -9,29 +9,10 @@
 
 use MaterialTheme\Menu_Walker;
 
-$top_app_bar_background = get_theme_mod( 'material_background_color' );
-$top_app_bar_text       = get_theme_mod( 'material_text_color' );
-
-$has_changed_color = ! empty( $top_app_bar_background ) || ! empty( $top_app_bar_text );
-$has_search        = get_theme_mod( 'material_header_search_display' );
-
-$is_material_plugin_active = class_exists( 'MaterialThemeBuilder\Plugin' );
+$has_search = get_theme_mod( 'material_header_search_display' );
 ?>
 
-<div
-	class="mdc-top-app-bar top-app-bar"
-	<?php if ( ! empty( $has_changed_color ) && ! $is_material_plugin_active ) : ?>
-		style="
-			<?php if ( ! empty( $top_app_bar_background ) ) : ?>
-				--mdc-theme-primary: <?php echo esc_attr( $top_app_bar_background ); ?>;
-			<?php endif; ?>
-
-			<?php if ( ! empty( $top_app_bar_text ) ) : ?>
-				--mdc-theme-on-primary: <?php echo esc_attr( $top_app_bar_text ); ?>;
-			<?php endif; ?>
-		"
-	<?php endif; ?>
->
+<div class="mdc-top-app-bar top-app-bar">
 	<div class="mdc-top-app-bar__row top-app-bar__header">
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
 			<?php if ( has_nav_menu( 'menu-2' ) ) : ?>

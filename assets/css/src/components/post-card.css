@@ -18,4 +18,8 @@
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
+
+	.post-card__subtitle {
+		color: rgba(var(--mdc-theme-on-surface-rgb, 0, 0, 0), .54);
+	}
 }

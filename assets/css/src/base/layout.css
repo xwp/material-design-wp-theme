@@ -1,3 +1,8 @@
+body {
+	background: var(--mdc-theme-background, #fff);
+	color: var(--mdc-theme-on-background, #000);
+}
+
 .site-content {
 	padding-top: var(--admin-bar-offset, 3.5rem);
 }
@@ -16,7 +21,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 5rem;
-	max-width: var(--max-content-width);
+	max-width: var(--mdc-theme-max-content-width);
 }
 
 .page-header {

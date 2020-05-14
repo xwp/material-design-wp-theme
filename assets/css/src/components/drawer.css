@@ -1,6 +1,7 @@
 .material-drawer {
 
 	& .mdc-drawer__header {
+		color: var(--mdc-theme-on-surface, #000);
 		display: flex;
 	}
 
@@ -11,5 +12,18 @@
 
 	& .mdc-drawer__content {
 		padding-top: 0.5rem;
+	}
+
+	& .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused {
+
+		& .mdc-notched-outline__leading,
+		& .mdc-notched-outline__notch,
+		& .mdc-notched-outline__trailing {
+			border-color: var(--mdc-theme-header, var(--mdc-theme-primary, #6200ee));
+		}
+
+		&:not(.mdc-text-field--disabled) .mdc-floating-label {
+			color: var(--mdc-theme-header, var(--mdc-theme-primary, #6200ee));
+		}
 	}
 }

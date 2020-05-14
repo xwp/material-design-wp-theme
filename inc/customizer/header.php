@@ -33,12 +33,10 @@ function register( $wp_customize ) {
 			array(
 				'selector'        => '.top-app-bar',
 				'settings'        => [
-					Customizer\prepend_slug( 'background_color' ),
-					Customizer\prepend_slug( 'text_color' ),
 					Customizer\prepend_slug( 'header_search_display' ),
 				],
 				'render_callback' => __NAMESPACE__ . '\render_header',
-			) 
+			)
 		);
 
 		$wp_customize->selective_refresh->add_partial(
@@ -56,7 +54,7 @@ function register( $wp_customize ) {
 
 /**
  * Register controls.
- * 
+ *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function add_sections( $wp_customize ) {
@@ -114,7 +112,7 @@ function add_settings( $wp_customize ) {
 /**
  * Add regular controls
  * Call to parent function
- * 
+ *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function add_controls( $wp_customize ) {
@@ -125,7 +123,7 @@ function add_controls( $wp_customize ) {
 			[
 				'section' => Customizer\prepend_slug( 'header_section' ),
 			],
-			$control 
+			$control
 		);
 	}
 
@@ -174,16 +172,16 @@ function add_radio_controls( $wp_customize ) {
 function get_color_controls() {
 	return [
 		[
-			'id'                   => 'background_color',
+			'id'                   => 'header_background_color',
 			'label'                => esc_html__( 'Bakground Color', 'material-theme' ),
-			'related_text_setting' => Customizer\prepend_slug( 'text_color' ),
-			'css_var'              => '--mdc-theme-primary',
+			'related_text_setting' => Customizer\prepend_slug( 'header_text_color' ),
+			'css_var'              => '--mdc-theme-header',
 		],
 		[
-			'id'                   => 'text_color',
+			'id'                   => 'header_text_color',
 			'label'                => esc_html__( 'Text Color', 'material-theme' ),
-			'related_text_setting' => Customizer\prepend_slug( 'background_color' ),
-			'css_var'              => '--mdc-theme-on-primary',
+			'related_text_setting' => Customizer\prepend_slug( 'header_background_color' ),
+			'css_var'              => '--mdc-theme-on-header',
 		],
 	];
 }
@@ -203,6 +201,7 @@ function add_color_controls( $wp_customize ) {
 	foreach ( get_color_controls() as $control ) {
 		$settings[ $control['id'] ] = [
 			'sanitize_callback' => 'sanitize_hex_color',
+			'transport'         => 'postMessage',
 		];
 	}
 
