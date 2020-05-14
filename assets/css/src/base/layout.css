@@ -4,7 +4,7 @@ body {
 }
 
 .site-content {
-	padding-top: var(--admin-bar-offset, 3.5rem);
+	padding-top: var(--admin-bar-offset, 4rem);
 }
 
 .-has-tab-bar + .site-content {

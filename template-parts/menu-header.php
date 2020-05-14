@@ -44,7 +44,6 @@ $has_search = get_theme_mod( 'material_header_search_display' );
 				<button class="mdc-button search__button"> 
 					<span class="mdc-button__ripple"></span>
 					<i class="material-icons mdc-button__icon">search</i>
-					<span class="screen-reader-text"><?php esc_html_e( 'Search', 'material-theme' ); ?></span>
 				</button>
 			<?php endif; ?>
 		</section>

@@ -42,13 +42,13 @@ $links = [
 <?php foreach ( $links as $link ) : // phpcs:ignore ?>
 	<li>
 		<?php if ( false !== $link['link'] ) : ?>
-			<a href="<?php echo esc_url( $link['link'] ); ?>" title="<?php echo esc_html( $link['title'] ); ?>" class="mdc-ripple-surface">
+			<a href="<?php echo esc_url( $link['link'] ); ?>" title="<?php echo esc_attr( $link['title'] ); ?>" aria-label="<?php echo esc_attr( $link['title'] ); ?>" class="mdc-ripple-surface">
 				<span class="material-icons">
 					<?php echo esc_html( $link['icon'] ); ?>
 				</span>
 			</a>
 		<?php else : ?>
-			<span class="material-icons" title="<?php echo esc_html( $link['title'] ); ?>">
+			<span class="material-icons" title="<?php echo esc_attr( $link['title'] ); ?>">
 				<?php echo esc_html( $link['icon'] ); ?>
 			</span>
 		<?php endif ?>

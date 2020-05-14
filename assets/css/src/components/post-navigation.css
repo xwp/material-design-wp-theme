@@ -7,6 +7,8 @@
 	& .post-navigation__previous {
 		align-items: center;
 		display: flex;
+		padding-bottom: 0.0625rem;
+		padding-top: 0.0625rem;
 		width: 50%;
 	}
 
