@@ -17,6 +17,11 @@
 			type="search"
 			name="s"
 		>
+		<button class="mdc-button mdc-button--unelevated screen-reader-text" type="submit">
+			<span class="mdc-button__ripple"></span>
+			<span class="mdc-button__label"><?php esc_attr_e( 'Search', 'material-theme' ); ?></span>
+			<i class="material-icons mdc-button__icon" aria-hidden="true">search</i>
+		</button>
 	</div>
 	<button class="mdc-button mdc-button--unelevated button__back" type="button">
 		<span class="mdc-button__ripple"></span>
