@@ -35,7 +35,7 @@ class Menu_Walker extends \Walker {
 		$output .= sprintf(
 			'<a href="%1$s" %2$s>%3$s</a>',
 			esc_url( $item->url ),
-			( get_the_ID() === absint( $item->object_id ) ) ? ' class="mdc-tab mdc-tab--active" aria-selected="true"' : ' class="mdc-tab"',
+			( get_the_ID() === absint( $item->object_id ) ) ? ' class="mdc-tab mdc-tab--active" role="tab" aria-selected="true"' : ' class="mdc-tab" role="tab"',
 			$this->build_markup( $item )
 		);
 	}

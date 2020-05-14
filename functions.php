@@ -259,6 +259,7 @@ require get_template_directory() . '/inc/widgets/class-wp-widget-pages.php';
 require get_template_directory() . '/inc/widgets/class-wp-widget-recent-comments.php';
 require get_template_directory() . '/inc/widgets/class-wp-widget-recent-posts.php';
 require get_template_directory() . '/inc/widgets/class-wp-widget-rss.php';
+require get_template_directory() . '/inc/widgets/class-wp-nav-menu-widget.php';
 require get_template_directory() . '/inc/widgets.php';
 
 MaterialTheme\Customizer\setup();

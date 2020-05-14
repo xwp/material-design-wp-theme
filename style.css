@@ -532,10 +532,13 @@ a:visited {
 	color: currentColor;
 }
 
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
 	color: currentColor;
 }
 
+button:focus,
 a:focus {
 	outline: thin dotted;
 }

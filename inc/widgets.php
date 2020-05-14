@@ -37,6 +37,7 @@ function get_supported_widgets() {
 		'WP_Widget_Recent_Comments',
 		'WP_Widget_Recent_Posts',
 		'WP_Widget_RSS',
+		'WP_Nav_Menu_Widget',
 	];
 }
 
