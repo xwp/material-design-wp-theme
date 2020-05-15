@@ -17,10 +17,6 @@
 @import "@material/tab-indicator/dist/mdc.tab-indicator.css";
 @import "@material/tab/dist/mdc.tab.css";
 
-.mdc-tab-bar {
-	background-color: transparent !important;
-}
-
 .mdc-card,
 .mdc-card__link,
 .single-post-card__title,

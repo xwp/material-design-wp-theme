@@ -26,7 +26,6 @@
 
 		<?php get_template_part( 'template-parts/drawer' ); ?>
 
-		<?php get_template_part( 'template-parts/menu', 'header' ); ?>
+		<?php get_template_part( 'template-parts/header', 'navigation' ); ?>
 
 		<div id="content" class="site-content">
-			<?php get_template_part( 'template-parts/menu', 'tabs' ); ?>

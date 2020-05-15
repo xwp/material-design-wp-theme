@@ -7,6 +7,10 @@ body {
 	padding-top: var(--admin-bar-offset, 3.5rem);
 }
 
+.-has-tab-bar + .site-content {
+	padding-top: 0;
+}
+
 .admin-bar {
 	--admin-bar-offset: 4rem;
 }
@@ -17,7 +21,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 5rem;
-	max-width: var(--max-content-width, 50rem);
+	max-width: var(--mdc-theme-max-content-width);
 }
 
 .page-header {
@@ -68,9 +72,9 @@ body {
 .entry-content .alignfull {
 
 	@media (--medium-viewport) {
-		margin-left: calc(-100vw / 2 + 100% / 2);
-		margin-right: calc(-100vw / 2 + 100% / 2);
-		max-width: 100vw;
+		margin-left: calc(-49.5vw + 50%);
+		margin-right: calc(-49.5vw + 50%);
+		max-width: 99vw;
 	}
 
 	&.wp-block-cover {
