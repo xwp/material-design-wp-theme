@@ -72,9 +72,9 @@ body {
 .entry-content .alignfull {
 
 	@media (--medium-viewport) {
-		margin-left: calc(-100vw / 2 + 100% / 2);
-		margin-right: calc(-100vw / 2 + 100% / 2);
-		max-width: 100vw;
+		margin-left: calc(-49.5vw + 50%);
+		margin-right: calc(-49.5vw + 50%);
+		max-width: 99vw;
 	}
 
 	&.wp-block-cover {
