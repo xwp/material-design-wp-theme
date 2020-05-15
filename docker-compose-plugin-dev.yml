@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+  wordpress:
+    volumes:
+      - ${PWD}:/var/www/html/wp-content/themes/material-theme
+
+  cli:
+    volumes:
+      - ${PWD}:/var/www/html/wp-content/themes/material-theme
