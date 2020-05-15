@@ -40,7 +40,12 @@
 	}
 
 	& .comment-author {
+		font-size: 1.25rem;
 		margin: 0 0 4px 0;
+
+		& a {
+			text-decoration: none;
+		}
 
 		& .url:hover {
 			text-decoration: none;

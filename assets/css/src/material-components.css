@@ -17,10 +17,9 @@
 @import "@material/tab-indicator/dist/mdc.tab-indicator.css";
 @import "@material/tab/dist/mdc.tab.css";
 
-:root {
-
-	/* Global material vars which are not customizable within WordPress yet */
-	--mdc-theme-surface: #fff;
-	--mdc-theme-on-surface: #000;
-	--mdc-theme-on-surface-rgb: 0, 0, 0;
+.mdc-card,
+.mdc-card__link,
+.single-post-card__title,
+.mtb-card__title {
+	color: var(--mdc-theme-on-surface, #000);
 }
