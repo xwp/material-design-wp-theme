@@ -14,6 +14,12 @@ if ( ! is_active_sidebar( 'footer' ) ) {
 
 <aside id="secondary" class="widget-area mdc-layout-grid">
 	<div class="mdc-layout-grid__inner">
-		<?php dynamic_sidebar( 'footer' ); ?>
+		<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+			<?php dynamic_sidebar( 'footer' ); ?>
+		</div>
+
+		<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+			<?php dynamic_sidebar( 'footer-right' ); ?>
+		</div>
 	</div>
 </aside><!-- #secondary -->

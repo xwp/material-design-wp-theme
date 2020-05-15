@@ -99,7 +99,7 @@ function material_theme_wp_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'material_theme_wp_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'material_theme_wp_content_width', 700 );
 }
 add_action( 'after_setup_theme', 'material_theme_wp_content_width', 0 );
 
@@ -111,10 +111,22 @@ add_action( 'after_setup_theme', 'material_theme_wp_content_width', 0 );
 function material_theme_wp_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer', 'material-theme' ),
+			'name'          => esc_html__( 'Footer Left', 'material-theme' ),
 			'id'            => 'footer',
-			'description'   => esc_html__( 'Footer widgets area.', 'material-theme' ),
-			'before_widget' => '<section id="%1$s" class="widget mdc-layout-grid__cell mdc-layout-grid__cell--span-6 %2$s">',
+			'description'   => esc_html__( 'Footer left area.', 'material-theme' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title mdc-typography--headline5">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Right', 'material-theme' ),
+			'id'            => 'footer-right',
+			'description'   => esc_html__( 'Footer right area.', 'material-theme' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title mdc-typography--headline5">',
 			'after_title'   => '</h2>',
