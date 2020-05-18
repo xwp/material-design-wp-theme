@@ -1,4 +1,4 @@
-.tab-bar {
+.site-navigation .tab-bar {
 	background-color: var(--mdc-theme-header, var(--mdc-theme-primary, #6200ee));
 	box-shadow: 1px 0 5px rgba(0, 0, 0, .5);
 	color: var(--mdc-theme-on-header, var(--mdc-theme-on-primary, #fff));
