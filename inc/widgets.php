@@ -16,7 +16,7 @@ use MaterialTheme\Menu_Drawer_Walker;
  */
 function setup() {
 	add_action( 'widgets_init', __NAMESPACE__ . '\replace_default_widgets' );
-	
+
 	add_filter( 'widget_archives_args', __NAMESPACE__ . '\build_archive' );
 	add_filter( 'wp_list_categories', __NAMESPACE__ . '\add_class_tax_list' );
 	add_filter( 'widget_nav_menu_args', __NAMESPACE__ . '\menu_widget_args' );
@@ -25,7 +25,7 @@ function setup() {
 
 /**
  * Define widgets to replace
- * 
+ *
  * @return array Supported widgets
  */
 function get_supported_widgets() {
