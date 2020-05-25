@@ -2,7 +2,7 @@
 	margin-left: 0.5rem;
 	margin-right: 0.5rem;
 
-	@nest .error-404 & {
+	@nest .error-404 &, .search-no-results & {
 		align-items: center;
 		display: flex;
 		flex-direction: column;

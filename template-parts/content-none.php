@@ -11,41 +11,15 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'material-theme' ); ?></h1>
+		<h1 class="page-title mdc-typography--headline2"><?php esc_html_e( 'Page not found.', 'material-theme' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
+		<p><?php esc_html_e( "The page you were looking for could not be found. It might have been removed or renamed, try searching below to find what you're looking for.", 'material-theme' ); ?></p>
+
 		<?php
-		if ( is_home() && current_user_can( 'publish_posts' ) ) :
-
-			printf(
-				'<p>' . wp_kses(
-					/* translators: 1: link to WP admin new post page. */
-					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'material-theme' ),
-					array(
-						'a' => array(
-							'href' => array(),
-						),
-					)
-				) . '</p>',
-				esc_url( admin_url( 'post-new.php' ) )
-			);
-
-		elseif ( is_search() ) :
-			?>
-
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'material-theme' ); ?></p>
-			<?php
-			get_search_form();
-
-		else :
-			?>
-
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'material-theme' ); ?></p>
-			<?php
-			get_search_form();
-
-		endif;
+		get_search_form();
 		?>
 	</div><!-- .page-content -->
+
 </section><!-- .no-results -->

@@ -1,4 +1,5 @@
-.error404 {
+.error404,
+.search-no-results {
 
 	& .page-header {
 		padding-left: 0;
