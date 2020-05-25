@@ -1,0 +1,6 @@
+.search-results {
+
+	& .page-title {
+		margin-bottom: 2rem;
+	}
+}
