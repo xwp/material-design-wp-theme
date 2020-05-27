@@ -2,14 +2,15 @@
 	margin-left: 0.5rem;
 	margin-right: 0.5rem;
 
-	@nest .error-404 & {
-		align-items: center;
+	@nest .error-404 &, .search-no-results & {
+		align-items: flex-start;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		margin-left: 0;
 
 		@media (--medium-viewport) {
+			align-items: center;
 			flex-direction: row;
 			margin-bottom: 25vh;
 			margin-top: 3rem;
