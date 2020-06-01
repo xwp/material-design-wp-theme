@@ -83,6 +83,12 @@ body {
 			width: auto;
 		}
 	}
+
+	& .wp-block-cover__inner-container {
+		max-width: var(--mdc-theme-max-content-width);
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 }
 
 blockquote {
