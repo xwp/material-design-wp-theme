@@ -26,6 +26,7 @@ module.exports = function( grunt ) {
 					'!composer.lock',
 					'!contributing.md',
 					'!docker-compose.yml',
+					'!docker-compose-plugin-dev.yml',
 					'!material-theme.zip',
 					'!Gruntfile.js',
 					'!jest.config.js',
