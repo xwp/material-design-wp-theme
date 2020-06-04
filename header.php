@@ -9,6 +9,8 @@
  * @package MaterialTheme
  */
 
+$corner_radius = get_theme_mod( 'mtb_small_component_radius' );
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -20,7 +22,16 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'mdc-typography' ); ?>>
+<body
+	<?php body_class( 'mdc-typography' ); ?>
+	style="
+		<?php
+		if ( $corner_radius ) {
+			echo '--mdc-small-component-radius:' . esc_attr( $corner_radius ) . 'px;';
+		} 
+		?>
+	"
+>
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'material-theme' ); ?></a>
 

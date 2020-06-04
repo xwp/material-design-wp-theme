@@ -1,0 +1,17 @@
+/**
+ * Inherit default corner radius
+ *
+ * --mdc-small-component-radius
+ */
+.mdc-text-field.mdc-text-field--outlined .mdc-notched-outline {
+
+	& .mdc-notched-outline__leading {
+		border-radius: var(--mdc-small-component-radius, 4px) 0 0 var(--mdc-small-component-radius, 4px);
+		min-width: var(--mdc-small-component-radius, 4px);
+	}
+
+	& .mdc-notched-outline__trailing {
+		border-radius: 0 var(--mdc-small-component-radius, 4px)  var(--mdc-small-component-radius, 4px) 0;
+		min-width: var(--mdc-small-component-radius, 4px);
+	}
+}
