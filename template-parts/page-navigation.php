@@ -42,8 +42,20 @@ $links = [
 <?php foreach ( $links as $link ) : // phpcs:ignore ?>
 	<li>
 		<?php if ( false !== $link['link'] ) : ?>
-			<a href="<?php echo esc_url( $link['link'] ); ?>" title="<?php echo esc_html( $link['title'] ); ?>" class="mdc-ripple-surface">
-				<span class="material-icons">
+			<a
+				href="<?php echo esc_url( $link['link'] ); ?>"
+				title="
+					<?php
+					printf(
+						/* translators: available page description. */
+						esc_attr__( '%s page', 'material-theme' ),
+						esc_attr( $link['title'] )
+					);
+					?>
+				"
+				class="mdc-ripple-surface"
+			>
+				<span class="material-icons" aria-hidden="true">
 					<?php echo esc_html( $link['icon'] ); ?>
 				</span>
 			</a>
