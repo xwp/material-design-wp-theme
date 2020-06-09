@@ -4,6 +4,10 @@
 		text-decoration: none;
 	}
 
+	& a:focus {
+		outline: 1px dotted;
+	}
+
 	.mdc-card__action--button {
 		color: #404040;
 		text-transform: none;

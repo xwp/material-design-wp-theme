@@ -29,6 +29,10 @@
 
 		& button {
 			color: var(--mdc-theme-on-footer);
+
+			&:focus {
+				outline: 1px dotted;
+			}
 		}
 	}
 

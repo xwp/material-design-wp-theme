@@ -22,7 +22,22 @@
 	</div>
 	<div class="mdc-card__actions">
 		<div class="mdc-card__action-buttons">
-			<a class="mdc-button mdc-card__action mdc-card__action--button" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">
+			<a
+				class="mdc-button mdc-card__action mdc-card__action--button"
+				href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"
+				aria-label="
+					<?php
+					printf(
+						/* translators: 1: author name. */
+						esc_attr__(
+							'Author: %s',
+							'material-theme'
+						),
+						esc_attr( get_the_author() )
+					);
+					?>
+				"
+			>
 				<span class="mdc-button__ripple"></span>
 				<i class="material-icons mdc-button__icon" aria-hidden="true">perm_identity</i>
 				<?php the_author(); ?>

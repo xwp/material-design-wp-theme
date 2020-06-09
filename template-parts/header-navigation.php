@@ -17,6 +17,7 @@
 			-has-tab-bar
 		<?php endif; ?>
 		"
+	role="banner"
 >
 	<?php get_template_part( 'template-parts/menu', 'header' ); ?>
 
