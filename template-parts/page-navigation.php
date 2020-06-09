@@ -16,24 +16,28 @@ if ( $total <= 1 ) {
 
 $links = [
 	[
-		'link'  => 1 === $current ? false : get_pagenum_link( 1 ),
-		'icon'  => 'first_page',
-		'title' => __( 'First', 'material-theme' ),
+		'link'   => 1 === $current ? false : get_pagenum_link( 1 ),
+		'icon'   => 'first_page',
+		'title'  => __( 'First', 'material-theme' ),
+		'number' => 1,
 	],
 	[
-		'link'  => $current <= 1 ? false : get_pagenum_link( $current - 1 ),
-		'icon'  => 'chevron_left',
-		'title' => __( 'Previous', 'material-theme' ),
+		'link'   => $current <= 1 ? false : get_pagenum_link( $current - 1 ),
+		'icon'   => 'chevron_left',
+		'title'  => __( 'Previous', 'material-theme' ),
+		'number' => $current - 1,
 	],
 	[
-		'link'  => $current >= $total ? false : get_pagenum_link( $current + 1 ),
-		'icon'  => 'chevron_right',
-		'title' => __( 'Next', 'material-theme' ),
+		'link'   => $current >= $total ? false : get_pagenum_link( $current + 1 ),
+		'icon'   => 'chevron_right',
+		'title'  => __( 'Next', 'material-theme' ),
+		'number' => $current + 1,
 	],
 	[
-		'link'  => $total === $current ? false : get_pagenum_link( $total ),
-		'icon'  => 'last_page',
-		'title' => __( 'Last', 'material-theme' ),
+		'link'   => $total === $current ? false : get_pagenum_link( $total ),
+		'icon'   => 'last_page',
+		'title'  => __( 'Last', 'material-theme' ),
+		'number' => $total,
 	],
 ];
 ?>
@@ -47,9 +51,10 @@ $links = [
 				title="
 					<?php
 					printf(
-						/* translators: available page description. */
-						esc_attr__( '%s page', 'material-theme' ),
-						esc_attr( $link['title'] )
+						/* translators: 1. Next page number. 2. total pages. */
+						esc_attr__( 'Go to page %1$d of %2$d', 'material-theme' ),
+						absint( $link['number'] ),
+						absint( $total )
 					);
 					?>
 				"
@@ -57,6 +62,15 @@ $links = [
 			>
 				<span class="material-icons" aria-hidden="true">
 					<?php echo esc_html( $link['icon'] ); ?>
+				</span>
+				<span class="screen-reader-text">
+					<?php
+						printf(
+							/* translators: available page description. */
+							esc_attr__( '%s page', 'material-theme' ),
+							esc_attr( $link['title'] )
+						);
+					?>
 				</span>
 			</a>
 		<?php else : ?>
