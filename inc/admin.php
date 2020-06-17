@@ -122,7 +122,7 @@ function register_required_plugins() {
 			'name'     => esc_html__( 'Material Theme Builder', 'material-theme' ),
 			'slug'     => 'material-theme-builder',
 			// @todo remove source and point to the WordPress.org plugin repo after the plugin is published.
-			'source'   => 'https://storage.googleapis.com/xwp-mdc/material-theme-builder/material-theme-builder.zip', //get_stylesheet_directory() . '/material-theme-builder.zip',
+			'source'   => 'https://storage.googleapis.com/xwp-mdc/material-theme-builder/material-theme-builder.zip',
 			'required' => true,
 		),
 	);
