@@ -355,6 +355,15 @@ function get_frontend_css() {
 				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $surface ) );
 			}
 		}
+
+		if ( '--mdc-theme-on-footer' === $control['css_var'] ) {
+			$selected_value = get_theme_mod( $control['id'] );
+			$on_surface     = get_theme_mod( 'mtb_surface_text_color' );
+
+			if ( ! $selected_value && $on_surface ) {
+				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $on_surface ) );
+			}
+		}
 	}
 
 	$color_vars = implode( "\n\t\t\t", $color_vars );
