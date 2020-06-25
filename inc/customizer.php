@@ -217,7 +217,7 @@ function get_default( $setting ) {
  * @return array
  */
 function get_default_values() {
-	return [
+	$defaults = [
 		'header_background_color' => '#6200ee',
 		'header_text_color'       => '#ffffff',
 		'background_color'        => '#ffffff',
@@ -227,6 +227,19 @@ function get_default_values() {
 		'archive_layout'          => 'card',
 		'header_width_layout'     => 'boxed',
 	];
+
+	$surface    = get_theme_mod( 'mtb_surface_color' );
+	$on_surface = get_theme_mod( 'mtb_surface_text_color' );
+
+	if ( $surface ) {
+		$defaults['footer_background_color'] = $surface;
+	}
+
+	if ( $on_surface ) {
+		$defaults['footer_text_color'] = $on_surface;
+	}
+
+	return $defaults;
 }
 
 /**
@@ -332,6 +345,15 @@ function get_frontend_css() {
 			}
 
 			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
+		}
+
+		if ( '--mdc-theme-footer' === $control['css_var'] ) {
+			$selected_value = get_theme_mod( $control['id'] );
+			$surface        = get_theme_mod( 'mtb_surface_color' );
+
+			if ( ! $selected_value && $surface ) {
+				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $surface ) );
+			}
 		}
 	}
 
