@@ -48,6 +48,19 @@
 		} );
 	} );
 
+	// Archive width
+	api( 'material_archive_width', function( value ) {
+		value.bind( function( to ) {
+			if ( 'wide' === to ) {
+				$( '.content-area' ).removeClass( 'material-archive__normal' );
+				$( '.content-area' ).addClass( 'material-archive__wide' );
+			} else {
+				$( '.content-area' ).removeClass( 'material-archive__wide' );
+				$( '.content-area' ).addClass( 'material-archive__normal' );
+			}
+		} );
+	} );
+
 	/**
 	 * Add styles to elements in the preview pane.
 	 *

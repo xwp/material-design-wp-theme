@@ -53,6 +53,15 @@ function get_controls() {
 				'image' => esc_html__( 'Image List', 'material-theme' ),
 			],
 		],
+		[
+			'id'      => Customizer\prepend_slug( 'archive_width' ),
+			'label'   => esc_html__( 'Width', 'material-theme' ),
+			'type'    => 'radio',
+			'choices' => [
+				'wide'   => esc_html__( 'Wide', 'material-theme' ),
+				'normal' => esc_html__( 'Normal', 'material-theme' ),
+			],
+		],
 	];
 }
 

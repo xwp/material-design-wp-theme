@@ -24,6 +24,11 @@ body {
 	max-width: var(--mdc-theme-max-content-width);
 }
 
+.material-archive__wide .site-main {
+	margin-left: calc(25% - 25vw);
+	margin-right: calc(25% - 25vw);
+}
+
 .page-header {
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
