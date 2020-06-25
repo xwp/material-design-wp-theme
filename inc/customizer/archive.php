@@ -32,6 +32,7 @@ function register( $wp_customize ) {
 			'render_callback' => __NAMESPACE__ . '\render_layout',
 			'settings'        => [
 				'material_archive_layout',
+				'material_archive_width',
 			],
 		]
 	);

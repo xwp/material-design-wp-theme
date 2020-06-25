@@ -5,7 +5,7 @@
  * @package MaterialTheme
  */
 
-$columns = 2;
+$columns = get_theme_mod( 'material_archive_width', 'normal' ) === 'normal' ? 2 : 3;
 
 ?>
 
