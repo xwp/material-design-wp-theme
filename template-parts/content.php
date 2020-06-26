@@ -32,7 +32,7 @@ $show_date     = get_theme_mod( 'material_archive_date', true );
 	<?php if ( ! empty( $show_author ) || ! empty( $show_comments ) ) : ?>
 		<div class="mdc-card__actions">
 			<div class="mdc-card__action-buttons">
-				<?php if ( ! empty( $author ) ) : ?>
+				<?php if ( ! empty( $show_author ) ) : ?>
 					<a
 						class="mdc-button mdc-card__action mdc-card__action--button"
 						href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"
@@ -55,7 +55,7 @@ $show_date     = get_theme_mod( 'material_archive_date', true );
 					</a>
 				<?php endif; ?>
 
-				<?php if ( ! empty( $comments ) ) : ?>
+				<?php if ( ! empty( $show_comments ) ) : ?>
 					<a href="<?php comments_link(); ?>" class="mdc-button mdc-card__action mdc-card__action--button">
 						<span class="mdc-button__ripple"></span>
 						<i class="material-icons mdc-button__icon" aria-hidden="true">comment</i>
