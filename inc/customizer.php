@@ -226,6 +226,11 @@ function get_default_values() {
 		'footer_text_color'       => '#000000',
 		'archive_layout'          => 'card',
 		'header_width_layout'     => 'boxed',
+		'archive_width'           => 'normal',
+		'archive_comments'        => true,
+		'archive_author'          => true,
+		'archive_excerpt'         => true,
+		'archive_date'            => true,
 	];
 
 	$surface    = get_theme_mod( 'mtb_surface_color' );

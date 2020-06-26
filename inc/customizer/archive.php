@@ -32,6 +32,11 @@ function register( $wp_customize ) {
 			'render_callback' => __NAMESPACE__ . '\render_layout',
 			'settings'        => [
 				'material_archive_layout',
+				'material_archive_width',
+				'material_archive_comments',
+				'material_archive_author',
+				'material_archive_excerpt',
+				'material_archive_date',
 			],
 		]
 	);
@@ -52,6 +57,35 @@ function get_controls() {
 				'card'  => esc_html__( 'Card', 'material-theme' ),
 				'image' => esc_html__( 'Image List', 'material-theme' ),
 			],
+		],
+		[
+			'id'      => Customizer\prepend_slug( 'archive_width' ),
+			'label'   => esc_html__( 'Width', 'material-theme' ),
+			'type'    => 'radio',
+			'choices' => [
+				'wide'   => esc_html__( 'Wide', 'material-theme' ),
+				'normal' => esc_html__( 'Normal', 'material-theme' ),
+			],
+		],
+		[
+			'id'    => Customizer\prepend_slug( 'archive_comments' ),
+			'label' => esc_html__( 'Comments', 'material-theme' ),
+			'type'  => 'checkbox',
+		],
+		[
+			'id'    => Customizer\prepend_slug( 'archive_author' ),
+			'label' => esc_html__( 'Author', 'material-theme' ),
+			'type'  => 'checkbox',
+		],
+		[
+			'id'    => Customizer\prepend_slug( 'archive_excerpt' ),
+			'label' => esc_html__( 'Excerpt', 'material-theme' ),
+			'type'  => 'checkbox',
+		],
+		[
+			'id'    => Customizer\prepend_slug( 'archive_date' ),
+			'label' => esc_html__( 'Date', 'material-theme' ),
+			'type'  => 'checkbox',
 		],
 	];
 }
