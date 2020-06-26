@@ -227,6 +227,10 @@ function get_default_values() {
 		'archive_layout'          => 'card',
 		'header_width_layout'     => 'boxed',
 		'archive_width'           => 'normal',
+		'archive_comments'        => true,
+		'archive_author'          => true,
+		'archive_excerpt'         => true,
+		'archive_date'            => true,
 	];
 }
 
