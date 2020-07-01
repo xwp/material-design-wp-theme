@@ -74,7 +74,7 @@ module.exports = function( grunt ) {
 				command: './vendor/xwp/wp-dev-lib/scripts/generate-markdown-readme', // Generate the readme.md.
 			},
 			create_build_zip: {
-				command: 'if [ ! -e build ]; then echo "Run grunt build first."; exit 1; fi; if [ -e material-theme.zip ]; then rm material-theme.zip; fi; cd build; zip -r ../material-theme.zip .; cd ..; echo; echo "ZIP of build: $(pwd)/material-theme.zip"',
+				command: 'if [ ! -e build ]; then echo "Run grunt build first."; exit 1; fi; if [ -e material-theme.zip ]; then rm material-theme.zip; fi; mv build material-theme; zip -r ./material-theme.zip material-theme; mv material-theme build; echo; echo "ZIP of build: $(pwd)/material-theme.zip"',
 			},
 		},
 	} );
