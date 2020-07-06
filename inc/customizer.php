@@ -233,8 +233,8 @@ function get_default_values() {
 		'archive_date'            => true,
 	];
 
-	$surface    = get_theme_mod( 'mtb_surface_color' );
-	$on_surface = get_theme_mod( 'mtb_surface_text_color' );
+	$surface    = get_material_theme_builder_option( 'surface_color' );
+	$on_surface = get_material_theme_builder_option( 'surface_text_color' );
 
 	if ( $surface ) {
 		$defaults['footer_background_color'] = $surface;
@@ -301,7 +301,7 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
 	$section = prepend_slug( $section );
 
 	foreach ( $color_controls as $control ) {
-		if ( class_exists( 'MaterialThemeBuilder\Customizer\Material_Color_Palette_Control' ) ) {
+		if ( class_exists( '\MaterialThemeBuilder\Customizer\Material_Color_Palette_Control' ) ) {
 			$controls[ $control['id'] ] = new \MaterialThemeBuilder\Customizer\Material_Color_Palette_Control(
 				$wp_customize,
 				prepend_slug( $control['id'] ),
@@ -353,8 +353,8 @@ function get_frontend_css() {
 		}
 
 		if ( '--mdc-theme-footer' === $control['css_var'] ) {
-			$selected_value = get_theme_mod( $control['id'] );
-			$surface        = get_theme_mod( 'mtb_surface_color' );
+			$selected_value = get_theme_mod( prepend_slug( $control['id'] ) );
+			$surface        = get_material_theme_builder_option( 'surface_color' );
 
 			if ( ! $selected_value && $surface ) {
 				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $surface ) );
@@ -362,8 +362,8 @@ function get_frontend_css() {
 		}
 
 		if ( '--mdc-theme-on-footer' === $control['css_var'] ) {
-			$selected_value = get_theme_mod( $control['id'] );
-			$on_surface     = get_theme_mod( 'mtb_surface_text_color' );
+			$selected_value = get_theme_mod( prepend_slug( $control['id'] ) );
+			$on_surface     = get_material_theme_builder_option( 'surface_text_color' );
 
 			if ( ! $selected_value && $on_surface ) {
 				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $on_surface ) );
@@ -417,4 +417,17 @@ function hex_to_rgb( $hex ) {
 	);
 }
 
+/**
+ * Get Material Theme builder plugin option by name.
+ *
+ * @param  string $name name of the option.
+ * @return mixed
+ */
+function get_material_theme_builder_option( $name ) {
+	$value = false;
+	if ( function_exists( '\MaterialThemeBuilder\get_plugin_instance' ) ) {
+		$value = \MaterialThemeBuilder\get_plugin_instance()->customizer_controls->get_option( $name );
+	}
 
+	return apply_filters( 'get_material_theme_builder_option', $value, $name );
+}
