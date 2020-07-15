@@ -231,6 +231,7 @@ function get_default_values() {
 		'archive_author'          => true,
 		'archive_excerpt'         => true,
 		'archive_date'            => true,
+		'archive_outlined'        => false,
 	];
 
 	$surface    = get_material_theme_builder_option( 'surface_color' );
