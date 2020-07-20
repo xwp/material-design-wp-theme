@@ -50,7 +50,7 @@ $show_date     = get_theme_mod( 'material_archive_date', true );
 						"
 					>
 						<span class="mdc-button__ripple"></span>
-						<i class="material-icons mdc-button__icon" aria-hidden="true">perm_identity</i>
+						<?php echo get_avatar( get_the_author_meta( 'ID' ), 18 ); ?>
 						<?php the_author(); ?>
 					</a>
 				<?php endif; ?>
