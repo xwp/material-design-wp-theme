@@ -1,14 +1,15 @@
 version: '3'
 
 services:
+
   mysql:
     image: mysql:5
     volumes:
-      - ./bin/local-dev/mysql:/var/lib/mysql
-      - ./bin/local-dev/wordpress/config/mysql/wptests.sql:/docker-entrypoint-initdb.d/wptests.sql
+    - ./bin/local-dev/mysql:/var/lib/mysql
+    - ./bin/local-dev/wordpress/config/mysql/wptests.sql:/docker-entrypoint-initdb.d/wptests.sql
     restart: always
     ports:
-      - 3306:3306
+    - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
