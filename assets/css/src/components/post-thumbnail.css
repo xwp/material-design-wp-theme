@@ -1,5 +1,5 @@
 .post .post-thumbnail {
-	margin-top: 1rem;
+	margin-bottom: 2rem;
 	max-width: 62.5rem;
 
 	@media (--medium-large-viewport) {

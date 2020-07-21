@@ -10,6 +10,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php material_theme_wp_post_thumbnail(); ?>
+
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -22,14 +24,13 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				material_theme_wp_posted_by();
 				material_theme_wp_posted_on();
 				?>
 			</div><!-- .entry-meta -->
+
+			<?php material_theme_wp_posted_by(); ?>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
-	<?php material_theme_wp_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
