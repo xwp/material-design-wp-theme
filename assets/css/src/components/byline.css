@@ -1,0 +1,5 @@
+.byline,
+.byline .author {
+	align-items: center;
+	display: flex;
+}
