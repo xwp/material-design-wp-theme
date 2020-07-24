@@ -11,9 +11,10 @@ $show_comments = get_theme_mod( 'material_archive_comments', true );
 $show_author   = get_theme_mod( 'material_archive_author', true );
 $show_excerpt  = get_theme_mod( 'material_archive_excerpt', true );
 $show_date     = get_theme_mod( 'material_archive_date', true );
+$classes       = get_theme_mod( 'material_archive_outlined', false ) ? 'mdc-card--outlined' : '';
 ?>
 
-<div id="<?php the_ID(); ?>" <?php post_class( 'mdc-card post-card' ); ?>>
+<div id="<?php the_ID(); ?>" <?php post_class( "mdc-card post-card $classes" ); ?>>
 	<div class="mdc-card__primary-action post-card__primary-action" tabindex="0">
 		<?php if ( has_post_thumbnail() ) : ?>
 			<div class="mdc-card__media mdc-card__media--16-9 post-card__media" style="background-image: url(&quot;<?php echo esc_attr( get_the_post_thumbnail_url() ); ?>&quot;);"></div>
