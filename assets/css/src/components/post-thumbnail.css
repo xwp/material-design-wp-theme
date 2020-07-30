@@ -9,8 +9,8 @@
 
 	@media (--large-viewport) {
 		max-width: 76.5625rem;
-		margin-left: -14rem;
-		margin-right: -14rem;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	& .wp-post-image {
