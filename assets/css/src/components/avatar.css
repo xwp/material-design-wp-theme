@@ -1,8 +1,4 @@
 .avatar {
 	border-radius: 50%;
-	margin-right: 8px;
-
-	@nest .entry-meta .author & {
-		margin-right: 0.5rem;
-	}
+	margin-right: 1rem;
 }

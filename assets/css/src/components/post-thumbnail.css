@@ -1,6 +1,6 @@
 .post .post-thumbnail {
-	margin-top: 1rem;
-	max-width: 60rem;
+	margin-bottom: 2rem;
+	max-width: 62.5rem;
 
 	@media (--medium-large-viewport) {
 		margin-left: auto;
@@ -9,8 +9,8 @@
 
 	@media (--large-viewport) {
 		max-width: 76.5625rem;
-		margin-left: -14rem;
-		margin-right: -14rem;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	& .wp-post-image {

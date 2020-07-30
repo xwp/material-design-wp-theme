@@ -10,7 +10,17 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php material_theme_wp_post_thumbnail(); ?>
+
 	<header class="entry-header">
+		<?php if ( 'post' === get_post_type() ) : ?>
+			<div class="entry-meta">
+				<?php
+				material_theme_wp_posted_on();
+				?>
+			</div><!-- .entry-meta -->
+		<?php endif; ?>
+
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title mdc-typography mdc-typography--headline2">', '</h1>' );
@@ -20,16 +30,9 @@
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
-				<?php
-				material_theme_wp_posted_by();
-				material_theme_wp_posted_on();
-				?>
-			</div><!-- .entry-meta -->
+			<?php material_theme_wp_posted_by(); ?>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
-	<?php material_theme_wp_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

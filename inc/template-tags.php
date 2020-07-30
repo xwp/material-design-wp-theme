@@ -25,9 +25,18 @@ if ( ! function_exists( 'material_theme_wp_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
-		$posted_on = '<i class="material-icons mdc-button__icon">date_range</i><a class="date mdc-typography--caption" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
+		$posted_on = '<a class="date mdc-typography--overline" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
 		echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore
+
+		echo '<span class="separator">⌙</span>';
+
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( '<span class="separator">, </span>' );
+		if ( $categories_list ) {
+			/* translators: 1: list of categories. */
+			printf( '<span class="cat-links"><span class="mdc-typography--overline">%1$s</span></span>', $categories_list ); // phpcs:ignore
+		}
 
 	}
 endif;
@@ -37,9 +46,9 @@ if ( ! function_exists( 'material_theme_wp_posted_by' ) ) :
 	 * Prints HTML with meta information for the current author.
 	 */
 	function material_theme_wp_posted_by() {
-		$byline = '<span class="author vcard">' . get_avatar( get_the_author_meta( 'ID' ), 24 ) . '<a class="url fn n mdc-typography--caption" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
+		$byline = '<span class="author vcard">' . get_avatar( get_the_author_meta( 'ID' ), 36 ) . '<a class="url fn n mdc-typography--caption" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
 
-		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore
+		echo '<div class="byline"> ' . $byline . '</div>'; // phpcs:ignore
 
 	}
 endif;
@@ -51,13 +60,6 @@ if ( ! function_exists( 'material_theme_wp_entry_footer' ) ) :
 	function material_theme_wp_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( '<span class="separator">, </span>' );
-			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links"><i class="material-icons mdc-button__icon">category</i><span class="mdc-typography--caption">%1$s</span></span>', $categories_list ); // phpcs:ignore
-			}
-
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', '<span class="separator">, </span>' );
 			if ( $tags_list ) {
