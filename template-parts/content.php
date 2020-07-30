@@ -52,7 +52,7 @@ $classes       = get_theme_mod( 'material_archive_outlined', false ) ? 'mdc-card
 							"
 						>
 							<span class="mdc-button__ripple"></span>
-							<i class="material-icons mdc-button__icon" aria-hidden="true">perm_identity</i>
+							<?php echo get_avatar( get_the_author_meta( 'ID' ), 18 ); ?>
 							<?php the_author(); ?>
 						</a>
 					<?php endif; ?>
@@ -60,7 +60,7 @@ $classes       = get_theme_mod( 'material_archive_outlined', false ) ? 'mdc-card
 					<?php if ( ! empty( $show_comments ) ) : ?>
 						<a href="<?php comments_link(); ?>" class="mdc-button mdc-card__action mdc-card__action--button">
 							<span class="mdc-button__ripple"></span>
-							<?php echo get_avatar( get_the_author_meta( 'ID' ), 18 ); ?>
+							<i class="material-icons mdc-button__icon" aria-hidden="true">comment</i>
 							<?php
 							echo esc_html(
 								sprintf(
