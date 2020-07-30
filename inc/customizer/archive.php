@@ -23,6 +23,13 @@ function setup() {
  * @return void
  */
 function register( $wp_customize ) {
+	$wp_customize->add_section(
+		Customizer\prepend_slug( 'archive' ),
+		[
+			'title' => __( 'Layout Settings', 'material-theme' ),
+		]
+	);
+
 	add_settings( $wp_customize );
 
 	$wp_customize->selective_refresh->add_partial(
@@ -37,6 +44,7 @@ function register( $wp_customize ) {
 				'material_archive_author',
 				'material_archive_excerpt',
 				'material_archive_date',
+				'material_archive_outlined',
 			],
 		]
 	);
@@ -68,24 +76,34 @@ function get_controls() {
 			],
 		],
 		[
-			'id'    => Customizer\prepend_slug( 'archive_comments' ),
-			'label' => esc_html__( 'Comments', 'material-theme' ),
-			'type'  => 'checkbox',
+			'id'              => Customizer\prepend_slug( 'archive_comments' ),
+			'label'           => esc_html__( 'Comments', 'material-theme' ),
+			'type'            => 'checkbox',
+			'active_callback' => __NAMESPACE__ . '\is_card_layout',
 		],
 		[
-			'id'    => Customizer\prepend_slug( 'archive_author' ),
-			'label' => esc_html__( 'Author', 'material-theme' ),
-			'type'  => 'checkbox',
+			'id'              => Customizer\prepend_slug( 'archive_author' ),
+			'label'           => esc_html__( 'Author', 'material-theme' ),
+			'type'            => 'checkbox',
+			'active_callback' => __NAMESPACE__ . '\is_card_layout',
 		],
 		[
-			'id'    => Customizer\prepend_slug( 'archive_excerpt' ),
-			'label' => esc_html__( 'Excerpt', 'material-theme' ),
-			'type'  => 'checkbox',
+			'id'              => Customizer\prepend_slug( 'archive_excerpt' ),
+			'label'           => esc_html__( 'Excerpt', 'material-theme' ),
+			'type'            => 'checkbox',
+			'active_callback' => __NAMESPACE__ . '\is_card_layout',
 		],
 		[
-			'id'    => Customizer\prepend_slug( 'archive_date' ),
-			'label' => esc_html__( 'Date', 'material-theme' ),
-			'type'  => 'checkbox',
+			'id'              => Customizer\prepend_slug( 'archive_date' ),
+			'label'           => esc_html__( 'Date', 'material-theme' ),
+			'type'            => 'checkbox',
+			'active_callback' => __NAMESPACE__ . '\is_card_layout',
+		],
+		[
+			'id'              => Customizer\prepend_slug( 'archive_outlined' ),
+			'label'           => esc_html__( 'Outlined', 'material-theme' ),
+			'type'            => 'checkbox',
+			'active_callback' => __NAMESPACE__ . '\is_card_layout',
 		],
 	];
 }
@@ -113,7 +131,7 @@ function add_settings( $wp_customize ) {
 /**
  * Add regular controls
  * Call to parent function
- * 
+ *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function add_controls( $wp_customize ) {
@@ -122,9 +140,9 @@ function add_controls( $wp_customize ) {
 	foreach ( get_controls() as $control ) {
 		$controls[ $control['id'] ] = array_merge(
 			[
-				'section' => 'static_front_page',
+				'section' => Customizer\prepend_slug( 'archive' ),
 			],
-			$control 
+			$control
 		);
 	}
 
@@ -138,4 +156,13 @@ function add_controls( $wp_customize ) {
  */
 function render_layout() {
 	get_template_part( 'template-parts/archive' );
+}
+
+/**
+ * Determine if the layout is card.
+ *
+ * @return boolean
+ */
+function is_card_layout() {
+	return 'card' === get_theme_mod( Customizer\prepend_slug( 'archive_layout' ), 'card' );
 }

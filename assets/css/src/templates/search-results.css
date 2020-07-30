@@ -1,5 +1,9 @@
 .search-results {
 
+	& .content-area {
+		max-width: var(--mdc-theme-max-content-width);
+	}
+
 	& .page-title {
 		margin-bottom: 2rem;
 	}
