@@ -1,4 +1,9 @@
-.archive {
+.archive,
+.blog {
+
+	& .content-area {
+		max-width: var(--mdc-theme-max-content-width);
+	}
 
 	& .page-title {
 		font-size: 3rem;
