@@ -55,8 +55,11 @@ module.exports = function( grunt ) {
 			compiled: {
 				src: [
 					'assets/js/*.js',
-					'!assets/js/admin.js',
+					'assets/js/*.js.map',
 					'assets/js/*.asset.php',
+					'assets/css/*.css',
+					'!assets/css/src/*',
+					'assets/css/*.css.map',
 				],
 			},
 			build: {
