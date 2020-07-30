@@ -60,24 +60,48 @@ body {
 	}
 }
 
-.entry-content > .alignwide {
-	max-width: 120rem;
-	width: calc(100% - 4rem);
+.entry-content > {
 
-	@media (--medium-viewport) {
-		max-width: 60rem;
-		position: relative;
-		width: 60rem;
+	&.alignwide,
+	&.wp-block-separator.is-style-wide {
+		max-width: calc(100% - 8rem);
+		width: calc(100% - 8rem);
+		margin: auto;
+
+		@media (--medium-large-viewport) {
+			max-width: 60rem;
+			width: 60rem;
+		}
+
+		@media (--large-viewport) {
+			max-width: 84rem;
+			width: 84rem;
+		}
 	}
 
-	&.wp-block-image {
-		max-width: none;
+	&.wp-block-separator.is-style-wide {
+		margin: 2rem auto;
+
+		@media (--medium-large-viewport) {
+			margin: 3rem auto;
+		}
+
+		@media (--large-viewport) {
+			margin: 4rem auto;
+		}
 	}
 
-	&.wp-block-cover {
+	&.alignwide {
 
-		@media (--medium-viewport) {
-			width: auto;
+		&.wp-block-image {
+			max-width: none;
+		}
+
+		&.wp-block-cover {
+
+			@media (--medium-viewport) {
+				width: auto;
+			}
 		}
 	}
 }
