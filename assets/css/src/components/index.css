@@ -11,6 +11,8 @@
 @import "./archive-image-list.css";
 @import "./widgets.css";
 @import "./tab-bar.css";
+@import "./entry-header.css";
+@import "./entry-content.css";
 @import "./entry-meta.css";
 @import "./entry-footer.css";
 @import "./post-thumbnail.css";

@@ -2,8 +2,8 @@
 	align-content: center;
 	display: flex;
 	flex-direction: column;
-	margin-top: 3rem;
-	margin-bottom: 1.5rem;
+	margin: 3rem auto 1.5rem;
+	max-width: var(--mdc-theme-max-content-width);
 
 	@media (--medium-viewport) {
 		flex-direction: row;
