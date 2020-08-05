@@ -16,3 +16,7 @@
 		}
 	}
 }
+
+.components-circular-option-picker__option {
+	background-color: currentColor;
+}
