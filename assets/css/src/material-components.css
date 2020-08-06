@@ -23,3 +23,11 @@
 .mtb-card__title {
 	color: var(--mdc-theme-on-surface, #000);
 }
+
+.mdc-card--outlined.has-post-thumbnail {
+	overflow: hidden;
+
+	& .mdc-card__link {
+		margin-top: -1px;
+	}
+}
