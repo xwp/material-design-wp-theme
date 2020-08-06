@@ -52,10 +52,15 @@ function plugin_not_installed_notice() {
 	}
 
 	// Plugin already installed and active or on the activation screen. Don't show the notice.
-	if ( empty( $action ) || (
-		'activate-plugin' === filter_input( INPUT_GET, 'tgmpa-activate', FILTER_SANITIZE_STRING ) &&
-		filter_input( INPUT_GET, 'plugin', FILTER_SANITIZE_STRING ) === $plugin
-	) ) {
+	if ( empty( $action ) ||
+		(
+			(
+				'activate-plugin' === filter_input( INPUT_GET, 'tgmpa-activate', FILTER_SANITIZE_STRING ) ||
+				'tgmpa-install-plugins' === filter_input( INPUT_GET, 'page', FILTER_SANITIZE_STRING )
+			) &&
+			filter_input( INPUT_GET, 'plugin', FILTER_SANITIZE_STRING ) === $plugin
+		)
+	) {
 		return;
 	}
 
@@ -76,8 +81,8 @@ function plugin_not_installed_notice() {
 	?>
 	<div class="notice notice-info is-dismissible  material-notice-container">
 		<img
-			src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/plugin-icon.svg' ); ?>"
-			alt="<?php esc_html_e( 'Material Theme Builder', 'material-theme' ); ?>"
+			src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/plugin-logo.png' ); ?>"
+			alt="<?php esc_html_e( 'Material Theme', 'material-theme' ); ?>"
 		/>
 
 		<div class="material-notice-container__content">
