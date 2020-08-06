@@ -136,7 +136,7 @@ function material_theme_wp_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Posts Sidebar', 'material-theme' ),
-			'id'            => 'posts-sidebar',
+			'id'            => 'single',
 			'description'   => esc_html__( 'Widgets in single posts page', 'material-theme' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',

@@ -64,8 +64,6 @@ body {
 
 	&.alignwide,
 	&.wp-block-separator.is-style-wide {
-		max-width: calc(100% - 8rem);
-		width: calc(100% - 8rem);
 		margin: auto;
 
 		@media (--medium-large-viewport) {
@@ -98,6 +96,7 @@ body {
 		}
 
 		&.wp-block-cover {
+			height: auto;
 
 			@media (--medium-viewport) {
 				width: auto;
