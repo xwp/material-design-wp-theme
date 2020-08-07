@@ -14,42 +14,52 @@
 
 get_header();
 
-$max_width  = get_theme_mod( 'material_archive_width', 'normal' );
-$class_name = sprintf( 'material-archive__%s', $max_width );
+$max_width         = get_theme_mod( 'material_archive_width', 'normal' );
+$class_name        = sprintf( 'material-archive__%s', $max_width );
+$has_sidebar_class = is_active_sidebar( 'single' ) && 'normal' === $max_width ? 'has-sidebar' : '';
+$content_span      = is_active_sidebar( 'single' ) && 'normal' === $max_width ? 'mdc-layout-grid__cell--span-8' : 'mdc-layout-grid__cell--span-12';
 ?>
 
-	<div id="primary" class="content-area <?php echo esc_attr( $class_name ); ?>">
-		<main id="main" class="site-main">
+	<main id="main" class="mdc-layout-grid <?php echo esc_attr( $has_sidebar_class ); ?> <?php echo esc_attr( $class_name ); ?>">
+		<div class="mdc-layout-grid__inner">
+			<div id="primary" class="content-area mdc-layout-grid__cell <?php echo esc_attr( $content_span ); ?>">
+				<div class="site-main">
 
-		<?php
-		if ( have_posts() ) :
+					<?php
+					if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-			?>
+						if ( is_home() && ! is_front_page() ) :
+							?>
+							<header>
+								<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+							</header>
+							<?php
+						endif;
+						?>
 
-			<div class="site-main__inner">
-				<?php get_template_part( 'template-parts/archive' ); ?>
+						<div class="site-main__inner">
+							<?php get_template_part( 'template-parts/archive' ); ?>
+						</div>
+
+						<?php
+						get_template_part( 'template-parts/page-navigation' );
+
+					else :
+
+						get_template_part( 'template-parts/content', 'none' );
+
+					endif;
+					?>
+				</div><!-- #primary -->
 			</div>
-		</div>
 
 			<?php
-			get_template_part( 'template-parts/page-navigation' );
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+			if ( 'normal' === $max_width ) {
+				get_sidebar( 'single' );
+			}
+			?>
+		</div>
+	</main><!-- #main -->
 
 	<?php get_sidebar(); ?>
 

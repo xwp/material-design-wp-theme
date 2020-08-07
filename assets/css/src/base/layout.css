@@ -28,7 +28,7 @@ body {
 	}
 }
 
-.material-archive__wide .site-main {
+.material-archive__wide #primary {
 	margin-left: calc(25% - 25vw);
 	margin-right: calc(25% - 25vw);
 }
