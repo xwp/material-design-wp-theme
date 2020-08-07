@@ -1,7 +1,11 @@
 .archive,
 .blog {
 
-	& .content-area {
+	& .has-sidebar {
+		--mdc-theme-max-content-width: 1048px;
+	}
+
+	& .mdc-layout-grid {
 		max-width: var(--mdc-theme-max-content-width);
 	}
 

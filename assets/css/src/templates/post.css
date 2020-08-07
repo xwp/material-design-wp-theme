@@ -4,20 +4,4 @@
 		padding-left: 0;
 		padding-right: 0;
 	}
-
-	&.has-sidebar {
-
-		& .mdc-layout-grid {
-			max-width: 1048px;
-
-			@media (--medium-viewport) {
-				padding-left: 2rem;
-				padding-right: 2rem;
-			}
-		}
-
-		& .wp-calendar-table {
-			width: 100%;
-		}
-	}
 }

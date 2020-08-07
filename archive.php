@@ -9,12 +9,13 @@
 
 get_header();
 
-$max_width    = get_theme_mod( 'material_archive_width', 'normal' );
-$class_name   = sprintf( 'material-archive__%s', $max_width );
-$content_span = is_active_sidebar( 'single' ) ? 'mdc-layout-grid__cell--span-8' : 'mdc-layout-grid__cell--span-12';
+$max_width         = get_theme_mod( 'material_archive_width', 'normal' );
+$class_name        = sprintf( 'material-archive__%s', $max_width );
+$has_sidebar_class = is_active_sidebar( 'single' ) ? 'has-sidebar' : '';
+$content_span      = is_active_sidebar( 'single' ) ? 'mdc-layout-grid__cell--span-8' : 'mdc-layout-grid__cell--span-12';
 ?>
 
-	<main id="main"  class="mdc-layout-grid">
+	<main id="main" class="mdc-layout-grid <?php echo esc_attr( $has_sidebar_class ); ?>">
 		<div class="mdc-layout-grid__inner">
 			<header class="page-header mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
 				<?php
