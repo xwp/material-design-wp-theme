@@ -14,7 +14,7 @@ $show_date     = get_theme_mod( 'material_archive_date', true );
 $classes       = get_theme_mod( 'material_archive_outlined', false ) ? 'mdc-card--outlined' : '';
 ?>
 
-<div id="<?php the_ID(); ?>" <?php post_class( 'mdc-card post-card' ); ?>>
+<div id="<?php the_ID(); ?>" <?php post_class( "mdc-card post-card $classes" ); ?>>
 	<a class="mdc-card__link" href="<?php the_permalink(); ?>">
 		<div class="mdc-card__primary-action post-card__primary-action" tabindex="0">
 			<?php if ( has_post_thumbnail() ) : ?>
