@@ -38,17 +38,6 @@ function register( $wp_customize ) {
 				'render_callback' => __NAMESPACE__ . '\render_header',
 			)
 		);
-
-		$wp_customize->selective_refresh->add_partial(
-			'header_width_layout',
-			array(
-				'selector'        => '.site__navigation',
-				'settings'        => [
-					Customizer\prepend_slug( 'header_width_layout' ),
-				],
-				'render_callback' => __NAMESPACE__ . '\render_header_navigation',
-			) 
-		);
 	}
 }
 
