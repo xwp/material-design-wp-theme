@@ -55,4 +55,6 @@ $has_search = get_theme_mod( 'material_header_search_display' );
 		get_template_part( 'template-parts/search', 'header' );
 		?>
 	</div>
+
+	<?php get_template_part( 'template-parts/menu', 'tabs' ); ?>
 </div>
