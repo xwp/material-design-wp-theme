@@ -10,9 +10,11 @@
 use MaterialTheme\Menu_Walker;
 
 $has_search = get_theme_mod( 'material_header_search_display' );
+$layout     = get_theme_mod( 'material_header_bar_layout', 'standard' );
+$class      = ( 'fixed' === $layout ) ? 'mdc-top-app-bar--fixed' : '';
 ?>
 
-<div class="mdc-top-app-bar top-app-bar">
+<div class="mdc-top-app-bar top-app-bar <?php echo esc_attr( $class ); ?>">
 	<div class="mdc-top-app-bar__row top-app-bar__header">
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
 			<?php if ( has_nav_menu( 'menu-2' ) ) : ?>
