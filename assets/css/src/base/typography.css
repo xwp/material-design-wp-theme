@@ -8,3 +8,4 @@
 @mixin selector-typography h4, headline4, 2.125, 2.5, 400;
 @mixin selector-typography h5, headline5, 1.5, 2, 400;
 @mixin selector-typography h6, headline6, 1.25, 2, 500;
+@mixin selector-typography p, body1;
