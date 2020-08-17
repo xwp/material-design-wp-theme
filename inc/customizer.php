@@ -232,6 +232,7 @@ function get_default_values() {
 		'archive_excerpt'         => true,
 		'archive_date'            => true,
 		'archive_outlined'        => false,
+		'header_bar_layout'       => 'standard',
 	];
 
 	$surface    = get_material_theme_builder_option( 'surface_color' );

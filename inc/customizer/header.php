@@ -78,6 +78,15 @@ function get_controls() {
 			'label' => esc_html__( 'Show search in header', 'material-theme' ),
 			'type'  => 'checkbox',
 		],
+		[
+			'id'      => Customizer\prepend_slug( 'header_bar_layout' ),
+			'label'   => esc_html__( 'Header layout', 'material-theme' ),
+			'type'    => 'radio',
+			'choices' => [
+				'standard' => esc_html__( 'Standard', 'material-theme' ),
+				'fixed'    => esc_html__( 'Fixed', 'material-theme' ),
+			],
+		],
 	];
 }
 
