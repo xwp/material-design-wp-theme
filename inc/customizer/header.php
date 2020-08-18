@@ -38,6 +38,17 @@ function register( $wp_customize ) {
 				'render_callback' => __NAMESPACE__ . '\render_header',
 			)
 		);
+
+		$wp_customize->selective_refresh->add_partial(
+			'header_bar_layout',
+			array(
+				'selector'        => '.site-navigation',
+				'settings'        => [
+					Customizer\prepend_slug( 'header_bar_layout' ),
+				],
+				'render_callback' => __NAMESPACE__ . '\render_app_bar',
+			)
+		);
 	}
 }
 
@@ -210,4 +221,13 @@ function render_header() {
  */
 function render_header_navigation() {
 	get_template_part( 'template-parts/header', 'navigation' );
+}
+
+/**
+ * Render's menu
+ *
+ * @return void
+ */
+function render_app_bar() {
+	get_template_part( 'template-parts/menu', 'header' );
 }
