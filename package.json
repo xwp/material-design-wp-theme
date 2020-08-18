@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "title": "Material Theme",
-  "description": "Material Theme",
+  "description": "Material Theme applies Material Design principles and Material Theming to your site, so you can customize its style.",
   "author": "XWP",
   "dependencies": {},
   "devDependencies": {

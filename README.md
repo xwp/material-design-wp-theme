@@ -2,7 +2,7 @@
 # Material Theme for WordPress
 
 ![Banner](wp-assets/banner-1544x500.png)
-A starter theme called Material Theme.
+Material Theme applies Material Design principles and Material Theming to your site, so you can customize its style.
 
 **Contributors:** [xwp](https://profiles.wordpress.org/xwp)  
 **Tags:** [custom-background](https://wordpress.org/plugins/tags/custom-background), [custom-logo](https://wordpress.org/plugins/tags/custom-logo), [custom-menu](https://wordpress.org/plugins/tags/custom-menu), [featured-images](https://wordpress.org/plugins/tags/featured-images), [threaded-comments](https://wordpress.org/plugins/tags/threaded-comments), [translation-ready](https://wordpress.org/plugins/tags/translation-ready)  
