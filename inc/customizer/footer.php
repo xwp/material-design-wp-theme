@@ -25,7 +25,7 @@ function setup() {
  */
 function register( $wp_customize ) {
 	$wp_customize->add_section(
-		'material_footer_section',
+		Customizer\prepend_slug( 'footer_section' ),
 		[
 			'title' => esc_html__( 'Footer', 'material-theme' ),
 		]
@@ -174,14 +174,14 @@ function get_color_controls() {
 		[
 			'id'                   => 'footer_background_color',
 			'label'                => esc_html__( 'Bakground Color', 'material-theme' ),
-			'related_text_setting' => Customizer\prepend_slug( 'footer_text_color' ),
+			'related_text_setting' => Customizer\prepare_option_name( 'footer_text_color' ),
 			'css_var'              => '--mdc-theme-footer',
 			'a11y_label'           => __( 'On Background', 'material-theme' ),
 		],
 		[
 			'id'              => 'footer_text_color',
 			'label'           => esc_html__( 'Text Color', 'material-theme' ),
-			'related_setting' => Customizer\prepend_slug( 'footer_background_color' ),
+			'related_setting' => Customizer\prepare_option_name( 'footer_background_color' ),
 			'css_var'         => '--mdc-theme-on-footer',
 			'a11y_label'      => __( 'On Background', 'material-theme' ),
 		],
@@ -204,14 +204,8 @@ function render_footer() {
  * @return array Modified controls
  */
 function register_plugin_settings( $controls ) {
-	$plugin_slug = 'material_theme_builder';
-
 	foreach ( get_color_controls() as $control ) {
-		$control_key = sprintf(
-			'%1$s[%2$s]',
-			$plugin_slug,
-			$control['id']
-		);
+		$control_key = Customizer\prepare_option_name( $control['id'] );
 
 		if ( ! in_array( $control_key, $controls ) ) {
 			$controls[] = $control_key;

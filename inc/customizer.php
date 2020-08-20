@@ -60,7 +60,7 @@ function register( $wp_customize ) {
  * @return string Settings prefix.
  */
 function get_slug() {
-	return 'material';
+	return 'material_theme_builder';
 }
 
 /**
@@ -150,7 +150,7 @@ function add_settings( $wp_customize, $settings = [] ) {
 	$slug = get_slug();
 
 	foreach ( $settings as $id => $setting ) {
-		$id = prepend_slug( $id );
+		$id = prepare_option_name( $id );
 
 		if ( is_array( $setting ) ) {
 			$defaults = [
@@ -204,8 +204,7 @@ function prepend_slug( $name ) {
  * @return mixed
  */
 function get_default( $setting ) {
-	$slug     = get_slug();
-	$setting  = str_replace( "{$slug}_", '', $setting );
+	$setting  = remove_option_prefix( $setting );
 	$defaults = get_default_values();
 
 	return isset( $defaults[ $setting ] ) ? $defaults[ $setting ] : '';
@@ -259,7 +258,7 @@ function add_controls( $wp_customize, $controls = [] ) {
 	$slug = get_slug();
 
 	foreach ( $controls as $id => $control ) {
-		$id = prepend_slug( $id );
+		$id = prepare_option_name( $id );
 
 		/**
 		 * Filters the customizer control args.
@@ -305,7 +304,7 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
 		if ( class_exists( '\MaterialThemeBuilder\Customizer\Material_Color_Palette_Control' ) ) {
 			$controls[ $control['id'] ] = new \MaterialThemeBuilder\Customizer\Material_Color_Palette_Control(
 				$wp_customize,
-				prepend_slug( $control['id'] ),
+				prepare_option_name( $control['id'] ),
 				[
 					'label'                => $control['label'],
 					'section'              => $section,
@@ -341,7 +340,7 @@ function get_frontend_css() {
 
 	foreach ( $controls as $control ) {
 		$default      = isset( $defaults[ $control['id'] ] ) ? $defaults[ $control['id'] ] : '';
-		$value        = get_theme_mod( prepend_slug( $control['id'] ), $default );
+		$value        = get_theme_mod( prepare_option_name( $control['id'] ), $default );
 		$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $value ) );
 
 		if ( '--mdc-theme-on-background' === $control['css_var'] ) {
@@ -354,7 +353,7 @@ function get_frontend_css() {
 		}
 
 		if ( '--mdc-theme-footer' === $control['css_var'] ) {
-			$selected_value = get_theme_mod( prepend_slug( $control['id'] ) );
+			$selected_value = get_theme_mod( prepare_option_name( $control['id'] ) );
 			$surface        = get_material_theme_builder_option( 'surface_color' );
 
 			if ( ! $selected_value && $surface ) {
@@ -363,7 +362,7 @@ function get_frontend_css() {
 		}
 
 		if ( '--mdc-theme-on-footer' === $control['css_var'] ) {
-			$selected_value = get_theme_mod( prepend_slug( $control['id'] ) );
+			$selected_value = get_theme_mod( prepare_option_name( $control['id'] ) );
 			$on_surface     = get_material_theme_builder_option( 'surface_text_color' );
 
 			if ( ! $selected_value && $on_surface ) {
@@ -431,4 +430,31 @@ function get_material_theme_builder_option( $name ) {
 	}
 
 	return apply_filters( 'get_material_theme_builder_option', $value, $name );
+}
+
+/**
+ * Prepend the slug name if it does not exist.
+ *
+ * @param string $name The name of the setting/control.
+ *
+ * @return string
+ */
+function prepare_option_name( $name ) {
+	$slug = get_slug();
+
+	return false === strpos( $name, "{$slug}[" ) ? "{$slug}[{$name}]" : $name;
+}
+
+/**
+ * Prepend the slug name if it does not exist.
+ *
+ * @param string $name The name of the setting/control.
+ *
+ * @return string
+ */
+function remove_option_prefix( $name ) {
+	if ( preg_match( '/\[([^\]]+)\]/', $name, $matches ) ) {
+		return $matches[1];
+	}
+	return $name;
 }
