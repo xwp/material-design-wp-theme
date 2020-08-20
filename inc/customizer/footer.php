@@ -58,6 +58,9 @@ function register( $wp_customize ) {
 			)
 		);
 	}
+
+	// add_filter( 'material_theme_builder__customizer_control_list', __NAMESPACE__ . '\register_plugin_settings' );.
+	add_filter( 'material_theme_builder_design_styles', __NAMESPACE__ . '\update_design_styles' );
 }
 
 /**
@@ -193,3 +196,40 @@ function get_color_controls() {
 function render_footer() {
 	get_template_part( 'template-parts/footer' );
 }
+
+/**
+ * Add footer options to controls array
+ *
+ * @param  mixed $controls Existing controls.
+ * @return array Modified controls
+ */
+function register_plugin_settings( $controls ) {
+	return $controls;
+}
+
+/**
+ * Add defaults to plugin's design styles
+ *
+ * @param  array $design_styles Existing styles.
+ * @return array Modified styles
+ */
+function update_design_styles( $design_styles ) {
+	$defaults = [
+		'footer_background_color' => '#ffffff',
+		'footer_text_color'       => '#000000',
+	];
+
+	$new_design_styles = [];
+
+	foreach ( $design_styles as $key => $style ) {
+		$style = array_merge(
+			$style,
+			$defaults
+		);
+
+		$new_design_styles[ $key ] = $style;
+	}
+
+	return $new_design_styles;
+}
+
