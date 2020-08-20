@@ -59,7 +59,7 @@ function register( $wp_customize ) {
 		);
 	}
 
-	// add_filter( 'material_theme_builder__customizer_control_list', __NAMESPACE__ . '\register_plugin_settings' );.
+	add_filter( 'material_theme_builder__customizer_control_list', __NAMESPACE__ . '\register_plugin_settings' );
 	add_filter( 'material_theme_builder_design_styles', __NAMESPACE__ . '\update_design_styles' );
 }
 
@@ -204,6 +204,20 @@ function render_footer() {
  * @return array Modified controls
  */
 function register_plugin_settings( $controls ) {
+	$plugin_slug = 'material_theme_builder';
+
+	foreach ( get_color_controls() as $control ) {
+		$control_key = sprintf(
+			'%1$s[%2$s]',
+			$plugin_slug,
+			$control['id']
+		);
+
+		if ( ! in_array( $control_key, $controls ) ) {
+			$controls[] = $control_key;
+		}
+	}
+
 	return $controls;
 }
 
