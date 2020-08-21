@@ -58,12 +58,36 @@ function register( $wp_customize ) {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function add_sections( $wp_customize ) {
-	$wp_customize->add_section(
-		Customizer\prepend_slug( 'header_section' ),
-		[
-			'title' => esc_html__( 'Header', 'material-theme' ),
-		]
-	);
+	$id = Customizer\prepend_slug( 'header_section' );
+	$slug = 'material_theme_builder';
+	$label = __( 'Header', 'material-theme' );
+	$args = [
+		'priority'   => 10,
+		'capability' => 'edit_theme_options',
+		'title'      => esc_html( $label ),
+		'panel'      => $slug,
+		'type'       => 'collapse',
+	];
+
+	/**
+	 * Filters the customizer section args.
+	 *
+	 * This allows other plugins/themes to change the customizer section args.
+	 *
+	 * @param array  $args Array of section args.
+	 * @param string $id   ID of the section.
+	 */
+	$section = apply_filters( $slug . '_customizer_section_args', $args, $id );
+
+	if ( is_array( $section ) ) {
+		$wp_customize->add_section(
+			$id,
+			$section
+		);
+	} elseif ( $section instanceof \WP_Customize_Section ) {
+		$section->id = $id;
+		$wp_customize->add_section( $section );
+	}
 }
 
 /**

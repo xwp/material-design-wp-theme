@@ -24,12 +24,37 @@ function setup() {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function register( $wp_customize ) {
-	$wp_customize->add_section(
-		'material_footer_section',
-		[
-			'title' => esc_html__( 'Footer', 'material-theme' ),
-		]
-	);
+
+	$id = Customizer\prepend_slug( 'material_footer_section' );
+	$slug = 'material_theme_builder';
+	$label = __( 'Footer', 'material-theme' );
+	$args = [
+		'priority'   => 10,
+		'capability' => 'edit_theme_options',
+		'title'      => esc_html( $label ),
+		'panel'      => $slug,
+		'type'       => 'collapse',
+	];
+
+	/**
+	 * Filters the customizer section args.
+	 *
+	 * This allows other plugins/themes to change the customizer section args.
+	 *
+	 * @param array  $args Array of section args.
+	 * @param string $id   ID of the section.
+	 */
+	$section = apply_filters( $slug . '_customizer_section_args', $args, $id );
+
+	if ( is_array( $section ) ) {
+		$wp_customize->add_section(
+			$id,
+			$section
+		);
+	} elseif ( $section instanceof \WP_Customize_Section ) {
+		$section->id = $id;
+		$wp_customize->add_section( $section );
+	}
 
 	add_settings( $wp_customize );
 

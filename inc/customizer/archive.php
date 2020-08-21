@@ -23,12 +23,17 @@ function setup() {
  * @return void
  */
 function register( $wp_customize ) {
-	$wp_customize->add_section(
-		Customizer\prepend_slug( 'archive' ),
-		[
-			'title' => __( 'Layout Settings', 'material-theme' ),
-		]
-	);
+
+	$id = Customizer\prepend_slug( 'archive' );
+	$slug = 'material_theme_builder';
+	$label = __( 'Post Settings', 'material-theme' );
+	$args = [
+		'priority'   => 10,
+		'capability' => 'edit_theme_options',
+		'title'      => esc_html( $label ),
+		'panel'      => $slug,
+		'type'       => 'collapse',
+	];
 
 	add_settings( $wp_customize );
 
@@ -48,6 +53,26 @@ function register( $wp_customize ) {
 			],
 		]
 	);
+
+	/**
+	 * Filters the customizer section args.
+	 *
+	 * This allows other plugins/themes to change the customizer section args.
+	 *
+	 * @param array  $args Array of section args.
+	 * @param string $id   ID of the section.
+	 */
+	$section = apply_filters( $slug . '_customizer_section_args', $args, $id );
+
+	if ( is_array( $section ) ) {
+		$wp_customize->add_section(
+			$id,
+			$section
+		);
+	} elseif ( $section instanceof \WP_Customize_Section ) {
+		$section->id = $id;
+		$wp_customize->add_section( $section );
+	}
 }
 
 /**
@@ -59,7 +84,7 @@ function get_controls() {
 	return [
 		[
 			'id'      => Customizer\prepend_slug( 'archive_layout' ),
-			'label'   => esc_html__( 'Choose archive layout', 'material-theme' ),
+			'label'   => esc_html__( 'Post layout and display options', 'material-theme' ),
 			'type'    => 'radio',
 			'choices' => [
 				'card'  => esc_html__( 'Card', 'material-theme' ),
@@ -68,12 +93,17 @@ function get_controls() {
 		],
 		[
 			'id'      => Customizer\prepend_slug( 'archive_width' ),
-			'label'   => esc_html__( 'Width', 'material-theme' ),
+			'label'   => esc_html__( 'Layout Width', 'material-theme' ),
 			'type'    => 'radio',
 			'choices' => [
 				'wide'   => esc_html__( 'Wide', 'material-theme' ),
 				'normal' => esc_html__( 'Normal', 'material-theme' ),
 			],
+		],
+		[
+			'id'      => Customizer\prepend_slug( 'archive_card_options' ),
+			'label'   => esc_html__( 'Card display options', 'material-theme' ),	
+			'type'    => 'none',	
 		],
 		[
 			'id'              => Customizer\prepend_slug( 'archive_comments' ),
@@ -104,6 +134,16 @@ function get_controls() {
 			'label'           => esc_html__( 'Outlined', 'material-theme' ),
 			'type'            => 'checkbox',
 			'active_callback' => __NAMESPACE__ . '\is_card_layout',
+		],
+		[
+			'id'      => Customizer\prepend_slug( 'comments_section' ),
+			'label'   => esc_html__( 'Comment fields', 'material-theme' ),
+			'type'    => 'radio',
+			'default' => 'outlined',
+			'choices' => [
+				'outlined' => esc_html__( 'Outlined', 'material-theme' ),
+				'filled'   => esc_html__( 'Filled', 'material-theme' ),
+			],
 		],
 	];
 }

@@ -32,6 +32,16 @@ function setup() {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function register( $wp_customize ) {
+	$wp_customize->add_panel(
+		'material_theme_builder',
+		[
+			'priority'    => 10,
+			'capability'  => 'edit_theme_options',
+			'title'       => esc_html__( 'Material Theme Options', 'material-theme-builder' ),
+			'description' => esc_html__( 'Change the color, shape, typography, and icons below to customize your theme style. Navigate to the Material Library to see your custom styles applied across Material Components..', 'material-theme-builder' ),
+		]
+	);
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
