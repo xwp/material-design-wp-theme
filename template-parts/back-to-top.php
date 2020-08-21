@@ -5,7 +5,8 @@
  * @package MaterialTheme
  */
 
-$is_hidden = get_theme_mod( 'material_hide_back_to_top' );
+$material_mods = get_theme_mod( 'material_theme_builder' );
+$is_hidden     = ( ! empty( $material_mods['hide_back_to_top'] ) ) ? $material_mods['hide_back_to_top'] : null;
 
 if ( ! empty( $is_hidden ) ) {
 	return;

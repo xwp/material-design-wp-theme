@@ -42,7 +42,7 @@ function register( $wp_customize ) {
 				'selector'        => '.site-footer__text',
 				'render_callback' => __NAMESPACE__ . '\render_text',
 				'settings'        => [
-					'material_footer_text',
+					Customizer\prepare_option_name( 'footer_text' ),
 				],
 			)
 		);
@@ -53,7 +53,7 @@ function register( $wp_customize ) {
 				'selector'        => '.back-to-top',
 				'render_callback' => __NAMESPACE__ . '\render_back_to_top',
 				'settings'        => [
-					'material_hide_back_to_top',
+					Customizer\prepare_option_name( 'hide_back_to_top' ),
 				],
 			)
 		);
@@ -67,7 +67,8 @@ function register( $wp_customize ) {
  * Render footer copyright text
  */
 function render_text() {
-	$footer_text = get_theme_mod( 'material_footer_text', '&copy; 2020 Material.io' );
+	$material_mods = get_theme_mod( Customizer\get_slug() );
+	$footer_text   = ( ! empty( $material_mods['footer_text'] ) ) ? $material_mods['footer_text'] : '&copy; 2020 Material.io';
 
 	echo esc_html( $footer_text );
 }
