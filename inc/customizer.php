@@ -330,9 +330,10 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
  * Get custom frontend CSS based on the customizer theme settings.
  */
 function get_frontend_css() {
-	$color_vars = [];
-	$controls   = array_merge( Content\get_color_controls(), Footer\get_color_controls() );
-	$defaults   = get_default_values();
+	$color_vars    = [];
+	$controls      = array_merge( Content\get_color_controls(), Footer\get_color_controls() );
+	$defaults      = get_default_values();
+	$material_mods = get_theme_mod( get_slug() );
 
 	if ( ! class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
 		$controls = array_merge( $controls, Header\get_color_controls() );
@@ -340,7 +341,7 @@ function get_frontend_css() {
 
 	foreach ( $controls as $control ) {
 		$default      = isset( $defaults[ $control['id'] ] ) ? $defaults[ $control['id'] ] : '';
-		$value        = get_theme_mod( prepare_option_name( $control['id'] ), $default );
+		$value        = ! empty( $material_mods[ $control['id'] ] ) ? $material_mods[ $control['id'] ] : $default;
 		$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $value ) );
 
 		if ( '--mdc-theme-on-background' === $control['css_var'] ) {
@@ -353,19 +354,17 @@ function get_frontend_css() {
 		}
 
 		if ( '--mdc-theme-footer' === $control['css_var'] ) {
-			$selected_value = get_theme_mod( prepare_option_name( $control['id'] ) );
-			$surface        = get_material_theme_builder_option( 'surface_color' );
+			$surface = get_material_theme_builder_option( 'surface_color' );
 
-			if ( ! $selected_value && $surface ) {
+			if ( empty( $material_mods['footer_background_color'] ) && $surface ) {
 				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $surface ) );
 			}
 		}
 
 		if ( '--mdc-theme-on-footer' === $control['css_var'] ) {
-			$selected_value = get_theme_mod( prepare_option_name( $control['id'] ) );
-			$on_surface     = get_material_theme_builder_option( 'surface_text_color' );
+			$on_surface = get_material_theme_builder_option( 'surface_text_color' );
 
-			if ( ! $selected_value && $on_surface ) {
+			if ( empty( $material_mods['footer_text_color'] ) && $on_surface ) {
 				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $on_surface ) );
 			}
 		}
