@@ -174,7 +174,7 @@ function get_color_controls() {
 	return [
 		[
 			'id'                   => 'footer_background_color',
-			'label'                => esc_html__( 'Bakground Color', 'material-theme' ),
+			'label'                => esc_html__( 'Background Color', 'material-theme' ),
 			'related_text_setting' => Customizer\prepare_option_name( 'footer_text_color' ),
 			'css_var'              => '--mdc-theme-footer',
 			'a11y_label'           => __( 'On Background', 'material-theme' ),
