@@ -156,7 +156,7 @@ function get_color_controls() {
 	return [
 		[
 			'id'                   => 'header_background_color',
-			'label'                => esc_html__( 'Bakground Color', 'material-theme' ),
+			'label'                => esc_html__( 'Background Color', 'material-theme' ),
 			'related_text_setting' => Customizer\prepend_slug( 'header_text_color' ),
 			'css_var'              => '--mdc-theme-header',
 		],
