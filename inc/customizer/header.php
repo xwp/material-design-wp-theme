@@ -40,14 +40,14 @@ function register( $wp_customize ) {
 		);
 
 		$wp_customize->selective_refresh->add_partial(
-			'header_width_layout',
+			'header_bar_layout',
 			array(
-				'selector'        => '.site__navigation',
+				'selector'        => '.site-navigation',
 				'settings'        => [
-					Customizer\prepend_slug( 'header_width_layout' ),
+					Customizer\prepend_slug( 'header_bar_layout' ),
 				],
-				'render_callback' => __NAMESPACE__ . '\render_header_navigation',
-			) 
+				'render_callback' => __NAMESPACE__ . '\render_app_bar',
+			)
 		);
 	}
 }
@@ -77,6 +77,15 @@ function get_controls() {
 			'id'    => Customizer\prepend_slug( 'header_search_display' ),
 			'label' => esc_html__( 'Show search in header', 'material-theme' ),
 			'type'  => 'checkbox',
+		],
+		[
+			'id'      => Customizer\prepend_slug( 'header_bar_layout' ),
+			'label'   => esc_html__( 'Header layout', 'material-theme' ),
+			'type'    => 'radio',
+			'choices' => [
+				'standard' => esc_html__( 'Standard', 'material-theme' ),
+				'fixed'    => esc_html__( 'Fixed', 'material-theme' ),
+			],
 		],
 	];
 }
@@ -212,4 +221,13 @@ function render_header() {
  */
 function render_header_navigation() {
 	get_template_part( 'template-parts/header', 'navigation' );
+}
+
+/**
+ * Render's menu
+ *
+ * @return void
+ */
+function render_app_bar() {
+	get_template_part( 'template-parts/menu', 'header' );
 }

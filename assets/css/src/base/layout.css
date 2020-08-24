@@ -20,11 +20,15 @@ body {
 	padding-right: 1rem;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 5rem;
+	margin-top: 4rem;
 
 	@media (--medium-viewport) {
 		padding-left: 0;
 		padding-right: 0;
+	}
+
+	.-has-tab-bar + .site-content & {
+		margin-top: 12rem;
 	}
 }
 

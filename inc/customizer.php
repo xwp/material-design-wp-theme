@@ -225,13 +225,13 @@ function get_default_values() {
 		'footer_background_color' => '#ffffff',
 		'footer_text_color'       => '#000000',
 		'archive_layout'          => 'card',
-		'header_width_layout'     => 'boxed',
 		'archive_width'           => 'normal',
 		'archive_comments'        => true,
 		'archive_author'          => true,
 		'archive_excerpt'         => true,
 		'archive_date'            => true,
 		'archive_outlined'        => false,
+		'header_bar_layout'       => 'standard',
 	];
 
 	$surface    = get_material_theme_builder_option( 'surface_color' );
