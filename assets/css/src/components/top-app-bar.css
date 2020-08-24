@@ -1,6 +1,7 @@
 .top-app-bar {
 	background-color: var(--mdc-theme-header, var(--mdc-theme-primary, #6200ee));
 	color: var(--mdc-theme-on-header, var(--mdc-theme-on-primary, #fff));
+	display: block; /* Ensure tabs container gets correct width */
 
 	& .mdc-top-app-bar__action-item,
 	& .mdc-top-app-bar__navigation-icon {

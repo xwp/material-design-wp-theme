@@ -8,6 +8,13 @@ export const tabBarInit = () => {
 	}
 
 	for ( const tabBarElement of tabBarElements ) {
-		new MDCTabBar( tabBarElement );
+		const tabBar = new MDCTabBar( tabBarElement );
+		const activeTab = tabBarElement.querySelector( '.mdc-tab--active' );
+
+		if ( activeTab ) {
+			tabBar.foundation_.scrollIntoView(
+				tabBar.foundation_.adapter_.getIndexOfTabById( activeTab.id )
+			);
+		}
 	}
 };
