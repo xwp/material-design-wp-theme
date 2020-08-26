@@ -181,8 +181,8 @@ require get_template_directory() . '/inc/admin.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/customizer/colors.php';
 require get_template_directory() . '/inc/customizer/header.php';
-require get_template_directory() . '/inc/customizer/content.php';
 require get_template_directory() . '/inc/customizer/footer.php';
 require get_template_directory() . '/inc/customizer/archive.php';
 require get_template_directory() . '/inc/customizer/menu.php';
@@ -221,9 +221,8 @@ require get_template_directory() . '/inc/widgets.php';
 
 MaterialTheme\Admin\setup();
 MaterialTheme\Customizer\setup();
+MaterialTheme\Customizer\Colors\setup();
 MaterialTheme\Customizer\Header\setup();
-MaterialTheme\Customizer\Content\setup();
-MaterialTheme\Customizer\Footer\setup();
 MaterialTheme\Customizer\Archive\setup();
 MaterialTheme\Customizer\Menu\setup();
 MaterialTheme\Widgets\setup();

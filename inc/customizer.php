@@ -7,9 +7,7 @@
 
 namespace MaterialTheme\Customizer;
 
-use MaterialTheme\Customizer\Content;
-use MaterialTheme\Customizer\Header;
-use MaterialTheme\Customizer\Footer;
+use MaterialTheme\Customizer\Colors;
 
 /**
  * Attach hooks.
@@ -107,11 +105,11 @@ function preview_scripts() {
 		true
 	);
 
-	$controls = array_merge( Content\get_color_controls(), Footer\get_color_controls() );
 	$css_vars = [];
+	$controls = [];
 
 	if ( ! class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
-		$controls = array_merge( $controls, Header\get_color_controls() );
+		$controls = array_merge( $controls, Colors\get_color_controls() );
 	}
 
 	foreach ( $controls as $control ) {
@@ -342,11 +340,10 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
  */
 function get_frontend_css() {
 	$color_vars = [];
-	$controls   = array_merge( Content\get_color_controls(), Footer\get_color_controls() );
 	$defaults   = get_default_values();
 
 	if ( ! class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
-		$controls = array_merge( $controls, Header\get_color_controls() );
+		$controls = array_merge( $controls, Colors\get_color_controls() );
 	}
 
 	foreach ( $controls as $control ) {

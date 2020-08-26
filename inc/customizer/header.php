@@ -49,6 +49,28 @@ function register( $wp_customize ) {
 				'render_callback' => __NAMESPACE__ . '\render_header_navigation',
 			) 
 		);
+
+		$wp_customize->selective_refresh->add_partial(
+			'footer_text',
+			array(
+				'selector'        => '.site-footer__text',
+				'render_callback' => __NAMESPACE__ . '\render_text',
+				'settings'        => [
+					'material_footer_text',
+				],
+			)
+		);
+
+		$wp_customize->selective_refresh->add_partial(
+			'back_to_top',
+			array(
+				'selector'        => '.back-to-top',
+				'render_callback' => __NAMESPACE__ . '\render_back_to_top',
+				'settings'        => [
+					'material_hide_back_to_top',
+				],
+			)
+		);
 	}
 }
 
@@ -60,7 +82,7 @@ function register( $wp_customize ) {
 function add_sections( $wp_customize ) {
 	$id = Customizer\prepend_slug( 'header_section' );
 	$slug = 'material_theme_builder';
-	$label = __( 'Header', 'material-theme' );
+	$label = __( 'Header and Footer', 'material-theme' );
 	$args = [
 		'priority'   => 10,
 		'capability' => 'edit_theme_options',
@@ -101,6 +123,16 @@ function get_controls() {
 			'id'    => Customizer\prepend_slug( 'header_search_display' ),
 			'label' => esc_html__( 'Show search in header', 'material-theme' ),
 			'type'  => 'checkbox',
+		],	
+		[
+			'id'    => 'hide_back_to_top',
+			'label' => esc_html__( 'Hide back to top button', 'material-theme' ),
+			'type'  => 'checkbox',
+		],
+		[
+			'id'    => 'footer_text',
+			'label' => esc_html__( 'Footer text', 'material-theme' ),
+			'type'  => 'text',
 		],
 	];
 }
@@ -123,7 +155,6 @@ function add_settings( $wp_customize ) {
 
 	Customizer\add_settings( $wp_customize, $settings );
 	add_controls( $wp_customize );
-	add_color_controls( $wp_customize );
 }
 
 /**
@@ -148,79 +179,6 @@ function add_controls( $wp_customize ) {
 }
 
 /**
- * Define color palette controls.
- *
- * @return array Color palette values.
- */
-function get_color_controls() {
-	return [
-		[
-			'id'                   => 'header_background_color',
-			'label'                => esc_html__( 'Background Color', 'material-theme' ),
-			'related_text_setting' => Customizer\prepend_slug( 'header_text_color' ),
-			'css_var'              => '--mdc-theme-header',
-		],
-		[
-			'id'                   => 'header_text_color',
-			'label'                => esc_html__( 'Text Color', 'material-theme' ),
-			'related_text_setting' => Customizer\prepend_slug( 'header_background_color' ),
-			'css_var'              => '--mdc-theme-on-header',
-		],
-	];
-}
-
-/**
- * Add color palette settings and controls.
- *
- * @param  mixed $wp_customize Rheme Customizer object.
- * @return void
- */
-function add_color_controls( $wp_customize ) {
-	/**
-	 * Generate list of all the settings in the colors section.
-	 */
-	$settings = [];
-
-	foreach ( get_color_controls() as $control ) {
-		$settings[ $control['id'] ] = [
-			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
-		];
-	}
-
-	Customizer\add_settings( $wp_customize, $settings );
-
-	maybe_use_color_palette_control( $wp_customize );
-}
-
-/**
- * Decide which color palette control to use
- *
- * @param  mixed $wp_customize Theme Customizer object.
- * @return void
- */
-function maybe_use_color_palette_control( $wp_customize ) {
-	/**
-	* Generate list of all the controls in the colors section.
-	 */
-	$controls = [];
-
-	if ( ! class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
-		foreach ( get_color_controls() as $control ) {
-			foreach ( get_color_controls() as $control ) {
-				$controls[ $control['id'] ] = [
-					'label'   => $control['label'],
-					'section' => Customizer\prepend_slug( 'header_section' ),
-					'type'    => 'color',
-				];
-			}
-		}
-	}
-
-	Customizer\add_controls( $wp_customize, $controls );
-}
-
-/**
  * Reload header
  *
  * @return void
@@ -230,10 +188,37 @@ function render_header() {
 }
 
 /**
+ * Reload footer
+ *
+ * @return void
+ */
+function render_footer() {
+	get_template_part( 'template-parts/footer' );
+}
+
+/**
  * Render's top app bar and tab bar
  *
  * @return void
  */
 function render_header_navigation() {
 	get_template_part( 'template-parts/header', 'navigation' );
+}
+
+/**
+ * Render footer copyright text
+ */
+function render_text() {
+	$footer_text = get_theme_mod( 'material_footer_text', '&copy; 2020 Material.io' );
+
+	echo esc_html( $footer_text );
+}
+
+/**
+ * Reload back to top
+ *
+ * @return void
+ */
+function render_back_to_top() {
+	get_template_part( 'template-parts/back-to-top' );
 }
