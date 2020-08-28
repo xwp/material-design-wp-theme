@@ -183,7 +183,6 @@ require get_template_directory() . '/inc/admin.php';
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/customizer/colors.php';
 require get_template_directory() . '/inc/customizer/header.php';
-require get_template_directory() . '/inc/customizer/footer.php';
 require get_template_directory() . '/inc/customizer/archive.php';
 require get_template_directory() . '/inc/customizer/menu.php';
 
