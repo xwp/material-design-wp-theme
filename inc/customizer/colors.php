@@ -25,10 +25,10 @@ function setup() {
  */
 function register( $wp_customize ) {
 
-	$id = Customizer\prepend_slug( 'material_colors_section' );
-	$slug = 'material_theme_builder';
+	$id    = Customizer\prepend_slug( 'material_colors_section' );
+	$slug  = 'material_theme_builder';
 	$label = __( 'Colors', 'material-theme' );
-	$args = [
+	$args  = [
 		'priority'   => 10,
 		'capability' => 'edit_theme_options',
 		'title'      => esc_html( $label ),
@@ -141,9 +141,7 @@ function add_settings( $wp_customize ) {
  * @return array
  */
 function get_controls() {
-	return [
-	
-	];
+	return [];
 }
 
 /**
@@ -185,80 +183,80 @@ function add_color_controls( $wp_customize ) {
 function get_color_controls() {
 	return [
 		[
-			'id'              => 'primary_color',
-			'label'           => esc_html__( 'Primary Color', 'material-theme' ),
-			'css_var'         => '--mdc-theme-primary',
-			'a11y_label'      => __( 'Primary', 'material-theme' ),
+			'id'         => 'primary_color',
+			'label'      => esc_html__( 'Primary Color', 'material-theme' ),
+			'css_var'    => '--mdc-theme-primary',
+			'a11y_label' => __( 'Primary', 'material-theme' ),
 		],
 		[
-			'id'              => 'on_primary_color_bg',
-			'label'           => esc_html__( 'Primary Background Color', 'material-theme' ),
-			'css_var'         => '--mdc-theme-primary-bg',
-			'a11y_label'      => __( 'On Primary', 'material-theme' ),
+			'id'         => 'on_primary_color_bg',
+			'label'      => esc_html__( 'Primary Background Color', 'material-theme' ),
+			'css_var'    => '--mdc-theme-primary-bg',
+			'a11y_label' => __( 'On Primary', 'material-theme' ),
 		],
 		[
-			'id'              => 'on_primary_color',
-			'label'           => esc_html__( 'On Primary Color', 'material-theme' ),
-			'css_var'         => '--mdc-theme-on-primary',
-			'a11y_label'      => __( 'On Primary', 'material-theme' ),
+			'id'         => 'on_primary_color',
+			'label'      => esc_html__( 'On Primary Color', 'material-theme' ),
+			'css_var'    => '--mdc-theme-on-primary',
+			'a11y_label' => __( 'On Primary', 'material-theme' ),
 		],
 		[
-			'id'              => 'secondary_color',
-			'label'           => esc_html__( 'Secondary Color', 'material-theme' ),
-			'css_var'         => '--mdc-theme-secondary',
-			'a11y_label'      => __( 'Secondary', 'material-theme' ),
+			'id'         => 'secondary_color',
+			'label'      => esc_html__( 'Secondary Color', 'material-theme' ),
+			'css_var'    => '--mdc-theme-secondary',
+			'a11y_label' => __( 'Secondary', 'material-theme' ),
 		],
 		[
-			'id'              => 'on_secondary_color_bg',
-			'label'           => esc_html__( 'Secondary Background Color', 'material-theme' ),
-			'css_var'         => '--mdc-theme-secondary-bg',
-			'a11y_label'      => __( 'Secondary Background Color', 'material-theme' ),
+			'id'         => 'on_secondary_color_bg',
+			'label'      => esc_html__( 'Secondary Background Color', 'material-theme' ),
+			'css_var'    => '--mdc-theme-secondary-bg',
+			'a11y_label' => __( 'Secondary Background Color', 'material-theme' ),
 		],
 		[
-			'id'              => 'on_secondary_color',
-			'label'           => esc_html__( 'On Secondary Color', 'material-theme' ),
-			'css_var'         => '--mdc-theme-on-secondary',
-			'a11y_label'      => __( 'On Secondary', 'material-theme' ),
+			'id'         => 'on_secondary_color',
+			'label'      => esc_html__( 'On Secondary Color', 'material-theme' ),
+			'css_var'    => '--mdc-theme-on-secondary',
+			'a11y_label' => __( 'On Secondary', 'material-theme' ),
 		],
 		[
-			'id'              => 'surface_color',
-			'label'           => esc_html__( 'Surface Color', 'material-theme' ),
-			'css_var'         => '--mdc-theme-surface',
-			'a11y_label'      => __( 'Surface', 'material-theme' ),
+			'id'         => 'surface_color',
+			'label'      => esc_html__( 'Surface Color', 'material-theme' ),
+			'css_var'    => '--mdc-theme-surface',
+			'a11y_label' => __( 'Surface', 'material-theme' ),
 		],
 		[
-			'id'              => 'on_surface_color',
-			'label'           => esc_html__( 'On Surface Color', 'material-theme' ),
-			'css_var'         => '--mdc-theme-on-surface',
-			'a11y_label'      => __( 'On Surface', 'material-theme' ),
+			'id'         => 'on_surface_color',
+			'label'      => esc_html__( 'On Surface Color', 'material-theme' ),
+			'css_var'    => '--mdc-theme-on-surface',
+			'a11y_label' => __( 'On Surface', 'material-theme' ),
 		],
 		[
-			'id'              => 'background_color',
-			'label'           => esc_html__( 'Background Color', 'material-theme' ),
-			'css_var'         => '--mdc-theme-background',
-			'a11y_label'      => __( 'On Background', 'material-theme' ),
+			'id'         => 'background_color',
+			'label'      => esc_html__( 'Background Color', 'material-theme' ),
+			'css_var'    => '--mdc-theme-background',
+			'a11y_label' => __( 'On Background', 'material-theme' ),
 		],
 		[
-			'id'              => 'header_color',
-			'label'           => esc_html__( 'Header Color', 'material-theme' ),
-			'css_var'         => '--mdc-theme-header',
+			'id'      => 'header_color',
+			'label'   => esc_html__( 'Header Color', 'material-theme' ),
+			'css_var' => '--mdc-theme-header',
 		],
 		[
-			'id'              => 'on-header_color',
-			'label'           => esc_html__( 'On Header Color', 'material-theme' ),
-			'css_var'         => '--mdc-theme-on-header',
+			'id'      => 'on-header_color',
+			'label'   => esc_html__( 'On Header Color', 'material-theme' ),
+			'css_var' => '--mdc-theme-on-header',
 		],
 		[
-			'id'              => 'footer_color',
-			'label'           => esc_html__( 'Footer Color', 'material-theme' ),
-			'css_var'         => '--mdc-theme-footer',
-			'a11y_label'      => __( 'On Background', 'material-theme' ),
+			'id'         => 'footer_color',
+			'label'      => esc_html__( 'Footer Color', 'material-theme' ),
+			'css_var'    => '--mdc-theme-footer',
+			'a11y_label' => __( 'On Background', 'material-theme' ),
 		],
 		[
-			'id'              => 'on-footer_color',
-			'label'           => esc_html__( 'On Footer Color', 'material-theme' ),
-			'css_var'         => '--mdc-theme-on-footer',
-			'a11y_label'      => __( 'On Background', 'material-theme' ),
+			'id'         => 'on-footer_color',
+			'label'      => esc_html__( 'On Footer Color', 'material-theme' ),
+			'css_var'    => '--mdc-theme-on-footer',
+			'a11y_label' => __( 'On Background', 'material-theme' ),
 		],
 	];
 }
