@@ -79,7 +79,7 @@ function add_sections( $wp_customize ) {
 
 	$label = __( 'Layout Settings', 'material-theme' );
 	$args = [
-		'priority'   => 10,
+		'priority'   => 50,
 		'capability' => 'edit_theme_options',
 		'title'      => esc_html( $label ),
 		'panel'      => $slug,

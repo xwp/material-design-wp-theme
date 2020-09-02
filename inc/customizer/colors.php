@@ -29,7 +29,7 @@ function register( $wp_customize ) {
 	$slug  = 'material_theme_builder';
 	$label = __( 'Colors', 'material-theme' );
 	$args  = [
-		'priority'   => 10,
+		'priority'   => 50,
 		'capability' => 'edit_theme_options',
 		'title'      => esc_html( $label ),
 		'panel'      => $slug,

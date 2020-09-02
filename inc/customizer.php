@@ -242,9 +242,14 @@ function get_default_values() {
 		'archive_outlined'        => false,
 	];
 
+	$primary    = get_material_theme_builder_option( 'primary_color' );
 	$surface    = get_material_theme_builder_option( 'surface_color' );
 	$on_surface = get_material_theme_builder_option( 'surface_text_color' );
 
+	if ( $primary ) {
+		$defaults['header_background_color'] = $primary;
+	}
+	
 	if ( $surface ) {
 		$defaults['footer_background_color'] = $surface;
 	}
@@ -351,7 +356,24 @@ function get_frontend_css() {
 		$value        = get_theme_mod( prepend_slug( $control['id'] ), $default );
 		$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $value ) );
 
-		if ( '--mdc-theme-on-background' === $control['css_var'] ) {
+		if ( '--mdc-theme-primary' === $control['css_var'] ) {
+			$rgb = hex_to_rgb( $value );
+			if ( ! empty( $rgb ) ) {
+				$rgb = implode( ',', $rgb );
+				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
+			}
+		}
+
+		if ( '--mdc-theme-on-primary' === $control['css_var'] ) {
+			$rgb = hex_to_rgb( $value );
+			if ( ! empty( $rgb ) ) {
+				$rgb = implode( ',', $rgb );
+				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
+			}
+
+		}
+
+		if ( '--mdc-theme-secondary' === $control['css_var'] ) {
 			$rgb = hex_to_rgb( $value );
 			if ( ! empty( $rgb ) ) {
 				$rgb = implode( ',', $rgb );
@@ -360,22 +382,93 @@ function get_frontend_css() {
 			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
 		}
 
-		if ( '--mdc-theme-footer' === $control['css_var'] ) {
-			$selected_value = get_theme_mod( prepend_slug( $control['id'] ) );
-			$surface        = get_material_theme_builder_option( 'surface_color' );
+		if ( '--mdc-theme-on-secondary' === $control['css_var'] ) {
+			$rgb = hex_to_rgb( $value );
+			if ( ! empty( $rgb ) ) {
+				$rgb = implode( ',', $rgb );
+			}
 
-			if ( ! $selected_value && $surface ) {
-				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $surface ) );
+			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
+		}
+
+		if ( '--mdc-theme-primary-bg' === $control['css_var'] ) {
+			$rgb = hex_to_rgb( $value );
+			if ( ! empty( $rgb ) ) {
+				$rgb = implode( ',', $rgb );
+			}
+
+			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
+		}
+
+		if ( '--mdc-theme-secondary-bg' === $control['css_var'] ) {
+			$rgb = hex_to_rgb( $value );
+			if ( ! empty( $rgb ) ) {
+				$rgb = implode( ',', $rgb );
+			}
+
+			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
+		}
+
+		if ( '--mdc-theme-surface' === $control['css_var'] ) {
+			$rgb = hex_to_rgb( $value );
+			if ( ! empty( $rgb ) ) {
+				$rgb = implode( ',', $rgb );
+			}
+
+			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
+		}
+
+		if ( '--mdc-theme-on-surface' === $control['css_var'] ) {
+			$rgb = hex_to_rgb( $value );
+			if ( ! empty( $rgb ) ) {
+				$rgb = implode( ',', $rgb );
+			}
+
+			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
+		}
+
+		if ( '--mdc-theme-header' === $control['css_var'] ) {
+			$rgb = hex_to_rgb( $value );
+			if ( ! empty( $rgb ) ) {
+				$rgb = implode( ',', $rgb );
+				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
+			}
+
+		}
+
+		if ( '--mdc-theme-on-header' === $control['css_var'] ) {
+			$rgb = hex_to_rgb( $value );
+			if ( ! empty( $rgb ) ) {
+				$rgb = implode( ',', $rgb );
+				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
 			}
 		}
 
-		if ( '--mdc-theme-on-footer' === $control['css_var'] ) {
-			$selected_value = get_theme_mod( prepend_slug( $control['id'] ) );
-			$on_surface     = get_material_theme_builder_option( 'surface_text_color' );
-
-			if ( ! $selected_value && $on_surface ) {
-				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $on_surface ) );
+		if ( '--mdc-theme-footer' === $control['css_var'] ) {
+			$rgb = hex_to_rgb( $value );
+			if ( ! empty( $rgb ) ) {
+				$rgb = implode( ',', $rgb );
 			}
+
+			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
+		}
+
+		if ( '--mdc-theme-on-footer' === $control['css_var'] ) {
+			$rgb = hex_to_rgb( $value );
+			if ( ! empty( $rgb ) ) {
+				$rgb = implode( ',', $rgb );
+			}
+
+			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
+		}
+
+		if ( '--mdc-theme-background' === $control['css_var'] ) {
+			$rgb = hex_to_rgb( $value );
+			if ( ! empty( $rgb ) ) {
+				$rgb = implode( ',', $rgb );
+			}
+
+			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
 		}
 	}
 
