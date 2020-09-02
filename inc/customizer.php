@@ -194,7 +194,8 @@ function add_settings( $wp_customize, $settings = [] ) {
 function prepend_slug( $name ) {
 	$slug = get_slug();
 
-	return false === strpos( $name, "{$slug}_" ) ? "{$slug}_{$name}" : $name;
+	return ( false === strpos( $name, "{$slug}_" ) && false === strpos( $name, 'nav_menu_locations' ) )
+		? "{$slug}_{$name}" : $name;
 }
 
 /**
