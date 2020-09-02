@@ -242,13 +242,8 @@ function get_default_values() {
 		'archive_outlined'        => false,
 	];
 
-	$primary    = get_material_theme_builder_option( 'primary_color' );
 	$surface    = get_material_theme_builder_option( 'surface_color' );
 	$on_surface = get_material_theme_builder_option( 'surface_text_color' );
-
-	if ( $primary ) {
-		$defaults['header_background_color'] = $primary;
-	}
 	
 	if ( $surface ) {
 		$defaults['footer_background_color'] = $surface;
