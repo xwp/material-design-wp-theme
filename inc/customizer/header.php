@@ -80,10 +80,10 @@ function register( $wp_customize ) {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function add_sections( $wp_customize ) {
-	$id    = Customizer\prepend_slug( 'header_section' );
-	$slug  = 'material_theme_builder';
+	$id = Customizer\prepend_slug( 'header_section' );
+	$slug = 'material_theme_builder';
 	$label = __( 'Header and Footer', 'material-theme' );
-	$args  = [
+	$args = [
 		'priority'   => 10,
 		'capability' => 'edit_theme_options',
 		'title'      => esc_html( $label ),
@@ -120,9 +120,19 @@ function add_sections( $wp_customize ) {
 function get_controls() {
 	return [
 		[
-			'id'    => Customizer\prepend_slug( 'header_search_display' ),
+			'id'      => 'header_label',
+			'label'   => esc_html__( 'Top app bar (Header)', 'material-theme' ),	
+			'type'    => 'hidden',	
+		],
+		[
+			'id'    => 'header_search_display',
 			'label' => esc_html__( 'Show search in header', 'material-theme' ),
 			'type'  => 'checkbox',
+		],	
+		[
+			'id'      => 'footer_label',
+			'label'   => esc_html__( 'Footer', 'material-theme' ),	
+			'type'    => 'hidden',	
 		],
 		[
 			'id'    => 'hide_back_to_top',
