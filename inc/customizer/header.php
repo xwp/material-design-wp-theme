@@ -13,7 +13,7 @@ use MaterialTheme\Customizer;
  * Attach hooks
  */
 function setup() {
-	add_action( 'customize_register', __NAMESPACE__ . '\register' );
+	add_action( 'customize_register', __NAMESPACE__ . '\register', 100 );
 }
 
 /**
@@ -87,6 +87,13 @@ function get_controls() {
 				'fixed'    => esc_html__( 'Fixed', 'material-theme' ),
 			],
 		],
+		[
+			// Hidden field for menu locations label.
+			'id'          => Customizer\prepend_slug( 'menu-location-label' ),
+			'label'       => esc_html__( 'Menu Locations', 'material-theme' ),
+			'description' => esc_html__( 'Material theme can display menus in 2 locations. Select which menu appears in each location.', 'material-theme' ),
+			'type'        => 'hidden',
+		],
 	];
 }
 
@@ -109,6 +116,7 @@ function add_settings( $wp_customize ) {
 	Customizer\add_settings( $wp_customize, $settings );
 	add_controls( $wp_customize );
 	add_color_controls( $wp_customize );
+	add_nav_menu_location_controls( $wp_customize );
 }
 
 /**
@@ -204,6 +212,46 @@ function maybe_use_color_palette_control( $wp_customize ) {
 
 	Customizer\add_controls( $wp_customize, $controls );
 }
+
+/**
+ * Add nav menu location dropdowns.
+ *
+ * @param  WP_Customize $wp_customize WP Customize object.
+ * @return void
+ */
+function add_nav_menu_location_controls( $wp_customize ) {
+	$menus = wp_get_nav_menus();
+
+	// Menu locations.
+	$locations = get_registered_nav_menus();
+
+	$choices = array( '0' => __( '&mdash; Select &mdash;', 'material-theme' ) );
+	foreach ( $menus as $menu ) {
+		$choices[ $menu->term_id ] = wp_html_excerpt( $menu->name, 40, '&hellip;' );
+	}
+
+	$slug     = Customizer\get_slug();
+	$controls = [];
+
+	foreach ( $locations as $location => $label ) {
+		$setting_id = "nav_menu_locations[{$location}]";
+
+		$controls[ $setting_id ] = new \WP_Customize_Nav_Menu_Location_Control(
+			$wp_customize,
+			$setting_id,
+			array(
+				'label'       => $label,
+				'description' => 'menu-1' === $location ? esc_html__( 'Only the top level items will display.', 'material-theme' ) : '',
+				'location_id' => $location,
+				'section'     => Customizer\prepend_slug( 'header_section' ),
+				'choices'     => $choices,
+			)
+		);
+	}
+
+	Customizer\add_controls( $wp_customize, $controls );
+}
+
 
 /**
  * Reload header
