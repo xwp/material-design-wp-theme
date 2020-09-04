@@ -23,5 +23,9 @@
 
 	& .description {
 		display: none;
+
+		&.-display {
+			display: block;
+		}
 	}
 }
