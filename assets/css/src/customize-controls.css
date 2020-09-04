@@ -18,3 +18,10 @@
 		border-radius: 0.1875rem;
 	}
 }
+
+#customize-control-material_header_title_display {
+
+	& .description {
+		display: none;
+	}
+}

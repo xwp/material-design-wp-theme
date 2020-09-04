@@ -79,6 +79,12 @@ function get_controls() {
 			'type'  => 'checkbox',
 		],
 		[
+			'id'          => Customizer\prepend_slug( 'header_title_display' ),
+			'label'       => esc_html__( 'Hide site title in header', 'material-theme' ),
+			'type'        => 'checkbox',
+			'description' => esc_html__( 'Site title is hidden but will still be used for SEO purposes', 'material-theme' ),
+		],
+		[
 			'id'      => Customizer\prepend_slug( 'header_bar_layout' ),
 			'label'   => esc_html__( 'Header layout', 'material-theme' ),
 			'type'    => 'radio',
