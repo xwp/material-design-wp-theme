@@ -8,4 +8,9 @@
 		max-height: 36px;
 		width: auto;
 	}
+
+	@nest .mdc-drawer__header & img {
+		height: auto;
+		max-width: 200px;
+	}
 }
