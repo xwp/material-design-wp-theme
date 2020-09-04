@@ -49,6 +49,17 @@ function register( $wp_customize ) {
 				'render_callback' => __NAMESPACE__ . '\render_app_bar',
 			)
 		);
+
+		$wp_customize->selective_refresh->add_partial(
+			'header_title',
+			array(
+				'selector'        => '.mdc-top-app-bar__title',
+				'settings'        => [
+					Customizer\prepend_slug( 'header_title_display' ),
+				],
+				'render_callback' => __NAMESPACE__ . '\render_site_title',
+			)
+		);
 	}
 }
 
@@ -285,3 +296,13 @@ function render_header_navigation() {
 function render_app_bar() {
 	get_template_part( 'template-parts/menu', 'header' );
 }
+
+/**
+ * Render title
+ *
+ * @return void
+ */
+function render_site_title() {
+	get_template_part( 'template-parts/site-title' );
+}
+
