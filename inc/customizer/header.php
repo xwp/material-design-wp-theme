@@ -53,7 +53,7 @@ function register( $wp_customize ) {
 		$wp_customize->selective_refresh->add_partial(
 			'header_title',
 			array(
-				'selector'        => '.mdc-top-app-bar__title',
+				'selector'        => '.mdc-top-app-bar__title, .mdc-drawer__title',
 				'settings'        => [
 					Customizer\prepend_slug( 'header_title_display' ),
 				],
