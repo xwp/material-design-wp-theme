@@ -2,9 +2,10 @@
 	align-items: center;
 	display: flex;
 	padding: 0.75rem;
-	max-width: 3.75em;
 
 	& img {
 		display: block;
+		max-height: 36px;
+		width: auto;
 	}
 }
