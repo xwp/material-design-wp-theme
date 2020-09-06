@@ -249,7 +249,7 @@ function add_nav_menu_location_controls( $wp_customize ) {
 		);
 	}
 
-	Customizer\add_controls( $wp_customize, $controls );
+	Customizer\add_controls( $wp_customize, $controls, false );
 }
 
 

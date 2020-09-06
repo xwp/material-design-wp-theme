@@ -144,13 +144,14 @@ function scripts() {
  *
  * @param  mixed $wp_customize Theme Customizer object.
  * @param  mixed $settings     Settings to register in customizer.
+ * @param  bool  $prepare_name Whether or not to save settings in main array.
  * @return void
  */
-function add_settings( $wp_customize, $settings = [] ) {
+function add_settings( $wp_customize, $settings = [], $prepare_name = true ) {
 	$slug = get_slug();
 
 	foreach ( $settings as $id => $setting ) {
-		$id = prepare_option_name( $id );
+		$id = ( $prepare_name ) ? prepare_option_name( $id ) : $id;
 
 		if ( is_array( $setting ) ) {
 			$defaults = [
@@ -253,13 +254,14 @@ function get_default_values() {
  *
  * @param  WP_Customize $wp_customize WP_Customize instance.
  * @param  array        $controls Array of controls to add to customizer.
+ * @param  bool         $prepare_name Whether or not to save settings in main array.
  * @return void
  */
-function add_controls( $wp_customize, $controls = [] ) {
+function add_controls( $wp_customize, $controls = [], $prepare_name = true ) {
 	$slug = get_slug();
 
 	foreach ( $controls as $id => $control ) {
-		$id = prepare_option_name( $id );
+		$id = ( $prepare_name ) ? prepare_option_name( $id ) : $id;
 
 		/**
 		 * Filters the customizer control args.
