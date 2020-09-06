@@ -147,7 +147,7 @@ function scripts() {
  * @param  bool  $prepare_name Whether or not to save settings in main array.
  * @return void
  */
-function add_settings( $wp_customize, $settings = [], $prepare_name = true ) {
+function add_settings( $wp_customize, $settings = [], $prepare_name = false ) {
 	$slug = get_slug();
 
 	foreach ( $settings as $id => $setting ) {
@@ -257,7 +257,7 @@ function get_default_values() {
  * @param  bool         $prepare_name Whether or not to save settings in main array.
  * @return void
  */
-function add_controls( $wp_customize, $controls = [], $prepare_name = true ) {
+function add_controls( $wp_customize, $controls = [], $prepare_name = false ) {
 	$slug = get_slug();
 
 	foreach ( $controls as $id => $control ) {
@@ -326,7 +326,7 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
 		}
 	}
 
-	add_controls( $wp_customize, $controls );
+	add_controls( $wp_customize, $controls, true );
 }
 
 /**

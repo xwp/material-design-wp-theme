@@ -161,7 +161,7 @@ function add_color_controls( $wp_customize ) {
 		];
 	}
 
-	Customizer\add_settings( $wp_customize, $settings );
+	Customizer\add_settings( $wp_customize, $settings, true );
 	Customizer\add_color_controls( $wp_customize, get_color_controls(), 'footer_section' );
 }
 

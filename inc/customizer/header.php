@@ -113,7 +113,7 @@ function add_settings( $wp_customize ) {
 		];
 	}
 
-	Customizer\add_settings( $wp_customize, $settings, false );
+	Customizer\add_settings( $wp_customize, $settings );
 	add_controls( $wp_customize );
 	add_color_controls( $wp_customize );
 	add_nav_menu_location_controls( $wp_customize );
@@ -137,7 +137,7 @@ function add_controls( $wp_customize ) {
 		);
 	}
 
-	Customizer\add_controls( $wp_customize, $controls, false );
+	Customizer\add_controls( $wp_customize, $controls );
 }
 
 /**
@@ -249,7 +249,7 @@ function add_nav_menu_location_controls( $wp_customize ) {
 		);
 	}
 
-	Customizer\add_controls( $wp_customize, $controls, false );
+	Customizer\add_controls( $wp_customize, $controls );
 }
 
 
