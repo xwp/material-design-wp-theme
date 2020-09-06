@@ -8,15 +8,15 @@
 
 ( api => {
 	api.bind( 'ready', () => {
-		api( 'material_archive_layout' ).bind( value => {
+		api( 'material_theme_builder_archive_layout' ).bind( value => {
 			const isCardLayout = 'card' === value;
 
 			const controls = [
-				'material_archive_comments',
-				'material_archive_author',
-				'material_archive_excerpt',
-				'material_archive_date',
-				'material_archive_outlined',
+				'material_theme_builder_archive_comments',
+				'material_theme_builder_archive_author',
+				'material_theme_builder_archive_excerpt',
+				'material_theme_builder_archive_date',
+				'material_theme_builder_archive_outlined',
 			];
 
 			controls.forEach( control =>

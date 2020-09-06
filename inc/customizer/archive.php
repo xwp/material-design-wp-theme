@@ -38,13 +38,13 @@ function register( $wp_customize ) {
 			'selector'        => '.site-main__inner',
 			'render_callback' => __NAMESPACE__ . '\render_layout',
 			'settings'        => [
-				'material_archive_layout',
-				'material_archive_width',
-				'material_archive_comments',
-				'material_archive_author',
-				'material_archive_excerpt',
-				'material_archive_date',
-				'material_archive_outlined',
+				'material_theme_builder_archive_layout',
+				'material_theme_builder_archive_width',
+				'material_theme_builder_archive_comments',
+				'material_theme_builder_archive_author',
+				'material_theme_builder_archive_excerpt',
+				'material_theme_builder_archive_date',
+				'material_theme_builder_archive_outlined',
 			],
 		]
 	);
