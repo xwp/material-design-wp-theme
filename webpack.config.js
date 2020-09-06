@@ -128,9 +128,25 @@ const admin = {
 	],
 };
 
+const editor = {
+	...defaultConfig,
+	...sharedConfig,
+	entry: {
+		editor: [ './assets/css/src/editor.css' ],
+	},
+	plugins: [
+		...sharedConfig.plugins,
+		new WebpackBar( {
+			name: 'Editor',
+			color: '#ebbf48',
+		} ),
+	],
+};
+
 module.exports = [
 	// prettier-ignore
 	customizer,
 	frontEnd,
 	admin,
+	editor,
 ];

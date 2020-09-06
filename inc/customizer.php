@@ -194,7 +194,8 @@ function add_settings( $wp_customize, $settings = [] ) {
 function prepend_slug( $name ) {
 	$slug = get_slug();
 
-	return false === strpos( $name, "{$slug}_" ) ? "{$slug}_{$name}" : $name;
+	return ( false === strpos( $name, "{$slug}_" ) && false === strpos( $name, 'nav_menu_locations' ) )
+		? "{$slug}_{$name}" : $name;
 }
 
 /**
@@ -224,13 +225,13 @@ function get_default_values() {
 		'footer_background_color' => '#ffffff',
 		'footer_text_color'       => '#000000',
 		'archive_layout'          => 'card',
-		'header_width_layout'     => 'boxed',
 		'archive_width'           => 'normal',
 		'archive_comments'        => true,
 		'archive_author'          => true,
 		'archive_excerpt'         => true,
 		'archive_date'            => true,
 		'archive_outlined'        => false,
+		'header_bar_layout'       => 'standard',
 	];
 
 	$surface    = get_material_theme_builder_option( 'surface_color' );
