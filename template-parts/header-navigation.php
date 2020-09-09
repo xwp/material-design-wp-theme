@@ -20,6 +20,4 @@
 	role="banner"
 >
 	<?php get_template_part( 'template-parts/menu', 'header' ); ?>
-
-	<?php get_template_part( 'template-parts/menu', 'tabs' ); ?>
 </div>
