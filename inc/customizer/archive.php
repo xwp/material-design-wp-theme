@@ -37,12 +37,12 @@ function register( $wp_customize ) {
  */
 function add_sections( $wp_customize ) {
 
-	$id = 'archive';
+	$id   = 'archive';
 	$slug = 'material_theme_builder';
 
 	$sections = [
-		'navigation'    => __( 'Site Navigation (Top app bar & Footer)', 'material-theme-builder' ),
-		'layout'        => __( 'Layout Settings', 'material-theme-builder' ),
+		'navigation' => __( 'Site Navigation (Top app bar & Footer)', 'material-theme' ),
+		'layout'     => __( 'Layout Settings', 'material-theme' ),
 	];
 
 	foreach ( $sections as $id => $label ) {
@@ -78,7 +78,7 @@ function add_sections( $wp_customize ) {
 	}
 
 	$label = __( 'Layout Settings', 'material-theme' );
-	$args = [
+	$args  = [
 		'priority'   => 50,
 		'capability' => 'edit_theme_options',
 		'title'      => esc_html( $label ),
@@ -133,9 +133,9 @@ function get_layout_settings_controls() {
 			],
 		],
 		[
-			'id'      => Customizer\prepend_slug( 'archive_card_options' ),
-			'label'   => esc_html__( 'Card display options', 'material-theme' ),	
-			'type'    => 'hidden',	
+			'id'    => Customizer\prepend_slug( 'archive_card_options' ),
+			'label' => esc_html__( 'Card display options', 'material-theme' ),
+			'type'  => 'hidden',  
 		],
 		[
 			'id'              => Customizer\prepend_slug( 'archive_comments' ),
@@ -223,6 +223,7 @@ function add_layout_settings_controls( $wp_customize ) {
  * Call to parent function
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ * @param string               $label      Label for Section.
  */
 function add_controls( $wp_customize, $label ) {
 	$controls = [];
