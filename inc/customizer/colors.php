@@ -27,7 +27,7 @@ function register( $wp_customize ) {
 
 	$id    = Customizer\prepend_slug( 'material_colors_section' );
 	$slug  = 'material_theme_builder';
-	$label = __( 'Colors', 'material-theme' );
+	$label = __( 'Color Palettes', 'material-theme' );
 	$args  = [
 		'priority'   => 50,
 		'capability' => 'edit_theme_options',
