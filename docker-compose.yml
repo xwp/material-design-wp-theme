@@ -39,7 +39,7 @@ services:
     user: xfs
     volumes:
       - ./bin/local-dev/wordpress/html:/var/www/html
-      - .:/var/www/html/wp-content/plugins/material-theme-builder
+      - .:/var/www/html/wp-content/themes/material-theme-wp
     depends_on:
       - mysql
       - wordpress
