@@ -1,6 +1,6 @@
 <?php
 /**
- * Material-theme-wp Theme Customizer
+ * Material Theme Customizer
  *
  * @package MaterialTheme
  */
@@ -23,88 +23,24 @@ function setup() {
  * @return void
  */
 function register( $wp_customize ) {
+	add_section( $wp_customize );
 
-	add_sections( $wp_customize );
-
-	add_layout_settings_controls( $wp_customize );
+	add_settings( $wp_customize );
 }
 
 /**
- * Register settings and controls.
+ * Register layout section.
  *
  * @param  WP_Customize $wp_customize WP_Customize instance.
  * @return void
  */
-function add_sections( $wp_customize ) {
-
-	$id   = 'archive';
-	$slug = 'material_theme_builder';
-
-	$sections = [
-		'navigation' => __( 'Site Navigation (Top app bar & Footer)', 'material-theme' ),
-		'layout'     => __( 'Layout Settings', 'material-theme' ),
+function add_section( $wp_customize ) {
+	$args = [
+		'priority'   => 10,
+		'title'      => esc_html__( 'Layout Settings', 'material-theme' ),
 	];
 
-	foreach ( $sections as $id => $label ) {
-		$id = Customizer\prepend_slug( $id );
-
-		$args = [
-			'priority'   => 10,
-			'capability' => 'edit_theme_options',
-			'title'      => esc_html( $label ),
-			'panel'      => $slug,
-			'type'       => 'collapse',
-		];
-
-		/**
-		 * Filters the customizer section args.
-		 *
-		 * This allows other plugins/themes to change the customizer section args.
-		 *
-		 * @param array  $args Array of section args.
-		 * @param string $id   ID of the section.
-		 */
-		$section = apply_filters( $slug . '_customizer_section_args', $args, $id );
-
-		if ( is_array( $section ) ) {
-			$wp_customize->add_section(
-				$id,
-				$section
-			);
-		} elseif ( $section instanceof \WP_Customize_Section ) {
-			$section->id = $id;
-			$wp_customize->add_section( $section );
-		}
-	}
-
-	$label = __( 'Layout Settings', 'material-theme' );
-	$args  = [
-		'priority'   => 50,
-		'capability' => 'edit_theme_options',
-		'title'      => esc_html( $label ),
-		'panel'      => $slug,
-		'type'       => 'collapse',
-	];
-
-	/**
-	 * Filters the customizer section args.
-	 *
-	 * This allows other plugins/themes to change the customizer section args.
-	 *
-	 * @param array  $args Array of section args.
-	 * @param string $id   ID of the section.
-	 */
-	$section = apply_filters( $slug . '_customizer_section_args', $args, $id );
-
-	if ( is_array( $section ) ) {
-		$wp_customize->add_section(
-			$id,
-			$section
-		);
-	} elseif ( $section instanceof \WP_Customize_Section ) {
-		$section->id = $id;
-		$wp_customize->add_section( $section );
-	}
+	Customizer\add_section( $wp_customize, 'layout', $args );
 }
 
 /**
@@ -112,19 +48,10 @@ function add_sections( $wp_customize ) {
  *
  * @return array
  */
-function get_layout_settings_controls() {
+function get_controls() {
 	return [
 		[
-			'id'      => Customizer\prepend_slug( 'archive_layout' ),
-			'label'   => esc_html__( 'Post layout and display options', 'material-theme' ),
-			'type'    => 'radio',
-			'choices' => [
-				'card'  => esc_html__( 'Card', 'material-theme' ),
-				'image' => esc_html__( 'Image List', 'material-theme' ),
-			],
-		],
-		[
-			'id'      => Customizer\prepend_slug( 'archive_width' ),
+			'id'      => 'archive_width',
 			'label'   => esc_html__( 'Layout Width', 'material-theme' ),
 			'type'    => 'radio',
 			'choices' => [
@@ -133,42 +60,52 @@ function get_layout_settings_controls() {
 			],
 		],
 		[
-			'id'    => Customizer\prepend_slug( 'archive_card_options' ),
-			'label' => esc_html__( 'Card display options', 'material-theme' ),
-			'type'  => 'hidden',  
+			'id'      => 'archive_layout',
+			'label'   => esc_html__( 'Post layout and display options', 'material-theme' ),
+			'type'    => 'radio',
+			'choices' => [
+				'card'  => esc_html__( 'Card', 'material-theme' ),
+				'image' => esc_html__( 'Image List', 'material-theme' ),
+			],
 		],
 		[
-			'id'              => Customizer\prepend_slug( 'archive_comments' ),
+			'id'    => 'archive_card_options',
+			'label' => esc_html__( 'Card display options', 'material-theme' ),
+			'type'  => 'hidden',
+			'active_callback' => __NAMESPACE__ . '\is_card_layout',
+		],
+		[
+			'id'              => 'archive_comments',
 			'label'           => esc_html__( 'Comments', 'material-theme' ),
 			'type'            => 'checkbox',
 			'active_callback' => __NAMESPACE__ . '\is_card_layout',
 		],
 		[
-			'id'              => Customizer\prepend_slug( 'archive_author' ),
+			'id'              => 'archive_author',
 			'label'           => esc_html__( 'Author', 'material-theme' ),
 			'type'            => 'checkbox',
 			'active_callback' => __NAMESPACE__ . '\is_card_layout',
 		],
 		[
-			'id'              => Customizer\prepend_slug( 'archive_excerpt' ),
+			'id'              => 'archive_excerpt',
 			'label'           => esc_html__( 'Excerpt', 'material-theme' ),
 			'type'            => 'checkbox',
 			'active_callback' => __NAMESPACE__ . '\is_card_layout',
 		],
 		[
-			'id'              => Customizer\prepend_slug( 'archive_date' ),
+			'id'              => 'archive_date',
 			'label'           => esc_html__( 'Date', 'material-theme' ),
 			'type'            => 'checkbox',
 			'active_callback' => __NAMESPACE__ . '\is_card_layout',
 		],
 		[
-			'id'              => Customizer\prepend_slug( 'archive_outlined' ),
+			'id'              => 'archive_outlined',
 			'label'           => esc_html__( 'Outlined', 'material-theme' ),
 			'type'            => 'checkbox',
 			'active_callback' => __NAMESPACE__ . '\is_card_layout',
 		],
 		[
-			'id'      => Customizer\prepend_slug( 'comments_section' ),
+			'id'      => 'comments_section',
 			'label'   => esc_html__( 'Comment fields', 'material-theme' ),
 			'type'    => 'radio',
 			'default' => 'outlined',
@@ -181,33 +118,34 @@ function get_layout_settings_controls() {
 }
 
 /**
+ * Get control ids.
+ *
+ * @return Array
+ */
+function get_control_ids() {
+	return array_map( '\MaterialTheme\Customizer\prepend_slug', wp_list_pluck( get_controls(), 'id' ) );
+}
+
+/**
  * Create settings based on controls
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  * @return void
  */
-function add_layout_settings_controls( $wp_customize ) {
+function add_settings( $wp_customize ) {
 
 	$wp_customize->selective_refresh->add_partial(
 		'archive_layout',
 		[
 			'selector'        => '.site-main__inner',
 			'render_callback' => __NAMESPACE__ . '\render_layout',
-			'settings'        => [
-				'material_archive_layout',
-				'material_archive_width',
-				'material_archive_comments',
-				'material_archive_author',
-				'material_archive_excerpt',
-				'material_archive_date',
-				'material_archive_outlined',
-			],
+			'settings'        => get_control_ids(),
 		]
 	);
 
 	$settings = [];
 
-	foreach ( get_layout_settings_controls() as $control ) {
+	foreach ( get_controls() as $control ) {
 		$settings[ $control['id'] ] = [
 			'transport' => 'postMessage',
 		];
@@ -228,7 +166,7 @@ function add_layout_settings_controls( $wp_customize ) {
 function add_controls( $wp_customize, $label ) {
 	$controls = [];
 
-	foreach ( get_layout_settings_controls() as $control ) {
+	foreach ( get_controls() as $control ) {
 		$controls[ $control['id'] ] = array_merge(
 			[
 				'section' => Customizer\prepend_slug( $label ),

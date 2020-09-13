@@ -32,7 +32,7 @@ function setup() {
 function register( $wp_customize ) {
 	if ( ! class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
 		$wp_customize->add_panel(
-			'material_theme_builder',
+			get_slug(),
 			[
 				'priority'    => 10,
 				'capability'  => 'edit_theme_options',
@@ -70,7 +70,7 @@ function register( $wp_customize ) {
  * @return string Settings prefix.
  */
 function get_slug() {
-	return 'material';
+	return 'material_theme_builder';
 }
 
 /**
@@ -111,7 +111,7 @@ function preview_scripts() {
 	$controls = [];
 
 	if ( ! class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
-		$controls = array_merge( $controls, Colors\get_color_controls() );
+		$controls = array_merge( $controls, Colors\get_controls() );
 	}
 
 	foreach ( $controls as $control ) {
@@ -147,6 +147,45 @@ function scripts() {
 		$theme_version,
 		true
 	);
+}
+
+/**
+ * Register sections.
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ * @param String               $id ID of the section.
+ * @param Array                $args Section args to add.
+ */
+function add_section( $wp_customize, $id, $args ) {
+	$id   = prepend_slug( $id );
+	$slug = get_slug();
+	$args = array_merge(
+		[
+			'capability' => 'edit_theme_options',
+			'panel'      => $slug,
+		],
+		$args
+	);
+
+	/**
+	 * Filters the customizer section args.
+	 *
+	 * This allows other plugins/themes to change the customizer section args.
+	 *
+	 * @param array  $args Array of section args.
+	 * @param string $id   ID of the section.
+	 */
+	$section = apply_filters( $slug . '_customizer_section_args', $args, $id );
+
+	if ( is_array( $section ) ) {
+		$wp_customize->add_section(
+			$id,
+			$section
+		);
+	} elseif ( $section instanceof \WP_Customize_Section ) {
+		$section->id = $id;
+		$wp_customize->add_section( $section );
+	}
 }
 
 /**
@@ -229,12 +268,18 @@ function get_default( $setting ) {
  */
 function get_default_values() {
 	$defaults = [
-		'header_background_color' => '#6200ee',
-		'header_text_color'       => '#ffffff',
+		'primary_color'           => '#6200ee',
+		'on_primary_color'        => '#ffffff',
+		'secondary_color'         => '#03dac6',
+		'on_secondary_color'      => '#000000',
+		'surface_color'           => '#ffffff',
+		'on_surface_color'        => '#000000',
 		'background_color'        => '#ffffff',
-		'background_text_color'   => '#000000',
-		'footer_background_color' => '#ffffff',
-		'footer_text_color'       => '#000000',
+		'on_background_color'     => '#000000',
+		'header_color'            => '#6200ee',
+		'on_header_color'         => '#ffffff',
+		'footer_color'            => '#ffffff',
+		'on_footer_color'         => '#000000',
 		'archive_layout'          => 'card',
 		'archive_width'           => 'normal',
 		'archive_comments'        => true,
@@ -247,7 +292,7 @@ function get_default_values() {
 
 	$surface    = get_material_theme_builder_option( 'surface_color' );
 	$on_surface = get_material_theme_builder_option( 'surface_text_color' );
-	
+
 	if ( $surface ) {
 		$defaults['footer_background_color'] = $surface;
 	}
@@ -342,12 +387,13 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
  * Get custom frontend CSS based on the customizer theme settings.
  */
 function get_frontend_css() {
+	if ( class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
+		return;
+	}
+
 	$color_vars = [];
 	$defaults   = get_default_values();
-
-	if ( ! class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
-		$controls = array_merge( $controls, Colors\get_color_controls() );
-	}
+	$controls   = Colors\get_controls();
 
 	foreach ( $controls as $control ) {
 		$default      = isset( $defaults[ $control['id'] ] ) ? $defaults[ $control['id'] ] : '';
@@ -367,7 +413,7 @@ function get_frontend_css() {
 			if ( ! empty( $rgb ) ) {
 				$rgb          = implode( ',', $rgb );
 				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-			}       
+			}
 		}
 
 		if ( '--mdc-theme-secondary' === $control['css_var'] ) {
@@ -429,7 +475,7 @@ function get_frontend_css() {
 			if ( ! empty( $rgb ) ) {
 				$rgb          = implode( ',', $rgb );
 				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-			}       
+			}
 		}
 
 		if ( '--mdc-theme-on-header' === $control['css_var'] ) {

@@ -81,7 +81,7 @@ function register( $wp_customize ) {
  */
 function add_sections( $wp_customize ) {
 	$id    = Customizer\prepend_slug( 'header_section' );
-	$slug  = 'material_theme_builder';
+	$slug  = Customizer\get_slug();
 	$label = __( 'Header and Footer', 'material-theme' );
 	$args  = [
 		'priority'   => 50,
@@ -122,7 +122,7 @@ function get_controls() {
 		[
 			'id'    => 'header_label',
 			'label' => esc_html__( 'Top app bar (Header)', 'material-theme' ),
-			'type'  => 'hidden',  
+			'type'  => 'hidden',
 		],
 		[
 			'id'    => 'header_search_display',
@@ -132,7 +132,7 @@ function get_controls() {
 		[
 			'id'    => 'footer_label',
 			'label' => esc_html__( 'Footer', 'material-theme' ),
-			'type'  => 'hidden',  
+			'type'  => 'hidden',
 		],
 		[
 			'id'    => 'hide_back_to_top',
@@ -181,7 +181,6 @@ function add_settings( $wp_customize ) {
 
 	Customizer\add_settings( $wp_customize, $settings );
 	add_controls( $wp_customize );
-	add_color_controls( $wp_customize );
 	add_nav_menu_location_controls( $wp_customize );
 }
 
