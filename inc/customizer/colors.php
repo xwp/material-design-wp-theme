@@ -63,8 +63,8 @@ function register( $wp_customize ) {
 function add_section( $wp_customize ) {
 	$label = __( 'Color Palettes', 'material-theme' );
 	$args  = [
-		'priority'   => 50,
-		'title'      => esc_html__( 'Color Palettes', 'material-theme' ),
+		'priority' => 50,
+		'title'    => esc_html__( 'Color Palettes', 'material-theme' ),
 	];
 
 	Customizer\add_section( $wp_customize, 'colors', $args );

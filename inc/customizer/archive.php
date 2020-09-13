@@ -36,8 +36,8 @@ function register( $wp_customize ) {
  */
 function add_section( $wp_customize ) {
 	$args = [
-		'priority'   => 10,
-		'title'      => esc_html__( 'Layout Settings', 'material-theme' ),
+		'priority' => 10,
+		'title'    => esc_html__( 'Layout Settings', 'material-theme' ),
 	];
 
 	Customizer\add_section( $wp_customize, 'layout', $args );
@@ -69,9 +69,9 @@ function get_controls() {
 			],
 		],
 		[
-			'id'    => 'archive_card_options',
-			'label' => esc_html__( 'Card display options', 'material-theme' ),
-			'type'  => 'hidden',
+			'id'              => 'archive_card_options',
+			'label'           => esc_html__( 'Card display options', 'material-theme' ),
+			'type'            => 'hidden',
 			'active_callback' => __NAMESPACE__ . '\is_card_layout',
 		],
 		[
