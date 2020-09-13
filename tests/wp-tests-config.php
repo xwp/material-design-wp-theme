@@ -2,7 +2,7 @@
 /**
  * WordPress Test Config.
  *
- * @package MaterialThemeBuilder
+ * @package MaterialTheme
  */
 
 define( 'ABSPATH', '/var/www/html/' );

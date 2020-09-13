@@ -2,7 +2,7 @@
 /**
  * Bootstrap PHPUnit related dependencies.
  *
- * @package MaterialThemeBuilder
+ * @package MaterialTheme
  */
 
 global $_theme_files;

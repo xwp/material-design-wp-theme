@@ -178,6 +178,15 @@ function material_get_theme_mod( $name, $default = false ) {
 }
 
 /**
+ * Determine if the Material Theme Builder plugin is installed and active.
+ *
+ * @return boolean
+ */
+function material_is_plugin_active() {
+	return class_exists( '\MaterialThemeBuilder\Plugin' );
+}
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';

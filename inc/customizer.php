@@ -30,7 +30,7 @@ function setup() {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function register( $wp_customize ) {
-	if ( ! class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
+	if ( ! material_is_plugin_active() ) {
 		$wp_customize->add_panel(
 			get_slug(),
 			[
@@ -110,7 +110,7 @@ function preview_scripts() {
 	$css_vars = [];
 	$controls = [];
 
-	if ( ! class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
+	if ( ! material_is_plugin_active() ) {
 		$controls = array_merge( $controls, Colors\get_controls() );
 	}
 
@@ -358,7 +358,7 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
 	$section = prepend_slug( $section );
 
 	foreach ( $color_controls as $control ) {
-		if ( class_exists( '\MaterialThemeBuilder\Customizer\Material_Color_Palette_Control' ) ) {
+		if ( material_is_plugin_active() ) {
 			$controls[ $control['id'] ] = new \MaterialThemeBuilder\Customizer\Material_Color_Palette_Control(
 				$wp_customize,
 				prepend_slug( $control['id'] ),
@@ -387,7 +387,7 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
  * Get custom frontend CSS based on the customizer theme settings.
  */
 function get_frontend_css() {
-	if ( class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
+	if ( material_is_plugin_active() ) {
 		return;
 	}
 
@@ -568,7 +568,7 @@ function hex_to_rgb( $hex ) {
  */
 function get_material_theme_builder_option( $name ) {
 	$value = false;
-	if ( function_exists( '\MaterialThemeBuilder\get_plugin_instance' ) ) {
+	if ( material_is_plugin_active() ) {
 		$value = \MaterialThemeBuilder\get_plugin_instance()->customizer_controls->get_option( $name );
 	}
 
