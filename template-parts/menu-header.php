@@ -9,8 +9,8 @@
 
 use MaterialTheme\Menu_Walker;
 
-$has_search = get_theme_mod( 'material_header_search_display' );
-$layout     = get_theme_mod( 'material_header_bar_layout', 'standard' );
+$has_search = material_get_theme_mod( 'header_search_display' );
+$layout     = material_get_theme_mod( 'header_bar_layout', 'standard' );
 $class      = ( 'fixed' === $layout ) ? 'mdc-top-app-bar--fixed' : '';
 ?>
 

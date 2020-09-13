@@ -24,59 +24,15 @@ function setup() {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function register( $wp_customize ) {
-
-	add_section( $wp_customize );
-
-	add_settings( $wp_customize );
-
-	if ( isset( $wp_customize->selective_refresh ) ) {
-		$wp_customize->selective_refresh->add_partial(
-			'colors_text',
-			array(
-				'selector'        => '.site-colors__text',
-				'render_callback' => __NAMESPACE__ . '\render_text',
-				'settings'        => [
-					'material_colors_text',
-				],
-			)
-		);
-
-		$wp_customize->selective_refresh->add_partial(
-			'back_to_top',
-			array(
-				'selector'        => '.back-to-top',
-				'render_callback' => __NAMESPACE__ . '\render_back_to_top',
-				'settings'        => [
-					'material_hide_back_to_top',
-				],
-			)
-		);
-	}
-}
-
-/**
- * Register colors section.
- *
- * @param  WP_Customize $wp_customize WP_Customize instance.
- * @return void
- */
-function add_section( $wp_customize ) {
-	$label = __( 'Color Palettes', 'material-theme' );
-	$args  = [
+	// Add color palettes section.
+	$args = [
 		'priority' => 50,
 		'title'    => esc_html__( 'Color Palettes', 'material-theme' ),
 	];
 
 	Customizer\add_section( $wp_customize, 'colors', $args );
-}
 
-/**
- * Render colors copyright text
- */
-function render_text() {
-	$colors_text = get_theme_mod( 'material_colors_text', '&copy; 2020 Material.io' );
-
-	echo esc_html( $colors_text );
+	add_settings( $wp_customize );
 }
 
 /**
@@ -96,15 +52,6 @@ function add_settings( $wp_customize ) {
 
 	Customizer\add_settings( $wp_customize, $settings );
 	Customizer\add_color_controls( $wp_customize, get_controls(), 'colors' );
-}
-
-/**
- * Reload back to top
- *
- * @return void
- */
-function render_back_to_top() {
-	get_template_part( 'template-parts/back-to-top' );
 }
 
 /**

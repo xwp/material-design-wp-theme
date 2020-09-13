@@ -23,24 +23,51 @@ function setup() {
  * @return void
  */
 function register( $wp_customize ) {
-	add_section( $wp_customize );
-
-	add_settings( $wp_customize );
-}
-
-/**
- * Register layout section.
- *
- * @param  WP_Customize $wp_customize WP_Customize instance.
- * @return void
- */
-function add_section( $wp_customize ) {
+	// Add layout section.
 	$args = [
 		'priority' => 10,
 		'title'    => esc_html__( 'Layout Settings', 'material-theme' ),
 	];
 
 	Customizer\add_section( $wp_customize, 'layout', $args );
+
+	add_settings( $wp_customize );
+}
+
+/**
+ * Create settings based on controls
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ * @return void
+ */
+function add_settings( $wp_customize ) {
+	$settings = [];
+	$controls = [];
+
+	foreach ( get_controls() as $control ) {
+		$settings[ $control['id'] ] = [
+			'transport' => 'postMessage',
+		];
+
+		$controls[ $control['id'] ] = array_merge(
+			[
+				'section' => Customizer\prepend_slug( 'layout' ),
+			],
+			$control
+		);
+	}
+
+	Customizer\add_settings( $wp_customize, $settings );
+	Customizer\add_controls( $wp_customize, $controls );
+
+	$wp_customize->selective_refresh->add_partial(
+		Customizer\prepend_slug( 'archive_layout' ),
+		[
+			'selector'        => '.site-main__inner',
+			'render_callback' => __NAMESPACE__ . '\render_layout',
+			'settings'        => get_control_ids(),
+		]
+	);
 }
 
 /**
@@ -127,58 +154,6 @@ function get_control_ids() {
 }
 
 /**
- * Create settings based on controls
- *
- * @param WP_Customize_Manager $wp_customize Theme Customizer object.
- * @return void
- */
-function add_settings( $wp_customize ) {
-
-	$wp_customize->selective_refresh->add_partial(
-		'archive_layout',
-		[
-			'selector'        => '.site-main__inner',
-			'render_callback' => __NAMESPACE__ . '\render_layout',
-			'settings'        => get_control_ids(),
-		]
-	);
-
-	$settings = [];
-
-	foreach ( get_controls() as $control ) {
-		$settings[ $control['id'] ] = [
-			'transport' => 'postMessage',
-		];
-	}
-
-	Customizer\add_settings( $wp_customize, $settings );
-
-	add_controls( $wp_customize, 'layout' );
-}
-
-/**
- * Add regular controls
- * Call to parent function
- *
- * @param WP_Customize_Manager $wp_customize Theme Customizer object.
- * @param string               $label      Label for Section.
- */
-function add_controls( $wp_customize, $label ) {
-	$controls = [];
-
-	foreach ( get_controls() as $control ) {
-		$controls[ $control['id'] ] = array_merge(
-			[
-				'section' => Customizer\prepend_slug( $label ),
-			],
-			$control
-		);
-	}
-
-	Customizer\add_controls( $wp_customize, $controls );
-}
-
-/**
  * Render selected layout
  *
  * @return void
@@ -193,5 +168,5 @@ function render_layout() {
  * @return boolean
  */
 function is_card_layout() {
-	return 'card' === get_theme_mod( Customizer\prepend_slug( 'archive_layout' ), 'card' );
+	return 'card' === material_get_theme_mod( 'archive_layout', 'card' );
 }

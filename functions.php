@@ -166,6 +166,18 @@ function material_theme_wp_scripts() {
 add_action( 'wp_enqueue_scripts', 'material_theme_wp_scripts' );
 
 /**
+ * Get material theme mod.
+ *
+ * @param string       $name Name of the mod.
+ * @param string|false $default Default value.
+ * @return mixed
+ */
+function material_get_theme_mod( $name, $default = false ) {
+	$name = \MaterialTheme\Customizer\prepend_slug( $name );
+	return get_theme_mod( $name, $default );
+}
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';

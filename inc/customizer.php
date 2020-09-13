@@ -397,7 +397,7 @@ function get_frontend_css() {
 
 	foreach ( $controls as $control ) {
 		$default      = isset( $defaults[ $control['id'] ] ) ? $defaults[ $control['id'] ] : '';
-		$value        = get_theme_mod( prepend_slug( $control['id'] ), $default );
+		$value        = material_get_theme_mod( $control['id'], $default );
 		$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $value ) );
 
 		if ( '--mdc-theme-primary' === $control['css_var'] ) {
