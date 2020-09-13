@@ -5,7 +5,7 @@
  * @package MaterialTheme
  */
 
-namespace MaterialTheme\Customizer\Archive;
+namespace MaterialTheme\Customizer\Layout;
 
 use MaterialTheme\Customizer;
 

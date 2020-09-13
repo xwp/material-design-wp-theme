@@ -5,7 +5,7 @@
  * @package MaterialTheme
  */
 
-namespace MaterialTheme\Customizer\Header;
+namespace MaterialTheme\Customizer\Header_Footer;
 
 use MaterialTheme\Customizer;
 

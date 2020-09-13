@@ -134,12 +134,3 @@ function get_controls() {
 		],
 	];
 }
-
-/**
- * Reload colors
- *
- * @return void
- */
-function render_colors() {
-	get_template_part( 'template-parts/colors' );
-}

@@ -81,14 +81,13 @@
 
 		// Generate the styles.
 		Object.keys( materialThemeColorControls ).forEach( control => {
-			styles += `${ materialThemeColorControls[ control ] }: ${ parentApi(
-				control
-			).get() };`;
+			const cssVar = materialThemeColorControls[ control ];
+			const color = parentApi( control ).get();
+			styles += `${ cssVar }: ${ color };`;
+			styles += `${ cssVar }-rgb: ${ hexToRgb( color ).join( ',' ) };`;
 
-			if ( 'material_background_text_color' === control ) {
-				const backgroundColor = parentApi( control ).get(),
-					backgroundColorRgb = hexToRgb( backgroundColor ).join( ',' );
-				styles += `${ materialThemeColorControls[ control ] }-rgb: ${ backgroundColorRgb };
+			if ( '--mdc-theme-background' === cssVar ) {
+				styles += `
 					--mdc-theme-text-primary-on-background: rgba(--mdc-theme-on-background-rgb, 0.87);
 					--mdc-theme-text-secondary-on-background: rgba(--mdc-theme-on-background-rgb, 0.54);
 					--mdc-theme-text-hint-on-background: rgba(--mdc-theme-on-background-rgb, 0.38);
