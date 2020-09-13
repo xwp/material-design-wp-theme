@@ -14,6 +14,7 @@
 			const isCardLayout = 'card' === value;
 
 			const controls = [
+				`${ materialThemeSlug }_archive_card_options`,
 				`${ materialThemeSlug }_archive_comments`,
 				`${ materialThemeSlug }_archive_author`,
 				`${ materialThemeSlug }_archive_excerpt`,

@@ -147,6 +147,12 @@ function scripts() {
 		$theme_version,
 		true
 	);
+
+	wp_localize_script(
+		'material-theme-customizer-controls',
+		'materialThemeSlug',
+		get_slug()
+	);
 }
 
 /**
@@ -399,117 +405,10 @@ function get_frontend_css() {
 		$default      = isset( $defaults[ $control['id'] ] ) ? $defaults[ $control['id'] ] : '';
 		$value        = material_get_theme_mod( $control['id'], $default );
 		$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $value ) );
+		$rgb          = hex_to_rgb( $value );
 
-		if ( '--mdc-theme-primary' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb          = implode( ',', $rgb );
-				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-			}
-		}
-
-		if ( '--mdc-theme-on-primary' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb          = implode( ',', $rgb );
-				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-			}
-		}
-
-		if ( '--mdc-theme-secondary' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb = implode( ',', $rgb );
-			}
-
-			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-		}
-
-		if ( '--mdc-theme-on-secondary' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb = implode( ',', $rgb );
-			}
-
-			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-		}
-
-		if ( '--mdc-theme-primary-bg' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb = implode( ',', $rgb );
-			}
-
-			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-		}
-
-		if ( '--mdc-theme-secondary-bg' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb = implode( ',', $rgb );
-			}
-
-			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-		}
-
-		if ( '--mdc-theme-surface' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb = implode( ',', $rgb );
-			}
-
-			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-		}
-
-		if ( '--mdc-theme-on-surface' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb = implode( ',', $rgb );
-			}
-
-			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-		}
-
-		if ( '--mdc-theme-header' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb          = implode( ',', $rgb );
-				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-			}
-		}
-
-		if ( '--mdc-theme-on-header' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb          = implode( ',', $rgb );
-				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-			}
-		}
-
-		if ( '--mdc-theme-footer' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb = implode( ',', $rgb );
-			}
-
-			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-		}
-
-		if ( '--mdc-theme-on-footer' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb = implode( ',', $rgb );
-			}
-
-			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-		}
-
-		if ( '--mdc-theme-background' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb = implode( ',', $rgb );
-			}
-
+		if ( ! empty( $rgb ) ) {
+			$rgb          = implode( ',', $rgb );
 			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
 		}
 	}
