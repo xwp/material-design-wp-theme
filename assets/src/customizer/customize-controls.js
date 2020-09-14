@@ -12,7 +12,9 @@
 			'#customize-control-material_header_title_display'
 		);
 
-		const hideHeaderDescriptionEl = hideHeaderDescription.querySelector( '.description' );
+		const hideHeaderDescriptionEl = hideHeaderDescription.querySelector(
+			'.description'
+		);
 
 		if ( hideHeaderDescription.querySelector( 'input:checked' ) ) {
 			hideHeaderDescriptionEl.classList.add( '-display' );

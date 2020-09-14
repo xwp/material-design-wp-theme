@@ -5,6 +5,9 @@
 
 	& img {
 		display: block;
+	}
+
+	@nest .top-app-bar & img {
 		max-height: 36px;
 		width: auto;
 	}
