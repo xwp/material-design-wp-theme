@@ -181,7 +181,6 @@ function add_settings( $wp_customize ) {
 
 	Customizer\add_settings( $wp_customize, $settings );
 	add_controls( $wp_customize );
-	add_color_controls( $wp_customize );
 	add_nav_menu_location_controls( $wp_customize );
 }
 
