@@ -1,6 +1,6 @@
 <?php
 /**
- * Material-theme-wp functions and definitions
+ * Material theme functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -19,7 +19,7 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Material-theme-wp, use a find and replace
+		 * If you're building a theme based on Material theme, use a find and replace
 		 * to change 'material-theme' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'material-theme', get_template_directory() . '/languages' );
@@ -166,6 +166,27 @@ function material_theme_wp_scripts() {
 add_action( 'wp_enqueue_scripts', 'material_theme_wp_scripts' );
 
 /**
+ * Get material theme mod.
+ *
+ * @param string       $name Name of the mod.
+ * @param string|false $default Default value.
+ * @return mixed
+ */
+function material_get_theme_mod( $name, $default = false ) {
+	$name = \MaterialTheme\Customizer\prepend_slug( $name );
+	return get_theme_mod( $name, $default );
+}
+
+/**
+ * Determine if the Material Theme Builder plugin is installed and active.
+ *
+ * @return boolean
+ */
+function material_is_plugin_active() {
+	return class_exists( '\MaterialThemeBuilder\Plugin' );
+}
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -185,8 +206,8 @@ require get_template_directory() . '/inc/admin.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/customizer/colors.php';
-require get_template_directory() . '/inc/customizer/header.php';
-require get_template_directory() . '/inc/customizer/archive.php';
+require get_template_directory() . '/inc/customizer/header-footer.php';
+require get_template_directory() . '/inc/customizer/layout.php';
 require get_template_directory() . '/inc/customizer/menu.php';
 
 /**
@@ -224,7 +245,7 @@ require get_template_directory() . '/inc/widgets.php';
 MaterialTheme\Admin\setup();
 MaterialTheme\Customizer\setup();
 MaterialTheme\Customizer\Colors\setup();
-MaterialTheme\Customizer\Header\setup();
-MaterialTheme\Customizer\Archive\setup();
+MaterialTheme\Customizer\Header_Footer\setup();
+MaterialTheme\Customizer\Layout\setup();
 MaterialTheme\Customizer\Menu\setup();
 MaterialTheme\Widgets\setup();

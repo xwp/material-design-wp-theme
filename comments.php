@@ -21,7 +21,7 @@ if ( post_password_required() ) {
 
 $commenter = wp_get_current_commenter();
 
-$style    = get_theme_mod( 'material_comment_fields_style' );
+$style    = material_get_theme_mod( 'comment_fields_style' );
 $classes  = 'outlined' === $style ? 'mdc-text-field--outlined mdc-text-field--no-label' : 'mdc-text-field--filled';
 $req      = get_option( 'require_name_email' );
 $html_req = ( $req ? " required='required'" : '' );

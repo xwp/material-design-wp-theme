@@ -2,15 +2,15 @@
 /**
  * Test_Material_Theme
  *
- * @package MaterialThemeBuilder
+ * @package MaterialTheme
  */
 
-namespace MaterialThemeBuilder;
+namespace MaterialTheme;
 
 /**
  * Class Test_Material_Theme
  *
- * @package MaterialThemeBuilder
+ * @package MaterialTheme
  */
 class Test_Material_Theme extends \WP_UnitTestCase {
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Material-theme-wp Theme Customizer
+ * Material Theme Customizer
  *
  * @package MaterialTheme
  */
@@ -30,9 +30,9 @@ function setup() {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function register( $wp_customize ) {
-	if ( ! class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
+	if ( ! material_is_plugin_active() ) {
 		$wp_customize->add_panel(
-			'material_theme_builder',
+			get_slug(),
 			[
 				'priority'    => 10,
 				'capability'  => 'edit_theme_options',
@@ -70,7 +70,7 @@ function register( $wp_customize ) {
  * @return string Settings prefix.
  */
 function get_slug() {
-	return 'material';
+	return 'material_theme_builder';
 }
 
 /**
@@ -108,13 +108,8 @@ function preview_scripts() {
 	);
 
 	$css_vars = [];
-	$controls = [];
 
-	if ( ! class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
-		$controls = array_merge( $controls, Colors\get_color_controls() );
-	}
-
-	foreach ( $controls as $control ) {
+	foreach ( Colors\get_controls() as $control ) {
 		$css_vars[ prepend_slug( $control['id'] ) ] = $control['css_var'];
 	}
 
@@ -147,6 +142,51 @@ function scripts() {
 		$theme_version,
 		true
 	);
+
+	wp_localize_script(
+		'material-theme-customizer-controls',
+		'materialThemeSlug',
+		get_slug()
+	);
+}
+
+/**
+ * Register sections.
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ * @param String               $id ID of the section.
+ * @param Array                $args Section args to add.
+ */
+function add_section( $wp_customize, $id, $args ) {
+	$id   = prepend_slug( $id );
+	$slug = get_slug();
+	$args = array_merge(
+		[
+			'capability' => 'edit_theme_options',
+			'panel'      => $slug,
+		],
+		$args
+	);
+
+	/**
+	 * Filters the customizer section args.
+	 *
+	 * This allows other plugins/themes to change the customizer section args.
+	 *
+	 * @param array  $args Array of section args.
+	 * @param string $id   ID of the section.
+	 */
+	$section = apply_filters( $slug . '_customizer_section_args', $args, $id );
+
+	if ( is_array( $section ) ) {
+		$wp_customize->add_section(
+			$id,
+			$section
+		);
+	} elseif ( $section instanceof \WP_Customize_Section ) {
+		$section->id = $id;
+		$wp_customize->add_section( $section );
+	}
 }
 
 /**
@@ -229,31 +269,37 @@ function get_default( $setting ) {
  */
 function get_default_values() {
 	$defaults = [
-		'header_background_color' => '#6200ee',
-		'header_text_color'       => '#ffffff',
-		'background_color'        => '#ffffff',
-		'background_text_color'   => '#000000',
-		'footer_background_color' => '#ffffff',
-		'footer_text_color'       => '#000000',
-		'archive_layout'          => 'card',
-		'archive_width'           => 'normal',
-		'archive_comments'        => true,
-		'archive_author'          => true,
-		'archive_excerpt'         => true,
-		'archive_date'            => true,
-		'archive_outlined'        => false,
-		'header_bar_layout'       => 'standard',
+		'primary_color'       => '#6200ee',
+		'on_primary_color'    => '#ffffff',
+		'secondary_color'     => '#03dac6',
+		'on_secondary_color'  => '#000000',
+		'surface_color'       => '#ffffff',
+		'on_surface_color'    => '#000000',
+		'background_color'    => '#ffffff',
+		'on_background_color' => '#000000',
+		'header_color'        => '#6200ee',
+		'on_header_color'     => '#ffffff',
+		'footer_color'        => '#ffffff',
+		'on_footer_color'     => '#000000',
+		'archive_layout'      => 'card',
+		'archive_width'       => 'normal',
+		'archive_comments'    => true,
+		'archive_author'      => true,
+		'archive_excerpt'     => true,
+		'archive_date'        => true,
+		'archive_outlined'    => false,
+		'header_bar_layout'   => 'standard',
 	];
 
 	$surface    = get_material_theme_builder_option( 'surface_color' );
-	$on_surface = get_material_theme_builder_option( 'surface_text_color' );
-	
+	$on_surface = get_material_theme_builder_option( 'on_surface_color' );
+
 	if ( $surface ) {
-		$defaults['footer_background_color'] = $surface;
+		$defaults['footer_color'] = $surface;
 	}
 
 	if ( $on_surface ) {
-		$defaults['footer_text_color'] = $on_surface;
+		$defaults['on_footer_color'] = $on_surface;
 	}
 
 	return $defaults;
@@ -283,10 +329,21 @@ function add_controls( $wp_customize, $controls = [] ) {
 		$control = apply_filters( $slug . '_customizer_control_args', $control, $id );
 
 		if ( is_array( $control ) ) {
-			$wp_customize->add_control(
-				$id,
-				$control
-			);
+
+			if ( 'color' === $control['type'] ) {
+				$wp_customize->add_control(
+					new \WP_Customize_Color_Control(
+						$wp_customize,
+						$id,
+						$control
+					)
+				);
+			} else {
+				$wp_customize->add_control(
+					$id,
+					$control
+				);
+			}
 		} elseif ( $control instanceof \WP_Customize_Control ) {
 			$control->id      = $id;
 			$control->section = isset( $control->section ) ? $control->section : '';
@@ -313,7 +370,7 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
 	$section = prepend_slug( $section );
 
 	foreach ( $color_controls as $control ) {
-		if ( class_exists( '\MaterialThemeBuilder\Customizer\Material_Color_Palette_Control' ) ) {
+		if ( material_is_plugin_active() ) {
 			$controls[ $control['id'] ] = new \MaterialThemeBuilder\Customizer\Material_Color_Palette_Control(
 				$wp_customize,
 				prepend_slug( $control['id'] ),
@@ -324,6 +381,7 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
 					'related_setting'      => ! empty( $control['related_setting'] ) ? $control['related_setting'] : false,
 					'css_var'              => $control['css_var'],
 					'a11y_label'           => ! empty( $control['a11y_label'] ) ? $control['a11y_label'] : '',
+					'priority'             => 200,
 				]
 			);
 		} else {
@@ -344,126 +402,16 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
 function get_frontend_css() {
 	$color_vars = [];
 	$defaults   = get_default_values();
-
-	if ( ! class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
-		$controls = array_merge( $controls, Colors\get_color_controls() );
-	}
+	$controls   = Colors\get_controls();
 
 	foreach ( $controls as $control ) {
 		$default      = isset( $defaults[ $control['id'] ] ) ? $defaults[ $control['id'] ] : '';
-		$value        = get_theme_mod( prepend_slug( $control['id'] ), $default );
+		$value        = material_get_theme_mod( $control['id'], $default );
 		$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $value ) );
+		$rgb          = hex_to_rgb( $value );
 
-		if ( '--mdc-theme-primary' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb          = implode( ',', $rgb );
-				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-			}
-		}
-
-		if ( '--mdc-theme-on-primary' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb          = implode( ',', $rgb );
-				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-			}       
-		}
-
-		if ( '--mdc-theme-secondary' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb = implode( ',', $rgb );
-			}
-
-			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-		}
-
-		if ( '--mdc-theme-on-secondary' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb = implode( ',', $rgb );
-			}
-
-			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-		}
-
-		if ( '--mdc-theme-primary-bg' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb = implode( ',', $rgb );
-			}
-
-			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-		}
-
-		if ( '--mdc-theme-secondary-bg' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb = implode( ',', $rgb );
-			}
-
-			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-		}
-
-		if ( '--mdc-theme-surface' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb = implode( ',', $rgb );
-			}
-
-			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-		}
-
-		if ( '--mdc-theme-on-surface' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb = implode( ',', $rgb );
-			}
-
-			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-		}
-
-		if ( '--mdc-theme-header' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb          = implode( ',', $rgb );
-				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-			}       
-		}
-
-		if ( '--mdc-theme-on-header' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb          = implode( ',', $rgb );
-				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-			}
-		}
-
-		if ( '--mdc-theme-footer' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb = implode( ',', $rgb );
-			}
-
-			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-		}
-
-		if ( '--mdc-theme-on-footer' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb = implode( ',', $rgb );
-			}
-
-			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
-		}
-
-		if ( '--mdc-theme-background' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb = implode( ',', $rgb );
-			}
-
+		if ( ! empty( $rgb ) ) {
+			$rgb          = implode( ',', $rgb );
 			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
 		}
 	}
@@ -522,7 +470,7 @@ function hex_to_rgb( $hex ) {
  */
 function get_material_theme_builder_option( $name ) {
 	$value = false;
-	if ( function_exists( '\MaterialThemeBuilder\get_plugin_instance' ) ) {
+	if ( material_is_plugin_active() ) {
 		$value = \MaterialThemeBuilder\get_plugin_instance()->customizer_controls->get_option( $name );
 	}
 

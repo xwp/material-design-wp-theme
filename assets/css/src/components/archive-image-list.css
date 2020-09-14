@@ -9,5 +9,6 @@
 
 	& .mdc-image-list__item {
 		margin-bottom: 1rem;
+		margin-top: 0;
 	}
 }
