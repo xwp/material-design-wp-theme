@@ -1,6 +1,6 @@
 <?php
 /**
- * Material-theme-wp Theme Customizer
+ * Material Theme Customizer
  *
  * @package MaterialTheme
  */
@@ -297,14 +297,14 @@ function get_default_values() {
 	];
 
 	$surface    = get_material_theme_builder_option( 'surface_color' );
-	$on_surface = get_material_theme_builder_option( 'surface_text_color' );
+	$on_surface = get_material_theme_builder_option( 'on_surface_color' );
 
 	if ( $surface ) {
-		$defaults['footer_background_color'] = $surface;
+		$defaults['footer_color'] = $surface;
 	}
 
 	if ( $on_surface ) {
-		$defaults['footer_text_color'] = $on_surface;
+		$defaults['on_footer_color'] = $on_surface;
 	}
 
 	return $defaults;

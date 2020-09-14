@@ -1,6 +1,6 @@
 <?php
 /**
- * Material-theme-wp Theme Customizer
+ * Material Theme Customizer Header & Footer section.
  *
  * @package MaterialTheme
  */

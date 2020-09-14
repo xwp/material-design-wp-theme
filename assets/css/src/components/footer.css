@@ -1,10 +1,10 @@
 .site-footer {
-	height: 4rem;
+	background-color: var(--mdc-theme-footer);
 	margin-top: 2rem;
+	min-height: 4rem;
 
 	& .site-footer__inner {
 		align-items: center;
-		background-color: var(--mdc-theme-footer);
 		display: flex;
 		justify-content: space-between;
 		width: 100%;

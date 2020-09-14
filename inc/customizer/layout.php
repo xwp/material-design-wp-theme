@@ -1,6 +1,6 @@
 <?php
 /**
- * Material Theme Customizer
+ * Material Theme Customizer Layout section.
  *
  * @package MaterialTheme
  */
