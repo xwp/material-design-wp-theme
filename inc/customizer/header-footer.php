@@ -13,7 +13,7 @@ use MaterialTheme\Customizer;
  * Attach hooks
  */
 function setup() {
-	add_action( 'customize_register', __NAMESPACE__ . '\register', 100 );
+	add_action( 'customize_register', __NAMESPACE__ . '\register' );
 }
 
 /**
@@ -25,7 +25,7 @@ function setup() {
 function register( $wp_customize ) {
 	// Add header section.
 	$args = [
-		'priority' => 10,
+		'priority' => 200,
 		'title'    => esc_html__( 'Header and Footer', 'material-theme' ),
 	];
 

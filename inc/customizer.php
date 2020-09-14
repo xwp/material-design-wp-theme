@@ -108,13 +108,8 @@ function preview_scripts() {
 	);
 
 	$css_vars = [];
-	$controls = [];
 
-	if ( ! material_is_plugin_active() ) {
-		$controls = array_merge( $controls, Colors\get_controls() );
-	}
-
-	foreach ( $controls as $control ) {
+	foreach ( Colors\get_controls() as $control ) {
 		$css_vars[ prepend_slug( $control['id'] ) ] = $control['css_var'];
 	}
 
@@ -386,6 +381,7 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
 					'related_setting'      => ! empty( $control['related_setting'] ) ? $control['related_setting'] : false,
 					'css_var'              => $control['css_var'],
 					'a11y_label'           => ! empty( $control['a11y_label'] ) ? $control['a11y_label'] : '',
+					'priority'             => 200,
 				]
 			);
 		} else {
@@ -404,10 +400,6 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
  * Get custom frontend CSS based on the customizer theme settings.
  */
 function get_frontend_css() {
-	if ( material_is_plugin_active() ) {
-		return;
-	}
-
 	$color_vars = [];
 	$defaults   = get_default_values();
 	$controls   = Colors\get_controls();

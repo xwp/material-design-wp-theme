@@ -25,7 +25,7 @@ function setup() {
 function register( $wp_customize ) {
 	// Add layout section.
 	$args = [
-		'priority' => 10,
+		'priority' => 200,
 		'title'    => esc_html__( 'Layout Settings', 'material-theme' ),
 	];
 
