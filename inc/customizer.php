@@ -334,10 +334,21 @@ function add_controls( $wp_customize, $controls = [] ) {
 		$control = apply_filters( $slug . '_customizer_control_args', $control, $id );
 
 		if ( is_array( $control ) ) {
-			$wp_customize->add_control(
-				$id,
-				$control
-			);
+
+			if ( 'color' === $control['type'] ) {
+				$wp_customize->add_control(
+					new \WP_Customize_Color_Control(
+						$wp_customize,
+						$id,
+						$control
+					)
+				);
+			} else {
+				$wp_customize->add_control(
+					$id,
+					$control
+				);
+			}
 		} elseif ( $control instanceof \WP_Customize_Control ) {
 			$control->id      = $id;
 			$control->section = isset( $control->section ) ? $control->section : '';
