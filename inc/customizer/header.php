@@ -49,6 +49,17 @@ function register( $wp_customize ) {
 				'render_callback' => __NAMESPACE__ . '\render_app_bar',
 			)
 		);
+
+		$wp_customize->selective_refresh->add_partial(
+			'header_title',
+			array(
+				'selector'        => '.mdc-top-app-bar__title, .mdc-drawer__title',
+				'settings'        => [
+					Customizer\prepend_slug( 'header_title_display' ),
+				],
+				'render_callback' => __NAMESPACE__ . '\render_site_title',
+			)
+		);
 	}
 }
 
@@ -77,6 +88,12 @@ function get_controls() {
 			'id'    => Customizer\prepend_slug( 'header_search_display' ),
 			'label' => esc_html__( 'Show search in header', 'material-theme' ),
 			'type'  => 'checkbox',
+		],
+		[
+			'id'          => Customizer\prepend_slug( 'header_title_display' ),
+			'label'       => esc_html__( 'Hide site title in header', 'material-theme' ),
+			'type'        => 'checkbox',
+			'description' => esc_html__( 'Site title is hidden but will still be used for SEO purposes', 'material-theme' ),
 		],
 		[
 			'id'      => Customizer\prepend_slug( 'header_bar_layout' ),
@@ -279,3 +296,13 @@ function render_header_navigation() {
 function render_app_bar() {
 	get_template_part( 'template-parts/menu', 'header' );
 }
+
+/**
+ * Render title
+ *
+ * @return void
+ */
+function render_site_title() {
+	get_template_part( 'template-parts/site-title' );
+}
+

@@ -8,6 +8,18 @@
 
 ( api => {
 	api.bind( 'ready', () => {
+		const hideHeaderDescription = document.querySelector(
+			'#customize-control-material_header_title_display'
+		);
+
+		const hideHeaderDescriptionEl = hideHeaderDescription.querySelector(
+			'.description'
+		);
+
+		if ( hideHeaderDescription.querySelector( 'input:checked' ) ) {
+			hideHeaderDescriptionEl.classList.add( '-display' );
+		}
+
 		api( 'material_archive_layout' ).bind( value => {
 			const isCardLayout = 'card' === value;
 
@@ -22,6 +34,14 @@
 			controls.forEach( control =>
 				api.control( control ).active.set( isCardLayout )
 			);
+		} );
+
+		api( 'material_header_title_display' ).bind( value => {
+			if ( value ) {
+				hideHeaderDescriptionEl.classList.add( '-display' );
+			} else {
+				hideHeaderDescriptionEl.classList.remove( '-display' );
+			}
 		} );
 	} );
 } )( wp.customize );
