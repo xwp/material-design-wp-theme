@@ -2,7 +2,14 @@
 
 	& .mdc-drawer__header {
 		color: var(--mdc-theme-on-surface, #000);
-		display: flex;
+		display: block;
+	}
+
+	& .mdc-drawer__title {
+
+		&::before {
+			content: none;
+		}
 	}
 
 	& .sub-menu {

@@ -26,19 +26,7 @@ $class      = ( 'fixed' === $layout ) ? 'mdc-top-app-bar--fixed' : '';
 				</div>
 			<?php endif; ?>
 			<span class="mdc-top-app-bar__title top-app-bar__title">
-				<?php
-				if ( is_front_page() && is_home() ) :
-					?>
-					<h1 class="site-title mdc-typography mdc-typography--headline6">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-					</h1>
-					<?php
-				else :
-					?>
-					<div class="site-title mdc-typography mdc-typography--headline6"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-					<?php
-				endif;
-				?>
+				<?php get_template_part( 'template-parts/site-title' ); ?>
 			</span>
 		</section>
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end top-app-bar__menu" role="toolbar">
