@@ -281,7 +281,13 @@ function get_default_values() {
 		'archive_excerpt'         => true,
 		'archive_date'            => true,
 		'archive_outlined'        => false,
+		'comments_section'        => 'outlined',
+		'header_search_display'   => true,
+		'header_title_display'    => true,
 		'header_bar_layout'       => 'standard',
+		'footer_text'             => esc_html__( '&copy; 2020 Material.io', 'material-theme' ),
+		'hide_back_to_top'        => false,
+
 	];
 
 	return $defaults;

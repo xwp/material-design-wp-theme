@@ -79,14 +79,14 @@ function get_controls() {
 			'type'  => 'hidden',
 		],
 		[
-			'id'    => 'hide_back_to_top',
-			'label' => esc_html__( 'Hide back to top button', 'material-theme' ),
-			'type'  => 'checkbox',
-		],
-		[
 			'id'    => 'footer_text',
 			'label' => esc_html__( 'Footer text', 'material-theme' ),
 			'type'  => 'text',
+		],
+		[
+			'id'    => 'hide_back_to_top',
+			'label' => esc_html__( 'Hide back to top button', 'material-theme' ),
+			'type'  => 'checkbox',
 		],
 	];
 }
