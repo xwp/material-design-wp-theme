@@ -125,26 +125,28 @@ function get_controls() {
 				'a11y_label' => __( 'On Background', 'material-theme' ),
 			],
 			[
-				'id'      => 'header_color',
-				'label'   => esc_html__( 'Header Color', 'material-theme' ),
-				'css_var' => '--mdc-theme-header',
+				'id'         => 'header_color',
+				'label'      => esc_html__( 'Header Color', 'material-theme' ),
+				'css_var'    => '--mdc-theme-header',
+				'a11y_label' => __( 'On Header', 'material-theme' ),
 			],
 			[
-				'id'      => 'on_header_color',
-				'label'   => esc_html__( 'On Header Color (text and icons)', 'material-theme' ),
-				'css_var' => '--mdc-theme-on-header',
+				'id'         => 'on_header_color',
+				'label'      => esc_html__( 'On Header Color (text and icons)', 'material-theme' ),
+				'css_var'    => '--mdc-theme-on-header',
+				'a11y_label' => __( 'On Header', 'material-theme' ),
 			],
 			[
 				'id'         => 'footer_color',
 				'label'      => esc_html__( 'Footer Color', 'material-theme' ),
 				'css_var'    => '--mdc-theme-footer',
-				'a11y_label' => __( 'On Background', 'material-theme' ),
+				'a11y_label' => __( 'On Footer', 'material-theme' ),
 			],
 			[
 				'id'         => 'on_footer_color',
 				'label'      => esc_html__( 'On Footer Color (text and icons)', 'material-theme' ),
 				'css_var'    => '--mdc-theme-on-footer',
-				'a11y_label' => __( 'On Background', 'material-theme' ),
+				'a11y_label' => __( 'On Footer', 'material-theme' ),
 			],
 		]
 	);
