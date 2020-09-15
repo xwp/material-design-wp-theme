@@ -262,38 +262,27 @@ function get_default( $setting ) {
  */
 function get_default_values() {
 	$defaults = [
-		'primary_color'       => '#6200ee',
-		'on_primary_color'    => '#ffffff',
-		'secondary_color'     => '#03dac6',
-		'on_secondary_color'  => '#000000',
-		'surface_color'       => '#ffffff',
-		'on_surface_color'    => '#000000',
-		'background_color'    => '#ffffff',
-		'on_background_color' => '#000000',
-		'header_color'        => '#6200ee',
-		'on_header_color'     => '#ffffff',
-		'footer_color'        => '#ffffff',
-		'on_footer_color'     => '#000000',
-		'archive_layout'      => 'card',
-		'archive_width'       => 'normal',
-		'archive_comments'    => true,
-		'archive_author'      => true,
-		'archive_excerpt'     => true,
-		'archive_date'        => true,
-		'archive_outlined'    => false,
-		'header_bar_layout'   => 'standard',
+		'primary_color'           => '#6200ee',
+		'on_primary_color'        => '#ffffff',
+		'secondary_color'         => '#03dac6',
+		'on_secondary_color'      => '#000000',
+		'surface_color'           => '#ffffff',
+		'on_surface_color'        => '#000000',
+		'custom_background_color' => '#ffffff',
+		'on_background_color'     => '#000000',
+		'header_color'            => '#6200ee',
+		'on_header_color'         => '#ffffff',
+		'footer_color'            => '#ffffff',
+		'on_footer_color'         => '#000000',
+		'archive_layout'          => 'card',
+		'archive_width'           => 'normal',
+		'archive_comments'        => true,
+		'archive_author'          => true,
+		'archive_excerpt'         => true,
+		'archive_date'            => true,
+		'archive_outlined'        => false,
+		'header_bar_layout'       => 'standard',
 	];
-
-	$surface    = get_material_theme_builder_option( 'surface_color' );
-	$on_surface = get_material_theme_builder_option( 'on_surface_color' );
-
-	if ( $surface ) {
-		$defaults['footer_color'] = $surface;
-	}
-
-	if ( $on_surface ) {
-		$defaults['on_footer_color'] = $on_surface;
-	}
 
 	return $defaults;
 }

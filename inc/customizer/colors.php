@@ -48,7 +48,8 @@ function add_settings( $wp_customize ) {
 
 	foreach ( get_controls() as $control ) {
 		$settings[ $control['id'] ] = [
-			'transport' => 'postMessage',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'sanitize_hex_color',
 		];
 	}
 
@@ -110,7 +111,9 @@ function get_controls() {
 		$controls,
 		[
 			[
-				'id'         => 'background_color',
+				// Using the `custom_` prefix to prevent conflicts with the default WordPress
+				// `background_color` setting.
+				'id'         => 'custom_background_color',
 				'label'      => esc_html__( 'Background Color', 'material-theme' ),
 				'css_var'    => '--mdc-theme-background',
 				'a11y_label' => __( 'On Background', 'material-theme' ),
