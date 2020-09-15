@@ -1,11 +1,11 @@
 <?php
 /**
  * The site title template
- * 
+ *
  * @package MaterialTheme
  */
 
-$hide_site_title = get_theme_mod( 'material_header_title_display' );
+$hide_site_title = get_theme_mod( 'header_title_display' );
 
 if ( $hide_site_title ) {
 	return;

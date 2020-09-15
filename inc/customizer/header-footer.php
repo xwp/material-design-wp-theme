@@ -221,7 +221,6 @@ function add_nav_menu_location_controls( $wp_customize ) {
 		$choices[ $menu->term_id ] = wp_html_excerpt( $menu->name, 40, '&hellip;' );
 	}
 
-	$slug     = Customizer\get_slug();
 	$controls = [];
 
 	foreach ( $locations as $location => $label ) {
@@ -250,7 +249,7 @@ function add_nav_menu_location_controls( $wp_customize ) {
  * @return void
  */
 function render_text() {
-	$footer_text = material_get_theme_mod( 'footer_text', '&copy; 2020 Material.io' );
+	$footer_text = get_theme_mod( 'footer_text', '&copy; 2020 Material.io' );
 
 	echo esc_html( $footer_text );
 }

@@ -397,7 +397,7 @@ function get_frontend_css() {
 
 	foreach ( $controls as $control ) {
 		$default      = isset( $defaults[ $control['id'] ] ) ? $defaults[ $control['id'] ] : '';
-		$value        = material_get_theme_mod( $control['id'], $default );
+		$value        = get_theme_mod( $control['id'], $default );
 		$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $value ) );
 		$rgb          = hex_to_rgb( $value );
 

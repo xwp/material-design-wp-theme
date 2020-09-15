@@ -168,5 +168,5 @@ function render_layout() {
  * @return boolean
  */
 function is_card_layout() {
-	return 'card' === material_get_theme_mod( 'archive_layout', 'card' );
+	return 'card' === get_theme_mod( 'archive_layout', 'card' );
 }
