@@ -8,6 +8,7 @@
 namespace MaterialTheme\Customizer;
 
 use MaterialTheme\Customizer\Colors;
+use MaterialTheme\Customizer\More_Options;
 
 /**
  * Attach hooks.
@@ -315,7 +316,6 @@ function add_controls( $wp_customize, $controls = [] ) {
 		$control = apply_filters( $slug . '_customizer_control_args', $control, $id );
 
 		if ( is_array( $control ) ) {
-
 			if ( 'color' === $control['type'] ) {
 				$wp_customize->add_control(
 					new \WP_Customize_Color_Control(
@@ -353,6 +353,11 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
 	 */
 	$controls = [];
 
+	/**
+	 * Controls to nest in the more options section.
+	 */
+	$more_controls = [];
+
 	$section = prepend_slug( $section );
 
 	foreach ( $color_controls as $control ) {
@@ -377,7 +382,23 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
 				'type'    => 'color',
 			];
 		}
+
+		// Group header and footer colors into more options.
+		if ( false !== strpos( $control['id'], 'header_color' ) || false !== strpos( $control['id'], 'footer_color' ) ) {
+			$more_controls[] = $control['id'];
+		}
 	}
+
+	$wp_customize->add_setting( 'colors_more_options', [] );
+	$controls['colors_more_options'] = new More_Options(
+		$wp_customize,
+		'colors_more_options',
+		[
+			'section'  => $section,
+			'priority' => 300,
+			'controls' => $more_controls,
+		]
+	);
 
 	add_controls( $wp_customize, $controls );
 }

@@ -192,6 +192,7 @@ require get_template_directory() . '/inc/admin.php';
 /**
  * Customizer additions.
  */
+require get_template_directory() . '/inc/customizer/class-more-options.php';
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/customizer/colors.php';
 require get_template_directory() . '/inc/customizer/header-footer.php';

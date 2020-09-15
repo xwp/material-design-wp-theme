@@ -1,3 +1,5 @@
+/* global jQuery */
+
 /**
  * Customizer enhancements for a better user experience.
  *
@@ -6,7 +8,50 @@
  * @since 1.0.0
  */
 
-( api => {
+( ( $, api ) => {
+	api.MoreOptionsControl = api.Control.extend( {
+		ready() {
+			const control = this;
+
+			control.container
+				.find( '.material-show-more-options' )
+				.on( 'click', event => {
+					event.preventDefault();
+
+					if ( control.params && Array.isArray( control.params.controls ) ) {
+						const display = $( event.target ).is( '.less-options' )
+							? 'none'
+							: 'list-item';
+
+						hideOrShowControls( control.params.controls, display );
+					}
+
+					control.container.parent().toggleClass( 'show-options' );
+				} );
+
+			if ( control.params && Array.isArray( control.params.controls ) ) {
+				hideOrShowControls( control.params.controls, 'none' );
+			}
+		},
+	} );
+
+	/**
+	 * Extends wp.customize.controlConstructor with custom controls.
+	 */
+	$.extend( api.controlConstructor, {
+		more_options: api.MoreOptionsControl,
+	} );
+
+	const hideOrShowControls = ( controls, display ) => {
+		controls.forEach( controlId => {
+			const colorControl = api.control( controlId );
+
+			if ( colorControl ) {
+				colorControl.container.css( 'display', display );
+			}
+		} );
+	};
+
 	api.bind( 'ready', () => {
 		api( 'archive_layout' ).bind( value => {
 			const isCardLayout = 'card' === value;
@@ -44,4 +89,4 @@
 			}
 		} );
 	} );
-} )( wp.customize );
+} )( jQuery, wp.customize );
