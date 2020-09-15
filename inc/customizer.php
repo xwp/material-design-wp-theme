@@ -110,7 +110,7 @@ function preview_scripts() {
 	$css_vars = [];
 
 	foreach ( Colors\get_controls() as $control ) {
-		$css_vars[ prepend_slug( $control['id'] ) ] = $control['css_var'];
+		$css_vars[ $control['id'] ] = $control['css_var'];
 	}
 
 	wp_localize_script(
@@ -142,12 +142,6 @@ function scripts() {
 		$theme_version,
 		true
 	);
-
-	wp_localize_script(
-		'material-theme-customizer-controls',
-		'materialThemeSlug',
-		get_slug()
-	);
 }
 
 /**
@@ -164,6 +158,7 @@ function add_section( $wp_customize, $id, $args ) {
 		[
 			'capability' => 'edit_theme_options',
 			'panel'      => $slug,
+			'type'       => 'collapse',
 		],
 		$args
 	);
@@ -200,8 +195,6 @@ function add_settings( $wp_customize, $settings = [] ) {
 	$slug = get_slug();
 
 	foreach ( $settings as $id => $setting ) {
-		$id = prepend_slug( $id );
-
 		if ( is_array( $setting ) ) {
 			$defaults = [
 				'capability'        => 'edit_theme_options',
@@ -316,8 +309,6 @@ function add_controls( $wp_customize, $controls = [] ) {
 	$slug = get_slug();
 
 	foreach ( $controls as $id => $control ) {
-		$id = prepend_slug( $id );
-
 		/**
 		 * Filters the customizer control args.
 		 *
@@ -373,7 +364,7 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
 		if ( material_is_plugin_active() ) {
 			$controls[ $control['id'] ] = new \MaterialThemeBuilder\Customizer\Material_Color_Palette_Control(
 				$wp_customize,
-				prepend_slug( $control['id'] ),
+				$control['id'],
 				[
 					'label'                => $control['label'],
 					'section'              => $section,

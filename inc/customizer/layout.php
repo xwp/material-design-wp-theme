@@ -61,7 +61,7 @@ function add_settings( $wp_customize ) {
 	Customizer\add_controls( $wp_customize, $controls );
 
 	$wp_customize->selective_refresh->add_partial(
-		Customizer\prepend_slug( 'archive_layout' ),
+		'archive_layout',
 		[
 			'selector'        => '.site-main__inner',
 			'render_callback' => __NAMESPACE__ . '\render_layout',
@@ -150,7 +150,7 @@ function get_controls() {
  * @return Array
  */
 function get_control_ids() {
-	return array_map( '\MaterialTheme\Customizer\prepend_slug', wp_list_pluck( get_controls(), 'id' ) );
+	return wp_list_pluck( get_controls(), 'id' );
 }
 
 /**

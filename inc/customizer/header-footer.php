@@ -29,7 +29,7 @@ function register( $wp_customize ) {
 		'title'    => esc_html__( 'Header and Footer', 'material-theme' ),
 	];
 
-	Customizer\add_section( $wp_customize, 'header', $args );
+	Customizer\add_section( $wp_customize, 'header-footer', $args );
 
 	add_settings( $wp_customize );
 }
@@ -109,7 +109,7 @@ function add_settings( $wp_customize ) {
 
 		$controls[ $control['id'] ] = array_merge(
 			[
-				'section' => Customizer\prepend_slug( 'header' ),
+				'section' => Customizer\prepend_slug( 'header-footer' ),
 			],
 			$control
 		);
@@ -121,56 +121,56 @@ function add_settings( $wp_customize ) {
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial(
-			Customizer\prepend_slug( 'header_layout' ),
+			'header_search_display',
 			array(
 				'selector'        => '.top-app-bar',
 				'settings'        => [
-					Customizer\prepend_slug( 'header_search_display' ),
+					'header_search_display',
 				],
 				'render_callback' => __NAMESPACE__ . '\render_header',
 			)
 		);
 
 		$wp_customize->selective_refresh->add_partial(
-			Customizer\prepend_slug( 'header_bar_layout' ),
+			'header_bar_layout',
 			array(
 				'selector'        => '.site-navigation',
 				'settings'        => [
-					Customizer\prepend_slug( 'header_bar_layout' ),
+					'header_bar_layout',
 				],
 				'render_callback' => __NAMESPACE__ . '\render_app_bar',
 			)
 		);
 
 		$wp_customize->selective_refresh->add_partial(
-			Customizer\prepend_slug( 'header_title_display' ),
+			'header_title_display',
 			array(
 				'selector'        => '.mdc-top-app-bar__title, .mdc-drawer__title',
 				'settings'        => [
-					Customizer\prepend_slug( 'header_title_display' ),
+					'header_title_display',
 				],
 				'render_callback' => __NAMESPACE__ . '\render_site_title',
 			)
 		);
 
 		$wp_customize->selective_refresh->add_partial(
-			Customizer\prepend_slug( 'footer_text' ),
+			'footer_text',
 			array(
 				'selector'        => '.site-footer__text',
 				'render_callback' => __NAMESPACE__ . '\render_text',
 				'settings'        => [
-					Customizer\prepend_slug( 'footer_text' ),
+					'footer_text',
 				],
 			)
 		);
 
 		$wp_customize->selective_refresh->add_partial(
-			Customizer\prepend_slug( 'back_to_top' ),
+			'hide_back_to_top',
 			array(
 				'selector'        => '.back-to-top',
 				'render_callback' => __NAMESPACE__ . '\render_back_to_top',
 				'settings'        => [
-					Customizer\prepend_slug( 'hide_back_to_top' ),
+					'hide_back_to_top',
 				],
 			)
 		);
@@ -234,7 +234,7 @@ function add_nav_menu_location_controls( $wp_customize ) {
 				'label'       => $label,
 				'description' => 'menu-1' === $location ? esc_html__( 'Only the top level items will display.', 'material-theme' ) : '',
 				'location_id' => $location,
-				'section'     => Customizer\prepend_slug( 'header' ),
+				'section'     => Customizer\prepend_slug( 'header-footer' ),
 				'choices'     => $choices,
 			)
 		);

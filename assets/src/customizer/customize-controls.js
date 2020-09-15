@@ -1,5 +1,3 @@
-/* global materialThemeSlug */
-
 /**
  * Customizer enhancements for a better user experience.
  *
@@ -22,23 +20,23 @@
 			hideHeaderDescriptionEl.classList.add( '-display' );
 		}
 
-		api( `${ materialThemeSlug }_archive_layout` ).bind( value => {
+		api( 'archive_layout' ).bind( value => {
 			const isCardLayout = 'card' === value;
 
 			const controls = [
-				`${ materialThemeSlug }_archive_card_options`,
-				`${ materialThemeSlug }_archive_comments`,
-				`${ materialThemeSlug }_archive_author`,
-				`${ materialThemeSlug }_archive_excerpt`,
-				`${ materialThemeSlug }_archive_date`,
-				`${ materialThemeSlug }_archive_outlined`,
+				'archive_card_options',
+				'archive_comments',
+				'archive_author',
+				'archive_excerpt',
+				'archive_date',
+				'archive_outlined',
 			];
 			controls.forEach( control =>
 				api.control( control ).active.set( isCardLayout )
 			);
 		} );
 
-		api( `${ materialThemeSlug }_header_title_display` ).bind( value => {
+		api( 'header_title_display' ).bind( value => {
 			if ( value ) {
 				hideHeaderDescriptionEl.classList.add( '-display' );
 			} else {
