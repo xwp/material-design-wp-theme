@@ -132,7 +132,7 @@ function get_controls() {
 			'active_callback' => __NAMESPACE__ . '\is_card_layout',
 		],
 		[
-			'id'      => 'comments_section',
+			'id'      => 'comment_fields_style',
 			'label'   => esc_html__( 'Comment fields', 'material-theme' ),
 			'type'    => 'radio',
 			'default' => 'outlined',
