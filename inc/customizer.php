@@ -282,11 +282,11 @@ function get_default_values() {
 		'archive_excerpt'         => true,
 		'archive_date'            => true,
 		'archive_outlined'        => false,
-		'comments_section'        => 'outlined',
+		'comment_fields_style'    => 'outlined',
 		'header_search_display'   => true,
 		'header_title_display'    => true,
 		'header_bar_layout'       => 'standard',
-		'footer_text'             => esc_html__( '&copy; 2020 Material.io', 'material-theme' ),
+		'footer_text'             => __( '&copy; 2020 Material.io', 'material-theme' ),
 		'hide_back_to_top'        => false,
 
 	];
@@ -423,6 +423,18 @@ function get_frontend_css() {
 		}
 	}
 
+	// Generate additional surface variant vars required by some components.
+	$surface    = get_theme_mod( 'surface_color' );
+	$on_surface = get_theme_mod( 'on_surface_color' );
+
+	if ( ! empty( $surface ) && ! empty( $on_surface ) ) {
+		$mix_4        = mix_colors( $on_surface, $surface, 0.04 );
+		$color_vars[] = esc_html( "--mdc-theme-surface-mix-4: $mix_4;" );
+
+		$mix_12       = mix_colors( $on_surface, $surface, 0.12 );
+		$color_vars[] = esc_html( "--mdc-theme-surface-mix-12: $mix_12;" );
+	}
+
 	$color_vars = implode( "\n\t\t\t", $color_vars );
 
 	return "
@@ -462,11 +474,59 @@ function hex_to_rgb( $hex ) {
 	$values = str_split( $hex, ( 3 === strlen( $hex ) ) ? 1 : 2 );
 
 	return array_map(
-		function ( $hex_code ) {
-			return hexdec( str_pad( $hex_code, 2, $hex_code ) );
-		},
+		__NAMESPACE__ . '\hexdec',
 		$values
 	);
+}
+
+/**
+ * Mix 2 colors with a weight.
+ *
+ * @see https://sass-lang.com/documentation/modules/color#mix
+ *
+ * @param mixed $color1 Color hex/RGB array.
+ * @param mixed $color2 Color hex/RGB array.
+ * @param float $weight Weight to use for mixing.
+ * @return string
+ */
+function mix_colors( $color1, $color2, $weight = 0.5 ) {
+	$weight = min( $weight, 1 );
+	$weight = $weight * 2 - 1;
+	$alpha  = 0;
+
+	$w1 = ( ( $weight * -1 === $alpha ? $weight : ( $weight + $alpha ) / ( 1 + $weight * $alpha ) ) + 1 ) / 2.0;
+	$w2 = 1.0 - $w1;
+
+	$color1 = hex_to_rgb( $color1 );
+	$color2 = hex_to_rgb( $color2 );
+
+	$mixed = [
+		round( $w1 * $color1[0] + $w2 * $color2[0] ),
+		round( $w1 * $color1[1] + $w2 * $color2[1] ),
+		round( $w1 * $color1[2] + $w2 * $color2[2] ),
+	];
+
+	return '#' . implode( '', array_map( __NAMESPACE__ . '\dechex', $mixed ) );
+}
+
+/**
+ * Convert color dec to hex.
+ *
+ * @param  int $decimal Number.
+ * @return string
+ */
+function dechex( $decimal ) {
+	return str_pad( \dechex( $decimal ), 2, '0', STR_PAD_LEFT );
+}
+
+/**
+ * Convert color hex to dec.
+ *
+ * @param  string $hex_code Color hex code.
+ * @return int
+ */
+function hexdec( $hex_code ) {
+	return \hexdec( str_pad( $hex_code, 2, $hex_code ) );
 }
 
 /**

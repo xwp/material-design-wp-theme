@@ -5,7 +5,7 @@
  * @package MaterialTheme
  */
 
-$hide_site_title = get_theme_mod( 'header_title_display' );
+$hide_site_title = get_theme_mod( 'header_title_display', true );
 
 if ( $hide_site_title ) {
 	return;
