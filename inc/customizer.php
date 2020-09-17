@@ -196,7 +196,6 @@ function add_settings( $wp_customize, $settings = [] ) {
 	$slug = get_slug();
 
 	foreach ( $settings as $id => $setting ) {
-
 		if ( is_array( $setting ) ) {
 			$defaults = [
 				'capability'        => 'edit_theme_options',
