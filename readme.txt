@@ -7,7 +7,7 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called Material Theme.
+Material Theme applies Material Design principles and Material Theming to your site, so you can customize its style.
 
 == Description ==
 

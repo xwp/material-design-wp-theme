@@ -14,7 +14,7 @@
 
 get_header();
 
-$max_width  = get_theme_mod( 'material_archive_width', 'normal' );
+$max_width  = get_theme_mod( 'archive_width', 'normal' );
 $class_name = sprintf( 'material-archive__%s', $max_width );
 ?>
 

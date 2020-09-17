@@ -1,3 +1,5 @@
+/* global jQuery */
+
 /**
  * Customizer enhancements for a better user experience.
  *
@@ -6,10 +8,69 @@
  * @since 1.0.0
  */
 
-( api => {
+( ( $, api ) => {
+	api.MoreOptionsControl = api.Control.extend( {
+		ready() {
+			const control = this;
+
+			control.container
+				.find( '.material-show-more-options' )
+				.on( 'click', event => {
+					event.preventDefault();
+
+					if ( control.params && Array.isArray( control.params.controls ) ) {
+						const display = $( event.target ).is( '.less-options' )
+							? 'none'
+							: 'list-item';
+
+						hideOrShowControls( control.params.controls, display );
+					}
+
+					control.container.parent().toggleClass( 'show-options' );
+				} );
+
+			if ( control.params && Array.isArray( control.params.controls ) ) {
+				hideOrShowControls( control.params.controls, 'none' );
+			}
+		},
+	} );
+
+	/**
+	 * Extends wp.customize.controlConstructor with custom controls.
+	 */
+	$.extend( api.controlConstructor, {
+		more_options: api.MoreOptionsControl,
+	} );
+
+	const hideOrShowControls = ( controls, display ) => {
+		controls.forEach( controlId => {
+			const colorControl = api.control( controlId );
+
+			if ( colorControl ) {
+				colorControl.container.css( 'display', display );
+			}
+		} );
+	};
+
 	api.bind( 'ready', () => {
+		api( 'archive_layout' ).bind( value => {
+			const isCardLayout = 'card' === value;
+
+			const controls = [
+				'archive_card_options',
+				'archive_comments',
+				'archive_author',
+				'archive_excerpt',
+				'archive_date',
+				'archive_outlined',
+			];
+			controls.forEach( control =>
+				api.control( control ).active.set( isCardLayout )
+			);
+		} );
+
 		const hideHeaderDescription = document.querySelector(
-			'#customize-control-material_header_title_display'
+			'#customize-control-header_title_display'
 		);
 
 		const hideHeaderDescriptionEl = hideHeaderDescription.querySelector(
@@ -20,23 +81,7 @@
 			hideHeaderDescriptionEl.classList.add( '-display' );
 		}
 
-		api( 'material_archive_layout' ).bind( value => {
-			const isCardLayout = 'card' === value;
-
-			const controls = [
-				'material_archive_comments',
-				'material_archive_author',
-				'material_archive_excerpt',
-				'material_archive_date',
-				'material_archive_outlined',
-			];
-
-			controls.forEach( control =>
-				api.control( control ).active.set( isCardLayout )
-			);
-		} );
-
-		api( 'material_header_title_display' ).bind( value => {
+		api( 'header_title_display' ).bind( value => {
 			if ( value ) {
 				hideHeaderDescriptionEl.classList.add( '-display' );
 			} else {
@@ -44,4 +89,4 @@
 			}
 		} );
 	} );
-} )( wp.customize );
+} )( jQuery, wp.customize );

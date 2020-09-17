@@ -62,6 +62,7 @@
 	& .search__button:not(:disabled) {
 		color: var(--mdc-theme-on-header, var(--mdc-theme-on-primary, #fff));
 		min-width: auto;
+		--mdc-typography-button-font-size: 24px;
 
 		& .mdc-button__icon {
 			margin-right: 0;

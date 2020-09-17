@@ -9,8 +9,8 @@
 
 use MaterialTheme\Menu_Walker;
 
-$has_search = get_theme_mod( 'material_header_search_display' );
-$layout     = get_theme_mod( 'material_header_bar_layout', 'standard' );
+$has_search = get_theme_mod( 'header_search_display', true );
+$layout     = get_theme_mod( 'header_bar_layout', 'standard' );
 $class      = ( 'fixed' === $layout ) ? 'mdc-top-app-bar--fixed' : '';
 ?>
 
@@ -31,7 +31,7 @@ $class      = ( 'fixed' === $layout ) ? 'mdc-top-app-bar--fixed' : '';
 		</section>
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end top-app-bar__menu" role="toolbar">
 				<?php if ( ! empty( $has_search ) ) : ?>
-				<button class="mdc-button search__button"> 
+				<button class="mdc-button search__button">
 					<span class="mdc-button__ripple"></span>
 					<i class="material-icons mdc-button__icon">search</i>
 					<span class="screen-reader-text"><?php esc_html_e( 'Search', 'material-theme' ); ?></span>

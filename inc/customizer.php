@@ -1,15 +1,14 @@
 <?php
 /**
- * Material-theme-wp Theme Customizer
+ * Material Theme Customizer
  *
  * @package MaterialTheme
  */
 
 namespace MaterialTheme\Customizer;
 
-use MaterialTheme\Customizer\Content;
-use MaterialTheme\Customizer\Header;
-use MaterialTheme\Customizer\Footer;
+use MaterialTheme\Customizer\Colors;
+use MaterialTheme\Customizer\More_Options;
 
 /**
  * Attach hooks.
@@ -32,6 +31,18 @@ function setup() {
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function register( $wp_customize ) {
+	if ( ! material_is_plugin_active() ) {
+		$wp_customize->add_panel(
+			get_slug(),
+			[
+				'priority'    => 10,
+				'capability'  => 'edit_theme_options',
+				'title'       => esc_html__( 'Material Theme Options', 'material-theme' ),
+				'description' => esc_html__( 'Change the color, shape, typography, and icons below to customize your theme style. Navigate to the Material Library to see your custom styles applied across Material Components..', 'material-theme' ),
+			]
+		);
+	}
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -60,7 +71,7 @@ function register( $wp_customize ) {
  * @return string Settings prefix.
  */
 function get_slug() {
-	return 'material';
+	return 'material_theme_builder';
 }
 
 /**
@@ -97,15 +108,10 @@ function preview_scripts() {
 		true
 	);
 
-	$controls = array_merge( Content\get_color_controls(), Footer\get_color_controls() );
 	$css_vars = [];
 
-	if ( ! class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
-		$controls = array_merge( $controls, Header\get_color_controls() );
-	}
-
-	foreach ( $controls as $control ) {
-		$css_vars[ prepend_slug( $control['id'] ) ] = $control['css_var'];
+	foreach ( Colors\get_controls() as $control ) {
+		$css_vars[ $control['id'] ] = $control['css_var'];
 	}
 
 	wp_localize_script(
@@ -140,6 +146,46 @@ function scripts() {
 }
 
 /**
+ * Register sections.
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ * @param String               $id ID of the section.
+ * @param Array                $args Section args to add.
+ */
+function add_section( $wp_customize, $id, $args ) {
+	$id   = prepend_slug( $id );
+	$slug = get_slug();
+	$args = array_merge(
+		[
+			'capability' => 'edit_theme_options',
+			'panel'      => $slug,
+			'type'       => 'collapse',
+		],
+		$args
+	);
+
+	/**
+	 * Filters the customizer section args.
+	 *
+	 * This allows other plugins/themes to change the customizer section args.
+	 *
+	 * @param array  $args Array of section args.
+	 * @param string $id   ID of the section.
+	 */
+	$section = apply_filters( $slug . '_customizer_section_args', $args, $id );
+
+	if ( is_array( $section ) ) {
+		$wp_customize->add_section(
+			$id,
+			$section
+		);
+	} elseif ( $section instanceof \WP_Customize_Section ) {
+		$section->id = $id;
+		$wp_customize->add_section( $section );
+	}
+}
+
+/**
  * Register setting in customizer.
  *
  * @param  mixed $wp_customize Theme Customizer object.
@@ -150,8 +196,6 @@ function add_settings( $wp_customize, $settings = [] ) {
 	$slug = get_slug();
 
 	foreach ( $settings as $id => $setting ) {
-		$id = prepend_slug( $id );
-
 		if ( is_array( $setting ) ) {
 			$defaults = [
 				'capability'        => 'edit_theme_options',
@@ -219,12 +263,18 @@ function get_default( $setting ) {
  */
 function get_default_values() {
 	$defaults = [
-		'header_background_color' => '#6200ee',
-		'header_text_color'       => '#ffffff',
-		'background_color'        => '#ffffff',
-		'background_text_color'   => '#000000',
-		'footer_background_color' => '#ffffff',
-		'footer_text_color'       => '#000000',
+		'primary_color'           => '#6200ee',
+		'on_primary_color'        => '#ffffff',
+		'secondary_color'         => '#03dac6',
+		'on_secondary_color'      => '#000000',
+		'surface_color'           => '#ffffff',
+		'on_surface_color'        => '#000000',
+		'custom_background_color' => '#ffffff',
+		'on_background_color'     => '#000000',
+		'header_color'            => '#6200ee',
+		'on_header_color'         => '#ffffff',
+		'footer_color'            => '#ffffff',
+		'on_footer_color'         => '#000000',
 		'archive_layout'          => 'card',
 		'archive_width'           => 'normal',
 		'archive_comments'        => true,
@@ -232,19 +282,14 @@ function get_default_values() {
 		'archive_excerpt'         => true,
 		'archive_date'            => true,
 		'archive_outlined'        => false,
+		'comment_fields_style'    => 'outlined',
+		'header_search_display'   => true,
+		'header_title_display'    => true,
 		'header_bar_layout'       => 'standard',
+		'footer_text'             => __( '&copy; 2020 Material.io', 'material-theme' ),
+		'hide_back_to_top'        => false,
+
 	];
-
-	$surface    = get_material_theme_builder_option( 'surface_color' );
-	$on_surface = get_material_theme_builder_option( 'surface_text_color' );
-
-	if ( $surface ) {
-		$defaults['footer_background_color'] = $surface;
-	}
-
-	if ( $on_surface ) {
-		$defaults['footer_text_color'] = $on_surface;
-	}
 
 	return $defaults;
 }
@@ -260,8 +305,6 @@ function add_controls( $wp_customize, $controls = [] ) {
 	$slug = get_slug();
 
 	foreach ( $controls as $id => $control ) {
-		$id = prepend_slug( $id );
-
 		/**
 		 * Filters the customizer control args.
 		 *
@@ -273,10 +316,20 @@ function add_controls( $wp_customize, $controls = [] ) {
 		$control = apply_filters( $slug . '_customizer_control_args', $control, $id );
 
 		if ( is_array( $control ) ) {
-			$wp_customize->add_control(
-				$id,
-				$control
-			);
+			if ( 'color' === $control['type'] ) {
+				$wp_customize->add_control(
+					new \WP_Customize_Color_Control(
+						$wp_customize,
+						$id,
+						$control
+					)
+				);
+			} else {
+				$wp_customize->add_control(
+					$id,
+					$control
+				);
+			}
 		} elseif ( $control instanceof \WP_Customize_Control ) {
 			$control->id      = $id;
 			$control->section = isset( $control->section ) ? $control->section : '';
@@ -300,13 +353,18 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
 	 */
 	$controls = [];
 
+	/**
+	 * Controls to nest in the more options section.
+	 */
+	$more_controls = [];
+
 	$section = prepend_slug( $section );
 
 	foreach ( $color_controls as $control ) {
-		if ( class_exists( '\MaterialThemeBuilder\Customizer\Material_Color_Palette_Control' ) ) {
+		if ( material_is_plugin_active() ) {
 			$controls[ $control['id'] ] = new \MaterialThemeBuilder\Customizer\Material_Color_Palette_Control(
 				$wp_customize,
-				prepend_slug( $control['id'] ),
+				$control['id'],
 				[
 					'label'                => $control['label'],
 					'section'              => $section,
@@ -314,6 +372,7 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
 					'related_setting'      => ! empty( $control['related_setting'] ) ? $control['related_setting'] : false,
 					'css_var'              => $control['css_var'],
 					'a11y_label'           => ! empty( $control['a11y_label'] ) ? $control['a11y_label'] : '',
+					'priority'             => 200,
 				]
 			);
 		} else {
@@ -323,7 +382,23 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
 				'type'    => 'color',
 			];
 		}
+
+		// Group header and footer colors into more options.
+		if ( false !== strpos( $control['id'], 'header_color' ) || false !== strpos( $control['id'], 'footer_color' ) ) {
+			$more_controls[] = $control['id'];
+		}
 	}
+
+	$wp_customize->add_setting( 'colors_more_options', [] );
+	$controls['colors_more_options'] = new More_Options(
+		$wp_customize,
+		'colors_more_options',
+		[
+			'section'  => $section,
+			'priority' => 300,
+			'controls' => $more_controls,
+		]
+	);
 
 	add_controls( $wp_customize, $controls );
 }
@@ -333,44 +408,31 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
  */
 function get_frontend_css() {
 	$color_vars = [];
-	$controls   = array_merge( Content\get_color_controls(), Footer\get_color_controls() );
 	$defaults   = get_default_values();
-
-	if ( ! class_exists( 'MaterialThemeBuilder\Plugin' ) ) {
-		$controls = array_merge( $controls, Header\get_color_controls() );
-	}
+	$controls   = Colors\get_controls();
 
 	foreach ( $controls as $control ) {
 		$default      = isset( $defaults[ $control['id'] ] ) ? $defaults[ $control['id'] ] : '';
-		$value        = get_theme_mod( prepend_slug( $control['id'] ), $default );
+		$value        = get_theme_mod( $control['id'], $default );
 		$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $value ) );
+		$rgb          = hex_to_rgb( $value );
 
-		if ( '--mdc-theme-on-background' === $control['css_var'] ) {
-			$rgb = hex_to_rgb( $value );
-			if ( ! empty( $rgb ) ) {
-				$rgb = implode( ',', $rgb );
-			}
-
+		if ( ! empty( $rgb ) ) {
+			$rgb          = implode( ',', $rgb );
 			$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] . '-rgb' ), esc_html( $rgb ) );
 		}
+	}
 
-		if ( '--mdc-theme-footer' === $control['css_var'] ) {
-			$selected_value = get_theme_mod( prepend_slug( $control['id'] ) );
-			$surface        = get_material_theme_builder_option( 'surface_color' );
+	// Generate additional surface variant vars required by some components.
+	$surface    = get_theme_mod( 'surface_color' );
+	$on_surface = get_theme_mod( 'on_surface_color' );
 
-			if ( ! $selected_value && $surface ) {
-				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $surface ) );
-			}
-		}
+	if ( ! empty( $surface ) && ! empty( $on_surface ) ) {
+		$mix_4        = mix_colors( $on_surface, $surface, 0.04 );
+		$color_vars[] = esc_html( "--mdc-theme-surface-mix-4: $mix_4;" );
 
-		if ( '--mdc-theme-on-footer' === $control['css_var'] ) {
-			$selected_value = get_theme_mod( prepend_slug( $control['id'] ) );
-			$on_surface     = get_material_theme_builder_option( 'surface_text_color' );
-
-			if ( ! $selected_value && $on_surface ) {
-				$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $on_surface ) );
-			}
-		}
+		$mix_12       = mix_colors( $on_surface, $surface, 0.12 );
+		$color_vars[] = esc_html( "--mdc-theme-surface-mix-12: $mix_12;" );
 	}
 
 	$color_vars = implode( "\n\t\t\t", $color_vars );
@@ -412,11 +474,59 @@ function hex_to_rgb( $hex ) {
 	$values = str_split( $hex, ( 3 === strlen( $hex ) ) ? 1 : 2 );
 
 	return array_map(
-		function ( $hex_code ) {
-			return hexdec( str_pad( $hex_code, 2, $hex_code ) );
-		},
+		__NAMESPACE__ . '\hexdec',
 		$values
 	);
+}
+
+/**
+ * Mix 2 colors with a weight.
+ *
+ * @see https://sass-lang.com/documentation/modules/color#mix
+ *
+ * @param mixed $color1 Color hex/RGB array.
+ * @param mixed $color2 Color hex/RGB array.
+ * @param float $weight Weight to use for mixing.
+ * @return string
+ */
+function mix_colors( $color1, $color2, $weight = 0.5 ) {
+	$weight = min( $weight, 1 );
+	$weight = $weight * 2 - 1;
+	$alpha  = 0;
+
+	$w1 = ( ( $weight * -1 === $alpha ? $weight : ( $weight + $alpha ) / ( 1 + $weight * $alpha ) ) + 1 ) / 2.0;
+	$w2 = 1.0 - $w1;
+
+	$color1 = hex_to_rgb( $color1 );
+	$color2 = hex_to_rgb( $color2 );
+
+	$mixed = [
+		round( $w1 * $color1[0] + $w2 * $color2[0] ),
+		round( $w1 * $color1[1] + $w2 * $color2[1] ),
+		round( $w1 * $color1[2] + $w2 * $color2[2] ),
+	];
+
+	return '#' . implode( '', array_map( __NAMESPACE__ . '\dechex', $mixed ) );
+}
+
+/**
+ * Convert color dec to hex.
+ *
+ * @param  int $decimal Number.
+ * @return string
+ */
+function dechex( $decimal ) {
+	return str_pad( \dechex( $decimal ), 2, '0', STR_PAD_LEFT );
+}
+
+/**
+ * Convert color hex to dec.
+ *
+ * @param  string $hex_code Color hex code.
+ * @return int
+ */
+function hexdec( $hex_code ) {
+	return \hexdec( str_pad( $hex_code, 2, $hex_code ) );
 }
 
 /**
@@ -427,7 +537,7 @@ function hex_to_rgb( $hex ) {
  */
 function get_material_theme_builder_option( $name ) {
 	$value = false;
-	if ( function_exists( '\MaterialThemeBuilder\get_plugin_instance' ) ) {
+	if ( material_is_plugin_active() ) {
 		$value = \MaterialThemeBuilder\get_plugin_instance()->customizer_controls->get_option( $name );
 	}
 

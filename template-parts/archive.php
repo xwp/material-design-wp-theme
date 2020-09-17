@@ -5,7 +5,7 @@
  * @package MaterialTheme
  */
 
-$archive_layout = get_theme_mod( 'material_archive_layout', 'card' );
+$archive_layout = get_theme_mod( 'archive_layout', 'card' );
 $is_card_layout = 'card' === $archive_layout;
 
 if ( $is_card_layout ) {
