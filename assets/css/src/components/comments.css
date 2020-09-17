@@ -94,7 +94,6 @@
 	}
 
 	& .mdc-text-field--textarea.mdc-text-field--filled {
-		background-color: var(--material-comments-background, #f5f5f5);
 
 		& textarea {
 			padding: 20px 16px 7px;
@@ -105,7 +104,7 @@
 			left: 16px;
 
 			&--float-above {
-				top: 32px;
+				top: 20px;
 			}
 		}
 	}

@@ -9,8 +9,8 @@
 
 use MaterialTheme\Menu_Walker;
 
-$has_search = material_get_theme_mod( 'header_search_display' );
-$layout     = material_get_theme_mod( 'header_bar_layout', 'standard' );
+$has_search = get_theme_mod( 'header_search_display', true );
+$layout     = get_theme_mod( 'header_bar_layout', 'standard' );
 $class      = ( 'fixed' === $layout ) ? 'mdc-top-app-bar--fixed' : '';
 ?>
 
@@ -26,24 +26,12 @@ $class      = ( 'fixed' === $layout ) ? 'mdc-top-app-bar--fixed' : '';
 				</div>
 			<?php endif; ?>
 			<span class="mdc-top-app-bar__title top-app-bar__title">
-				<?php
-				if ( is_front_page() && is_home() ) :
-					?>
-					<h1 class="site-title mdc-typography mdc-typography--headline6">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-					</h1>
-					<?php
-				else :
-					?>
-					<div class="site-title mdc-typography mdc-typography--headline6"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-					<?php
-				endif;
-				?>
+				<?php get_template_part( 'template-parts/site-title' ); ?>
 			</span>
 		</section>
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end top-app-bar__menu" role="toolbar">
 				<?php if ( ! empty( $has_search ) ) : ?>
-				<button class="mdc-button search__button"> 
+				<button class="mdc-button search__button">
 					<span class="mdc-button__ripple"></span>
 					<i class="material-icons mdc-button__icon">search</i>
 					<span class="screen-reader-text"><?php esc_html_e( 'Search', 'material-theme' ); ?></span>

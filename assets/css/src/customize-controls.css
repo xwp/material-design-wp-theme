@@ -18,3 +18,34 @@
 		border-radius: 0.1875rem;
 	}
 }
+
+#customize-control-material_header_title_display {
+
+	& .description {
+		display: none;
+
+		&.-display {
+			display: block;
+		}
+	}
+}
+
+.material-more_options {
+	margin: 10px 0;
+
+	.material-show-more-options.less-options {
+		display: none;
+	}
+}
+
+.show-options {
+
+	& .material-show-more-options {
+
+		display: none;
+
+		&.less-options {
+			display: inline-block;
+		}
+	}
+}

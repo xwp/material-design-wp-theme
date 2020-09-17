@@ -61,7 +61,7 @@ function add_settings( $wp_customize ) {
 	Customizer\add_controls( $wp_customize, $controls );
 
 	$wp_customize->selective_refresh->add_partial(
-		Customizer\prepend_slug( 'archive_layout' ),
+		'archive_layout',
 		[
 			'selector'        => '.site-main__inner',
 			'render_callback' => __NAMESPACE__ . '\render_layout',
@@ -132,7 +132,7 @@ function get_controls() {
 			'active_callback' => __NAMESPACE__ . '\is_card_layout',
 		],
 		[
-			'id'      => 'comments_section',
+			'id'      => 'comment_fields_style',
 			'label'   => esc_html__( 'Comment fields', 'material-theme' ),
 			'type'    => 'radio',
 			'default' => 'outlined',
@@ -150,7 +150,7 @@ function get_controls() {
  * @return Array
  */
 function get_control_ids() {
-	return array_map( '\MaterialTheme\Customizer\prepend_slug', wp_list_pluck( get_controls(), 'id' ) );
+	return wp_list_pluck( get_controls(), 'id' );
 }
 
 /**
@@ -168,5 +168,5 @@ function render_layout() {
  * @return boolean
  */
 function is_card_layout() {
-	return 'card' === material_get_theme_mod( 'archive_layout', 'card' );
+	return 'card' === get_theme_mod( 'archive_layout', 'card' );
 }

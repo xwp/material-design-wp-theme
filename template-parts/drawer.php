@@ -9,7 +9,7 @@
 
 use MaterialTheme\Menu_Drawer_Walker;
 
-$top_app_bar_layout_setting = material_get_theme_mod( 'header_layout', 'menu' );
+$top_app_bar_layout_setting = get_theme_mod( 'header_layout', 'menu' );
 $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawer' : '';
 
 ?>
@@ -21,7 +21,10 @@ $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -wi
 				<?php the_custom_logo(); ?>
 			</div>
 		<?php endif; ?>
-		<h1 class="shrine-title mdc-drawer__title mdc-typography--headline6"><?php bloginfo( 'name' ); ?></h1>
+
+		<div class="mdc-drawer__title">
+			<?php get_template_part( 'template-parts/site-title' ); ?>
+		</div>
 	</div>
 	<div class="mdc-drawer__content">
 		<?php get_search_form(); ?>

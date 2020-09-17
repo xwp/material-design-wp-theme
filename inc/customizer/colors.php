@@ -48,7 +48,8 @@ function add_settings( $wp_customize ) {
 
 	foreach ( get_controls() as $control ) {
 		$settings[ $control['id'] ] = [
-			'transport' => 'postMessage',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'sanitize_hex_color',
 		];
 	}
 
@@ -110,7 +111,9 @@ function get_controls() {
 		$controls,
 		[
 			[
-				'id'         => 'background_color',
+				// Using the `custom_` prefix to prevent conflicts with the default WordPress
+				// `background_color` setting.
+				'id'         => 'custom_background_color',
 				'label'      => esc_html__( 'Background Color', 'material-theme' ),
 				'css_var'    => '--mdc-theme-background',
 				'a11y_label' => __( 'On Background', 'material-theme' ),
@@ -122,26 +125,28 @@ function get_controls() {
 				'a11y_label' => __( 'On Background', 'material-theme' ),
 			],
 			[
-				'id'      => 'header_color',
-				'label'   => esc_html__( 'Header Color', 'material-theme' ),
-				'css_var' => '--mdc-theme-header',
+				'id'         => 'header_color',
+				'label'      => esc_html__( 'Header Color', 'material-theme' ),
+				'css_var'    => '--mdc-theme-header',
+				'a11y_label' => __( 'On Header', 'material-theme' ),
 			],
 			[
-				'id'      => 'on_header_color',
-				'label'   => esc_html__( 'On Header Color (text and icons)', 'material-theme' ),
-				'css_var' => '--mdc-theme-on-header',
+				'id'         => 'on_header_color',
+				'label'      => esc_html__( 'On Header Color (text and icons)', 'material-theme' ),
+				'css_var'    => '--mdc-theme-on-header',
+				'a11y_label' => __( 'On Header', 'material-theme' ),
 			],
 			[
 				'id'         => 'footer_color',
 				'label'      => esc_html__( 'Footer Color', 'material-theme' ),
 				'css_var'    => '--mdc-theme-footer',
-				'a11y_label' => __( 'On Background', 'material-theme' ),
+				'a11y_label' => __( 'On Footer', 'material-theme' ),
 			],
 			[
 				'id'         => 'on_footer_color',
 				'label'      => esc_html__( 'On Footer Color (text and icons)', 'material-theme' ),
 				'css_var'    => '--mdc-theme-on-footer',
-				'a11y_label' => __( 'On Background', 'material-theme' ),
+				'a11y_label' => __( 'On Footer', 'material-theme' ),
 			],
 		]
 	);
