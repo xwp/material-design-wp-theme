@@ -107,22 +107,6 @@ function add_settings( $wp_customize ) {
 			'transport' => 'postMessage',
 		];
 
-		Customizer\add_settings( $wp_customize, $settings );
-	}
-
-	add_controls( $wp_customize );
-}
-
-/**
- * Add regular controls
- * Call to parent function
- *
- * @param WP_Customize_Manager $wp_customize Theme Customizer object.
- */
-function add_controls( $wp_customize ) {
-	$controls = [];
-
-	foreach ( get_controls() as $control ) {
 		$controls[ $control['id'] ] = array_merge(
 			[
 				'section' => Customizer\prepend_slug( 'header-footer' ),
