@@ -101,7 +101,9 @@ function add_settings( $wp_customize ) {
 			'transport' => 'postMessage',
 		];
 
-	Customizer\add_settings( $wp_customize, $settings );
+		Customizer\add_settings( $wp_customize, $settings );
+	}
+
 	add_controls( $wp_customize );
 	add_nav_menu_location_controls( $wp_customize );
 }
