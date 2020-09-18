@@ -298,9 +298,9 @@ function get_default_values() {
 		'archive_outlined'        => false,
 		'comment_fields_style'    => 'outlined',
 		'header_search_display'   => true,
-		'header_title_display'    => true,
+		'header_title_display'    => false,
 		'header_bar_layout'       => 'standard',
-		'footer_text'             => __( '&copy; 2020 Material.io', 'material-theme' ),
+		'footer_text'             => '',
 		'hide_back_to_top'        => false,
 
 	];
