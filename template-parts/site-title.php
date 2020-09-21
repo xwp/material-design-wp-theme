@@ -19,7 +19,7 @@
  * @package MaterialTheme
  */
 
-$hide_site_title = get_theme_mod( 'header_title_display', true );
+$hide_site_title = get_theme_mod( 'header_title_display', false );
 
 if ( $hide_site_title ) {
 	return;
