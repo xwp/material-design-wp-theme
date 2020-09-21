@@ -441,7 +441,7 @@ function get_frontend_css() {
 	$surface    = get_theme_mod( 'surface_color' );
 	$on_surface = get_theme_mod( 'on_surface_color' );
 
-	if ( ! empty( $surface ) && ! empty( $on_surface ) ) {
+	if ( ! material_is_plugin_active() && ! empty( $surface ) && ! empty( $on_surface ) ) {
 		$mix_4        = mix_colors( $on_surface, $surface, 0.04 );
 		$color_vars[] = esc_html( "--mdc-theme-surface-mix-4: $mix_4;" );
 
