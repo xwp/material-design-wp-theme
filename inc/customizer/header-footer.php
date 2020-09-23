@@ -40,7 +40,7 @@ function register( $wp_customize ) {
 	// Add header section.
 	$args = [
 		'priority' => 200,
-		'title'    => esc_html__( 'Header and Footer', 'material-theme' ),
+		'title'    => esc_html__( 'Top app bar & Footer', 'material-theme' ),
 	];
 
 	Customizer\add_section( $wp_customize, 'header-footer', $args );
