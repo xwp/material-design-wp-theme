@@ -57,23 +57,23 @@ function get_controls() {
 	return [
 		[
 			'id'    => 'header_label',
-			'label' => esc_html__( 'Top app bar (Header)', 'material-theme' ),
+			'label' => esc_html__( 'Top app bar', 'material-theme' ),
 			'type'  => 'hidden',
 		],
 		[
 			'id'    => 'header_search_display',
-			'label' => esc_html__( 'Show search in header', 'material-theme' ),
+			'label' => esc_html__( 'Show search in top app bar', 'material-theme' ),
 			'type'  => 'checkbox',
 		],
 		[
 			'id'          => 'header_title_display',
-			'label'       => esc_html__( 'Hide site title in header', 'material-theme' ),
+			'label'       => esc_html__( 'Hide site title in top app bar', 'material-theme' ),
 			'type'        => 'checkbox',
 			'description' => esc_html__( 'Site title is hidden but will still be used for SEO purposes', 'material-theme' ),
 		],
 		[
 			'id'      => 'header_bar_layout',
-			'label'   => esc_html__( 'Header layout', 'material-theme' ),
+			'label'   => esc_html__( 'Top app bar layout', 'material-theme' ),
 			'type'    => 'radio',
 			'choices' => [
 				'standard' => esc_html__( 'Standard', 'material-theme' ),

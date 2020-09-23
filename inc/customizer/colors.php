@@ -119,7 +119,9 @@ function get_controls() {
 				'a11y_label' => __( 'On Surface', 'material-theme' ),
 			],
 			[
-				'id'         => 'background_color',
+				// Using the `custom_` prefix to prevent conflicts with the default WordPress
+				// `background_color` setting.
+				'id'         => 'custom_background_color',
 				'label'      => esc_html__( 'Background Color', 'material-theme' ),
 				'css_var'    => '--mdc-theme-background',
 				'a11y_label' => __( 'Background', 'material-theme' ),
@@ -136,20 +138,6 @@ function get_controls() {
 	return array_merge(
 		$controls,
 		[
-			[
-				// Using the `custom_` prefix to prevent conflicts with the default WordPress
-				// `background_color` setting.
-				'id'         => 'custom_background_color',
-				'label'      => esc_html__( 'Background Color', 'material-theme' ),
-				'css_var'    => '--mdc-theme-background',
-				'a11y_label' => __( 'On Background', 'material-theme' ),
-			],
-			[
-				'id'         => 'on_background_color',
-				'label'      => esc_html__( 'On Background Color (text and icons)', 'material-theme' ),
-				'css_var'    => '--mdc-theme-on-background',
-				'a11y_label' => __( 'On Background', 'material-theme' ),
-			],
 			[
 				'id'         => 'header_color',
 				'label'      => esc_html__( 'Header Color', 'material-theme' ),
