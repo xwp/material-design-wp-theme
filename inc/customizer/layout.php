@@ -93,7 +93,7 @@ function get_controls() {
 	return [
 		[
 			'id'      => 'archive_width',
-			'label'   => esc_html__( 'Post layout width', 'material-theme' ),
+			'label'   => esc_html__( 'Posts layout width', 'material-theme' ),
 			'type'    => 'radio',
 			'choices' => [
 				'wide'   => esc_html__( 'Wide', 'material-theme' ),
@@ -102,7 +102,7 @@ function get_controls() {
 		],
 		[
 			'id'      => 'archive_layout',
-			'label'   => esc_html__( 'Post layout', 'material-theme' ),
+			'label'   => esc_html__( 'Posts layout', 'material-theme' ),
 			'type'    => 'radio',
 			'choices' => [
 				'card'  => esc_html__( 'Card', 'material-theme' ),
