@@ -1,5 +1,5 @@
 === Material Theme ===
-Contributors: xwp
+Contributors: materialdesign, google
 Tags: Blog, Custom Colors, Custom Logo, Custom Menu, Featured Images, Full Width Template, One Column, Threaded Comments, Accessibility Ready, Footer Widgets, Editor Style, Featured Images, Sticky Post, Translation Ready, RTL Language Support, Block Editor Styles, Wide Blocks, Widgets
 Requires at least: 4.5
 Tested up to: 4.8
