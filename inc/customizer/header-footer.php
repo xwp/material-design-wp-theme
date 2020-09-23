@@ -263,7 +263,7 @@ function add_nav_menu_location_controls( $wp_customize ) {
  * @return void
  */
 function render_text() {
-	$footer_text = get_theme_mod( 'footer_text', '&copy; 2020 Material.io' );
+	$footer_text = get_theme_mod( 'footer_text', '' );
 
 	echo esc_html( $footer_text );
 }
