@@ -2,20 +2,20 @@
 # Material Theme for WordPress
 
 ![Banner](wp-assets/banner-1544x500.png)
-Material Theme applies Material Design principles and Material Theming to your site, so you can customize its style.
+The official Material Design Theme – from the team behind Google’s open-source design system. Apply Material Design principles and Material Theming to your site, and customize its style. Pair this with the official [Material Design for WordPress plugin](https://wordpress.org/plugins/material-design) to customize your site’s navigation, colors, typography, and shapes, use Material Components, and choose from over 1,000 Google Fonts and Material Design icons.
 
 **Contributors:** [xwp](https://profiles.wordpress.org/xwp)  
-**Tags:** [custom-background](https://wordpress.org/plugins/tags/custom-background), [custom-logo](https://wordpress.org/plugins/tags/custom-logo), [custom-menu](https://wordpress.org/plugins/tags/custom-menu), [featured-images](https://wordpress.org/plugins/tags/featured-images), [threaded-comments](https://wordpress.org/plugins/tags/threaded-comments), [translation-ready](https://wordpress.org/plugins/tags/translation-ready)  
+**Tags:** [Blog](https://wordpress.org/plugins/tags/Blog), [Custom Colors](https://wordpress.org/plugins/tags/Custom-Colors), [Custom Logo](https://wordpress.org/plugins/tags/Custom-Logo), [Custom Menu](https://wordpress.org/plugins/tags/Custom-Menu), [Featured Images](https://wordpress.org/plugins/tags/Featured-Images), [Full Width Template](https://wordpress.org/plugins/tags/Full-Width-Template), [One Column](https://wordpress.org/plugins/tags/One-Column), [Threaded Comments](https://wordpress.org/plugins/tags/Threaded-Comments), [Accessibility Ready](https://wordpress.org/plugins/tags/Accessibility-Ready), [Footer Widgets](https://wordpress.org/plugins/tags/Footer-Widgets), [Editor Style](https://wordpress.org/plugins/tags/Editor-Style), [Featured Images](https://wordpress.org/plugins/tags/Featured-Images), [Sticky Post](https://wordpress.org/plugins/tags/Sticky-Post), [Translation Ready](https://wordpress.org/plugins/tags/Translation-Ready), [RTL Language Support](https://wordpress.org/plugins/tags/RTL-Language-Support), [Block Editor Styles](https://wordpress.org/plugins/tags/Block-Editor-Styles), [Wide Blocks](https://wordpress.org/plugins/tags/Wide-Blocks), [Widgets](https://wordpress.org/plugins/tags/Widgets)  
 **Requires at least:** 4.5  
 **Tested up to:** 4.8  
 **Stable tag:** 1.0.0  
-**License:** [GNU General Public License v2 or later](LICENSE)  
+**License:** [Apache License](https://www.apache.org/licenses/)  
 
 [![Build Status](https://travis-ci.org/xwp/material-theme-wp.svg?branch=develop)](https://travis-ci.org/xwp/material-theme-wp) [![Built with Grunt](https://gruntjs.com/cdn/builtwith.svg)](http://gruntjs.com) 
 
 ## Description ##
 
-Custom theme: Material Theme, developed by Me
+The official Material Design Theme – from the team behind Google’s open-source design system. Apply Material Design principles and Material Theming to your site, and customize its style. Pair this with the official [Material Design for WordPress plugin](https://wordpress.org/plugins/material-design) to customize your site’s navigation, colors, typography, and shapes, use Material Components, and choose from over 1,000 Google Fonts and Material Design icons.
 
 ## Installation ##
 
@@ -25,9 +25,17 @@ Custom theme: Material Theme, developed by Me
 
 ## Frequently Asked Questions ##
 
+Don’t see an answer to your question? Please search the support forum to see if it has already been discussed. Otherwise, please open a new support topic.
 ### Does this theme support any plugins? ###
 Material Theme includes support for Infinite Scroll in Jetpack.
 
+
+## Contributors ##
+
+Material Design is a design system created by Google and backed by open-source code that helps teams build high-quality digital experiences.
+
+- [Google](https://profiles.wordpress.org/google/)
+- [Material Design](https://profiles.wordpress.org/materialdesign/)
 
 ## Changelog ##
 
