@@ -36,10 +36,21 @@ before_install:
 
 install:
   - npm install
+  - export DEV_LIB_PATH=vendor/xwp/wp-dev-lib/scripts
+  - export DIFF_HEAD=HEAD
+  - source "$DEV_LIB_PATH/travis.install.sh"
 
 jobs:
   fast_finish: true
   include:
+    - stage: lint
+      name: Lint (PHP, JavaScript, and configuration files)
+      php: "7.4"
+      env: WP_VERSION=latest DEV_LIB_ONLY=xmllint,phpsyntax
+      script:
+        - source "$DEV_LIB_PATH/travis.script.sh"
+        - npm run lint
+
     - stage: deploy to staging
       if: (NOT type IN (pull_request))
       script: skip
