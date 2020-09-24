@@ -5,7 +5,7 @@
  * @package MaterialTheme
  */
 
-$footer_text = get_theme_mod( 'footer_text', __( '', 'material-theme' ) );
+$footer_text = get_theme_mod( 'footer_text', '' );
 ?>
 
 	<div
