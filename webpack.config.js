@@ -142,6 +142,46 @@ const editor = {
 		} ),
 	],
 };
+const materialCssPackages = [
+	'@material/typography/dist/mdc.typography.css',
+	'@material/button/dist/mdc.button.css',
+	'@material/top-app-bar/dist/mdc.top-app-bar.css',
+	'@material/icon-button/dist/mdc.icon-button.css',
+	'@material/drawer/dist/mdc.drawer.css',
+	'@material/list/dist/mdc.list.css',
+	'@material/form-field/dist/mdc.form-field.css',
+	'@material/floating-label/dist/mdc.floating-label.css',
+	'@material/textfield/dist/mdc.textfield.css',
+	'@material/checkbox/dist/mdc.checkbox.css',
+	'@material/card/dist/mdc.card.css',
+	'@material/layout-grid/dist/mdc.layout-grid.css',
+	'@material/ripple/dist/mdc.ripple.css',
+	'@material/image-list/dist/mdc.image-list.css',
+	'@material/tab-bar/dist/mdc.tab-bar.css',
+	'@material/tab-scroller/dist/mdc.tab-scroller.css',
+	'@material/tab-indicator/dist/mdc.tab-indicator.css',
+	'@material/tab/dist/mdc.tab.css',
+];
+const materialCss = {
+	...defaultConfig,
+	...sharedConfig,
+	entry: materialCssPackages.reduce( ( entryConfig, packagePath ) => {
+		const packageHandle = `mdc-${packagePath
+			.split( 'mdc.' )[1]
+			.replace( '.css', '' ) }`;
+		return {
+			...entryConfig,
+			[packageHandle]: packagePath,
+		};
+	}, {} ),
+	plugins: [
+		...sharedConfig.plugins,
+		new WebpackBar( {
+			name: 'Material CSS',
+			color: '#3ce1bb',
+		} ),
+	],
+};
 
 module.exports = [
 	// prettier-ignore
@@ -149,4 +189,5 @@ module.exports = [
 	frontEnd,
 	admin,
 	editor,
+	materialCss,
 ];

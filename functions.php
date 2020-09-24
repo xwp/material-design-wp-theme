@@ -144,7 +144,45 @@ add_action( 'widgets_init', 'material_theme_wp_widgets_init' );
 function material_theme_wp_scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
-	wp_enqueue_style( 'material-theme-style', get_stylesheet_uri(), array(), $theme_version );
+	$packages = [
+		'@material/typography/dist/mdc.typography.css',
+		'@material/button/dist/mdc.button.css',
+		'@material/top-app-bar/dist/mdc.top-app-bar.css',
+		'@material/icon-button/dist/mdc.icon-button.css',
+		'@material/drawer/dist/mdc.drawer.css',
+		'@material/list/dist/mdc.list.css',
+		'@material/form-field/dist/mdc.form-field.css',
+		'@material/floating-label/dist/mdc.floating-label.css',
+		'@material/textfield/dist/mdc.textfield.css',
+		'@material/checkbox/dist/mdc.checkbox.css',
+		'@material/card/dist/mdc.card.css',
+		'@material/layout-grid/dist/mdc.layout-grid.css',
+		'@material/ripple/dist/mdc.ripple.css',
+		'@material/image-list/dist/mdc.image-list.css',
+		'@material/tab-bar/dist/mdc.tab-bar.css',
+		'@material/tab-scroller/dist/mdc.tab-scroller.css',
+		'@material/tab-indicator/dist/mdc.tab-indicator.css',
+		'@material/tab/dist/mdc.tab.css',
+	];
+
+	$theme_mdc_style_dependencies = [];
+	foreach ( $packages as $package_path ) {
+		$handle = 'mdc-' . str_replace( '.css', '', explode( 'mdc.', $package_path )[1] );
+
+		$theme_mdc_style_dependencies[] = $handle;
+
+		if ( ! wp_style_is( $handle, 'registered' ) ) {
+			wp_register_style(
+				$handle,
+				get_template_directory_uri() . 'assets/css/' . $handle . '-compiled.css',
+				[],
+				$theme_version
+			);
+		}
+	}
+
+
+	wp_enqueue_style( 'material-theme-style', get_stylesheet_uri(), $theme_mdc_style_dependencies, $theme_version );
 
 	wp_enqueue_style( 'material-theme-front-end-css', get_template_directory_uri() . '/assets/css/front-end-compiled.css', array( 'material-theme-style' ), $theme_version );
 
