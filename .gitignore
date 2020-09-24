@@ -3,7 +3,6 @@
 .env
 .idea
 composer.lock
-package-lock.json
 yarn.lock
 assets/css/*
 !assets/css/src/

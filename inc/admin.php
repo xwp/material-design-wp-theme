@@ -82,6 +82,11 @@ function plugin_not_installed_notice() {
 		return;
 	}
 
+	// Supress notice if WP_DEBUG is true.
+	if ( defined( '\WP_DEBUG' ) && \WP_DEBUG ) {
+		return;
+	}
+
 	$args = [
 		'page'             => 'tgmpa-install-plugins',
 		'plugin'           => $plugin,

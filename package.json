@@ -54,7 +54,7 @@
     "postcss-nested": "^4.2.3",
     "postcss-preset-env": "^6.7.0",
     "postcss-simple-vars": "5.0.2",
-    "prettier": "^2.1.1",
+    "prettier": "npm:wp-prettier@1.19.1",
     "rtlcss-webpack-plugin": "^4.0.3",
     "terser-webpack-plugin": "^2.3.8",
     "webpack": "^4.44.1",
