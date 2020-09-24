@@ -174,7 +174,7 @@ function material_theme_wp_scripts() {
 		if ( ! wp_style_is( $handle, 'registered' ) ) {
 			wp_register_style(
 				$handle,
-				get_template_directory_uri() . 'assets/css/' . $handle . '-compiled.css',
+				get_template_directory_uri() . '/assets/css/' . $handle . '-compiled.css',
 				[],
 				$theme_version
 			);
