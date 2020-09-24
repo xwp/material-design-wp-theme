@@ -36,6 +36,7 @@ before_install:
 
 install:
   - npm install
+  - export DEV_LIB_PATH=vendor/xwp/wp-dev-lib/scripts
 
 jobs:
   fast_finish: true
