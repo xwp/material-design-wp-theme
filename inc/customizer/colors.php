@@ -1,5 +1,23 @@
 <?php
 /**
+ * Copyright 2020 Material Design
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * 
+ * @package MaterialTheme
+ */
+
+/**
  * Material Theme Customizer Colors section.
  *
  * @package MaterialTheme
@@ -71,20 +89,20 @@ function get_controls() {
 				'id'         => 'primary_color',
 				'label'      => esc_html__( 'Primary Color', 'material-theme' ),
 				'css_var'    => '--mdc-theme-primary',
-				'a11y_label' => __( 'On Primary', 'material-theme' ),
+				'a11y_label' => __( 'Primary', 'material-theme' ),
+			],
+			[
+				'id'         => 'secondary_color',
+				'label'      => esc_html__( 'Secondary Color', 'material-theme' ),
+				'css_var'    => '--mdc-theme-secondary',
+				'a11y_label' => __( 'Secondary', 'material-theme' ),
+				'default'    => '#03dac6',
 			],
 			[
 				'id'         => 'on_primary_color',
 				'label'      => esc_html__( 'On Primary Color (text and icons)', 'material-theme' ),
 				'css_var'    => '--mdc-theme-on-primary',
 				'a11y_label' => __( 'On Primary', 'material-theme' ),
-			],
-			[
-				'id'         => 'secondary_color',
-				'label'      => esc_html__( 'Secondary Color', 'material-theme' ),
-				'css_var'    => '--mdc-theme-secondary',
-				'a11y_label' => __( 'On Secondary', 'material-theme' ),
-				'default'    => '#03dac6',
 			],
 			[
 				'id'         => 'on_secondary_color',
@@ -96,7 +114,7 @@ function get_controls() {
 				'id'         => 'surface_color',
 				'label'      => esc_html__( 'Surface Color', 'material-theme' ),
 				'css_var'    => '--mdc-theme-surface',
-				'a11y_label' => __( 'On Surface', 'material-theme' ),
+				'a11y_label' => __( 'Surface', 'material-theme' ),
 			],
 			[
 				'id'         => 'on_surface_color',
@@ -104,19 +122,13 @@ function get_controls() {
 				'css_var'    => '--mdc-theme-on-surface',
 				'a11y_label' => __( 'On Surface', 'material-theme' ),
 			],
-		];
-	}
-
-	return array_merge(
-		$controls,
-		[
 			[
 				// Using the `custom_` prefix to prevent conflicts with the default WordPress
 				// `background_color` setting.
 				'id'         => 'custom_background_color',
 				'label'      => esc_html__( 'Background Color', 'material-theme' ),
 				'css_var'    => '--mdc-theme-background',
-				'a11y_label' => __( 'On Background', 'material-theme' ),
+				'a11y_label' => __( 'Background', 'material-theme' ),
 			],
 			[
 				'id'         => 'on_background_color',
@@ -124,6 +136,12 @@ function get_controls() {
 				'css_var'    => '--mdc-theme-on-background',
 				'a11y_label' => __( 'On Background', 'material-theme' ),
 			],
+		];
+	}
+
+	return array_merge(
+		$controls,
+		[
 			[
 				'id'         => 'header_color',
 				'label'      => esc_html__( 'Header Color', 'material-theme' ),

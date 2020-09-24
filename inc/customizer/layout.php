@@ -1,5 +1,23 @@
 <?php
 /**
+ * Copyright 2020 Material Design
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * 
+ * @package MaterialTheme
+ */
+
+/**
  * Material Theme Customizer Layout section.
  *
  * @package MaterialTheme
@@ -26,7 +44,7 @@ function register( $wp_customize ) {
 	// Add layout section.
 	$args = [
 		'priority' => 200,
-		'title'    => esc_html__( 'Layout Settings', 'material-theme' ),
+		'title'    => esc_html__( 'Post Settings', 'material-theme' ),
 	];
 
 	Customizer\add_section( $wp_customize, 'layout', $args );
@@ -79,7 +97,7 @@ function get_controls() {
 	return [
 		[
 			'id'      => 'archive_width',
-			'label'   => esc_html__( 'Layout Width', 'material-theme' ),
+			'label'   => esc_html__( 'Posts layout width', 'material-theme' ),
 			'type'    => 'radio',
 			'choices' => [
 				'wide'   => esc_html__( 'Wide', 'material-theme' ),
@@ -88,7 +106,7 @@ function get_controls() {
 		],
 		[
 			'id'      => 'archive_layout',
-			'label'   => esc_html__( 'Post layout and display options', 'material-theme' ),
+			'label'   => esc_html__( 'Posts layout', 'material-theme' ),
 			'type'    => 'radio',
 			'choices' => [
 				'card'  => esc_html__( 'Card', 'material-theme' ),
@@ -133,7 +151,7 @@ function get_controls() {
 		],
 		[
 			'id'      => 'comment_fields_style',
-			'label'   => esc_html__( 'Comment fields', 'material-theme' ),
+			'label'   => esc_html__( 'Comment field display options', 'material-theme' ),
 			'type'    => 'radio',
 			'default' => 'outlined',
 			'choices' => [

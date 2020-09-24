@@ -1,17 +1,32 @@
+/**
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 /*!
 Theme Name: Material Theme
 Theme URI: https://github.com/xwp/material-theme-wp
-Author: XWP
-Author URI: https://xwp.co/
-Description: Material Theme
+Author: Material Design
+Author URI: https://material.io/
+Description: The official Material Design Theme – from the team behind Google’s open-source design system. Apply Material Design principles and Material Theming to your site, and customize its style. Pair this with the official Material Design for WordPress plugin to customize your site’s navigation, colors, typography, and shapes, use Material Components, and choose from over 1,000 Google Fonts and Material Design icons.
 Version: 1.0.0-alpha
-License: GNU General Public License v2 or later
-License URI: LICENSE
+License: Apache License
+License URI: https://www.apache.org/licenses/
 Text Domain: material-theme
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: Blog, Custom Colors, Custom Logo, Custom Menu, Featured Images, Full Width Template, One Column, Threaded Comments, Accessibility Ready, Footer Widgets, Editor Style, Featured Images, Sticky Post, Translation Ready, RTL Language Support, Block Editor Styles, Wide Blocks, Widgets
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+The official Material Design Theme – from the team behind Google’s open-source design system. Apply Material Design principles and Material Theming to your site, and customize its style. Pair this with the official [Material Design for WordPress plugin](https://wordpress.org/plugins/material-design) to customize your site’s navigation, colors, typography, and shapes, use Material Components, and choose from over 1,000 Google Fonts and Material Design icons.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/

@@ -5,7 +5,7 @@
  * @package MaterialTheme
  */
 
-$footer_text = get_theme_mod( 'footer_text', __( '&copy; 2020 Material.io', 'material-theme' ) );
+$footer_text = get_theme_mod( 'footer_text', '' );
 ?>
 
 	<div

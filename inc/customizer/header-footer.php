@@ -1,5 +1,23 @@
 <?php
 /**
+ * Copyright 2020 Material Design
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * 
+ * @package MaterialTheme
+ */
+
+/**
  * Material Theme Customizer Header & Footer section.
  *
  * @package MaterialTheme
@@ -26,7 +44,7 @@ function register( $wp_customize ) {
 	// Add header section.
 	$args = [
 		'priority' => 200,
-		'title'    => esc_html__( 'Header and Footer', 'material-theme' ),
+		'title'    => esc_html__( 'Top app bar & Footer', 'material-theme' ),
 	];
 
 	Customizer\add_section( $wp_customize, 'header-footer', $args );
@@ -43,23 +61,23 @@ function get_controls() {
 	return [
 		[
 			'id'    => 'header_label',
-			'label' => esc_html__( 'Top app bar (Header)', 'material-theme' ),
+			'label' => esc_html__( 'Top app bar', 'material-theme' ),
 			'type'  => 'hidden',
 		],
 		[
 			'id'    => 'header_search_display',
-			'label' => esc_html__( 'Show search in header', 'material-theme' ),
+			'label' => esc_html__( 'Show search in top app bar', 'material-theme' ),
 			'type'  => 'checkbox',
 		],
 		[
 			'id'          => 'header_title_display',
-			'label'       => esc_html__( 'Hide site title in header', 'material-theme' ),
+			'label'       => esc_html__( 'Hide site title in top app bar', 'material-theme' ),
 			'type'        => 'checkbox',
 			'description' => esc_html__( 'Site title is hidden but will still be used for SEO purposes', 'material-theme' ),
 		],
 		[
 			'id'      => 'header_bar_layout',
-			'label'   => esc_html__( 'Header layout', 'material-theme' ),
+			'label'   => esc_html__( 'Top app bar layout', 'material-theme' ),
 			'type'    => 'radio',
 			'choices' => [
 				'standard' => esc_html__( 'Standard', 'material-theme' ),
@@ -249,7 +267,7 @@ function add_nav_menu_location_controls( $wp_customize ) {
  * @return void
  */
 function render_text() {
-	$footer_text = get_theme_mod( 'footer_text', '&copy; 2020 Material.io' );
+	$footer_text = get_theme_mod( 'footer_text', '' );
 
 	echo esc_html( $footer_text );
 }
