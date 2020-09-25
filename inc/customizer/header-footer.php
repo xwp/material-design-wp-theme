@@ -31,7 +31,7 @@ use MaterialTheme\Customizer;
  * Attach hooks
  */
 function setup() {
-	add_action( 'customize_register', __NAMESPACE__ . '\register' );
+	add_action( 'customize_register', __NAMESPACE__ . '\register', 100 );
 }
 
 /**
@@ -43,7 +43,7 @@ function setup() {
 function register( $wp_customize ) {
 	// Add header section.
 	$args = [
-		'priority' => 200,
+		'priority' => 180,
 		'title'    => esc_html__( 'Top app bar & Footer', 'material-theme' ),
 	];
 
@@ -90,21 +90,25 @@ function get_controls() {
 			'label'       => esc_html__( 'Menu Locations', 'material-theme' ),
 			'description' => esc_html__( 'Material theme can display menus in 2 locations. Select which menu appears in each location.', 'material-theme' ),
 			'type'        => 'hidden',
+			'priority'    => 99,
 		],
 		[
-			'id'    => 'footer_label',
-			'label' => esc_html__( 'Footer', 'material-theme' ),
-			'type'  => 'hidden',
+			'id'       => 'footer_label',
+			'label'    => esc_html__( 'Footer', 'material-theme' ),
+			'type'     => 'hidden',
+			'priority' => 110,
 		],
 		[
-			'id'    => 'footer_text',
-			'label' => esc_html__( 'Footer text', 'material-theme' ),
-			'type'  => 'text',
+			'id'       => 'footer_text',
+			'label'    => esc_html__( 'Footer text', 'material-theme' ),
+			'type'     => 'text',
+			'priority' => 110,
 		],
 		[
-			'id'    => 'hide_back_to_top',
-			'label' => esc_html__( 'Hide back to top button', 'material-theme' ),
-			'type'  => 'checkbox',
+			'id'       => 'hide_back_to_top',
+			'label'    => esc_html__( 'Hide back to top button', 'material-theme' ),
+			'type'     => 'checkbox',
+			'priority' => 110,
 		],
 	];
 }
@@ -253,6 +257,7 @@ function add_nav_menu_location_controls( $wp_customize ) {
 				'location_id' => $location,
 				'section'     => Customizer\prepend_slug( 'header-footer' ),
 				'choices'     => $choices,
+				'priority'    => 100,
 			)
 		);
 	}
