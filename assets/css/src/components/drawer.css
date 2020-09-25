@@ -22,9 +22,17 @@
 	}
 
 	& .mdc-drawer__title {
+		align-items: center;
+		display: flex;
+		height: 47px;
+		margin-bottom: 5px;
 
 		&::before {
 			content: none;
+		}
+
+		& a {
+			text-decoration: none;
 		}
 	}
 
