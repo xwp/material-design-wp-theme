@@ -122,6 +122,12 @@ function get_controls() {
 				'css_var'    => '--mdc-theme-on-surface',
 				'a11y_label' => __( 'On Surface', 'material-theme' ),
 			],
+		];
+	}
+
+	return array_merge(
+		$controls,
+		[
 			[
 				// Using the `custom_` prefix to prevent conflicts with the default WordPress
 				// `background_color` setting.
@@ -136,12 +142,6 @@ function get_controls() {
 				'css_var'    => '--mdc-theme-on-background',
 				'a11y_label' => __( 'On Background', 'material-theme' ),
 			],
-		];
-	}
-
-	return array_merge(
-		$controls,
-		[
 			[
 				'id'         => 'header_color',
 				'label'      => esc_html__( 'Top app bar Color', 'material-theme' ),
