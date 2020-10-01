@@ -144,15 +144,15 @@ function get_controls() {
 		[
 			[
 				'id'         => 'header_color',
-				'label'      => esc_html__( 'Header Color', 'material-theme' ),
+				'label'      => esc_html__( 'Top app bar Color', 'material-theme' ),
 				'css_var'    => '--mdc-theme-header',
-				'a11y_label' => __( 'On Header', 'material-theme' ),
+				'a11y_label' => __( 'On Top app bar', 'material-theme' ),
 			],
 			[
 				'id'         => 'on_header_color',
-				'label'      => esc_html__( 'On Header Color (text and icons)', 'material-theme' ),
+				'label'      => esc_html__( 'On Top app bar Color (text and icons)', 'material-theme' ),
 				'css_var'    => '--mdc-theme-on-header',
-				'a11y_label' => __( 'On Header', 'material-theme' ),
+				'a11y_label' => __( 'Top app bar', 'material-theme' ),
 			],
 			[
 				'id'         => 'footer_color',
@@ -164,7 +164,7 @@ function get_controls() {
 				'id'         => 'on_footer_color',
 				'label'      => esc_html__( 'On Footer Color (text and icons)', 'material-theme' ),
 				'css_var'    => '--mdc-theme-on-footer',
-				'a11y_label' => __( 'On Footer', 'material-theme' ),
+				'a11y_label' => __( 'Footer', 'material-theme' ),
 			],
 		]
 	);

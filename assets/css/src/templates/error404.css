@@ -31,7 +31,7 @@
 		margin-right: auto;
 	}
 
-	& .error-404 {
-		max-width: var(--max);
+	& .content-area {
+		max-width: var(--mdc-theme-max-content-width);
 	}
 }
