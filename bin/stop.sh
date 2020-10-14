@@ -13,13 +13,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-shopt -s expand_aliases
+source .env
 source ./bin/includes.sh
 
 printf "Shutting down containers ... "
-
-docker-compose down 2>/dev/null
+if [[ ! -z "${DOCKER_COMPOSE_PATH}" ]]; then
+	docker-compose --file="$DOCKER_COMPOSE_PATH" --file=docker-compose-plugin-dev.yml down 2>/dev/null
+else
+	docker-compose down 2>/dev/null
+fi
 
 printf "$(action_format "done")"
 echo ""

@@ -80,6 +80,7 @@
     "lint:css": "wp-scripts lint-style",
     "lint:js": "wp-scripts lint-js",
     "lint:php": "composer lint",
+    "plugin-dev": "bin/plugin-dev.sh",
     "postinstall": "composer install",
     "readme": "composer readme",
     "test": "npm-run-all --parallel test:js test:php",

@@ -13,8 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-shopt -s expand_aliases
+source .env
 source ./bin/includes.sh
 
 # Grab full name of wordpress container
@@ -30,4 +29,9 @@ fi
 echo -e "Here comes the logs in real-time ... $(action_format "done")"
 echo ""
 
-docker-compose logs -f
+if [[ ! -z "${DOCKER_COMPOSE_PATH}" ]]; then
+	docker-compose --file="$DOCKER_COMPOSE_PATH" --file=docker-compose-plugin-dev.yml logs -f
+else
+	docker-compose logs -f
+fi
+

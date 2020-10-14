@@ -1,9 +1,9 @@
 {
-  "name": "xwp/material-theme-wp",
+  "name": "xwp/material-design-wp-theme",
   "type": "wordpress-theme",
-  "description": "Material Theme applies Material Design principles and Material Theming to your site, so you can customize its style.",
-  "homepage": "https://github.com/xwp/material-theme-wp",
-  "license": "GPL-2.0-or-later",
+  "description": "Material Design theme for WordPress.",
+  "homepage": "https://github.com/xwp/material-design-wp-theme",
+  "license": "Apache-2.0",
   "minimum-stability": "dev",
   "prefer-stable": true,
   "config": {
@@ -57,7 +57,7 @@
     ]
   },
   "extra": {
-    "installer-name": "material-theme",
+    "installer-name": "material-design",
     "copy-file": {
       "tests/wp-tests-config.php": "vendor/xwp/wordpress-tests/phpunit/wp-tests-config.php"
     }
