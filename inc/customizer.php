@@ -134,7 +134,7 @@ function preview_scripts() {
 
 	wp_localize_script(
 		'material-design-theme-customizer-preview',
-		'materialThemeColorControls',
+		'materialDesignThemeColorControls',
 		$css_vars
 	);
 }
