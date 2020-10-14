@@ -14,13 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 /**
  * Archive card layout
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 $columns = get_theme_mod( 'archive_width', 'normal' ) === 'normal' ? 2 : 3;

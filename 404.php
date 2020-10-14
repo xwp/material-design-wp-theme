@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 /**
@@ -22,7 +22,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 get_header();

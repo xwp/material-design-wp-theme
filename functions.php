@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 /**
@@ -22,7 +22,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 if ( ! function_exists( 'material_theme_wp_setup' ) ) :

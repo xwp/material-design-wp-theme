@@ -14,13 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 /**
  * Template part for post next/previous links.
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 $previous_link = get_previous_post_link( '%link' );

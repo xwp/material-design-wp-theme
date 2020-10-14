@@ -14,13 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 /**
  * Back to Top partial
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 $is_hidden = get_theme_mod( 'hide_back_to_top' );

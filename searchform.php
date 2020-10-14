@@ -14,13 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 /**
  * Search form partial
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 ?>

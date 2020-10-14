@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 /**
@@ -22,7 +22,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 $show_comments = get_theme_mod( 'archive_comments', true );

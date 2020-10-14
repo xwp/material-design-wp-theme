@@ -14,13 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 /**
  * The site title template
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 $hide_site_title = get_theme_mod( 'header_title_display', false );

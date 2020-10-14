@@ -14,13 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 /**
  * Page navigation partial
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 global $wp_query;

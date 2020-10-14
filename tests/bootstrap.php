@@ -14,13 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 /**
  * Bootstrap PHPUnit related dependencies.
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 global $_theme_files;

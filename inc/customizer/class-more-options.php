@@ -14,13 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 /**
  * Class More_Options.
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 namespace MaterialTheme\Customizer;

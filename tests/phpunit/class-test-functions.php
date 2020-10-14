@@ -14,13 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 /**
  * Test_Material_Theme
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 namespace MaterialTheme;
@@ -28,7 +28,7 @@ namespace MaterialTheme;
 /**
  * Class Test_Material_Theme
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 class Test_Material_Theme extends \WP_UnitTestCase {
 
