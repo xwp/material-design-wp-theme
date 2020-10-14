@@ -54,7 +54,7 @@ function enqueue_admin_assets() {
  * @return void
  */
 function plugin_not_installed_notice() {
-	$plugin = 'material-theme-builder';
+	$plugin = 'material-design';
 	$action = false;
 	$title  = '';
 	$cta    = '';
@@ -105,7 +105,7 @@ function plugin_not_installed_notice() {
 	<div class="notice notice-info is-dismissible  material-notice-container">
 		<img
 			src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/plugin-logo.png' ); ?>"
-			alt="<?php esc_html_e( 'Material Theme', 'material-design' ); ?>"
+			alt="<?php esc_html_e( 'Material Design', 'material-design' ); ?>"
 		/>
 
 		<div class="material-notice-container__content">
@@ -115,7 +115,7 @@ function plugin_not_installed_notice() {
 					'%s %s',
 					esc_html( $title ),
 					esc_html__(
-						' the Material Plugin to customize your Material Theme',
+						' the Material Design plugin to customize your Material Design theme',
 						'material-design'
 					)
 				)
@@ -127,7 +127,7 @@ function plugin_not_installed_notice() {
 					sprintf(
 						/* translators: %s: url to the plugin install/active action */
 						esc_html__(
-							'To take full advantage of this theme you will need the Material Plugin. %s',
+							'To take full advantage of this theme you will need the Material Design plugin. %s',
 							'material-design'
 						),
 						$action_link
