@@ -18,14 +18,14 @@
  */
 
 /**
- * Material Theme Customizer Menu options.
+ * Material Design Customizer Menu options.
  *
  * @package MaterialDesign
  */
 
-namespace MaterialTheme\Customizer\Menu;
+namespace MaterialDesign\Theme\Customizer\Menu;
 
-use MaterialTheme\Customizer;
+use MaterialDesign\Theme\Customizer;
 
 /**
  * Attach hooks

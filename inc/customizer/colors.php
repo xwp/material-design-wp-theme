@@ -18,14 +18,14 @@
  */
 
 /**
- * Material Theme Customizer Colors section.
+ * Material Design Customizer Colors section.
  *
  * @package MaterialDesign
  */
 
-namespace MaterialTheme\Customizer\Colors;
+namespace MaterialDesign\Theme\Customizer\Colors;
 
-use MaterialTheme\Customizer;
+use MaterialDesign\Theme\Customizer;
 
 /**
  * Attach hooks.

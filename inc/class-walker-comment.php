@@ -26,7 +26,7 @@
  * @package MaterialDesign
  */
 
-namespace MaterialTheme;
+namespace MaterialDesign\Theme;
 
 /**
  * Walker_Comment.

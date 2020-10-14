@@ -25,7 +25,7 @@
  * @package MaterialDesign
  */
 
-use MaterialTheme\Menu_Walker;
+use MaterialDesign\Theme\Menu_Walker;
 
 $has_search = get_theme_mod( 'header_search_display', true );
 $layout     = get_theme_mod( 'header_bar_layout', 'standard' );

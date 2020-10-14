@@ -25,7 +25,7 @@
  * @package MaterialDesign
  */
 
-use MaterialTheme\Menu_Walker;
+use MaterialDesign\Theme\Menu_Walker;
 
 if ( ! has_nav_menu( 'menu-1' ) ) {
 	return;

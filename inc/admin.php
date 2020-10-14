@@ -23,7 +23,7 @@
  * @package MaterialDesign
  */
 
-namespace MaterialTheme\Admin;
+namespace MaterialDesign\Theme\Admin;
 
 /**
  * Attach hooks
@@ -41,7 +41,7 @@ function setup() {
  */
 function enqueue_admin_assets() {
 	wp_enqueue_style(
-		'material-theme-admin-css',
+		'material-design-theme-admin-css',
 		get_template_directory_uri() . '/assets/css/admin-compiled.css',
 		[],
 		wp_get_theme()->get( 'Version' )

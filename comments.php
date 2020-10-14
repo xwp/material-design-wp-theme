@@ -180,7 +180,7 @@ if ( has_action( 'set_comment_cookies', 'wp_set_comment_cookies' ) && get_option
 					'style'       => 'ul',
 					'short_ping'  => true,
 					'avatar_size' => 60,
-					'walker'      => new MaterialTheme\Walker_Comment(),
+					'walker'      => new MaterialDesign\Theme\Walker_Comment(),
 				)
 			);
 			?>

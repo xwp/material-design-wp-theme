@@ -23,7 +23,7 @@
  * @package MaterialDesign
  */
 
-namespace MaterialTheme\Customizer;
+namespace MaterialDesign\Theme\Customizer;
 
 if ( ! class_exists( '\WP_Customize_Control' ) ) {
 	return;

@@ -25,7 +25,7 @@
  * @package MaterialDesign
  */
 
-use MaterialTheme\Menu_Drawer_Walker;
+use MaterialDesign\Theme\Menu_Drawer_Walker;
 
 $top_app_bar_layout_setting = get_theme_mod( 'header_layout', 'menu' );
 $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -with-drawer' : '';

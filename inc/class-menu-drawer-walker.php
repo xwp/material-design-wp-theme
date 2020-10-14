@@ -24,7 +24,7 @@
  * @package MaterialDesign
  */
 
-namespace MaterialTheme;
+namespace MaterialDesign\Theme;
 
 /**
  * Menu_Drawer_Walker class

@@ -25,7 +25,7 @@
  * @since 4.4.0
  */
 
-namespace MaterialTheme\Widgets;
+namespace MaterialDesign\Theme\Widgets;
 
 /**
  * Override default widget with our own markup

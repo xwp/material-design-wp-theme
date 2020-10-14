@@ -23,9 +23,9 @@
  * @package MaterialDesign
  */
 
-namespace MaterialTheme\Widgets;
+namespace MaterialDesign\Theme\Widgets;
 
-use MaterialTheme\Menu_Drawer_Walker;
+use MaterialDesign\Theme\Menu_Drawer_Walker;
 
 /**
  * Attach hooks

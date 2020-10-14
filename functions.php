@@ -18,7 +18,7 @@
  */
 
 /**
- * Material theme functions and definitions
+ * Material Design functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -37,7 +37,7 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Material theme, use a find and replace
+		 * If you're building a theme based on the Material Design theme, use a find and replace
 		 * to change 'material-design' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'material-design', get_template_directory() . '/languages' );
@@ -162,9 +162,9 @@ add_action( 'widgets_init', 'material_theme_wp_widgets_init' );
 function material_theme_wp_scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
-	wp_enqueue_style( 'material-theme-style', get_stylesheet_uri(), array(), $theme_version );
+	wp_enqueue_style( 'material-design-theme-style', get_stylesheet_uri(), array(), $theme_version );
 
-	wp_enqueue_style( 'material-theme-front-end-css', get_template_directory_uri() . '/assets/css/front-end-compiled.css', array( 'material-theme-style' ), $theme_version );
+	wp_enqueue_style( 'material-design-theme-front-end-css', get_template_directory_uri() . '/assets/css/front-end-compiled.css', array( 'material-design-theme-style' ), $theme_version );
 
 	if ( ! wp_style_is( 'material-google-fonts-cdn', 'enqueued' ) ) {
 		wp_enqueue_style(
@@ -175,7 +175,7 @@ function material_theme_wp_scripts() {
 		);
 	}
 
-	wp_enqueue_script( 'material-theme-js', get_template_directory_uri() . '/assets/js/front-end.js', array(), $theme_version, true );
+	wp_enqueue_script( 'material-design-theme-js', get_template_directory_uri() . '/assets/js/front-end.js', array(), $theme_version, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -184,12 +184,12 @@ function material_theme_wp_scripts() {
 add_action( 'wp_enqueue_scripts', 'material_theme_wp_scripts' );
 
 /**
- * Determine if the Material Theme Builder plugin is installed and active.
+ * Determine if the Material Design plugin is installed and active.
  *
  * @return boolean
  */
 function material_is_plugin_active() {
-	return class_exists( '\MaterialThemeBuilder\Plugin' );
+	return class_exists( '\MaterialDesign\Plugin\Plugin' );
 }
 
 /**
@@ -249,10 +249,10 @@ require get_template_directory() . '/inc/widgets/class-wp-widget-recent-posts.ph
 require get_template_directory() . '/inc/widgets/class-wp-widget-rss.php';
 require get_template_directory() . '/inc/widgets.php';
 
-MaterialTheme\Admin\setup();
-MaterialTheme\Customizer\setup();
-MaterialTheme\Customizer\Colors\setup();
-MaterialTheme\Customizer\Header_Footer\setup();
-MaterialTheme\Customizer\Layout\setup();
-MaterialTheme\Customizer\Menu\setup();
-MaterialTheme\Widgets\setup();
+MaterialDesign\Theme\Admin\setup();
+MaterialDesign\Theme\Customizer\setup();
+MaterialDesign\Theme\Customizer\Colors\setup();
+MaterialDesign\Theme\Customizer\Header_Footer\setup();
+MaterialDesign\Theme\Customizer\Layout\setup();
+MaterialDesign\Theme\Customizer\Menu\setup();
+MaterialDesign\Theme\Widgets\setup();

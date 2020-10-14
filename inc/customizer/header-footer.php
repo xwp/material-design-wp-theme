@@ -18,14 +18,14 @@
  */
 
 /**
- * Material Theme Customizer Header & Footer section.
+ * Material Design Customizer Header & Footer section.
  *
  * @package MaterialDesign
  */
 
-namespace MaterialTheme\Customizer\Header_Footer;
+namespace MaterialDesign\Theme\Customizer\Header_Footer;
 
-use MaterialTheme\Customizer;
+use MaterialDesign\Theme\Customizer;
 
 /**
  * Attach hooks
@@ -88,7 +88,7 @@ function get_controls() {
 			// Hidden field for menu locations label.
 			'id'          => 'menu-location-label',
 			'label'       => esc_html__( 'Menu Locations', 'material-design' ),
-			'description' => esc_html__( 'Material theme can display menus in 2 locations. Select which menu appears in each location.', 'material-design' ),
+			'description' => esc_html__( 'The Material Design theme can display menus in 2 locations. Select which menu appears in each location.', 'material-design' ),
 			'type'        => 'hidden',
 			'priority'    => 99,
 		],

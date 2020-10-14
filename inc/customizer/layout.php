@@ -18,14 +18,14 @@
  */
 
 /**
- * Material Theme Customizer Layout section.
+ * Material Design Customizer Layout section.
  *
  * @package MaterialDesign
  */
 
-namespace MaterialTheme\Customizer\Layout;
+namespace MaterialDesign\Theme\Customizer\Layout;
 
-use MaterialTheme\Customizer;
+use MaterialDesign\Theme\Customizer;
 
 /**
  * Attach hooks
