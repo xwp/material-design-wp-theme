@@ -1,19 +1,19 @@
 <?php
 /**
  * Copyright 2020 Material Design
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
+ *
  * @package MaterialTheme
  */
 
@@ -55,7 +55,7 @@ $filled_label   = '<span class="mdc-floating-label" id="%s">%s</span>
 				<span class="mdc-line-ripple"></span>';
 
 $args = [
-	'title_reply'        => __( 'Leave a comment', 'material-theme' ),
+	'title_reply'        => __( 'Leave a comment', 'material-design' ),
 	'title_reply_before' => '<h4 id="reply-title" class="comment-reply-title mdc-typography--headline4">',
 	'title_reply_after'  => '</h4>',
 	'fields'             => [
@@ -72,7 +72,7 @@ $args = [
 			sprintf(
 				'outlined' === $style ? $outlined_label : $filled_label,
 				esc_html( 'author-label' ),
-				esc_html__( 'Name', 'material-theme' )
+				esc_html__( 'Name', 'material-design' )
 			)
 		),
 		'email'  => sprintf(
@@ -88,7 +88,7 @@ $args = [
 			sprintf(
 				'outlined' === $style ? $outlined_label : $filled_label,
 				esc_html( 'email-label' ),
-				esc_html__( 'Email', 'material-theme' )
+				esc_html__( 'Email', 'material-design' )
 			)
 		),
 		'url'    => sprintf(
@@ -103,7 +103,7 @@ $args = [
 			sprintf(
 				'outlined' === $style ? $outlined_label : $filled_label,
 				esc_html( 'url-label' ),
-				esc_html__( 'Website', 'material-theme' )
+				esc_html__( 'Website', 'material-design' )
 			)
 		),
 	],
@@ -116,7 +116,7 @@ $args = [
 		sprintf(
 			'outlined' === $style ? $outlined_label : $filled_label,
 			esc_html( 'comment' ),
-			esc_html__( 'Comment', 'material-theme' )
+			esc_html__( 'Comment', 'material-design' )
 		)
 	),
 	'submit_button'      => '<button id="%2$s" class="mdc-button mdc-button--raised mdc-ripple-upgraded %3$s" type="submit"><span class="mdc-button__ripple"></span><span class="mdc-button__label">%4$s</span></button>',
@@ -150,7 +150,7 @@ if ( has_action( 'set_comment_cookies', 'wp_set_comment_cookies' ) && get_option
 			</div>
 		</div>',
 		$consent,
-		esc_html__( 'Save my name, email, and website in this browser for the next time I comment.', 'material-theme' )
+		esc_html__( 'Save my name, email, and website in this browser for the next time I comment.', 'material-design' )
 	);
 }
 
@@ -164,11 +164,11 @@ if ( has_action( 'set_comment_cookies', 'wp_set_comment_cookies' ) && get_option
 		$count = get_comments_number();
 		?>
 		<h4 class="comments-title mdc-typography--headline4">
-			<?php esc_html_e( 'Join the conversation', 'material-theme' ); ?>
+			<?php esc_html_e( 'Join the conversation', 'material-design' ); ?>
 		</h4><!-- .comments-title -->
 		<div class="comments-title-count">
 			<span class="material-icons">comment</span>
-			<span class="comment-count"><?php echo esc_html( $count ); ?> <?php echo esc_html( _n( 'comment', 'comments', $count, 'material-theme' ) ); ?></span>
+			<span class="comment-count"><?php echo esc_html( $count ); ?> <?php echo esc_html( _n( 'comment', 'comments', $count, 'material-design' ) ); ?></span>
 		</div><!-- .comments-title -->
 
 		<?php the_comments_navigation(); ?>
@@ -192,7 +192,7 @@ if ( has_action( 'set_comment_cookies', 'wp_set_comment_cookies' ) && get_option
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'material-theme' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'material-design' ); ?></p>
 			<?php
 		endif;
 

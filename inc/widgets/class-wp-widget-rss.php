@@ -1,19 +1,19 @@
 <?php
 /**
  * Copyright 2020 Material Design
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
+ *
  * @package MaterialTheme
  */
 
@@ -76,7 +76,7 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 		}
 
 		if ( empty( $title ) ) {
-			$title = ! empty( $desc ) ? $desc : esc_html__( 'Unknown Feed', 'material-theme' );
+			$title = ! empty( $desc ) ? $desc : esc_html__( 'Unknown Feed', 'material-design' );
 		}
 
 		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
@@ -121,7 +121,7 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 
 		if ( is_wp_error( $rss ) ) {
 			if ( is_admin() || current_user_can( 'manage_options' ) ) {
-				echo '<p><strong>' . esc_html__( 'RSS Error:', 'material-theme' ) . '</strong> ' . esc_html( $rss->get_error_message() ) . '</p>';
+				echo '<p><strong>' . esc_html__( 'RSS Error:', 'material-design' ) . '</strong> ' . esc_html( $rss->get_error_message() ) . '</p>';
 			}
 			return;
 		}
@@ -143,7 +143,7 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 		$show_date    = (int) $args['show_date'];
 
 		if ( ! $rss->get_item_quantity() ) {
-			echo '<ul><li>' . esc_html__( 'An error has occurred, which probably means the feed is down. Try again later.', 'material-theme' ) . '</li></ul>';
+			echo '<ul><li>' . esc_html__( 'An error has occurred, which probably means the feed is down. Try again later.', 'material-design' ) . '</li></ul>';
 			$rss->__destruct();
 			unset( $rss );
 			return;
@@ -159,7 +159,7 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 
 			$title = esc_html( trim( wp_strip_all_tags( $item->get_title() ) ) );
 			if ( empty( $title ) ) {
-				$title = esc_html__( 'Untitled', 'material-theme' );
+				$title = esc_html__( 'Untitled', 'material-design' );
 			}
 
 			$desc = html_entity_decode( $item->get_description(), ENT_QUOTES, get_option( 'blog_charset' ) );

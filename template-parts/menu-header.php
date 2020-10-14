@@ -1,19 +1,19 @@
 <?php
 /**
  * Copyright 2020 Material Design
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
+ *
  * @package MaterialTheme
  */
 
@@ -36,7 +36,7 @@ $class      = ( 'fixed' === $layout ) ? 'mdc-top-app-bar--fixed' : '';
 	<div class="mdc-top-app-bar__row top-app-bar__header">
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
 			<?php if ( has_nav_menu( 'menu-2' ) ) : ?>
-				<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger"><?php esc_html_e( 'menu', 'material-theme' ); ?></button>
+				<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger"><?php esc_html_e( 'menu', 'material-design' ); ?></button>
 			<?php endif; ?>
 			<?php if ( has_custom_logo() ) : ?>
 				<div class="logo">
@@ -52,7 +52,7 @@ $class      = ( 'fixed' === $layout ) ? 'mdc-top-app-bar--fixed' : '';
 				<button class="mdc-button search__button">
 					<span class="mdc-button__ripple"></span>
 					<i class="material-icons mdc-button__icon">search</i>
-					<span class="screen-reader-text"><?php esc_html_e( 'Search', 'material-theme' ); ?></span>
+					<span class="screen-reader-text"><?php esc_html_e( 'Search', 'material-design' ); ?></span>
 				</button>
 			<?php endif; ?>
 		</section>

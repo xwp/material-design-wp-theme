@@ -1,19 +1,19 @@
 <?php
 /**
  * Copyright 2020 Material Design
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
+ *
  * @package MaterialTheme
  */
 
@@ -44,7 +44,7 @@ function register( $wp_customize ) {
 	// Add header section.
 	$args = [
 		'priority' => 180,
-		'title'    => esc_html__( 'Top app bar & Footer', 'material-theme' ),
+		'title'    => esc_html__( 'Top app bar & Footer', 'material-design' ),
 	];
 
 	Customizer\add_section( $wp_customize, 'header-footer', $args );
@@ -61,52 +61,52 @@ function get_controls() {
 	return [
 		[
 			'id'    => 'header_label',
-			'label' => esc_html__( 'Top app bar', 'material-theme' ),
+			'label' => esc_html__( 'Top app bar', 'material-design' ),
 			'type'  => 'hidden',
 		],
 		[
 			'id'    => 'header_search_display',
-			'label' => esc_html__( 'Show search in top app bar', 'material-theme' ),
+			'label' => esc_html__( 'Show search in top app bar', 'material-design' ),
 			'type'  => 'checkbox',
 		],
 		[
 			'id'          => 'header_title_display',
-			'label'       => esc_html__( 'Hide site title in top app bar', 'material-theme' ),
+			'label'       => esc_html__( 'Hide site title in top app bar', 'material-design' ),
 			'type'        => 'checkbox',
-			'description' => esc_html__( 'Site title is hidden but will still be used for SEO purposes', 'material-theme' ),
+			'description' => esc_html__( 'Site title is hidden but will still be used for SEO purposes', 'material-design' ),
 		],
 		[
 			'id'      => 'header_bar_layout',
-			'label'   => esc_html__( 'Top app bar layout', 'material-theme' ),
+			'label'   => esc_html__( 'Top app bar layout', 'material-design' ),
 			'type'    => 'radio',
 			'choices' => [
-				'standard' => esc_html__( 'Standard', 'material-theme' ),
-				'fixed'    => esc_html__( 'Fixed', 'material-theme' ),
+				'standard' => esc_html__( 'Standard', 'material-design' ),
+				'fixed'    => esc_html__( 'Fixed', 'material-design' ),
 			],
 		],
 		[
 			// Hidden field for menu locations label.
 			'id'          => 'menu-location-label',
-			'label'       => esc_html__( 'Menu Locations', 'material-theme' ),
-			'description' => esc_html__( 'Material theme can display menus in 2 locations. Select which menu appears in each location.', 'material-theme' ),
+			'label'       => esc_html__( 'Menu Locations', 'material-design' ),
+			'description' => esc_html__( 'Material theme can display menus in 2 locations. Select which menu appears in each location.', 'material-design' ),
 			'type'        => 'hidden',
 			'priority'    => 99,
 		],
 		[
 			'id'       => 'footer_label',
-			'label'    => esc_html__( 'Footer', 'material-theme' ),
+			'label'    => esc_html__( 'Footer', 'material-design' ),
 			'type'     => 'hidden',
 			'priority' => 110,
 		],
 		[
 			'id'       => 'footer_text',
-			'label'    => esc_html__( 'Footer text', 'material-theme' ),
+			'label'    => esc_html__( 'Footer text', 'material-design' ),
 			'type'     => 'text',
 			'priority' => 110,
 		],
 		[
 			'id'       => 'hide_back_to_top',
-			'label'    => esc_html__( 'Hide back to top button', 'material-theme' ),
+			'label'    => esc_html__( 'Hide back to top button', 'material-design' ),
 			'type'     => 'checkbox',
 			'priority' => 110,
 		],
@@ -238,7 +238,7 @@ function add_nav_menu_location_controls( $wp_customize ) {
 	// Menu locations.
 	$locations = get_registered_nav_menus();
 
-	$choices = array( '0' => __( '&mdash; Select &mdash;', 'material-theme' ) );
+	$choices = array( '0' => __( '&mdash; Select &mdash;', 'material-design' ) );
 	foreach ( $menus as $menu ) {
 		$choices[ $menu->term_id ] = wp_html_excerpt( $menu->name, 40, '&hellip;' );
 	}
@@ -253,7 +253,7 @@ function add_nav_menu_location_controls( $wp_customize ) {
 			$setting_id,
 			array(
 				'label'       => $label,
-				'description' => 'menu-1' === $location ? esc_html__( 'Only the top level items will display.', 'material-theme' ) : '',
+				'description' => 'menu-1' === $location ? esc_html__( 'Only the top level items will display.', 'material-design' ) : '',
 				'location_id' => $location,
 				'section'     => Customizer\prepend_slug( 'header-footer' ),
 				'choices'     => $choices,

@@ -1,19 +1,19 @@
 <?php
 /**
  * Copyright 2020 Material Design
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
+ *
  * @package MaterialTheme
  */
 
@@ -45,7 +45,7 @@ class WP_Widget_Recent_Posts extends \WP_Widget_Recent_Posts {
 			$args['widget_id'] = $this->id;
 		}
 
-		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : esc_html__( 'Recent Posts', 'material-theme' );
+		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : esc_html__( 'Recent Posts', 'material-design' );
 
 		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
@@ -94,7 +94,7 @@ class WP_Widget_Recent_Posts extends \WP_Widget_Recent_Posts {
 			<?php foreach ( $r->posts as $recent_post ) : ?>
 				<?php
 				$post_title   = get_the_title( $recent_post->ID );
-				$title        = ( ! empty( $post_title ) ) ? $post_title : esc_html__( '(no title)', 'material-theme' );
+				$title        = ( ! empty( $post_title ) ) ? $post_title : esc_html__( '(no title)', 'material-design' );
 				$aria_current = '';
 
 				if ( get_queried_object_id() === $recent_post->ID ) {

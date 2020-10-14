@@ -1,19 +1,19 @@
 <?php
 /**
  * Copyright 2020 Material Design
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
+ *
  * @package MaterialTheme
  */
 
@@ -61,11 +61,11 @@ function plugin_not_installed_notice() {
 
 	if ( ! file_exists( trailingslashit( WP_CONTENT_DIR ) . 'plugins/' . $plugin ) ) {
 		$action = 'install';
-		$title  = esc_html__( 'Install', 'material-theme' );
-		$cta    = esc_html__( 'Install and activate', 'material-theme' );
+		$title  = esc_html__( 'Install', 'material-design' );
+		$cta    = esc_html__( 'Install and activate', 'material-design' );
 	} elseif ( ! is_plugin_active( "$plugin/$plugin.php" ) ) {
 		$action = 'activate';
-		$cta    = esc_html__( 'Activate', 'material-theme' );
+		$cta    = esc_html__( 'Activate', 'material-design' );
 		$title  = $cta;
 	}
 
@@ -98,14 +98,14 @@ function plugin_not_installed_notice() {
 		'<a href="%1$s">%2$s %3$s</a>',
 		esc_url( add_query_arg( $args, admin_url( '/themes.php' ) ) ),
 		esc_html( $cta ),
-		esc_html__( ' the plugin', 'material-theme' )
+		esc_html__( ' the plugin', 'material-design' )
 	);
 
 	?>
 	<div class="notice notice-info is-dismissible  material-notice-container">
 		<img
 			src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/plugin-logo.png' ); ?>"
-			alt="<?php esc_html_e( 'Material Theme', 'material-theme' ); ?>"
+			alt="<?php esc_html_e( 'Material Theme', 'material-design' ); ?>"
 		/>
 
 		<div class="material-notice-container__content">
@@ -116,7 +116,7 @@ function plugin_not_installed_notice() {
 					esc_html( $title ),
 					esc_html__(
 						' the Material Plugin to customize your Material Theme',
-						'material-theme'
+						'material-design'
 					)
 				)
 				?>
@@ -128,7 +128,7 @@ function plugin_not_installed_notice() {
 						/* translators: %s: url to the plugin install/active action */
 						esc_html__(
 							'To take full advantage of this theme you will need the Material Plugin. %s',
-							'material-theme'
+							'material-design'
 						),
 						$action_link
 					),
@@ -147,16 +147,16 @@ function plugin_not_installed_notice() {
 function register_required_plugins() {
 	$plugins = array(
 		array(
-			'name'     => esc_html__( 'Material Theme Builder', 'material-theme' ),
-			'slug'     => 'material-theme-builder',
+			'name'     => esc_html__( 'Material Design', 'material-design' ),
+			'slug'     => 'material-design',
 			// @todo remove source and point to the WordPress.org plugin repo after the plugin is published.
-			'source'   => 'https://storage.googleapis.com/xwp-mdc/material-theme-builder/material-theme-builder.zip',
+			'source'   => 'https://storage.googleapis.com/xwp-mdc/plugin/material-design.zip',
 			'required' => true,
 		),
 	);
 
 	$config = array(
-		'id'           => 'tgmpa-material-theme',
+		'id'           => 'tgmpa-material-design',
 		'default_path' => '',
 		'menu'         => 'tgmpa-install-plugins',
 		'parent_slug'  => 'themes.php',
@@ -166,5 +166,4 @@ function register_required_plugins() {
 	);
 
 	tgmpa( $plugins, $config );
-
 }

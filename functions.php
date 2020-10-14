@@ -1,19 +1,19 @@
 <?php
 /**
  * Copyright 2020 Material Design
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
+ *
  * @package MaterialTheme
  */
 
@@ -38,9 +38,9 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on Material theme, use a find and replace
-		 * to change 'material-theme' to the name of your theme in all the template files.
+		 * to change 'material-design' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'material-theme', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'material-design', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -63,8 +63,8 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 		// This theme uses wp_nav_menu() in two location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Tabs', 'material-theme' ),
-				'menu-2' => esc_html__( 'Drawer', 'material-theme' ),
+				'menu-1' => esc_html__( 'Tabs', 'material-design' ),
+				'menu-2' => esc_html__( 'Drawer', 'material-design' ),
 			)
 		);
 
@@ -132,9 +132,9 @@ add_action( 'after_setup_theme', 'material_theme_wp_content_width', 0 );
 function material_theme_wp_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer Left', 'material-theme' ),
+			'name'          => esc_html__( 'Footer Left', 'material-design' ),
 			'id'            => 'footer',
-			'description'   => esc_html__( 'Footer left area.', 'material-theme' ),
+			'description'   => esc_html__( 'Footer left area.', 'material-design' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title mdc-typography--headline5">',
@@ -144,9 +144,9 @@ function material_theme_wp_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer Right', 'material-theme' ),
+			'name'          => esc_html__( 'Footer Right', 'material-design' ),
 			'id'            => 'footer-right',
-			'description'   => esc_html__( 'Footer right area.', 'material-theme' ),
+			'description'   => esc_html__( 'Footer right area.', 'material-design' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title mdc-typography--headline5">',

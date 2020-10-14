@@ -1,19 +1,19 @@
 <?php
 /**
  * Copyright 2020 Material Design
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
+ *
  * @package MaterialTheme
  */
 
@@ -92,7 +92,7 @@ if ( ! function_exists( 'material_theme_wp_entry_footer' ) ) :
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'material-theme' ),
+						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'material-design' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -109,7 +109,7 @@ if ( ! function_exists( 'material_theme_wp_entry_footer' ) ) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'material-theme' ),
+					__( 'Edit <span class="screen-reader-text">%s</span>', 'material-design' ),
 					[
 						'span' => [
 							'class' => [],
@@ -156,9 +156,9 @@ if ( ! function_exists( 'material_theme_wp_post_thumbnail' ) ) :
 					'alt' => the_title_attribute(
 						array(
 							'echo' => false,
-						) 
+						)
 					),
-				) 
+				)
 			);
 			?>
 		</a>
