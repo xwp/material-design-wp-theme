@@ -29,7 +29,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function material_theme_wp_body_classes( $classes ) {
+function material_design_theme_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
@@ -42,17 +42,17 @@ function material_theme_wp_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'material_theme_wp_body_classes' );
+add_filter( 'body_class', 'material_design_theme_body_classes' );
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
-function material_theme_wp_pingback_header() {
+function material_design_theme_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
 	}
 }
-add_action( 'wp_head', 'material_theme_wp_pingback_header' );
+add_action( 'wp_head', 'material_design_theme_pingback_header' );
 
 /**
  * Filters the comment reply link.
@@ -62,7 +62,7 @@ add_action( 'wp_head', 'material_theme_wp_pingback_header' );
  * @param object  $comment The object of the comment being replied.
  * @param WP_Post $post    The WP_Post object.
  */
-function material_theme_comment_reply_link( $link, $args, $comment, $post ) {
+function material_design_theme_comment_reply_link( $link, $args, $comment, $post ) {
 	$data_attributes = array(
 		'commentid'      => $comment->comment_ID,
 		'postid'         => $post->ID,
@@ -97,28 +97,28 @@ function material_theme_comment_reply_link( $link, $args, $comment, $post ) {
 
 	return $args['before'] . $link . $args['after'];
 }
-add_filter( 'comment_reply_link', 'material_theme_comment_reply_link', 10, 4 );
+add_filter( 'comment_reply_link', 'material_design_theme_comment_reply_link', 10, 4 );
 
 /**
  * Wrap comment fields in Material layout class.
  *
  * @return void
  */
-function material_theme_comment_form_before_fields() {
+function material_design_theme_comment_form_before_fields() {
 	?>
 	<div class="mdc-layout-grid__inner">
 	<?php
 }
-add_action( 'comment_form_before_fields', 'material_theme_comment_form_before_fields' );
+add_action( 'comment_form_before_fields', 'material_design_theme_comment_form_before_fields' );
 
 /**
  * Wrap comment fields in Material layout class.
  *
  * @return void
  */
-function material_theme_comment_form_after_fields() {
+function material_design_theme_comment_form_after_fields() {
 	?>
 	</div> <!-- .mdc-layout-grid__inner -->
 	<?php
 }
-add_action( 'comment_form_after_fields', 'material_theme_comment_form_after_fields' );
+add_action( 'comment_form_after_fields', 'material_design_theme_comment_form_after_fields' );

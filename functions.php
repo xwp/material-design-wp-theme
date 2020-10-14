@@ -25,7 +25,7 @@
  * @package MaterialDesign
  */
 
-if ( ! function_exists( 'material_theme_wp_setup' ) ) :
+if ( ! function_exists( 'material_design_theme_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -33,7 +33,7 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function material_theme_wp_setup() {
+	function material_design_theme_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -107,7 +107,7 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 		add_editor_style( 'assets/css/editor-compiled.css' );
 	}
 endif;
-add_action( 'after_setup_theme', 'material_theme_wp_setup' );
+add_action( 'after_setup_theme', 'material_design_theme_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -116,20 +116,20 @@ add_action( 'after_setup_theme', 'material_theme_wp_setup' );
  *
  * @global int $content_width
  */
-function material_theme_wp_content_width() {
+function material_design_theme_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'material_theme_wp_content_width', 700 );
+	$GLOBALS['content_width'] = apply_filters( 'material_design_theme_content_width', 700 );
 }
-add_action( 'after_setup_theme', 'material_theme_wp_content_width', 0 );
+add_action( 'after_setup_theme', 'material_design_theme_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function material_theme_wp_widgets_init() {
+function material_design_theme_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Footer Left', 'material-design' ),
@@ -154,12 +154,12 @@ function material_theme_wp_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'material_theme_wp_widgets_init' );
+add_action( 'widgets_init', 'material_design_theme_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function material_theme_wp_scripts() {
+function material_design_theme_scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	wp_enqueue_style( 'material-design-theme-style', get_stylesheet_uri(), array(), $theme_version );
@@ -181,7 +181,7 @@ function material_theme_wp_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'material_theme_wp_scripts' );
+add_action( 'wp_enqueue_scripts', 'material_design_theme_scripts' );
 
 /**
  * Determine if the Material Design plugin is installed and active.

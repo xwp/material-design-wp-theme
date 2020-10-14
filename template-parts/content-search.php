@@ -34,20 +34,20 @@
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php
-			material_theme_wp_posted_on();
-			material_theme_wp_posted_by();
+			material_design_theme_posted_on();
+			material_design_theme_posted_by();
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php material_theme_wp_post_thumbnail(); ?>
+	<?php material_design_theme_post_thumbnail(); ?>
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php material_theme_wp_entry_footer(); ?>
+		<?php material_design_theme_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

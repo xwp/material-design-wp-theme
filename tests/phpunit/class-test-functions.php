@@ -33,12 +33,12 @@ namespace MaterialDesign\Theme;
 class Test_Material_Theme extends \WP_UnitTestCase {
 
 	/**
-	 * Test material_theme_wp_scripts().
+	 * Test material_design_theme_scripts().
 	 *
-	 * @see material_theme_wp_scripts()
+	 * @see material_design_theme_scripts()
 	 */
-	public function test_material_theme_wp_scripts() {
-		material_theme_wp_scripts();
+	public function test_material_design_theme_scripts() {
+		material_design_theme_scripts();
 		$this->assertTrue( wp_style_is( 'material-design-theme-style', 'enqueued' ) );
 		$this->assertTrue( wp_style_is( 'material-design-theme-front-end-css', 'enqueued' ) );
 		$this->assertTrue( wp_style_is( 'material-google-fonts-cdn', 'enqueued' ) );

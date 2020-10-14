@@ -32,7 +32,7 @@
 		<?php the_title( '<h1 class="entry-title mdc-typography mdc-typography--headline2">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php material_theme_wp_post_thumbnail(); ?>
+	<?php material_design_theme_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
