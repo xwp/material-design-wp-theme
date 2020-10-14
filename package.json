@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-env": "^7.11.5",
     "@material/button": "5.1.0",
     "@material/card": "5.1.0",
     "@material/checkbox": "5.1.0",
