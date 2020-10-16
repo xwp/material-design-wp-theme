@@ -53,7 +53,21 @@
 		}
 
 		@media (--large-viewport) {
-			margin-right: 31rem;
+			margin-right: 22rem;
+		}
+	}
+
+	.wp-block-cover {
+
+		&.alignleft {
+
+			@media (--medium-viewport) {
+				margin-left: 4rem;
+			}
+
+			@media (--large-viewport) {
+				margin-left: 22rem;
+			}
 		}
 	}
 }

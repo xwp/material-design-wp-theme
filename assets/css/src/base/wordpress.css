@@ -4,3 +4,12 @@
 		border-radius: 0;
 	}
 }
+
+.wp-block-cover {
+	color: var(--wp-cover-block-text);
+}
+
+.wp-block-cover-image.has-background-dim-20,
+.wp-block-cover.has-background-dim-20 {
+	background-color: rgba(0, 0, 0, 0.2);
+}

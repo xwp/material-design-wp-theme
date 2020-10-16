@@ -25,6 +25,7 @@
 	--mdc-theme-text-hint-on-background: rgba(--mdc-theme-on-background-rgb, 0.38);
 	--mdc-theme-text-disabled-on-background: rgba(--mdc-theme-on-background-rgb, 0.38);
 	--mdc-theme-text-icon-on-background: rgba(--mdc-theme-on-background-rgb, 0.38);
+	--wp-cover-block-text: #fff;
 
 	@mixin fontvars headline1, 6, 6, 300, -1.5;
 	@mixin fontvars headline2, 3.75, 3.75, 300, -.5;

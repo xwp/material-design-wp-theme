@@ -112,6 +112,8 @@ body {
 	}
 
 	&.alignwide {
+		margin-bottom: 4rem;
+		margin-top: 4rem;
 
 		&.wp-block-image {
 			max-width: none;
@@ -127,6 +129,8 @@ body {
 }
 
 .entry-content .alignfull {
+	margin-bottom: 4rem;
+	margin-top: 4rem;
 
 	@media (--medium-viewport) {
 		margin-left: auto;
