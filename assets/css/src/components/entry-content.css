@@ -24,4 +24,36 @@
 	& > :not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
 		max-width: var(--mdc-theme-max-content-width);
 	}
+
+	.alignleft,
+	.alighright {
+
+		@media (--medium-viewport) {
+			position: absolute;
+		}
+	}
+
+	.alignleft {
+		margin-right: 1.25rem;
+
+		@media (--medium-viewport) {
+			margin-left: 4rem;
+		}
+
+		@media (--large-viewport) {
+			margin-left: 31rem;
+		}
+	}
+
+	.alignright {
+		margin-left: 1.25rem;
+
+		@media (--medium-viewport) {
+			margin-right: 4rem;
+		}
+
+		@media (--large-viewport) {
+			margin-right: 31rem;
+		}
+	}
 }

@@ -1,0 +1,6 @@
+.wp-block-button__link {
+
+	@nest .is-style-squared & {
+		border-radius: 0;
+	}
+}
