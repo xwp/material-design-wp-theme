@@ -11,7 +11,7 @@ The official Material Design theme for WordPress.
 **Stable tag:** 1.0.0-alpha  
 **License:** [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)  
 
-[![Build Status](https://travis-ci.org/xwp/material-theme-wp.svg?branch=develop)](https://travis-ci.org/xwp/material-theme-wp) [![Built with Grunt](https://gruntjs.com/cdn/builtwith.svg)](http://gruntjs.com) 
+[![Build Status](https://travis-ci.com/xwp/material-design-wp-theme.svg?branch=develop)](https://travis-ci.com/xwp/material-design-wp-theme) [![Built with Grunt](https://gruntjs.com/cdn/builtwith.svg)](http://gruntjs.com) 
 
 ## Description ##
 
