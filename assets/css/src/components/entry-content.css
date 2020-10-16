@@ -26,7 +26,7 @@
 	}
 
 	.alignleft,
-	.alighright {
+	.alignright {
 
 		@media (--large-viewport) {
 			position: absolute;
@@ -42,7 +42,8 @@
 		}
 
 		@media (--large-viewport) {
-			max-width: calc((100% - 58rem) / 2 - 6rem);
+			margin-left: auto;
+			margin-right: 0;
 			right: calc((100vw - 58rem) / 2 + 58rem + 2rem);
 		}
 	}
@@ -51,13 +52,14 @@
 		margin-left: 1.25rem;
 
 		@media (--medium-large-viewport) {
-			margin-right: calc((100% - 58rem) / 2 - 2rem);
 			margin-left: 1.25rem;
+			margin-right: calc((100% - 58rem) / 2 - 2rem);
 		}
 
 		@media (--large-viewport) {
-			max-width: calc((100% - 58rem) / 2 - 6rem);
 			left: calc((100vw - 58rem) / 2 + 58rem + 2rem);
+			margin-left: 0;
+			margin-right: auto;
 		}
 	}
 }
