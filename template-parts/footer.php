@@ -2,7 +2,7 @@
 /**
  * Footer component
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 $footer_text = get_theme_mod( 'footer_text', '' );

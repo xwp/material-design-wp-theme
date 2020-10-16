@@ -1,20 +1,20 @@
 <?php
 /**
- * Copyright 2020 Material Design
- * 
+ * Copyright 2020 Google LLC
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
- * @package MaterialTheme
+ *
+ * @package MaterialDesign
  */
 
 /**
@@ -22,7 +22,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 $show_comments = get_theme_mod( 'archive_comments', true );
@@ -62,7 +62,7 @@ $classes       = get_theme_mod( 'archive_outlined', false ) ? 'mdc-card--outline
 									/* translators: 1: author name. */
 									esc_attr__(
 										'Author: %s',
-										'material-theme'
+										'material-design'
 									),
 									esc_attr( get_the_author() )
 								);
@@ -88,7 +88,7 @@ $classes       = get_theme_mod( 'archive_outlined', false ) ? 'mdc-card--outline
 										'%s Comments',
 										get_comments_number(),
 										'comments title',
-										'material-theme'
+										'material-design'
 									),
 									number_format_i18n( get_comments_number() )
 								)

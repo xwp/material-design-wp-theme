@@ -13,8 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-shopt -s expand_aliases
+source .env
 source ./bin/includes.sh
 
-docker-compose exec -u xfs cli wp $@
+if [[ ! -z "${DOCKER_COMPOSE_PATH}" ]]; then
+	docker-compose --file="$DOCKER_COMPOSE_PATH" --file=docker-compose-plugin-dev.yml exec -u xfs cli wp $@
+else
+	docker-compose exec -u xfs cli wp $@
+fi

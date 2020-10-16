@@ -1,26 +1,26 @@
 <?php
 /**
- * Copyright 2020 Material Design
- * 
+ * Copyright 2020 Google LLC
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
- * @package MaterialTheme
+ *
+ * @package MaterialDesign
  */
 
 /**
  * Search form partial for archive, 404 pages
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
 ?>
@@ -32,7 +32,7 @@
 		<div class="mdc-notched-outline">
 			<div class="mdc-notched-outline__leading"></div>
 			<div class="mdc-notched-outline__notch">
-				<label for="text-field-hero-input" class="mdc-floating-label"><?php esc_html_e( 'Search', 'material-theme' ); ?></label>
+				<label for="text-field-hero-input" class="mdc-floating-label"><?php esc_html_e( 'Search', 'material-design' ); ?></label>
 			</div>
 			<div class="mdc-notched-outline__trailing"></div>
 		</div>
@@ -40,6 +40,6 @@
 
 	<button class="mdc-button mdc-button--outlined" type="submit">
 		<i class="material-icons mdc-button__icon">search</i>
-		<span class="mdc-button__ripple"></span> <?php esc_html_e( 'Search', 'material-theme' ); ?>
+		<span class="mdc-button__ripple"></span> <?php esc_html_e( 'Search', 'material-design' ); ?>
 	</button>
 </form>

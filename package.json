@@ -1,14 +1,23 @@
 {
-  "name": "material-theme-wp",
+  "name": "material-design-wp-theme",
   "private": true,
-  "version": "1.0.0",
-  "title": "Material Theme",
-  "description": "Material Theme applies Material Design principles and Material Theming to your site, so you can customize its style.",
-  "author": "XWP",
-  "dependencies": {},
+  "title": "Material Design theme for WordPress",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/xwp/material-design-wp-theme#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xwp/material-design-wp-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xwp/material-design-wp-theme/issues"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6.9"
+  },
   "devDependencies": {
     "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-env": "^7.11.5",
     "@material/button": "5.1.0",
     "@material/card": "5.1.0",
     "@material/checkbox": "5.1.0",
@@ -68,7 +77,7 @@
     "build:run": "grunt build",
     "build:zip": "grunt create-build-zip",
     "dev": "wp-scripts start",
-    "docker": "docker-compose run --rm -u 1000 --workdir=/var/www/html/wp-content/themes/material-theme-wp wordpress",
+    "docker": "bin/docker.sh",
     "env:logs": "bin/logs.sh",
     "env:start": "bin/start.sh",
     "env:stop": "bin/stop.sh",
@@ -80,21 +89,20 @@
     "lint:css": "wp-scripts lint-style",
     "lint:js": "wp-scripts lint-js",
     "lint:php": "composer lint",
+    "plugin-dev": "bin/plugin-dev.sh",
     "postinstall": "composer install",
     "readme": "composer readme",
-    "test": "npm-run-all --parallel test:js test:php",
+    "test": "npm-run-all --parallel test:php",
+    "test:php": "composer test",
     "wp": "bin/wp.sh",
     "xdebug:status": "bin/xdebug.sh status",
     "xdebug:on": "bin/xdebug.sh on",
     "xdebug:off": "bin/xdebug.sh off"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xwp/material-theme-wp.git"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/xwp/material-theme-wp/issues"
-  },
-  "homepage": "https://github.com/xwp/material-theme-wp#readme"
+  "npmPackageJsonLintConfig": {
+    "extends": "@wordpress/npm-package-json-lint-config",
+    "rules": {
+      "require-version": "off"
+    }
+  }
 }

@@ -1,20 +1,20 @@
 <?php
 /**
- * Copyright 2020 Material Design
- * 
+ * Copyright 2020 Google LLC
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
- * @package MaterialTheme
+ *
+ * @package MaterialDesign
  */
 
 /**
@@ -25,7 +25,7 @@
  * @since 4.4.0
  */
 
-namespace MaterialTheme\Widgets;
+namespace MaterialDesign\Theme\Widgets;
 
 /**
  * Override default widget with our own markup
@@ -41,7 +41,7 @@ class WP_Widget_Archives extends \WP_Widget_Archives {
 	 * @param array $instance Settings for the current Archives widget instance.
 	 */
 	public function widget( $args, $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Archives', 'material-theme' );
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Archives', 'material-design' );
 
 		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
@@ -84,19 +84,19 @@ class WP_Widget_Archives extends \WP_Widget_Archives {
 
 			switch ( $dropdown_args['type'] ) {
 				case 'yearly':
-					$label = esc_html__( 'Select Year', 'material-theme' );
+					$label = esc_html__( 'Select Year', 'material-design' );
 					break;
 				case 'monthly':
-					$label = esc_html__( 'Select Month', 'material-theme' );
+					$label = esc_html__( 'Select Month', 'material-design' );
 					break;
 				case 'daily':
-					$label = esc_html__( 'Select Day', 'material-theme' );
+					$label = esc_html__( 'Select Day', 'material-design' );
 					break;
 				case 'weekly':
-					$label = esc_html__( 'Select Week', 'material-theme' );
+					$label = esc_html__( 'Select Week', 'material-design' );
 					break;
 				default:
-					$label = esc_html__( 'Select Post', 'material-theme' );
+					$label = esc_html__( 'Select Post', 'material-design' );
 					break;
 			}
 

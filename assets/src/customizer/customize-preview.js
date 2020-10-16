@@ -22,13 +22,13 @@
  * @since 1.0.0
  */
 
-/* global jQuery, materialThemeColorControls */
+/* global jQuery, materialDesignThemeColorControls */
 
 ( function( $ ) {
 	const api = wp.customize;
 	const parentApi = window.parent.wp.customize;
 
-	Object.keys( materialThemeColorControls ).forEach( control => {
+	Object.keys( materialDesignThemeColorControls ).forEach( control => {
 		api( control, value => value.bind( generatePreviewStyles ) );
 	} );
 
@@ -96,8 +96,8 @@
 		}
 
 		// Generate the styles.
-		Object.keys( materialThemeColorControls ).forEach( control => {
-			const cssVar = materialThemeColorControls[ control ];
+		Object.keys( materialDesignThemeColorControls ).forEach( control => {
+			const cssVar = materialDesignThemeColorControls[ control ];
 			const color = parentApi( control ).get();
 			styles += `${ cssVar }: ${ color };`;
 			styles += `${ cssVar }-rgb: ${ hexToRgb( color ).join( ',' ) };`;

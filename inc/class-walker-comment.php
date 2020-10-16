@@ -1,20 +1,20 @@
 <?php
 /**
- * Copyright 2020 Material Design
- * 
+ * Copyright 2020 Google LLC
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
- * @package MaterialTheme
+ *
+ * @package MaterialDesign
  */
 
 /**
@@ -23,10 +23,10 @@
  * Included for compatibility.
  * When available, use the plugin
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
-namespace MaterialTheme;
+namespace MaterialDesign\Theme;
 
 /**
  * Walker_Comment.
@@ -48,9 +48,9 @@ class Walker_Comment extends \Walker_Comment {
 
 		$commenter = wp_get_current_commenter();
 		if ( $commenter['comment_author_email'] ) {
-			$moderation_note = __( 'Your comment is awaiting moderation.', 'material-theme' );
+			$moderation_note = __( 'Your comment is awaiting moderation.', 'material-design' );
 		} else {
-			$moderation_note = __( 'Your comment is awaiting moderation. This is a preview, your comment will be visible after it has been approved.', 'material-theme' );
+			$moderation_note = __( 'Your comment is awaiting moderation. This is a preview, your comment will be visible after it has been approved.', 'material-design' );
 		}
 
 		?>
@@ -72,13 +72,13 @@ class Walker_Comment extends \Walker_Comment {
 							<?php
 								printf(
 									/* translators: 1: Comment date, 2: Comment time. */
-									esc_html__( '%1$s at %2$s', 'material-theme' ),
+									esc_html__( '%1$s at %2$s', 'material-design' ),
 									esc_html( get_comment_date( '', $comment ) ),
 									esc_html( get_comment_time() )
 								);
 							?>
 						</time>
-						<?php edit_comment_link( __( 'Edit', 'material-theme' ), '<span class="edit-link">', '</span>' ); ?>
+						<?php edit_comment_link( __( 'Edit', 'material-design' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .comment-meta -->
 
 					<?php if ( '0' == $comment->comment_approved ) : ?>

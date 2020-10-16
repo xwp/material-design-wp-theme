@@ -1,32 +1,32 @@
 <?php
 /**
- * Copyright 2020 Material Design
- * 
+ * Copyright 2020 Google LLC
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
- * @package MaterialTheme
+ *
+ * @package MaterialDesign
  */
 
 /**
- * Material Theme Customizer
+ * Material Design Customizer
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
-namespace MaterialTheme\Customizer;
+namespace MaterialDesign\Theme\Customizer;
 
-use MaterialTheme\Customizer\Colors;
-use MaterialTheme\Customizer\More_Options;
+use MaterialDesign\Theme\Customizer\Colors;
+use MaterialDesign\Theme\Customizer\More_Options;
 
 /**
  * Attach hooks.
@@ -55,8 +55,8 @@ function register( $wp_customize ) {
 			[
 				'priority'    => 10,
 				'capability'  => 'edit_theme_options',
-				'title'       => esc_html__( 'Material Theme Options', 'material-theme' ),
-				'description' => esc_html__( 'Change the color, shape, typography, and icons below to customize your theme style. Navigate to the Material Library to see your custom styles applied across Material Components..', 'material-theme' ),
+				'title'       => esc_html__( 'Material Design Options', 'material-design' ),
+				'description' => esc_html__( 'Change the color, shape, typography, and icons below to customize your theme style. Navigate to the Material Library to see your custom styles applied across Material Components.', 'material-design' ),
 			]
 		);
 	}
@@ -89,7 +89,7 @@ function register( $wp_customize ) {
  * @return string Settings prefix.
  */
 function get_slug() {
-	return 'material_theme_builder';
+	return 'material_design';
 }
 
 /**
@@ -119,7 +119,7 @@ function preview_scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	wp_enqueue_script(
-		'material-theme-customizer-preview',
+		'material-design-theme-customizer-preview',
 		get_template_directory_uri() . '/assets/js/customize-preview.js',
 		[ 'customize-preview' ],
 		$theme_version,
@@ -133,8 +133,8 @@ function preview_scripts() {
 	}
 
 	wp_localize_script(
-		'material-theme-customizer-preview',
-		'materialThemeColorControls',
+		'material-design-theme-customizer-preview',
+		'materialDesignThemeColorControls',
 		$css_vars
 	);
 }
@@ -148,14 +148,14 @@ function scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	wp_enqueue_style(
-		'material-theme-customizer-styles',
+		'material-design-theme-customizer-styles',
 		get_template_directory_uri() . '/assets/css/customize-controls-compiled.css',
 		[ 'wp-color-picker' ],
 		$theme_version
 	);
 
 	wp_enqueue_script(
-		'material-theme-customizer-controls',
+		'material-design-theme-customizer-controls',
 		get_template_directory_uri() . '/assets/js/customize-controls.js',
 		[ 'wp-color-picker', 'customize-controls' ],
 		$theme_version,
@@ -380,7 +380,7 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
 
 	foreach ( $color_controls as $control ) {
 		if ( material_is_plugin_active() ) {
-			$controls[ $control['id'] ] = new \MaterialThemeBuilder\Customizer\Material_Color_Palette_Control(
+			$controls[ $control['id'] ] = new \MaterialDesign\Plugin\Customizer\Material_Color_Palette_Control(
 				$wp_customize,
 				$control['id'],
 				[
@@ -467,7 +467,7 @@ function get_frontend_css() {
  */
 function frontend_inline_css() {
 	?>
-	<style id="material-theme-css-variables">
+	<style id="material-design-theme-css-variables">
 		<?php echo get_frontend_css(); // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</style>
 	<?php
@@ -548,16 +548,16 @@ function hexdec( $hex_code ) {
 }
 
 /**
- * Get Material Theme builder plugin option by name.
+ * Get Material Design plugin option by name.
  *
  * @param  string $name name of the option.
  * @return mixed
  */
-function get_material_theme_builder_option( $name ) {
+function get_material_design_option( $name ) {
 	$value = false;
 	if ( material_is_plugin_active() ) {
-		$value = \MaterialThemeBuilder\get_plugin_instance()->customizer_controls->get_option( $name );
+		$value = \MaterialDesign\Plugin\get_plugin_instance()->customizer_controls->get_option( $name );
 	}
 
-	return apply_filters( 'get_material_theme_builder_option', $value, $name );
+	return apply_filters( 'get_material_design_option', $value, $name );
 }

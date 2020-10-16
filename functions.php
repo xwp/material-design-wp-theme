@@ -1,31 +1,31 @@
 <?php
 /**
- * Copyright 2020 Material Design
- * 
+ * Copyright 2020 Google LLC
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
- * @package MaterialTheme
+ *
+ * @package MaterialDesign
  */
 
 /**
- * Material theme functions and definitions
+ * Material Design functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
-if ( ! function_exists( 'material_theme_wp_setup' ) ) :
+if ( ! function_exists( 'material_design_theme_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -33,14 +33,14 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function material_theme_wp_setup() {
+	function material_design_theme_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Material theme, use a find and replace
-		 * to change 'material-theme' to the name of your theme in all the template files.
+		 * If you're building a theme based on the Material Design theme, use a find and replace
+		 * to change 'material-design' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'material-theme', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'material-design', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -63,8 +63,8 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 		// This theme uses wp_nav_menu() in two location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Tabs', 'material-theme' ),
-				'menu-2' => esc_html__( 'Drawer', 'material-theme' ),
+				'menu-1' => esc_html__( 'Tabs', 'material-design' ),
+				'menu-2' => esc_html__( 'Drawer', 'material-design' ),
 			)
 		);
 
@@ -107,7 +107,7 @@ if ( ! function_exists( 'material_theme_wp_setup' ) ) :
 		add_editor_style( 'assets/css/editor-compiled.css' );
 	}
 endif;
-add_action( 'after_setup_theme', 'material_theme_wp_setup' );
+add_action( 'after_setup_theme', 'material_design_theme_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -116,25 +116,25 @@ add_action( 'after_setup_theme', 'material_theme_wp_setup' );
  *
  * @global int $content_width
  */
-function material_theme_wp_content_width() {
+function material_design_theme_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'material_theme_wp_content_width', 700 );
+	$GLOBALS['content_width'] = apply_filters( 'material_design_theme_content_width', 700 );
 }
-add_action( 'after_setup_theme', 'material_theme_wp_content_width', 0 );
+add_action( 'after_setup_theme', 'material_design_theme_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function material_theme_wp_widgets_init() {
+function material_design_theme_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer Left', 'material-theme' ),
+			'name'          => esc_html__( 'Footer Left', 'material-design' ),
 			'id'            => 'footer',
-			'description'   => esc_html__( 'Footer left area.', 'material-theme' ),
+			'description'   => esc_html__( 'Footer left area.', 'material-design' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title mdc-typography--headline5">',
@@ -144,9 +144,9 @@ function material_theme_wp_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer Right', 'material-theme' ),
+			'name'          => esc_html__( 'Footer Right', 'material-design' ),
 			'id'            => 'footer-right',
-			'description'   => esc_html__( 'Footer right area.', 'material-theme' ),
+			'description'   => esc_html__( 'Footer right area.', 'material-design' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title mdc-typography--headline5">',
@@ -154,17 +154,17 @@ function material_theme_wp_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'material_theme_wp_widgets_init' );
+add_action( 'widgets_init', 'material_design_theme_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function material_theme_wp_scripts() {
+function material_design_theme_scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
-	wp_enqueue_style( 'material-theme-style', get_stylesheet_uri(), array(), $theme_version );
+	wp_enqueue_style( 'material-design-theme-style', get_stylesheet_uri(), array(), $theme_version );
 
-	wp_enqueue_style( 'material-theme-front-end-css', get_template_directory_uri() . '/assets/css/front-end-compiled.css', array( 'material-theme-style' ), $theme_version );
+	wp_enqueue_style( 'material-design-theme-front-end-css', get_template_directory_uri() . '/assets/css/front-end-compiled.css', array( 'material-design-theme-style' ), $theme_version );
 
 	if ( ! wp_style_is( 'material-google-fonts-cdn', 'enqueued' ) ) {
 		wp_enqueue_style(
@@ -175,21 +175,21 @@ function material_theme_wp_scripts() {
 		);
 	}
 
-	wp_enqueue_script( 'material-theme-js', get_template_directory_uri() . '/assets/js/front-end.js', array(), $theme_version, true );
+	wp_enqueue_script( 'material-design-theme-js', get_template_directory_uri() . '/assets/js/front-end.js', array(), $theme_version, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'material_theme_wp_scripts' );
+add_action( 'wp_enqueue_scripts', 'material_design_theme_scripts' );
 
 /**
- * Determine if the Material Theme Builder plugin is installed and active.
+ * Determine if the Material Design plugin is installed and active.
  *
  * @return boolean
  */
 function material_is_plugin_active() {
-	return class_exists( '\MaterialThemeBuilder\Plugin' );
+	return class_exists( '\MaterialDesign\Plugin\Plugin' );
 }
 
 /**
@@ -249,10 +249,10 @@ require get_template_directory() . '/inc/widgets/class-wp-widget-recent-posts.ph
 require get_template_directory() . '/inc/widgets/class-wp-widget-rss.php';
 require get_template_directory() . '/inc/widgets.php';
 
-MaterialTheme\Admin\setup();
-MaterialTheme\Customizer\setup();
-MaterialTheme\Customizer\Colors\setup();
-MaterialTheme\Customizer\Header_Footer\setup();
-MaterialTheme\Customizer\Layout\setup();
-MaterialTheme\Customizer\Menu\setup();
-MaterialTheme\Widgets\setup();
+MaterialDesign\Theme\Admin\setup();
+MaterialDesign\Theme\Customizer\setup();
+MaterialDesign\Theme\Customizer\Colors\setup();
+MaterialDesign\Theme\Customizer\Header_Footer\setup();
+MaterialDesign\Theme\Customizer\Layout\setup();
+MaterialDesign\Theme\Customizer\Menu\setup();
+MaterialDesign\Theme\Widgets\setup();

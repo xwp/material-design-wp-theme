@@ -13,8 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-shopt -s expand_aliases
-
+source .env
 source ./bin/includes.sh
 
-docker-compose run --rm -u 1000 --workdir=/var/www/html/wp-content/themes/material-theme wordpress -- composer test
+if [[ ! -z "${DOCKER_COMPOSE_PATH}" ]]; then
+	docker-compose --file="$DOCKER_COMPOSE_PATH" --file=docker-compose-plugin-dev.yml run --rm -u 1000 --workdir=/var/www/html/wp-content/themes/material-design wordpress -- composer test
+else
+	docker-compose run --rm -u 1000 --workdir=/var/www/html/wp-content/themes/material-design wordpress -- composer test
+fi

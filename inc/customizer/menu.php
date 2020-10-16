@@ -1,31 +1,31 @@
 <?php
 /**
- * Copyright 2020 Material Design
- * 
+ * Copyright 2020 Google LLC
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
- * @package MaterialTheme
+ *
+ * @package MaterialDesign
  */
 
 /**
- * Material Theme Customizer Menu options.
+ * Material Design Customizer Menu options.
  *
- * @package MaterialTheme
+ * @package MaterialDesign
  */
 
-namespace MaterialTheme\Customizer\Menu;
+namespace MaterialDesign\Theme\Customizer\Menu;
 
-use MaterialTheme\Customizer;
+use MaterialDesign\Theme\Customizer;
 
 /**
  * Attach hooks
@@ -48,7 +48,7 @@ function add_tabs_description( $wp_customize ) {
 		return;
 	}
 
-	$tabs_control->description = esc_html__( 'Only the top level items will display.', 'material-theme' );
+	$tabs_control->description = esc_html__( 'Only the top level items will display.', 'material-design' );
 }
 
 /**
@@ -65,7 +65,7 @@ function add_admin_notice() {
 
 	printf(
 		'<div class="notice notice-info is-dismissible"><p><strong>%1$s</strong> %2$s</p></div>',
-		esc_html__( 'Tabs Menu:', 'material-theme' ),
-		esc_html__( 'Only the top level items will display.', 'material-theme' )
+		esc_html__( 'Tabs Menu:', 'material-design' ),
+		esc_html__( 'Only the top level items will display.', 'material-design' )
 	);
 }

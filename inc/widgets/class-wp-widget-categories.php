@@ -1,20 +1,20 @@
 <?php
 /**
- * Copyright 2020 Material Design
- * 
+ * Copyright 2020 Google LLC
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
- * @package MaterialTheme
+ *
+ * @package MaterialDesign
  */
 
 /**
@@ -25,7 +25,7 @@
  * @since 4.4.0
  */
 
-namespace MaterialTheme\Widgets;
+namespace MaterialDesign\Theme\Widgets;
 
 /**
  * Override default widget with our own markup
@@ -45,7 +45,7 @@ class WP_Widget_Categories extends \WP_Widget_Categories {
 	public function widget( $args, $instance ) {
 		static $first_dropdown = true;
 
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Categories', 'material-theme' );
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Categories', 'material-design' );
 
 		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
@@ -73,7 +73,7 @@ class WP_Widget_Categories extends \WP_Widget_Categories {
 
 			echo '<label class="screen-reader-text" for="' . esc_attr( $dropdown_id ) . '">' . esc_html( $title ) . '</label>';
 
-			$cat_args['show_option_none'] = esc_html__( 'Select Category', 'material-theme' );
+			$cat_args['show_option_none'] = esc_html__( 'Select Category', 'material-design' );
 			$cat_args['id']               = $dropdown_id;
 
 			/**

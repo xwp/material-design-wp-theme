@@ -16,22 +16,8 @@
 source .env
 source ./bin/includes.sh
 
-# Grab full name of wordpress container
-WORDPRESS_CONTAINER=$(docker ps | grep wordpress | awk '{print $1}')
-
-if [[ '' == $WORDPRESS_CONTAINER ]]; then
-	echo -e "$(error_message "The WordPress Docker container must be running!")"
-	echo -e "Execute the following command: $(action_format "npm run env:start")"
-	echo ""
-	exit 0
-fi
-
-echo -e "Here comes the logs in real-time ... $(action_format "done")"
-echo ""
-
 if [[ ! -z "${DOCKER_COMPOSE_PATH}" ]]; then
-	docker-compose --file="$DOCKER_COMPOSE_PATH" --file=docker-compose-plugin-dev.yml logs -f
+	docker-compose --file="$DOCKER_COMPOSE_PATH" --file=docker-compose-plugin-dev.yml run --rm -u 1000 --workdir=/var/www/html/wp-content/themes/material-design wordpress $@
 else
-	docker-compose logs -f
+	docker-compose run --rm -u 1000 --workdir=/var/www/html/wp-content/themes/material-design wordpress $@
 fi
-

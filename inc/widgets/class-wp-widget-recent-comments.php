@@ -1,20 +1,20 @@
 <?php
 /**
- * Copyright 2020 Material Design
- * 
+ * Copyright 2020 Google LLC
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
- * @package MaterialTheme
+ *
+ * @package MaterialDesign
  */
 
 /**
@@ -25,7 +25,7 @@
  * @since 4.4.0
  */
 
-namespace MaterialTheme\Widgets;
+namespace MaterialDesign\Theme\Widgets;
 
 /**
  * Override default widget with our own markup
@@ -47,7 +47,7 @@ class WP_Widget_Recent_Comments extends \WP_Widget_Recent_Comments {
 
 		$output = '';
 
-		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : esc_html__( 'Recent Comments', 'material-theme' );
+		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : esc_html__( 'Recent Comments', 'material-design' );
 
 		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
@@ -78,7 +78,7 @@ class WP_Widget_Recent_Comments extends \WP_Widget_Recent_Comments {
 				),
 				$instance
 			)
-		); 
+		);
 
 		$output .= $args['before_widget'];
 		if ( $title ) {
@@ -95,7 +95,7 @@ class WP_Widget_Recent_Comments extends \WP_Widget_Recent_Comments {
 				$output .= '<li class="mdc-list-item recentcomments">';
 				$output .= sprintf(
 					/* translators: Comments widget. 1: Comment author, 2: Post link. */
-					esc_html_x( '%1$s on %2$s', 'widgets', 'material-theme' ),
+					esc_html_x( '%1$s on %2$s', 'widgets', 'material-design' ),
 					'<span class="comment-author-link">' . get_comment_author_link( $comment ) . '</span>',
 					'<a href="' . esc_url( get_comment_link( $comment ) ) . '">' . get_the_title( $comment->comment_post_ID ) . '</a>'
 				);

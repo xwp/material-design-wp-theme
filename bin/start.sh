@@ -13,14 +13,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-shopt -s expand_aliases
+source .env
 source ./bin/includes.sh
 
 printf "Starting up containers ..."
 
 # Start the containers.
-docker-compose up -d 2>/dev/null
+if [[ ! -z "${DOCKER_COMPOSE_PATH}" ]]; then
+	docker-compose --file="$DOCKER_COMPOSE_PATH" --file=docker-compose-plugin-dev.yml up -d 2>/dev/null
+else
+	docker-compose up -d 2>/dev/null
+fi
 
 if ! command_exists "curl"; then
 	printf " $(action_format "unknown")"
@@ -41,10 +44,10 @@ else
 fi
 
 echo ""
-echo "Welcome to: $(action_format "Material Theme")"
+echo "Welcome to the $(action_format "Material Design theme for WordPress")"
 echo ""
 
-# Give the user more context to what they should do next: Build the plugin and start testing!
-echo -e "Run $(action_format "npm run dev") to build the latest version of the Material Theme,"
+# Give the user more context to what they should do next: Build the theme and start testing!
+echo -e "Run $(action_format "npm run dev") to build the latest version of the Material Design theme,"
 echo -e "then open $(action_format "http://localhost:8088/") to get started!"
 echo ""
