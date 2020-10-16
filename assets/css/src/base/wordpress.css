@@ -22,3 +22,19 @@
 .wp-block-pullquote blockquote {
 	border: 0;
 }
+
+.has-large-font-size {
+	line-height: 1.1;
+}
+
+ol ol {
+	list-style: lower-alpha;
+}
+
+ul ul {
+	list-style: circle;
+}
+
+.wp-block-group {
+	padding: 1rem 2rem;
+}
