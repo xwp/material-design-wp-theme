@@ -13,3 +13,12 @@
 .wp-block-cover.has-background-dim-20 {
 	background-color: rgba(0, 0, 0, 0.2);
 }
+
+.wp-block-quote.is-style-large {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-block-pullquote blockquote {
+	border: 0;
+}
