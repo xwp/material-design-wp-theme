@@ -38,6 +38,7 @@
 	& .posted-on {
 		align-items: center;
 		display: flex;
+		flex-shrink: 0;
 
 		& .material-icons {
 			margin-right: 0.5rem;
