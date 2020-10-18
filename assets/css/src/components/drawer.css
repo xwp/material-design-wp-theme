@@ -34,6 +34,10 @@
 		& a {
 			text-decoration: none;
 		}
+
+		& .site-title {
+			margin-bottom: 0;
+		}
 	}
 
 	& .sub-menu {

@@ -74,6 +74,10 @@
 			margin-bottom: 0;
 			margin-top: 0;
 		}
+
+		& .site-tagline {
+			display: none;
+		}
 	}
 
 	& .search__button:not(:disabled) {

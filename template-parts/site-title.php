@@ -31,12 +31,20 @@ if ( $hide_site_title ) {
 
 if ( is_front_page() && is_home() ) :
 	?>
-	<h1 class="site-title mdc-typography mdc-typography--headline6">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-	</h1>
+	<div class="site-title__wrapper">
+		<h1 class="site-title mdc-typography mdc-typography--headline6">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+		</h1>
+		<div class="site-tagline mdc-typography--subtitle1"><?php bloginfo( 'description' ); ?></div>
+	</div>
 	<?php
 else :
 	?>
-	<div class="site-title mdc-typography mdc-typography--headline6"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+	<div class="site-title__wrapper">
+			<div class="site-title mdc-typography mdc-typography--headline6">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+			</div>
+		<div class="site-tagline mdc-typography--subtitle1"><?php bloginfo( 'description' ); ?></div>
+	</div>
 	<?php
 endif;
