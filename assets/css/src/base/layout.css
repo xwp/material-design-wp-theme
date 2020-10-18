@@ -61,6 +61,7 @@ body {
 .entry-title {
 	margin: 1rem auto;
 	max-width: var(--mdc-theme-max-content-width);
+	word-wrap: break-word;
 }
 
 .entry-content {

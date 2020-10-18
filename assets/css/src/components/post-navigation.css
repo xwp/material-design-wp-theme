@@ -25,6 +25,7 @@
 	& .post-navigation__previous {
 		align-items: center;
 		display: flex;
+		overflow: hidden;
 		width: 50%;
 	}
 
