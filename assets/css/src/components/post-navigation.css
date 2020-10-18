@@ -17,16 +17,25 @@
 .site-main .post-navigation {
 	align-items: center;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	margin: 0 auto 1.5em;
 	max-width: var(--mdc-theme-max-content-width);
+
+	@media (--medium-viewport) {
+		flex-direction: row;
+	}
 
 	& .post-navigation__next,
 	& .post-navigation__previous {
 		align-items: center;
 		display: flex;
 		overflow: hidden;
-		width: 50%;
+		width: 100%;
+
+		@media (--medium-viewport) {
+			width: 50%;
+		}
 	}
 
 	& .post-navigation__next {
@@ -49,10 +58,16 @@
 	& a {
 		margin-bottom: 2px;
 		margin-top: 2px;
+		max-width: calc(100% - 55px);
 		text-decoration: none;
+		word-wrap: break-word;
 
 		&:hover {
 			text-decoration: underline;
+		}
+
+		@media (--medium-viewport) {
+			max-width: 380px;
 		}
 	}
 }
