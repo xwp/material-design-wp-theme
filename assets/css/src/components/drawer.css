@@ -57,4 +57,8 @@
 			color: var(--mdc-theme-header, var(--mdc-theme-primary, #6200ee));
 		}
 	}
+
+	ul {
+		margin-left: 0;
+	}
 }
