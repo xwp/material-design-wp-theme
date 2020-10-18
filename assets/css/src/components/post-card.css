@@ -16,6 +16,15 @@
 
 .post-card {
 
+	&.sticky .post-card__title {
+		align-items: center;
+		display: flex;
+	}
+
+	&.sticky .post-card__title .material-icons {
+		margin-right: 5px;
+	}
+
 	& .post-card__title a {
 		text-decoration: none;
 	}

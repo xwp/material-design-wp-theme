@@ -44,7 +44,7 @@
 		@media (--large-viewport) {
 			margin-left: auto;
 			margin-right: 0;
-			right: calc((100vw - 58rem) / 2 + 58rem + 2rem);
+			right: calc((100vw - 66rem) / 2 + 58rem + 2rem);
 		}
 	}
 
@@ -57,7 +57,7 @@
 		}
 
 		@media (--large-viewport) {
-			left: calc((100vw - 58rem) / 2 + 58rem + 2rem);
+			left: calc((100vw - 66rem) / 2 + 58rem + 2rem);
 			margin-left: 0;
 			margin-right: auto;
 		}
