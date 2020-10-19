@@ -156,7 +156,9 @@ body {
 		padding-right: 1.5rem;
 	}
 
-	&.wp-block-columns {
+	&.wp-block-columns,
+	& > figcaption,
+	& > .wp-caption-text {
 		padding-left: 2rem;
 		padding-right: 2rem;
 	}

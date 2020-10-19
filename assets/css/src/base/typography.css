@@ -25,3 +25,4 @@
 @mixin selector-typography h5, headline5, 1.5, 2, 400;
 @mixin selector-typography h6, headline6, 1.25, 2, 500;
 @mixin selector-typography p, body1, 1, 1.5, 400;
+@mixin selector-typography figcaption, subtitle1, 1, 1.75, 400;
