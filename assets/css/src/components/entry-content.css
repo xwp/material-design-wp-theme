@@ -32,6 +32,16 @@
 		@media (--large-viewport) {
 			position: absolute;
 		}
+
+		&.wp-block-cover,
+		&.wp-block-gallery,
+		&.wp-caption,
+		&[class*="wp-image"] {
+
+			@media (--large-viewport) {
+				position: relative;
+			}
+		}
 	}
 
 	.alignleft {
@@ -47,6 +57,18 @@
 			margin-right: 0;
 			right: calc((100vw - 66rem) / 2 + 58rem + 2rem);
 		}
+
+		&.wp-block-cover,
+		&.wp-block-gallery,
+		&.wp-caption,
+		&[class*="wp-image"] {
+			right: auto;
+
+			@media (--medium-large-viewport) {
+				margin-left: calc((100% - 58rem) / 2 - 2rem);
+				margin-right: 1.25rem;
+			}
+		}
 	}
 
 	.alignright {
@@ -61,6 +83,18 @@
 			left: calc((100vw - 66rem) / 2 + 58rem + 2rem);
 			margin-left: 0;
 			margin-right: auto;
+		}
+
+		&.wp-block-cover,
+		&.wp-block-gallery,
+		&.wp-caption,
+		&[class*="wp-image"] {
+			left: auto;
+
+			@media (--medium-large-viewport) {
+				margin-right: calc((100% - 58rem) / 2 - 2rem);
+				margin-left: 1.25rem;
+			}
 		}
 	}
 }

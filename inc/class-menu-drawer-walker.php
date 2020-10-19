@@ -53,7 +53,7 @@ class Menu_Drawer_Walker extends \Walker_Nav_Menu {
 
 		$output .= sprintf(
 			'<a href="%1$s" %2$s>%3$s</a>',
-			esc_url( $item->url ),
+			esc_url( get_the_permalink( $item ) ),
 			( absint( $item->object_id ) === get_the_ID() ) ? ' class="mdc-list-item mdc-list-item--activated"' : ' class="mdc-list-item"',
 			'<span class="mdc-list-item__text">' . esc_html( $item->post_title ) . '</span>'
 		);
