@@ -1,5 +1,4 @@
 const makeFit = () => {
-	console.log( 'makeFit' );
 	document
 		.querySelectorAll( 'iframe, object, video' )
 		.forEach( function( video ) {
