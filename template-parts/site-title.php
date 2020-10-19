@@ -41,9 +41,9 @@ if ( is_front_page() && is_home() ) :
 else :
 	?>
 	<div class="site-title__wrapper">
-			<div class="site-title mdc-typography mdc-typography--headline6">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-			</div>
+		<div class="site-title mdc-typography mdc-typography--headline6">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+		</div>
 		<div class="site-tagline mdc-typography--subtitle1"><?php bloginfo( 'description' ); ?></div>
 	</div>
 	<?php
