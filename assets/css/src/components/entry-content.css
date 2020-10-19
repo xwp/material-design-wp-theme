@@ -23,6 +23,7 @@
 
 	& > :not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
 		max-width: var(--mdc-theme-max-content-width);
+		width: calc(100% - 4rem);
 	}
 
 	.alignleft,
