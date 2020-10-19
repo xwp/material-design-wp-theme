@@ -69,6 +69,11 @@
 		color: var(--mdc-theme-on-header, var(--mdc-theme-on-primary, #fff));
 		padding-left: 1rem;
 
+		& .site-title__wrapper {
+			align-items: center;
+			display: flex;
+		}
+
 		& .site-title {
 			font-size: 1.25rem;
 			margin-bottom: 0;
@@ -76,7 +81,7 @@
 		}
 
 		& .site-tagline {
-			display: none;
+			margin-left: 8px;
 		}
 	}
 

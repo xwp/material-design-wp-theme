@@ -19,6 +19,7 @@
 	& .mdc-drawer__header {
 		color: var(--mdc-theme-on-surface, #000);
 		display: block;
+		margin-top: 10px;
 	}
 
 	& .mdc-drawer__title {
