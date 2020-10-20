@@ -46,6 +46,11 @@
 		padding-left: 2em;
 	}
 
+	& > *,
+	& .comment {
+		margin: 0;
+	}
+
 	& .comment-author {
 		font-size: 1.25rem;
 		margin: 0 0 4px 0;
@@ -62,7 +67,7 @@
 	& .comment-body {
 		display: flex;
 		flex-direction: column;
-		margin-bottom: 2.5em;
+		margin-bottom: 2em;
 		padding: 0;
 
 		@media (--medium-viewport) {

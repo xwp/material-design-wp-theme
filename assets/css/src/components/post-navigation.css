@@ -41,10 +41,21 @@
 	& .post-navigation__next {
 		justify-content: flex-end;
 		padding-left: 0.5rem;
-	}
 
-	& .post-navigation__next .material-icons {
-		margin-left: 0.5rem;
+		& .material-icons {
+			margin-left: 0.5rem;
+		}
+
+		@media (--small-viewport-max) {
+			flex-direction: row-reverse;
+			margin-top: 1rem;
+			padding-left: 0;
+
+			& .material-icons {
+				margin-left: 0;
+				margin-right: 0.5rem;
+			}
+		}
 	}
 
 	& .post-navigation__previous {

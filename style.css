@@ -501,7 +501,7 @@ ol {
 }
 
 li {
-	margin-top: 0.5rem;
+	margin: 0.5rem 0 0 1.5rem;
 }
 
 li > ul,
@@ -785,6 +785,10 @@ a:hover, a:active {
 	margin: 0 0 1.5em;
 }
 
+.page-links > * {
+	padding: 0.5em;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -853,10 +857,6 @@ object {
 	margin: 0.8075em 0;
 }
 
-.wp-caption-text {
-	text-align: center;
-}
-
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
@@ -866,7 +866,6 @@ object {
 
 .gallery-item {
 	display: inline-block;
-	text-align: center;
 	vertical-align: top;
 	width: 100%;
 }

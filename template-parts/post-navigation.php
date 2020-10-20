@@ -28,7 +28,7 @@ $next_link     = get_next_post_link( '%link' );
 
 ?>
 
-<div class="post-navigation">
+<div class="post-navigation section-inner">
 	<div class="post-navigation__previous">
 		<?php if ( ! empty( $previous_link ) ) : ?>
 			<i class="material-icons mdc-button__icon">chevron_left</i>

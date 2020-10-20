@@ -30,7 +30,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php material_design_theme_post_thumbnail(); ?>
 
-	<header class="entry-header">
+	<header class="entry-header section-inner">
 		<?php if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">
 				<?php
@@ -71,14 +71,14 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'material-design' ),
+				'before' => '<div class="page-links mdc-typography mdc-typography--subtitle1">' . esc_html__( 'Pages:', 'material-design' ),
 				'after'  => '</div>',
 			)
 		);
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<footer class="entry-footer section-inner">
 		<?php material_design_theme_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -28,7 +28,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header class="entry-header section-inner">
 		<?php the_title( '<h1 class="entry-title mdc-typography mdc-typography--headline2">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
@@ -40,7 +40,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'material-design' ),
+				'before' => '<div class="page-links mdc-typography mdc-typography--subtitle1">' . esc_html__( 'Pages:', 'material-design' ),
 				'after'  => '</div>',
 			)
 		);
@@ -48,7 +48,7 @@
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
+		<footer class="entry-footer section-inner">
 			<?php
 			edit_post_link(
 				sprintf(

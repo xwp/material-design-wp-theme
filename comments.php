@@ -156,7 +156,7 @@ if ( has_action( 'set_comment_cookies', 'wp_set_comment_cookies' ) && get_option
 
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comments-area section-inner">
 
 	<?php
 	// You can start editing here -- including this comment!
@@ -178,7 +178,6 @@ if ( has_action( 'set_comment_cookies', 'wp_set_comment_cookies' ) && get_option
 			wp_list_comments(
 				array(
 					'style'       => 'ul',
-					'short_ping'  => true,
 					'avatar_size' => 60,
 					'walker'      => new MaterialDesign\Theme\Walker_Comment(),
 				)
