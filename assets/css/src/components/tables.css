@@ -14,20 +14,17 @@
  * limitations under the License.
  */
 
-.archive-image-list-wrap {
-	margin-top: 3rem;
+table {
+	border-collapse: collapse;
+	border: 1px solid rgba(var(--mdc-theme-on-surface-rgb, 0, 0, 0), .12);
 }
 
-.archive-image-list {
-	column-count: 1;
-	column-gap: 1rem;
+tr {
+	border-top: 1px solid rgba(var(--mdc-theme-on-surface-rgb, 0, 0, 0), .12);
+}
 
-	@media (--medium-viewport) {
-		column-count: 2;
-	}
-
-	& .mdc-image-list__item {
-		margin-bottom: 1rem;
-		margin-top: 0;
-	}
+th,
+td {
+	padding: 0.5em 1em;
+	text-align: inherit;
 }

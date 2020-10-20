@@ -35,9 +35,8 @@ $class      = ( 'fixed' === $layout ) ? 'mdc-top-app-bar--fixed' : '';
 <div class="mdc-top-app-bar top-app-bar <?php echo esc_attr( $class ); ?>">
 	<div class="mdc-top-app-bar__row top-app-bar__header">
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-			<?php if ( has_nav_menu( 'menu-2' ) ) : ?>
-				<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger"><?php esc_html_e( 'menu', 'material-design' ); ?></button>
-			<?php endif; ?>
+			<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger"><?php esc_html_e( 'menu', 'material-design' ); ?></button>
+
 			<?php if ( has_custom_logo() ) : ?>
 				<div class="logo">
 					<?php the_custom_logo(); ?>

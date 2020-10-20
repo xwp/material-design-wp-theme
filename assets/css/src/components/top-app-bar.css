@@ -49,6 +49,7 @@
 	}
 
 	& .site-title a {
+		margin-right: 3px;
 		text-decoration: none;
 	}
 
@@ -68,10 +69,19 @@
 		color: var(--mdc-theme-on-header, var(--mdc-theme-on-primary, #fff));
 		padding-left: 1rem;
 
+		& .site-title__wrapper {
+			align-items: center;
+			display: flex;
+		}
+
 		& .site-title {
 			font-size: 1.25rem;
 			margin-bottom: 0;
 			margin-top: 0;
+		}
+
+		& .site-tagline {
+			margin-left: 8px;
 		}
 	}
 
@@ -80,6 +90,10 @@
 		max-width: 36px;
 		min-width: auto;
 		--mdc-typography-button-font-size: 24px;
+
+		&:focus {
+			outline: 1px dotted;
+		}
 
 		& .mdc-button__icon {
 			margin-left: 0;

@@ -18,7 +18,7 @@
 
 @define-mixin fontvars $type, $font-size: 1, $line-height: 1.5, $font-weight: 400, $tracking: 0.25, $font-style: normal {
 	--mdc-typography-$(type)-font-size: calc($font-size * 16)px;
-	--mdc-typography-$(type)-line-height: calc($line-height * 16)px;
+	--mdc-typography-$(type)-line-height: $line-height;
 	--mdc-typography-$(type)-font-style: $font-style;
 	--mdc-typography-$(type)-font-weight: $font-weight;
 	--mdc-typography-$(type)-letter-spacing: calc(($tracking / ($font-size * 16)) * $font-size * 16)px;
@@ -28,7 +28,7 @@
 .mdc-typography--$type $child {
 	font-family: var(--mdc-typography-$(type)-font-family, var(--mdc-typography-font-family, Roboto, sans-serif));
 	font-size: var(--mdc-typography-$(type)-font-size, $(font-size)em);
-	line-height: var(--mdc-typography-$(type)-line-height, $(line-height)em);
+	line-height: var(--mdc-typography-$(type)-line-height, $(line-height));
 	font-style: var(--mdc-typography-$(type)-font-style, $font-style);
 	font-weight: var(--mdc-typography-$(type)-font-weight, $font-weight);
 	letter-spacing: var(--mdc-typography-$(type)-letter-spacing);
@@ -39,7 +39,7 @@
 $selector $child {
 	font-family: var(--mdc-typography-$(type)-font-family, var(--mdc-typography-font-family, Roboto, sans-serif));
 	font-size: var(--mdc-typography-$(type)-font-size, $(font-size)em);
-	line-height: var(--mdc-typography-$(type)-line-height, $(line-height)em);
+	line-height: var(--mdc-typography-$(type)-line-height, $(line-height));
 	font-style: var(--mdc-typography-$(type)-font-style, $font-style);
 	font-weight: var(--mdc-typography-$(type)-font-weight, $font-weight);
 	letter-spacing: var(--mdc-typography-$(type)-letter-spacing);

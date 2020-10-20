@@ -14,40 +14,51 @@
  * limitations under the License.
  */
 
-.post-card {
+.wp-block-button__link {
 
-	&.sticky .post-card__title {
-		align-items: center;
-		display: flex;
+	@nest .is-style-squared & {
+		border-radius: 0;
 	}
+}
 
-	&.sticky .post-card__title .material-icons {
-		margin-right: 5px;
-	}
+.wp-block-cover {
+	color: var(--wp-cover-block-text);
+}
 
-	& .post-card__title a {
-		text-decoration: none;
-	}
+.wp-block-cover-image.has-background-dim-20,
+.wp-block-cover.has-background-dim-20 {
+	background-color: rgba(0, 0, 0, 0.2);
+}
 
-	& a:focus {
-		outline: 1px dotted;
-	}
+.wp-block-quote.is-style-large {
+	margin-left: auto;
+	margin-right: auto;
+}
 
-	.mdc-card__action--button {
-		text-transform: none;
-	}
+.wp-block-pullquote blockquote {
+	border: 0;
+}
 
-	.mdc-card__action-buttons .mdc-button__icon {
-		color: var(--mdc-theme-primary, #6200ee);
-	}
+.has-large-font-size {
+	line-height: 1.1;
+}
 
-	.post-card__primary,
-	.post-card__secondary {
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
+ol ol {
+	list-style: lower-alpha;
+}
 
-	.post-card__subtitle {
-		color: rgba(var(--mdc-theme-on-surface-rgb, 0, 0, 0), .54);
-	}
+ol ol ol {
+	list-style: lower-roman;
+}
+
+ul ul {
+	list-style: circle;
+}
+
+ul ul ul {
+	list-style: square;
+}
+
+.wp-block-group {
+	padding: 1rem 2rem;
 }

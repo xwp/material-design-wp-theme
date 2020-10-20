@@ -39,7 +39,11 @@ $classes       = get_theme_mod( 'archive_outlined', false ) ? 'mdc-card--outline
 				<div class="mdc-card__media mdc-card__media--16-9 post-card__media" style="background-image: url(&quot;<?php echo esc_attr( get_the_post_thumbnail_url() ); ?>&quot;);"></div>
 			<?php endif; ?>
 			<div class="post-card__primary">
-				<?php the_title( '<h2 class="post-card__title mdc-typography mdc-typography--headline6">', '</h2>' ); ?>
+				<?php if ( is_sticky() ) : ?>
+					<?php the_title( '<h2 class="post-card__title mdc-typography mdc-typography--headline6"><i class="material-icons">push_pin</i>', '</h2>' ); ?>
+				<?php else : ?>
+					<?php the_title( '<h2 class="post-card__title mdc-typography mdc-typography--headline6">', '</h2>' ); ?>
+				<?php endif; ?>
 
 				<?php if ( ! empty( $show_date ) ) : ?>
 					<h3 class="post-card__subtitle mdc-typography mdc-typography--subtitle2"><?php the_time( 'F j, Y' ); ?></h3>

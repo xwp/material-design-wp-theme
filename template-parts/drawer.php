@@ -49,17 +49,15 @@ $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -wi
 
 		<nav class="mdc-list">
 			<?php
-			if ( has_nav_menu( 'menu-2' ) ) {
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-2',
-						'menu_id'        => 'secondary-menu',
-						'walker'         => new Menu_Drawer_Walker(),
-						'container'      => '',
-						'items_wrap'     => '%3$s',
-					)
-				);
-			}
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-2',
+					'menu_id'        => 'secondary-menu',
+					'walker'         => new Menu_Drawer_Walker(),
+					'container'      => '',
+					'items_wrap'     => '%3$s',
+				)
+			);
 			?>
 		</nav>
 	</div>

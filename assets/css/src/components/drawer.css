@@ -19,6 +19,7 @@
 	& .mdc-drawer__header {
 		color: var(--mdc-theme-on-surface, #000);
 		display: block;
+		margin-top: 10px;
 	}
 
 	& .mdc-drawer__title {
@@ -33,6 +34,10 @@
 
 		& a {
 			text-decoration: none;
+		}
+
+		& .site-title {
+			margin-bottom: 0;
 		}
 	}
 
@@ -56,5 +61,9 @@
 		&:not(.mdc-text-field--disabled) .mdc-floating-label {
 			color: var(--mdc-theme-header, var(--mdc-theme-primary, #6200ee));
 		}
+	}
+
+	ul {
+		margin-left: 0;
 	}
 }
