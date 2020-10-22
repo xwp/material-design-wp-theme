@@ -8,7 +8,7 @@ The official Material Design theme for WordPress.
 **Tags:** [Blog](https://wordpress.org/plugins/tags/Blog), [Custom Colors](https://wordpress.org/plugins/tags/Custom-Colors), [Custom Logo](https://wordpress.org/plugins/tags/Custom-Logo), [Custom Menu](https://wordpress.org/plugins/tags/Custom-Menu), [Featured Images](https://wordpress.org/plugins/tags/Featured-Images), [Full Width Template](https://wordpress.org/plugins/tags/Full-Width-Template), [One Column](https://wordpress.org/plugins/tags/One-Column), [Threaded Comments](https://wordpress.org/plugins/tags/Threaded-Comments), [Accessibility Ready](https://wordpress.org/plugins/tags/Accessibility-Ready), [Footer Widgets](https://wordpress.org/plugins/tags/Footer-Widgets), [Editor Style](https://wordpress.org/plugins/tags/Editor-Style), [Featured Images](https://wordpress.org/plugins/tags/Featured-Images), [Sticky Post](https://wordpress.org/plugins/tags/Sticky-Post), [Translation Ready](https://wordpress.org/plugins/tags/Translation-Ready), [RTL Language Support](https://wordpress.org/plugins/tags/RTL-Language-Support), [Block Editor Styles](https://wordpress.org/plugins/tags/Block-Editor-Styles), [Wide Blocks](https://wordpress.org/plugins/tags/Wide-Blocks), [Widgets](https://wordpress.org/plugins/tags/Widgets)  
 **Requires at least:** 5.0  
 **Tested up to:** 5.5.1  
-**Stable tag:** 1.0.0-alpha  
+**Stable tag:** 0.1.0  
 **License:** [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)  
 
 [![Build Status](https://travis-ci.com/xwp/material-design-wp-theme.svg?branch=develop)](https://travis-ci.com/xwp/material-design-wp-theme) [![Built with Grunt](https://gruntjs.com/cdn/builtwith.svg)](http://gruntjs.com) 

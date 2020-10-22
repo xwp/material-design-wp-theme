@@ -2,7 +2,7 @@
 Contributors: google, materialdesign, xwp
 Requires at least: 5.0
 Tested up to: 5.5.1
-Stable tag: 1.0.0-alpha
+Stable tag: 0.1.0
 License: Apache License, Version 2.0
 License URI: https://www.apache.org/licenses/LICENSE-2.0
 Tags: Blog, Custom Colors, Custom Logo, Custom Menu, Featured Images, Full Width Template, One Column, Threaded Comments, Accessibility Ready, Footer Widgets, Editor Style, Featured Images, Sticky Post, Translation Ready, RTL Language Support, Block Editor Styles, Wide Blocks, Widgets
