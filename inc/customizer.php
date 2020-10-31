@@ -407,7 +407,12 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
 		}
 	}
 
-	$wp_customize->add_setting( 'colors_more_options', [] );
+	$wp_customize->add_setting(
+		'colors_more_options',
+		[
+			'sanitize_callback' => 'wp_kses_post',
+		]
+	);
 	$controls['colors_more_options'] = new More_Options(
 		$wp_customize,
 		'colors_more_options',
