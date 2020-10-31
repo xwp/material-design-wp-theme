@@ -38,7 +38,7 @@ function setup() {
 	add_filter( 'widget_archives_args', __NAMESPACE__ . '\build_archive' );
 	add_filter( 'wp_list_categories', __NAMESPACE__ . '\add_class_tax_list' );
 	add_filter( 'widget_nav_menu_args', __NAMESPACE__ . '\menu_widget_args' );
-	add_filter( 'wp_list_pages', __NAMESPACE__ . '\add_class_pages' );
+	add_filter( 'wp_list_pages', __NAMESPACE__ . '\add_list_item_class' );
 }
 
 /**
@@ -123,7 +123,7 @@ function menu_widget_args( $args ) {
  * @param  string $html Widget output.
  * @return string Modified output
  */
-function add_class_pages( $html ) {
+function add_list_item_class( $html ) {
 	$html = str_replace( '<li class="page_item', '<li class="mdc-list-item page_item', $html );
 
 	return $html;
