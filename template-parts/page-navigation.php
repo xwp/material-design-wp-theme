@@ -20,6 +20,8 @@
 /**
  * Page navigation partial
  *
+ * Replacement for posts_nav_link();
+ *
  * @package MaterialDesign
  */
 
@@ -58,8 +60,8 @@ $links = [
 		'number' => $total,
 	],
 ];
-?>
 
+?>
 <ul class="mdc-page-navigation">
 <?php foreach ( $links as $link ) : // phpcs:ignore ?>
 	<li>
