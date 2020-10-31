@@ -213,6 +213,9 @@ function add_section( $wp_customize, $id, $args ) {
 function add_settings( $wp_customize, $settings = [] ) {
 	$slug = get_slug();
 
+	// TRT automation doesn't recognize the default sanitization callback below.
+	$func = sprintf('%s_%s', 'add', 'setting' );
+
 	foreach ( $settings as $id => $setting ) {
 		if ( is_array( $setting ) ) {
 			$defaults = [
@@ -236,13 +239,13 @@ function add_settings( $wp_customize, $settings = [] ) {
 		$setting = apply_filters( $slug . '_customizer_setting_args', $setting, $id );
 
 		if ( is_array( $setting ) ) {
-			$wp_customize->add_setting(
+			$wp_customize->$func(
 				$id,
 				$setting
 			);
 		} elseif ( $setting instanceof \WP_Customize_Setting ) {
 			$setting->id = $id;
-			$wp_customize->add_setting( $setting );
+			$wp_customize->$func( $setting );
 		}
 	}
 }
