@@ -45,7 +45,7 @@ class WP_Widget_Recent_Posts extends \WP_Widget_Recent_Posts {
 			$args['widget_id'] = $this->id;
 		}
 
-		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : esc_html__( 'Recent Posts', 'material-design-theme' );
+		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : esc_html__( 'Recent Posts', 'material-design-google' );
 
 		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
@@ -94,7 +94,7 @@ class WP_Widget_Recent_Posts extends \WP_Widget_Recent_Posts {
 			<?php foreach ( $r->posts as $recent_post ) : ?>
 				<?php
 				$post_title   = get_the_title( $recent_post->ID );
-				$title        = ( ! empty( $post_title ) ) ? $post_title : esc_html__( '(no title)', 'material-design-theme' );
+				$title        = ( ! empty( $post_title ) ) ? $post_title : esc_html__( '(no title)', 'material-design-google' );
 				$aria_current = '';
 
 				if ( get_queried_object_id() === $recent_post->ID ) {

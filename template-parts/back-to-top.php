@@ -31,7 +31,7 @@ if ( ! empty( $is_hidden ) ) {
 ?>
 
 <div class="back-to-top mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-	<button id="back-to-top" class="mdc-button" aria-label="<?php esc_attr_e( 'Back to Top', 'material-design-theme' ); ?>">
+	<button id="back-to-top" class="mdc-button" aria-label="<?php esc_attr_e( 'Back to Top', 'material-design-google' ); ?>">
 		<div class="mdc-button__ripple"></div>
 		<i class="material-icons mdc-icon-button__icon">expand_less</i>
 	</button>

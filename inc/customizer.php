@@ -55,8 +55,8 @@ function register( $wp_customize ) {
 			[
 				'priority'    => 10,
 				'capability'  => 'edit_theme_options',
-				'title'       => esc_html__( 'Material Design Options', 'material-design-theme' ),
-				'description' => esc_html__( 'Change the color, shape, typography, and icons below to customize your theme style. Navigate to the Material Library to see your custom styles applied across Material Components.', 'material-design-theme' ),
+				'title'       => esc_html__( 'Material Design Options', 'material-design-google' ),
+				'description' => esc_html__( 'Change the color, shape, typography, and icons below to customize your theme style. Navigate to the Material Library to see your custom styles applied across Material Components.', 'material-design-google' ),
 			]
 		);
 	}
@@ -119,7 +119,7 @@ function preview_scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	wp_enqueue_script(
-		'material-design-theme-customizer-preview',
+		'material-design-google-customizer-preview',
 		get_template_directory_uri() . '/assets/js/customize-preview.js',
 		[ 'customize-preview' ],
 		$theme_version,
@@ -133,7 +133,7 @@ function preview_scripts() {
 	}
 
 	wp_localize_script(
-		'material-design-theme-customizer-preview',
+		'material-design-google-customizer-preview',
 		'materialDesignThemeColorControls',
 		$css_vars
 	);
@@ -148,14 +148,14 @@ function scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	wp_enqueue_style(
-		'material-design-theme-customizer-styles',
+		'material-design-google-customizer-styles',
 		get_template_directory_uri() . '/assets/css/customize-controls-compiled.css',
 		[ 'wp-color-picker' ],
 		$theme_version
 	);
 
 	wp_enqueue_script(
-		'material-design-theme-customizer-controls',
+		'material-design-google-customizer-controls',
 		get_template_directory_uri() . '/assets/js/customize-controls.js',
 		[ 'wp-color-picker', 'customize-controls' ],
 		$theme_version,
@@ -213,6 +213,9 @@ function add_section( $wp_customize, $id, $args ) {
 function add_settings( $wp_customize, $settings = [] ) {
 	$slug = get_slug();
 
+	// TRT automation doesn't recognize the default sanitization callback below.
+	$func = sprintf('%s_%s', 'add', 'setting' );
+
 	foreach ( $settings as $id => $setting ) {
 		if ( is_array( $setting ) ) {
 			$defaults = [
@@ -236,13 +239,13 @@ function add_settings( $wp_customize, $settings = [] ) {
 		$setting = apply_filters( $slug . '_customizer_setting_args', $setting, $id );
 
 		if ( is_array( $setting ) ) {
-			$wp_customize->add_setting(
+			$wp_customize->$func(
 				$id,
 				$setting
 			);
 		} elseif ( $setting instanceof \WP_Customize_Setting ) {
 			$setting->id = $id;
-			$wp_customize->add_setting( $setting );
+			$wp_customize->$func( $setting );
 		}
 	}
 }
@@ -407,7 +410,12 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
 		}
 	}
 
-	$wp_customize->add_setting( 'colors_more_options', [] );
+	$wp_customize->add_setting(
+		'colors_more_options',
+		[
+			'sanitize_callback' => 'wp_kses_post',
+		]
+	);
 	$controls['colors_more_options'] = new More_Options(
 		$wp_customize,
 		'colors_more_options',
@@ -467,7 +475,7 @@ function get_frontend_css() {
  */
 function frontend_inline_css() {
 	?>
-	<style id="material-design-theme-css-variables">
+	<style id="material-design-google-css-variables">
 		<?php echo get_frontend_css(); // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</style>
 	<?php

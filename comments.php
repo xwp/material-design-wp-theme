@@ -55,7 +55,7 @@ $filled_label   = '<span class="mdc-floating-label" id="%s">%s</span>
 				<span class="mdc-line-ripple"></span>';
 
 $args = [
-	'title_reply'        => __( 'Leave a comment', 'material-design-theme' ),
+	'title_reply'        => __( 'Leave a comment', 'material-design-google' ),
 	'title_reply_before' => '<h4 id="reply-title" class="comment-reply-title mdc-typography--headline4">',
 	'title_reply_after'  => '</h4>',
 	'fields'             => [
@@ -72,7 +72,7 @@ $args = [
 			sprintf(
 				'outlined' === $style ? $outlined_label : $filled_label,
 				esc_html( 'author-label' ),
-				esc_html__( 'Name', 'material-design-theme' )
+				esc_html__( 'Name', 'material-design-google' )
 			)
 		),
 		'email'  => sprintf(
@@ -88,7 +88,7 @@ $args = [
 			sprintf(
 				'outlined' === $style ? $outlined_label : $filled_label,
 				esc_html( 'email-label' ),
-				esc_html__( 'Email', 'material-design-theme' )
+				esc_html__( 'Email', 'material-design-google' )
 			)
 		),
 		'url'    => sprintf(
@@ -103,7 +103,7 @@ $args = [
 			sprintf(
 				'outlined' === $style ? $outlined_label : $filled_label,
 				esc_html( 'url-label' ),
-				esc_html__( 'Website', 'material-design-theme' )
+				esc_html__( 'Website', 'material-design-google' )
 			)
 		),
 	],
@@ -116,7 +116,7 @@ $args = [
 		sprintf(
 			'outlined' === $style ? $outlined_label : $filled_label,
 			esc_html( 'comment' ),
-			esc_html__( 'Comment', 'material-design-theme' )
+			esc_html__( 'Comment', 'material-design-google' )
 		)
 	),
 	'submit_button'      => '<button id="%2$s" class="mdc-button mdc-button--raised mdc-ripple-upgraded %3$s" type="submit"><span class="mdc-button__ripple"></span><span class="mdc-button__label">%4$s</span></button>',
@@ -150,7 +150,7 @@ if ( has_action( 'set_comment_cookies', 'wp_set_comment_cookies' ) && get_option
 			</div>
 		</div>',
 		$consent,
-		esc_html__( 'Save my name, email, and website in this browser for the next time I comment.', 'material-design-theme' )
+		esc_html__( 'Save my name, email, and website in this browser for the next time I comment.', 'material-design-google' )
 	);
 }
 
@@ -164,11 +164,11 @@ if ( has_action( 'set_comment_cookies', 'wp_set_comment_cookies' ) && get_option
 		$count = get_comments_number();
 		?>
 		<h4 class="comments-title mdc-typography--headline4">
-			<?php esc_html_e( 'Join the conversation', 'material-design-theme' ); ?>
+			<?php esc_html_e( 'Join the conversation', 'material-design-google' ); ?>
 		</h4><!-- .comments-title -->
 		<div class="comments-title-count">
 			<span class="material-icons">comment</span>
-			<span class="comment-count"><?php echo esc_html( $count ); ?> <?php echo esc_html( _n( 'comment', 'comments', $count, 'material-design-theme' ) ); ?></span>
+			<span class="comment-count"><?php echo esc_html( $count ); ?> <?php echo esc_html( _n( 'comment', 'comments', $count, 'material-design-google' ) ); ?></span>
 		</div><!-- .comments-title -->
 
 		<?php the_comments_navigation(); ?>
@@ -191,7 +191,7 @@ if ( has_action( 'set_comment_cookies', 'wp_set_comment_cookies' ) && get_option
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'material-design-theme' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'material-design-google' ); ?></p>
 			<?php
 		endif;
 

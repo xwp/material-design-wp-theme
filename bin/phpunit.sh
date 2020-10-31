@@ -17,7 +17,7 @@ source .env
 source ./bin/includes.sh
 
 if [[ ! -z "${DOCKER_COMPOSE_PATH}" ]]; then
-	docker-compose --file="$DOCKER_COMPOSE_PATH" --file=docker-compose-plugin-dev.yml run --rm -u 1000 --workdir=/var/www/html/wp-content/themes/material-design-theme wordpress -- composer test
+	docker-compose --file="$DOCKER_COMPOSE_PATH" --file=docker-compose-plugin-dev.yml run --rm -u 1000 --workdir=/var/www/html/wp-content/themes/material-design-google wordpress -- composer test
 else
-	docker-compose run --rm -u 1000 --workdir=/var/www/html/wp-content/themes/material-design-theme wordpress -- composer test
+	docker-compose run --rm -u 1000 --workdir=/var/www/html/wp-content/themes/material-design-google wordpress -- composer test
 fi

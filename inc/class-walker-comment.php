@@ -48,9 +48,9 @@ class Walker_Comment extends \Walker_Comment {
 
 		$commenter = wp_get_current_commenter();
 		if ( $commenter['comment_author_email'] ) {
-			$moderation_note = __( 'Your comment is awaiting moderation.', 'material-design-theme' );
+			$moderation_note = __( 'Your comment is awaiting moderation.', 'material-design-google' );
 		} else {
-			$moderation_note = __( 'Your comment is awaiting moderation. This is a preview, your comment will be visible after it has been approved.', 'material-design-theme' );
+			$moderation_note = __( 'Your comment is awaiting moderation. This is a preview, your comment will be visible after it has been approved.', 'material-design-google' );
 		}
 
 		?>
@@ -72,13 +72,13 @@ class Walker_Comment extends \Walker_Comment {
 							<?php
 								printf(
 									/* translators: 1: Comment date, 2: Comment time. */
-									esc_html__( '%1$s at %2$s', 'material-design-theme' ),
+									esc_html__( '%1$s at %2$s', 'material-design-google' ),
 									esc_html( get_comment_date( '', $comment ) ),
 									esc_html( get_comment_time() )
 								);
 							?>
 						</time>
-						<?php edit_comment_link( __( 'Edit', 'material-design-theme' ), '<span class="edit-link">', '</span>' ); ?>
+						<?php edit_comment_link( __( 'Edit', 'material-design-google' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .comment-meta -->
 
 					<?php if ( '0' == $comment->comment_approved ) : ?>

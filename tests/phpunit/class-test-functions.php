@@ -39,9 +39,9 @@ class Test_Material_Theme extends \WP_UnitTestCase {
 	 */
 	public function test_material_design_theme_scripts() {
 		material_design_theme_scripts();
-		$this->assertTrue( wp_style_is( 'material-design-theme-style', 'enqueued' ) );
-		$this->assertTrue( wp_style_is( 'material-design-theme-front-end-css', 'enqueued' ) );
+		$this->assertTrue( wp_style_is( 'material-design-google-style', 'enqueued' ) );
+		$this->assertTrue( wp_style_is( 'material-design-google-front-end-css', 'enqueued' ) );
 		$this->assertTrue( wp_style_is( 'material-google-fonts-cdn', 'enqueued' ) );
-		$this->assertTrue( wp_script_is( 'material-design-theme-js', 'enqueued' ) );
+		$this->assertTrue( wp_script_is( 'material-design-google-js', 'enqueued' ) );
 	}
 }

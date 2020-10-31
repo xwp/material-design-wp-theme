@@ -51,7 +51,7 @@ function material_design_theme_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details'    => array(
-				'stylesheet' => 'material-design-theme-style',
+				'stylesheet' => 'material-design-google-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',

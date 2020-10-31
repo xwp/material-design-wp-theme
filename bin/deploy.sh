@@ -31,7 +31,7 @@ ssh-keyscan -p2222 -H codeserver.dev.$PANTHEON_SITE_UUID.drush.in >> ~/.ssh/know
 git clone ssh://codeserver.dev.$PANTHEON_SITE_UUID@codeserver.dev.$PANTHEON_SITE_UUID.drush.in:2222/~/repository.git /tmp/temprepo
 
 # Copy over the repo files to the git repo
-rsync -vrxc --delete ./build/ /tmp/temprepo/wp-content/themes/material-design-theme
+rsync -vrxc --delete ./build/ /tmp/temprepo/wp-content/themes/material-design-google
 
 pushd /tmp/temprepo || exit 1
 

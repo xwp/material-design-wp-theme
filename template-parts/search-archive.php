@@ -32,7 +32,7 @@
 		<div class="mdc-notched-outline">
 			<div class="mdc-notched-outline__leading"></div>
 			<div class="mdc-notched-outline__notch">
-				<label for="text-field-hero-input" class="mdc-floating-label"><?php esc_html_e( 'Search', 'material-design-theme' ); ?></label>
+				<label for="text-field-hero-input" class="mdc-floating-label"><?php esc_html_e( 'Search', 'material-design-google' ); ?></label>
 			</div>
 			<div class="mdc-notched-outline__trailing"></div>
 		</div>
@@ -40,6 +40,6 @@
 
 	<button class="mdc-button mdc-button--outlined" type="submit">
 		<i class="material-icons mdc-button__icon">search</i>
-		<span class="mdc-button__ripple"></span> <?php esc_html_e( 'Search', 'material-design-theme' ); ?>
+		<span class="mdc-button__ripple"></span> <?php esc_html_e( 'Search', 'material-design-google' ); ?>
 	</button>
 </form>

@@ -41,7 +41,7 @@ function setup() {
  */
 function enqueue_admin_assets() {
 	wp_enqueue_style(
-		'material-design-theme-admin-css',
+		'material-design-google-admin-css',
 		get_template_directory_uri() . '/assets/css/admin-compiled.css',
 		[],
 		wp_get_theme()->get( 'Version' )
@@ -61,11 +61,11 @@ function plugin_not_installed_notice() {
 
 	if ( ! file_exists( trailingslashit( WP_CONTENT_DIR ) . 'plugins/' . $plugin ) ) {
 		$action = 'install';
-		$title  = esc_html__( 'Install', 'material-design-theme' );
-		$cta    = esc_html__( 'Install and activate', 'material-design-theme' );
+		$title  = esc_html__( 'Install', 'material-design-google' );
+		$cta    = esc_html__( 'Install and activate', 'material-design-google' );
 	} elseif ( ! is_plugin_active( "$plugin/$plugin.php" ) ) {
 		$action = 'activate';
-		$cta    = esc_html__( 'Activate', 'material-design-theme' );
+		$cta    = esc_html__( 'Activate', 'material-design-google' );
 		$title  = $cta;
 	}
 
@@ -98,14 +98,14 @@ function plugin_not_installed_notice() {
 		'<a href="%1$s">%2$s %3$s</a>',
 		esc_url( add_query_arg( $args, admin_url( '/themes.php' ) ) ),
 		esc_html( $cta ),
-		esc_html__( ' the plugin', 'material-design-theme' )
+		esc_html__( ' the plugin', 'material-design-google' )
 	);
 
 	?>
 	<div class="notice notice-info is-dismissible  material-notice-container">
 		<img
 			src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/plugin-logo.png' ); ?>"
-			alt="<?php esc_html_e( 'Material Design', 'material-design-theme' ); ?>"
+			alt="<?php esc_attr_e( 'Material Design', 'material-design-google' ); ?>"
 		/>
 
 		<div class="material-notice-container__content">
@@ -116,7 +116,7 @@ function plugin_not_installed_notice() {
 					esc_html( $title ),
 					esc_html__(
 						' the Material Design plugin to customize your Material Design theme',
-						'material-design-theme'
+						'material-design-google'
 					)
 				)
 				?>
@@ -128,7 +128,7 @@ function plugin_not_installed_notice() {
 						/* translators: %s: url to the plugin install/active action */
 						esc_html__(
 							'To take full advantage of this theme you will need the Material Design plugin. %s',
-							'material-design-theme'
+							'material-design-google'
 						),
 						$action_link
 					),
@@ -147,7 +147,7 @@ function plugin_not_installed_notice() {
 function register_required_plugins() {
 	$plugins = array(
 		array(
-			'name'     => esc_html__( 'Material Design', 'material-design-theme' ),
+			'name'     => esc_html__( 'Material Design', 'material-design-google' ),
 			'slug'     => 'material-design',
 			// @todo remove source and point to the WordPress.org plugin repo after the plugin is published.
 			'source'   => 'https://storage.googleapis.com/xwp-mdc/plugin/material-design.zip',
