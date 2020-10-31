@@ -66,7 +66,7 @@ $classes       = get_theme_mod( 'archive_outlined', false ) ? 'mdc-card--outline
 									/* translators: 1: author name. */
 									esc_attr__(
 										'Author: %s',
-										'material-design'
+										'material-design-theme'
 									),
 									esc_attr( get_the_author() )
 								);
@@ -92,7 +92,7 @@ $classes       = get_theme_mod( 'archive_outlined', false ) ? 'mdc-card--outline
 										'%s Comments',
 										get_comments_number(),
 										'comments title',
-										'material-design'
+										'material-design-theme'
 									),
 									number_format_i18n( get_comments_number() )
 								)

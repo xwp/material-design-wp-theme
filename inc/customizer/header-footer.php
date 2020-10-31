@@ -44,7 +44,7 @@ function register( $wp_customize ) {
 	// Add header section.
 	$args = [
 		'priority' => 180,
-		'title'    => esc_html__( 'Top app bar & Footer', 'material-design' ),
+		'title'    => esc_html__( 'Top app bar & Footer', 'material-design-theme' ),
 	];
 
 	Customizer\add_section( $wp_customize, 'header-footer', $args );
@@ -61,52 +61,52 @@ function get_controls() {
 	return [
 		[
 			'id'    => 'header_label',
-			'label' => esc_html__( 'Top app bar', 'material-design' ),
+			'label' => esc_html__( 'Top app bar', 'material-design-theme' ),
 			'type'  => 'hidden',
 		],
 		[
 			'id'    => 'header_search_display',
-			'label' => esc_html__( 'Show search in top app bar', 'material-design' ),
+			'label' => esc_html__( 'Show search in top app bar', 'material-design-theme' ),
 			'type'  => 'checkbox',
 		],
 		[
 			'id'          => 'header_title_display',
-			'label'       => esc_html__( 'Hide site title in top app bar', 'material-design' ),
+			'label'       => esc_html__( 'Hide site title in top app bar', 'material-design-theme' ),
 			'type'        => 'checkbox',
-			'description' => esc_html__( 'Site title is hidden but will still be used for SEO purposes', 'material-design' ),
+			'description' => esc_html__( 'Site title is hidden but will still be used for SEO purposes', 'material-design-theme' ),
 		],
 		[
 			'id'      => 'header_bar_layout',
-			'label'   => esc_html__( 'Top app bar layout', 'material-design' ),
+			'label'   => esc_html__( 'Top app bar layout', 'material-design-theme' ),
 			'type'    => 'radio',
 			'choices' => [
-				'standard' => esc_html__( 'Standard', 'material-design' ),
-				'fixed'    => esc_html__( 'Fixed', 'material-design' ),
+				'standard' => esc_html__( 'Standard', 'material-design-theme' ),
+				'fixed'    => esc_html__( 'Fixed', 'material-design-theme' ),
 			],
 		],
 		[
 			// Hidden field for menu locations label.
 			'id'          => 'menu-location-label',
-			'label'       => esc_html__( 'Menu Locations', 'material-design' ),
-			'description' => esc_html__( 'The Material Design theme can display menus in 2 locations. Select which menu appears in each location.', 'material-design' ),
+			'label'       => esc_html__( 'Menu Locations', 'material-design-theme' ),
+			'description' => esc_html__( 'The Material Design theme can display menus in 2 locations. Select which menu appears in each location.', 'material-design-theme' ),
 			'type'        => 'hidden',
 			'priority'    => 99,
 		],
 		[
 			'id'       => 'footer_label',
-			'label'    => esc_html__( 'Footer', 'material-design' ),
+			'label'    => esc_html__( 'Footer', 'material-design-theme' ),
 			'type'     => 'hidden',
 			'priority' => 110,
 		],
 		[
 			'id'       => 'footer_text',
-			'label'    => esc_html__( 'Footer text', 'material-design' ),
+			'label'    => esc_html__( 'Footer text', 'material-design-theme' ),
 			'type'     => 'text',
 			'priority' => 110,
 		],
 		[
 			'id'       => 'hide_back_to_top',
-			'label'    => esc_html__( 'Hide back to top button', 'material-design' ),
+			'label'    => esc_html__( 'Hide back to top button', 'material-design-theme' ),
 			'type'     => 'checkbox',
 			'priority' => 110,
 		],
@@ -238,7 +238,7 @@ function add_nav_menu_location_controls( $wp_customize ) {
 	// Menu locations.
 	$locations = get_registered_nav_menus();
 
-	$choices = array( '0' => __( '&mdash; Select &mdash;', 'material-design' ) );
+	$choices = array( '0' => __( '&mdash; Select &mdash;', 'material-design-theme' ) );
 	foreach ( $menus as $menu ) {
 		$choices[ $menu->term_id ] = wp_html_excerpt( $menu->name, 40, '&hellip;' );
 	}
@@ -253,7 +253,7 @@ function add_nav_menu_location_controls( $wp_customize ) {
 			$setting_id,
 			array(
 				'label'       => $label,
-				'description' => 'menu-1' === $location ? esc_html__( 'Only the top level items will display.', 'material-design' ) : '',
+				'description' => 'menu-1' === $location ? esc_html__( 'Only the top level items will display.', 'material-design-theme' ) : '',
 				'location_id' => $location,
 				'section'     => Customizer\prepend_slug( 'header-footer' ),
 				'choices'     => $choices,

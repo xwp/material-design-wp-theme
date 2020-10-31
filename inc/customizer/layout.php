@@ -44,7 +44,7 @@ function register( $wp_customize ) {
 	// Add layout section.
 	$args = [
 		'priority' => 200,
-		'title'    => esc_html__( 'Post Settings', 'material-design' ),
+		'title'    => esc_html__( 'Post Settings', 'material-design-theme' ),
 	];
 
 	Customizer\add_section( $wp_customize, 'layout', $args );
@@ -97,66 +97,66 @@ function get_controls() {
 	return [
 		[
 			'id'      => 'archive_width',
-			'label'   => esc_html__( 'Posts layout width', 'material-design' ),
+			'label'   => esc_html__( 'Posts layout width', 'material-design-theme' ),
 			'type'    => 'radio',
 			'choices' => [
-				'wide'   => esc_html__( 'Wide', 'material-design' ),
-				'normal' => esc_html__( 'Normal', 'material-design' ),
+				'wide'   => esc_html__( 'Wide', 'material-design-theme' ),
+				'normal' => esc_html__( 'Normal', 'material-design-theme' ),
 			],
 		],
 		[
 			'id'      => 'archive_layout',
-			'label'   => esc_html__( 'Posts layout', 'material-design' ),
+			'label'   => esc_html__( 'Posts layout', 'material-design-theme' ),
 			'type'    => 'radio',
 			'choices' => [
-				'card'  => esc_html__( 'Card', 'material-design' ),
-				'image' => esc_html__( 'Image List', 'material-design' ),
+				'card'  => esc_html__( 'Card', 'material-design-theme' ),
+				'image' => esc_html__( 'Image List', 'material-design-theme' ),
 			],
 		],
 		[
 			'id'              => 'archive_card_options',
-			'label'           => esc_html__( 'Card display options', 'material-design' ),
+			'label'           => esc_html__( 'Card display options', 'material-design-theme' ),
 			'type'            => 'hidden',
 			'active_callback' => __NAMESPACE__ . '\is_card_layout',
 		],
 		[
 			'id'              => 'archive_comments',
-			'label'           => esc_html__( 'Comments', 'material-design' ),
+			'label'           => esc_html__( 'Comments', 'material-design-theme' ),
 			'type'            => 'checkbox',
 			'active_callback' => __NAMESPACE__ . '\is_card_layout',
 		],
 		[
 			'id'              => 'archive_author',
-			'label'           => esc_html__( 'Author', 'material-design' ),
+			'label'           => esc_html__( 'Author', 'material-design-theme' ),
 			'type'            => 'checkbox',
 			'active_callback' => __NAMESPACE__ . '\is_card_layout',
 		],
 		[
 			'id'              => 'archive_excerpt',
-			'label'           => esc_html__( 'Excerpt', 'material-design' ),
+			'label'           => esc_html__( 'Excerpt', 'material-design-theme' ),
 			'type'            => 'checkbox',
 			'active_callback' => __NAMESPACE__ . '\is_card_layout',
 		],
 		[
 			'id'              => 'archive_date',
-			'label'           => esc_html__( 'Date', 'material-design' ),
+			'label'           => esc_html__( 'Date', 'material-design-theme' ),
 			'type'            => 'checkbox',
 			'active_callback' => __NAMESPACE__ . '\is_card_layout',
 		],
 		[
 			'id'              => 'archive_outlined',
-			'label'           => esc_html__( 'Outlined', 'material-design' ),
+			'label'           => esc_html__( 'Outlined', 'material-design-theme' ),
 			'type'            => 'checkbox',
 			'active_callback' => __NAMESPACE__ . '\is_card_layout',
 		],
 		[
 			'id'      => 'comment_fields_style',
-			'label'   => esc_html__( 'Comment field display options', 'material-design' ),
+			'label'   => esc_html__( 'Comment field display options', 'material-design-theme' ),
 			'type'    => 'radio',
 			'default' => 'outlined',
 			'choices' => [
-				'outlined' => esc_html__( 'Outlined', 'material-design' ),
-				'filled'   => esc_html__( 'Filled', 'material-design' ),
+				'outlined' => esc_html__( 'Outlined', 'material-design-theme' ),
+				'filled'   => esc_html__( 'Filled', 'material-design-theme' ),
 			],
 		],
 	];

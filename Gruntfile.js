@@ -43,7 +43,7 @@ module.exports = function( grunt ) {
 					'!contributing.md',
 					'!docker-compose.yml',
 					'!docker-compose-plugin-dev.yml',
-					'!material-design.zip',
+					'!material-design-theme.zip',
 					'!Gruntfile.js',
 					'!jest.config.js',
 					'!node_modules/**',
@@ -93,7 +93,7 @@ module.exports = function( grunt ) {
 				command: './vendor/xwp/wp-dev-lib/scripts/generate-markdown-readme', // Generate the readme.md.
 			},
 			create_build_zip: {
-				command: 'if [ ! -e build ]; then echo "Run grunt build first."; exit 1; fi; if [ -e material-design.zip ]; then rm material-design.zip; fi; mv build material-design; zip -r ./material-design.zip material-design; mv material-design build; echo; echo "ZIP of build: $(pwd)/material-design.zip"',
+				command: 'if [ ! -e build ]; then echo "Run grunt build first."; exit 1; fi; if [ -e material-design-theme.zip ]; then rm material-design-theme.zip; fi; mv build material-design-theme; zip -r ./material-design-theme.zip material-design-theme; mv material-design-theme build; echo; echo "ZIP of build: $(pwd)/material-design-theme.zip"',
 			},
 		},
 	} );

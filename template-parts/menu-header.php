@@ -35,7 +35,7 @@ $class      = ( 'fixed' === $layout ) ? 'mdc-top-app-bar--fixed' : '';
 <div class="mdc-top-app-bar top-app-bar <?php echo esc_attr( $class ); ?>">
 	<div class="mdc-top-app-bar__row top-app-bar__header">
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-			<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger"><?php esc_html_e( 'menu', 'material-design' ); ?></button>
+			<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger"><?php esc_html_e( 'menu', 'material-design-theme' ); ?></button>
 
 			<?php if ( has_custom_logo() ) : ?>
 				<div class="logo">
@@ -51,7 +51,7 @@ $class      = ( 'fixed' === $layout ) ? 'mdc-top-app-bar--fixed' : '';
 				<button class="mdc-button search__button">
 					<span class="mdc-button__ripple"></span>
 					<i class="material-icons mdc-button__icon">search</i>
-					<span class="screen-reader-text"><?php esc_html_e( 'Search', 'material-design' ); ?></span>
+					<span class="screen-reader-text"><?php esc_html_e( 'Search', 'material-design-theme' ); ?></span>
 				</button>
 			<?php endif; ?>
 		</section>

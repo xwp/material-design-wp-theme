@@ -55,8 +55,8 @@ function register( $wp_customize ) {
 			[
 				'priority'    => 10,
 				'capability'  => 'edit_theme_options',
-				'title'       => esc_html__( 'Material Design Options', 'material-design' ),
-				'description' => esc_html__( 'Change the color, shape, typography, and icons below to customize your theme style. Navigate to the Material Library to see your custom styles applied across Material Components.', 'material-design' ),
+				'title'       => esc_html__( 'Material Design Options', 'material-design-theme' ),
+				'description' => esc_html__( 'Change the color, shape, typography, and icons below to customize your theme style. Navigate to the Material Library to see your custom styles applied across Material Components.', 'material-design-theme' ),
 			]
 		);
 	}

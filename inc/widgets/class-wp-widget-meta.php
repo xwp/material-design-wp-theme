@@ -43,7 +43,7 @@ class WP_Widget_Meta extends \WP_Widget_Meta {
 	 * @param array $instance Settings for the current Categories widget instance.
 	 */
 	public function widget( $args, $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Meta', 'material-design' );
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Meta', 'material-design-theme' );
 
 		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
@@ -57,8 +57,8 @@ class WP_Widget_Meta extends \WP_Widget_Meta {
 			<ul class="mdc-list">
 			<?php wp_register( '<li class="mdc-list-item">' ); ?>
 			<li class="mdc-list-item"><?php wp_loginout(); ?></li>
-			<li class="mdc-list-item"><a href="<?php echo esc_url( get_bloginfo( 'rss2_url' ) ); ?>"><?php esc_html_e( 'Entries feed', 'material-design' ); ?></a></li>
-			<li class="mdc-list-item"><a href="<?php echo esc_url( get_bloginfo( 'comments_rss2_url' ) ); ?>"><?php esc_html_e( 'Comments feed', 'material-design' ); ?></a></li>
+			<li class="mdc-list-item"><a href="<?php echo esc_url( get_bloginfo( 'rss2_url' ) ); ?>"><?php esc_html_e( 'Entries feed', 'material-design-theme' ); ?></a></li>
+			<li class="mdc-list-item"><a href="<?php echo esc_url( get_bloginfo( 'comments_rss2_url' ) ); ?>"><?php esc_html_e( 'Comments feed', 'material-design-theme' ); ?></a></li>
 			<?php
 			/**
 			 * Filters the "WordPress.org" list item HTML in the Meta widget.
@@ -73,8 +73,8 @@ class WP_Widget_Meta extends \WP_Widget_Meta {
 				'widget_meta_poweredby',
 				sprintf(
 					'<li class="mdc-list-item"><a href="%1$s">%2$s</a></li>',
-					esc_url( esc_html__( 'https://wordpress.org/', 'material-design' ) ),
-					esc_html__( 'WordPress.org', 'material-design' )
+					esc_url( esc_html__( 'https://wordpress.org/', 'material-design-theme' ) ),
+					esc_html__( 'WordPress.org', 'material-design-theme' )
 				),
 				$instance
 			);

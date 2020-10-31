@@ -45,7 +45,7 @@ class WP_Widget_Categories extends \WP_Widget_Categories {
 	public function widget( $args, $instance ) {
 		static $first_dropdown = true;
 
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Categories', 'material-design' );
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Categories', 'material-design-theme' );
 
 		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
@@ -73,7 +73,7 @@ class WP_Widget_Categories extends \WP_Widget_Categories {
 
 			echo '<label class="screen-reader-text" for="' . esc_attr( $dropdown_id ) . '">' . esc_html( $title ) . '</label>';
 
-			$cat_args['show_option_none'] = esc_html__( 'Select Category', 'material-design' );
+			$cat_args['show_option_none'] = esc_html__( 'Select Category', 'material-design-theme' );
 			$cat_args['id']               = $dropdown_id;
 
 			/**
