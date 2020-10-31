@@ -32,7 +32,7 @@
 		<div class="mdc-notched-outline">
 			<div class="mdc-notched-outline__leading"></div>
 			<div class="mdc-notched-outline__notch">
-			<span class="mdc-floating-label" id="search-label"><?php esc_html_e( 'Search', 'material-design' ); ?></span>
+			<span class="mdc-floating-label" id="search-label"><?php esc_html_e( 'Search', 'material-design-theme' ); ?></span>
 			</div>
 			<div class="mdc-notched-outline__trailing"></div>
 		</div>

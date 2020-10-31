@@ -1,4 +1,4 @@
-=== Material Design for WordPress ===
+=== Material Design Theme for WordPress ===
 Contributors: google, materialdesign, xwp
 Requires at least: 5.0
 Tested up to: 5.5.1
@@ -7,11 +7,11 @@ License: Apache License, Version 2.0
 License URI: https://www.apache.org/licenses/LICENSE-2.0
 Tags: Blog, Custom Colors, Custom Logo, Custom Menu, Featured Images, Full Width Template, One Column, Threaded Comments, Accessibility Ready, Footer Widgets, Editor Style, Featured Images, Sticky Post, Translation Ready, RTL Language Support, Block Editor Styles, Wide Blocks, Widgets
 
-The official Material Design theme for WordPress.
+The official Material Design Theme for WordPress.
 
 == Description ==
 
-The official Material Design theme for WordPress – from the team behind Google’s open-source design system. Apply Material Design principles and Material Theming to your site, and customize its style. Pair this with the official Material Design for WordPress plugin to customize your site’s navigation, colors, typography, and shapes, use Material Components, and choose from over 1,000 Google Fonts and Material Design icons.
+The official Material Design Theme for WordPress – from the team behind Google’s open-source design system. Apply Material Design principles and Material Theming to your site, and customize its style. Pair this with the official Material Design for WordPress plugin to customize your site’s navigation, colors, typography, and shapes, use Material Components, and choose from over 1,000 Google Fonts and Material Design icons.
 
 == Installation ==
 

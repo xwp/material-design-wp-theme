@@ -40,7 +40,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links mdc-typography mdc-typography--subtitle1">' . esc_html__( 'Pages:', 'material-design' ),
+				'before' => '<div class="page-links mdc-typography mdc-typography--subtitle1">' . esc_html__( 'Pages:', 'material-design-theme' ),
 				'after'  => '</div>',
 			)
 		);
@@ -54,7 +54,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'material-design' ),
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'material-design-theme' ),
 						array(
 							'span' => array(
 								'class' => array(),

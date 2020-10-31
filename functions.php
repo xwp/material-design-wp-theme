@@ -38,9 +38,9 @@ if ( ! function_exists( 'material_design_theme_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on the Material Design theme, use a find and replace
-		 * to change 'material-design' to the name of your theme in all the template files.
+		 * to change 'material-design-theme' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'material-design', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'material-design-theme', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -63,8 +63,8 @@ if ( ! function_exists( 'material_design_theme_setup' ) ) :
 		// This theme uses wp_nav_menu() in two location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Tabs', 'material-design' ),
-				'menu-2' => esc_html__( 'Drawer', 'material-design' ),
+				'menu-1' => esc_html__( 'Tabs', 'material-design-theme' ),
+				'menu-2' => esc_html__( 'Drawer', 'material-design-theme' ),
 			)
 		);
 
@@ -132,9 +132,9 @@ add_action( 'after_setup_theme', 'material_design_theme_content_width', 0 );
 function material_design_theme_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer Left', 'material-design' ),
+			'name'          => esc_html__( 'Footer Left', 'material-design-theme' ),
 			'id'            => 'footer',
-			'description'   => esc_html__( 'Footer left area.', 'material-design' ),
+			'description'   => esc_html__( 'Footer left area.', 'material-design-theme' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title mdc-typography--headline5">',
@@ -144,9 +144,9 @@ function material_design_theme_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer Right', 'material-design' ),
+			'name'          => esc_html__( 'Footer Right', 'material-design-theme' ),
 			'id'            => 'footer-right',
-			'description'   => esc_html__( 'Footer right area.', 'material-design' ),
+			'description'   => esc_html__( 'Footer right area.', 'material-design-theme' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title mdc-typography--headline5">',

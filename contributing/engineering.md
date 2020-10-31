@@ -39,8 +39,8 @@ Since you need a WordPress environment to run the theme, the quickest way to get
 Clone this project somewhere on your computer:
 
 ```bash
-git clone git@github.com:xwp/material-design-wp-theme.git material-design
-cd material-design
+git clone git@github.com:xwp/material-design-wp-theme.git material-design-theme
+cd material-design-theme
 ```
 
 **Note**: If you already have the `material-design` plugin development environment setup, you can leverage the plugin Docker containers to develop the theme, as well. First, ensure the plugin Docker containers are running and then run the following command:
@@ -59,8 +59,8 @@ Support for the following environments have been verified to work
 
 ```bash
 cd wp-content/themes
-git clone git@github.com:xwp/material-design-wp-theme.git material-design
-cd material-design
+git clone git@github.com:xwp/material-design-wp-theme.git material-design-theme
+cd material-design-theme
 ```
 
 Setup the development tools using [Node.js](https://nodejs.org) and [Composer](https://getcomposer.org):
@@ -113,13 +113,13 @@ npm run build:js
 Lastly, to get the theme running in your WordPress install, activate the theme via the WordPress dashboard, or the following `wp-cli` command:
 
 ```bash
-wp theme activate material-design
+wp theme activate material-design-theme
 ```
 
 If running this from the included Docker environment:
 
 ```bash
-npm run wp -- wp theme activate material-design
+npm run wp -- wp theme activate material-design-theme
 
 ```
 
@@ -264,7 +264,7 @@ To create a build of the theme for installing in WordPress as a ZIP package, run
 npm run build
 ```
 
-This will create an `material-design.zip` in the theme directory which you can install. The contents of this ZIP are also located in the `build` directory which you can `rsync` somewhere as well if needed.
+This will create an `material-design-theme.zip` in the theme directory which you can install. The contents of this ZIP are also located in the `build` directory which you can `rsync` somewhere as well if needed.
 
 ## Creating a pre-release
 
@@ -272,11 +272,11 @@ This will create an `material-design.zip` in the theme directory which you can i
 1. Check out the branch intended for release (`develop` for major, `x.y` for minor) and pull latest commits.
 1. Bump theme version in `style.css`.
 1. Do `npm install`.
-1. Do `npm run build` and install the `material-design.zip` onto a normal WordPress install running a stable release build; do smoke test to ensure it works.
+1. Do `npm run build` and install the `material-design-theme.zip` onto a normal WordPress install running a stable release build; do smoke test to ensure it works.
 1. [Draft new release](https://github.com/xwp/material-design-wp-theme/releases/new) on GitHub targeting the required branch (`develop` for major, `x.y` for minor).
     1. Use the new theme version as the tag (e.g. `1.2-beta3` or `1.2.1-RC1`)
     1. Use new version as the title, followed by some highlight tagline of the release.
-    1. Attach the `material-design.zip` build to the release.
+    1. Attach the `material-design-theme.zip` build to the release.
     1. Add a changelog entry to the release, link to the compare view (comparing the previous release), and a link to the milestone.
     1. Make sure “Pre-release” is checked.
 1. Publish GitHub release.
@@ -297,10 +297,10 @@ Contributors who want to make a new release, follow these steps:
 1. For minor releases, make sure all merged commits in `develop` have been also merged onto release branch.
 1. Check out the branch intended for release (`develop` for major, `x.y` for minor) and pull latest commits.
 1. Do `npm install`.
-1. Bump theme versions in `material-design.php`. Ensure patch version number is supplied for major releases, so `1.2-RC1` should bump to `1.2.0`.
+1. Bump theme versions in `material-design-theme.php`. Ensure patch version number is supplied for major releases, so `1.2-RC1` should bump to `1.2.0`.
 1. Ensure "Tested Up To" is updated to current WordPress version.
-1. Do `npm run build` and install the `material-design.zip` onto a normal WordPress install running a stable release build; do smoke test to ensure it works.
-1. Optionally do sanity check by comparing the `build` directory with the previously-deployed theme on WordPress.org for example: `svn export https://themes.svn.wordpress.org/material-design/trunk /tmp/material-design-trunk; diff /tmp/material-design-trunk/ ./build/` (instead of straight `diff`, it's best to use a GUI like `idea diff`, `phpstorm diff`, or `opendiff`).
+1. Do `npm run build` and install the `material-design-theme.zip` onto a normal WordPress install running a stable release build; do smoke test to ensure it works.
+1. Optionally do sanity check by comparing the `build` directory with the previously-deployed theme on WordPress.org for example: `svn export https://themes.svn.wordpress.org/material-design-theme/trunk /tmp/material-design-theme-trunk; diff /tmp/material-design-theme-trunk/ ./build/` (instead of straight `diff`, it's best to use a GUI like `idea diff`, `phpstorm diff`, or `opendiff`).
 1. [Draft new release](https://github.com/xwp/material-design-wp-theme/releases/new) on GitHub targeting the required branch (`develop` for major, `x.y` for minor):
     1. Use the new theme version as the tag (e.g. `1.2.0` or `1.2.1`)
     1. Attach the `material-design.zip` build to the release.

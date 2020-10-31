@@ -44,7 +44,7 @@ else
 fi
 
 echo ""
-echo "Welcome to the $(action_format "Material Design theme for WordPress")"
+echo "Welcome to the $(action_format "Material Design Theme for WordPress")"
 echo ""
 
 # Give the user more context to what they should do next: Build the theme and start testing!

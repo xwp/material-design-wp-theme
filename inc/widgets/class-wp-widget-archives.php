@@ -41,7 +41,7 @@ class WP_Widget_Archives extends \WP_Widget_Archives {
 	 * @param array $instance Settings for the current Archives widget instance.
 	 */
 	public function widget( $args, $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Archives', 'material-design' );
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Archives', 'material-design-theme' );
 
 		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
@@ -84,19 +84,19 @@ class WP_Widget_Archives extends \WP_Widget_Archives {
 
 			switch ( $dropdown_args['type'] ) {
 				case 'yearly':
-					$label = esc_html__( 'Select Year', 'material-design' );
+					$label = esc_html__( 'Select Year', 'material-design-theme' );
 					break;
 				case 'monthly':
-					$label = esc_html__( 'Select Month', 'material-design' );
+					$label = esc_html__( 'Select Month', 'material-design-theme' );
 					break;
 				case 'daily':
-					$label = esc_html__( 'Select Day', 'material-design' );
+					$label = esc_html__( 'Select Day', 'material-design-theme' );
 					break;
 				case 'weekly':
-					$label = esc_html__( 'Select Week', 'material-design' );
+					$label = esc_html__( 'Select Week', 'material-design-theme' );
 					break;
 				default:
-					$label = esc_html__( 'Select Post', 'material-design' );
+					$label = esc_html__( 'Select Post', 'material-design-theme' );
 					break;
 			}
 

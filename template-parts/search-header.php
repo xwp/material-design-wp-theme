@@ -30,15 +30,15 @@
 		<div class="mdc-text-field__ripple"></div>
 		<input
 			class="mdc-text-field__input"
-			placeholder="<?php esc_attr_e( 'Search the site', 'material-design' ); ?>"
-			aria-label="<?php esc_attr_e( 'Search', 'material-design' ); ?>"
+			placeholder="<?php esc_attr_e( 'Search the site', 'material-design-theme' ); ?>"
+			aria-label="<?php esc_attr_e( 'Search', 'material-design-theme' ); ?>"
 			type="search"
 			name="s"
 		>
 	</div>
 	<button class="mdc-button mdc-button--unelevated button__back" type="button">
 		<span class="mdc-button__ripple"></span>
-		<span class="mdc-button__label"><?php esc_attr_e( 'Exit search form', 'material-design' ); ?></span>
+		<span class="mdc-button__label"><?php esc_attr_e( 'Exit search form', 'material-design-theme' ); ?></span>
 		<i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
 	</button>
 </form>

@@ -47,7 +47,7 @@ class WP_Widget_Recent_Comments extends \WP_Widget_Recent_Comments {
 
 		$output = '';
 
-		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : esc_html__( 'Recent Comments', 'material-design' );
+		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : esc_html__( 'Recent Comments', 'material-design-theme' );
 
 		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
@@ -95,7 +95,7 @@ class WP_Widget_Recent_Comments extends \WP_Widget_Recent_Comments {
 				$output .= '<li class="mdc-list-item recentcomments">';
 				$output .= sprintf(
 					/* translators: Comments widget. 1: Comment author, 2: Post link. */
-					esc_html_x( '%1$s on %2$s', 'widgets', 'material-design' ),
+					esc_html_x( '%1$s on %2$s', 'widgets', 'material-design-theme' ),
 					'<span class="comment-author-link">' . get_comment_author_link( $comment ) . '</span>',
 					'<a href="' . esc_url( get_comment_link( $comment ) ) . '">' . get_the_title( $comment->comment_post_ID ) . '</a>'
 				);

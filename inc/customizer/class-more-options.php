@@ -57,8 +57,8 @@ class More_Options extends \WP_Customize_Control {
 	public function render_content() {
 		?>
 		<div class="material-more_options" id="<?php echo esc_html( $this->id ); ?>">
-			<a href="#" class="material-show-more-options"><?php esc_html_e( 'More Options', 'material-design' ); ?></a>
-			<a href="#" class="material-show-more-options less-options"><?php esc_html_e( 'Less Options', 'material-design' ); ?></a>
+			<a href="#" class="material-show-more-options"><?php esc_html_e( 'More Options', 'material-design-theme' ); ?></a>
+			<a href="#" class="material-show-more-options less-options"><?php esc_html_e( 'Less Options', 'material-design-theme' ); ?></a>
 		</div>
 		<?php
 	}

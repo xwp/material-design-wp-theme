@@ -46,7 +46,7 @@ function register( $wp_customize ) {
 		// Add color palettes section.
 		$args = [
 			'priority' => 50,
-			'title'    => esc_html__( 'Color Palettes', 'material-design' ),
+			'title'    => esc_html__( 'Color Palettes', 'material-design-theme' ),
 		];
 
 		Customizer\add_section( $wp_customize, 'colors', $args );
@@ -87,40 +87,40 @@ function get_controls() {
 		$controls = [
 			[
 				'id'         => 'primary_color',
-				'label'      => esc_html__( 'Primary Color', 'material-design' ),
+				'label'      => esc_html__( 'Primary Color', 'material-design-theme' ),
 				'css_var'    => '--mdc-theme-primary',
-				'a11y_label' => __( 'Primary', 'material-design' ),
+				'a11y_label' => __( 'Primary', 'material-design-theme' ),
 			],
 			[
 				'id'         => 'secondary_color',
-				'label'      => esc_html__( 'Secondary Color', 'material-design' ),
+				'label'      => esc_html__( 'Secondary Color', 'material-design-theme' ),
 				'css_var'    => '--mdc-theme-secondary',
-				'a11y_label' => __( 'Secondary', 'material-design' ),
+				'a11y_label' => __( 'Secondary', 'material-design-theme' ),
 				'default'    => '#03dac6',
 			],
 			[
 				'id'         => 'on_primary_color',
-				'label'      => esc_html__( 'On Primary Color (text and icons)', 'material-design' ),
+				'label'      => esc_html__( 'On Primary Color (text and icons)', 'material-design-theme' ),
 				'css_var'    => '--mdc-theme-on-primary',
-				'a11y_label' => __( 'On Primary', 'material-design' ),
+				'a11y_label' => __( 'On Primary', 'material-design-theme' ),
 			],
 			[
 				'id'         => 'on_secondary_color',
-				'label'      => esc_html__( 'On Secondary Color (text and icons)', 'material-design' ),
+				'label'      => esc_html__( 'On Secondary Color (text and icons)', 'material-design-theme' ),
 				'css_var'    => '--mdc-theme-on-secondary',
-				'a11y_label' => __( 'On Secondary', 'material-design' ),
+				'a11y_label' => __( 'On Secondary', 'material-design-theme' ),
 			],
 			[
 				'id'         => 'surface_color',
-				'label'      => esc_html__( 'Surface Color', 'material-design' ),
+				'label'      => esc_html__( 'Surface Color', 'material-design-theme' ),
 				'css_var'    => '--mdc-theme-surface',
-				'a11y_label' => __( 'Surface', 'material-design' ),
+				'a11y_label' => __( 'Surface', 'material-design-theme' ),
 			],
 			[
 				'id'         => 'on_surface_color',
-				'label'      => esc_html__( 'On Surface Color (text and icons)', 'material-design' ),
+				'label'      => esc_html__( 'On Surface Color (text and icons)', 'material-design-theme' ),
 				'css_var'    => '--mdc-theme-on-surface',
-				'a11y_label' => __( 'On Surface', 'material-design' ),
+				'a11y_label' => __( 'On Surface', 'material-design-theme' ),
 			],
 		];
 	}
@@ -132,39 +132,39 @@ function get_controls() {
 				// Using the `custom_` prefix to prevent conflicts with the default WordPress
 				// `background_color` setting.
 				'id'         => 'custom_background_color',
-				'label'      => esc_html__( 'Background Color', 'material-design' ),
+				'label'      => esc_html__( 'Background Color', 'material-design-theme' ),
 				'css_var'    => '--mdc-theme-background',
-				'a11y_label' => __( 'Background', 'material-design' ),
+				'a11y_label' => __( 'Background', 'material-design-theme' ),
 			],
 			[
 				'id'         => 'on_background_color',
-				'label'      => esc_html__( 'On Background Color (text and icons)', 'material-design' ),
+				'label'      => esc_html__( 'On Background Color (text and icons)', 'material-design-theme' ),
 				'css_var'    => '--mdc-theme-on-background',
-				'a11y_label' => __( 'On Background', 'material-design' ),
+				'a11y_label' => __( 'On Background', 'material-design-theme' ),
 			],
 			[
 				'id'         => 'header_color',
-				'label'      => esc_html__( 'Top app bar Color', 'material-design' ),
+				'label'      => esc_html__( 'Top app bar Color', 'material-design-theme' ),
 				'css_var'    => '--mdc-theme-header',
-				'a11y_label' => __( 'On Top app bar', 'material-design' ),
+				'a11y_label' => __( 'On Top app bar', 'material-design-theme' ),
 			],
 			[
 				'id'         => 'on_header_color',
-				'label'      => esc_html__( 'On Top app bar Color (text and icons)', 'material-design' ),
+				'label'      => esc_html__( 'On Top app bar Color (text and icons)', 'material-design-theme' ),
 				'css_var'    => '--mdc-theme-on-header',
-				'a11y_label' => __( 'Top app bar', 'material-design' ),
+				'a11y_label' => __( 'Top app bar', 'material-design-theme' ),
 			],
 			[
 				'id'         => 'footer_color',
-				'label'      => esc_html__( 'Footer Color', 'material-design' ),
+				'label'      => esc_html__( 'Footer Color', 'material-design-theme' ),
 				'css_var'    => '--mdc-theme-footer',
-				'a11y_label' => __( 'On Footer', 'material-design' ),
+				'a11y_label' => __( 'On Footer', 'material-design-theme' ),
 			],
 			[
 				'id'         => 'on_footer_color',
-				'label'      => esc_html__( 'On Footer Color (text and icons)', 'material-design' ),
+				'label'      => esc_html__( 'On Footer Color (text and icons)', 'material-design-theme' ),
 				'css_var'    => '--mdc-theme-on-footer',
-				'a11y_label' => __( 'Footer', 'material-design' ),
+				'a11y_label' => __( 'Footer', 'material-design-theme' ),
 			],
 		]
 	);
