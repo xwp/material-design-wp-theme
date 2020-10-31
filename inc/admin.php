@@ -105,7 +105,7 @@ function plugin_not_installed_notice() {
 	<div class="notice notice-info is-dismissible  material-notice-container">
 		<img
 			src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/plugin-logo.png' ); ?>"
-			alt="<?php esc_html_e( 'Material Design', 'material-design-google' ); ?>"
+			alt="<?php esc_attr_e( 'Material Design', 'material-design-google' ); ?>"
 		/>
 
 		<div class="material-notice-container__content">

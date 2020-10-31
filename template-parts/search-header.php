@@ -38,7 +38,7 @@
 	</div>
 	<button class="mdc-button mdc-button--unelevated button__back" type="button">
 		<span class="mdc-button__ripple"></span>
-		<span class="mdc-button__label"><?php esc_attr_e( 'Exit search form', 'material-design-google' ); ?></span>
+		<span class="mdc-button__label"><?php esc_html_e( 'Exit search form', 'material-design-google' ); ?></span>
 		<i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
 	</button>
 </form>
