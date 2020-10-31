@@ -38,9 +38,9 @@ if ( ! function_exists( 'material_design_theme_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on the Material Design theme, use a find and replace
-		 * to change 'material-design-theme' to the name of your theme in all the template files.
+		 * to change 'material-design-google' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'material-design-theme', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'material-design-google', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -63,8 +63,8 @@ if ( ! function_exists( 'material_design_theme_setup' ) ) :
 		// This theme uses wp_nav_menu() in two location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Tabs', 'material-design-theme' ),
-				'menu-2' => esc_html__( 'Drawer', 'material-design-theme' ),
+				'menu-1' => esc_html__( 'Tabs', 'material-design-google' ),
+				'menu-2' => esc_html__( 'Drawer', 'material-design-google' ),
 			)
 		);
 
@@ -132,9 +132,9 @@ add_action( 'after_setup_theme', 'material_design_theme_content_width', 0 );
 function material_design_theme_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer Left', 'material-design-theme' ),
+			'name'          => esc_html__( 'Footer Left', 'material-design-google' ),
 			'id'            => 'footer',
-			'description'   => esc_html__( 'Footer left area.', 'material-design-theme' ),
+			'description'   => esc_html__( 'Footer left area.', 'material-design-google' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title mdc-typography--headline5">',
@@ -144,9 +144,9 @@ function material_design_theme_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer Right', 'material-design-theme' ),
+			'name'          => esc_html__( 'Footer Right', 'material-design-google' ),
 			'id'            => 'footer-right',
-			'description'   => esc_html__( 'Footer right area.', 'material-design-theme' ),
+			'description'   => esc_html__( 'Footer right area.', 'material-design-google' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title mdc-typography--headline5">',
@@ -162,9 +162,9 @@ add_action( 'widgets_init', 'material_design_theme_widgets_init' );
 function material_design_theme_scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
-	wp_enqueue_style( 'material-design-theme-style', get_stylesheet_uri(), array(), $theme_version );
+	wp_enqueue_style( 'material-design-google-style', get_stylesheet_uri(), array(), $theme_version );
 
-	wp_enqueue_style( 'material-design-theme-front-end-css', get_template_directory_uri() . '/assets/css/front-end-compiled.css', array( 'material-design-theme-style' ), $theme_version );
+	wp_enqueue_style( 'material-design-google-front-end-css', get_template_directory_uri() . '/assets/css/front-end-compiled.css', array( 'material-design-google-style' ), $theme_version );
 
 	if ( ! wp_style_is( 'material-google-fonts-cdn', 'enqueued' ) ) {
 		wp_enqueue_style(
@@ -175,7 +175,7 @@ function material_design_theme_scripts() {
 		);
 	}
 
-	wp_enqueue_script( 'material-design-theme-js', get_template_directory_uri() . '/assets/js/front-end.js', array(), $theme_version, true );
+	wp_enqueue_script( 'material-design-google-js', get_template_directory_uri() . '/assets/js/front-end.js', array(), $theme_version, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

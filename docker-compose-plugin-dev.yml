@@ -18,8 +18,8 @@ services:
 
   wordpress:
     volumes:
-      - ${PWD}:/var/www/html/wp-content/themes/material-design-theme
+      - ${PWD}:/var/www/html/wp-content/themes/material-design-google
 
   cli:
     volumes:
-      - ${PWD}:/var/www/html/wp-content/themes/material-design-theme
+      - ${PWD}:/var/www/html/wp-content/themes/material-design-google

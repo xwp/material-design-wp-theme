@@ -55,8 +55,8 @@ function register( $wp_customize ) {
 			[
 				'priority'    => 10,
 				'capability'  => 'edit_theme_options',
-				'title'       => esc_html__( 'Material Design Options', 'material-design-theme' ),
-				'description' => esc_html__( 'Change the color, shape, typography, and icons below to customize your theme style. Navigate to the Material Library to see your custom styles applied across Material Components.', 'material-design-theme' ),
+				'title'       => esc_html__( 'Material Design Options', 'material-design-google' ),
+				'description' => esc_html__( 'Change the color, shape, typography, and icons below to customize your theme style. Navigate to the Material Library to see your custom styles applied across Material Components.', 'material-design-google' ),
 			]
 		);
 	}
@@ -119,7 +119,7 @@ function preview_scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	wp_enqueue_script(
-		'material-design-theme-customizer-preview',
+		'material-design-google-customizer-preview',
 		get_template_directory_uri() . '/assets/js/customize-preview.js',
 		[ 'customize-preview' ],
 		$theme_version,
@@ -133,7 +133,7 @@ function preview_scripts() {
 	}
 
 	wp_localize_script(
-		'material-design-theme-customizer-preview',
+		'material-design-google-customizer-preview',
 		'materialDesignThemeColorControls',
 		$css_vars
 	);
@@ -148,14 +148,14 @@ function scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	wp_enqueue_style(
-		'material-design-theme-customizer-styles',
+		'material-design-google-customizer-styles',
 		get_template_directory_uri() . '/assets/css/customize-controls-compiled.css',
 		[ 'wp-color-picker' ],
 		$theme_version
 	);
 
 	wp_enqueue_script(
-		'material-design-theme-customizer-controls',
+		'material-design-google-customizer-controls',
 		get_template_directory_uri() . '/assets/js/customize-controls.js',
 		[ 'wp-color-picker', 'customize-controls' ],
 		$theme_version,
@@ -467,7 +467,7 @@ function get_frontend_css() {
  */
 function frontend_inline_css() {
 	?>
-	<style id="material-design-theme-css-variables">
+	<style id="material-design-google-css-variables">
 		<?php echo get_frontend_css(); // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</style>
 	<?php

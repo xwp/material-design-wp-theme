@@ -40,7 +40,7 @@
 
 <body <?php body_class( 'mdc-typography' ); ?>>
 	<div id="page" class="site">
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'material-design-theme' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'material-design-google' ); ?></a>
 
 		<?php get_template_part( 'template-parts/drawer' ); ?>
 

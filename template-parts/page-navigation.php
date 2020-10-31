@@ -36,25 +36,25 @@ $links = [
 	[
 		'link'   => 1 === $current ? false : get_pagenum_link( 1 ),
 		'icon'   => 'first_page',
-		'title'  => __( 'First', 'material-design-theme' ),
+		'title'  => __( 'First', 'material-design-google' ),
 		'number' => 1,
 	],
 	[
 		'link'   => $current <= 1 ? false : get_pagenum_link( $current - 1 ),
 		'icon'   => 'chevron_left',
-		'title'  => __( 'Previous', 'material-design-theme' ),
+		'title'  => __( 'Previous', 'material-design-google' ),
 		'number' => $current - 1,
 	],
 	[
 		'link'   => $current >= $total ? false : get_pagenum_link( $current + 1 ),
 		'icon'   => 'chevron_right',
-		'title'  => __( 'Next', 'material-design-theme' ),
+		'title'  => __( 'Next', 'material-design-google' ),
 		'number' => $current + 1,
 	],
 	[
 		'link'   => $total === $current ? false : get_pagenum_link( $total ),
 		'icon'   => 'last_page',
-		'title'  => __( 'Last', 'material-design-theme' ),
+		'title'  => __( 'Last', 'material-design-google' ),
 		'number' => $total,
 	],
 ];
@@ -70,7 +70,7 @@ $links = [
 					<?php
 					printf(
 						/* translators: 1. Next page number. 2. total pages. */
-						esc_attr__( 'Go to page %1$d of %2$d', 'material-design-theme' ),
+						esc_attr__( 'Go to page %1$d of %2$d', 'material-design-google' ),
 						absint( $link['number'] ),
 						absint( $total )
 					);
@@ -85,7 +85,7 @@ $links = [
 					<?php
 						printf(
 							/* translators: available page description. */
-							esc_attr__( '%s page', 'material-design-theme' ),
+							esc_attr__( '%s page', 'material-design-google' ),
 							esc_attr( $link['title'] )
 						);
 					?>

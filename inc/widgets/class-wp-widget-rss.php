@@ -76,7 +76,7 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 		}
 
 		if ( empty( $title ) ) {
-			$title = ! empty( $desc ) ? $desc : esc_html__( 'Unknown Feed', 'material-design-theme' );
+			$title = ! empty( $desc ) ? $desc : esc_html__( 'Unknown Feed', 'material-design-google' );
 		}
 
 		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
@@ -121,7 +121,7 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 
 		if ( is_wp_error( $rss ) ) {
 			if ( is_admin() || current_user_can( 'manage_options' ) ) {
-				echo '<p><strong>' . esc_html__( 'RSS Error:', 'material-design-theme' ) . '</strong> ' . esc_html( $rss->get_error_message() ) . '</p>';
+				echo '<p><strong>' . esc_html__( 'RSS Error:', 'material-design-google' ) . '</strong> ' . esc_html( $rss->get_error_message() ) . '</p>';
 			}
 			return;
 		}
@@ -143,7 +143,7 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 		$show_date    = (int) $args['show_date'];
 
 		if ( ! $rss->get_item_quantity() ) {
-			echo '<ul><li>' . esc_html__( 'An error has occurred, which probably means the feed is down. Try again later.', 'material-design-theme' ) . '</li></ul>';
+			echo '<ul><li>' . esc_html__( 'An error has occurred, which probably means the feed is down. Try again later.', 'material-design-google' ) . '</li></ul>';
 			$rss->__destruct();
 			unset( $rss );
 			return;
@@ -159,7 +159,7 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 
 			$title = esc_html( trim( wp_strip_all_tags( $item->get_title() ) ) );
 			if ( empty( $title ) ) {
-				$title = esc_html__( 'Untitled', 'material-design-theme' );
+				$title = esc_html__( 'Untitled', 'material-design-google' );
 			}
 
 			$desc = html_entity_decode( $item->get_description(), ENT_QUOTES, get_option( 'blog_charset' ) );

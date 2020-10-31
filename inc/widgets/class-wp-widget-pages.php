@@ -41,7 +41,7 @@ class WP_Widget_Pages extends \WP_Widget_Pages {
 	 * @param array $instance Settings for the current Pages widget instance.
 	 */
 	public function widget( $args, $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Pages', 'material-design-theme' );
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Pages', 'material-design-google' );
 
 		/**
 		 * Filters the widget title.

@@ -48,7 +48,7 @@ function add_tabs_description( $wp_customize ) {
 		return;
 	}
 
-	$tabs_control->description = esc_html__( 'Only the top level items will display.', 'material-design-theme' );
+	$tabs_control->description = esc_html__( 'Only the top level items will display.', 'material-design-google' );
 }
 
 /**
@@ -65,7 +65,7 @@ function add_admin_notice() {
 
 	printf(
 		'<div class="notice notice-info is-dismissible"><p><strong>%1$s</strong> %2$s</p></div>',
-		esc_html__( 'Tabs Menu:', 'material-design-theme' ),
-		esc_html__( 'Only the top level items will display.', 'material-design-theme' )
+		esc_html__( 'Tabs Menu:', 'material-design-google' ),
+		esc_html__( 'Only the top level items will display.', 'material-design-google' )
 	);
 }
