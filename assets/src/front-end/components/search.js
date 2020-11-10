@@ -47,6 +47,11 @@ class Search {
 
 		this.trigger.addEventListener( 'click', this.showSearch );
 
+		document.addEventListener( 'keydown', event => {
+			this.keepFocusInSearch( event );
+			this.closeOnEscape( event );
+		} );
+
 		if ( ! this.backTrigger ) {
 			return;
 		}
@@ -74,6 +79,61 @@ class Search {
 	 */
 	hideSearch() {
 		this.element.classList.remove( '-with-search' );
+	}
+
+	/**
+	 * Loop focus when search form is active
+	 *
+	 * @param {*} event Triggered event
+	 */
+	keepFocusInSearch( event ) {
+		if ( ! this.element.classList.contains( '-with-search' ) ) {
+			return;
+		}
+
+		const searchContainer = this.element.querySelector(
+			'.top-app-bar__search'
+		);
+		const selectors = 'input, a, button';
+		const elements = [ ...searchContainer.querySelectorAll( selectors ) ];
+
+		if ( ! elements ) {
+			return;
+		}
+
+		const firstElement = elements[ 0 ];
+		const lastElement = elements[ elements.length - 1 ];
+		const { activeElement } = document;
+		const { shiftKey, key } = event;
+		const isTabbing = 'Tab' === key;
+
+		if ( ! shiftKey && isTabbing && lastElement === activeElement ) {
+			event.preventDefault();
+			firstElement.focus();
+		}
+
+		if ( shiftKey && isTabbing && firstElement === activeElement ) {
+			event.preventDefault();
+			lastElement.focus();
+		}
+	}
+
+	/**
+	 * Close form when pressing Esc
+	 *
+	 * @param {*} event Triggered event
+	 */
+	closeOnEscape( event ) {
+		if ( ! this.element.classList.contains( '-with-search' ) ) {
+			return;
+		}
+
+		if ( 'Escape' !== event.key ) {
+			return;
+		}
+
+		this.element.classList.remove( '-with-search' );
+		this.trigger.focus();
 	}
 }
 
