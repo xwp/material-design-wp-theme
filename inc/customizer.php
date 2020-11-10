@@ -117,10 +117,11 @@ function get_description() {
  */
 function preview_scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
+	$suffix        = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 	wp_enqueue_script(
 		'material-design-google-customizer-preview',
-		get_template_directory_uri() . '/assets/js/customize-preview.js',
+		get_template_directory_uri() . "/assets/js/customize-preview{$suffix}.js",
 		[ 'customize-preview' ],
 		$theme_version,
 		true
@@ -146,17 +147,18 @@ function preview_scripts() {
  */
 function scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
+	$suffix        = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 	wp_enqueue_style(
 		'material-design-google-customizer-styles',
-		get_template_directory_uri() . '/assets/css/customize-controls-compiled.css',
+		get_template_directory_uri() . "/assets/css/customize-controls-compiled{$suffix}.css",
 		[ 'wp-color-picker' ],
 		$theme_version
 	);
 
 	wp_enqueue_script(
 		'material-design-google-customizer-controls',
-		get_template_directory_uri() . '/assets/js/customize-controls.js',
+		get_template_directory_uri() . "/assets/js/customize-controls{$suffix}.js",
 		[ 'wp-color-picker', 'customize-controls' ],
 		$theme_version,
 		true

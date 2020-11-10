@@ -23,6 +23,8 @@ const OptimizeCSSAssetsPlugin = require( 'optimize-css-assets-webpack-plugin' );
 const RtlCssPlugin = require( 'rtlcss-webpack-plugin' );
 const TerserPlugin = require( 'terser-webpack-plugin' );
 const WebpackBar = require( 'webpackbar' );
+const FixStyleOnlyEntriesPlugin = require( 'webpack-fix-style-only-entries' );
+const PROD = process.env.NODE_ENV === 'production';
 
 /**
  * WordPress dependencies
@@ -44,8 +46,8 @@ if ( defaultConfig.module && Array.isArray( defaultConfig.module.rules ) ) {
 const sharedConfig = {
 	output: {
 		path: path.resolve( process.cwd(), 'assets', 'js' ),
-		filename: '[name].js',
-		chunkFilename: '[name].js',
+		filename: `[name]${ PROD ? '.min' : '' }.js`,
+		chunkFilename: `[name]${ PROD ? '.min' : '' }.js`,
 	},
 	optimization: {
 		minimizer: [
@@ -81,11 +83,12 @@ const sharedConfig = {
 	plugins: [
 		...defaultConfig.plugins,
 		new MiniCssExtractPlugin( {
-			filename: '../css/[name]-compiled.css',
+			filename: `../css/[name]-compiled${ PROD ? '.min' : '' }.css`,
 		} ),
 		new RtlCssPlugin( {
-			filename: '../css/[name]-compiled-rtl.css',
+			filename: `../css/[name]-compiled-rtl${ PROD ? '.min' : '' }.css`,
 		} ),
+		new FixStyleOnlyEntriesPlugin(),
 	],
 };
 
