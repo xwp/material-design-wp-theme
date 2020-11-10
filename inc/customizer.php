@@ -569,3 +569,68 @@ function get_material_design_option( $name ) {
 
 	return apply_filters( 'get_material_design_option', $value, $name );
 }
+
+
+/**
+ * Checkbox sanitization callback.
+ *
+ * Sanitization callback for 'checkbox' type controls. This callback sanitizes `$checked`
+ * as a boolean value, either TRUE or FALSE.
+ *
+ * @param bool $checked Whether the checkbox is checked.
+ * @return bool Whether the checkbox is checked.
+ */
+function sanitize_checkbox( $checked ) {
+	// Boolean check.
+	return ( ( isset( $checked ) && true === (bool) $checked ) ? true : false );
+}
+
+/**
+ * Select sanitization callback.
+ *
+ * - Sanitization: select
+ * - Control: select, radio
+ *
+ * Sanitization callback for 'select' and 'radio' type controls. This callback sanitizes `$input`
+ * as a slug, and then validates `$input` against the choices defined for the control.
+ *
+ * @see sanitize_key()               https://developer.wordpress.org/reference/functions/sanitize_key/
+ * @see $wp_customize->get_control() https://developer.wordpress.org/reference/classes/wp_customize_manager/get_control/
+ *
+ * @param string               $input   Slug to sanitize.
+ * @param WP_Customize_Setting $setting Setting instance.
+ * @return string Sanitized slug if it is a valid choice; otherwise, the setting default.
+ */
+function sanitize_select( $input, $setting ) {
+	// Ensure input is a slug.
+	$input = sanitize_key( $input );
+
+	// Get list of choices from the control associated with the setting.
+	$choices = $setting->manager->get_control( $setting->id )->choices;
+
+	// If the input is a valid key, return it; otherwise, return the default.
+	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+}
+
+/**
+ * Get sanitize callback based on setting type.
+ *
+ * @param  string $setting_type Type of the setting.
+ * @return string
+ */
+function get_sanitize_callback( $setting_type ) {
+	switch ( $setting_type ) {
+		case 'radio':
+		case 'select':
+			return __NAMESPACE__ . '\sanitize_select';
+
+		case 'checkbox':
+			return __NAMESPACE__ . '\sanitize_checkbox';
+
+		case 'color':
+			return 'sanitize_hex_color';
+
+		default:
+			return 'sanitize_text_field';
+	}
+}
