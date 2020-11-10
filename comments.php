@@ -66,12 +66,12 @@ $args = [
 					%s
 				</div>
 			</div>',
-			esc_attr( $classes ),
+			$classes,
 			esc_attr( $commenter['comment_author'] ),
 			$html_req,
 			sprintf(
 				'outlined' === $style ? $outlined_label : $filled_label,
-				esc_html( 'author-label' ),
+				'author-label',
 				esc_html__( 'Name', 'material-design-google' )
 			)
 		),
@@ -82,12 +82,12 @@ $args = [
 					%s
 				</div>
 			</div>',
-			esc_attr( $classes ),
+			$classes,
 			esc_attr( $commenter['comment_author_email'] ),
 			$html_req,
 			sprintf(
 				'outlined' === $style ? $outlined_label : $filled_label,
-				esc_html( 'email-label' ),
+				'email-label',
 				esc_html__( 'Email', 'material-design-google' )
 			)
 		),
@@ -98,11 +98,11 @@ $args = [
 					%s
 				</div>
 			</div>',
-			esc_attr( $classes ),
+			$classes,
 			esc_attr( $commenter['comment_author_url'] ),
 			sprintf(
 				'outlined' === $style ? $outlined_label : $filled_label,
-				esc_html( 'url-label' ),
+				'url-label',
 				esc_html__( 'Website', 'material-design-google' )
 			)
 		),
@@ -112,10 +112,10 @@ $args = [
 			<textarea id="comment" name="comment" class="mdc-text-field__input" required></textarea>
 			%s
 		</div>',
-		esc_attr( $classes ),
+		$classes,
 		sprintf(
 			'outlined' === $style ? $outlined_label : $filled_label,
-			esc_html( 'comment' ),
+			'comment',
 			esc_html__( 'Comment', 'material-design-google' )
 		)
 	),

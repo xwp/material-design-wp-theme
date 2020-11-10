@@ -31,21 +31,8 @@ namespace MaterialDesign\Theme\Admin;
  * @return void
  */
 function setup() {
-	add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\enqueue_admin_assets' );
 	add_action( 'admin_notices', __NAMESPACE__ . '\plugin_not_installed_notice' );
 	add_action( 'tgmpa_register', __NAMESPACE__ . '\register_required_plugins' );
-}
-
-/**
- * Enqueue admin styles.
- */
-function enqueue_admin_assets() {
-	wp_enqueue_style(
-		'material-design-google-admin-css',
-		get_template_directory_uri() . '/assets/css/admin-compiled.css',
-		[],
-		wp_get_theme()->get( 'Version' )
-	);
 }
 
 /**
@@ -61,11 +48,11 @@ function plugin_not_installed_notice() {
 
 	if ( ! file_exists( trailingslashit( WP_CONTENT_DIR ) . 'plugins/' . $plugin ) ) {
 		$action = 'install';
-		$title  = esc_html__( 'Install', 'material-design-google' );
-		$cta    = esc_html__( 'Install and activate', 'material-design-google' );
+		$title  = __( 'Install', 'material-design-google' );
+		$cta    = __( 'Install and activate', 'material-design-google' );
 	} elseif ( ! is_plugin_active( "$plugin/$plugin.php" ) ) {
 		$action = 'activate';
-		$cta    = esc_html__( 'Activate', 'material-design-google' );
+		$cta    = __( 'Activate', 'material-design-google' );
 		$title  = $cta;
 	}
 
@@ -102,6 +89,26 @@ function plugin_not_installed_notice() {
 	);
 
 	?>
+	<style>
+		.material-notice-container {
+			display: flex;
+			align-items: center;
+			padding: 15px;
+			background-color: #e7f5f9;
+		}
+
+		.material-notice-container__content {
+			margin-left: 20px;
+		}
+
+		.material-notice-container__content__title {
+			margin: 10px 0 5px !important;
+		}
+
+		.material-notice-container__content__text {
+			margin: 0;
+		}
+	</style> <!-- styles required for notices -->
 	<div class="notice notice-info is-dismissible  material-notice-container">
 		<img
 			src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/plugin-logo.png' ); ?>"
@@ -149,9 +156,7 @@ function register_required_plugins() {
 		array(
 			'name'     => esc_html__( 'Material Design', 'material-design-google' ),
 			'slug'     => 'material-design',
-			// @todo remove source and point to the WordPress.org plugin repo after the plugin is published.
-			'source'   => 'https://storage.googleapis.com/xwp-mdc/plugin/material-design.zip',
-			'required' => true,
+			'required' => false,
 		),
 	);
 
@@ -162,7 +167,7 @@ function register_required_plugins() {
 		'parent_slug'  => 'themes.php',
 		'capability'   => 'edit_theme_options',
 		'has_notices'  => false,
-		'is_automatic' => true,
+		'is_automatic' => false,
 	);
 
 	tgmpa( $plugins, $config );

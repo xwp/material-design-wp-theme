@@ -129,21 +129,6 @@ const frontEnd = {
 	],
 };
 
-const admin = {
-	...defaultConfig,
-	...sharedConfig,
-	entry: {
-		admin: [ './assets/css/src/admin.css' ],
-	},
-	plugins: [
-		...sharedConfig.plugins,
-		new WebpackBar( {
-			name: 'Admin',
-			color: '#36f271',
-		} ),
-	],
-};
-
 const editor = {
 	...defaultConfig,
 	...sharedConfig,
@@ -163,6 +148,5 @@ module.exports = [
 	// prettier-ignore
 	customizer,
 	frontEnd,
-	admin,
 	editor,
 ];

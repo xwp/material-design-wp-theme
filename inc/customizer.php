@@ -214,7 +214,7 @@ function add_settings( $wp_customize, $settings = [] ) {
 	$slug = get_slug();
 
 	// TRT automation doesn't recognize the default sanitization callback below.
-	$func = sprintf('%s_%s', 'add', 'setting' );
+	$func = sprintf( '%s_%s', 'add', 'setting' );
 
 	foreach ( $settings as $id => $setting ) {
 		if ( is_array( $setting ) ) {
