@@ -72,6 +72,10 @@
 			display: none;
 		}
 
+		& .mdc-button:focus .mdc-button__label {
+			display: block;
+		}
+
 		& .mdc-button__icon {
 			margin-left: 0;
 			margin-right: 0;
