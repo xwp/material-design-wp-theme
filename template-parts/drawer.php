@@ -47,7 +47,7 @@ $top_app_bar_layout         = ( 'menu' !== $top_app_bar_layout_setting ) ? ' -wi
 	<div class="mdc-drawer__content">
 		<?php get_search_form(); ?>
 
-		<nav class="mdc-list">
+		<nav class="mdc-list" role="listbox">
 			<?php
 			wp_nav_menu(
 				array(
