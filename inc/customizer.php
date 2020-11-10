@@ -155,6 +155,7 @@ function scripts() {
 		[ 'wp-color-picker' ],
 		$theme_version
 	);
+	wp_style_add_data( 'material-design-google-customizer-styles', 'rtl', 'replace' );
 
 	wp_enqueue_script(
 		'material-design-google-customizer-controls',

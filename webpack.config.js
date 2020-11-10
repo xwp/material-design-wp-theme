@@ -86,7 +86,7 @@ const sharedConfig = {
 			filename: `../css/[name]-compiled${ PROD ? '.min' : '' }.css`,
 		} ),
 		new RtlCssPlugin( {
-			filename: `../css/[name]-compiled-rtl${ PROD ? '.min' : '' }.css`,
+			filename: `../css/[name]-compiled${ PROD ? '.min' : '' }-rtl.css`,
 		} ),
 		new FixStyleOnlyEntriesPlugin(),
 	],
