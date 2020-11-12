@@ -129,3 +129,10 @@
 .comment-content {
 	max-width: 100%;
 }
+
+.comment-form {
+
+	& .mdc-button:focus {
+		outline: 1px dotted #000;
+	}
+}
