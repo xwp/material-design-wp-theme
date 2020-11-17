@@ -72,6 +72,10 @@
 			display: none;
 		}
 
+		& .mdc-button:focus .mdc-button__label {
+			display: block;
+		}
+
 		& .mdc-button__icon {
 			margin-left: 0;
 			margin-right: 0;
@@ -81,6 +85,7 @@
 			background-color: transparent;
 			color: var(--mdc-theme-on-header, var(--mdc-theme-on-primary, #fff));
 			padding-left: 0.25rem;
+			padding-right: 0.25rem;
 			margin-right: 0;
 			min-width: 2.25rem;
 		}

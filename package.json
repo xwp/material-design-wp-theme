@@ -20,7 +20,7 @@
     "@babel/preset-env": "^7.11.5",
     "@material/button": "5.1.0",
     "@material/card": "5.1.0",
-    "@material/checkbox": "5.1.0",
+    "@material/checkbox": "^5.1.0",
     "@material/drawer": "5.1.0",
     "@material/floating-label": "5.1.0",
     "@material/form-field": "5.1.0",

@@ -50,12 +50,13 @@ class Menu_Drawer_Walker extends \Walker_Nav_Menu {
 	 * @param int    $id     ID of the current item.
 	 */
 	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+		$link_title = ( ! empty( $item->title ) ) ? $item->title : $item->post_title;
 
 		$output .= sprintf(
 			'<a href="%1$s" %2$s>%3$s</a>',
 			esc_url( get_the_permalink( $item ) ),
 			( absint( $item->object_id ) === get_the_ID() ) ? ' class="mdc-list-item mdc-list-item--activated"' : ' class="mdc-list-item"',
-			'<span class="mdc-list-item__text">' . esc_html( $item->post_title ) . '</span>'
+			'<span class="mdc-list-item__text">' . esc_html( $link_title ) . '</span>'
 		);
 	}
 }

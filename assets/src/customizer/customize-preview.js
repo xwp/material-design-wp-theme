@@ -116,6 +116,17 @@
 			}
 		} );
 
+		// Header colors should fallback to primary colors.
+		if ( ! styles.includes( '--mdc-theme-header' ) ) {
+			styles += `--mdc-theme-header: var(--mdc-theme-primary);`;
+			styles += `--mdc-theme-header-rgb: var(--mdc-theme-primary-rgb);`;
+		}
+
+		if ( ! styles.includes( '--mdc-theme-on-header' ) ) {
+			styles += `--mdc-theme-on-header: var(--mdc-theme-on-primary);`;
+			styles += `--mdc-theme-on-header-rgb: var(--mdc-theme-on-primary-rgb);`;
+		}
+
 		styles = `:root {
 			${ styles }
 		}`;

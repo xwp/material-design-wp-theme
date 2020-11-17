@@ -36,9 +36,12 @@
 			name="s"
 		>
 	</div>
-	<button class="mdc-button mdc-button--unelevated button__back" type="button">
+	<button class="mdc-button mdc-button--unelevated button__search" type="submit">
 		<span class="mdc-button__ripple"></span>
-		<span class="mdc-button__label"><?php esc_html_e( 'Exit search form', 'material-design-google' ); ?></span>
+		<span class="mdc-button__label"><?php esc_html_e( 'Search', 'material-design-google' ); ?></span>
+	</button>
+	<button class="mdc-button mdc-button--unelevated button__back" type="button" aria-label="<?php esc_html_e( 'Exit search form', 'material-design-google' ); ?>">
+		<span class="mdc-button__ripple"></span>
 		<i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
 	</button>
 </form>

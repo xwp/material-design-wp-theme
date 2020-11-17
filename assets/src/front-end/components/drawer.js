@@ -23,17 +23,26 @@ export const drawerInit = () => {
 		return;
 	}
 
-	return new MDCDrawer( drawerElement );
-};
-
-export const drawerHandler = ( topAppBar, drawer ) => {
-	topAppBar.listen( 'MDCTopAppBar:nav', () => {
-		drawer.open = ! drawer.open;
-	} );
+	const drawer = new MDCDrawer( drawerElement );
+	drawer.singleSelection = true;
 
 	const listElement = drawerElement.querySelector( '.mdc-list' );
 
 	listElement.addEventListener( 'click', () => {
 		drawer.open = false;
+	} );
+
+	const firstElement = listElement.querySelector( '.mdc-list-item' );
+
+	if ( firstElement ) {
+		firstElement.setAttribute( 'tabindex', 0 );
+	}
+
+	return drawer;
+};
+
+export const drawerHandler = ( topAppBar, drawer ) => {
+	topAppBar.listen( 'MDCTopAppBar:nav', () => {
+		drawer.open = ! drawer.open;
 	} );
 };

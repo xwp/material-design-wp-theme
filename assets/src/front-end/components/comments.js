@@ -15,6 +15,8 @@
  */
 
 import { MDCTextField } from '@material/textfield';
+import { MDCCheckbox } from '@material/checkbox';
+import { MDCRipple } from '@material/ripple';
 
 export const commentsInit = () => {
 	const commentForm = document.querySelector( '#commentform' );
@@ -26,6 +28,14 @@ export const commentsInit = () => {
 
 	for ( const field of commentForm.querySelectorAll( '.mdc-text-field' ) ) {
 		fields.push( new MDCTextField( field ) );
+	}
+
+	for ( const checkbox of commentForm.querySelectorAll( '.mdc-checkbox' ) ) {
+		new MDCCheckbox( checkbox );
+	}
+
+	for ( const button of commentForm.querySelectorAll( '.mdc-button' ) ) {
+		new MDCRipple( button );
 	}
 
 	commentForm.addEventListener( 'submit', event => {
