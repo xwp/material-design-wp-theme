@@ -36,7 +36,7 @@
 			name="s"
 		>
 	</div>
-	<button class="mdc-button mdc-button--unelevated" type="submit">
+	<button class="mdc-button mdc-button--unelevated button__search" type="submit">
 		<span class="mdc-button__ripple"></span>
 		<span class="mdc-button__label"><?php esc_html_e( 'Search', 'material-design-google' ); ?></span>
 	</button>

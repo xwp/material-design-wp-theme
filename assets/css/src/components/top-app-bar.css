@@ -115,4 +115,8 @@
 			display: flex;
 		}
 	}
+
+	& .button__search.mdc-button--unelevated {
+		background-color: var(--mdc-theme-header);
+	}
 }
