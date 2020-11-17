@@ -14,7 +14,12 @@
  * limitations under the License.
  */
 
-/* global jQuery */
+/* global jQuery, materialDesignThemeColorControls */
+
+/**
+ * WordPress dependencies
+ */
+import { __ } from '@wordpress/i18n';
 
 /**
  * Customizer enhancements for a better user experience.
@@ -104,5 +109,34 @@
 				hideHeaderDescriptionEl.classList.remove( '-display' );
 			}
 		} );
+
+		if (
+			materialDesignThemeColorControls &&
+			materialDesignThemeColorControls.length
+		) {
+			materialDesignThemeColorControls.forEach( controlId => {
+				const control = api.control( controlId );
+
+				if ( ! control ) {
+					return;
+				}
+
+				// Update the label to `Reset`.
+				control.container
+					.find( '.wp-picker-clear, .wp-picker-default' )
+					.val( __( 'Reset', 'material-design' ) )
+					.attr(
+						'aria-label',
+						__( 'Reset to default color', 'material-design' )
+					);
+
+				// Clear the color on `clear` button click.
+				control.container.on( 'click', event => {
+					event.preventDefault();
+
+					control.setting.set( '' );
+				} );
+			} );
+		}
 	} );
 } )( jQuery, wp.customize );
