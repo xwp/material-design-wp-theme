@@ -169,7 +169,7 @@ function scripts() {
 	}
 
 	wp_localize_script(
-		'material-design-theme-customizer-controls',
+		'material-design-google-customizer-controls',
 		'materialDesignThemeColorControls',
 		$color_controls
 	);
