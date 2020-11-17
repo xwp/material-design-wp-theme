@@ -160,9 +160,21 @@ function scripts() {
 	wp_enqueue_script(
 		'material-design-google-customizer-controls',
 		get_template_directory_uri() . "/assets/js/customize-controls{$suffix}.js",
-		[ 'wp-color-picker', 'customize-controls' ],
+		[ 'wp-color-picker', 'wp-i18n', 'customize-controls' ],
 		$theme_version,
 		true
+	);
+
+	$color_controls = [];
+
+	foreach ( Colors\get_controls() as $control ) {
+		$color_controls[] = $control['id'];
+	}
+
+	wp_localize_script(
+		'material-design-theme-customizer-controls',
+		'materialDesignThemeColorControls',
+		$color_controls
 	);
 }
 
@@ -295,8 +307,8 @@ function get_default_values() {
 		'on_surface_color'        => '#000000',
 		'custom_background_color' => '#ffffff',
 		'on_background_color'     => '#000000',
-		'header_color'            => '#6200ee',
-		'on_header_color'         => '#ffffff',
+		'header_color'            => '',
+		'on_header_color'         => '',
 		'footer_color'            => '#ffffff',
 		'on_footer_color'         => '#000000',
 		'archive_layout'          => 'card',
@@ -441,8 +453,13 @@ function get_frontend_css() {
 	$controls   = Colors\get_controls();
 
 	foreach ( $controls as $control ) {
-		$default      = isset( $defaults[ $control['id'] ] ) ? $defaults[ $control['id'] ] : '';
-		$value        = get_theme_mod( $control['id'], $default );
+		$default = isset( $defaults[ $control['id'] ] ) ? $defaults[ $control['id'] ] : '';
+		$value   = get_theme_mod( $control['id'], $default );
+
+		if ( empty( $value ) ) {
+			continue;
+		}
+
 		$color_vars[] = sprintf( '%s: %s;', esc_html( $control['css_var'] ), esc_html( $value ) );
 		$rgb          = hex_to_rgb( $value );
 
