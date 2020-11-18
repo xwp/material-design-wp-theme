@@ -58,7 +58,7 @@ class Walker_Comment extends \Walker_Comment {
 			id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
 			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 				<div class="comment-author-avatar">
-					<?php if ( 0 != $args['avatar_size'] ) : ?>
+					<?php if ( 0 !== absint( $args['avatar_size'] ) ) : ?>
 						<?php echo get_avatar( $comment, $args['avatar_size'] ); ?>
 					<?php endif; ?>
 				</div><!-- .comment-author-avatar -->
@@ -82,7 +82,7 @@ class Walker_Comment extends \Walker_Comment {
 						<?php edit_comment_link( __( 'Edit', 'material-design-google' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .comment-meta -->
 
-					<?php if ( '0' == $comment->comment_approved ) : ?>
+					<?php if ( 0 === absint( $comment->comment_approved ) ) : ?>
 						<em class="comment-awaiting-moderation mdc-typography--caption">
 							<?php echo esc_html( $moderation_note ); ?>
 						</em>

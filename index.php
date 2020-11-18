@@ -51,10 +51,9 @@ $class_name = sprintf( 'material-archive__%s', $max_width );
 			endif;
 			?>
 
-			<div class="site-main__inner">
-				<?php get_template_part( 'template-parts/archive' ); ?>
-			</div>
-		</div>
+				<div class="site-main__inner">
+					<?php get_template_part( 'template-parts/archive' ); ?>
+				</div>
 
 			<?php
 			get_template_part( 'template-parts/page-navigation' );
