@@ -54,7 +54,8 @@ class Walker_Comment extends \Walker_Comment {
 		}
 
 		?>
-		<<?php echo esc_html( $tag ); ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
+		<<?php echo $tag; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+			id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
 			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 				<div class="comment-author-avatar">
 					<?php if ( 0 != $args['avatar_size'] ) : ?>

@@ -126,7 +126,8 @@ function add_settings( $wp_customize ) {
 
 	foreach ( get_controls() as $control ) {
 		$settings[ $control['id'] ] = [
-			'transport' => 'postMessage',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => Customizer\get_sanitize_callback( $control['type'] ),
 		];
 
 		$controls[ $control['id'] ] = array_merge(

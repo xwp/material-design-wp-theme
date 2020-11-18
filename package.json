@@ -68,12 +68,13 @@
     "terser-webpack-plugin": "^2.3.8",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
+    "webpack-fix-style-only-entries": "^0.6.0",
     "webpackbar": "^4.0.0"
   },
   "scripts": {
     "build": "npm-run-all build:*",
     "build:prepare": "grunt clean",
-    "build:js": "wp-scripts build",
+    "build:js": "wp-scripts build && NODE_ENV=dev wp-scripts build",
     "build:run": "grunt build",
     "build:zip": "grunt create-build-zip",
     "dev": "wp-scripts start",

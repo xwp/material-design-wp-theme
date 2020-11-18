@@ -32,6 +32,7 @@ module.exports = function( grunt ) {
 					'!**/.DS_Store',
 					'!assets/css/src/**',
 					'!assets/js/.gitignore',
+					'!assets/js/*.php',
 					'!assets/src/**',
 					'!bin/**',
 					'!build/**',

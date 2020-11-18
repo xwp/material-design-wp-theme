@@ -89,14 +89,14 @@ $links = [
 					<?php
 						printf(
 							/* translators: available page description. */
-							esc_attr__( '%s page', 'material-design-google' ),
-							esc_attr( $link['title'] )
+							esc_html__( '%s page', 'material-design-google' ),
+							esc_html( $link['title'] )
 						);
 					?>
 				</span>
 			</a>
 		<?php else : ?>
-			<span class="material-icons" title="<?php echo esc_html( $link['title'] ); ?>">
+			<span class="material-icons" title="<?php echo esc_attr( $link['title'] ); ?>">
 				<?php echo esc_html( $link['icon'] ); ?>
 			</span>
 		<?php endif ?>

@@ -40,7 +40,7 @@ if ( ! function_exists( 'material_design_theme_setup' ) ) :
 		 * If you're building a theme based on the Material Design theme, use a find and replace
 		 * to change 'material-design-google' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'material-design-google', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'material-design-google' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -161,10 +161,12 @@ add_action( 'widgets_init', 'material_design_theme_widgets_init' );
  */
 function material_design_theme_scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
+	$suffix        = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 	wp_enqueue_style( 'material-design-google-style', get_stylesheet_uri(), array(), $theme_version );
 
-	wp_enqueue_style( 'material-design-google-front-end-css', get_template_directory_uri() . '/assets/css/front-end-compiled.css', array( 'material-design-google-style' ), $theme_version );
+	wp_enqueue_style( 'material-design-google-front-end-css', get_template_directory_uri() . "/assets/css/front-end-compiled{$suffix}.css", array( 'material-design-google-style' ), $theme_version );
+	wp_style_add_data( 'material-design-google-front-end-css', 'rtl', 'replace' );
 
 	if ( ! wp_style_is( 'material-google-fonts-cdn', 'enqueued' ) ) {
 		wp_enqueue_style(
@@ -175,7 +177,7 @@ function material_design_theme_scripts() {
 		);
 	}
 
-	wp_enqueue_script( 'material-design-google-js', get_template_directory_uri() . '/assets/js/front-end.js', array(), $theme_version, true );
+	wp_enqueue_script( 'material-design-google-js', get_template_directory_uri() . "/assets/js/front-end{$suffix}.js", array(), $theme_version, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

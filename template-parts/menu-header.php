@@ -32,7 +32,7 @@ $layout     = get_theme_mod( 'header_bar_layout', 'standard' );
 $class      = ( 'fixed' === $layout ) ? 'mdc-top-app-bar--fixed' : '';
 ?>
 
-<div class="mdc-top-app-bar top-app-bar <?php echo esc_attr( $class ); ?>">
+<div class="mdc-top-app-bar top-app-bar <?php echo $class; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>">
 	<div class="mdc-top-app-bar__row top-app-bar__header">
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
 			<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger"><?php esc_html_e( 'menu', 'material-design-google' ); ?></button>
