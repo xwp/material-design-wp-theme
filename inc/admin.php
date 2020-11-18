@@ -32,7 +32,7 @@ namespace MaterialDesign\Theme\Admin;
  */
 function setup() {
 	add_action( 'admin_notices', __NAMESPACE__ . '\plugin_not_installed_notice' );
-	add_action( 'tgmpa_register', __NAMESPACE__ . '\register_required_plugins' );
+	add_action( 'tgmpa_register', __NAMESPACE__ . '\register_recommended_plugins' );
 }
 
 /**
@@ -102,7 +102,7 @@ function plugin_not_installed_notice() {
 		}
 
 		.material-notice-container__content__title {
-			margin: 10px 0 5px !important;
+			margin: 10px 0 5px;
 		}
 
 		.material-notice-container__content__text {
@@ -149,9 +149,9 @@ function plugin_not_installed_notice() {
 }
 
 /**
- * Register the required plugins for this theme.
+ * Register the recommended plugins for this theme.
  */
-function register_required_plugins() {
+function register_recommended_plugins() {
 	$plugins = array(
 		array(
 			'name'     => esc_html__( 'Material Design', 'material-design-google' ),

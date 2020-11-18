@@ -39,8 +39,7 @@ function setup() {
 
 	add_action( 'customize_controls_enqueue_scripts', __NAMESPACE__ . '\scripts' );
 
-	add_action( 'wp_head', __NAMESPACE__ . '\frontend_inline_css', 2 );
-	add_action( 'admin_head', __NAMESPACE__ . '\frontend_inline_css', 2 );
+	add_action( 'admin_head', __NAMESPACE__ . '\print_css_vars', 2 );
 }
 
 /**
@@ -445,9 +444,9 @@ function add_color_controls( $wp_customize, $color_controls, $section ) {
 }
 
 /**
- * Get custom frontend CSS based on the customizer theme settings.
+ * Get custom frontend CSS vars based on the customizer theme settings.
  */
-function get_frontend_css() {
+function get_css_vars() {
 	$color_vars = [];
 	$defaults   = get_default_values();
 	$controls   = Colors\get_controls();
@@ -491,12 +490,12 @@ function get_frontend_css() {
 }
 
 /**
- * Output inline styles with css variables at the top of the head.
+ * Print css variables at the top of the head.
  */
-function frontend_inline_css() {
+function print_css_vars() {
 	?>
 	<style id="material-design-google-css-variables">
-		<?php echo get_frontend_css(); // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+		<?php echo get_css_vars(); // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</style>
 	<?php
 }

@@ -168,6 +168,8 @@ function material_design_theme_scripts() {
 	wp_enqueue_style( 'material-design-google-front-end-css', get_template_directory_uri() . "/assets/css/front-end-compiled{$suffix}.css", array( 'material-design-google-style' ), $theme_version );
 	wp_style_add_data( 'material-design-google-front-end-css', 'rtl', 'replace' );
 
+	wp_add_inline_style( 'material-design-google-style', \MaterialDesign\Theme\Customizer\get_css_vars() );
+
 	if ( ! wp_style_is( 'material-google-fonts-cdn', 'enqueued' ) ) {
 		wp_enqueue_style(
 			'material-google-fonts-cdn',
