@@ -43,7 +43,7 @@ use MaterialDesign\Theme\Menu_Drawer_Walker;
 	<div class="mdc-drawer__content">
 		<?php get_search_form(); ?>
 
-		<nav class="mdc-list" role="listbox">
+		<nav class="mdc-list mdc-drawer__list" role="listbox">
 			<?php
 			wp_nav_menu(
 				array(

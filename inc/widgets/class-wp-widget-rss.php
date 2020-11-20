@@ -46,7 +46,7 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 		}
 
 		$url = ! empty( $instance['url'] ) ? $instance['url'] : '';
-		while ( stristr( $url, 'http' ) != $url ) {
+		while ( stristr( $url, 'http' ) !== $url ) {
 			$url = substr( $url, 1 );
 		}
 
@@ -55,7 +55,7 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 		}
 
 		// self-url destruction sequence.
-		if ( in_array( untrailingslashit( $url ), array( site_url(), home_url() ) ) ) {
+		if ( in_array( untrailingslashit( $url ), array( site_url(), home_url() ), true ) ) {
 			return;
 		}
 
@@ -70,7 +70,7 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 				$title = wp_strip_all_tags( $rss->get_title() );
 			}
 			$link = wp_strip_all_tags( $rss->get_permalink() );
-			while ( stristr( $link, 'http' ) != $link ) {
+			while ( stristr( $link, 'http' ) !== $link ) {
 				$link = substr( $link, 1 );
 			}
 		}
@@ -152,7 +152,7 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 		echo '<ul class="mdc-list mdc-list--two-line widget-rss">';
 		foreach ( $rss->get_items( 0, $items ) as $item ) {
 			$link = $item->get_link();
-			while ( stristr( $link, 'http' ) != $link ) {
+			while ( stristr( $link, 'http' ) !== $link ) {
 				$link = substr( $link, 1 );
 			}
 			$link = esc_url( wp_strip_all_tags( $link ) );
@@ -170,7 +170,7 @@ class WP_Widget_RSS extends \WP_Widget_RSS {
 				$summary = $desc;
 
 				// Change existing [...] to [&hellip;].
-				if ( '[...]' == substr( $summary, -5 ) ) {
+				if ( '[...]' === substr( $summary, -5 ) ) {
 					$summary = substr( $summary, 0, -5 ) . '[&hellip;]';
 				}
 
