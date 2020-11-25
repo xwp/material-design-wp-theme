@@ -103,5 +103,3 @@ $links = [
 	</li>
 <?php endforeach; ?>
 </ul>
-
-
