@@ -24,6 +24,7 @@ const RtlCssPlugin = require( 'rtlcss-webpack-plugin' );
 const TerserPlugin = require( 'terser-webpack-plugin' );
 const WebpackBar = require( 'webpackbar' );
 const FixStyleOnlyEntriesPlugin = require( 'webpack-fix-style-only-entries' );
+const FixLineEndingsPlugin = require( './webpack/fix-line-endings-plugin' );
 const PROD = process.env.NODE_ENV === 'production';
 
 /**
@@ -89,6 +90,7 @@ const sharedConfig = {
 			filename: `../css/[name]-compiled${ PROD ? '.min' : '' }-rtl.css`,
 		} ),
 		new FixStyleOnlyEntriesPlugin(),
+		new FixLineEndingsPlugin(),
 	],
 };
 
