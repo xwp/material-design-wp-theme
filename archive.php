@@ -51,7 +51,7 @@ $class_name = sprintf( 'material-archive__%s', $max_width );
 		</div>
 
 			<?php
-			get_template_part( 'template-parts/page-navigation' );
+			get_template_part( 'template-parts/posts-navigation' );
 
 		else :
 
