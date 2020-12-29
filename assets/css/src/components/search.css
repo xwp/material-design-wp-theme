@@ -68,12 +68,12 @@
 			}
 		}
 
-		& .mdc-button__label {
-			display: none;
+		& .button__search {
+			margin-top: -9999em;
 		}
 
-		& .mdc-button:focus .mdc-button__label {
-			display: block;
+		& .button__search:focus {
+			margin-top: 0;
 		}
 
 		& .mdc-button__icon {
