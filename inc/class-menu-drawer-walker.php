@@ -51,11 +51,12 @@ class Menu_Drawer_Walker extends \Walker_Nav_Menu {
 	 */
 	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 		$link_title = ( ! empty( $item->title ) ) ? $item->title : $item->post_title;
+		$classes    = (array) $item->classes;
 
 		$output .= sprintf(
 			'<a href="%1$s" %2$s>%3$s</a>',
 			esc_url( $item->url ),
-			( in_array( 'current-menu-item', $item->classes, true ) ) ? ' class="mdc-list-item mdc-list-item--activated"' : ' class="mdc-list-item"',
+			( in_array( 'current-menu-item', $classes, true ) ) ? ' class="mdc-list-item mdc-list-item--activated"' : ' class="mdc-list-item"',
 			'<span class="mdc-list-item__text">' . esc_html( $link_title ) . '</span>'
 		);
 	}

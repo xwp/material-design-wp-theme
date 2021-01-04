@@ -44,16 +44,14 @@ For the theme’s changelog, please see [the Releases page on GitHub](https://gi
 
 ## Copyright ##
 
-Material Design bundles the following third-party resources:
-
-Images
-Photography by Liam Spradlin
-License: Creative Commons Zero (CC0), https://creativecommons.org/publicdomain/zero/1.0
+Images in screentshot are self-created and released under GPL
 
 Material Design logo and Illustrations
 Copyright (c) 2014-2020 Google, Inc.
 License: MIT License, https://opensource.org/licenses/MIT
 Source: https://material.io/
+
+Material Design bundles the following third-party resources:
 
 TGMPA
 License: GNU General Public License v2 or later
