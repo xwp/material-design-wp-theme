@@ -66,4 +66,16 @@
 	ul {
 		margin-left: 0;
 	}
+
+	& .mdc-drawer__close {
+		min-width: auto;
+		padding: 0;
+		position: absolute;
+		right: 0;
+		width: 36px;
+
+		.mdc-button__icon {
+			margin-right: 0;
+		}
+	}
 }
