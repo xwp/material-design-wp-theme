@@ -96,7 +96,7 @@ $links = [
 				</span>
 			</a>
 		<?php else : ?>
-			<span class="material-icons" title="<?php echo esc_attr( $link['title'] ); ?>">
+			<span class="material-icons" title="<?php echo esc_attr( $link['title'] ); ?>" aria-hidden="true">
 				<?php echo esc_html( $link['icon'] ); ?>
 			</span>
 		<?php endif ?>
