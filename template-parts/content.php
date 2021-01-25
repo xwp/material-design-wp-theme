@@ -42,7 +42,15 @@ $classes       = get_theme_mod( 'archive_outlined', false ) ? 'mdc-card--outline
 				<?php if ( is_sticky() ) : ?>
 					<h2
 						class="post-card__title mdc-typography mdc-typography--headline6"
-						aria-label="<?php printf( esc_attr__( 'Sticky post: %s', 'material-design' ), get_the_title() ); ?>"
+						aria-label="
+						<?php
+							printf(
+								/* translators: Post title */
+								esc_attr__( 'Sticky post: %s', 'material-design-google' ),
+								esc_attr( get_the_title() )
+							);
+						?>
+						"
 					>
 						<i class="material-icons" aria-hidden="true">push_pin</i>
 						<?php the_title(); ?>

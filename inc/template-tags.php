@@ -121,7 +121,7 @@ if ( ! function_exists( 'material_design_theme_entry_footer' ) ) :
 				),
 				get_the_title()
 			),
-			'<span class="edit-link mdc-typography--caption"><i class="material-icons mdc-button__icon">create</i>',
+			'<span class="edit-link mdc-typography--caption"><i class="material-icons mdc-button__icon" aria-hidden="true">create</i>',
 			'</span>'
 		);
 	}
