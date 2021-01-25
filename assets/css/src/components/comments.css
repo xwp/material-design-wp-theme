@@ -89,6 +89,10 @@
 	& .comment-meta {
 		opacity: 0.75;
 	}
+
+	& .comment-edit-link:hover {
+		text-decoration: none;
+	}
 }
 
 .comments-area {
@@ -128,6 +132,10 @@
 
 .comment-content {
 	max-width: 100%;
+
+	& a:hover {
+		text-decoration: none;
+	}
 }
 
 .comment-form {
