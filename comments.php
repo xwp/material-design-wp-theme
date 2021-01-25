@@ -109,13 +109,13 @@ $args = [
 	],
 	'comment_field'      => sprintf(
 		'<div class="mdc-text-field mdc-text-field--textarea %s comment-field">
-			<textarea id="comment" name="comment" class="mdc-text-field__input" required></textarea>
+			<textarea id="comment" name="comment" class="mdc-text-field__input" aria-labelledby="comment-label" required></textarea>
 			%s
 		</div>',
 		$classes,
 		sprintf(
 			'outlined' === $style ? $outlined_label : $filled_label,
-			'comment',
+			'comment-label',
 			esc_html__( 'Comment', 'material-design-google' )
 		)
 	),
