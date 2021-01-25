@@ -118,11 +118,54 @@ if ( ! function_exists( 'material_design_theme_entry_footer' ) ) :
 	function material_design_theme_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', '<span class="separator">, </span>' );
-			if ( $tags_list ) {
-				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links"><i class="material-icons mdc-button__icon">label</i><span class="mdc-typography--caption">%1$s</span></span>', $tags_list ); // phpcs:ignore
+			$tags        = get_the_tags();
+			$tags_markup = [];
+
+			if ( ! empty( $tags ) ) {
+				?>
+			<span class="tags-links">
+				<i class="material-icons mdc-button__icon" aria-hidden="true">label</i>
+
+				<span class="mdc-typography--caption">
+					<?php foreach ( $tags as $tag ) : ?>
+						<?php ob_start(); ?>
+						<a
+							href="<?php echo esc_url( get_tag_link( $tag->term_id ) ); ?>"
+							rel="tag"
+							aria-label="
+							<?php
+								printf(
+									/* translators: Tag name */
+									esc_attr__( 'Tag: %s', 'material-design-google' ),
+									esc_attr( $tag->name )
+								)
+							?>
+							"
+						>
+							<?php echo esc_html( $tag->name ); ?>
+						</a>
+						<?php $tags_markup[] = ob_get_clean(); ?>
+						<?php
+					endforeach;
+
+					$tags_markup = apply_filters( 'the_tags', join( ', ', $tags_markup ) );
+					?>
+
+					<?php
+					echo wp_kses(
+						$tags_markup,
+						[
+							'a' => [
+								'href'       => [],
+								'rel'        => [],
+								'aria-label' => [],
+							],
+						]
+					);
+					?>
+				</span>
+			</span>
+				<?php
 			}
 		}
 
