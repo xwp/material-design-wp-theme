@@ -19,3 +19,10 @@
 	align-items: center;
 	display: flex;
 }
+
+.byline .author a {
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}
