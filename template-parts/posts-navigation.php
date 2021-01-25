@@ -96,7 +96,19 @@ $links = [
 				</span>
 			</a>
 		<?php else : ?>
-			<span class="material-icons" title="<?php echo esc_attr( $link['title'] ); ?>" aria-hidden="true">
+			<span
+				class="material-icons"
+				title="
+				<?php
+					printf(
+						/* translators: available page description. */
+						esc_html__( '%s page', 'material-design-google' ),
+						esc_html( $link['title'] )
+					);
+				?>
+				"
+				aria-hidden="true"
+			>
 				<?php echo esc_html( $link['icon'] ); ?>
 			</span>
 		<?php endif ?>
