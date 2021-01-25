@@ -49,13 +49,53 @@ if ( ! function_exists( 'material_design_theme_posted_on' ) ) :
 
 		echo '<span class="separator">⌙</span>';
 
-		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( '<span class="separator">, </span>' );
-		if ( $categories_list ) {
-			/* translators: 1: list of categories. */
-			printf( '<span class="cat-links"><span class="mdc-typography--overline">%1$s</span></span>', $categories_list ); // phpcs:ignore
-		}
+		$categories        = get_the_category();
+		$categories_markup = [];
 
+		if ( ! empty( $categories ) ) {
+			?>
+		<span class="cat-links">
+			<span class="mdc-typography--overline">
+				<?php foreach ( $categories as $category ) : ?>
+					<?php ob_start(); ?>
+					<a
+						href="<?php echo esc_url( get_category_link( $category->term_id ) ); ?>"
+						rel="category"
+						aria-label="
+						<?php
+							printf(
+								/* translators: Category name */
+								esc_attr__( 'Category: %s', 'material-design-google' ),
+								esc_attr( $category->name )
+							)
+						?>
+						"
+					>
+						<?php echo esc_html( $category->name ); ?>
+					</a>
+					<?php $categories_markup[] = ob_get_clean(); ?>
+					<?php
+				endforeach;
+
+				$categories_markup = apply_filters( 'the_category', join( ', ', $categories_markup ) );
+				?>
+
+				<?php
+				echo wp_kses(
+					$categories_markup,
+					[
+						'a' => [
+							'href'       => [],
+							'rel'        => [],
+							'aria-label' => [],
+						],
+					]
+				);
+				?>
+			</span>
+		</span>
+			<?php
+		}
 	}
 endif;
 
