@@ -48,6 +48,10 @@
 		}
 	}
 
+	& .mdc-list-item a:hover {
+		text-decoration: underline;
+	}
+
 	& .recentcomments {
 		display: block;
 		line-height: 3;
