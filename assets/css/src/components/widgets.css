@@ -55,6 +55,14 @@
 	& .recentcomments {
 		display: block;
 		line-height: 3;
+
+		& a {
+			text-decoration: underline;
+		}
+
+		& a:hover {
+			text-decoration: none;
+		}
 	}
 
 	& .widget-rss {
