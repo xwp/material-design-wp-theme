@@ -79,6 +79,7 @@ class Search {
 	 */
 	hideSearch() {
 		this.element.classList.remove( '-with-search' );
+		this.trigger.focus();
 	}
 
 	/**
