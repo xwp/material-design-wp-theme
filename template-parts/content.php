@@ -94,7 +94,7 @@ $classes       = get_theme_mod( 'archive_outlined', false ) ? 'mdc-card--outline
 					</a>
 				<?php endif; ?>
 
-				<?php if ( ! empty( $show_comments ) ) : ?>
+				<?php if ( ! empty( $show_comments ) && comments_open() ) : ?>
 					<a href="<?php comments_link(); ?>" class="mdc-button mdc-card__action mdc-card__action--button">
 						<span class="mdc-button__ripple"></span>
 						<i class="material-icons mdc-button__icon" aria-hidden="true">comment</i>
