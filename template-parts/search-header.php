@@ -23,9 +23,10 @@
  * @package MaterialDesign
  */
 
+$search_id = uniqid( 'search-' );
 ?>
 
-<form class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
+<form class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get" id="<?php echo esc_attr( $search_id ); ?>"">
 	<div class="mdc-text-field mdc-text-field--fullwidth mdc-text-field--no-label">
 		<div class="mdc-text-field__ripple"></div>
 		<input
