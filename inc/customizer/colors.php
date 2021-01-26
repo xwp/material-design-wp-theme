@@ -96,7 +96,7 @@ function get_controls() {
 				'label'      => esc_html__( 'Secondary Color', 'material-design-google' ),
 				'css_var'    => '--mdc-theme-secondary',
 				'a11y_label' => __( 'Secondary', 'material-design-google' ),
-				'default'    => '#03dac6',
+				'default'    => '#018786',
 			],
 			[
 				'id'         => 'on_primary_color',
