@@ -127,6 +127,10 @@
 
 	& .form-submit {
 		margin-top: 1.5em;
+
+		& .submit:hover {
+			text-decoration: underline;
+		}
 	}
 }
 
