@@ -28,11 +28,38 @@ export const widgetsInit = () => {
 
 	widgets.forEach( widget => {
 		const firstElement = widget.querySelector( '.mdc-list-item' );
+		let items;
 
 		if ( ! firstElement ) {
 			return;
 		}
 
 		firstElement.setAttribute( 'tabindex', 0 );
+
+		if ( widget.classList.contains( 'widget_recent_comments' ) ) {
+			return;
+		}
+
+		items = widget.querySelectorAll( '.mdc-list-item' );
+
+		if ( ! items ) {
+			return;
+		}
+
+		items.forEach( item => {
+			const link = item.querySelector( 'a' );
+
+			if ( ! link ) {
+				return;
+			}
+
+			item.addEventListener( 'keydown', event => {
+				link.setAttribute( 'tabindex', '-1' );
+
+                if ( 'Space' === event.code || 'Enter' === event.code ) {
+					link.click();
+				}
+			} );
+		} );
 	} );
-};
+}
