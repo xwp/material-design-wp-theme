@@ -78,4 +78,8 @@
 			margin-right: 0;
 		}
 	}
+
+	& .mdc-list-item:hover {
+		text-decoration: underline;
+	}
 }
