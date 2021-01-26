@@ -34,7 +34,7 @@ if ( has_post_thumbnail() ) {
 
 <li class="mdc-image-list__item">
 	<a href="<?php the_permalink(); ?>">
-		<img class="mdc-image-list__image" src="<?php echo esc_url( $thumbnail ); ?>">
+		<img class="mdc-image-list__image" src="<?php echo esc_url( $thumbnail ); ?>" alt="">
 		<div class="mdc-image-list__supporting">
 			<?php the_title(); ?>
 		</div>
