@@ -23,6 +23,11 @@
 	& a {
 		margin-left: 2px;
 		margin-right: 2px;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
 	}
 
 	& .widget-title {
