@@ -71,10 +71,15 @@
 		min-width: auto;
 		padding: 0;
 		position: absolute;
-		right: 0;
+		right: 1px;
+		top: 2px;
 		width: 36px;
 
-		.mdc-button__icon {
+		&:focus {
+			outline: 1px dotted;
+		}
+
+		& .mdc-button__icon {
 			margin-right: 0;
 		}
 	}

@@ -74,6 +74,7 @@
 
 		& .button__search:focus {
 			margin-top: 0;
+			outline: 1px dotted;
 		}
 
 		& .mdc-button__icon {
@@ -88,6 +89,10 @@
 			padding-right: 0.25rem;
 			margin-right: 0;
 			min-width: 2.25rem;
+
+			&:focus {
+				outline: 1px dotted;
+			}
 		}
 	}
 }
