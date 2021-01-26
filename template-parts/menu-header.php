@@ -35,7 +35,7 @@ $class      = ( 'fixed' === $layout ) ? 'mdc-top-app-bar--fixed' : '';
 <div class="mdc-top-app-bar top-app-bar <?php echo $class; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>">
 	<div class="mdc-top-app-bar__row top-app-bar__header">
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-			<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger"><?php esc_html_e( 'menu', 'material-design-google' ); ?></button>
+			<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button top-app-bar__menu-trigger">menu</button>
 
 			<?php if ( has_custom_logo() ) : ?>
 				<div class="logo">
@@ -48,10 +48,9 @@ $class      = ( 'fixed' === $layout ) ? 'mdc-top-app-bar--fixed' : '';
 		</section>
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end top-app-bar__menu" role="toolbar">
 				<?php if ( ! empty( $has_search ) ) : ?>
-				<button class="mdc-button search__button">
+				<button class="material-icons mdc-button mdc-icon-button search__button">
 					<span class="mdc-button__ripple"></span>
-					<i class="material-icons mdc-button__icon">search</i>
-					<span class="screen-reader-text"><?php esc_html_e( 'Search', 'material-design-google' ); ?></span>
+					<?php esc_html_e( 'search', 'material-design-google' ); ?>
 				</button>
 			<?php endif; ?>
 		</section>
