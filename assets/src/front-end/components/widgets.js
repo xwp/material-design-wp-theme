@@ -53,6 +53,14 @@ export const widgetsInit = () => {
 				return;
 			}
 
+			item.addEventListener( 'click', event => {
+                if ( "A" === event.target.tagName ) {
+					return event;
+				}
+
+				link.click();
+			} );
+
 			item.addEventListener( 'keydown', event => {
 				link.setAttribute( 'tabindex', '-1' );
 

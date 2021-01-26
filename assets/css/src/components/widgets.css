@@ -52,8 +52,8 @@
 		}
 	}
 
-	& .mdc-list-item a:hover {
-		text-decoration: underline;
+	&:not(.widget_recent_comments) .mdc-list-item:hover a {
+		text-decoration: none;
 	}
 
 	& .recentcomments {
