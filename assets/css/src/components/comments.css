@@ -143,4 +143,8 @@
 	& .mdc-button:focus {
 		outline: 1px dotted #000;
 	}
+
+	& a:hover {
+		text-decoration: none;
+	}
 }

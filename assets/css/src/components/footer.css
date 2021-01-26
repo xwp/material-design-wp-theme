@@ -47,6 +47,10 @@
 			&:focus {
 				outline: 1px dotted;
 			}
+
+			&:hover {
+				border: 2px solid var(--back-to-top-boder);
+			}
 		}
 	}
 
