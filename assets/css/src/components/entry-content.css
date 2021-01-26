@@ -67,4 +67,8 @@
 			width: 10rem;
 		}
 	}
+
+	& a:hover, & a:focus {
+		text-decoration: none;
+	}
 }
