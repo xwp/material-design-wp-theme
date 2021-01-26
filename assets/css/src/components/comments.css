@@ -136,6 +136,10 @@
 	& a:hover {
 		text-decoration: none;
 	}
+
+	& .comment-reply-link:hover {
+		text-decoration: underline;
+	}
 }
 
 .comment-form {
