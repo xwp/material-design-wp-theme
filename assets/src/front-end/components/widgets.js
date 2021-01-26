@@ -28,7 +28,6 @@ export const widgetsInit = () => {
 
 	widgets.forEach( widget => {
 		const firstElement = widget.querySelector( '.mdc-list-item' );
-		let items;
 
 		if ( ! firstElement ) {
 			return;
@@ -40,7 +39,7 @@ export const widgetsInit = () => {
 			return;
 		}
 
-		items = widget.querySelectorAll( '.mdc-list-item' );
+		const items = widget.querySelectorAll( '.mdc-list-item' );
 
 		if ( ! items ) {
 			return;
@@ -54,7 +53,7 @@ export const widgetsInit = () => {
 			}
 
 			item.addEventListener( 'click', event => {
-                if ( "A" === event.target.tagName ) {
+				if ( 'A' === event.target.tagName ) {
 					return event;
 				}
 
@@ -64,10 +63,10 @@ export const widgetsInit = () => {
 			item.addEventListener( 'keydown', event => {
 				link.setAttribute( 'tabindex', '-1' );
 
-                if ( 'Space' === event.code || 'Enter' === event.code ) {
+				if ( 'Space' === event.code || 'Enter' === event.code ) {
 					link.click();
 				}
 			} );
 		} );
 	} );
-}
+};
