@@ -33,16 +33,16 @@
 
 		& .mdc-tab-scroller__scroll-content {
 			background-color: var(--mdc-theme-header, var(--mdc-theme-primary, #6200ee));
-			padding-bottom: 3px;
-			padding-left: 3px;
-			padding-top: 3px;
 		}
 
 		& .mdc-tab {
 			background-color: var(--mdc-theme-header, var(--mdc-theme-primary, #6200ee));
-			margin-right: 0.125rem;
 			padding-left: 2rem;
 			padding-right: 2rem;
+
+			&:focus {
+				border: 1px dotted;
+			}
 
 			&:hover {
 				border-bottom: 2px solid var(--mdc-theme-on-header, var(--mdc-theme-on-primary, #fff));
