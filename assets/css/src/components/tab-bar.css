@@ -41,7 +41,8 @@
 			padding-right: 2rem;
 
 			&:focus {
-				border: 1px dotted;
+				outline: var(--outline-color) auto 1px;
+				outline-offset: -2px;
 			}
 
 			&:hover {
