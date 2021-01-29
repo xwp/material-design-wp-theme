@@ -18,6 +18,10 @@
 	margin-left: 0.5rem;
 	margin-right: 0.5rem;
 
+	@media (--medium-viewport) {
+		margin-right: 0;
+	}
+
 	@nest .error-404 .site-content &, .search-no-results .site-content & {
 		align-items: flex-start;
 		display: flex;
@@ -85,10 +89,7 @@
 		& .button__back {
 			background-color: transparent;
 			color: var(--mdc-theme-on-header, var(--mdc-theme-on-primary, #fff));
-			padding-left: 0.25rem;
-			padding-right: 0.25rem;
 			margin-right: 0;
-			min-width: 2.25rem;
 
 			&:focus {
 				outline: 1px dotted;
