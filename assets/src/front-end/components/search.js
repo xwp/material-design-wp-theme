@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+import { MDCRipple } from '@material/ripple';
+
 /**
  * Shows / Hides search box at the top of the page
  */
@@ -33,6 +35,7 @@ class Search {
 		this.backTrigger = element.querySelector( '.button__back' );
 		this.showSearch = this.showSearch.bind( this );
 		this.hideSearch = this.hideSearch.bind( this );
+		this.closeRipple = false;
 
 		this.attachEvents();
 	}
@@ -72,6 +75,11 @@ class Search {
 		}
 
 		input.focus();
+
+		if ( ! this.closeRipple ) {
+			this.closeRipple = new MDCRipple( this.backTrigger );
+			this.closeRipple.unbounded = true;
+		}
 	}
 
 	/**

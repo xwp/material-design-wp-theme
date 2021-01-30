@@ -94,6 +94,14 @@
 			&:focus {
 				outline: 1px dotted;
 			}
+
+			&::before {
+				background-color: var(--mdc-theme-on-primary, #fff);
+			}
+
+			&:focus::before {
+				opacity: 0.24;
+			}
 		}
 	}
 }
