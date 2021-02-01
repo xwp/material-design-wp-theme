@@ -29,7 +29,7 @@ use MaterialDesign\Theme\Menu_Drawer_Walker;
 ?>
 
 <aside class="mdc-drawer material-drawer mdc-drawer--modal">
-	<button type="button" class="mdc-button mdc-drawer__close">
+	<button type="button" class="mdc-icon-button mdc-drawer__close">
 		<span class="mdc-button__ripple"></span>
 		<i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
 		<span class="screen-reader-text"><?php esc_html__( 'Close drawer', 'material-design-google' ); ?></span>
