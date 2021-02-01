@@ -48,9 +48,9 @@ $class      = ( 'fixed' === $layout ) ? 'mdc-top-app-bar--fixed' : '';
 		</section>
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end top-app-bar__menu" role="toolbar">
 				<?php if ( ! empty( $has_search ) ) : ?>
-				<button class="material-icons mdc-button mdc-icon-button search__button">
+				<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button search__button" aria-label="<?php esc_attr_e( 'Search', 'material-design-google' ); ?>">
 					<span class="mdc-button__ripple"></span>
-					<?php esc_html_e( 'search', 'material-design-google' ); ?>
+					search
 				</button>
 			<?php endif; ?>
 		</section>
