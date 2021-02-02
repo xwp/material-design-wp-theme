@@ -40,6 +40,10 @@ export const drawerInit = () => {
 
 	const closeButton = drawerElement.querySelector( '.mdc-drawer__close' );
 
+	if ( ! closeButton ) {
+		return drawer;
+	}
+
 	closeButton.addEventListener( 'click', () => {
 		drawer.open = false;
 	} );

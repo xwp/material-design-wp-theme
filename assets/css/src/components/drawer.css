@@ -38,7 +38,7 @@
 
 		& .site-title {
 			margin-bottom: 0;
-			margin-top: 35px;
+			margin-top: 7px;
 		}
 	}
 
@@ -72,11 +72,8 @@
 		align-items: center;
 		display: flex;
 		justify-content: center;
-		min-width: auto;
+		min-width: 48px;
 		padding: 0;
-		position: absolute;
-		right: 1px;
-		top: 2px;
 
 		&:focus {
 			outline: 1px dotted;
@@ -94,5 +91,15 @@
 	& .search-form {
 		margin-left: 0.5rem;
 		margin-right: 0.5rem;
+	}
+
+	& .site-title__row {
+		align-items: flex-start;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	& .site-title__wrapper {
+		width: 100%;
 	}
 }

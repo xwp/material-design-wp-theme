@@ -131,4 +131,8 @@
 	& .button__search.mdc-button--unelevated {
 		background-color: var(--mdc-theme-header, var(--mdc-theme-primary, #6200ee));
 	}
+
+	& .mdc-drawer__close {
+		display: none;
+	}
 }
