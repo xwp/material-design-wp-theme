@@ -25,7 +25,7 @@
 	& .mdc-drawer__title {
 		align-items: center;
 		display: flex;
-		height: 47px;
+		min-height: 47px;
 		margin-bottom: 5px;
 
 		&::before {
@@ -38,6 +38,7 @@
 
 		& .site-title {
 			margin-bottom: 0;
+			margin-top: 7px;
 		}
 	}
 
@@ -65,5 +66,40 @@
 
 	ul {
 		margin-left: 0;
+	}
+
+	& .mdc-drawer__close {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		min-width: 48px;
+		padding: 0;
+
+		&:focus {
+			outline: 1px dotted;
+		}
+
+		& .mdc-button__icon {
+			margin-right: 0;
+		}
+	}
+
+	& .mdc-list-item:hover {
+		text-decoration: underline;
+	}
+
+	& .search-form {
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+	}
+
+	& .site-title__row {
+		align-items: flex-start;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	& .site-title__wrapper {
+		width: 100%;
 	}
 }

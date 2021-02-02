@@ -63,7 +63,7 @@
 					),
 					get_the_title()
 				),
-				'<span class="edit-link"><i class="material-icons mdc-button__icon">create</i>',
+				'<span class="edit-link"><i class="material-icons mdc-button__icon" aria-hidden="true">create</i>',
 				'</span>'
 			);
 			?>

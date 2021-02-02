@@ -23,7 +23,11 @@
 	& a {
 		margin-left: 2px;
 		margin-right: 2px;
-		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
 	}
 
 	& .widget-title {
@@ -48,9 +52,21 @@
 		}
 	}
 
+	&:not(.widget_recent_comments) .mdc-list-item:hover a {
+		text-decoration: none;
+	}
+
 	& .recentcomments {
 		display: block;
 		line-height: 3;
+
+		& a {
+			text-decoration: underline;
+		}
+
+		& a:hover {
+			text-decoration: none;
+		}
 	}
 
 	& .widget-rss {

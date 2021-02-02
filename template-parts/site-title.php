@@ -32,17 +32,33 @@ if ( $hide_site_title ) {
 if ( is_front_page() && is_home() ) :
 	?>
 	<div class="site-title__wrapper">
-		<h1 class="site-title mdc-typography mdc-typography--headline6">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-		</h1>
+		<div class="site-title__row">
+			<h1 class="site-title mdc-typography mdc-typography--headline6">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+			</h1>
+
+			<button type="button" class="mdc-icon-button mdc-drawer__close">
+				<span class="mdc-button__ripple"></span>
+				<i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
+				<span class="screen-reader-text"><?php esc_html__( 'Close drawer', 'material-design-google' ); ?></span>
+			</button>
+		</div>
 		<div class="site-tagline mdc-typography--subtitle1"><?php bloginfo( 'description' ); ?></div>
 	</div>
 	<?php
 else :
 	?>
 	<div class="site-title__wrapper">
-		<div class="site-title mdc-typography mdc-typography--headline6">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+		<div class="site-title__row">
+			<div class="site-title mdc-typography mdc-typography--headline6">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+			</div>
+
+			<button type="button" class="mdc-icon-button mdc-drawer__close">
+				<span class="mdc-button__ripple"></span>
+				<i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
+				<span class="screen-reader-text"><?php esc_html__( 'Close drawer', 'material-design-google' ); ?></span>
+			</button>
 		</div>
 		<div class="site-tagline mdc-typography--subtitle1"><?php bloginfo( 'description' ); ?></div>
 	</div>

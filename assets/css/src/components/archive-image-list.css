@@ -30,4 +30,12 @@
 		margin-bottom: 1rem;
 		margin-top: 0;
 	}
+
+	& .mdc-image-list__item a {
+		display: block;
+
+		&:focus {
+			outline: 1px dotted;
+		}
+	}
 }

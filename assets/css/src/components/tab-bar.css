@@ -40,6 +40,19 @@
 			padding-left: 2rem;
 			padding-right: 2rem;
 
+			&:focus {
+				outline: var(--outline-color) auto 1px;
+				outline-offset: -2px;
+			}
+
+			&:hover {
+				border-bottom: 2px solid var(--mdc-theme-on-header, var(--mdc-theme-on-primary, #fff));
+			}
+
+			&:hover .mdc-tab-indicator--active {
+				display: none;
+			}
+
 			& .mdc-tab__text-label {
 				color: var(--mdc-theme-on-header, var(--mdc-theme-on-primary, #fff));
 			}

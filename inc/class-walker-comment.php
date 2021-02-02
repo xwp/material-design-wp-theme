@@ -64,9 +64,9 @@ class Walker_Comment extends \Walker_Comment {
 				</div><!-- .comment-author-avatar -->
 
 				<div class="comment-content">
-					<h5 class="comment-author vcard mdc-typography--body1">
+					<h3 class="comment-author vcard mdc-typography--body1">
 						<?php echo get_comment_author_link( $comment ); ?>
-					</h5>
+					</h3>
 
 					<div class="comment-meta mdc-typography--body2">
 						<time datetime="<?php comment_time( 'c' ); ?>">

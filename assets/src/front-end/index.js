@@ -23,6 +23,7 @@ import { commentsInit } from './components/comments';
 import { floatingLabelInit } from './components/floating-label';
 import { tabBarInit } from './components/tab-bar';
 import { embedsInit } from './components/embeds';
+import { widgetsInit } from './components/widgets';
 import './components/navigation';
 import './components/skip-link-focus-fix';
 
@@ -41,4 +42,5 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	rippleInit();
 	commentsInit();
 	embedsInit();
+	widgetsInit();
 } );

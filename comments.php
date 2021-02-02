@@ -56,8 +56,8 @@ $filled_label   = '<span class="mdc-floating-label" id="%s">%s</span>
 
 $args = [
 	'title_reply'        => __( 'Leave a comment', 'material-design-google' ),
-	'title_reply_before' => '<h4 id="reply-title" class="comment-reply-title mdc-typography--headline4">',
-	'title_reply_after'  => '</h4>',
+	'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title mdc-typography--headline4">',
+	'title_reply_after'  => '</h2>',
 	'fields'             => [
 		'author' => sprintf(
 			'<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet">
@@ -109,13 +109,13 @@ $args = [
 	],
 	'comment_field'      => sprintf(
 		'<div class="mdc-text-field mdc-text-field--textarea %s comment-field">
-			<textarea id="comment" name="comment" class="mdc-text-field__input" required></textarea>
+			<textarea id="comment" name="comment" class="mdc-text-field__input" aria-labelledby="comment-label" required></textarea>
 			%s
 		</div>',
 		$classes,
 		sprintf(
 			'outlined' === $style ? $outlined_label : $filled_label,
-			'comment',
+			'comment-label',
 			esc_html__( 'Comment', 'material-design-google' )
 		)
 	),
@@ -163,9 +163,9 @@ if ( has_action( 'set_comment_cookies', 'wp_set_comment_cookies' ) && get_option
 	if ( have_comments() ) :
 		$count = get_comments_number();
 		?>
-		<h4 class="comments-title mdc-typography--headline4">
+		<h2 class="comments-title mdc-typography--headline4">
 			<?php esc_html_e( 'Join the conversation', 'material-design-google' ); ?>
-		</h4><!-- .comments-title -->
+		</h2><!-- .comments-title -->
 		<div class="comments-title-count">
 			<span class="material-icons">comment</span>
 			<span class="comment-count"><?php echo esc_html( $count ); ?> <?php echo esc_html( _n( 'comment', 'comments', $count, 'material-design-google' ) ); ?></span>

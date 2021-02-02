@@ -49,13 +49,53 @@ if ( ! function_exists( 'material_design_theme_posted_on' ) ) :
 
 		echo '<span class="separator">⌙</span>';
 
-		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( '<span class="separator">, </span>' );
-		if ( $categories_list ) {
-			/* translators: 1: list of categories. */
-			printf( '<span class="cat-links"><span class="mdc-typography--overline">%1$s</span></span>', $categories_list ); // phpcs:ignore
-		}
+		$categories        = get_the_category();
+		$categories_markup = [];
 
+		if ( ! empty( $categories ) ) {
+			?>
+		<span class="cat-links">
+			<span class="mdc-typography--overline">
+				<?php foreach ( $categories as $category ) : ?>
+					<?php ob_start(); ?>
+					<a
+						href="<?php echo esc_url( get_category_link( $category->term_id ) ); ?>"
+						rel="category"
+						aria-label="
+						<?php
+							printf(
+								/* translators: Category name */
+								esc_attr__( 'Category: %s', 'material-design-google' ),
+								esc_attr( $category->name )
+							)
+						?>
+						"
+					>
+						<?php echo esc_html( $category->name ); ?>
+					</a>
+					<?php $categories_markup[] = ob_get_clean(); ?>
+					<?php
+				endforeach;
+
+				$categories_markup = apply_filters( 'the_category', join( ', ', $categories_markup ) );
+				?>
+
+				<?php
+				echo wp_kses(
+					$categories_markup,
+					[
+						'a' => [
+							'href'       => [],
+							'rel'        => [],
+							'aria-label' => [],
+						],
+					]
+				);
+				?>
+			</span>
+		</span>
+			<?php
+		}
 	}
 endif;
 
@@ -78,11 +118,54 @@ if ( ! function_exists( 'material_design_theme_entry_footer' ) ) :
 	function material_design_theme_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', '<span class="separator">, </span>' );
-			if ( $tags_list ) {
-				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links"><i class="material-icons mdc-button__icon">label</i><span class="mdc-typography--caption">%1$s</span></span>', $tags_list ); // phpcs:ignore
+			$tags        = get_the_tags();
+			$tags_markup = [];
+
+			if ( ! empty( $tags ) ) {
+				?>
+			<span class="tags-links">
+				<i class="material-icons mdc-button__icon" aria-hidden="true">label</i>
+
+				<span class="mdc-typography--caption">
+					<?php foreach ( $tags as $tag ) : ?>
+						<?php ob_start(); ?>
+						<a
+							href="<?php echo esc_url( get_tag_link( $tag->term_id ) ); ?>"
+							rel="tag"
+							aria-label="
+							<?php
+								printf(
+									/* translators: Tag name */
+									esc_attr__( 'Tag: %s', 'material-design-google' ),
+									esc_attr( $tag->name )
+								)
+							?>
+							"
+						>
+							<?php echo esc_html( $tag->name ); ?>
+						</a>
+						<?php $tags_markup[] = ob_get_clean(); ?>
+						<?php
+					endforeach;
+
+					$tags_markup = apply_filters( 'the_tags', join( ', ', $tags_markup ) );
+					?>
+
+					<?php
+					echo wp_kses(
+						$tags_markup,
+						[
+							'a' => [
+								'href'       => [],
+								'rel'        => [],
+								'aria-label' => [],
+							],
+						]
+					);
+					?>
+				</span>
+			</span>
+				<?php
 			}
 		}
 
@@ -121,7 +204,7 @@ if ( ! function_exists( 'material_design_theme_entry_footer' ) ) :
 				),
 				get_the_title()
 			),
-			'<span class="edit-link mdc-typography--caption"><i class="material-icons mdc-button__icon">create</i>',
+			'<span class="edit-link mdc-typography--caption"><i class="material-icons mdc-button__icon" aria-hidden="true">create</i>',
 			'</span>'
 		);
 	}

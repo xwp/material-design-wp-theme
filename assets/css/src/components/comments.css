@@ -60,7 +60,7 @@
 		}
 
 		& .url:hover {
-			text-decoration: none;
+			text-decoration: underline;
 		}
 	}
 
@@ -88,6 +88,10 @@
 
 	& .comment-meta {
 		opacity: 0.75;
+	}
+
+	& .comment-edit-link:hover {
+		text-decoration: none;
 	}
 }
 
@@ -123,16 +127,32 @@
 
 	& .form-submit {
 		margin-top: 1.5em;
+
+		& .submit:hover {
+			text-decoration: underline;
+		}
 	}
 }
 
 .comment-content {
 	max-width: 100%;
+
+	& a:hover {
+		text-decoration: none;
+	}
+
+	& .comment-reply-link:hover {
+		text-decoration: underline;
+	}
 }
 
 .comment-form {
 
 	& .mdc-button:focus {
 		outline: 1px dotted #000;
+	}
+
+	& a:hover {
+		text-decoration: none;
 	}
 }

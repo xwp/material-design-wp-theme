@@ -38,11 +38,25 @@ export const drawerInit = () => {
 		firstElement.setAttribute( 'tabindex', 0 );
 	}
 
+	const closeButton = drawerElement.querySelector( '.mdc-drawer__close' );
+
+	if ( ! closeButton ) {
+		return drawer;
+	}
+
+	closeButton.addEventListener( 'click', () => {
+		drawer.open = false;
+	} );
+
 	return drawer;
 };
 
 export const drawerHandler = ( topAppBar, drawer ) => {
 	topAppBar.listen( 'MDCTopAppBar:nav', () => {
 		drawer.open = ! drawer.open;
+	} );
+
+	drawer.listen( 'MDCDrawer:closed', () => {
+		topAppBar.navIcon_.focus();
 	} );
 };

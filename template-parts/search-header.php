@@ -23,9 +23,10 @@
  * @package MaterialDesign
  */
 
+$search_id = uniqid( 'search-' );
 ?>
 
-<form class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
+<form class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get" id="<?php echo esc_attr( $search_id ); ?>"">
 	<div class="mdc-text-field mdc-text-field--fullwidth mdc-text-field--no-label">
 		<div class="mdc-text-field__ripple"></div>
 		<input
@@ -40,7 +41,7 @@
 		<span class="mdc-button__ripple"></span>
 		<span class="mdc-button__label"><?php esc_html_e( 'Search', 'material-design-google' ); ?></span>
 	</button>
-	<button class="mdc-button mdc-button--unelevated button__back" type="button" aria-label="<?php esc_attr_e( 'Exit search form', 'material-design-google' ); ?>">
+	<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button mdc-button--unelevated button__back" type="button" aria-label="<?php esc_attr_e( 'Exit search form', 'material-design-google' ); ?>">
 		<span class="mdc-button__ripple"></span>
 		<i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
 	</button>

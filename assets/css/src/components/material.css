@@ -24,6 +24,10 @@
 .mdc-image-list__item-wrap {
 	display: block;
 	text-decoration: none !important;
+
+	&:hover .mdc-image-list__label {
+		text-decoration: underline;
+	}
 }
 
 .mdc-image-list__image {

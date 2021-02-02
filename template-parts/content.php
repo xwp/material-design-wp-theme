@@ -40,13 +40,27 @@ $classes       = get_theme_mod( 'archive_outlined', false ) ? 'mdc-card--outline
 			<?php endif; ?>
 			<div class="post-card__primary">
 				<?php if ( is_sticky() ) : ?>
-					<?php the_title( '<h2 class="post-card__title mdc-typography mdc-typography--headline6"><i class="material-icons">push_pin</i>', '</h2>' ); ?>
+					<h2
+						class="post-card__title mdc-typography mdc-typography--headline6"
+						aria-label="
+						<?php
+							printf(
+								/* translators: Post title */
+								esc_attr__( 'Sticky post: %s', 'material-design-google' ),
+								esc_attr( get_the_title() )
+							);
+						?>
+						"
+					>
+						<i class="material-icons" aria-hidden="true">push_pin</i>
+						<?php the_title(); ?>
+					</h2>
 				<?php else : ?>
 					<?php the_title( '<h2 class="post-card__title mdc-typography mdc-typography--headline6">', '</h2>' ); ?>
 				<?php endif; ?>
 
 				<?php if ( ! empty( $show_date ) ) : ?>
-					<h3 class="post-card__subtitle mdc-typography mdc-typography--subtitle2"><?php the_time( 'F j, Y' ); ?></h3>
+					<time class="post-card__subtitle mdc-typography mdc-typography--subtitle2"><?php the_time( 'F j, Y' ); ?></time>
 				<?php endif; ?>
 			</div>
 			<?php if ( ! empty( $show_excerpt ) ) : ?>
@@ -80,7 +94,7 @@ $classes       = get_theme_mod( 'archive_outlined', false ) ? 'mdc-card--outline
 					</a>
 				<?php endif; ?>
 
-				<?php if ( ! empty( $show_comments ) ) : ?>
+				<?php if ( ! empty( $show_comments ) && ( comments_open() || ( 0 < get_comments_number() ) ) ) : ?>
 					<a href="<?php comments_link(); ?>" class="mdc-button mdc-card__action mdc-card__action--button">
 						<span class="mdc-button__ripple"></span>
 						<i class="material-icons mdc-button__icon" aria-hidden="true">comment</i>
