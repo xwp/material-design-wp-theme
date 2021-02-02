@@ -25,7 +25,7 @@
 	& .mdc-drawer__title {
 		align-items: center;
 		display: flex;
-		height: 47px;
+		min-height: 47px;
 		margin-bottom: 5px;
 
 		&::before {
@@ -38,6 +38,7 @@
 
 		& .site-title {
 			margin-bottom: 0;
+			margin-top: 35px;
 		}
 	}
 
@@ -68,12 +69,14 @@
 	}
 
 	& .mdc-drawer__close {
+		align-items: center;
+		display: flex;
+		justify-content: center;
 		min-width: auto;
 		padding: 0;
 		position: absolute;
 		right: 1px;
 		top: 2px;
-		width: 36px;
 
 		&:focus {
 			outline: 1px dotted;
