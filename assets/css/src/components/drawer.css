@@ -39,6 +39,10 @@
 		& .site-title {
 			margin-bottom: 0;
 			margin-top: 7px;
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 
